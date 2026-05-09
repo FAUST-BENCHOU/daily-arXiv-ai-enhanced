@@ -11,13 +11,14 @@ from typing import Any, Dict, List, Optional
 
 import dotenv
 import markdown
+from langchain_core.exceptions import OutputParserException
 from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 
 _AI_DIR = os.path.dirname(os.path.abspath(__file__))
 if _AI_DIR not in sys.path:
     sys.path.insert(0, _AI_DIR)
-from digest_structure import DigestStructured, DigestTheme
+from digest_structure import DigestStructured, DigestTheme, DigestThemesOnly
 
 SKILL_PATH = os.path.join(os.path.dirname(__file__), "skill.txt")
 
@@ -59,7 +60,7 @@ DIGEST_CONSTRAINTS = """
 - 正文里提及文献编号时，请使用单独的 `[k]` 形式（例如 `[3]`），不要使用 `[3](url)`，以便后台自动加上站内链接。
 - 「大多数现有方法」「少数现有方法」是对**当日文献池内论文主题与方法共性**的归纳：只能依据池内摘要与 AI 字段归纳。
 
-**结构化输出（必填）**
+**结构化输出（必填；实现上可能拆成两步：先 themes、再单独输出 Markdown，内容要求不变）**
 - `themes`：恰好 **3** 条，每条包含 `title`（短语标题）与 `blurb`（一句话概要）。三者对应三篇论文方向，用于邮件与网页顶部摘要。
 - `markdown_digest`：**完整** Markdown 正文；从「## 当日文献池编号一览」开始写起；**不要**在 markdown 里再用小节重复罗列三条 theme 标题（顶部已由结构化字段展示）。
 - Markdown 要求：`##` / `###`、pipe table、`- ` 列表；不要用裸 HTML；不要用围栏包住全文。
@@ -68,6 +69,34 @@ DIGEST_CONSTRAINTS = """
 1. ## 当日文献池编号一览（[k] + 题目 + id）
 2. 按 skill：三篇论文方向、每篇两个创新点（共六个）、矩阵、池内去重检查、参考文献总表（仅池内）、自检（「十篇文献」改为「每创新点≥3 篇池内文献」）。
 """
+
+THEMES_PHASE_NOTE = """
+**本轮（第一步）**
+- 仅通过结构化接口返回 **`themes`（恰好 3 条）**，不要生成长正文。
+"""
+
+MARKDOWN_PHASE_NOTE = """
+**本轮（第二步）**
+- **直接输出 Markdown 正文**（等价于前述 `markdown_digest`），从「## 当日文献池编号一览」写起。
+- **禁止**输出 JSON；不要用围栏代码块包住全文。
+- 下列三条主题已固定，正文与之呼应即可，**不要用同级小节标题再罗列这三条**：
+{themes_block}
+"""
+
+
+def _ai_message_text(msg: Any) -> str:
+    c = getattr(msg, "content", msg)
+    if isinstance(c, str):
+        return c
+    if isinstance(c, list):
+        parts: List[str] = []
+        for block in c:
+            if isinstance(block, dict) and block.get("type") == "text":
+                parts.append(str(block.get("text", "")))
+            elif isinstance(block, str):
+                parts.append(block)
+        return "".join(parts)
+    return str(c)
 
 
 def parse_args() -> argparse.Namespace:
@@ -474,36 +503,62 @@ def main() -> None:
 
     context = build_context(papers, args.max_chars_per_paper)
 
-    prompt = ChatPromptTemplate.from_messages(
+    human_pool_block = (
+        "日期：{date}\n"
+        "语言配置：{language}\n"
+        "当日抓取总篇数（文件内）：{total_in_file}\n"
+        "本次随机抽取进入文献池的篇数：{pool_size}（编号 [1]…[{pool_size}]）。\n\n"
+        "文献池内容：\n\n"
+        "{context}"
+    )
+
+    invoke_in = {
+        "date": date_str,
+        "language": language,
+        "total_in_file": len(items),
+        "pool_size": len(papers),
+        "context": context if context else "（无可用论文内容）",
+    }
+
+    llm = ChatOpenAI(model=model_name, temperature=0.2)
+
+    prompt_themes = ChatPromptTemplate.from_messages(
         [
-            ("system", system_prompt),
+            ("system", system_prompt + "\n\n" + THEMES_PHASE_NOTE.strip()),
             (
                 "human",
-                "日期：{date}\n"
-                "语言配置：{language}\n"
-                "当日抓取总篇数（文件内）：{total_in_file}\n"
-                "本次随机抽取进入文献池的篇数：{pool_size}（编号 [1]…[{pool_size}]）。\n\n"
-                "请输出结构化结果：`themes`（恰好 3 条）与 `markdown_digest`（完整 Markdown）。\n\n"
-                "文献池内容：\n\n"
-                "{context}",
+                human_pool_block + "\n\n请先只产出结构化字段 **`themes`（恰好 3 条）**，不要写长 Markdown 正文。",
             ),
         ]
     )
+    chain_themes = prompt_themes | llm.with_structured_output(DigestThemesOnly, method="function_calling")
 
-    llm = ChatOpenAI(model=model_name, temperature=0.2).with_structured_output(
-        DigestStructured,
-        method="function_calling",
+    themes_only: Optional[DigestThemesOnly] = None
+    last_parse_exc: Optional[OutputParserException] = None
+    for _attempt in range(3):
+        try:
+            themes_only = chain_themes.invoke(invoke_in)
+            break
+        except OutputParserException as e:
+            last_parse_exc = e
+    if themes_only is None:
+        raise RuntimeError("themes 结构化输出多次解析失败") from last_parse_exc
+
+    themes_block = "\n".join(
+        f"{i}. **{t.title}** — {t.blurb}" for i, t in enumerate(themes_only.themes, start=1)
     )
-    chain = prompt | llm
-    structured: DigestStructured = chain.invoke(
-        {
-            "date": date_str,
-            "language": language,
-            "total_in_file": len(items),
-            "pool_size": len(papers),
-            "context": context if context else "（无可用论文内容）",
-        }
+    system_md = system_prompt + "\n\n" + MARKDOWN_PHASE_NOTE.replace("{themes_block}", themes_block)
+
+    prompt_md = ChatPromptTemplate.from_messages(
+        [
+            ("system", system_md),
+            ("human", human_pool_block + "\n\n请根据系统说明输出完整 Markdown 正文（第二步）。"),
+        ]
     )
+    md_resp = (prompt_md | llm).invoke(invoke_in)
+    md_raw = _ai_message_text(md_resp).strip()
+
+    structured = DigestStructured(themes=themes_only.themes, markdown_digest=md_raw)
 
     md_body = unwrap_markdown_fence(structured.markdown_digest.strip())
     md_linked = linkify_pool_refs(md_body, papers, date_str)

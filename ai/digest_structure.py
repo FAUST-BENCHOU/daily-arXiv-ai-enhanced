@@ -6,6 +6,21 @@ class DigestTheme(BaseModel):
     blurb: str = Field(description="一句话概括该主题关切的问题或亮点")
 
 
+class DigestThemesOnly(BaseModel):
+    """第一步：仅抽取三条主题，避免把整篇 Markdown 塞进 JSON 工具参数导致解析失败。"""
+
+    themes: list[DigestTheme] = Field(
+        description="恰好三项，对应三篇论文方向，用于邮件摘要与 digest 页顶部展示"
+    )
+
+    @field_validator("themes")
+    @classmethod
+    def exactly_three_themes(cls, v: list[DigestTheme]) -> list[DigestTheme]:
+        if len(v) != 3:
+            raise ValueError("themes 必须为恰好 3 项")
+        return v
+
+
 class DigestStructured(BaseModel):
     themes: list[DigestTheme] = Field(
         description="恰好三项，对应三篇论文方向，用于邮件摘要与 digest 页顶部展示"
