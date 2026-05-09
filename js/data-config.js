@@ -12,13 +12,13 @@ const DATA_CONFIG = {
      * GitHub repository owner (username)
      * This will be replaced during GitHub Actions workflow execution
      */
-    repoOwner: 'dw-dengwei',
+    repoOwner: 'PLACEHOLDER_REPO_OWNER',
 
     /**
      * GitHub repository name
      * This will be replaced during GitHub Actions workflow execution
      */
-    repoName: 'daily-arXiv-ai-enhanced',
+    repoName: 'PLACEHOLDER_REPO_NAME',
 
     /**
      * Data branch name
@@ -27,10 +27,34 @@ const DATA_CONFIG = {
     dataBranch: 'data',
 
     /**
+     * Infer repo owner/name from GitHub Pages URL when placeholders remain.
+     * - Project pages: https://<owner>.github.io/<repo>/
+     */
+    inferRepoFromLocation: function() {
+        try {
+            const host = (window.location && window.location.hostname) ? window.location.hostname : '';
+            const path = (window.location && window.location.pathname) ? window.location.pathname : '';
+
+            const isPlaceholderOwner = !this.repoOwner || this.repoOwner.includes('PLACEHOLDER_');
+            const isPlaceholderName = !this.repoName || this.repoName.includes('PLACEHOLDER_');
+            if (!isPlaceholderOwner && !isPlaceholderName) return;
+
+            const owner = host.split('.')[0] || '';
+            const repo = path.split('/').filter(Boolean)[0] || '';
+
+            if (isPlaceholderOwner && owner) this.repoOwner = owner;
+            if (isPlaceholderName && repo) this.repoName = repo;
+        } catch (e) {
+            // ignore
+        }
+    },
+
+    /**
      * Get the base URL for raw GitHub content from data branch
      * @returns {string} Base URL for raw GitHub content
      */
     getDataBaseUrl: function() {
+        this.inferRepoFromLocation();
         return `https://raw.githubusercontent.com/${this.repoOwner}/${this.repoName}/${this.dataBranch}`;
     },
 
