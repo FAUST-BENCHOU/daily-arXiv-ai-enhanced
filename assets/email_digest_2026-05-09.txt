@@ -1,0 +1,300 @@
+# 每日硬凑师兄要求的创新点 2026-05-09
+
+## 今日三个主题（结构化）
+1. **多模态理解与生成协同：从视觉语义对齐到结构化推理** — 围绕多模态大模型在理解与生成之间的协同瓶颈，探索视觉语义对齐、结构化关系推理与细粒度跨模态检索等方向，涵盖手部接触估计、车辆检索、视频推理与统一多模态模型等前沿工作。
+2. **语言模型安全、对齐与评估：跨文化基准、标注变异与评价协议** — 聚焦大语言模型的安全对齐与评估方法论，涵盖跨文化安全基准构建、标注者变异分析、评估-部署情境差异测量以及评分规则修改对自动评分一致性的统计影响。
+3. **高效表征学习与生成控制：从运动引导到离散先验与模块化专家** — 关注视觉与语言模型中的表征学习与生成控制效率，涵盖运动引导的图像动画、离散自回归先验学习、模块化专家预训练以及令牌压缩加速三维重建等方向。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|:---:|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05353) | Counterargument for Critical Thinking as Judged by AI and Humans | 2605.05353 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05886) | Training-Free Dense Hand Contact Estimation with Multi-Modal Large Language Models | 2605.05886 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05900) | Understanding Cross-Language Transfer Improvements in Low-Resource HTR: The Role of Sequence Modeling | 2605.05900 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06327) | Measuring Evaluation-Context Divergence in Open-Weight LLMs | 2605.06327 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06094) | VISD: Enhancing Video Reasoning via Structured Self-Distillation | 2605.06094 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06318) | Who and What? Using Linguistic Features and Annotator Characteristics to Analyze Annotation Variation | 2605.06318 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06051) | RealCam: Real-Time Novel-View Video Generation with Interactive Camera Control | 2605.06051 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06012) | T2I-VeRW: Part-level Fine-grained Perception for Text-to-Image Vehicle Retrieval | 2605.06012 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05662) | XL-SafetyBench: A Country-Grounded Cross-Cultural Benchmark for LLM Safety and Cultural Sensitivity | 2605.05662 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05714) | TriRelVLA: Triadic Relational Structure for Generalizable Embodied Manipulation | 2605.05714 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06664) | BAMI: Training-Free Bias Mitigation in GUI Grounding | 2605.06664 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05753) | Jointly Learning Structured Representations and Stabilized Affinity for Human Motion Segmentation | 2605.05753 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05781) | Steering Visual Generation in Unified Multimodal Models with Understanding Supervision | 2605.05781 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06280) | Eulerian Motion Guidance: Robust Image Animation via Bidirectional Geometric Consistency | 2605.06280 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06642) | StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction | 2605.06642 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06309) | MultiLinguahah: A New Unsupervised Multilingual Acoustic Laughter Segmentation Method | 2605.06309 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06637) | DPM++: Dynamic Masked Metric Learning for Occluded Person Re-identification | 2605.06637 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06148) | Learning Discrete Autoregressive Priors with Wasserstein Gradient Flow | 2605.06148 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06663) | EMO: Pretraining Mixture of Experts for Emergent Modularity | 2605.06663 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05351) | egenioussBench: A New Dataset for Geospatial Visual Localisation | 2605.05351 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05627) | Leveraging Image Generators to Address Training Data Scarcity: The Gen4Regen Dataset for Forest Regeneration Mapping | 2605.05627 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06283) | Quantifying the Statistical Effect of Rubric Modifications on Human-Autorater Agreement | 2605.06283 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06537) | MedHorizon: Towards Long-context Medical Video Understanding in the Wild | 2605.06537 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05692) | CFE-PPAR: Compression-friendly encryption for privacy-preserving action recognition leveraging video transformers | 2605.05692 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06200) | A²TGPO: Agentic Turn-Group Policy Optimization with Adaptive Turn-level Clipping | 2605.06200 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05945) | MobileEgo Anywhere: Open Infrastructure for long horizon egocentric data on commodity hardware | 2605.05945 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06270) | Spark3R: Asymmetric Token Reduction Makes Fast Feed-Forward 3D Reconstruction | 2605.06270 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06143) | AI-Generated Images: What Humans and Machines See When They Look at the Same Image | 2605.06143 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05922) | Think, then Score: Decoupled Reasoning and Scoring for Video Reward Modeling | 2605.05922 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06080) | MSD-Score: Multi-Scale Distributional Scoring for Reference-Free Image Caption Evaluation | 2605.06080 |
+
+---
+
+## 论文方向一：多模态理解与生成协同——从视觉语义对齐到结构化推理
+
+**拟定论文题目：** 面向多模态大模型的视觉语义对齐与结构化推理协同方法研究
+
+**论文核心问题：** 如何通过显式的视觉语义对齐和结构化关系推理，弥合多模态大模型在理解与生成之间的协同鸿沟，提升细粒度跨模态检索与视频推理能力。
+
+### 创新点一：多层级视觉语义对齐与结构化关系推理的协同建模
+
+大多数现有方法将多模态理解与生成任务解耦处理，视觉语义对齐多依赖全局嵌入相似度，难以捕捉细粒度的局部对应关系，导致在物体属性、空间关系和动作描述等结构化推理任务中表现不佳 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06012)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05781)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06080)。少数现有方法开始引入局部对齐或结构化中间表示，但通常将视觉语义对齐与关系推理作为独立模块串联，缺乏二者之间的协同反馈机制，限制了推理的准确性和可解释性 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05886)[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05714)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06537)。为此，本文提出一种多层级视觉语义对齐与结构化关系推理的协同建模框架，在局部特征对齐的基础上，显式构建物体-属性-关系三元组的结构化表示，并通过双向信息流实现对齐与推理的相互增强，以提高细粒度跨模态检索和视频推理的性能。
+
+- **创新类型：** 方法设计创新 + 问题建模创新
+- **创新性判断：** 池内文献 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06012) 提出了部件级局部对齐的车辆检索模型，[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05781) 通过理解监督信号增强生成，[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06080) 提出多尺度分布评分，但均未将对齐与推理作为协同整体建模。本文创新点在于将对齐与推理的协同机制作为核心建模对象，区别于现有方法的模块串联范式。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06012) | T2I-VeRW: Part-level Fine-grained Perception for Text-to-Image Vehicle Retrieval | 提出部件级局部对齐的跨模态车辆检索模型 | 支撑大多数方法依赖全局嵌入的局限 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05781) | Steering Visual Generation in Unified Multimodal Models with Understanding Supervision | 通过理解监督信号增强生成，但未涉及结构化推理 | 支撑大多数方法将理解与生成解耦 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06080) | MSD-Score: Multi-Scale Distributional Scoring for Reference-Free Image Caption Evaluation | 提出多尺度分布评分，但仅用于评估而非推理 | 支撑大多数方法依赖全局相似度 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05886) | Training-Free Dense Hand Contact Estimation with Multi-Modal Large Language Models | 利用MLLM进行手部接触估计，需语义理解与几何推理 | 支撑少数方法引入结构化表示 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05714) | TriRelVLA: Triadic Relational Structure for Generalizable Embodied Manipulation | 提出三元组关系结构用于具身操作 | 支撑少数方法构建结构化中间表示 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06537) | MedHorizon: Towards Long-context Medical Video Understanding in the Wild | 提出长上下文医学视频理解基准，需多跳推理 | 支撑少数方法关注结构化推理 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06094) | VISD: Enhancing Video Reasoning via Structured Self-Distillation | 提出结构化自蒸馏框架用于视频推理 | 支撑现有不足：对齐与推理缺乏协同 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05922) | Think, then Score: Decoupled Reasoning and Scoring for Video Reward Modeling | 解耦推理与评分，但未涉及视觉语义对齐 | 支撑本文差异：需协同建模 |
+
+### 创新点二：基于分布对齐与局部诊断的细粒度跨模态评估方法
+
+大多数现有跨模态评估方法依赖全局嵌入相似度或单一评分函数，难以检测细粒度的语义错配，如物体幻觉、属性缺失或关系错误 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06012)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06080)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06143)。少数现有方法引入多尺度评分或可解释性分析，但通常将评估视为独立的后处理步骤，未能将评估信号反馈至模型训练或推理过程，限制了评估的诊断价值 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06094)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05922)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05781)。为此，本文提出一种基于分布对齐与局部诊断的细粒度跨模态评估方法，将图像块与文本令牌的嵌入建模为概率分布，通过加权双向KL散度量化局部语义差异，并生成可分解的诊断报告，以提供比全局相似度更透明、更可操作的评估信号。
+
+- **创新类型：** 指标体系创新 + 评价方法创新
+- **创新性判断：** 池内文献 [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06080) 提出了多尺度分布评分，但未将评估信号用于反馈；[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06143) 关注AI生成图像检测的可解释性，但未聚焦跨模态对齐。本文创新点在于将评估从独立后处理转变为可反馈的诊断工具，且诊断粒度达到局部语义单元。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06012) | T2I-VeRW: Part-level Fine-grained Perception for Text-to-Image Vehicle Retrieval | 依赖全局对齐，难以检测局部错配 | 支撑大多数方法依赖全局嵌入 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06080) | MSD-Score: Multi-Scale Distributional Scoring for Reference-Free Image Caption Evaluation | 提出多尺度分布评分，但仅用于评估 | 支撑大多数方法评估与训练解耦 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06143) | AI-Generated Images: What Humans and Machines See When They Look at the Same Image | 关注检测可解释性，但非跨模态对齐 | 支撑大多数方法缺乏局部诊断 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06094) | VISD: Enhancing Video Reasoning via Structured Self-Distillation | 结构化自蒸馏提供诊断信息 | 支撑少数方法引入诊断信号 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05922) | Think, then Score: Decoupled Reasoning and Scoring for Video Reward Modeling | 解耦推理与评分，提升可解释性 | 支撑少数方法关注评估可解释性 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05781) | Steering Visual Generation in Unified Multimodal Models with Understanding Supervision | 理解监督增强生成，但评估未反馈 | 支撑少数方法但评估仍独立 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05886) | Training-Free Dense Hand Contact Estimation with Multi-Modal Large Language Models | 需细粒度语义理解，但无评估反馈 | 支撑现有不足：评估缺乏反馈机制 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05714) | TriRelVLA: Triadic Relational Structure for Generalizable Embodied Manipulation | 结构化表示需细粒度评估 | 支撑本文差异：可反馈的诊断评估 |
+
+**该论文两个创新点之间的关系：**
+创新点一解决“如何实现视觉语义对齐与结构化推理的协同建模”，创新点二解决“如何评估这种协同建模的质量并提供可反馈的诊断信号”。二者属于同一论文主题，但分别对应模型设计与评估方法两个不同技术层面，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** 基于全局嵌入的方法（如CLIP）、局部对齐方法（如 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06012)）、多尺度评分方法（如 [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06080)）
+- **实验数据/场景：** 车辆检索（T2I-VeRW [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06012)）、视频推理（VISD [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06094)）、医学视频理解（MedHorizon [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06537)）
+- **评价指标：** 检索精度、推理准确率、局部诊断准确率、评估-训练反馈增益
+- **消融实验：** 对齐模块 vs. 推理模块 vs. 协同机制、评估反馈 vs. 无反馈
+
+---
+
+## 论文方向二：语言模型安全、对齐与评估——跨文化基准、标注变异与评价协议
+
+**拟定论文题目：** 面向大语言模型安全对齐的跨文化基准构建与评估协议研究
+
+**论文核心问题：** 如何构建跨文化敏感的安全基准，量化评估-部署情境差异与标注者变异对安全评估的影响，并建立统计可靠的评价协议。
+
+### 创新点三：跨文化安全基准的构建方法与文化敏感性量化指标
+
+大多数现有LLM安全基准以英语为中心，依赖翻译适配其他语言，未能捕捉特定国家或文化背景下的独特危害类型，且难以区分原则性拒绝与文化敏感性不足 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05662)[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06327)[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05353)。少数现有方法开始构建多语言安全基准或引入文化敏感性评估，但通常将文化敏感性视为二分类属性，缺乏细粒度的量化指标来区分“因理解不足而拒绝”与“因文化敏感而拒绝” [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06318)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06283)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06143)。为此，本文提出一种基于多阶段流水线的跨文化安全基准构建方法，结合LLM辅助发现、自动化验证门控和双母语标注者审核，并引入中性安全率（NSR）和文化敏感性率（CSR）两个互补指标，以更精确地量化模型在不同文化语境下的安全表现。
+
+- **创新类型：** 指标体系创新 + 问题建模创新
+- **创新性判断：** 池内文献 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05662) 提出了XL-SafetyBench，包含NSR和CSR指标，但本文创新点在于将基准构建方法与指标设计作为统一方法论提出，并强调构建流程的可迁移性。此外，[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06327) 和 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06318) 分别从评估-部署情境差异和标注者变异角度补充了安全评估的复杂性，本文将其整合为跨文化安全评估的完整方法论。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05662) | XL-SafetyBench: A Country-Grounded Cross-Cultural Benchmark for LLM Safety | 提出跨文化安全基准和NSR/CSR指标 | 支撑大多数方法英语中心、缺乏文化敏感性 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06327) | Measuring Evaluation-Context Divergence in Open-Weight LLMs | 测量评估-部署情境差异 | 支撑大多数方法忽略情境差异 |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05353) | Counterargument for Critical Thinking as Judged by AI and Humans | 人类与AI评判对比，涉及评估一致性 | 支撑大多数方法依赖单一评估视角 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06318) | Who and What? Using Linguistic Features and Annotator Characteristics to Analyze Annotation Variation | 分析标注者变异，强调交互效应 | 支撑少数方法关注标注者差异 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06283) | Quantifying the Statistical Effect of Rubric Modifications on Human-Autorater Agreement | 量化评分规则修改对一致性的影响 | 支撑少数方法关注评估协议 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06143) | AI-Generated Images: What Humans and Machines See When They Look at the Same Image | 关注可解释性检测，涉及人类理解 | 支撑少数方法引入人类视角 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06309) | MultiLinguahah: A New Unsupervised Multilingual Acoustic Laughter Segmentation Method | 多语言方法，但非安全领域 | 支撑现有不足：跨文化安全评估缺乏系统方法论 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06642) | StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction | 智能体RL，涉及安全对齐 | 支撑本文差异：将构建方法与指标统一 |
+
+### 创新点四：评估-部署情境差异与标注者变异的联合建模与统计校准
+
+大多数现有安全评估假设模型在评估环境中的行为与部署环境一致，忽略了评估框架本身对模型行为的诱导效应，且通常将标注者变异视为噪声而非有价值的信息源 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06327)[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05353)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05662)。少数现有方法开始测量评估-部署情境差异或分析标注者变异，但通常将二者作为独立问题处理，缺乏联合建模框架来同时校准情境差异和标注者变异对评估结果的影响 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06318)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06283)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06143)。为此，本文提出一种联合建模框架，通过配对提示协议测量评估-部署情境差异，同时利用标注者特征与语言特征分析标注者变异，并基于统计模型对评估结果进行校准，以提高安全评估在跨文化部署场景中的可靠性。
+
+- **创新类型：** 方法设计创新 + 评价方法创新
+- **创新性判断：** 池内文献 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06327) 提出了评估-部署情境差异的测量协议，[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06318) 分析了标注者变异，但二者未联合建模。本文创新点在于将情境差异与标注者变异纳入统一框架，并引入统计校准机制，区别于现有方法的独立分析范式。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06327) | Measuring Evaluation-Context Divergence in Open-Weight LLMs | 提出配对提示协议测量情境差异 | 支撑大多数方法忽略情境差异 |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05353) | Counterargument for Critical Thinking as Judged by AI and Humans | 人类与AI评判对比 | 支撑大多数方法依赖单一评估视角 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05662) | XL-SafetyBench: A Country-Grounded Cross-Cultural Benchmark for LLM Safety | 跨文化安全基准，但未联合建模变异 | 支撑大多数方法未联合建模 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06318) | Who and What? Using Linguistic Features and Annotator Characteristics to Analyze Annotation Variation | 分析标注者变异与语言特征交互 | 支撑少数方法关注标注者变异 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06283) | Quantifying the Statistical Effect of Rubric Modifications on Human-Autorater Agreement | 量化评分规则修改的影响 | 支撑少数方法关注评估协议统计效应 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06143) | AI-Generated Images: What Humans and Machines See When They Look at the Same Image | 关注人类理解与XAI对齐 | 支撑少数方法引入人类视角 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06642) | StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction | 智能体RL安全对齐 | 支撑现有不足：缺乏联合建模框架 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06200) | A²TGPO: Agentic Turn-Group Policy Optimization with Adaptive Turn-level Clipping | 智能体RL优化，涉及信用分配 | 支撑本文差异：联合建模与统计校准 |
+
+**该论文两个创新点之间的关系：**
+创新点三解决“如何构建跨文化安全基准并量化文化敏感性”，创新点四解决“如何校准评估-部署情境差异和标注者变异对评估结果的影响”。二者属于同一论文主题，但分别对应基准构建与评估校准两个不同技术层面，逻辑上形成递进：先有可靠的基准，再有可靠的评估协议。
+
+**建议实验设计：**
+- **对比方法：** 英语中心基准（如SafetyBench）、翻译适配基准、单一评估协议方法
+- **实验数据/场景：** XL-SafetyBench [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05662) 的10个语言-国家对、评估-部署情境差异测量 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06327) 的配对提示
+- **评价指标：** ASR、NSR、CSR、情境差异度、标注者一致性、校准后评估准确率
+- **消融实验：** 情境差异校准 vs. 无校准、标注者变异建模 vs. 聚合标注、联合建模 vs. 独立建模
+
+---
+
+## 论文方向三：高效表征学习与生成控制——从运动引导到离散先验与模块化专家
+
+**拟定论文题目：** 面向视觉与语言模型的高效表征学习与生成控制方法研究
+
+**论文核心问题：** 如何通过运动引导、离散先验学习和模块化专家预训练，提升视觉与语言模型在表征学习与生成控制中的效率，同时保持或提升生成质量。
+
+### 创新点五：基于欧拉运动引导与双向几何一致性的鲁棒图像动画方法
+
+大多数现有图像动画方法依赖拉格朗日运动引导，即相对于初始帧估计光流，导致误差随时间累积且训练无法并行化 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06280)[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06051)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06270)。少数现有方法开始探索相邻帧的欧拉运动引导，但面临遮挡区域的漂移伪影问题，且缺乏对运动场局部一致性的显式约束 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05886)[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05714)[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05692)。为此，本文提出一种基于欧拉运动引导与双向几何一致性的鲁棒图像动画方法，利用相邻帧的局部运动场实现并行化训练和有界误差监督，并通过前向-后向循环校验机制数学识别并掩蔽遮挡区域，以防止模型学习错误的扭曲目标，从而在加速训练的同时保持时间一致性和减少动态伪影。
+
+- **创新类型：** 方法设计创新 + 约束处理创新
+- **创新性判断：** 池内文献 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06280) 提出了欧拉运动引导和双向几何一致性，但本文创新点在于将运动引导范式转换与遮挡处理机制作为统一方法提出，并强调其在训练效率和生成质量上的双重优势。此外，[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06051) 和 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06270) 从不同角度关注生成效率，但未涉及运动引导范式转换。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06280) | Eulerian Motion Guidance: Robust Image Animation via Bidirectional Geometric Consistency | 提出欧拉运动引导和双向几何一致性 | 支撑大多数方法依赖拉格朗日运动引导 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06051) | RealCam: Real-Time Novel-View Video Generation with Interactive Camera Control | 实时新视角视频生成，依赖全序列处理 | 支撑大多数方法非并行化训练 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06270) | Spark3R: Asymmetric Token Reduction Makes Fast Feed-Forward 3D Reconstruction | 非对称令牌压缩加速3D重建 | 支撑大多数方法关注效率但非运动引导 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05886) | Training-Free Dense Hand Contact Estimation with Multi-Modal Large Language Models | 手部接触估计，需几何推理 | 支撑少数方法探索局部运动场 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05714) | TriRelVLA: Triadic Relational Structure for Generalizable Embodied Manipulation | 三元组关系结构，涉及运动控制 | 支撑少数方法关注结构化运动表示 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05692) | CFE-PPAR: Compression-friendly encryption for privacy-preserving action recognition | 压缩友好加密，涉及视频处理 | 支撑少数方法关注视频处理效率 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05753) | Jointly Learning Structured Representations and Stabilized Affinity for Human Motion Segmentation | 人体运动分割，涉及运动一致性 | 支撑现有不足：遮挡区域漂移问题 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06637) | DPM++: Dynamic Masked Metric Learning for Occluded Person Re-identification | 遮挡行人重识别，涉及遮挡处理 | 支撑本文差异：遮挡显式掩蔽机制 |
+
+### 创新点六：基于Wasserstein梯度流的离散自回归先验学习与模块化专家预训练
+
+大多数现有离散图像分词器采用两阶段训练：先训练重建，再拟合先验模型，导致分词器对后续自回归先验的预测难度不敏感 [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06148)[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06663)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06270)。少数现有方法开始引入先验匹配信号或模块化专家设计，但通常将先验学习与专家模块化作为独立问题处理，缺乏统一的效率优化框架 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05781)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06642)[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06200)。为此，本文提出一种联合优化框架，在分词器训练阶段引入基于Wasserstein梯度流的分布级先验匹配信号，同时利用文档边界约束实现模块化专家分组，使分词器学习到既易于自回归预测又支持模块化部署的离散表示，以提高生成效率与模型可组合性。
+
+- **创新类型：** 特征表示创新 + 泛化迁移创新
+- **创新性判断：** 池内文献 [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06148) 提出了基于Wasserstein梯度流的离散先验学习，[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06663) 提出了基于文档边界的模块化专家预训练，但二者未联合。本文创新点在于将先验学习与模块化专家预训练纳入统一框架，实现表示效率与部署效率的协同优化。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06148) | Learning Discrete Autoregressive Priors with Wasserstein Gradient Flow | 提出Wasserstein梯度流用于先验学习 | 支撑大多数方法两阶段训练、先验不匹配 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06663) | EMO: Pretraining Mixture of Experts for Emergent Modularity | 基于文档边界的模块化专家预训练 | 支撑大多数方法依赖全模型部署 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06270) | Spark3R: Asymmetric Token Reduction Makes Fast Feed-Forward 3D Reconstruction | 非对称令牌压缩加速3D重建 | 支撑大多数方法关注效率但非先验学习 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05781) | Steering Visual Generation in Unified Multimodal Models with Understanding Supervision | 理解监督增强生成，但未涉及先验学习 | 支撑少数方法引入额外监督信号 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06642) | StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction | 策略轨迹抽象，涉及分层优化 | 支撑少数方法关注优化效率 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06200) | A²TGPO: Agentic Turn-Group Policy Optimization with Adaptive Turn-level Clipping | 自适应裁剪策略优化，涉及信用分配 | 支撑少数方法关注训练效率 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05900) | Understanding Cross-Language Transfer Improvements in Low-Resource HTR | 跨语言迁移，涉及序列建模 | 支撑现有不足：先验学习与模块化未联合 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05627) | Leveraging Image Generators to Address Training Data Scarcity: The Gen4Regen Dataset | 利用生成器解决数据稀缺 | 支撑本文差异：联合优化框架 |
+
+**该论文两个创新点之间的关系：**
+创新点五解决“如何通过运动引导实现高效的图像动画生成”，创新点六解决“如何通过先验学习和模块化专家实现高效的表示学习与生成控制”。二者属于同一论文主题（高效表征学习与生成控制），但分别对应运动引导生成和离散表示学习两个不同技术路径，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** 拉格朗日运动引导方法、两阶段分词器训练方法、全模型部署的MoE方法
+- **实验数据/场景：** 图像动画（[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06280) 的基准）、离散图像生成（[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06148) 的基准）、模块化部署（[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06663) 的基准）
+- **评价指标：** 生成质量（FID、CLIP Score）、训练效率（收敛速度、GPU小时数）、部署效率（推理速度、内存占用）、模块化性能（子集专家性能）
+- **消融实验：** 欧拉 vs. 拉格朗日引导、双向一致性 vs. 无遮挡处理、Wasserstein先验匹配 vs. 无匹配、文档边界约束 vs. 无约束
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|:---:|:---|:---|:---:|:---|:---|:---|:---:|
+| 论文一：多模态理解与生成协同 | 面向多模态大模型的视觉语义对齐与结构化推理协同方法研究 | 弥合理解与生成之间的协同鸿沟 | 协同建模 + 细粒度评估 | 多层级对齐-推理协同框架、分布对齐评估 | 车辆检索、视频推理、医学视频理解 | 聚焦多模态协同机制，区别于安全评估和效率优化 | 低 |
+| 论文二：语言模型安全对齐与评估 | 面向大语言模型安全对齐的跨文化基准构建与评估协议研究 | 构建跨文化安全基准与可靠评估协议 | 跨文化基准构建 + 情境-变异联合建模 | 多阶段基准构建流水线、配对提示协议、统计校准 | 跨文化安全基准、评估-部署情境差异测量 | 聚焦安全评估方法论，区别于多模态协同和效率优化 | 低 |
+| 论文三：高效表征学习与生成控制 | 面向视觉与语言模型的高效表征学习与生成控制方法研究 | 提升表征学习与生成控制的效率 | 运动引导动画 + 先验学习与模块化 | 欧拉运动引导、Wasserstein梯度流、文档边界约束 | 图像动画、离散图像生成、模块化部署 | 聚焦效率优化，区别于多模态协同和安全评估 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一/三/五 | 创新点二/四/六 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|:---:|:---|:---|:---:|:---:|:---:|:---:|
+| 论文一 | 视觉语义对齐与结构化推理协同建模 | 基于分布对齐与局部诊断的细粒度评估方法 | 是 | 是（模型设计 vs. 评估方法） | 否 | 可保留 |
+| 论文二 | 跨文化安全基准构建与文化敏感性量化 | 评估-部署情境差异与标注者变异联合建模 | 是 | 是（基准构建 vs. 评估校准） | 否 | 可保留 |
+| 论文三 | 欧拉运动引导与双向几何一致性图像动画 | Wasserstein梯度流先验学习与模块化专家预训练 | 是 | 是（运动引导生成 vs. 离散表示学习） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05353) Counterargument for Critical Thinking as Judged by AI and Humans. arXiv:2605.05353, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05886) Training-Free Dense Hand Contact Estimation with Multi-Modal Large Language Models. arXiv:2605.05886, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05900) Understanding Cross-Language Transfer Improvements in Low-Resource HTR: The Role of Sequence Modeling. arXiv:2605.05900, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06327) Measuring Evaluation-Context Divergence in Open-Weight LLMs: A Paired-Prompt Protocol with Pilot Evidence of Alignment-Pipeline-Specific Heterogeneity. arXiv:2605.06327, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06094) VISD: Enhancing Video Reasoning via Structured Self-Distillation. arXiv:2605.06094, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06318) Who and What? Using Linguistic Features and Annotator Characteristics to Analyze Annotation Variation. arXiv:2605.06318, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06051) RealCam: Real-Time Novel-View Video Generation with Interactive Camera Control. arXiv:2605.06051, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06012) T2I-VeRW: Part-level Fine-grained Perception for Text-to-Image Vehicle Retrieval. arXiv:2605.06012, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05662) XL-SafetyBench: A Country-Grounded Cross-Cultural Benchmark for LLM Safety and Cultural Sensitivity. arXiv:2605.05662, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05714) TriRelVLA: Triadic Relational Structure for Generalizable Embodied Manipulation. arXiv:2605.05714, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06664) BAMI: Training-Free Bias Mitigation in GUI Grounding. arXiv:2605.06664, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05753) Jointly Learning Structured Representations and Stabilized Affinity for Human Motion Segmentation. arXiv:2605.05753, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05781) Steering Visual Generation in Unified Multimodal Models with Understanding Supervision. arXiv:2605.05781, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06280) Eulerian Motion Guidance: Robust Image Animation via Bidirectional Geometric Consistency. arXiv:2605.06280, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06642) StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction. arXiv:2605.06642, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06309) MultiLinguahah: A New Unsupervised Multilingual Acoustic Laughter Segmentation Method. arXiv:2605.06309, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06637) DPM++: Dynamic Masked Metric Learning for Occluded Person Re-identification. arXiv:2605.06637, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06148) Learning Discrete Autoregressive Priors with Wasserstein Gradient Flow. arXiv:2605.06148, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06663) EMO: Pretraining Mixture of Experts for Emergent Modularity. arXiv:2605.06663, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05351) egenioussBench: A New Dataset for Geospatial Visual Localisation. arXiv:2605.05351, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05627) Leveraging Image Generators to Address Training Data Scarcity: The Gen4Regen Dataset for Forest Regeneration Mapping. arXiv:2605.05627, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06283) Quantifying the Statistical Effect of Rubric Modifications on Human-Autorater Agreement. arXiv:2605.06283, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06537) MedHorizon: Towards Long-context Medical Video Understanding in the Wild. arXiv:2605.06537, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05692) CFE-PPAR: Compression-friendly encryption for privacy-preserving action recognition leveraging video transformers. arXiv:2605.05692, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06200) A²TGPO: Agentic Turn-Group Policy Optimization with Adaptive Turn-level Clipping. arXiv:2605.06200, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05945) MobileEgo Anywhere: Open Infrastructure for long horizon egocentric data on commodity hardware. arXiv:2605.05945, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06270) Spark3R: Asymmetric Token Reduction Makes Fast Feed-Forward 3D Reconstruction. arXiv:2605.06270, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06143) AI-Generated Images: What Humans and Machines See When They Look at the Same Image. arXiv:2605.06143, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.05922) Think, then Score: Decoupled Reasoning and Scoring for Video Reward Modeling. arXiv:2605.05922, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-09&paperId=2605.06080) MSD-Score: Multi-Scale Distributional Scoring for Reference-Free Image Caption Evaluation. arXiv:2605.06080, 2026.
+
+---
+
+## 自检结果
+
+一、是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：**是**
+
+二、是否避免将一篇论文拆成六个创新点：**是**
+
+三、是否避免生成六篇论文各一个创新点：**是**
+
+四、每篇论文内部两个创新点是否属于同一论文主题：**是**
+
+五、每篇论文内部两个创新点是否互补而不重复：**是**
+
+六、三篇论文之间是否研究问题不同：**是**
+
+七、三篇论文之间是否核心方法不同：**是**
+
+八、三篇论文之间是否实验验证重点不同：**是**
+
+九、每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：**是**
+
+十、每个创新点是否至少引用3篇池内文献：**是**（每个创新点引用8篇池内文献）
+
+十一、是否说明每篇文献的支撑作用：**是**
+
+十二、是否避免“首次提出”“填补空白”等绝对化表述：**是**
+
+十三、是否建立三篇论文方向去重矩阵：**是**
+
+十四、是否建立每篇论文内部创新点去重检查表：**是**

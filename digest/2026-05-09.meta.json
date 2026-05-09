@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-09",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "多模态理解与生成协同：从视觉语义对齐到结构化推理",
+      "blurb": "围绕多模态大模型在理解与生成之间的协同瓶颈，探索视觉语义对齐、结构化关系推理与细粒度跨模态检索等方向，涵盖手部接触估计、车辆检索、视频推理与统一多模态模型等前沿工作。"
+    },
+    {
+      "title": "语言模型安全、对齐与评估：跨文化基准、标注变异与评价协议",
+      "blurb": "聚焦大语言模型的安全对齐与评估方法论，涵盖跨文化安全基准构建、标注者变异分析、评估-部署情境差异测量以及评分规则修改对自动评分一致性的统计影响。"
+    },
+    {
+      "title": "高效表征学习与生成控制：从运动引导到离散先验与模块化专家",
+      "blurb": "关注视觉与语言模型中的表征学习与生成控制效率，涵盖运动引导的图像动画、离散自回归先验学习、模块化专家预训练以及令牌压缩加速三维重建等方向。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.05353",
+      "title": "Counterargument for Critical Thinking as Judged by AI and Humans"
+    },
+    {
+      "idx": 2,
+      "id": "2605.05886",
+      "title": "Training-Free Dense Hand Contact Estimation with Multi-Modal Large Language Models"
+    },
+    {
+      "idx": 3,
+      "id": "2605.05900",
+      "title": "Understanding Cross-Language Transfer Improvements in Low-Resource HTR: The Role of Sequence Modeling"
+    },
+    {
+      "idx": 4,
+      "id": "2605.06327",
+      "title": "Measuring Evaluation-Context Divergence in Open-Weight LLMs: A Paired-Prompt Protocol with Pilot Evidence of Alignment-Pipeline-Specific Heterogeneity"
+    },
+    {
+      "idx": 5,
+      "id": "2605.06094",
+      "title": "VISD: Enhancing Video Reasoning via Structured Self-Distillation"
+    },
+    {
+      "idx": 6,
+      "id": "2605.06318",
+      "title": "Who and What? Using Linguistic Features and Annotator Characteristics to Analyze Annotation Variation"
+    },
+    {
+      "idx": 7,
+      "id": "2605.06051",
+      "title": "RealCam: Real-Time Novel-View Video Generation with Interactive Camera Control"
+    },
+    {
+      "idx": 8,
+      "id": "2605.06012",
+      "title": "T2I-VeRW: Part-level Fine-grained Perception for Text-to-Image Vehicle Retrieval"
+    },
+    {
+      "idx": 9,
+      "id": "2605.05662",
+      "title": "XL-SafetyBench: A Country-Grounded Cross-Cultural Benchmark for LLM Safety and Cultural Sensitivity"
+    },
+    {
+      "idx": 10,
+      "id": "2605.05714",
+      "title": "TriRelVLA: Triadic Relational Structure for Generalizable Embodied Manipulation"
+    },
+    {
+      "idx": 11,
+      "id": "2605.06664",
+      "title": "BAMI: Training-Free Bias Mitigation in GUI Grounding"
+    },
+    {
+      "idx": 12,
+      "id": "2605.05753",
+      "title": "Jointly Learning Structured Representations and Stabilized Affinity for Human Motion Segmentation"
+    },
+    {
+      "idx": 13,
+      "id": "2605.05781",
+      "title": "Steering Visual Generation in Unified Multimodal Models with Understanding Supervision"
+    },
+    {
+      "idx": 14,
+      "id": "2605.06280",
+      "title": "Eulerian Motion Guidance: Robust Image Animation via Bidirectional Geometric Consistency"
+    },
+    {
+      "idx": 15,
+      "id": "2605.06642",
+      "title": "StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction"
+    },
+    {
+      "idx": 16,
+      "id": "2605.06309",
+      "title": "MultiLinguahah : A New Unsupervised Multilingual Acoustic Laughter Segmentation Method"
+    },
+    {
+      "idx": 17,
+      "id": "2605.06637",
+      "title": "DPM++: Dynamic Masked Metric Learning for Occluded Person Re-identification"
+    },
+    {
+      "idx": 18,
+      "id": "2605.06148",
+      "title": "Learning Discrete Autoregressive Priors with Wasserstein Gradient Flow"
+    },
+    {
+      "idx": 19,
+      "id": "2605.06663",
+      "title": "EMO: Pretraining Mixture of Experts for Emergent Modularity"
+    },
+    {
+      "idx": 20,
+      "id": "2605.05351",
+      "title": "egenioussBench: A New Dataset for Geospatial Visual Localisation"
+    },
+    {
+      "idx": 21,
+      "id": "2605.05627",
+      "title": "Leveraging Image Generators to Address Training Data Scarcity: The Gen4Regen Dataset for Forest Regeneration Mapping"
+    },
+    {
+      "idx": 22,
+      "id": "2605.06283",
+      "title": "Quantifying the Statistical Effect of Rubric Modifications on Human-Autorater Agreement"
+    },
+    {
+      "idx": 23,
+      "id": "2605.06537",
+      "title": "MedHorizon: Towards Long-context Medical Video Understanding in the Wild"
+    },
+    {
+      "idx": 24,
+      "id": "2605.05692",
+      "title": "CFE-PPAR: Compression-friendly encryption for privacy-preserving action recognition leveraging video transformers"
+    },
+    {
+      "idx": 25,
+      "id": "2605.06200",
+      "title": "A$^2$TGPO: Agentic Turn-Group Policy Optimization with Adaptive Turn-level Clipping"
+    },
+    {
+      "idx": 26,
+      "id": "2605.05945",
+      "title": "MobileEgo Anywhere: Open Infrastructure for long horizon egocentric data on commodity hardware"
+    },
+    {
+      "idx": 27,
+      "id": "2605.06270",
+      "title": "Spark3R: Asymmetric Token Reduction Makes Fast Feed-Forward 3D Reconstruction"
+    },
+    {
+      "idx": 28,
+      "id": "2605.06143",
+      "title": "AI-Generated Images: What Humans and Machines See When They Look at the Same Image"
+    },
+    {
+      "idx": 29,
+      "id": "2605.05922",
+      "title": "Think, then Score: Decoupled Reasoning and Scoring for Video Reward Modeling"
+    },
+    {
+      "idx": 30,
+      "id": "2605.06080",
+      "title": "MSD-Score: Multi-Scale Distributional Scoring for Reference-Free Image Caption Evaluation"
+    }
+  ]
+}
