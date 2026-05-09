@@ -23,8 +23,25 @@ SKILL_PATH = os.path.join(os.path.dirname(__file__), "skill.txt")
 
 DIGEST_PRODUCT_TITLE = "每日硬凑师兄要求的创新点"
 
-# 文献池中 [k] 引用（k 为 1–30），且非 Markdown 链接前缀
-POOL_REF_RE = re.compile(r"(?<!\])\[(?:[1-9]|[12][0-9]|30)\](?!\()")
+# 文献池中 [k] 引用（k 为 1–30），且非 Markdown 链接：](url) 已由 (?!\() 排除；
+# 不要用 (?<!\])：否则 [13][14] 里 [14] 紧接在 ] 后无法匹配。
+POOL_REF_RE = re.compile(r"(?<!\[)\[(?:[1-9]|[12][0-9]|30)\](?!\()")
+
+_POOL_NEXT_BRACKET_RE = re.compile(
+    r"(?<![0-9])(\d{1,2})(?=\[(?:[1-9]|[12][0-9]|30)\])"
+)
+
+
+def normalize_glued_numeric_pool_refs(md: str) -> str:
+    """把模型输出的「13[14][17]」规范成「[13][14][17]」，便于后续识别池中编号。"""
+
+    def norm(m: re.Match[str]) -> str:
+        k = int(m.group(1))
+        if k < 1 or k > 30:
+            return m.group(0)
+        return f"[{k}]"
+
+    return _POOL_NEXT_BRACKET_RE.sub(norm, md)
 
 DIGEST_CONSTRAINTS = """
 ---
@@ -185,6 +202,31 @@ def markdown_to_html_fragment(md: str) -> str:
     return markdown.markdown(md, extensions=["tables", "nl2br", "sane_lists", "fenced_code"])
 
 
+def site_pages_base() -> str:
+    return os.environ.get("PAGES_BASE_URL", "").strip().rstrip("/")
+
+
+def digest_public_base() -> str:
+    explicit = os.environ.get("DIGEST_PUBLIC_BASE_URL", "").strip().rstrip("/")
+    return explicit if explicit else site_pages_base()
+
+
+def site_home_href() -> str:
+    site = site_pages_base()
+    return f"{site}/index.html" if site else "../index.html"
+
+
+def digest_index_href() -> str:
+    base = digest_public_base()
+    return f"{base}/digest/index.html" if base else "index.html"
+
+
+def paper_list_href(date_str: str, quoted_paper_id: str) -> str:
+    site = site_pages_base()
+    tail = f"index.html?date={date_str}&paperId={quoted_paper_id}"
+    return f"{site}/{tail}" if site else f"../{tail}"
+
+
 def linkify_pool_refs(md: str, papers: List[Dict[str, Any]], date_str: str) -> str:
     idx_to_id = {i + 1: _safe_str(p.get("id")) for i, p in enumerate(papers)}
 
@@ -195,8 +237,10 @@ def linkify_pool_refs(md: str, papers: List[Dict[str, Any]], date_str: str) -> s
         if not pid:
             return m.group(0)
         q = urllib.parse.quote(pid, safe="")
-        return f"[{k}](../index.html?date={date_str}&paperId={q})"
+        href = paper_list_href(date_str, q)
+        return f"[{k}]({href})"
 
+    md = normalize_glued_numeric_pool_refs(md)
     return POOL_REF_RE.sub(repl, md)
 
 
@@ -218,7 +262,7 @@ def digest_page_shell(inner_article_html: str, date_str: str, themes: List[Diges
         pid = _safe_str(p.get("id"))
         tit = _truncate(_safe_str(p.get("title")), 140)
         q = urllib.parse.quote(pid, safe="") if pid else ""
-        href = f"../index.html?date={date_str}&paperId={q}" if q else "#"
+        href = paper_list_href(date_str, q) if q else "#"
         rows.append(
             f"<tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[{i}]</td>"
             f"<td style='padding:10px 12px;border:1px solid #e5e7eb;'>{html.escape(tit)}</td>"
@@ -247,9 +291,9 @@ def digest_page_shell(inner_article_html: str, date_str: str, themes: List[Diges
 <body style="margin:0;background:#e8eef5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;color:#334155;">
 <div style="max-width:900px;margin:0 auto;padding:28px 16px 48px;">
 <nav style="font-size:14px;margin-bottom:18px;">
-<a href="../index.html" style="color:#2563eb;text-decoration:none;font-weight:600;">论文列表主页</a>
+<a href="{html.escape(site_home_href())}" style="color:#2563eb;text-decoration:none;font-weight:600;">论文列表主页</a>
 <span style="color:#94a3b8;margin:0 8px;">/</span>
-<a href="index.html" style="color:#2563eb;text-decoration:none;font-weight:600;">历史创新点</a>
+<a href="{html.escape(digest_index_href())}" style="color:#2563eb;text-decoration:none;font-weight:600;">历史创新点</a>
 </nav>
 <header style="background:linear-gradient(135deg,#1e40af 0%,#3b82f6 100%);color:#fff;border-radius:14px;padding:22px 26px;margin-bottom:22px;">
 <p style="margin:0;font-size:12px;opacity:0.88;">读文献 · 憋创新点 · GitHub Pages</p>
@@ -349,7 +393,7 @@ def regenerate_digest_index(digest_dir: str) -> None:
 </head>
 <body style="margin:0;background:#e8eef5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;">
 <div style="max-width:720px;margin:0 auto;padding:32px 20px;">
-<nav style="margin-bottom:20px;"><a href="../index.html" style="color:#2563eb;font-weight:600;text-decoration:none;">论文列表主页</a></nav>
+<nav style="margin-bottom:20px;"><a href="{html.escape(site_home_href())}" style="color:#2563eb;font-weight:600;text-decoration:none;">论文列表主页</a></nav>
 <h1 style="color:#0f172a;font-size:22px;">{html.escape(DIGEST_PRODUCT_TITLE)}</h1>
 <p style="color:#64748b;">按日期浏览已生成的创新点页面。</p>
 <ul style="list-style:none;padding:0;margin-top:24px;">
@@ -384,9 +428,12 @@ def notice_paths(out_archive_txt: str, date_str: str) -> tuple[str, str]:
 
 
 def pages_digest_url(date_str: str) -> str:
-    base = os.environ.get("PAGES_BASE_URL", "").strip().rstrip("/")
+    base = digest_public_base()
     if not base:
-        return f"(请配置 PAGES_BASE_URL，示例：https://你的用户名.github.io/仓库名)/digest/{date_str}.html"
+        return (
+            f"(请配置 PAGES_BASE_URL；若 digest 不在 Pages 根目录还应配置 DIGEST_PUBLIC_BASE_URL)"
+            f"/digest/{date_str}.html"
+        )
     return f"{base}/digest/{date_str}.html"
 
 

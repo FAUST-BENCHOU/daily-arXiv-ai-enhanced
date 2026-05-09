@@ -1,4 +1,4 @@
-# Build digest Pages (innovation HTML + index), short notice email, push to main.
+# Generate digest HTML + email notices; commit under data branch (same as jsonl). Main stays unchanged.
 
 name: send-email-digest
 
@@ -109,19 +109,21 @@ jobs:
           LANGUAGE: ${{ vars.LANGUAGE }}
           MODEL_NAME: ${{ vars.MODEL_NAME }}
           PAGES_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          DIGEST_PUBLIC_BASE_URL: https://cdn.jsdelivr.net/gh/${{ github.repository_owner }}/${{ github.event.repository.name }}@data
         run: |
           set -e
           source .venv/bin/activate
           DIGEST_DATE="${{ steps.prep.outputs.digest_date }}"
-          mkdir -p assets digest
+          mkdir -p data-branch/digest data-branch/assets
           python ai/email_digest.py \
             --data "${{ steps.prep.outputs.ai_file }}" \
-            --out "assets/email_digest_${DIGEST_DATE}.txt" \
-            --digest-dir digest \
+            --out "data-branch/assets/email_digest_${DIGEST_DATE}.txt" \
+            --digest-dir data-branch/digest \
             --date "$DIGEST_DATE"
 
-      - name: Commit and push digest + assets to main
+      - name: Commit and push digest artifacts to data branch
         if: steps.prep.outputs.skip != 'true'
+        working-directory: data-branch
         run: |
           git config user.email "${{ vars.EMAIL }}"
           git config user.name "${{ vars.NAME }}"
@@ -132,7 +134,7 @@ jobs:
           fi
           git commit -m "chore: digest ${{ steps.prep.outputs.digest_date }}"
           for i in 1 2 3; do
-            git pull --rebase origin "${{ github.ref_name }}" && git push origin "${{ github.ref_name }}" && break
+            git pull --rebase origin data && git push origin data && break
             sleep 3
           done
 
@@ -148,5 +150,5 @@ jobs:
           to: ${{ secrets.MAIL_TO }}
           from: ${{ secrets.MAIL_FROM }}
           secure: true
-          body: file://assets/email_notice_${{ steps.prep.outputs.digest_date }}.txt
-          html_body: file://assets/email_notice_${{ steps.prep.outputs.digest_date }}.html
+          body: file://${{ github.workspace }}/data-branch/assets/email_notice_${{ steps.prep.outputs.digest_date }}.txt
+          html_body: file://${{ github.workspace }}/data-branch/assets/email_notice_${{ steps.prep.outputs.digest_date }}.html
