@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+import random
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional
 
@@ -8,14 +9,44 @@ import dotenv
 from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 
+SKILL_PATH = os.path.join(os.path.dirname(__file__), "skill.txt")
+
+DIGEST_CONSTRAINTS = """
+---
+# 每日邮件模式（覆盖 skill 中与文献数量冲突的条款）
+
+你正在生成的是「当日 arXiv 抓取论文」的邮件稿，不是让用户再去检索外部文献。
+
+**文献池（唯一合法引用来源）**
+- 用户消息中会给出若干篇论文，编号为 [1]、[2]、…、[N]（N≤30）。
+- 你只能引用这些编号对应的论文（可用编号或 arXiv id 指代）。**禁止**引用、编造列表外的任何论文、链接或「待核验」占位文献。
+- 原 skill 中「每个创新点至少十篇真实论文」「参考文献总表 60 篇」等数量要求**在本模式下不适用**，不得以凑数为目的虚构文献。
+
+**引用与论述**
+- 每个创新点至少引用池中 **3 篇不同编号**的论文来支撑「大多数 / 少数 / 为此」三层论述；同一篇池内论文可在多个创新点中再次出现。
+- 「大多数现有方法」「少数现有方法」是对**当日文献池内论文主题与方法共性**的归纳：只能依据池内摘要与 AI 字段归纳，不得捏造池外综述结论。
+- 若证据不足以支撑某一论断，须显著弱化或写明「依当日文献难以区分主次流派」，**禁止**编造实验结果或虚构论文。
+
+**输出顺序（便于邮件阅读）**
+1. 一行「邮件标题建议：……」（≤80 字）
+2. 「当日文献池编号一览」：列出 [k] 题目（过长可截断）+ arXiv id（如有）
+3. 随后严格按 skill 正文要求的结构输出：**三篇论文方向、每篇两个创新点（共六个创新点）**、去重矩阵、池内去重检查、参考文献总表（条目只能来自文献池，格式：[k] 题名，arXiv:id）、自检结果（自检项中关于「十篇文献」改为「每创新点≥3 篇池内文献」）。
+"""
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data", type=str, required=True, help="AI enhanced jsonl file")
     parser.add_argument("--out", type=str, required=True, help="output text file path")
-    parser.add_argument("--max_papers", type=int, default=30, help="max number of papers to include as context")
-    parser.add_argument("--max_chars_per_paper", type=int, default=1200, help="truncate each paper context")
+    parser.add_argument("--max_papers", type=int, default=30, help="sample up to this many papers into the pool")
+    parser.add_argument("--max_chars_per_paper", type=int, default=1200, help="truncate each paper context block")
     parser.add_argument("--date", type=str, default="", help="date string like YYYY-MM-DD for email title/body")
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=None,
+        help="RNG seed for sampling (default: env EMAIL_DIGEST_RANDOM_SEED or non-deterministic)",
+    )
     return parser.parse_args()
 
 
@@ -37,6 +68,21 @@ def _truncate(s: str, n: int) -> str:
     return s if len(s) <= n else (s[: n - 3] + "...")
 
 
+def strip_yaml_frontmatter(raw: str) -> str:
+    lines = raw.splitlines()
+    if not lines or lines[0].strip() != "---":
+        return raw
+    for i in range(1, len(lines)):
+        if lines[i].strip() == "---":
+            return "\n".join(lines[i + 1 :]).lstrip("\n")
+    return raw
+
+
+def load_skill_text() -> str:
+    with open(SKILL_PATH, "r", encoding="utf-8") as f:
+        return strip_yaml_frontmatter(f.read()).strip()
+
+
 def load_items(path: str) -> List[Dict[str, Any]]:
     items: List[Dict[str, Any]] = []
     with open(path, "r") as f:
@@ -51,9 +97,21 @@ def load_items(path: str) -> List[Dict[str, Any]]:
     return items
 
 
-def build_context(items: List[Dict[str, Any]], max_papers: int, max_chars_per_paper: int) -> str:
+def select_paper_pool(items: List[Dict[str, Any]], max_papers: int, seed: Optional[int]) -> List[Dict[str, Any]]:
+    rng = random.Random(seed) if seed is not None else random.Random()
+    pool = list(items)
+    k = min(max_papers, len(pool))
+    if k <= 0:
+        return []
+    if len(pool) <= max_papers:
+        rng.shuffle(pool)
+        return pool
+    return rng.sample(pool, k)
+
+
+def build_context(papers: List[Dict[str, Any]], max_chars_per_paper: int) -> str:
     blocks: List[str] = []
-    for idx, it in enumerate(items[:max_papers], start=1):
+    for idx, it in enumerate(papers, start=1):
         title = _safe_str(it.get("title"))
         paper_id = _safe_str(it.get("id"))
         categories = it.get("categories")
@@ -91,6 +149,18 @@ def default_date_str() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 
+def resolve_seed(cli_seed: Optional[int]) -> Optional[int]:
+    if cli_seed is not None:
+        return cli_seed
+    env_seed = os.environ.get("EMAIL_DIGEST_RANDOM_SEED", "").strip()
+    if env_seed == "":
+        return None
+    try:
+        return int(env_seed)
+    except ValueError:
+        return None
+
+
 def main() -> None:
     if os.path.exists(".env"):
         dotenv.load_dotenv()
@@ -99,29 +169,31 @@ def main() -> None:
     model_name = os.environ.get("MODEL_NAME", "deepseek-chat")
     language = os.environ.get("LANGUAGE", "Chinese")
     date_str = args.date.strip() or default_date_str()
+    seed = resolve_seed(args.seed)
+
+    skill_body = load_skill_text()
+    system_prompt = skill_body + "\n\n" + DIGEST_CONSTRAINTS.strip()
 
     items = load_items(args.data)
-    context = build_context(items, args.max_papers, args.max_chars_per_paper)
+    papers = select_paper_pool(items, args.max_papers, seed)
+    if not papers:
+        with open(args.out, "w", encoding="utf-8") as f:
+            f.write(f"每日 arXiv 简报 {date_str}\n\n（无可用论文，跳过生成。）\n")
+        return
+
+    context = build_context(papers, args.max_chars_per_paper)
 
     prompt = ChatPromptTemplate.from_messages(
         [
-            (
-                "system",
-                "你是资深研究员助理。你将基于给定的一组论文内容信息，写一封可以直接发送到邮箱的每日简报。"
-                "要求：中文、简洁、信息密度高、不要杜撰。"
-                "输出结构固定为：\n"
-                "1) 今日概览（3-6条要点）\n"
-                "2) 主题分组（按主题列出，每组2-5条要点）\n"
-                "3) 值得关注的论文（最多10篇，每篇1-2行：题目 + 关键贡献/结论）\n"
-                "4) 可能的下一步（2-4条）\n"
-                "禁止：空话套话、夸张措辞、编造实验结果。",
-            ),
+            ("system", system_prompt),
             (
                 "human",
                 "日期：{date}\n"
                 "语言配置：{language}\n"
-                "论文数量：{count}\n\n"
-                "以下是论文内容信息（包含摘要与AI增强字段）。请严格基于这些信息生成简报：\n\n"
+                "当日抓取总篇数（文件内）：{total_in_file}\n"
+                "本次随机抽取进入文献池的篇数：{pool_size}（编号 [1]…[{pool_size}]，三篇论文构想及六个创新点必须仅基于这些文献）\n\n"
+                "研究方向请从下列文献池整体主题中自行提炼，无需用户另行提供课题名称。\n\n"
+                "文献池内容（摘要 abstract 与 AI 增强字段）：\n\n"
                 "{context}",
             ),
         ]
@@ -133,13 +205,14 @@ def main() -> None:
         {
             "date": date_str,
             "language": language,
-            "count": len(items),
+            "total_in_file": len(items),
+            "pool_size": len(papers),
             "context": context if context else "（无可用论文内容）",
         }
     )
 
     body = resp.content.strip() if hasattr(resp, "content") else str(resp).strip()
-    with open(args.out, "w") as f:
+    with open(args.out, "w", encoding="utf-8") as f:
         f.write(f"每日 arXiv 简报 {date_str}\n\n")
         f.write(body)
         f.write("\n")
@@ -147,4 +220,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
