@@ -1,5 +1,4 @@
-# Generate daily digest from data-branch AI-enhanced JSONL and send via SMTP.
-# Independent from the crawl workflow; runs after it completes or on manual dispatch.
+# Build digest Pages (innovation HTML + index), short notice email, push to main.
 
 name: send-email-digest
 
@@ -17,7 +16,7 @@ on:
       - completed
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   send-email:
@@ -30,6 +29,8 @@ jobs:
     steps:
       - name: Checkout main (scripts)
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Checkout data branch
         uses: actions/checkout@v4
@@ -100,24 +101,42 @@ jobs:
           curl -LsSf https://astral.sh/uv/install.sh | sh
           uv sync
 
-      - name: Generate email digest
+      - name: Generate digest (Pages + archive + short email)
         if: steps.prep.outputs.skip != 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
           LANGUAGE: ${{ vars.LANGUAGE }}
           MODEL_NAME: ${{ vars.MODEL_NAME }}
+          PAGES_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
         run: |
           set -e
           source .venv/bin/activate
           DIGEST_DATE="${{ steps.prep.outputs.digest_date }}"
-          mkdir -p assets
+          mkdir -p assets digest
           python ai/email_digest.py \
             --data "${{ steps.prep.outputs.ai_file }}" \
             --out "assets/email_digest_${DIGEST_DATE}.txt" \
+            --digest-dir digest \
             --date "$DIGEST_DATE"
 
-      - name: Send email
+      - name: Commit and push digest + assets to main
+        if: steps.prep.outputs.skip != 'true'
+        run: |
+          git config user.email "${{ vars.EMAIL }}"
+          git config user.name "${{ vars.NAME }}"
+          git add digest/ assets/email_digest_*.txt assets/email_notice_*.txt assets/email_notice_*.html
+          if git diff --staged --quiet; then
+            echo "No digest changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: digest ${{ steps.prep.outputs.digest_date }}"
+          for i in 1 2 3; do
+            git pull --rebase origin "${{ github.ref_name }}" && git push origin "${{ github.ref_name }}" && break
+            sleep 3
+          done
+
+      - name: Send email (link + three themes only)
         if: steps.prep.outputs.skip != 'true'
         uses: dawidd6/action-send-mail@v3
         with:
@@ -129,5 +148,5 @@ jobs:
           to: ${{ secrets.MAIL_TO }}
           from: ${{ secrets.MAIL_FROM }}
           secure: true
-          body: file://assets/email_digest_${{ steps.prep.outputs.digest_date }}.txt
-          html_body: file://assets/email_digest_${{ steps.prep.outputs.digest_date }}.html
+          body: file://assets/email_notice_${{ steps.prep.outputs.digest_date }}.txt
+          html_body: file://assets/email_notice_${{ steps.prep.outputs.digest_date }}.html

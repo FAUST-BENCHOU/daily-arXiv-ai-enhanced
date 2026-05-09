@@ -3,6 +3,9 @@ import html
 import json
 import os
 import random
+import re
+import sys
+import urllib.parse
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional
 
@@ -11,16 +14,23 @@ import markdown
 from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 
+_AI_DIR = os.path.dirname(os.path.abspath(__file__))
+if _AI_DIR not in sys.path:
+    sys.path.insert(0, _AI_DIR)
+from digest_structure import DigestStructured, DigestTheme
+
 SKILL_PATH = os.path.join(os.path.dirname(__file__), "skill.txt")
 
-# 邮件主题 / HTML 标题 / 正文前缀（与 workflow subject 保持一致）
 DIGEST_PRODUCT_TITLE = "每日硬凑师兄要求的创新点"
+
+# 文献池中 [k] 引用（k 为 1–30），且非 Markdown 链接前缀
+POOL_REF_RE = re.compile(r"(?<!\])\[(?:[1-9]|[12][0-9]|30)\](?!\()")
 
 DIGEST_CONSTRAINTS = """
 ---
 # 每日邮件模式（覆盖 skill 中与文献数量冲突的条款）
 
-你正在生成的是「当日 arXiv 抓取论文」的邮件稿，不是让用户再去检索外部文献。
+你正在生成的是「当日 arXiv 抓取论文」的创新点构思与白皮书式 Markdown，不是让用户再去检索外部文献。
 
 **文献池（唯一合法引用来源）**
 - 用户消息中会给出若干篇论文，编号为 [1]、[2]、…、[N]（N≤30）。
@@ -29,41 +39,33 @@ DIGEST_CONSTRAINTS = """
 
 **引用与论述**
 - 每个创新点至少引用池中 **3 篇不同编号**的论文来支撑「大多数 / 少数 / 为此」三层论述；同一篇池内论文可在多个创新点中再次出现。
-- 「大多数现有方法」「少数现有方法」是对**当日文献池内论文主题与方法共性**的归纳：只能依据池内摘要与 AI 字段归纳，不得捏造池外综述结论。
-- 若证据不足以支撑某一论断，须显著弱化或写明「依当日文献难以区分主次流派」，**禁止**编造实验结果或虚构论文。
+- 正文里提及文献编号时，请使用单独的 `[k]` 形式（例如 `[3]`），不要使用 `[3](url)`，以便后台自动加上站内链接。
+- 「大多数现有方法」「少数现有方法」是对**当日文献池内论文主题与方法共性**的归纳：只能依据池内摘要与 AI 字段归纳。
 
-**输出格式：必须使用 Markdown（不要使用裸 HTML 标签）**
-- 一级章节用 `##`，次级用 `###`；段落之间空一行。
-- 列表统一用 `- `（多级列表用缩进）。
-- 去重矩阵、文献表等**必须使用 Markdown pipe table**（含表头分隔行 `|---|`）。
-- 不要使用整块代码围栏包裹全文；表格单元格内避免未转义的 `|`。
-- 数学公式尽量少用；必须用则用 `$...$` 简述，避免复杂 LaTeX。
+**结构化输出（必填）**
+- `themes`：恰好 **3** 条，每条包含 `title`（短语标题）与 `blurb`（一句话概要）。三者对应三篇论文方向，用于邮件与网页顶部摘要。
+- `markdown_digest`：**完整** Markdown 正文；从「## 当日文献池编号一览」开始写起；**不要**在 markdown 里再用小节重复罗列三条 theme 标题（顶部已由结构化字段展示）。
+- Markdown 要求：`##` / `###`、pipe table、`- ` 列表；不要用裸 HTML；不要用围栏包住全文。
 
-**输出顺序（便于邮件阅读）**
-1. 一行「邮件标题建议：……」（≤80 字）
-2. 「当日文献池编号一览」：列出 [k] 题目（过长可截断）+ arXiv id（如有）
-3. 随后严格按 skill 正文要求的结构输出：**三篇论文方向、每篇两个创新点（共六个创新点）**、去重矩阵、池内去重检查、参考文献总表（条目只能来自文献池，格式：[k] 题名，arXiv:id）、自检结果（自检项中关于「十篇文献」改为「每创新点≥3 篇池内文献」）。
+**markdown_digest 内容顺序**
+1. ## 当日文献池编号一览（[k] + 题目 + id）
+2. 按 skill：三篇论文方向、每篇两个创新点（共六个）、矩阵、池内去重检查、参考文献总表（仅池内）、自检（「十篇文献」改为「每创新点≥3 篇池内文献」）。
 """
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data", type=str, required=True, help="AI enhanced jsonl file")
-    parser.add_argument("--out", type=str, required=True, help="output Markdown (.txt) path")
-    parser.add_argument(
-        "--html-out",
-        type=str,
-        default="",
-        help="output HTML email path (default: same basename as --out with .html)",
-    )
+    parser.add_argument("--out", type=str, required=True, help="full Markdown archive (.txt)")
+    parser.add_argument("--digest-dir", type=str, default="digest", help="directory for Pages digest HTML")
     parser.add_argument("--max_papers", type=int, default=30, help="sample up to this many papers into the pool")
     parser.add_argument("--max_chars_per_paper", type=int, default=1200, help="truncate each paper context block")
-    parser.add_argument("--date", type=str, default="", help="date string like YYYY-MM-DD for email title/body")
+    parser.add_argument("--date", type=str, default="", help="YYYY-MM-DD")
     parser.add_argument(
         "--seed",
         type=int,
         default=None,
-        help="RNG seed for sampling (default: env EMAIL_DIGEST_RANDOM_SEED or non-deterministic)",
+        help="RNG seed (env EMAIL_DIGEST_RANDOM_SEED if unset)",
     )
     return parser.parse_args()
 
@@ -180,72 +182,185 @@ def unwrap_markdown_fence(s: str) -> str:
 
 
 def markdown_to_html_fragment(md: str) -> str:
-    return markdown.markdown(
-        md,
-        extensions=["tables", "nl2br", "sane_lists", "fenced_code"],
+    return markdown.markdown(md, extensions=["tables", "nl2br", "sane_lists", "fenced_code"])
+
+
+def linkify_pool_refs(md: str, papers: List[Dict[str, Any]], date_str: str) -> str:
+    idx_to_id = {i + 1: _safe_str(p.get("id")) for i, p in enumerate(papers)}
+
+    def repl(m: re.Match[str]) -> str:
+        inner = m.group(0)[1:-1]
+        k = int(inner)
+        pid = idx_to_id.get(k)
+        if not pid:
+            return m.group(0)
+        q = urllib.parse.quote(pid, safe="")
+        return f"[{k}](../index.html?date={date_str}&paperId={q})"
+
+    return POOL_REF_RE.sub(repl, md)
+
+
+def digest_page_shell(inner_article_html: str, date_str: str, themes: List[DigestTheme], papers: List[Dict[str, Any]]) -> str:
+    headline = html.escape(f"{DIGEST_PRODUCT_TITLE} · {date_str}")
+    theme_cards = []
+    for i, t in enumerate(themes, start=1):
+        theme_cards.append(
+            f"""<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;margin-bottom:12px;">
+<div style="font-size:12px;color:#64748b;margin-bottom:6px;">主题 {i}</div>
+<div style="font-size:17px;font-weight:700;color:#0f172a;margin-bottom:8px;">{html.escape(t.title)}</div>
+<div style="font-size:14px;color:#475569;line-height:1.55;">{html.escape(t.blurb)}</div>
+</div>"""
+        )
+    themes_html = "\n".join(theme_cards)
+
+    rows = []
+    for i, p in enumerate(papers, start=1):
+        pid = _safe_str(p.get("id"))
+        tit = _truncate(_safe_str(p.get("title")), 140)
+        q = urllib.parse.quote(pid, safe="") if pid else ""
+        href = f"../index.html?date={date_str}&paperId={q}" if q else "#"
+        rows.append(
+            f"<tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[{i}]</td>"
+            f"<td style='padding:10px 12px;border:1px solid #e5e7eb;'>{html.escape(tit)}</td>"
+            f"<td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>{html.escape(pid)}</td>"
+            f"<td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='{html.escape(href)}' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr>"
+        )
+    pool_table = (
+        "<table style='width:100%;border-collapse:collapse;font-size:13px;margin:16px 0;'>"
+        "<thead><tr style='background:#f3f4f6;'>"
+        "<th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>编号</th>"
+        "<th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>题目</th>"
+        "<th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>ID</th>"
+        "<th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>链接</th>"
+        "</tr></thead><tbody>"
+        + "".join(rows)
+        + "</tbody></table>"
     )
 
-
-def build_email_html(markdown_body: str, date_str: str) -> str:
-    inner = markdown_to_html_fragment(markdown_body)
-    headline_full = f"{DIGEST_PRODUCT_TITLE} {date_str}"
-    title_esc = html.escape(headline_full)
-    # Double braces in CSS for .format
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{title_esc}</title>
+<title>{headline}</title>
 </head>
-<body style="margin:0;padding:0;background-color:#e8eef5;">
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#e8eef5;">
-<tr><td align="center" style="padding:24px 12px;">
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:680px;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(15,23,42,0.08);">
-<tr><td style="padding:14px 24px;background:linear-gradient(135deg,#1e40af 0%,#3b82f6 100%);color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;">
-<p style="margin:0;font-size:12px;opacity:0.9;">读文献 · 憋创新点</p>
-<h1 style="margin:8px 0 0;font-size:20px;font-weight:600;line-height:1.35;">{html.escape(headline_full)}</h1>
-</td></tr>
-<tr><td class="digest-body" style="padding:24px 28px 32px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;font-size:15px;line-height:1.65;color:#374151;">
+<body style="margin:0;background:#e8eef5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;color:#334155;">
+<div style="max-width:900px;margin:0 auto;padding:28px 16px 48px;">
+<nav style="font-size:14px;margin-bottom:18px;">
+<a href="../index.html" style="color:#2563eb;text-decoration:none;font-weight:600;">论文列表主页</a>
+<span style="color:#94a3b8;margin:0 8px;">/</span>
+<a href="index.html" style="color:#2563eb;text-decoration:none;font-weight:600;">历史创新点</a>
+</nav>
+<header style="background:linear-gradient(135deg,#1e40af 0%,#3b82f6 100%);color:#fff;border-radius:14px;padding:22px 26px;margin-bottom:22px;">
+<p style="margin:0;font-size:12px;opacity:0.88;">读文献 · 憋创新点 · GitHub Pages</p>
+<h1 style="margin:10px 0 0;font-size:22px;font-weight:700;line-height:1.35;">{headline}</h1>
+</header>
+<section style="margin-bottom:22px;">
+<h2 style="font-size:18px;color:#0f172a;margin:0 0 14px;border-bottom:2px solid #2563eb;padding-bottom:8px;">今日三个主题</h2>
+{themes_html}
+</section>
+<section style="margin-bottom:22px;">
+<h2 style="font-size:18px;color:#0f172a;margin:0 0 14px;border-bottom:2px solid #2563eb;padding-bottom:8px;">文献池（点击跳转当日论文详情）</h2>
+{pool_table}
+</section>
+<article class="digest-body" style="background:#fff;border-radius:12px;padding:24px 26px 32px;box-shadow:0 4px 24px rgba(15,23,42,0.06);">
 <style type="text/css">
-.digest-body h2 {{ font-size:18px; color:#111827; margin:28px 0 12px; padding-bottom:8px; border-bottom:2px solid #2563eb; font-weight:600; }}
-.digest-body h3 {{ font-size:15px; color:#1f2937; margin:20px 0 10px; font-weight:600; }}
+.digest-body h2 {{ font-size:18px; color:#111827; margin:26px 0 12px; padding-bottom:8px; border-bottom:2px solid #cbd5e1; font-weight:700; }}
+.digest-body h3 {{ font-size:15px; color:#1f2937; margin:18px 0 10px; font-weight:600; }}
 .digest-body h4 {{ font-size:14px; color:#374151; margin:14px 0 8px; font-weight:600; }}
-.digest-body p {{ margin:10px 0; }}
+.digest-body p {{ margin:10px 0; line-height:1.65; }}
 .digest-body ul, .digest-body ol {{ margin:10px 0; padding-left:22px; }}
 .digest-body li {{ margin:5px 0; }}
 .digest-body table {{ border-collapse:collapse; width:100%; margin:16px 0; font-size:13px; }}
 .digest-body th, .digest-body td {{ border:1px solid #e5e7eb; padding:10px 12px; vertical-align:top; }}
 .digest-body th {{ background:#f3f4f6; font-weight:600; color:#111827; }}
-.digest-body hr {{ border:none; border-top:1px solid #e5e7eb; margin:24px 0; }}
+.digest-body hr {{ border:none; border-top:1px solid #e5e7eb; margin:22px 0; }}
 .digest-body blockquote {{ margin:12px 0; padding:10px 14px; border-left:4px solid #93c5fd; background:#f8fafc; color:#475569; }}
+.digest-body a {{ color:#2563eb; }}
 .digest-body code {{ font-size:13px; background:#f1f5f9; padding:2px 6px; border-radius:4px; }}
 .digest-body pre {{ background:#1e293b; color:#e2e8f0; padding:14px; border-radius:8px; overflow-x:auto; font-size:13px; }}
 .digest-body pre code {{ background:transparent; color:inherit; padding:0; }}
 </style>
-<div class="digest-content">
-{inner}
+{inner_article_html}
+<p style="margin-top:28px;padding-top:16px;border-top:1px solid #e5e7eb;font-size:12px;color:#94a3b8;">内容由 AI 生成，请仔细甄别。</p>
+</article>
 </div>
-<p style="margin-top:28px;padding-top:16px;border-top:1px solid #e5e7eb;font-size:12px;color:#9ca3af;line-height:1.5;">内容由 AI 生成，请仔细甄别。</p>
-</td></tr>
-</table>
-</td></tr>
-</table>
 </body>
 </html>"""
 
 
-def build_empty_email_html(date_str: str, message: str) -> str:
-    return build_email_html(f"## 提示\n\n{message}", date_str)
+def write_short_notice_files(
+    notice_txt_path: str,
+    notice_html_path: str,
+    date_str: str,
+    themes: List[DigestTheme],
+    page_url: str,
+) -> None:
+    lines = [
+        f"{DIGEST_PRODUCT_TITLE} {date_str}",
+        "",
+        "今日三个主题概要：",
+    ]
+    for i, t in enumerate(themes, start=1):
+        lines.append(f"{i}. {t.title} — {t.blurb}")
+    lines.extend(["", "完整创新点、矩阵与文献引用见：", page_url, ""])
+    with open(notice_txt_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
+    bullets = "".join(
+        f"<li style='margin:8px 0;'><strong>{html.escape(t.title)}</strong><br/><span style='color:#64748b;font-size:14px;'>{html.escape(t.blurb)}</span></li>"
+        for t in themes
+    )
+    html_page = f"""<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"/></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;padding:20px;background:#f1f5f9;color:#334155;">
+<div style="max-width:560px;margin:0 auto;background:#fff;padding:24px;border-radius:12px;">
+<p style="margin:0 0 12px;font-size:13px;color:#64748b;">{html.escape(DIGEST_PRODUCT_TITLE)} · {html.escape(date_str)}</p>
+<p style="margin:0 0 16px;">今日三个主题：</p>
+<ul style="padding-left:18px;margin:0;">{bullets}</ul>
+<p style="margin:22px 0 12px;">点击下方按钮查看当日完整创新点与可点击文献链接：</p>
+<p style="margin:0;"><a href="{html.escape(page_url)}" style="display:inline-block;background:#2563eb;color:#fff;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:600;">打开完整页面</a></p>
+<p style="margin-top:18px;font-size:12px;color:#94a3b8;">若按钮无效，请复制链接：{html.escape(page_url)}</p>
+</div></body></html>"""
+    with open(notice_html_path, "w", encoding="utf-8") as f:
+        f.write(html_page)
 
 
-def html_output_path(out_txt: str, html_out: str) -> str:
-    ho = (html_out or "").strip()
-    if ho:
-        return ho
-    if out_txt.endswith(".txt"):
-        return out_txt[:-4] + ".html"
-    return out_txt + ".html"
+def regenerate_digest_index(digest_dir: str) -> None:
+    dates: List[str] = []
+    if os.path.isdir(digest_dir):
+        for fn in os.listdir(digest_dir):
+            if re.fullmatch(r"\d{4}-\d{2}-\d{2}\.html", fn):
+                dates.append(fn[:-5])
+    dates = sorted(set(dates), reverse=True)
+    items = "\n".join(
+        f'<li style="margin:12px 0;"><a href="{html.escape(d)}.html" style="color:#2563eb;font-size:16px;font-weight:600;text-decoration:none;">{html.escape(d)}</a></li>'
+        for d in dates
+    )
+    if not items:
+        items = '<li style="color:#64748b;">暂无归档</li>'
+
+    idx_html = f"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>{html.escape(DIGEST_PRODUCT_TITLE)} · 历史</title>
+</head>
+<body style="margin:0;background:#e8eef5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;">
+<div style="max-width:720px;margin:0 auto;padding:32px 20px;">
+<nav style="margin-bottom:20px;"><a href="../index.html" style="color:#2563eb;font-weight:600;text-decoration:none;">论文列表主页</a></nav>
+<h1 style="color:#0f172a;font-size:22px;">{html.escape(DIGEST_PRODUCT_TITLE)}</h1>
+<p style="color:#64748b;">按日期浏览已生成的创新点页面。</p>
+<ul style="list-style:none;padding:0;margin-top:24px;">
+{items}
+</ul>
+</div>
+</body>
+</html>"""
+    os.makedirs(digest_dir, exist_ok=True)
+    with open(os.path.join(digest_dir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(idx_html)
 
 
 def resolve_seed(cli_seed: Optional[int]) -> Optional[int]:
@@ -260,6 +375,21 @@ def resolve_seed(cli_seed: Optional[int]) -> Optional[int]:
         return None
 
 
+def notice_paths(out_archive_txt: str, date_str: str) -> tuple[str, str]:
+    d = os.path.dirname(os.path.abspath(out_archive_txt)) or "."
+    return (
+        os.path.join(d, f"email_notice_{date_str}.txt"),
+        os.path.join(d, f"email_notice_{date_str}.html"),
+    )
+
+
+def pages_digest_url(date_str: str) -> str:
+    base = os.environ.get("PAGES_BASE_URL", "").strip().rstrip("/")
+    if not base:
+        return f"(请配置 PAGES_BASE_URL，示例：https://你的用户名.github.io/仓库名)/digest/{date_str}.html"
+    return f"{base}/digest/{date_str}.html"
+
+
 def main() -> None:
     if os.path.exists(".env"):
         dotenv.load_dotenv()
@@ -270,19 +400,29 @@ def main() -> None:
     date_str = args.date.strip() or default_date_str()
     seed = resolve_seed(args.seed)
 
+    digest_dir = args.digest_dir
+    os.makedirs(digest_dir, exist_ok=True)
+
+    notice_txt_path, notice_html_path = notice_paths(args.out, date_str)
+    os.makedirs(os.path.dirname(os.path.abspath(args.out)) or ".", exist_ok=True)
+
     skill_body = load_skill_text()
     system_prompt = skill_body + "\n\n" + DIGEST_CONSTRAINTS.strip()
 
     items = load_items(args.data)
-    html_path = html_output_path(args.out, args.html_out)
-
     papers = select_paper_pool(items, args.max_papers, seed)
+
     if not papers:
         stub = f"{DIGEST_PRODUCT_TITLE} {date_str}\n\n（无可用论文，跳过生成。）\n"
         with open(args.out, "w", encoding="utf-8") as f:
             f.write(stub)
-        with open(html_path, "w", encoding="utf-8") as f:
-            f.write(build_empty_email_html(date_str, "（无可用论文，跳过生成。）"))
+        empty_url = pages_digest_url(date_str)
+        ph_themes = [
+            DigestTheme(title="（无数据）", blurb="当日文献池为空，未生成创新点。"),
+            DigestTheme(title="（无数据）", blurb=""),
+            DigestTheme(title="（无数据）", blurb=""),
+        ]
+        write_short_notice_files(notice_txt_path, notice_html_path, date_str, ph_themes, empty_url)
         return
 
     context = build_context(papers, args.max_chars_per_paper)
@@ -295,17 +435,20 @@ def main() -> None:
                 "日期：{date}\n"
                 "语言配置：{language}\n"
                 "当日抓取总篇数（文件内）：{total_in_file}\n"
-                "本次随机抽取进入文献池的篇数：{pool_size}（编号 [1]…[{pool_size}]，三篇论文构想及六个创新点必须仅基于这些文献）\n\n"
-                "研究方向请从下列文献池整体主题中自行提炼，无需用户另行提供课题名称。\n\n"
-                "文献池内容（摘要 abstract 与 AI 增强字段）：\n\n"
+                "本次随机抽取进入文献池的篇数：{pool_size}（编号 [1]…[{pool_size}]）。\n\n"
+                "请输出结构化结果：`themes`（恰好 3 条）与 `markdown_digest`（完整 Markdown）。\n\n"
+                "文献池内容：\n\n"
                 "{context}",
             ),
         ]
     )
 
-    llm = ChatOpenAI(model=model_name, temperature=0.2)
+    llm = ChatOpenAI(model=model_name, temperature=0.2).with_structured_output(
+        DigestStructured,
+        method="function_calling",
+    )
     chain = prompt | llm
-    resp = chain.invoke(
+    structured: DigestStructured = chain.invoke(
         {
             "date": date_str,
             "language": language,
@@ -315,14 +458,50 @@ def main() -> None:
         }
     )
 
-    body_raw = resp.content.strip() if hasattr(resp, "content") else str(resp).strip()
-    body_md = unwrap_markdown_fence(body_raw)
+    md_body = unwrap_markdown_fence(structured.markdown_digest.strip())
+    md_linked = linkify_pool_refs(md_body, papers, date_str)
+
+    head_md_lines = [
+        f"# {DIGEST_PRODUCT_TITLE} {date_str}",
+        "",
+        "## 今日三个主题（结构化）",
+    ]
+    for i, t in enumerate(structured.themes, start=1):
+        head_md_lines.append(f"{i}. **{t.title}** — {t.blurb}")
+    head_md_lines.extend(["", "---", ""])
+    full_md = "\n".join(head_md_lines) + md_linked
+
     with open(args.out, "w", encoding="utf-8") as f:
-        f.write(f"{DIGEST_PRODUCT_TITLE} {date_str}\n\n")
-        f.write(body_md)
+        f.write(full_md)
         f.write("\n")
-    with open(html_path, "w", encoding="utf-8") as f:
-        f.write(build_email_html(body_md, date_str))
+
+    meta_path = os.path.join(digest_dir, f"{date_str}.meta.json")
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "date": date_str,
+                "title": DIGEST_PRODUCT_TITLE,
+                "themes": [t.model_dump() for t in structured.themes],
+                "pool": [
+                    {"idx": i + 1, "id": _safe_str(p.get("id")), "title": _safe_str(p.get("title"))}
+                    for i, p in enumerate(papers)
+                ],
+            },
+            f,
+            ensure_ascii=False,
+            indent=2,
+        )
+
+    inner_html = markdown_to_html_fragment(md_linked)
+    page_html = digest_page_shell(inner_html, date_str, structured.themes, papers)
+    digest_html_path = os.path.join(digest_dir, f"{date_str}.html")
+    with open(digest_html_path, "w", encoding="utf-8") as f:
+        f.write(page_html)
+
+    regenerate_digest_index(digest_dir)
+
+    page_url = pages_digest_url(date_str)
+    write_short_notice_files(notice_txt_path, notice_html_path, date_str, structured.themes, page_url)
 
 
 if __name__ == "__main__":

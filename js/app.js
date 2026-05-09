@@ -239,6 +239,30 @@ function getUrlKeywords() {
   return keywords ? decodeURIComponent(keywords).split(',').map(k => k.trim()).filter(k => k) : null;
 }
 
+function getUrlDateParam() {
+  const params = new URLSearchParams(window.location.search);
+  const d = params.get('date');
+  return d ? decodeURIComponent(d).trim() : null;
+}
+
+function getUrlPaperId() {
+  const params = new URLSearchParams(window.location.search);
+  const p = params.get('paperId');
+  return p ? decodeURIComponent(p).trim() : null;
+}
+
+function openPaperById(rawId) {
+  const decoded = decodeURIComponent(rawId).trim();
+  const papers = getPapersByCategory(paperData, 'all');
+  const idx = papers.findIndex(p => String(p.id) === decoded);
+  if (idx < 0) {
+    return;
+  }
+  currentFilteredPapers = [...papers];
+  currentPaperIndex = idx;
+  showPaperDetails(papers[idx], idx + 1);
+}
+
 // 检查是否以JSON模式运行
 function isJsonMode() {
   return getUrlCategory() !== null || getJsonParam() !== null || getUrlAuthor() !== null || getUrlKeywords() !== null;
@@ -385,9 +409,20 @@ document.addEventListener('DOMContentLoaded', () => {
   urlKeywordsParam = getUrlKeywords();
 
   fetchAvailableDates().then(() => {
-    if (availableDates.length > 0) {
-      loadPapersByDate(availableDates[0]);
+    if (availableDates.length === 0) {
+      return;
     }
+    const urlDate = getUrlDateParam();
+    const urlPaperId = getUrlPaperId();
+    const initialDate =
+      urlDate && availableDates.includes(urlDate) ? urlDate : availableDates[0];
+    loadPapersByDate(initialDate)
+      .then(() => {
+        if (urlPaperId && !isJsonMode()) {
+          openPaperById(urlPaperId);
+        }
+      })
+      .catch(() => {});
   });
 });
 
