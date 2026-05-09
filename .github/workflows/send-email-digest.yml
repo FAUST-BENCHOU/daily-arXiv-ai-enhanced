@@ -130,3 +130,4 @@ jobs:
           from: ${{ secrets.MAIL_FROM }}
           secure: true
           body: file://assets/email_digest_${{ steps.prep.outputs.digest_date }}.txt
+          html_body: file://assets/email_digest_${{ steps.prep.outputs.digest_date }}.html

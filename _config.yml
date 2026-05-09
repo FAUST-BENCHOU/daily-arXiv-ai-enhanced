@@ -1,4 +1,6 @@
 exclude:
   - data/*.md
+  # Python / prompts used only in Actions; skill.txt starts with --- and breaks Jekyll front matter parsing
+  - ai
 include:
   - data/*.json
