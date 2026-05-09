@@ -125,7 +125,7 @@ jobs:
           server_port: ${{ secrets.SMTP_PORT }}
           username: ${{ secrets.SMTP_USER }}
           password: ${{ secrets.SMTP_PASS }}
-          subject: Daily arXiv Digest ${{ steps.prep.outputs.digest_date }}
+          subject: 每日硬凑师兄要求的创新点 ${{ steps.prep.outputs.digest_date }}
           to: ${{ secrets.MAIL_TO }}
           from: ${{ secrets.MAIL_FROM }}
           secure: true

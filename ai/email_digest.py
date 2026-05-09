@@ -13,6 +13,9 @@ from langchain.prompts import ChatPromptTemplate
 
 SKILL_PATH = os.path.join(os.path.dirname(__file__), "skill.txt")
 
+# 邮件主题 / HTML 标题 / 正文前缀（与 workflow subject 保持一致）
+DIGEST_PRODUCT_TITLE = "每日硬凑师兄要求的创新点"
+
 DIGEST_CONSTRAINTS = """
 ---
 # 每日邮件模式（覆盖 skill 中与文献数量冲突的条款）
@@ -185,8 +188,8 @@ def markdown_to_html_fragment(md: str) -> str:
 
 def build_email_html(markdown_body: str, date_str: str) -> str:
     inner = markdown_to_html_fragment(markdown_body)
-    headline = f"每日 arXiv 简报 · {date_str}"
-    title_esc = html.escape(f"每日 arXiv 简报 {date_str}")
+    headline_full = f"{DIGEST_PRODUCT_TITLE} {date_str}"
+    title_esc = html.escape(headline_full)
     # Double braces in CSS for .format
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -200,8 +203,8 @@ def build_email_html(markdown_body: str, date_str: str) -> str:
 <tr><td align="center" style="padding:24px 12px;">
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:680px;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(15,23,42,0.08);">
 <tr><td style="padding:14px 24px;background:linear-gradient(135deg,#1e40af 0%,#3b82f6 100%);color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;">
-<p style="margin:0;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;opacity:0.88;">Daily arXiv Digest</p>
-<h1 style="margin:8px 0 0;font-size:20px;font-weight:600;line-height:1.35;">{html.escape(headline)}</h1>
+<p style="margin:0;font-size:12px;opacity:0.9;">读文献 · 憋创新点</p>
+<h1 style="margin:8px 0 0;font-size:20px;font-weight:600;line-height:1.35;">{html.escape(headline_full)}</h1>
 </td></tr>
 <tr><td class="digest-body" style="padding:24px 28px 32px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;font-size:15px;line-height:1.65;color:#374151;">
 <style type="text/css">
@@ -275,7 +278,7 @@ def main() -> None:
 
     papers = select_paper_pool(items, args.max_papers, seed)
     if not papers:
-        stub = f"每日 arXiv 简报 {date_str}\n\n（无可用论文，跳过生成。）\n"
+        stub = f"{DIGEST_PRODUCT_TITLE} {date_str}\n\n（无可用论文，跳过生成。）\n"
         with open(args.out, "w", encoding="utf-8") as f:
             f.write(stub)
         with open(html_path, "w", encoding="utf-8") as f:
@@ -315,7 +318,7 @@ def main() -> None:
     body_raw = resp.content.strip() if hasattr(resp, "content") else str(resp).strip()
     body_md = unwrap_markdown_fence(body_raw)
     with open(args.out, "w", encoding="utf-8") as f:
-        f.write(f"每日 arXiv 简报 {date_str}\n\n")
+        f.write(f"{DIGEST_PRODUCT_TITLE} {date_str}\n\n")
         f.write(body_md)
         f.write("\n")
     with open(html_path, "w", encoding="utf-8") as f:
