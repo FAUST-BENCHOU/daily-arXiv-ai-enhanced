@@ -1,0 +1,132 @@
+# Generate daily digest from data-branch AI-enhanced JSONL and send via SMTP.
+# Independent from the crawl workflow; runs after it completes or on manual dispatch.
+
+name: send-email-digest
+
+on:
+  workflow_dispatch:
+    inputs:
+      digest_date:
+        description: "Date YYYY-MM-DD (UTC). Leave empty for today (UTC)."
+        required: false
+        default: ""
+  workflow_run:
+    workflows:
+      - arXiv-daily-ai-enhanced
+    types:
+      - completed
+
+permissions:
+  contents: read
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.conclusion == 'success')
+
+    steps:
+      - name: Checkout main (scripts)
+        uses: actions/checkout@v4
+
+      - name: Checkout data branch
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data-branch
+
+      - name: Resolve date and check data file
+        id: prep
+        env:
+          LANGUAGE: ${{ vars.LANGUAGE }}
+        run: |
+          set -e
+          EVENT_NAME="${{ github.event_name }}"
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            MANUAL_DATE="${{ github.event.inputs.digest_date }}"
+          else
+            MANUAL_DATE=""
+          fi
+
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] && [ -n "$MANUAL_DATE" ]; then
+            DIGEST_DATE="$MANUAL_DATE"
+          else
+            DIGEST_DATE="$(date -u +%Y-%m-%d)"
+          fi
+
+          LANG="${LANGUAGE:-Chinese}"
+          AI_FILE="data-branch/data/${DIGEST_DATE}_AI_enhanced_${LANG}.jsonl"
+
+          echo "digest_date=$DIGEST_DATE" >> "$GITHUB_OUTPUT"
+          echo "ai_file=$AI_FILE" >> "$GITHUB_OUTPUT"
+
+          if [ ! -f "$AI_FILE" ]; then
+            echo "No file: $AI_FILE"
+            if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+              echo "Manual run requires this file on branch data."
+              exit 1
+            fi
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
+      - name: Verify email and LLM secrets
+        if: steps.prep.outputs.skip != 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+        run: |
+          for v in OPENAI_API_KEY OPENAI_BASE_URL SMTP_HOST SMTP_PORT SMTP_USER SMTP_PASS MAIL_TO MAIL_FROM; do
+            eval "val=\$$v"
+            if [ -z "$val" ]; then
+              echo "Missing secret: $v"
+              exit 1
+            fi
+          done
+
+      - name: Install dependencies
+        if: steps.prep.outputs.skip != 'true'
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv sync
+
+      - name: Generate email digest
+        if: steps.prep.outputs.skip != 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          LANGUAGE: ${{ vars.LANGUAGE }}
+          MODEL_NAME: ${{ vars.MODEL_NAME }}
+        run: |
+          set -e
+          source .venv/bin/activate
+          DIGEST_DATE="${{ steps.prep.outputs.digest_date }}"
+          mkdir -p assets
+          python ai/email_digest.py \
+            --data "${{ steps.prep.outputs.ai_file }}" \
+            --out "assets/email_digest_${DIGEST_DATE}.txt" \
+            --date "$DIGEST_DATE"
+
+      - name: Send email
+        if: steps.prep.outputs.skip != 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_HOST }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USER }}
+          password: ${{ secrets.SMTP_PASS }}
+          subject: Daily arXiv Digest ${{ steps.prep.outputs.digest_date }}
+          to: ${{ secrets.MAIL_TO }}
+          from: ${{ secrets.MAIL_FROM }}
+          secure: true
+          body: file://assets/email_digest_${{ steps.prep.outputs.digest_date }}.txt
