@@ -68,3 +68,8 @@ const DATA_CONFIG = {
     }
 };
 
+// Best-effort infer on load (for Pages preview).
+try {
+    DATA_CONFIG.inferRepoFromLocation();
+} catch (e) {}
+

@@ -246,6 +246,9 @@
     <script>
         (function() {
             try {
+                if (typeof DATA_CONFIG !== 'undefined' && DATA_CONFIG.inferRepoFromLocation) {
+                    DATA_CONFIG.inferRepoFromLocation();
+                }
                 const repoUrl = `https://github.com/${DATA_CONFIG.repoOwner}/${DATA_CONFIG.repoName}`;
                 const repoLink = document.getElementById('repoLink');
                 const footerRepoLink = document.getElementById('footerRepoLink');
