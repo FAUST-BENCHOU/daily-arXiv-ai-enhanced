@@ -1,0 +1,9 @@
+Please analyze the following abstract of papers.
+
+The repository has a digest focus for the daily email digest. Judge whether this paper clearly relates to that focus (same broad research direction or techniques the user cares about). Set digest_theme_relevant to false if the link is only vague or tangential.
+
+Digest focus:
+{digest_focus}
+
+Content:
+{content}

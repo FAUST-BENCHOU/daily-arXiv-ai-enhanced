@@ -70,6 +70,7 @@ Otherwise, you can directly use this repo in https://dw-dengwei.github.io/daily-
    3. `MODEL_NAME`: such as "deepseek-chat"
    4. `EMAIL`: your email for push to GitHub
    5. `NAME`: your name for push to GitHub
+   6. **[Optional] `DIGEST_FOCUS`:** free-text theme (e.g. *diffusion models for medical imaging*). When set for a run, AI enhancement adds `digest_theme_relevant` per paper and stores `digest_focus_query` in the enhanced jsonl; the **send-email-digest** pool then samples only from papers marked relevant (if none match, it falls back to the full list). Clear or change this variable when you no longer want filtering.
 9. Go to your-own-repo -> Actions -> arXiv-daily-ai-enhanced
 10. You can manually click **Run workflow** to test if it works well (it may take about one hour). By default, this action will automatically run every day. You can modify it in `.github/workflows/run.yml`
 11. Set up GitHub pages: Go to your own repo -> Settings -> Pages. In `Build and deployment`, set `Source="Deploy from a branch"`, `Branch="main", "/(root)"`. Wait for a few minutes, go to https://\<username\>.github.io/daily-arXiv-ai-enhanced/. Please see this [issue](https://github.com/dw-dengwei/daily-arXiv-ai-enhanced/issues/14) for more precise instructions.

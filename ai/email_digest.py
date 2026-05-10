@@ -163,9 +163,31 @@ def load_items(path: str) -> List[Dict[str, Any]]:
     return items
 
 
+def _digest_focus_query_from_items(items: List[Dict[str, Any]]) -> str:
+    for it in items:
+        q = (it.get("AI") or {}).get("digest_focus_query")
+        if isinstance(q, str) and q.strip():
+            return q.strip()
+    return ""
+
+
 def select_paper_pool(items: List[Dict[str, Any]], max_papers: int, seed: Optional[int]) -> List[Dict[str, Any]]:
     rng = random.Random(seed) if seed is not None else random.Random()
     pool = list(items)
+    focus_q = _digest_focus_query_from_items(items)
+    if focus_q:
+        matched = [it for it in pool if (it.get("AI") or {}).get("digest_theme_relevant") is True]
+        if matched:
+            pool = matched
+            print(
+                f"email_digest: pool filtered by digest_focus ({len(pool)}/{len(items)} relevant)",
+                file=sys.stderr,
+            )
+        else:
+            print(
+                "email_digest: no digest_theme_relevant items, using full pool",
+                file=sys.stderr,
+            )
     k = min(max_papers, len(pool))
     if k <= 0:
         return []

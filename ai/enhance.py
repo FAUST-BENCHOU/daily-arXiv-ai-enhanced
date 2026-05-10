@@ -20,12 +20,13 @@ from langchain.prompts import (
     SystemMessagePromptTemplate,
     HumanMessagePromptTemplate,
 )
-from structure import Structure
+from structure import Structure, StructureWithDigestFocus
 
 if os.path.exists('.env'):
     dotenv.load_dotenv()
-template = open("template.txt", "r").read()
-system = open("system.txt", "r").read()
+template = open("template.txt", "r", encoding="utf-8").read()
+template_digest_focus = open("template_digest_focus.txt", "r", encoding="utf-8").read()
+system = open("system.txt", "r", encoding="utf-8").read()
 
 def parse_args():
     """解析命令行参数"""
@@ -34,7 +35,7 @@ def parse_args():
     parser.add_argument("--max_workers", type=int, default=1, help="Maximum number of parallel workers")
     return parser.parse_args()
 
-def process_single_item(chain, item: Dict, language: str) -> Dict:
+def process_single_item(chain, item: Dict, language: str, digest_focus: str) -> Dict:
     def is_sensitive(content: str) -> bool:
         """
         调用 spam.dw-dengwei.workers.dev 接口检测内容是否包含敏感词。
@@ -121,15 +122,19 @@ def process_single_item(chain, item: Dict, language: str) -> Dict:
         "motivation": "Motivation analysis unavailable",
         "method": "Method extraction failed",
         "result": "Result analysis unavailable",
-        "conclusion": "Conclusion extraction failed"
+        "conclusion": "Conclusion extraction failed",
     }
-    
+    if digest_focus:
+        default_ai_fields["digest_theme_relevant"] = False
+
     try:
-        response: Structure = chain.invoke({
-            "language": language,
-            "content": item['summary']
-        })
-        item['AI'] = response.model_dump()
+        invoke_in = {"language": language, "content": item["summary"]}
+        if digest_focus:
+            invoke_in["digest_focus"] = digest_focus
+        response = chain.invoke(invoke_in)
+        item["AI"] = response.model_dump()
+        if digest_focus:
+            item["AI"]["digest_focus_query"] = digest_focus
     except langchain_core.exceptions.OutputParserException as e:
         # 尝试从错误信息中提取 JSON 字符串并修复
         error_msg = str(e)
@@ -147,17 +152,21 @@ def process_single_item(chain, item: Dict, language: str) -> Dict:
                 print(f"Failed to parse JSON for {item.get('id', 'unknown')}: {json_e}", file=sys.stderr)
         
         # Merge partial data with defaults to ensure all fields exist
-        item['AI'] = {**default_ai_fields, **partial_data}
+        item["AI"] = {**default_ai_fields, **partial_data}
+        if digest_focus:
+            item["AI"]["digest_focus_query"] = digest_focus
         print(f"Using partial AI data for {item.get('id', 'unknown')}: {list(partial_data.keys())}", file=sys.stderr)
     except Exception as e:
         # Catch any other exceptions and provide default values
         print(f"Unexpected error for {item.get('id', 'unknown')}: {e}", file=sys.stderr)
-        item['AI'] = default_ai_fields
-    
+        item["AI"] = {**default_ai_fields}
+        if digest_focus:
+            item["AI"]["digest_focus_query"] = digest_focus
+
     # Final validation to ensure all required fields exist
     for field in default_ai_fields.keys():
-        if field not in item['AI']:
-            item['AI'][field] = default_ai_fields[field]
+        if field not in item["AI"]:
+            item["AI"][field] = default_ai_fields[field]
 
     # 检查 AI 生成的所有字段
     for v in item.get("AI", {}).values():
@@ -165,15 +174,27 @@ def process_single_item(chain, item: Dict, language: str) -> Dict:
             return None
     return item
 
-def process_all_items(data: List[Dict], model_name: str, language: str, max_workers: int) -> List[Dict]:
+def process_all_items(
+    data: List[Dict], model_name: str, language: str, max_workers: int, digest_focus: str
+) -> List[Dict]:
     """并行处理所有数据项"""
-    llm = ChatOpenAI(model=model_name).with_structured_output(Structure, method="function_calling")
-    print('Connect to:', model_name, file=sys.stderr)
-    
-    prompt_template = ChatPromptTemplate.from_messages([
-        SystemMessagePromptTemplate.from_template(system),
-        HumanMessagePromptTemplate.from_template(template=template)
-    ])
+    if digest_focus:
+        model_cls = StructureWithDigestFocus
+        human_t = template_digest_focus
+        print("DIGEST_FOCUS enabled:", digest_focus[:200], file=sys.stderr)
+    else:
+        model_cls = Structure
+        human_t = template
+
+    llm = ChatOpenAI(model=model_name).with_structured_output(model_cls, method="function_calling")
+    print("Connect to:", model_name, file=sys.stderr)
+
+    prompt_template = ChatPromptTemplate.from_messages(
+        [
+            SystemMessagePromptTemplate.from_template(system),
+            HumanMessagePromptTemplate.from_template(human_t),
+        ]
+    )
 
     chain = prompt_template | llm
     
@@ -182,7 +203,7 @@ def process_all_items(data: List[Dict], model_name: str, language: str, max_work
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         # 提交所有任务
         future_to_idx = {
-            executor.submit(process_single_item, chain, item, language): idx
+            executor.submit(process_single_item, chain, item, language, digest_focus): idx
             for idx, item in enumerate(data)
         }
         
@@ -200,20 +221,25 @@ def process_all_items(data: List[Dict], model_name: str, language: str, max_work
                 print(f"Item at index {idx} generated an exception: {e}", file=sys.stderr)
                 # Add default AI fields to ensure consistency
                 processed_data[idx] = data[idx]
-                processed_data[idx]['AI'] = {
+                fail_ai = {
                     "tldr": "Processing failed",
                     "motivation": "Processing failed",
                     "method": "Processing failed",
                     "result": "Processing failed",
-                    "conclusion": "Processing failed"
+                    "conclusion": "Processing failed",
                 }
+                if digest_focus:
+                    fail_ai["digest_theme_relevant"] = False
+                    fail_ai["digest_focus_query"] = digest_focus
+                processed_data[idx]["AI"] = fail_ai
     
     return processed_data
 
 def main():
     args = parse_args()
     model_name = os.environ.get("MODEL_NAME", 'deepseek-chat')
-    language = os.environ.get("LANGUAGE", 'Chinese')
+    language = os.environ.get("LANGUAGE", "Chinese")
+    digest_focus = (os.environ.get("DIGEST_FOCUS") or "").strip()
 
     # 检查并删除目标文件
     target_file = args.data.replace('.jsonl', f'_AI_enhanced_{language}.jsonl')
@@ -239,12 +265,7 @@ def main():
     print('Open:', args.data, file=sys.stderr)
     
     # 并行处理所有数据
-    processed_data = process_all_items(
-        data,
-        model_name,
-        language,
-        args.max_workers
-    )
+    processed_data = process_all_items(data, model_name, language, args.max_workers, digest_focus)
     
     # 保存结果
     with open(target_file, "w") as f:
