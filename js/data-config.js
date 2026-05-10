@@ -65,16 +65,6 @@ const DATA_CONFIG = {
      */
     getDataUrl: function(filePath) {
         return `${this.getDataBaseUrl()}/${filePath}`;
-    },
-
-    /** jsDelivr mirrors data branch (digest HTML + meta live here). */
-    getDigestPublicBaseUrl: function() {
-        this.inferRepoFromLocation();
-        return `https://cdn.jsdelivr.net/gh/${this.repoOwner}/${this.repoName}@${this.dataBranch}`;
-    },
-
-    getDigestIndexUrl: function() {
-        return `${this.getDigestPublicBaseUrl()}/digest/index.html`;
     }
 };
 

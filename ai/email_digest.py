@@ -235,19 +235,23 @@ def site_pages_base() -> str:
     return os.environ.get("PAGES_BASE_URL", "").strip().rstrip("/")
 
 
-def digest_public_base() -> str:
-    explicit = os.environ.get("DIGEST_PUBLIC_BASE_URL", "").strip().rstrip("/")
-    return explicit if explicit else site_pages_base()
-
-
 def site_home_href() -> str:
     site = site_pages_base()
     return f"{site}/index.html" if site else "../index.html"
 
 
 def digest_index_href() -> str:
-    base = digest_public_base()
-    return f"{base}/digest/index.html" if base else "index.html"
+    """创新点列表页在 main（与 jsonl 不同：digest 正文仍在 data，由 viewer 拉 raw）。"""
+    site = site_pages_base()
+    return f"{site}/digest-index.html" if site else "digest-index.html"
+
+
+def digest_viewer_href(date_str: str) -> str:
+    """邮件与外链入口：main 上的壳页，再从 data 分支 raw 拉 HTML。"""
+    site = site_pages_base()
+    if not site:
+        return f"digest-viewer.html?date={date_str}"
+    return f"{site}/digest-viewer.html?date={date_str}"
 
 
 def paper_list_href(date_str: str, quoted_paper_id: str) -> str:
@@ -406,8 +410,12 @@ def regenerate_digest_index(digest_dir: str) -> None:
             if re.fullmatch(r"\d{4}-\d{2}-\d{2}\.html", fn):
                 dates.append(fn[:-5])
     dates = sorted(set(dates), reverse=True)
+    manifest_path = os.path.join(digest_dir, "manifest.json")
+    with open(manifest_path, "w", encoding="utf-8") as f:
+        json.dump({"dates": dates}, f, ensure_ascii=False, indent=2)
+
     items = "\n".join(
-        f'<li style="margin:12px 0;"><a href="{html.escape(d)}.html" style="color:#2563eb;font-size:16px;font-weight:600;text-decoration:none;">{html.escape(d)}</a></li>'
+        f'<li style="margin:12px 0;"><a href="{html.escape(digest_viewer_href(d))}" style="color:#2563eb;font-size:16px;font-weight:600;text-decoration:none;">{html.escape(d)}</a></li>'
         for d in dates
     )
     if not items:
@@ -457,13 +465,10 @@ def notice_paths(out_archive_txt: str, date_str: str) -> tuple[str, str]:
 
 
 def pages_digest_url(date_str: str) -> str:
-    base = digest_public_base()
-    if not base:
-        return (
-            f"(请配置 PAGES_BASE_URL；若 digest 不在 Pages 根目录还应配置 DIGEST_PUBLIC_BASE_URL)"
-            f"/digest/{date_str}.html"
-        )
-    return f"{base}/digest/{date_str}.html"
+    site = site_pages_base()
+    if not site:
+        return f"(请配置 PAGES_BASE_URL)/digest-viewer.html?date={date_str}"
+    return digest_viewer_href(date_str)
 
 
 def main() -> None:
