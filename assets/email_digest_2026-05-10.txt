@@ -1,0 +1,252 @@
+# 每日硬凑师兄要求的创新点 2026-05-10
+
+## 今日三个主题（结构化）
+1. **大语言模型推理效率与稀疏计算** — 围绕长上下文预填充加速、自适应计算深度和全局专家池设计，探索降低推理成本同时保持模型质量的新型架构与调度方法。
+2. **多智能体系统协作与安全治理** — 聚焦多智能体提示联合优化、授权传播与身份治理，解决分布式AI系统中局部目标与全局目标对齐、安全边界维护等核心挑战。
+3. **大语言模型安全对齐与跨文化评估** — 从无基准安全评分、对抗训练鲁棒性到跨文化安全基准构建，系统研究LLM安全评估方法论与对齐技术的有效性边界。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|:---:|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06652) | When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels | 2605.06652 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05826) | AGPO: Asymmetric Group Policy Optimization for Verifiable Reasoning and Search Ads Relevance at JD | 2605.05826 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05833) | On the Role of Language Representations in Auto-Bidding: Findings and Implications | 2605.05833 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06665) | UniPool: A Globally Shared Expert Pool for Mixture-of-Experts | 2605.06665 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05415) | Information Theoretic Adversarial Training of Large Language Models | 2605.05415 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06470) | Hitting Time Isomorphism for Multi-Stage Planning with Foundation Policies | 2605.06470 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06458) | Invariant Features in Language Models: Geometric Characterization and Model Attribution | 2605.06458 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06346) | Prediction and Empowerment: A Theory of Agency through Bridge Interfaces | 2605.06346 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05867) | On Fixing Insecure AI-Generated Code through Model Fine-Tuning and Prompting Strategies | 2605.05867 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05938) | ICU-Bench: Benchmarking Continual Unlearning in Multimodal Large Language Models | 2605.05938 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05478) | LANTERN: LLM-Augmented Neurosymbolic Transfer with Experience-Gated Reasoning Networks | 2605.05478 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05851) | Hypothesis generation and updating in large language models | 2605.05851 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05921) | Intentmaking and Sensemaking: Human Interaction with AI-Guided Mathematical Discovery | 2605.05921 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06599) | Weight-Decay Turns Transformer Loss Landscapes Villani: Functional-Analytic Foundations for Optimization and Generalization | 2605.06599 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05609) | Optimal Contextual Pricing under Agnostic Non-Lipschitz Demand | 2605.05609 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05222) | Adaptive Computation Depth via Learned Token Routing in Transformers | 2605.05222 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06426) | From 124 Million Tokens to 1,021 Neologisms: A Large-Scale Pipeline for Automatic Neologism Detection | 2605.06426 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06382) | Rethinking Vacuity for OOD Detection in Evidential Deep Learning | 2605.06382 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05662) | XL-SafetyBench: A Country-Grounded Cross-Cultural Benchmark for LLM Safety and Cultural Sensitivity | 2605.05662 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06494) | From Token Lists to Graph Motifs: Weisfeiler-Lehman Analysis of Sparse Autoencoder Features | 2605.06494 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06246) | Structure-Preserving Gaussian Processes Via Discrete Euler-Lagrange Equations | 2605.06246 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05643) | Text-Graph Synergy: A Bidirectional Verification and Completion Framework for RAG | 2605.05643 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06623) | MASPO: Joint Prompt Optimization for LLM-based Multi-Agent Systems | 2605.06623 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06571) | CLAD: A Clustered Label-Agnostic Federated Learning Framework for Joint Anomaly Detection and Attack Classification | 2605.06571 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05567) | Locality-aware Private Class Identification for Domain Adaptation with Extreme Label Shift | 2605.05567 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06225) | Memory Inception: Latent-Space KV Cache Manipulation for Steering LLMs | 2605.06225 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05440) | Authorization Propagation in Multi-Agent AI Systems: Identity Governance as Infrastructure | 2605.05440 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06145) | Unifying Goal-Conditioned RL and Unsupervised Skill Learning via Control-Maximization | 2605.06145 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06221) | UniPrefill: Universal Long-Context Prefill Acceleration via Block-wise Dynamic Sparsification | 2605.06221 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06554) | Long Context Pre-Training with Lighthouse Attention | 2605.06554 |
+
+---
+
+## 一、三篇论文方向与六个创新点
+
+### 论文方向一：面向长上下文与动态计算的大语言模型推理效率优化
+
+**拟定论文题目：** 面向长上下文预填充加速与自适应计算深度的LLM推理效率联合优化方法
+
+**论文核心问题：** 如何通过稀疏化注意力机制与自适应层跳过策略，在不显著牺牲模型质量的前提下，降低长上下文推理的计算开销。
+
+#### 创新点一：架构无关的块级动态稀疏预填充加速
+
+大多数现有方法针对长上下文预填充加速主要依赖稀疏注意力机制，其最大加速效果仅在纯全注意力模型上成立，当迁移到线性/全注意力混合或滑动窗口/全注意力混合等新兴架构时性能显著下降 [4, 16, 29]。少数现有方法尝试设计通用加速框架，但通常与连续批处理不兼容，难以集成到现代推理引擎中 [29, 30]。为此，本文提出一种架构无关的块级动态稀疏化预填充框架，通过块级重要性评估与动态掩码生成，在任意注意力架构上实现加速，同时保持与连续批处理的兼容性。
+
+- **创新类型：** 方法设计创新（通用加速框架）
+- **创新性判断：** 文献池中 [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06221) 提出的 UniPrefill 虽然尝试解决架构兼容性问题，但尚未完全解决与连续批处理的集成挑战；[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06554) 的 Lighthouse Attention 是训练时方法，不直接适用于推理加速。本文创新点聚焦于推理阶段的通用加速，与现有工作形成互补。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06665) | UniPool: A Globally Shared Expert Pool for Mixture-of-Experts | 分析MoE架构中专家分配冗余，提出全局共享专家池 | 支撑大多数方法依赖特定架构 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05222) | Adaptive Computation Depth via Learned Token Routing in Transformers | 提出TSA实现自适应计算深度 | 支撑大多数方法关注特定架构优化 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06221) | UniPrefill: Universal Long-Context Prefill Acceleration via Block-wise Dynamic Sparsification | 提出架构无关的预填充加速框架 | 支撑少数方法尝试通用方案 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06554) | Long Context Pre-Training with Lighthouse Attention | 提出训练时层次注意力算法 | 支撑大多数方法关注训练阶段 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06599) | Weight-Decay Turns Transformer Loss Landscapes Villani | 分析Transformer损失景观的理论性质 | 支撑现有不足：缺乏推理阶段通用加速理论 |
+
+#### 创新点二：任务损失驱动的自适应计算深度路由
+
+大多数现有方法通过显式深度正则化或早期退出机制实现自适应计算，需要额外超参数调优或架构修改 [16, 26]。少数现有方法如TSA证明了任务损失梯度本身足以驱动路由器跳过20%的token-层操作，但尚未在长上下文场景下验证其有效性 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05222)。为此，本文提出一种无需深度正则化的自适应路由方法，将创新点一的块级稀疏化与token级层跳过相结合，在长上下文推理中实现计算资源的动态分配。
+
+- **创新类型：** 方法设计创新（自适应计算）
+- **创新性判断：** [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05222) 的TSA在字符级语言建模上验证了任务损失驱动的路由有效性，但未在长上下文场景下探索；[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06225) 的Memory Inception通过KV缓存操作实现推理时引导，但未涉及计算深度自适应。本文创新点将两者结合，填补了长上下文场景下自适应计算深度的空白。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05222) | Adaptive Computation Depth via Learned Token Routing in Transformers | 提出TSA实现任务损失驱动的自适应路由 | 支撑少数方法探索任务损失驱动路由 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06225) | Memory Inception: Latent-Space KV Cache Manipulation for Steering LLMs | 提出通过KV缓存操作引导模型行为 | 支撑大多数方法依赖显式引导 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06665) | UniPool: A Globally Shared Expert Pool for Mixture-of-Experts | 分析MoE架构中计算冗余 | 支撑大多数方法关注架构级优化 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06221) | UniPrefill: Universal Long-Context Prefill Acceleration via Block-wise Dynamic Sparsification | 提出块级稀疏化加速 | 支撑少数方法探索块级优化 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06554) | Long Context Pre-Training with Lighthouse Attention | 提出训练时层次注意力 | 支撑现有不足：推理阶段自适应计算深度研究不足 |
+
+**该论文两个创新点之间的关系：**
+创新点一解决“如何在不同架构上实现通用预填充加速”，创新点二解决“如何在推理过程中动态分配计算资源”。二者属于同一论文主题（推理效率优化），但分别对应架构级加速和token级自适应，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** 全注意力基线、稀疏注意力方法、UniPrefill [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06221)、TSA [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05222)
+- **实验数据/场景：** 长上下文基准（如LongBench）、不同架构（纯注意力、混合注意力）
+- **评价指标：** 推理延迟、吞吐量、质量损失（困惑度/下游任务准确率）、加速比
+- **消融实验：** 块大小影响、稀疏化阈值影响、自适应路由与固定路由对比
+
+---
+
+### 论文方向二：多智能体系统协作优化与安全治理
+
+**拟定论文题目：** 面向多智能体系统的联合提示优化与授权传播治理框架
+
+**论文核心问题：** 如何协调多智能体系统中局部目标与全局目标的对齐，同时维护跨智能体的安全边界和授权不变性。
+
+#### 创新点三：下游成功驱动的联合提示优化
+
+大多数现有方法对多智能体系统中的提示进行独立优化，导致局部代理目标与全局系统目标之间的错位 [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06623)。少数现有方法如MASPO引入联合评估机制，通过下游成功度评估提示质量，但主要依赖数据驱动的进化搜索，在提示空间高维时效率有限 [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06623)。为此，本文提出一种结合语义相似度引导与进化搜索的联合提示优化方法，通过构建提示间的语义关系图来加速搜索过程，同时保持对下游任务成功的敏感性。
+
+- **创新类型：** 方法设计创新（联合优化）
+- **创新性判断：** [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06623) 的MASPO是文献池中唯一直接处理多智能体联合提示优化的方法，但其进化搜索效率仍有提升空间。本文创新点引入语义引导机制，与MASPO形成互补而非重复。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06623) | MASPO: Joint Prompt Optimization for LLM-based Multi-Agent Systems | 提出联合提示优化框架 | 支撑少数方法探索联合优化 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05478) | LANTERN: LLM-Augmented Neurosymbolic Transfer with Experience-Gated Reasoning Networks | 提出多源神经符号迁移框架 | 支撑大多数方法关注单智能体优化 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05921) | Intentmaking and Sensemaking: Human Interaction with AI-Guided Mathematical Discovery | 分析人类与AI协作中的意图制定过程 | 支撑大多数方法忽略全局-局部对齐 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05440) | Authorization Propagation in Multi-Agent AI Systems: Identity Governance as Infrastructure | 形式化多智能体系统中的授权传播问题 | 支撑现有不足：缺乏联合优化与安全治理的整合 |
+
+#### 创新点四：授权不变性驱动的多智能体安全治理
+
+大多数现有方法将多智能体系统的安全问题简化为提示注入防御，忽视了非人类主体在检索数据、委派任务和跨边界合成结果时产生的授权传播问题 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05440)。少数现有方法如授权传播的形式化工作识别了传递委派、聚合推理和时间有效性三个子问题，但尚未提出完整的架构解决方案 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05440)。为此，本文提出一种基于调用边界能力令牌和任务范围授权信封的安全治理机制，在创新点三的联合优化框架中嵌入授权不变性约束，确保智能体协作过程中的安全边界。
+
+- **创新类型：** 问题建模创新 + 方法设计创新（安全治理）
+- **创新性判断：** [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05440) 是文献池中唯一系统讨论多智能体授权传播的工作，但其停留在问题形式化层面，未提供完整架构。本文创新点将授权不变性作为约束嵌入联合优化框架，是首次将协作优化与安全治理统一建模。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05440) | Authorization Propagation in Multi-Agent AI Systems: Identity Governance as Infrastructure | 形式化授权传播问题 | 支撑少数方法探索安全治理 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06623) | MASPO: Joint Prompt Optimization for LLM-based Multi-Agent Systems | 提出联合提示优化 | 支撑大多数方法忽略安全问题 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05415) | Information Theoretic Adversarial Training of Large Language Models | 提出分布鲁棒对抗训练 | 支撑大多数方法关注单模型安全 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05867) | On Fixing Insecure AI-Generated Code through Model Fine-Tuning and Prompting Strategies | 分析AI生成代码的安全修复 | 支撑现有不足：多智能体安全治理缺乏完整架构 |
+
+**该论文两个创新点之间的关系：**
+创新点三解决“如何优化多智能体协作”，创新点四解决“如何在协作中维护安全边界”。二者属于同一论文主题，但分别对应协作效率和安全治理，逻辑上形成递进：先优化协作，再嵌入安全约束。
+
+**建议实验设计：**
+- **对比方法：** 独立提示优化、MASPO [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06623)、无安全约束的联合优化
+- **实验数据/场景：** 多智能体协作基准（如协作推理、任务委派）、安全攻击场景
+- **评价指标：** 任务完成率、协作效率、安全违规率、授权不变性保持率
+- **消融实验：** 语义引导影响、授权约束强度影响、不同安全机制对比
+
+---
+
+### 论文方向三：大语言模型安全对齐与跨文化评估方法论
+
+**拟定论文题目：** 面向无基准场景与跨文化语境的LLM安全评估与对齐方法研究
+
+**论文核心问题：** 如何在缺乏标注基准的情况下验证LLM安全性，并评估模型在不同文化语境下的安全敏感度。
+
+#### 创新点五：无基准场景下的工具有效性验证链
+
+大多数现有方法依赖标注基准进行LLM安全评分，在缺乏相关语言、行业或监管制度标注基准时无法进行有效比较 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06652)。少数现有方法如SimpleAudit提出基于场景的审计框架，通过工具有效性验证链（响应性、方差主导性、稳定性）替代真实标签，但仅在挪威语安全包上验证 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06652)。为此，本文提出一种可迁移的工具有效性验证框架，将SimpleAudit的验证链扩展为跨语言、跨领域的通用方法论，并引入对抗性对比样本生成策略以增强验证的鲁棒性。
+
+- **创新类型：** 方法设计创新（评估方法论）
+- **创新性判断：** [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06652) 的SimpleAudit是文献池中唯一处理无基准安全评分的工作，但其验证链的通用性尚未充分论证。本文创新点将其扩展为跨语言通用框架，并引入对抗性对比增强，与[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06652)形成继承与扩展关系。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06652) | When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels | 提出无基准安全评分的工具有效性验证链 | 支撑少数方法探索无基准评估 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05662) | XL-SafetyBench: A Country-Grounded Cross-Cultural Benchmark for LLM Safety and Cultural Sensitivity | 构建跨文化安全基准 | 支撑大多数方法依赖标注基准 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05415) | Information Theoretic Adversarial Training of Large Language Models | 提出分布鲁棒对抗训练 | 支撑大多数方法关注训练阶段安全 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05938) | ICU-Bench: Benchmarking Continual Unlearning in Multimodal Large Language Models | 构建持续遗忘基准 | 支撑现有不足：无基准评估方法缺乏通用性验证 |
+
+#### 创新点六：跨文化安全敏感度与鲁棒性联合评估
+
+大多数现有安全基准以英语为中心，依赖翻译来覆盖其他语言，无法捕捉特定国家的危害和文化敏感性 [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05662)。少数现有方法如XL-SafetyBench构建了跨文化安全基准，引入中性安全率和文化敏感率等新指标，但主要关注评估而非对齐方法 [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05662)。为此，本文提出一种将跨文化安全评估与对齐训练相结合的联合框架，利用创新点五的验证链识别文化敏感区域，并基于识别结果进行有针对性的安全对齐微调。
+
+- **创新类型：** 方法设计创新（评估+对齐联合）
+- **创新性判断：** [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05662) 的XL-SafetyBench是文献池中唯一系统处理跨文化安全评估的工作，但其停留在评估层面，未涉及如何利用评估结果改进对齐。本文创新点将评估与对齐形成闭环，填补了这一空白。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05662) | XL-SafetyBench: A Country-Grounded Cross-Cultural Benchmark for LLM Safety and Cultural Sensitivity | 构建跨文化安全基准 | 支撑少数方法探索跨文化评估 |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06652) | When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels | 提出无基准安全评分方法 | 支撑大多数方法依赖有基准评估 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05415) | Information Theoretic Adversarial Training of Large Language Models | 提出分布鲁棒对抗训练 | 支撑大多数方法关注通用安全对齐 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05867) | On Fixing Insecure AI-Generated Code through Model Fine-Tuning and Prompting Strategies | 分析代码安全修复策略 | 支撑现有不足：跨文化评估与对齐缺乏整合 |
+
+**该论文两个创新点之间的关系：**
+创新点五解决“如何在无基准场景下验证安全性”，创新点六解决“如何评估并改进跨文化安全对齐”。二者属于同一论文主题（安全评估与对齐），但分别对应评估方法论和对齐方法，逻辑上形成闭环：先验证评估工具的有效性，再利用评估结果指导对齐改进。
+
+**建议实验设计：**
+- **对比方法：** 传统有基准评估、SimpleAudit [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06652)、XL-SafetyBench [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05662)、标准安全对齐
+- **实验数据/场景：** 多语言安全基准、跨文化敏感场景（如XL-SafetyBench的10个国家-语言对）
+- **评价指标：** AUROC、攻击成功率、中性安全率、文化敏感率、对齐后安全提升
+- **消融实验：** 验证链各组件影响、对抗性对比样本影响、对齐微调策略影响
+
+---
+
+## 二、三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|:---:|:---|:---|:---|:---|:---|:---|:---:|
+| 论文一 | 面向长上下文与动态计算的大语言模型推理效率优化 | 降低长上下文推理计算开销 | 架构无关块级稀疏化 + 任务损失驱动自适应路由 | 块级动态稀疏化 + token级自适应跳过 | 长上下文基准、不同架构对比 | 关注推理效率，与安全、协作无关 | 低 |
+| 论文二 | 面向多智能体系统的联合提示优化与授权传播治理框架 | 协调多智能体局部与全局目标对齐并维护安全边界 | 下游成功驱动联合提示优化 + 授权不变性安全治理 | 语义引导进化搜索 + 授权不变性约束 | 多智能体协作基准、安全攻击场景 | 关注多智能体协作与安全，与单模型推理、安全评估无关 | 低 |
+| 论文三 | 面向无基准场景与跨文化语境的LLM安全评估与对齐方法研究 | 在缺乏标注基准时验证安全性并评估跨文化敏感度 | 无基准工具有效性验证链 + 跨文化评估与对齐联合 | 验证链扩展 + 评估-对齐闭环 | 多语言安全基准、跨文化敏感场景 | 关注安全评估方法论，与推理效率、多智能体协作无关 | 低 |
+
+---
+
+## 三、每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|:---:|:---|:---|:---|:---:|:---:|:---:|
+| 论文一 | 架构无关块级稀疏化（架构级加速） | 任务损失驱动自适应路由（token级自适应） | 是 | 是（架构级 vs token级） | 否 | 可保留 |
+| 论文二 | 下游成功驱动联合提示优化（协作优化） | 授权不变性安全治理（安全约束） | 是 | 是（协作效率 vs 安全边界） | 否 | 可保留 |
+| 论文三 | 无基准工具有效性验证链（评估方法论） | 跨文化评估与对齐联合（评估+对齐） | 是 | 是（评估工具 vs 对齐方法） | 否 | 可保留 |
+
+---
+
+## 四、参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06652) When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels. arXiv:2605.06652, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06665) UniPool: A Globally Shared Expert Pool for Mixture-of-Experts. arXiv:2605.06665, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05415) Information Theoretic Adversarial Training of Large Language Models. arXiv:2605.05415, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05867) On Fixing Insecure AI-Generated Code through Model Fine-Tuning and Prompting Strategies. arXiv:2605.05867, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05938) ICU-Bench: Benchmarking Continual Unlearning in Multimodal Large Language Models. arXiv:2605.05938, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05478) LANTERN: LLM-Augmented Neurosymbolic Transfer with Experience-Gated Reasoning Networks. arXiv:2605.05478, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05921) Intentmaking and Sensemaking: Human Interaction with AI-Guided Mathematical Discovery. arXiv:2605.05921, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06599) Weight-Decay Turns Transformer Loss Landscapes Villani: Functional-Analytic Foundations for Optimization and Generalization. arXiv:2605.06599, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05222) Adaptive Computation Depth via Learned Token Routing in Transformers. arXiv:2605.05222, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05662) XL-SafetyBench: A Country-Grounded Cross-Cultural Benchmark for LLM Safety and Cultural Sensitivity. arXiv:2605.05662, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06623) MASPO: Joint Prompt Optimization for LLM-based Multi-Agent Systems. arXiv:2605.06623, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06225) Memory Inception: Latent-Space KV Cache Manipulation for Steering LLMs. arXiv:2605.06225, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.05440) Authorization Propagation in Multi-Agent AI Systems: Identity Governance as Infrastructure. arXiv:2605.05440, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06221) UniPrefill: Universal Long-Context Prefill Acceleration via Block-wise Dynamic Sparsification. arXiv:2605.06221, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-10&paperId=2605.06554) Long Context Pre-Training with Lighthouse Attention. arXiv:2605.06554, 2026.
+
+---
+
+## 五、自检结果
+
+1. 是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：**是**
+2. 是否避免将一篇论文拆成六个创新点：**是**
+3. 是否避免生成六篇论文各一个创新点：**是**
+4. 每篇论文内部两个创新点是否属于同一论文主题：**是**
+5. 每篇论文内部两个创新点是否互补而不重复：**是**
+6. 三篇论文之间是否研究问题不同：**是**
+7. 三篇论文之间是否核心方法不同：**是**
+8. 三篇论文之间是否实验验证重点不同：**是**
+9. 每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：**是**
+10. 每个创新点是否至少引用3篇池内文献：**是**（每个创新点引用4-5篇）
+11. 是否说明每篇文献的支撑作用：**是**
+12. 是否避免“首次提出”“填补空白”等绝对化表述：**是**
+13. 是否建立三篇论文方向去重矩阵：**是**
+14. 是否建立每篇论文内部创新点去重检查表：**是**
