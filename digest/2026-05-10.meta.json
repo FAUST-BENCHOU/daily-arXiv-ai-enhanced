@@ -3,103 +3,103 @@
   "title": "每日硬凑师兄要求的创新点",
   "themes": [
     {
-      "title": "大语言模型推理效率与稀疏计算",
-      "blurb": "围绕长上下文预填充加速、自适应计算深度和全局专家池设计，探索降低推理成本同时保持模型质量的新型架构与调度方法。"
+      "title": "LLM 推理机制与内部状态诊断",
+      "blurb": "基于当日文献池中关于强化学习稀疏策略选择、注意力预算分配、置信轨迹认知努力、隐藏状态吸引子几何等研究，探讨如何从内部状态诊断 LLM 推理行为、幻觉机制与计算效率。"
     },
     {
-      "title": "多智能体系统协作与安全治理",
-      "blurb": "聚焦多智能体提示联合优化、授权传播与身份治理，解决分布式AI系统中局部目标与全局目标对齐、安全边界维护等核心挑战。"
+      "title": "模型表示的可解释性与安全评估",
+      "blurb": "围绕图语言模型记忆与结构对齐、社会角色粒度轴、概率电路幻觉检测、元博弈归因框架、稀疏自编码器动态稀疏性等，研究模型内部表示的可解释性、安全评估与异常检测方法。"
     },
     {
-      "title": "大语言模型安全对齐与跨文化评估",
-      "blurb": "从无基准安全评分、对抗训练鲁棒性到跨文化安全基准构建，系统研究LLM安全评估方法论与对齐技术的有效性边界。"
+      "title": "高效推理与自适应控制框架",
+      "blurb": "结合单次前向引导、MoE 专家生态控制参数、迭代神经求解器、预算条件注意力分配、闭环强化学习反馈等，探索降低推理开销、提升自适应能力的系统级方法。"
     }
   ],
   "pool": [
     {
       "idx": 1,
-      "id": "2605.06652",
-      "title": "When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels"
+      "id": "2605.06241",
+      "title": "Rethinking RL for LLM Reasoning: It's Sparse Policy Selection, Not Capability Learning"
     },
     {
       "idx": 2,
-      "id": "2605.05826",
-      "title": "AGPO: Asymmetric Group Policy Optimization for Verifiable Reasoning and Search Ads Relevance at JD"
+      "id": "2605.05220",
+      "title": "MidSteer: Optimal Affine Framework for Steering Generative Models"
     },
     {
       "idx": 3,
-      "id": "2605.05833",
-      "title": "On the Role of Language Representations in Auto-Bidding: Findings and Implications"
+      "id": "2605.06239",
+      "title": "When Graph Language Models Go Beyond Memorization"
     },
     {
       "idx": 4,
-      "id": "2605.06665",
-      "title": "UniPool: A Globally Shared Expert Pool for Mixture-of-Experts"
+      "id": "2605.05686",
+      "title": "Attractor Geometry of Transformer Memory: From Conflict Arbitration to Confident Hallucination"
     },
     {
       "idx": 5,
-      "id": "2605.05415",
-      "title": "Information Theoretic Adversarial Training of Large Language Models"
+      "id": "2605.06597",
+      "title": "UniSD: Towards a Unified Self-Distillation Framework for Large Language Models"
     },
     {
       "idx": 6,
-      "id": "2605.06470",
-      "title": "Hitting Time Isomorphism for Multi-Stage Planning with Foundation Policies"
+      "id": "2605.05581",
+      "title": "A Scalable Digital Twin Framework for Energy Optimization in Data Centers"
     },
     {
       "idx": 7,
-      "id": "2605.06458",
-      "title": "Invariant Features in Language Models: Geometric Characterization and Model Attribution"
+      "id": "2605.06124",
+      "title": "P-Guide: Parameter-Efficient Prior Steering for Single-Pass CFG Inference"
     },
     {
       "idx": 8,
-      "id": "2605.06346",
-      "title": "Prediction and Empowerment: A Theory of Agency through Bridge Interfaces"
+      "id": "2605.05370",
+      "title": "SPADE: Faster Drug Discovery by Learning from Sparse Data"
     },
     {
       "idx": 9,
-      "id": "2605.05867",
-      "title": "On Fixing Insecure AI-Generated Code through Model Fine-Tuning and Prompting Strategies"
+      "id": "2605.06196",
+      "title": "The Granularity Axis: A Micro-to-Macro Latent Direction for Social Roles in Language Models"
     },
     {
       "idx": 10,
-      "id": "2605.05938",
-      "title": "ICU-Bench:Benchmarking Continual Unlearning in Multimodal Large Language Models"
+      "id": "2605.05773",
+      "title": "CircuitFormer: A Circuit Language Model for Analog Topology Design from Natural Language Prompt"
     },
     {
       "idx": 11,
-      "id": "2605.05478",
-      "title": "LANTERN: LLM-Augmented Neurosymbolic Transfer with Experience-Gated Reasoning Networks"
+      "id": "2605.05638",
+      "title": "Scaling Pretrained Representations Enables Label-Free Out-of-Distribution Detection Without Fine-Tuning"
     },
     {
       "idx": 12,
-      "id": "2605.05851",
-      "title": "Hypothesis generation and updating in large language models"
+      "id": "2605.06281",
+      "title": "INEUS: Iterative Neural Solver for High-Dimensional PIDEs"
     },
     {
       "idx": 13,
-      "id": "2605.05921",
-      "title": "Intentmaking and Sensemaking: Human Interaction with AI-Guided Mathematical Discovery"
+      "id": "2605.06576",
+      "title": "On the Safety of Graph Representation Learning"
     },
     {
       "idx": 14,
-      "id": "2605.06599",
-      "title": "Weight-Decay Turns Transformer Loss Landscapes Villani: Functional-Analytic Foundations for Optimization and Generalization"
+      "id": "2605.05697",
+      "title": "Budgeted Attention Allocation: Cost-Conditioned Compute Control for Efficient Transformers"
     },
     {
       "idx": 15,
-      "id": "2605.05609",
-      "title": "Optimal Contextual Pricing under Agnostic Non-Lipschitz Demand"
+      "id": "2605.05953",
+      "title": "Hallucination as an Anomaly: Dynamic Intervention via Probabilistic Circuits"
     },
     {
       "idx": 16,
-      "id": "2605.05222",
-      "title": "Adaptive Computation Depth via Learned Token Routing in Transformers"
+      "id": "2605.06500",
+      "title": "Operator-Guided Invariance Learning for Continuous Reinforcement Learning"
     },
     {
       "idx": 17,
-      "id": "2605.06426",
-      "title": "From 124 Million Tokens to 1,021 Neologisms: A Large-Scale Pipeline for Automatic Neologism Detection"
+      "id": "2605.06310",
+      "title": "Perceive, Route and Modulate: Dynamic Pattern Recalibration for Time Series Forecasting"
     },
     {
       "idx": 18,
@@ -108,63 +108,63 @@
     },
     {
       "idx": 19,
-      "id": "2605.05662",
-      "title": "XL-SafetyBench: A Country-Grounded Cross-Cultural Benchmark for LLM Safety and Cultural Sensitivity"
+      "id": "2605.05741",
+      "title": "HyperLens: Quantifying Cognitive Effort in LLMs with Fine-grained Confidence Trajectory"
     },
     {
       "idx": 20,
-      "id": "2605.06494",
-      "title": "From Token Lists to Graph Motifs: Weisfeiler-Lehman Analysis of Sparse Autoencoder Features"
+      "id": "2605.05687",
+      "title": "DataDignity: Training Data Attribution for Large Language Models"
     },
     {
       "idx": 21,
-      "id": "2605.06246",
-      "title": "Structure-Preserving Gaussian Processes Via Discrete Euler-Lagrange Equations"
+      "id": "2605.05739",
+      "title": "Multi-Dimensional Behavioral Evaluation of Agentic Stock Prediction Systems Using LLM Judges with Closed-Loop Reinforcement Learning Feedback"
     },
     {
       "idx": 22,
-      "id": "2605.05643",
-      "title": "Text-Graph Synergy: A Bidirectional Verification and Completion Framework for RAG"
+      "id": "2605.05833",
+      "title": "On the Role of Language Representations in Auto-Bidding: Findings and Implications"
     },
     {
       "idx": 23,
-      "id": "2605.06623",
-      "title": "MASPO: Joint Prompt Optimization for LLM-based Multi-Agent Systems"
+      "id": "2605.06415",
+      "title": "E = T*H/(O+B): A Dimensionless Control Parameter for Mixture-of-Experts Ecology"
     },
     {
       "idx": 24,
-      "id": "2605.06571",
-      "title": "CLAD: A Clustered Label-Agnostic Federated Learning Framework for Joint Anomaly Detection and Attack Classification"
+      "id": "2605.05905",
+      "title": "Quadratic Objective Perturbation: Curvature-Based Differential Privacy"
     },
     {
       "idx": 25,
-      "id": "2605.05567",
-      "title": "Locality-aware Private Class Identification for Domain Adaptation with Extreme Label Shift"
+      "id": "2605.06295",
+      "title": "Attributions All the Way Down? The Metagame of Interpretability"
     },
     {
       "idx": 26,
-      "id": "2605.06225",
-      "title": "Memory Inception: Latent-Space KV Cache Manipulation for Steering LLMs"
+      "id": "2605.05828",
+      "title": "From Chat to Interview: Agentic Requirements Elicitation with an Experience Ontology"
     },
     {
       "idx": 27,
-      "id": "2605.05440",
-      "title": "Authorization Propagation in Multi-Agent AI Systems: Identity Governance as Infrastructure"
+      "id": "2605.05365",
+      "title": "ZAYA1-8B Technical Report"
     },
     {
       "idx": 28,
-      "id": "2605.06145",
-      "title": "Unifying Goal-Conditioned RL and Unsupervised Skill Learning via Control-Maximization"
+      "id": "2605.06610",
+      "title": "SoftSAE: Dynamic Top-K Selection for Adaptive Sparse Autoencoders"
     },
     {
       "idx": 29,
-      "id": "2605.06221",
-      "title": "UniPrefill: Universal Long-Context Prefill Acceleration via Block-wise Dynamic Sparsification"
+      "id": "2605.05902",
+      "title": "Evaluating Non-English Developer Support in Machine Learning for Software Engineering"
     },
     {
       "idx": 30,
-      "id": "2605.06554",
-      "title": "Long Context Pre-Training with Lighthouse Attention"
+      "id": "2605.05737",
+      "title": "ReFlect: An Effective Harness System for Complex Long-Horizon LLM Reasoning"
     }
   ]
 }
