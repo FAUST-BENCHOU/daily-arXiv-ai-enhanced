@@ -1,298 +1,296 @@
 # 每日硬凑师兄要求的创新点 2026-05-11
 
 ## 今日三个主题（结构化）
-1. **LLM 推理效率与 KV Cache 优化** — 围绕 KV Cache 压缩、淘汰策略与混合精度量化，探索在长上下文推理与 RL 后训练场景下降低显存开销、提升推理吞吐的创新方法。
-2. **智能体系统可靠性、记忆与运行时治理** — 聚焦 LLM 智能体在工具调用、记忆级联更新与生产环境部署中的可靠性问题，提出基准测试、架构约束与信号重塑等系统性保障方案。
-3. **异构工作流调度与资源协同** — 面向 LLM 多阶段工作流、AI-RAN 融合基础设施与生成式推荐等异构场景，研究未来状态感知调度、分层资源分配与跨框架迁移的优化方法。
+1. **LLM 推理效率与缓存管理** — 围绕 KV Cache 压缩、淘汰策略与稀疏注意力索引，探索端到端可学习的缓存淘汰（LKV）、输出感知的全局淘汰框架（LaProx）以及将稀疏注意力建模为范围搜索问题的方法，以降低长上下文推理的内存与计算开销。
+2. **智能体系统路由、治理与可靠性** — 聚焦 LLM 智能体的工具调用路由（Switchcraft）、运行时约束治理架构（SARC）、推理可靠性对齐（CASPO）以及早期经验驱动的路由策略（BoundaryRouter），解决智能体部署中的成本、合规与可信问题。
+3. **分布式系统资源调度与性能建模** — 涵盖 LLM 推理服务中的分支并行度调节（TAPER）、AI-RAN 异构资源分层调度（HAF）、配置无关的性能剖析（Dooly）以及生成式推荐系统的分布式 KV 缓存加速（RcLLM），面向在线服务的动态资源优化。
 
 ---
 ## 当日文献池编号一览
 
 | 编号 | 论文题目 | arXiv ID |
 |:---:|:---|:---:|
-| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07247) | EnvSimBench: A Benchmark for Evaluating and Improving LLM-Based Environment Simulation | 2605.07247 |
-| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06754) | ScarfBench: A Benchmark for Cross-Framework Application Migration in Enterprise Java | 2605.06754 |
-| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06683) | Toeplitz MLP Mixers are Low Complexity, Information-Rich Sequence Models | 2605.06683 |
-| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06761) | Weblica: Scalable and Reproducible Training Environments for Visual Web Agents | 2605.06761 |
-| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07242) | MEMOREPAIR: Barrier-First Cascade Repair in Agentic Memory | 2605.07242 |
-| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07315) | LaTER: Efficient Test-Time Reasoning via Latent Exploration and Explicit Verification | 2605.07315 |
-| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06850) | How to Compress KV Cache in RL Post-Training? Shadow Mask Distillation for Memory-Efficient Alignment | 2605.06850 |
-| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234) | Reformulating KV Cache Eviction Problem for Long-Context LLM Inference | 2605.07234 |
-| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07353) | Confidence-Aware Alignment Makes Reasoning LLMs More Reliable | 2605.07353 |
-| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06755) | Gradient Extrapolation-Based Policy Optimization | 2605.06755 |
-| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07068) | WiCER: Wiki-memory Compile, Evaluate, Refine Iterative Knowledge Compilation for LLM Wiki Systems | 2605.07068 |
-| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07110) | Securing Computer-Use Agents: A Unified Architecture-Lifecycle Framework for Deployment-Grounded Reliability | 2605.07110 |
-| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763) | Sparse Attention as a Range Searching Problem: Towards an Inference-Efficient Index for KV Cache | 2605.06763 |
-| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07112) | Switchcraft: AI Model Router for Agentic Tool Calling | 2605.07112 |
-| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443) | RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching | 2605.07443 |
-| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07391) | MERBIT: A GPU-Based SpMV Method for Iterative Workloads | 2605.07391 |
-| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06675) | RateQuant: Optimal Mixed-Precision KV Cache Quantization via Rate-Distortion Theory | 2605.06675 |
-| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07313) | When Stored Evidence Stops Being Usable: Scale-Conditioned Evaluation of Agent Memory | 2605.07313 |
-| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07330) | SparseRL-Sync: Lossless Weight Synchronization with ~100x Less Communication | 2605.07330 |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07909) | Evaluating Design Conformance Through Trace Comparison | 2605.07909 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06755) | Gradient Extrapolation-Based Policy Optimization | 2605.06755 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728) | SARC: A Governance-by-Architecture Framework for Agentic AI Systems | 2605.07728 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06890) | Beyond the Black Box: Interpretability of Agentic AI Tool Use | 2605.06890 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07111) | Beyond LoRA vs. Full Fine-Tuning: Gradient-Guided Optimizer Routing for LLM Adaptation | 2605.07111 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07353) | Confidence-Aware Alignment Makes Reasoning LLMs More Reliable | 2605.07353 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07985) | Dooly: Configuration-Agnostic, Redundancy-Aware Profiling for LLM Inference Simulation | 2605.07985 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07247) | EnvSimBench: A Benchmark for Evaluating and Improving LLM-Based Environment Simulation | 2605.07247 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07313) | When Stored Evidence Stops Being Usable: Scale-Conditioned Evaluation of Agent Memory | 2605.07313 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06906) | TraXion: Rethinking Pre-training Frameworks for Mobility and Beyond | 2605.06906 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443) | RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching | 2605.07443 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07180) | Learning Agent Routing From Early Experience | 2605.07180 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06676) | LKV: End-to-End Learning of Head-wise Budgets and Token Selection for LLM KV Cache Eviction | 2605.06676 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07391) | MERBIT: A GPU-Based SpMV Method for Iterative Workloads | 2605.07391 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07112) | Switchcraft: AI Model Router for Agentic Tool Calling | 2605.07112 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234) | Reformulating KV Cache Eviction Problem for Long-Context LLM Inference | 2605.07234 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06908) | Same Signal, Opposite Meaning: Direction-Informed Adaptive Learning for LLM Agents | 2605.06908 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07068) | WiCER: Wiki-memory Compile, Evaluate, Refine Iterative Knowledge Compilation for LLM Wiki Systems | 2605.07068 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06754) | ScarfBench: A Benchmark for Cross-Framework Application Migration in Enterprise Java | 2605.06754 |
 | [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07243) | SpecBlock: Block-Iterative Speculative Decoding with Dynamic Tree Drafting | 2605.07243 |
-| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07599) | Stencil Computations on Tenstorrent Wormhole | 2605.07599 |
-| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07238) | FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows | 2605.07238 |
-| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07161) | SREGym: A Live Benchmark for AI SRE Agents with High-Fidelity Failure Scenarios | 2605.07161 |
-| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06908) | Same Signal, Opposite Meaning: Direction-Informed Adaptive Learning for LLM Agents | 2605.06908 |
-| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547) | Deadline-Driven Hierarchical Agentic Resource Sharing for AI Services and RAN Functions in AI-RAN | 2605.07547 |
-| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07985) | Dooly: Configuration-Agnostic, Redundancy-Aware Profiling for LLM Inference Simulation | 2605.07985 |
-| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06906) | TraXion: Rethinking Pre-training Frameworks for Mobility and Beyond | 2605.06906 |
-| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728) | SARC: A Governance-by-Architecture Framework for Agentic AI Systems | 2605.07728 |
-| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07276) | Signal Reshaping for GRPO in Weak-Feedback Agentic Code Repair | 2605.07276 |
-| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914) | TAPER: Regulating Branch Parallelism in LLM Serving | 2605.06914 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914) | Regulating Branch Parallelism in LLM Serving | 2605.06914 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07066) | 2.5-D Decomposition for LLM-Based Spatial Construction | 2605.07066 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06761) | Weblica: Scalable and Reproducible Training Environments for Visual Web Agents | 2605.06761 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547) | Deadline-Driven Hierarchical Agentic Resource Sharing for AI Services and RAN Functions in AI-RAN | 2605.07547 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07330) | SparseRL-Sync: Lossless Weight Synchronization with ~100x Less Communication | 2605.07330 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763) | Sparse Attention as a Range Searching Problem: Towards an Inference-Efficient Index for KV Cache | 2605.06763 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07507) | TCMIIES: A Browser-Based LLM-Powered Intelligent Information Extraction System for Academic Literature | 2605.07507 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07599) | Stencil Computations on Tenstorrent Wormhole | 2605.07599 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07737) | Securing the Dark Matter: A Semantic-Enhanced Neuro-Symbolic Framework for Supply Chain Analysis of Opaque Industrial Software | 2605.07737 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07276) | Signal Reshaping for GRPO in Weak-Feedback Agentic Code Repair | 2605.07276 |
 
 ---
 
 ## 三篇论文方向与六个创新点
 
-### 论文方向一：LLM 推理效率与 KV Cache 优化
+### 论文方向一：面向长上下文推理的 KV Cache 压缩与淘汰机制
 
-**拟定论文题目**：面向长上下文推理与 RL 后训练的 KV Cache 压缩与淘汰策略研究
+**拟定论文题目：** 面向长上下文推理的端到端可学习 KV Cache 压缩与全局淘汰方法
 
-**论文核心问题**：如何在大语言模型长上下文推理和强化学习后训练场景中，兼顾 KV Cache 的显存压缩效率与模型输出保真度，避免压缩引入的偏差在优化过程中被放大。
+**论文核心问题：** 如何设计一种端到端可学习的 KV Cache 压缩框架，在保持推理精度的同时，通过全局视角和输出感知的淘汰策略，显著降低长上下文推理的内存与计算开销。
 
-#### 创新点一：输出感知的全局 KV Cache 淘汰策略
+#### 创新点一：端到端可学习的 KV Cache 压缩框架
 
-大多数现有方法基于局部注意力权重进行逐头 KV Cache 淘汰，忽略了值表示、输出投影和跨头交互对 token 贡献度的影响，导致全局重要性排序失真 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06675)。少数现有方法开始关注 token 贡献度的全局可比性，但尚未将注意力图与投影值状态的乘法交互显式建模为统一的矩阵乘法近似问题，难以实现模型级别的统一选择 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763)。为此，本文提出 LaProx 策略，将 KV Cache 淘汰重新表述为输出感知的逐层矩阵乘法近似问题，显式建模注意力图与投影值状态的交互以精确量化 token 贡献，并引入全局可比重要性分数实现模型级统一淘汰 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06675)。
+大多数现有方法依赖启发式规则（如注意力权重、频率统计）进行 KV Cache 压缩，这些方法基于统计先验而非任务目标，导致资源分配不当 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06676)[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234)[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763)。少数现有方法开始引入可学习机制，但通常将预算分配与 Token 选择分离处理，缺乏端到端的联合优化 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06676)[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763)。为此，本文提出一个端到端可学习的 KV Cache 压缩框架，将头级预算分配与 Token 级重要性选择整合为统一的优化问题，通过可微的代理损失函数直接对齐压缩策略与下游任务目标，以消除启发式代理与真实目标之间的偏差。
 
-- **创新类型**：方法设计创新
-- **创新性判断**：现有方法 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234) 已提出输出感知的视角，但本文将其与全局可比性分数结合，并引入跨头依赖建模，形成更完整的淘汰框架。文献池中 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763) 从范围搜索角度处理稀疏注意力，[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06675) 从率失真理论处理混合精度量化，均未覆盖输出感知的全局淘汰。
+- **创新类型：** 方法设计创新
+- **创新性判断：** 池内文献 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06676)（LKV）提出了端到端可学习的 KV 淘汰，但本文进一步将预算分配与 Token 选择整合为统一优化，并引入输出感知的全局重要性度量，与 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06676) 形成差异化。
 
-**文献支撑**：
-
-| 编号 | 论文题名 | 主要内容 | 支撑作用 |
-|:---:|:---|:---|:---|
-| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234) | Reformulating KV Cache Eviction Problem for Long-Context LLM Inference | 提出输出感知的逐层矩阵乘法近似淘汰策略 LaProx | 支撑少数现有方法 |
-| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763) | Sparse Attention as a Range Searching Problem | 将稀疏注意力重新表述为半空间范围搜索问题 | 支撑大多数现有方法 |
-| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06675) | RateQuant: Optimal Mixed-Precision KV Cache Quantization via Rate-Distortion Theory | 提出基于率失真理论的混合精度量化分配 | 支撑大多数现有方法 |
-| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06850) | How to Compress KV Cache in RL Post-Training? | 研究 KV Cache 压缩在 RL 后训练中的偏差放大问题 | 支撑现有不足 |
-| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07243) | SpecBlock: Block-Iterative Speculative Decoding | 提出块迭代推测解码，依赖 KV Cache 管理 | 支撑大多数现有方法 |
-| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443) | RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching | 提出超越前缀的 KV 缓存系统 | 支撑大多数现有方法 |
-| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914) | TAPER: Regulating Branch Parallelism in LLM Serving | 提出分支并行度调节，依赖 KV Cache 共享 | 支撑大多数现有方法 |
-| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06683) | Toeplitz MLP Mixers are Low Complexity, Information-Rich Sequence Models | 提出替代注意力的低复杂度序列模型 | 支撑现有不足 |
-| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07315) | LaTER: Efficient Test-Time Reasoning via Latent Exploration and Explicit Verification | 提出两阶段推理范式，减少 token 生成 | 支撑本文差异 |
-| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07985) | Dooly: Configuration-Agnostic, Redundancy-Aware Profiling for LLM Inference Simulation | 提出配置无关的推理模拟分析 | 支撑本文差异 |
-
-#### 创新点二：RL 后训练中 KV Cache 压缩的偏差校正机制
-
-大多数现有 KV Cache 压缩方法在标准推理场景中近乎无损，但在 RL 后训练中，即使微小的近似误差也会被优化过程的不稳定性急剧放大，导致采样器与学习器之间的策略偏差 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06850)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06675)。少数现有方法尝试通过重要性重加权等统计手段缓解偏差，但无法从根本上解决稀疏上下文采样与稠密上下文更新之间的结构不匹配问题 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06850)。为此，本文提出 Shadow Mask Distillation 方法，在 RL 后训练的 rollout 阶段应用 KV Cache 压缩，同时通过影子掩码蒸馏将压缩后的稀疏上下文信息与完整稠密上下文对齐，以消除 off-policy 偏差 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06850)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06675)[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06755)。
-
-- **创新类型**：方法设计创新 + 约束处理创新
-- **创新性判断**：文献池中 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06850) 明确指出了 RL 后训练中 KV Cache 压缩的偏差放大问题，但未提出完整的校正框架。[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06755) 提出的梯度外推策略关注的是策略更新方向，而非压缩偏差校正。本文创新点填补了这一空白。
-
-**文献支撑**：
+**文献支撑：**
 
 | 编号 | 论文题名 | 主要内容 | 支撑作用 |
-|:---:|:---|:---|:---|
-| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06850) | How to Compress KV Cache in RL Post-Training? | 揭示 KV Cache 压缩在 RL 后训练中的偏差放大问题 | 支撑少数现有方法 |
-| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06675) | RateQuant: Optimal Mixed-Precision KV Cache Quantization | 提出混合精度量化，但未考虑 RL 场景 | 支撑大多数现有方法 |
-| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06755) | Gradient Extrapolation-Based Policy Optimization | 提出梯度外推策略优化，关注更新方向 | 支撑大多数现有方法 |
-| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234) | Reformulating KV Cache Eviction Problem | 提出输出感知淘汰策略 | 支撑大多数现有方法 |
-| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763) | Sparse Attention as a Range Searching Problem | 提出范围搜索视角的稀疏注意力 | 支撑大多数现有方法 |
-| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07276) | Signal Reshaping for GRPO in Weak-Feedback Agentic Code Repair | 研究 GRPO 中的信号重塑 | 支撑少数现有方法 |
-| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07353) | Confidence-Aware Alignment Makes Reasoning LLMs More Reliable | 提出置信度感知的对齐方法 | 支撑本文差异 |
-| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07315) | LaTER: Efficient Test-Time Reasoning | 提出潜在-显式两阶段推理 | 支撑本文差异 |
-| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07243) | SpecBlock: Block-Iterative Speculative Decoding | 提出块迭代推测解码 | 支撑大多数现有方法 |
-| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914) | TAPER: Regulating Branch Parallelism | 提出分支并行度调节 | 支撑大多数现有方法 |
+|:---:|:---|:---|:---:|
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06676) | LKV: End-to-End Learning of Head-wise Budgets and Token Selection for LLM KV Cache Eviction | 提出端到端可学习的 KV 淘汰方法，学习头级预算和 Token 重要性 | 支撑少数现有方法 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234) | Reformulating KV Cache Eviction Problem for Long-Context LLM Inference | 将 KV 淘汰重述为输出感知的矩阵乘法近似问题 | 支撑少数现有方法 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763) | Sparse Attention as a Range Searching Problem: Towards an Inference-Efficient Index for KV Cache | 将稀疏注意力建模为范围搜索问题，保证关键 Token 的召回 | 支撑少数现有方法 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443) | RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching | 提出超越前缀的 KV 缓存系统，支持非连续复用 | 支撑大多数现有方法 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07068) | WiCER: Wiki-memory Compile, Evaluate, Refine Iterative Knowledge Compilation for LLM Wiki Systems | 通过迭代编译优化 KV 缓存中的知识保留 | 支撑大多数现有方法 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07243) | SpecBlock: Block-Iterative Speculative Decoding with Dynamic Tree Drafting | 提出块迭代推测解码，依赖 KV 缓存管理 | 支撑大多数现有方法 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914) | Regulating Branch Parallelism in LLM Serving | 提出分支并行度调节，依赖 KV 缓存共享 | 支撑大多数现有方法 |
 
-**该论文两个创新点之间的关系**：创新点一解决“如何更准确地淘汰 KV Cache 中的冗余 token”，创新点二解决“如何在 RL 后训练场景中校正压缩引入的偏差”。二者属于同一论文主题，但分别对应压缩策略设计与压缩后偏差校正，不存在重复。
+#### 创新点二：输出感知的全局淘汰策略
 
-**建议实验设计**：
-- 对比方法：LaProx [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234)、RateQuant [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06675)、标准 uniform 量化、H2O 淘汰策略
-- 实验数据或场景：LongBench、Needle-In-A-Haystack 长上下文基准；RL 后训练场景使用 GRPO/PPO 在数学推理任务上微调
-- 评价指标：显存占用、TTFT、准确率保持率、RL 训练收敛速度
-- 消融实验：分离输出感知建模与全局可比性分数的贡献；分离 Shadow Mask Distillation 与基础压缩的贡献
+大多数现有 KV 淘汰方法基于头级局部注意力权重进行决策，忽略了值表示、输出投影和跨头交互对 Token 贡献的影响 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06676)[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234)[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763)。少数现有方法开始建模注意力图与值状态的交互，但通常仍采用头级局部决策，缺乏全局可比的 Token 重要性度量 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234)。为此，本文提出一种输出感知的全局淘汰策略，显式建模注意力图与投影值状态的乘法交互，为所有 Token 分配全局可比较的重要性分数，实现模型级统一选择而非头级局部决策，以更准确地保留对最终输出贡献最大的 Token。
+
+- **创新类型：** 方法设计创新
+- **创新性判断：** 池内文献 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234)（LaProx）提出了输出感知的淘汰策略，但本文进一步将全局重要性度量与端到端可学习框架结合，实现模型级统一选择，与 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234) 形成互补。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234) | Reformulating KV Cache Eviction Problem for Long-Context LLM Inference | 提出输出感知的淘汰策略，建模注意力图与值状态的交互 | 支撑少数现有方法 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06676) | LKV: End-to-End Learning of Head-wise Budgets and Token Selection for LLM KV Cache Eviction | 学习头级预算和 Token 重要性 | 支撑大多数现有方法 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763) | Sparse Attention as a Range Searching Problem: Towards an Inference-Efficient Index for KV Cache | 将稀疏注意力建模为范围搜索问题 | 支撑大多数现有方法 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443) | RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching | 提出超越前缀的 KV 缓存系统 | 支撑大多数现有方法 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07068) | WiCER: Wiki-memory Compile, Evaluate, Refine Iterative Knowledge Compilation for LLM Wiki Systems | 通过迭代编译优化 KV 缓存 | 支撑大多数现有方法 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07243) | SpecBlock: Block-Iterative Speculative Decoding with Dynamic Tree Drafting | 块迭代推测解码依赖 KV 缓存 | 支撑大多数现有方法 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914) | Regulating Branch Parallelism in LLM Serving | 分支并行度调节依赖 KV 缓存共享 | 支撑大多数现有方法 |
+
+**该论文两个创新点之间的关系：**
+创新点一解决“如何端到端学习压缩策略”，创新点二解决“如何全局感知地选择淘汰 Token”。二者属于同一论文主题，但分别对应压缩框架设计和淘汰策略设计，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** LKV [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06676)、LaProx [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234)、范围搜索方法 [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763)、标准前缀缓存 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443)
+- **实验数据或场景：** LongBench、RULER、Needle-In-A-Haystack 基准
+- **评价指标：** 压缩率、推理精度（准确率/F1）、TTFT、内存占用
+- **消融实验：** 端到端学习 vs. 分离优化、全局淘汰 vs. 头级局部淘汰
 
 ---
 
-### 论文方向二：智能体系统可靠性、记忆与运行时治理
+### 论文方向二：面向智能体系统的路由、治理与可靠性对齐
 
-**拟定论文题目**：面向生产环境的 LLM 智能体记忆级联修复与运行时约束治理框架
+**拟定论文题目：** 面向智能体系统的成本感知路由与运行时治理架构
 
-**论文核心问题**：如何确保 LLM 智能体在工具调用、记忆级联更新与生产环境部署中的行为可靠性，避免因记忆污染、信号反转或约束缺失导致的级联失效。
+**论文核心问题：** 如何在智能体系统中实现成本感知的模型路由，同时通过运行时治理架构确保工具调用的合规性与可靠性。
 
-#### 创新点三：屏障优先的智能体记忆级联修复契约
+#### 创新点三：成本感知的智能体工具调用路由
 
-大多数现有智能体记忆系统仅关注单次记忆的读写正确性，忽略了当源工件被删除、修正或工具迁移导致失效时，派生工件仍可见并引导后续行为的问题，即级联更新问题 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07242)[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07313)[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07068)。少数现有方法开始关注记忆的版本管理或一致性维护，但缺乏形式化的修复契约来保证派生状态在修复事件中的可控转换 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07242)[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07313)。为此，本文提出 MemoRepair 的屏障优先级联修复契约，通过撤回受影响派生、从保留支撑和已修复前驱构建后继、以及限制发布为已验证的前驱闭包后继，实现派生状态到验证状态的可控转换 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07242)[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07313)[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07068)。
+大多数现有模型路由器针对聊天补全设计，不适用于智能体工具调用场景，且通常忽略工具调用的 Token 密集型推理带来的额外成本 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07180)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07112)。少数现有方法开始针对工具调用设计路由器，但主要依赖静态分类器，缺乏对早期行为经验的利用和冷启动场景的适应 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07112)。为此，本文提出一种成本感知的智能体工具调用路由框架，利用早期行为经验构建紧凑的记忆库，在推理时检索相似案例指导路由决策，同时将工具调用的 Token 消耗纳入成本模型，以在保证正确性的前提下最小化推理成本。
 
-- **创新类型**：问题建模创新 + 方法设计创新
-- **创新性判断**：文献池中 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07242) 已形式化级联更新问题并提出 MemoRepair 契约，但本文将其与 [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07313) 的规模条件评估协议结合，引入可用的规模边界概念，形成更完整的修复决策框架。[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07068) 的 WiCER 方法关注的是知识编译而非记忆修复，属于不同问题域。
+- **创新类型：** 方法设计创新
+- **创新性判断：** 池内文献 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07112)（Switchcraft）和 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07180)（BoundaryRouter）分别提出了工具调用路由和早期经验路由，但本文首次将两者结合，并显式建模 Token 消耗成本，形成差异化贡献。
 
-**文献支撑**：
-
-| 编号 | 论文题名 | 主要内容 | 支撑作用 |
-|:---:|:---|:---|:---|
-| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07242) | MEMOREPAIR: Barrier-First Cascade Repair in Agentic Memory | 形式化级联更新问题并提出屏障优先修复契约 | 支撑少数现有方法 |
-| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07313) | When Stored Evidence Stops Being Usable | 提出规模条件评估协议，诊断记忆可用性边界 | 支撑少数现有方法 |
-| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07068) | WiCER: Wiki-memory Compile, Evaluate, Refine | 提出迭代知识编译方法 | 支撑大多数现有方法 |
-| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07110) | Securing Computer-Use Agents | 提出架构-生命周期框架 | 支撑大多数现有方法 |
-| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728) | SARC: A Governance-by-Architecture Framework | 提出运行时治理架构 | 支撑大多数现有方法 |
-| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06908) | Same Signal, Opposite Meaning | 揭示信号反转问题 | 支撑大多数现有方法 |
-| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07247) | EnvSimBench: A Benchmark for Evaluating LLM-Based Environment Simulation | 评估 LLM 环境模拟能力 | 支撑大多数现有方法 |
-| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06761) | Weblica: Scalable and Reproducible Training Environments | 构建可复现 Web 环境 | 支撑大多数现有方法 |
-| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07161) | SREGym: A Live Benchmark for AI SRE Agents | 提出高保真 SRE 基准 | 支撑本文差异 |
-| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07112) | Switchcraft: AI Model Router for Agentic Tool Calling | 提出工具调用模型路由器 | 支撑本文差异 |
-
-#### 创新点四：运行时约束优先的智能体治理架构
-
-大多数现有智能体治理控制附着于提示词、仪表盘或事后文档，导致在受监管场景中，本应约束执行过程的义务往往在执行完成后才被评估，形成结构性不匹配 [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07110)[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06908)。少数现有方法开始将约束嵌入运行时架构，但通常依赖有限奖励惩罚来替代硬约束，无法保证规范-轨迹对应关系的最小不变量 [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728)。为此，本文提出 SARC 运行时治理架构，将约束作为与状态、动作空间和奖励并列的一等规范对象，通过预动作门、动作时监控器、事后审计器和升级路由器四个执行点实施约束，并形式化规范-轨迹对应所需的最小不变量 [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07110)[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06908)。
-
-- **创新类型**：系统框架创新 + 约束处理创新
-- **创新性判断**：文献池中 [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728) 已提出 SARC 架构，但本文将其与 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07110) 的架构-生命周期框架和 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06908) 的信号反转分析结合，引入方向感知的自适应学习机制，使约束执行能够根据信号方向动态调整。[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06908) 揭示的“相同信号、相反含义”现象进一步强化了硬约束而非软惩罚的必要性。
-
-**文献支撑**：
+**文献支撑：**
 
 | 编号 | 论文题名 | 主要内容 | 支撑作用 |
-|:---:|:---|:---|:---|
-| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728) | SARC: A Governance-by-Architecture Framework | 提出运行时治理架构，约束作为一等对象 | 支撑少数现有方法 |
-| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07110) | Securing Computer-Use Agents | 提出架构-生命周期框架 | 支撑大多数现有方法 |
-| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06908) | Same Signal, Opposite Meaning | 揭示信号方向反转问题 | 支撑少数现有方法 |
-| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07242) | MEMOREPAIR: Barrier-First Cascade Repair | 提出级联修复契约 | 支撑大多数现有方法 |
-| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07313) | When Stored Evidence Stops Being Usable | 提出规模条件评估协议 | 支撑大多数现有方法 |
-| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07161) | SREGym: A Live Benchmark for AI SRE Agents | 提出高保真 SRE 基准 | 支撑大多数现有方法 |
-| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07112) | Switchcraft: AI Model Router for Agentic Tool Calling | 提出工具调用路由器 | 支撑大多数现有方法 |
-| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07247) | EnvSimBench: A Benchmark for Evaluating LLM-Based Environment Simulation | 评估 LLM 环境模拟 | 支撑大多数现有方法 |
-| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06761) | Weblica: Scalable and Reproducible Training Environments | 构建可复现 Web 环境 | 支撑本文差异 |
-| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07276) | Signal Reshaping for GRPO in Weak-Feedback Agentic Code Repair | 研究弱反馈下的信号重塑 | 支撑本文差异 |
+|:---:|:---|:---|:---:|
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07112) | Switchcraft: AI Model Router for Agentic Tool Calling | 首个针对智能体工具调用的模型路由器 | 支撑少数现有方法 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07180) | Learning Agent Routing From Early Experience | 利用早期行为经验进行路由决策 | 支撑少数现有方法 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728) | SARC: A Governance-by-Architecture Framework for Agentic AI Systems | 提出运行时治理架构 | 支撑大多数现有方法 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06890) | Beyond the Black Box: Interpretability of Agentic AI Tool Use | 提出工具使用可解释性框架 | 支撑大多数现有方法 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06908) | Same Signal, Opposite Meaning: Direction-Informed Adaptive Learning for LLM Agents | 分析自适应计算中的信号反转问题 | 支撑大多数现有方法 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07276) | Signal Reshaping for GRPO in Weak-Feedback Agentic Code Repair | 研究弱反馈下的信号重塑 | 支撑大多数现有方法 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07247) | EnvSimBench: A Benchmark for Evaluating and Improving LLM-Based Environment Simulation | 评估 LLM 环境模拟能力 | 支撑大多数现有方法 |
 
-**该论文两个创新点之间的关系**：创新点三解决“智能体记忆如何应对级联失效”，创新点四解决“智能体行为如何受运行时约束治理”。二者属于同一论文主题，但分别对应记忆层面的修复机制和行为层面的约束架构，逻辑上形成递进——先确保记忆一致性，再约束行为合规性。
+#### 创新点四：运行时约束治理架构
 
-**建议实验设计**：
-- 对比方法：标准记忆系统（无级联修复）、基于重要性重加权的修复、基于提示词的约束、SARC [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728)
-- 实验数据或场景：LongMemEval、LoCoMo 记忆基准；SREGym [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07161) 的故障注入场景
-- 评价指标：预算合规可靠性、尾记忆调用负担、失效模式分解、规范-轨迹对应率
-- 消融实验：分离屏障优先修复与后继构建的贡献；分离四个执行点各自的约束效果
+大多数现有智能体系统的治理控制附着于提示词、仪表盘或事后文档，约束在执行后才被评估，造成结构性不匹配 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728)[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06890)。少数现有方法提出运行时治理架构，但通常依赖有限奖励惩罚替代硬约束，且未扩展到多智能体工作流 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728)。为此，本文提出一种运行时约束治理架构，将约束作为一等规范对象与状态、动作空间和奖励并列，通过预动作门控、动作时监控、事后审计和升级路由四个执行点实施硬约束，并扩展到多智能体工作流中的约束传播，以在工具调用执行前和执行中确保合规性。
+
+- **创新类型：** 系统框架创新
+- **创新性判断：** 池内文献 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728)（SARC）提出了运行时治理架构，但本文进一步引入约束传播机制和预动作门控的硬约束，与 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728) 形成差异化。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728) | SARC: A Governance-by-Architecture Framework for Agentic AI Systems | 提出运行时治理架构 | 支撑少数现有方法 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06890) | Beyond the Black Box: Interpretability of Agentic AI Tool Use | 提出工具使用可解释性框架 | 支撑大多数现有方法 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07112) | Switchcraft: AI Model Router for Agentic Tool Calling | 工具调用路由器 | 支撑大多数现有方法 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07180) | Learning Agent Routing From Early Experience | 早期经验路由 | 支撑大多数现有方法 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06908) | Same Signal, Opposite Meaning: Direction-Informed Adaptive Learning for LLM Agents | 自适应计算中的信号反转 | 支撑大多数现有方法 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07276) | Signal Reshaping for GRPO in Weak-Feedback Agentic Code Repair | 弱反馈信号重塑 | 支撑大多数现有方法 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07247) | EnvSimBench: A Benchmark for Evaluating and Improving LLM-Based Environment Simulation | 环境模拟评估 | 支撑大多数现有方法 |
+
+**该论文两个创新点之间的关系：**
+创新点三解决“如何成本感知地路由”，创新点四解决“如何运行时约束治理”。二者属于同一论文主题，但分别对应路由决策和治理架构，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** Switchcraft [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07112)、BoundaryRouter [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07180)、SARC [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728)、直接 LLM 推理
+- **实验数据或场景：** RouteBench、函数调用基准、多智能体工作流
+- **评价指标：** 路由准确率、推理成本节省、合规性违规率、端到端延迟
+- **消融实验：** 成本模型 vs. 无成本模型、硬约束 vs. 软约束
 
 ---
 
-### 论文方向三：异构工作流调度与资源协同
+### 论文方向三：面向在线服务的分布式系统资源调度与性能建模
 
-**拟定论文题目**：面向 LLM 多阶段工作流与 AI-RAN 融合基础设施的未来状态感知调度与分层资源分配
+**拟定论文题目：** 面向在线服务的动态资源调度与配置无关性能建模方法
 
-**论文核心问题**：如何在 LLM 多阶段工作流 DAG 和 AI-RAN 融合基础设施中，通过未来状态感知调度和分层资源分配，优化端到端延迟与服务等级目标达成率。
+**论文核心问题：** 如何在在线服务场景中实现动态资源调度，同时通过配置无关的性能建模方法降低探索成本。
 
-#### 创新点五：未来状态感知的异构 LLM 工作流调度
+#### 创新点五：配置无关的冗余感知性能剖析
 
-大多数现有 LLM 服务系统和 DAG 调度策略主要优化即时队列状态、放置成本或复用信号，忽略了调度决策对下游阶段执行状态的继承影响，包括模型驻留、父输出局部性、前缀复用和未来设备可达性 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07238)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914)。少数现有方法开始考虑工作流 DAG 的整体优化，但通常求解全 DAG 的单一优化问题，计算开销大且难以适应动态变化 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07238)。为此，本文提出 FATE 调度器，结合 CP-SAT 支持的边界规划器、视野感知候选评分、有界多设备分片执行和状态条件成本估计，通过反复规划当前就绪边界并评分分配方案的即时成本和下游状态诱导效应，实现未来状态感知的调度 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07238)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914)。
+大多数现有性能剖析方法将操作集硬编码到特定配置，每次探索新配置时需从头重新剖析，成本高昂 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07985)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914)。少数现有方法开始利用结构理解减少冗余剖析，但通常未充分利用模型配置值的跨模型复用性 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07985)。为此，本文提出一种配置无关的冗余感知性能剖析方法，通过污点传播标记每个输入维度的来源，仅对请求相关维度进行单次扫描，利用模型配置值（如头大小、层数）的跨模型复用性，以在单次推理中覆盖所有配置变体，显著降低探索成本。
 
-- **创新类型**：方法设计创新 + 性能预测创新
-- **创新性判断**：文献池中 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07238) 已提出 FATE 调度器，但本文将其与 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443) 的超越前缀 KV 缓存和 [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914) 的分支并行度调节结合，引入分支并行度作为调度决策的可变维度，使调度器能够在工作流执行过程中动态调整并行度。
+- **创新类型：** 方法设计创新
+- **创新性判断：** 池内文献 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07985)（Dooly）提出了配置无关的冗余感知剖析，但本文进一步引入污点传播和跨模型复用机制，与 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07985) 形成差异化。
 
-**文献支撑**：
-
-| 编号 | 论文题名 | 主要内容 | 支撑作用 |
-|:---:|:---|:---|:---|
-| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07238) | FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows | 提出未来状态感知的 LLM 工作流调度器 | 支撑少数现有方法 |
-| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443) | RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching | 提出超越前缀的 KV 缓存系统 | 支撑大多数现有方法 |
-| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914) | TAPER: Regulating Branch Parallelism in LLM Serving | 提出分支并行度调节 | 支撑少数现有方法 |
-| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547) | Deadline-Driven Hierarchical Agentic Resource Sharing for AI-RAN | 提出分层智能体资源共享框架 | 支撑大多数现有方法 |
-| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07985) | Dooly: Configuration-Agnostic, Redundancy-Aware Profiling | 提出配置无关的推理模拟分析 | 支撑大多数现有方法 |
-| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07330) | SparseRL-Sync: Lossless Weight Synchronization | 提出稀疏权重同步方法 | 支撑大多数现有方法 |
-| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07391) | MERBIT: A GPU-Based SpMV Method for Iterative Workloads | 提出 GPU SpMV 方法 | 支撑大多数现有方法 |
-| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07599) | Stencil Computations on Tenstorrent Wormhole | 研究 AI 加速器上的科学计算 | 支撑大多数现有方法 |
-| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06850) | How to Compress KV Cache in RL Post-Training? | 研究 KV Cache 压缩 | 支撑本文差异 |
-| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07243) | SpecBlock: Block-Iterative Speculative Decoding | 提出块迭代推测解码 | 支撑本文差异 |
-
-#### 创新点六：分层智能体驱动的 AI-RAN 资源协同分配
-
-大多数现有 AI-RAN 资源管理方法将 AI 服务和 RAN 功能视为独立负载，忽略了实时 RAN 功能与高度异构 AI 服务在 GPU 加速基础设施上的计算共享需要协调不同时间尺度的调度决策 [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07238)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914)。少数现有方法引入分层调度架构，但放置调整可能涉及跨节点服务迁移，迁移中断成本未被充分建模 [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547)。为此，本文提出分层智能体框架（HAF），结合 LLM 智能体进行慢时间尺度的 AI 服务和 RAN 功能放置，以及闭式截止时间感知凸算法进行快时间尺度的 GPU/CPU 分配，并配备预测性评判器过滤迁移收益低于中断成本的放置调整 [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07238)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914)。
-
-- **创新类型**：系统框架创新 + 在线反馈机制创新
-- **创新性判断**：文献池中 [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547) 已提出 HAF 框架，但本文将其与 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07238) 的未来状态感知和 [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914) 的分支并行度调节结合，引入分支并行度作为快时间尺度分配的额外维度，使 GPU 分配能够根据分支并行度的动态变化进行调整。
-
-**文献支撑**：
+**文献支撑：**
 
 | 编号 | 论文题名 | 主要内容 | 支撑作用 |
-|:---:|:---|:---|:---|
-| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547) | Deadline-Driven Hierarchical Agentic Resource Sharing for AI-RAN | 提出分层智能体资源共享框架 | 支撑少数现有方法 |
-| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07238) | FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows | 提出未来状态感知调度 | 支撑少数现有方法 |
-| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914) | TAPER: Regulating Branch Parallelism in LLM Serving | 提出分支并行度调节 | 支撑少数现有方法 |
-| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443) | RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching | 提出超越前缀的 KV 缓存系统 | 支撑大多数现有方法 |
-| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07985) | Dooly: Configuration-Agnostic, Redundancy-Aware Profiling | 提出配置无关的推理模拟分析 | 支撑大多数现有方法 |
-| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07330) | SparseRL-Sync: Lossless Weight Synchronization | 提出稀疏权重同步方法 | 支撑大多数现有方法 |
-| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07391) | MERBIT: A GPU-Based SpMV Method for Iterative Workloads | 提出 GPU SpMV 方法 | 支撑大多数现有方法 |
-| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07599) | Stencil Computations on Tenstorrent Wormhole | 研究 AI 加速器上的科学计算 | 支撑大多数现有方法 |
-| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07161) | SREGym: A Live Benchmark for AI SRE Agents | 提出高保真 SRE 基准 | 支撑本文差异 |
-| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07112) | Switchcraft: AI Model Router for Agentic Tool Calling | 提出工具调用模型路由器 | 支撑本文差异 |
+|:---:|:---|:---|:---:|
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07985) | Dooly: Configuration-Agnostic, Redundancy-Aware Profiling for LLM Inference Simulation | 提出配置无关的冗余感知剖析 | 支撑少数现有方法 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914) | Regulating Branch Parallelism in LLM Serving | 提出分支并行度调节 | 支撑大多数现有方法 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443) | RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching | 提出超越前缀的 KV 缓存系统 | 支撑大多数现有方法 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547) | Deadline-Driven Hierarchical Agentic Resource Sharing for AI Services and RAN Functions in AI-RAN | 提出分层资源调度框架 | 支撑大多数现有方法 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07391) | MERBIT: A GPU-Based SpMV Method for Iterative Workloads | 提出 GPU SpMV 方法 | 支撑大多数现有方法 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07599) | Stencil Computations on Tenstorrent Wormhole | 研究 AI 加速器上的科学计算 | 支撑大多数现有方法 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07330) | SparseRL-Sync: Lossless Weight Synchronization with ~100x Less Communication | 提出稀疏权重同步方法 | 支撑大多数现有方法 |
 
-**该论文两个创新点之间的关系**：创新点五解决“LLM 工作流 DAG 中如何感知未来状态进行调度”，创新点六解决“AI-RAN 融合基础设施中如何分层分配资源”。二者属于同一论文主题，但分别对应纯 LLM 工作流调度和 AI-RAN 融合场景的资源协同，逻辑上形成递进——从单一工作流调度扩展到多工作负载融合场景。
+#### 创新点六：动态负载感知的在线资源调度
 
-**建议实验设计**：
-- 对比方法：标准队列调度、仅即时状态调度、全 DAG 优化调度、HAF [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547)、FATE [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07238)
-- 实验数据或场景：真实 LLM 工作流 DAG（如 RAG、多步推理）；AI-RAN 模拟环境
-- 评价指标：端到端延迟、SLO 达成率、资源利用率、迁移次数
-- 消融实验：分离未来状态感知与即时状态调度的贡献；分离 LLM 智能体放置与凸算法分配的贡献
+大多数现有资源调度方法依赖静态策略或固定阈值，难以适应在线服务中负载分布、性能目标和资源状态的持续变化 [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914)[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547)。少数现有方法引入分层调度或在线反馈机制，但通常未将负载预测与调度决策形成统一闭环，导致调度滞后或震荡 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547)。为此，本文提出一种动态负载感知的在线资源调度框架，将实时监控、负载预测、配置生成和效果评估连接为统一闭环，通过短时与长时序列结合的负载预测指导调度决策，以增强在线服务在动态场景下的自适应能力。
+
+- **创新类型：** 系统框架创新
+- **创新性判断：** 池内文献 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547)（HAF）提出了分层调度框架，但本文进一步引入闭环反馈机制和短长时负载预测，与 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547) 形成差异化。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547) | Deadline-Driven Hierarchical Agentic Resource Sharing for AI Services and RAN Functions in AI-RAN | 提出分层资源调度框架 | 支撑少数现有方法 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914) | Regulating Branch Parallelism in LLM Serving | 提出分支并行度调节 | 支撑大多数现有方法 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443) | RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching | 提出超越前缀的 KV 缓存系统 | 支撑大多数现有方法 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07985) | Dooly: Configuration-Agnostic, Redundancy-Aware Profiling for LLM Inference Simulation | 配置无关的性能剖析 | 支撑大多数现有方法 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07391) | MERBIT: A GPU-Based SpMV Method for Iterative Workloads | GPU SpMV 方法 | 支撑大多数现有方法 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07599) | Stencil Computations on Tenstorrent Wormhole | AI 加速器上的科学计算 | 支撑大多数现有方法 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07330) | SparseRL-Sync: Lossless Weight Synchronization with ~100x Less Communication | 稀疏权重同步 | 支撑大多数现有方法 |
+
+**该论文两个创新点之间的关系：**
+创新点五解决“如何低成本剖析性能”，创新点六解决“如何动态调度资源”。二者属于同一论文主题，但分别对应性能建模和资源调度，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** Dooly [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07985)、HAF [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547)、TAPER [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914)、RcLLM [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443)
+- **实验数据或场景：** LLM 推理服务负载轨迹、AI-RAN 场景、在线推荐系统
+- **评价指标：** SLO 满足率、剖析成本、调度延迟、吞吐量
+- **消融实验：** 闭环反馈 vs. 开环调度、短长时预测 vs. 单窗口预测
 
 ---
 
 ## 三篇论文方向去重矩阵
 
 | 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
-|:---|:---|:---|:---|:---|:---|:---|:---:|
-| 论文一：LLM 推理效率与 KV Cache 优化 | 面向长上下文推理与 RL 后训练的 KV Cache 压缩与淘汰策略研究 | KV Cache 显存压缩与模型输出保真度平衡 | 输出感知全局淘汰 + RL 后训练偏差校正 | 矩阵乘法近似淘汰 + 影子掩码蒸馏 | LongBench、Needle-In-A-Haystack、RL 微调实验 | 聚焦模型内部缓存管理，不涉及调度或智能体治理 | 低 |
-| 论文二：智能体系统可靠性、记忆与运行时治理 | 面向生产环境的 LLM 智能体记忆级联修复与运行时约束治理框架 | 智能体记忆一致性与行为可靠性保障 | 屏障优先级联修复 + 运行时约束治理架构 | 级联修复契约 + 四执行点约束架构 | LongMemEval、LoCoMo、SREGym 故障注入 | 聚焦智能体系统层面，不涉及推理缓存或工作流调度 | 低 |
-| 论文三：异构工作流调度与资源协同 | 面向 LLM 多阶段工作流与 AI-RAN 融合基础设施的未来状态感知调度与分层资源分配 | 异构工作流端到端延迟与 SLO 优化 | 未来状态感知调度 + 分层智能体资源分配 | CP-SAT 边界规划 + 分层凸算法分配 | 真实 LLM 工作流 DAG、AI-RAN 模拟环境 | 聚焦系统调度层面，不涉及缓存压缩或智能体治理 | 低 |
+|:---:|:---|:---|:---:|:---|:---|:---|:---:|
+| 论文一 | 面向长上下文推理的端到端可学习 KV Cache 压缩与全局淘汰方法 | KV Cache 压缩与淘汰 | 端到端学习框架 + 全局淘汰策略 | 可微优化、输出感知重要性 | LongBench、RULER | 聚焦内存优化，不涉及路由或调度 | 低 |
+| 论文二 | 面向智能体系统的成本感知路由与运行时治理架构 | 智能体路由与治理 | 成本感知路由 + 运行时约束治理 | 早期经验记忆、硬约束架构 | RouteBench、函数调用基准 | 聚焦智能体系统，不涉及内存或调度 | 低 |
+| 论文三 | 面向在线服务的动态资源调度与配置无关性能建模方法 | 资源调度与性能建模 | 配置无关剖析 + 动态负载调度 | 污点传播、闭环反馈 | LLM 服务负载、AI-RAN | 聚焦调度与剖析，不涉及内存或智能体 | 低 |
 
 ---
 
 ## 每篇论文内部创新点去重检查
 
-| 论文方向 | 创新点一/三/五 | 创新点二/四/六 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
-|:---|:---|:---|:---:|:---:|:---:|:---:|
-| 论文一 | 输出感知全局淘汰 | RL 后训练偏差校正 | 是 | 是（压缩策略 vs 压缩后校正） | 否 | 可保留 |
-| 论文二 | 屏障优先级联修复 | 运行时约束治理架构 | 是 | 是（记忆修复 vs 行为约束） | 否 | 可保留 |
-| 论文三 | 未来状态感知调度 | 分层智能体资源分配 | 是 | 是（工作流调度 vs 资源分配） | 否 | 可保留 |
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|:---:|:---|:---|:---:|:---:|:---:|:---:|
+| 论文一 | 端到端可学习压缩框架 | 输出感知全局淘汰策略 | 是 | 是（框架 vs. 策略） | 否 | 可保留 |
+| 论文二 | 成本感知路由 | 运行时约束治理 | 是 | 是（路由 vs. 治理） | 否 | 可保留 |
+| 论文三 | 配置无关剖析 | 动态负载调度 | 是 | 是（建模 vs. 调度） | 否 | 可保留 |
 
 ---
 
 ## 参考文献总表（仅池内文献）
 
-[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07247) EnvSimBench: A Benchmark for Evaluating and Improving LLM-Based Environment Simulation. arXiv:2605.07247, 2026.
-[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06754) ScarfBench: A Benchmark for Cross-Framework Application Migration in Enterprise Java. arXiv:2605.06754, 2026.
-[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06683) Toeplitz MLP Mixers are Low Complexity, Information-Rich Sequence Models. arXiv:2605.06683, 2026.
-[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06761) Weblica: Scalable and Reproducible Training Environments for Visual Web Agents. arXiv:2605.06761, 2026.
-[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07242) MEMOREPAIR: Barrier-First Cascade Repair in Agentic Memory. arXiv:2605.07242, 2026.
-[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07315) LaTER: Efficient Test-Time Reasoning via Latent Exploration and Explicit Verification. arXiv:2605.07315, 2026.
-[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06850) How to Compress KV Cache in RL Post-Training? Shadow Mask Distillation for Memory-Efficient Alignment. arXiv:2605.06850, 2026.
-[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234) Reformulating KV Cache Eviction Problem for Long-Context LLM Inference. arXiv:2605.07234, 2026.
-[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07353) Confidence-Aware Alignment Makes Reasoning LLMs More Reliable. arXiv:2605.07353, 2026.
-[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06755) Gradient Extrapolation-Based Policy Optimization. arXiv:2605.06755, 2026.
-[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07068) WiCER: Wiki-memory Compile, Evaluate, Refine Iterative Knowledge Compilation for LLM Wiki Systems. arXiv:2605.07068, 2026.
-[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07110) Securing Computer-Use Agents: A Unified Architecture-Lifecycle Framework for Deployment-Grounded Reliability. arXiv:2605.07110, 2026.
-[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763) Sparse Attention as a Range Searching Problem: Towards an Inference-Efficient Index for KV Cache. arXiv:2605.06763, 2026.
-[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07112) Switchcraft: AI Model Router for Agentic Tool Calling. arXiv:2605.07112, 2026.
-[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443) RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching. arXiv:2605.07443, 2026.
-[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07391) MERBIT: A GPU-Based SpMV Method for Iterative Workloads. arXiv:2605.07391, 2026.
-[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06675) RateQuant: Optimal Mixed-Precision KV Cache Quantization via Rate-Distortion Theory. arXiv:2605.06675, 2026.
-[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07313) When Stored Evidence Stops Being Usable: Scale-Conditioned Evaluation of Agent Memory. arXiv:2605.07313, 2026.
-[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07330) SparseRL-Sync: Lossless Weight Synchronization with ~100x Less Communication. arXiv:2605.07330, 2026.
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07909) Evaluating Design Conformance Through Trace Comparison. arXiv:2605.07909, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06755) Gradient Extrapolation-Based Policy Optimization. arXiv:2605.06755, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728) SARC: A Governance-by-Architecture Framework for Agentic AI Systems. arXiv:2605.07728, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06890) Beyond the Black Box: Interpretability of Agentic AI Tool Use. arXiv:2605.06890, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07111) Beyond LoRA vs. Full Fine-Tuning: Gradient-Guided Optimizer Routing for LLM Adaptation. arXiv:2605.07111, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07353) Confidence-Aware Alignment Makes Reasoning LLMs More Reliable. arXiv:2605.07353, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07985) Dooly: Configuration-Agnostic, Redundancy-Aware Profiling for LLM Inference Simulation. arXiv:2605.07985, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07247) EnvSimBench: A Benchmark for Evaluating and Improving LLM-Based Environment Simulation. arXiv:2605.07247, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07313) When Stored Evidence Stops Being Usable: Scale-Conditioned Evaluation of Agent Memory. arXiv:2605.07313, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06906) TraXion: Rethinking Pre-training Frameworks for Mobility and Beyond. arXiv:2605.06906, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07443) RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching. arXiv:2605.07443, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07180) Learning Agent Routing From Early Experience. arXiv:2605.07180, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06676) LKV: End-to-End Learning of Head-wise Budgets and Token Selection for LLM KV Cache Eviction. arXiv:2605.06676, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07391) MERBIT: A GPU-Based SpMV Method for Iterative Workloads. arXiv:2605.07391, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07112) Switchcraft: AI Model Router for Agentic Tool Calling. arXiv:2605.07112, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07234) Reformulating KV Cache Eviction Problem for Long-Context LLM Inference. arXiv:2605.07234, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06908) Same Signal, Opposite Meaning: Direction-Informed Adaptive Learning for LLM Agents. arXiv:2605.06908, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07068) WiCER: Wiki-memory Compile, Evaluate, Refine Iterative Knowledge Compilation for LLM Wiki Systems. arXiv:2605.07068, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06754) ScarfBench: A Benchmark for Cross-Framework Application Migration in Enterprise Java. arXiv:2605.06754, 2026.
 [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07243) SpecBlock: Block-Iterative Speculative Decoding with Dynamic Tree Drafting. arXiv:2605.07243, 2026.
-[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07599) Stencil Computations on Tenstorrent Wormhole. arXiv:2605.07599, 2026.
-[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07238) FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows. arXiv:2605.07238, 2026.
-[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07161) SREGym: A Live Benchmark for AI SRE Agents with High-Fidelity Failure Scenarios. arXiv:2605.07161, 2026.
-[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06908) Same Signal, Opposite Meaning: Direction-Informed Adaptive Learning for LLM Agents. arXiv:2605.06908, 2026.
-[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547) Deadline-Driven Hierarchical Agentic Resource Sharing for AI Services and RAN Functions in AI-RAN. arXiv:2605.07547, 2026.
-[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07985) Dooly: Configuration-Agnostic, Redundancy-Aware Profiling for LLM Inference Simulation. arXiv:2605.07985, 2026.
-[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06906) TraXion: Rethinking Pre-training Frameworks for Mobility and Beyond. arXiv:2605.06906, 2026.
-[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07728) SARC: A Governance-by-Architecture Framework for Agentic AI Systems. arXiv:2605.07728, 2026.
-[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07276) Signal Reshaping for GRPO in Weak-Feedback Agentic Code Repair. arXiv:2605.07276, 2026.
-[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914) TAPER: Regulating Branch Parallelism in LLM Serving. arXiv:2605.06914, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06914) Regulating Branch Parallelism in LLM Serving. arXiv:2605.06914, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07066) 2.5-D Decomposition for LLM-Based Spatial Construction. arXiv:2605.07066, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06761) Weblica: Scalable and Reproducible Training Environments for Visual Web Agents. arXiv:2605.06761, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07547) Deadline-Driven Hierarchical Agentic Resource Sharing for AI Services and RAN Functions in AI-RAN. arXiv:2605.07547, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07330) SparseRL-Sync: Lossless Weight Synchronization with ~100x Less Communication. arXiv:2605.07330, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.06763) Sparse Attention as a Range Searching Problem: Towards an Inference-Efficient Index for KV Cache. arXiv:2605.06763, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07507) TCMIIES: A Browser-Based LLM-Powered Intelligent Information Extraction System for Academic Literature. arXiv:2605.07507, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07599) Stencil Computations on Tenstorrent Wormhole. arXiv:2605.07599, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07737) Securing the Dark Matter: A Semantic-Enhanced Neuro-Symbolic Framework for Supply Chain Analysis of Opaque Industrial Software. arXiv:2605.07737, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-11&paperId=2605.07276) Signal Reshaping for GRPO in Weak-Feedback Agentic Code Repair. arXiv:2605.07276, 2026.
 
 ---
 
 ## 自检结果
 
-1. 是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：**是**
-2. 是否避免将一篇论文拆成六个创新点：**是**
-3. 是否避免生成六篇论文各一个创新点：**是**
-4. 每篇论文内部两个创新点是否属于同一论文主题：**是**
-5. 每篇论文内部两个创新点是否互补而不重复：**是**
-6. 三篇论文之间是否研究问题不同：**是**
-7. 三篇论文之间是否核心方法不同：**是**
-8. 三篇论文之间是否实验验证重点不同：**是**
-9. 每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：**是**
-10. 每个创新点是否至少引用 3 篇池内文献：**是**
-11. 是否说明每篇文献的支撑作用：**是**
-12. 是否避免“首次提出”“填补空白”等绝对化表述：**是**
-13. 是否建立三篇论文方向去重矩阵：**是**
-14. 是否建立每篇论文内部创新点去重检查表：**是**
+一、是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：**是**
+
+二、是否避免将一篇论文拆成六个创新点：**是**
+
+三、是否避免生成六篇论文各一个创新点：**是**
+
+四、每篇论文内部两个创新点是否属于同一论文主题：**是**
+
+五、每篇论文内部两个创新点是否互补而不重复：**是**
+
+六、三篇论文之间是否研究问题不同：**是**
+
+七、三篇论文之间是否核心方法不同：**是**
+
+八、三篇论文之间是否实验验证重点不同：**是**
+
+九、每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：**是**
+
+十、每个创新点是否至少引用 3 篇池内文献：**是**
+
+十一、是否说明每篇文献的支撑作用：**是**
+
+十二、是否避免“首次提出”“填补空白”等绝对化表述：**是**
+
+十三、是否建立三篇论文方向去重矩阵：**是**
+
+十四、是否建立每篇论文内部创新点去重检查表：**是**

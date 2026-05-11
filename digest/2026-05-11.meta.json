@@ -3,113 +3,113 @@
   "title": "每日硬凑师兄要求的创新点",
   "themes": [
     {
-      "title": "LLM 推理效率与 KV Cache 优化",
-      "blurb": "围绕 KV Cache 压缩、淘汰策略与混合精度量化，探索在长上下文推理与 RL 后训练场景下降低显存开销、提升推理吞吐的创新方法。"
+      "title": "LLM 推理效率与缓存管理",
+      "blurb": "围绕 KV Cache 压缩、淘汰策略与稀疏注意力索引，探索端到端可学习的缓存淘汰（LKV）、输出感知的全局淘汰框架（LaProx）以及将稀疏注意力建模为范围搜索问题的方法，以降低长上下文推理的内存与计算开销。"
     },
     {
-      "title": "智能体系统可靠性、记忆与运行时治理",
-      "blurb": "聚焦 LLM 智能体在工具调用、记忆级联更新与生产环境部署中的可靠性问题，提出基准测试、架构约束与信号重塑等系统性保障方案。"
+      "title": "智能体系统路由、治理与可靠性",
+      "blurb": "聚焦 LLM 智能体的工具调用路由（Switchcraft）、运行时约束治理架构（SARC）、推理可靠性对齐（CASPO）以及早期经验驱动的路由策略（BoundaryRouter），解决智能体部署中的成本、合规与可信问题。"
     },
     {
-      "title": "异构工作流调度与资源协同",
-      "blurb": "面向 LLM 多阶段工作流、AI-RAN 融合基础设施与生成式推荐等异构场景，研究未来状态感知调度、分层资源分配与跨框架迁移的优化方法。"
+      "title": "分布式系统资源调度与性能建模",
+      "blurb": "涵盖 LLM 推理服务中的分支并行度调节（TAPER）、AI-RAN 异构资源分层调度（HAF）、配置无关的性能剖析（Dooly）以及生成式推荐系统的分布式 KV 缓存加速（RcLLM），面向在线服务的动态资源优化。"
     }
   ],
   "pool": [
     {
       "idx": 1,
-      "id": "2605.07247",
-      "title": "EnvSimBench: A Benchmark for Evaluating and Improving LLM-Based Environment Simulation"
+      "id": "2605.07909",
+      "title": "Evaluating Design Conformance Through Trace Comparison"
     },
     {
       "idx": 2,
-      "id": "2605.06754",
-      "title": "ScarfBench: A Benchmark for Cross-Framework Application Migration in Enterprise Java"
-    },
-    {
-      "idx": 3,
-      "id": "2605.06683",
-      "title": "Toeplitz MLP Mixers are Low Complexity, Information-Rich Sequence Models"
-    },
-    {
-      "idx": 4,
-      "id": "2605.06761",
-      "title": "Weblica: Scalable and Reproducible Training Environments for Visual Web Agents"
-    },
-    {
-      "idx": 5,
-      "id": "2605.07242",
-      "title": "MEMOREPAIR: Barrier-First Cascade Repair in Agentic Memory"
-    },
-    {
-      "idx": 6,
-      "id": "2605.07315",
-      "title": "LaTER: Efficient Test-Time Reasoning via Latent Exploration and Explicit Verification"
-    },
-    {
-      "idx": 7,
-      "id": "2605.06850",
-      "title": "How to Compress KV Cache in RL Post-Training? Shadow Mask Distillation for Memory-Efficient Alignment"
-    },
-    {
-      "idx": 8,
-      "id": "2605.07234",
-      "title": "Reformulating KV Cache Eviction Problem for Long-Context LLM Inference"
-    },
-    {
-      "idx": 9,
-      "id": "2605.07353",
-      "title": "Confidence-Aware Alignment Makes Reasoning LLMs More Reliable"
-    },
-    {
-      "idx": 10,
       "id": "2605.06755",
       "title": "Gradient Extrapolation-Based Policy Optimization"
     },
     {
-      "idx": 11,
-      "id": "2605.07068",
-      "title": "WiCER: Wiki-memory Compile, Evaluate, Refine Iterative Knowledge Compilation for LLM Wiki Systems"
+      "idx": 3,
+      "id": "2605.07728",
+      "title": "SARC: A Governance-by-Architecture Framework for Agentic AI Systems"
     },
     {
-      "idx": 12,
-      "id": "2605.07110",
-      "title": "Securing Computer-Use Agents: A Unified Architecture-Lifecycle Framework for Deployment-Grounded Reliability"
+      "idx": 4,
+      "id": "2605.06890",
+      "title": "Beyond the Black Box: Interpretability of Agentic AI Tool Use"
     },
     {
-      "idx": 13,
-      "id": "2605.06763",
-      "title": "Sparse Attention as a Range Searching Problem: Towards an Inference-Efficient Index for KV Cache"
+      "idx": 5,
+      "id": "2605.07111",
+      "title": "Beyond LoRA vs. Full Fine-Tuning: Gradient-Guided Optimizer Routing for LLM Adaptation"
     },
     {
-      "idx": 14,
-      "id": "2605.07112",
-      "title": "Switchcraft: AI Model Router for Agentic Tool Calling"
+      "idx": 6,
+      "id": "2605.07353",
+      "title": "Confidence-Aware Alignment Makes Reasoning LLMs More Reliable"
     },
     {
-      "idx": 15,
-      "id": "2605.07443",
-      "title": "RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching"
+      "idx": 7,
+      "id": "2605.07985",
+      "title": "Dooly: Configuration-Agnostic, Redundancy-Aware Profiling for LLM Inference Simulation"
     },
     {
-      "idx": 16,
-      "id": "2605.07391",
-      "title": "MERBIT: A GPU-Based SpMV Method for Iterative Workloads"
+      "idx": 8,
+      "id": "2605.07247",
+      "title": "EnvSimBench: A Benchmark for Evaluating and Improving LLM-Based Environment Simulation"
     },
     {
-      "idx": 17,
-      "id": "2605.06675",
-      "title": "RateQuant: Optimal Mixed-Precision KV Cache Quantization via Rate-Distortion Theory"
-    },
-    {
-      "idx": 18,
+      "idx": 9,
       "id": "2605.07313",
       "title": "When Stored Evidence Stops Being Usable: Scale-Conditioned Evaluation of Agent Memory"
     },
     {
+      "idx": 10,
+      "id": "2605.06906",
+      "title": "TraXion: Rethinking Pre-training Frameworks for Mobility and Beyond"
+    },
+    {
+      "idx": 11,
+      "id": "2605.07443",
+      "title": "RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching"
+    },
+    {
+      "idx": 12,
+      "id": "2605.07180",
+      "title": "Learning Agent Routing From Early Experience"
+    },
+    {
+      "idx": 13,
+      "id": "2605.06676",
+      "title": "LKV: End-to-End Learning of Head-wise Budgets and Token Selection for LLM KV Cache Eviction"
+    },
+    {
+      "idx": 14,
+      "id": "2605.07391",
+      "title": "MERBIT: A GPU-Based SpMV Method for Iterative Workloads"
+    },
+    {
+      "idx": 15,
+      "id": "2605.07112",
+      "title": "Switchcraft: AI Model Router for Agentic Tool Calling"
+    },
+    {
+      "idx": 16,
+      "id": "2605.07234",
+      "title": "Reformulating KV Cache Eviction Problem for Long-Context LLM Inference"
+    },
+    {
+      "idx": 17,
+      "id": "2605.06908",
+      "title": "Same Signal, Opposite Meaning: Direction-Informed Adaptive Learning for LLM Agents"
+    },
+    {
+      "idx": 18,
+      "id": "2605.07068",
+      "title": "WiCER: Wiki-memory Compile, Evaluate, Refine Iterative Knowledge Compilation for LLM Wiki Systems"
+    },
+    {
       "idx": 19,
-      "id": "2605.07330",
-      "title": "SparseRL-Sync: Lossless Weight Synchronization with ~100x Less Communication"
+      "id": "2605.06754",
+      "title": "ScarfBench: A Benchmark for Cross-Framework Application Migration in Enterprise Java"
     },
     {
       "idx": 20,
@@ -118,53 +118,53 @@
     },
     {
       "idx": 21,
-      "id": "2605.07599",
-      "title": "Stencil Computations on Tenstorrent Wormhole"
+      "id": "2605.06914",
+      "title": "Regulating Branch Parallelism in LLM Serving"
     },
     {
       "idx": 22,
-      "id": "2605.07238",
-      "title": "FATE: Future-State-Aware Scheduling for Heterogeneous LLM Workflows"
+      "id": "2605.07066",
+      "title": "2.5-D Decomposition for LLM-Based Spatial Construction"
     },
     {
       "idx": 23,
-      "id": "2605.07161",
-      "title": "SREGym: A Live Benchmark for AI SRE Agents with High-Fidelity Failure Scenarios"
+      "id": "2605.06761",
+      "title": "Weblica: Scalable and Reproducible Training Environments for Visual Web Agents"
     },
     {
       "idx": 24,
-      "id": "2605.06908",
-      "title": "Same Signal, Opposite Meaning: Direction-Informed Adaptive Learning for LLM Agents"
-    },
-    {
-      "idx": 25,
       "id": "2605.07547",
       "title": "Deadline-Driven Hierarchical Agentic Resource Sharing for AI Services and RAN Functions in AI-RAN"
     },
     {
+      "idx": 25,
+      "id": "2605.07330",
+      "title": "SparseRL-Sync: Lossless Weight Synchronization with ~100x Less Communication"
+    },
+    {
       "idx": 26,
-      "id": "2605.07985",
-      "title": "Dooly: Configuration-Agnostic, Redundancy-Aware Profiling for LLM Inference Simulation"
+      "id": "2605.06763",
+      "title": "Sparse Attention as a Range Searching Problem: Towards an Inference-Efficient Index for KV Cache"
     },
     {
       "idx": 27,
-      "id": "2605.06906",
-      "title": "TraXion: Rethinking Pre-training Frameworks for Mobility and Beyond"
+      "id": "2605.07507",
+      "title": "TCMIIES: A Browser-Based LLM-Powered Intelligent Information Extraction System for Academic Literature"
     },
     {
       "idx": 28,
-      "id": "2605.07728",
-      "title": "SARC: A Governance-by-Architecture Framework for Agentic AI Systems"
+      "id": "2605.07599",
+      "title": "Stencil Computations on Tenstorrent Wormhole"
     },
     {
       "idx": 29,
-      "id": "2605.07276",
-      "title": "Signal Reshaping for GRPO in Weak-Feedback Agentic Code Repair"
+      "id": "2605.07737",
+      "title": "Securing the Dark Matter: A Semantic-Enhanced Neuro-Symbolic Framework for Supply Chain Analysis of Opaque Industrial Software"
     },
     {
       "idx": 30,
-      "id": "2605.06914",
-      "title": "Regulating Branch Parallelism in LLM Serving"
+      "id": "2605.07276",
+      "title": "Signal Reshaping for GRPO in Weak-Feedback Agentic Code Repair"
     }
   ]
 }
