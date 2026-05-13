@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-13",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理效率与资源优化",
+      "blurb": "围绕 MoE 推理加速、内存受限场景下的推测解码、扩散 Transformer 层卸载等方向，探索计算-通信重叠、预取调度与量化权衡的统一优化方法。"
+    },
+    {
+      "title": "LLM 智能体推理与上下文管理",
+      "blurb": "聚焦智能体在多步任务中的上下文压缩失效、并行流解阻塞、结构化元认知推理与在线动作适应，提升长程任务可靠性与计算效率。"
+    },
+    {
+      "title": "模型内部可观测性与训练-推理一致性",
+      "blurb": "从异步内部状态观测、训练-推理执行语义对齐、参数放置策略与语义共识联邦微调等角度，构建可诊断、可干预、可迁移的 LLM 开发基础设施。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.11005",
+      "title": "DisagMoE: Computation-Communication overlapped MoE Training via Disaggregated AF-Pipe Parallelism"
+    },
+    {
+      "idx": 2,
+      "id": "2605.12466",
+      "title": "Solve the Loop: Attractor Models for Language and Reasoning"
+    },
+    {
+      "idx": 3,
+      "id": "2605.11051",
+      "title": "On Problems of Implicit Context Compression for Software Engineering Agents"
+    },
+    {
+      "idx": 4,
+      "id": "2605.11212",
+      "title": "ReVision: Scaling Computer-Use Agents via Temporal Visual Redundancy Reduction"
+    },
+    {
+      "idx": 5,
+      "id": "2605.11857",
+      "title": "Beyond Parameter Aggregation: Semantic Consensus for Federated Fine-Tuning of LLMs"
+    },
+    {
+      "idx": 6,
+      "id": "2605.12460",
+      "title": "Multi-Stream LLMs: Unblocking Language Models with Parallel Streams of Thoughts, Inputs and Outputs"
+    },
+    {
+      "idx": 7,
+      "id": "2605.10959",
+      "title": "QuIDE: Mastering the Quantized Intelligence Trade-off via Active Optimization"
+    },
+    {
+      "idx": 8,
+      "id": "2605.11887",
+      "title": "Qwen-Scope: Turning Sparse Features into Development Tools for Large Language Models"
+    },
+    {
+      "idx": 9,
+      "id": "2605.11608",
+      "title": "PRISM: A Geometric Risk Bound that Decomposes Drift into Scale, Shape, and Head"
+    },
+    {
+      "idx": 10,
+      "id": "2605.11186",
+      "title": "CATS: Cascaded Adaptive Tree Speculation for Memory-Limited LLM Inference Acceleration"
+    },
+    {
+      "idx": 11,
+      "id": "2605.11636",
+      "title": "Seirênes: Adversarial Self-Play with Evolving Distractions for LLM Reasoning"
+    },
+    {
+      "idx": 12,
+      "id": "2605.11169",
+      "title": "OLIVIA: Online Learning via Inference-time Action Adaptation for Decision Making in LLM ReAct Agents"
+    },
+    {
+      "idx": 13,
+      "id": "2605.12178",
+      "title": "Do Enterprise Systems Need Learned World Models? The Importance of Context to Infer Dynamics"
+    },
+    {
+      "idx": 14,
+      "id": "2605.11416",
+      "title": "Freeze Deep, Train Shallow: Interpretable Layer Allocation for Continued Pre-Training"
+    },
+    {
+      "idx": 15,
+      "id": "2605.11735",
+      "title": "U-STS-LLM A Unified Spatio-Temporal Steered Large Language Model for Traffic Prediction and Imputation"
+    },
+    {
+      "idx": 16,
+      "id": "2605.11537",
+      "title": "Fast MoE Inference via Predictive Prefetching and Expert Replication"
+    },
+    {
+      "idx": 17,
+      "id": "2605.11633",
+      "title": "Can LLM Agents Respond to Disasters? Benchmarking Heterogeneous Geospatial Reasoning in Emergency Operations"
+    },
+    {
+      "idx": 18,
+      "id": "2605.11335",
+      "title": "ChunkFlow: Communication-Aware Chunked Prefetching for Layerwise Offloading in Distributed Diffusion Transformer Inference"
+    },
+    {
+      "idx": 19,
+      "id": "2605.12327",
+      "title": "Grid Games: The Power of Multiple Grids for Quantizing Large Language Models"
+    },
+    {
+      "idx": 20,
+      "id": "2605.11839",
+      "title": "Trade-offs in Decentralized Agentic AI Discovery Across the Compute Continuum"
+    },
+    {
+      "idx": 21,
+      "id": "2605.11855",
+      "title": "Improving the Performance and Learning Stability of Parallelizable RNNs Designed for Ultra-Low Power Applications"
+    },
+    {
+      "idx": 22,
+      "id": "2605.11388",
+      "title": "Deep Reasoning in General Purpose Agents via Structured Meta-Cognition"
+    },
+    {
+      "idx": 23,
+      "id": "2605.11093",
+      "title": "Enabling Performant and Flexible Model-Internal Observability for LLM Inference"
+    },
+    {
+      "idx": 24,
+      "id": "2605.11625",
+      "title": "Nice Fold or Hero Call: Learning Budget-Efficient Thinking for Adaptive Reasoning"
+    },
+    {
+      "idx": 25,
+      "id": "2605.11030",
+      "title": "An Executable Benchmarking Suite for Tool-Using Agents"
+    },
+    {
+      "idx": 26,
+      "id": "2605.11376",
+      "title": "LLM-X: A Scalable Negotiation-Oriented Exchange for Communication Among Personal LLM Agents"
+    },
+    {
+      "idx": 27,
+      "id": "2605.11744",
+      "title": "Training-Inference Consistent Segmented Execution for Long-Context LLMs"
+    },
+    {
+      "idx": 28,
+      "id": "2605.12207",
+      "title": "Not How Many, But Which: Parameter Placement in Low-Rank Adaptation"
+    },
+    {
+      "idx": 29,
+      "id": "2605.11408",
+      "title": "MaskTab: Scalable Masked Tabular Pretraining with Scaling Laws and Distillation for Industrial Classification"
+    },
+    {
+      "idx": 30,
+      "id": "2605.12213",
+      "title": "Goal-Oriented Reasoning for RAG-based Memory in Conversational Agentic LLM Systems"
+    }
+  ]
+}
