@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-14",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "面向大语言模型推理与部署的效率优化",
+      "blurb": "围绕 LLM 推理中的 KV 缓存压缩、流式推理加速、推测解码与异步 I/O 等方向，探讨如何降低推理延迟与资源开销，提升在线服务的吞吐与响应速度。"
+    },
+    {
+      "title": "多智能体系统与技能库的构建与维护",
+      "blurb": "聚焦多智能体协作中的技能复用、工具调用、工作流编译与权重空间通信，研究如何通过结构化技能库与编译优化提升智能体系统的可靠性与执行效率。"
+    },
+    {
+      "title": "分布式与异构计算系统的调度与优化",
+      "blurb": "关注异构硬件上的并行计算调度、图分析工作负载的能耗优化、分布式训练中的异步梯度更新校正，以及生成式推荐系统在特定加速器上的训练加速。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.13209",
+      "title": "Comparing the Performance of Heterogeneous Conjugate Gradient and Cholesky Solvers on Various Hardware Using SYCL"
+    },
+    {
+      "idx": 2,
+      "id": "2605.13716",
+      "title": "SkillOps: Managing LLM Agent Skill Libraries as Self-Maintaining Software Ecosystems"
+    },
+    {
+      "idx": 3,
+      "id": "2605.13536",
+      "title": "HLS-Seek: QoR-Aware Code Generation for High-Level Synthesis via Proxy Comparative Reward Reinforcement Learning"
+    },
+    {
+      "idx": 4,
+      "id": "2605.13784",
+      "title": "Attention Once Is All You Need: Efficient Streaming Inference with Stateful Transformers"
+    },
+    {
+      "idx": 5,
+      "id": "2605.13297",
+      "title": "PaMM: Periodic Motif Memory for Atomistic Models with an Explicit Local-Structure Interface"
+    },
+    {
+      "idx": 6,
+      "id": "2605.12714",
+      "title": "Layer-wise Representation Dynamics: An Empirical Investigation Across Embedders and Base LLMs"
+    },
+    {
+      "idx": 7,
+      "id": "2605.13319",
+      "title": "PipeSD: An Efficient Cloud-Edge Collaborative Pipeline Inference Framework with Speculative Decoding"
+    },
+    {
+      "idx": 8,
+      "id": "2605.13357",
+      "title": "AI Harness Engineering: A Runtime Substrate for Foundation-Model Software Agents"
+    },
+    {
+      "idx": 9,
+      "id": "2605.12843",
+      "title": "Bayesian Model Merging"
+    },
+    {
+      "idx": 10,
+      "id": "2605.13418",
+      "title": "DP-KFC: Data-Free Preconditioning for Privacy-Preserving Deep Learning"
+    },
+    {
+      "idx": 11,
+      "id": "2602.05242",
+      "title": "EGSS: Entropy-guided Stepwise Scaling for Reliable Software Engineering"
+    },
+    {
+      "idx": 12,
+      "id": "2605.13734",
+      "title": "KVServe: Service-Aware KV Cache Compression for Communication-Efficient Disaggregated LLM Serving"
+    },
+    {
+      "idx": 13,
+      "id": "2605.12943",
+      "title": "Reinforced Collaboration in Multi-Agent Flow Networks"
+    },
+    {
+      "idx": 14,
+      "id": "2605.13434",
+      "title": "Rescaled Asynchronous SGD: Optimal Distributed Optimization under Data and System Heterogeneity"
+    },
+    {
+      "idx": 15,
+      "id": "2605.13360",
+      "title": "Building Interactive Real-Time Agents with Asynchronous I/O and Speculative Tool Calling"
+    },
+    {
+      "idx": 16,
+      "id": "2605.13013",
+      "title": "JEDI: Joint Embedding Diffusion World Model for Online Model-Based Reinforcement Learning"
+    },
+    {
+      "idx": 17,
+      "id": "2605.13489",
+      "title": "Sustainable Graph Analytics Workload Scheduling with Evolutionary Reinforcement Learning in Edge-Cloud Systems"
+    },
+    {
+      "idx": 18,
+      "id": "2605.12808",
+      "title": "Neurodata Without Boredom: Benchmarking Agentic AI for Data Reuse"
+    },
+    {
+      "idx": 19,
+      "id": "2605.13839",
+      "title": "Good Agentic Friends Do Not Just Give Verbal Advice: They Can Update Your Weights"
+    },
+    {
+      "idx": 20,
+      "id": "2605.13391",
+      "title": "RS-Claw: Progressive Active Tool Exploration via Hierarchical Skill Trees for Remote Sensing Agents"
+    },
+    {
+      "idx": 21,
+      "id": "2605.13527",
+      "title": "MMSkills: Towards Multimodal Skills for General Visual Agents"
+    },
+    {
+      "idx": 22,
+      "id": "2605.13165",
+      "title": "STOP: Structured On-Policy Pruning of Long-Form Reasoning in Low-Data Regimes"
+    },
+    {
+      "idx": 23,
+      "id": "2605.12734",
+      "title": "Efficient and Portable Support for Overdecomposition on Distributed Memory GPGPU Platforms"
+    },
+    {
+      "idx": 24,
+      "id": "2605.13076",
+      "title": "TruncProof: A Guardrail for LLM-based JSON Generation under Token-Length Constraints"
+    },
+    {
+      "idx": 25,
+      "id": "2605.12944",
+      "title": "From Instance Selection to Fixed-Pool Data Recipe Search for Supervised Fine-Tuning"
+    },
+    {
+      "idx": 26,
+      "id": "2605.13647",
+      "title": "FlowCompile: An Optimizing Compiler for Structured LLM Workflows"
+    },
+    {
+      "idx": 27,
+      "id": "2605.12693",
+      "title": "IGT-OMD: Implicit Gradient Transport for Decision-Focused Learning under Delayed Feedback"
+    },
+    {
+      "idx": 28,
+      "id": "2605.13491",
+      "title": "SieveFL: Hierarchical Runtime-Aware Pruning for Scalable LLM-Based Fault Localization"
+    },
+    {
+      "idx": 29,
+      "id": "2605.13414",
+      "title": "TRIAGE: Evaluating Prospective Metacognitive Control in LLMs under Resource Constraints"
+    },
+    {
+      "idx": 30,
+      "id": "2605.13433",
+      "title": "TurboGR: An Accelerated Training System for Large-Scale Generative Recommendation"
+    }
+  ]
+}
