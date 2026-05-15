@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-15",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "MoE 推理效率与压缩：从路由策略到无损压缩",
+      "blurb": "围绕稀疏 MoE 架构的推理效率瓶颈，从专家路由冗余（BEAM 二值掩码）、无训练压缩中的高阶拓扑障碍（HodgeCover）到规模化超参数稳定性（μP 理论），探索不牺牲性能的加速与压缩路径。"
+    },
+    {
+      "title": "LLM 推理与部署的系统级鲁棒性：攻击、不匹配与资源核算",
+      "blurb": "聚焦推理阶段系统层面的脆弱性：投机解码的加速坍塌攻击（Mistletoe）、训练-推理数值不匹配导致的训练崩溃（TIM）、蒸馏管线的全链路能耗核算，以及函数调用异步化（AsyncFC）带来的延迟优化。"
+    },
+    {
+      "title": "Agent 工作流与工具编排：拓扑、路由与自适应执行",
+      "blurb": "面向 LLM Agent 的工程化挑战：从认知功能与执行拓扑的二维分类框架、功能等价工具提供商的延迟-质量路由（LQM-ContextRoute），到可并行化 Agent 工作流的分布式架构（APWA）与端到端强化学习自动多智能体系统（MetaAgent-X）。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.14200",
+      "title": "How to Scale Mixture-of-Experts: From muP to the Maximally Scale-Stable Parameterization"
+    },
+    {
+      "idx": 2,
+      "id": "2605.14005",
+      "title": "Mistletoe: Stealthy Acceleration-Collapse Attacks on Speculative Decoding"
+    },
+    {
+      "idx": 3,
+      "id": "2605.14220",
+      "title": "Diagnosing Training Inference Mismatch in LLM Reinforcement Learning"
+    },
+    {
+      "idx": 4,
+      "id": "2605.14773",
+      "title": "Beyond What to Select: A Plug-and-play Oscillatory Data-Volume Scheduling for Efficient Model Training"
+    },
+    {
+      "idx": 5,
+      "id": "2605.15081",
+      "title": "ML-Embed: Inclusive and Efficient Embeddings for a Multilingual World"
+    },
+    {
+      "idx": 6,
+      "id": "2605.14362",
+      "title": "Correctness-Aware Repository Filtering Under Maximum Effective Context Window Constraints"
+    },
+    {
+      "idx": 7,
+      "id": "2605.15184",
+      "title": "Is Grep All You Need? How Agent Harnesses Reshape Agentic Search"
+    },
+    {
+      "idx": 8,
+      "id": "2605.14062",
+      "title": "Know When To Fold 'Em: Token-Efficient LLM Synthetic Data Generation via Multi-Stage In-Flight Rejection"
+    },
+    {
+      "idx": 9,
+      "id": "2605.14672",
+      "title": "AQKA: Active Quantum Kernel Acquisition Under a Shot Budget"
+    },
+    {
+      "idx": 10,
+      "id": "2605.15132",
+      "title": "APWA: A Distributed Architecture for Parallelizable Agentic Workflows"
+    },
+    {
+      "idx": 11,
+      "id": "2605.13942",
+      "title": "EMA: Efficient Model Adaptation for Learning-based Systems"
+    },
+    {
+      "idx": 12,
+      "id": "2605.15100",
+      "title": "Dual-Dimensional Consistency: Balancing Budget and Quality in Adaptive Inference-Time Scaling"
+    },
+    {
+      "idx": 13,
+      "id": "2605.13986",
+      "title": "TabPFN-3: Technical Report"
+    },
+    {
+      "idx": 14,
+      "id": "2605.14445",
+      "title": "FrontierSmith: Synthesizing Open-Ended Coding Problems at Scale"
+    },
+    {
+      "idx": 15,
+      "id": "2605.13850",
+      "title": "A Two-Dimensional Framework for AI Agent Design Patterns: Cognitive Function and Execution Topology"
+    },
+    {
+      "idx": 16,
+      "id": "2605.15177",
+      "title": "OpenDeepThink: Parallel Reasoning via Bradley--Terry Aggregation"
+    },
+    {
+      "idx": 17,
+      "id": "2605.14241",
+      "title": "Latency-Quality Routing for Functionally Equivalent Tools in LLM Agents"
+    },
+    {
+      "idx": 18,
+      "id": "2605.14040",
+      "title": "Physics-R1: An Audited Olympiad Corpus and Recipe for Visual Physics Reasoning"
+    },
+    {
+      "idx": 19,
+      "id": "2605.14202",
+      "title": "LLM-Based Robustness Testing of Microservice Applications: An Empirical Study"
+    },
+    {
+      "idx": 20,
+      "id": "2605.15138",
+      "title": "Forgetting That Sticks: Quantization-Permanent Unlearning via Circuit Attribution"
+    },
+    {
+      "idx": 21,
+      "id": "2605.14802",
+      "title": "A Heterogeneous Temporal Memory Governance Framework for Long-Term LLM Persona Consistency"
+    },
+    {
+      "idx": 22,
+      "id": "2605.13997",
+      "title": "HodgeCover: Higher-Order Topological Coverage Drives Compression of Sparse Mixture-of-Experts"
+    },
+    {
+      "idx": 23,
+      "id": "2605.14665",
+      "title": "Falkor-IRAC: Graph-Constrained Generation for Verified Legal Reasoning in Indian Judicial AI"
+    },
+    {
+      "idx": 24,
+      "id": "2605.15079",
+      "title": "Croissant Baker: Metadata Generation for Discoverable, Governable, and Reusable ML Datasets"
+    },
+    {
+      "idx": 25,
+      "id": "2605.13981",
+      "title": "Towards Resource-Efficient LLMs: End-to-End Energy Accounting of Distillation Pipelines"
+    },
+    {
+      "idx": 26,
+      "id": "2605.14212",
+      "title": "MetaAgent-X : Breaking the Ceiling of Automatic Multi-Agent Systems via End-to-End Reinforcement Learning"
+    },
+    {
+      "idx": 27,
+      "id": "2605.14438",
+      "title": "BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE"
+    },
+    {
+      "idx": 28,
+      "id": "2605.14292",
+      "title": "Minimal-Intervention KV Retention: A Design-Space Study and a Diversity-Penalty Survivor"
+    },
+    {
+      "idx": 29,
+      "id": "2605.15077",
+      "title": "Concurrency without Model Changes: Future-based Asynchronous Function Calling for LLMs"
+    },
+    {
+      "idx": 30,
+      "id": "2605.14624",
+      "title": "An Amortized Efficiency Threshold for Comparing Neural and Heuristic Solvers in Combinatorial Optimization"
+    }
+  ]
+}
