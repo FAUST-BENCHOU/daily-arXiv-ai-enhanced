@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-17",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM Agent 系统鲁棒性与可靠性评估",
+      "blurb": "围绕 LLM Agent 在工具调用、编排开销、训练-推理不匹配等场景下的系统性失效模式，构建可诊断、可复现的评估方法与基准。"
+    },
+    {
+      "title": "大模型持续学习与记忆架构的自适应演化",
+      "blurb": "针对 LLM 在持续预训练、长期对话、多会话交互中的灾难性遗忘与人格漂移问题，设计无回放、自演化的记忆与参数更新架构。"
+    },
+    {
+      "title": "高效推理与模型压缩的协同优化",
+      "blurb": "面向 MoE 路由、量化部署、多适配器服务等场景，在保持模型能力的前提下，从系统层与算法层协同降低推理延迟与存储开销。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.14415",
+      "title": "SWE-Chain: Benchmarking Coding Agents on Chained Release-Level Package Upgrades"
+    },
+    {
+      "idx": 2,
+      "id": "2605.14841",
+      "title": "GPart: End-to-End Isometric Fine-Tuning via Global Parameter Partitioning"
+    },
+    {
+      "idx": 3,
+      "id": "2605.14588",
+      "title": "Silent Collapse in Recursive Learning Systems"
+    },
+    {
+      "idx": 4,
+      "id": "2605.15138",
+      "title": "Forgetting That Sticks: Quantization-Permanent Unlearning via Circuit Attribution"
+    },
+    {
+      "idx": 5,
+      "id": "2605.14220",
+      "title": "Diagnosing Training Inference Mismatch in LLM Reinforcement Learning"
+    },
+    {
+      "idx": 6,
+      "id": "2605.15041",
+      "title": "Case-Based Calibration of Adaptive Reasoning and Execution for LLM Tool Use"
+    },
+    {
+      "idx": 7,
+      "id": "2605.14929",
+      "title": "A Hardware-Aware, Per-Layer Methodology for Post-Training Quantization of Large Language Models"
+    },
+    {
+      "idx": 8,
+      "id": "2605.14438",
+      "title": "BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE"
+    },
+    {
+      "idx": 9,
+      "id": "2605.14217",
+      "title": "PreFT: Prefill-only finetuning for efficient inference"
+    },
+    {
+      "idx": 10,
+      "id": "2605.14202",
+      "title": "LLM-Based Robustness Testing of Microservice Applications: An Empirical Study"
+    },
+    {
+      "idx": 11,
+      "id": "2605.13986",
+      "title": "TabPFN-3: Technical Report"
+    },
+    {
+      "idx": 12,
+      "id": "2605.14389",
+      "title": "Nexus : An Agentic Framework for Time Series Forecasting"
+    },
+    {
+      "idx": 13,
+      "id": "2605.14205",
+      "title": "SimPersona: Learning Discrete Buyer Personas from Raw Clickstreams for Grounded E-Commerce Agents"
+    },
+    {
+      "idx": 14,
+      "id": "2605.14612",
+      "title": "In-IDE Toolkit for Developers of AI-Based Features"
+    },
+    {
+      "idx": 15,
+      "id": "2605.15053",
+      "title": "TFGN: Task-Free, Replay-Free Continual Pre-Training Without Catastrophic Forgetting at LLM Scale"
+    },
+    {
+      "idx": 16,
+      "id": "2605.14102",
+      "title": "ChromaFlow: A Negative Ablation Study of Orchestration Overhead in Tool-Augmented Agent Evaluation"
+    },
+    {
+      "idx": 17,
+      "id": "2605.13941",
+      "title": "EvolveMem:Self-Evolving Memory Architecture via AutoResearch for LLM Agents"
+    },
+    {
+      "idx": 18,
+      "id": "2605.15184",
+      "title": "Is Grep All You Need? How Agent Harnesses Reshape Agentic Search"
+    },
+    {
+      "idx": 19,
+      "id": "2605.15079",
+      "title": "Croissant Baker: Metadata Generation for Discoverable, Governable, and Reusable ML Datasets"
+    },
+    {
+      "idx": 20,
+      "id": "2605.14163",
+      "title": "Agentic Systems as Boosting Weak Reasoning Models"
+    },
+    {
+      "idx": 21,
+      "id": "2605.14241",
+      "title": "Latency-Quality Routing for Functionally Equivalent Tools in LLM Agents"
+    },
+    {
+      "idx": 22,
+      "id": "2605.14445",
+      "title": "FrontierSmith: Synthesizing Open-Ended Coding Problems at Scale"
+    },
+    {
+      "idx": 23,
+      "id": "2605.15113",
+      "title": "Learning from Language Feedback via Variational Policy Distillation"
+    },
+    {
+      "idx": 24,
+      "id": "2605.14141",
+      "title": "Distribution-Aware Algorithm Design with LLM Agents"
+    },
+    {
+      "idx": 25,
+      "id": "2605.14200",
+      "title": "How to Scale Mixture-of-Experts: From muP to the Maximally Scale-Stable Parameterization"
+    },
+    {
+      "idx": 26,
+      "id": "2605.14458",
+      "title": "OmniDrop: Layer-wise Token Pruning for Omni-modal LLMs via Query-Guidance"
+    },
+    {
+      "idx": 27,
+      "id": "2605.14802",
+      "title": "A Heterogeneous Temporal Memory Governance Framework for Long-Term LLM Persona Consistency"
+    },
+    {
+      "idx": 28,
+      "id": "2605.15081",
+      "title": "ML-Embed: Inclusive and Efficient Embeddings for a Multilingual World"
+    },
+    {
+      "idx": 29,
+      "id": "2605.13936",
+      "title": "Towards the Next Frontier of LLMs, Training on Private Data: A Cross-Domain Benchmark for Federated Fine-Tuning"
+    },
+    {
+      "idx": 30,
+      "id": "2605.15132",
+      "title": "APWA: A Distributed Architecture for Parallelizable Agentic Workflows"
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+# 每日硬凑师兄要求的创新点 2026-05-17
+
+## 今日三个主题（结构化）
+1. **LLM Agent 系统鲁棒性与可靠性评估** — 围绕 LLM Agent 在工具调用、编排开销、训练-推理不匹配等场景下的系统性失效模式，构建可诊断、可复现的评估方法与基准。
+2. **大模型持续学习与记忆架构的自适应演化** — 针对 LLM 在持续预训练、长期对话、多会话交互中的灾难性遗忘与人格漂移问题，设计无回放、自演化的记忆与参数更新架构。
+3. **高效推理与模型压缩的协同优化** — 面向 MoE 路由、量化部署、多适配器服务等场景，在保持模型能力的前提下，从系统层与算法层协同降低推理延迟与存储开销。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|:---:|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14415) | SWE-Chain: Benchmarking Coding Agents on Chained Release-Level Package Upgrades | 2605.14415 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14841) | GPart: End-to-End Isometric Fine-Tuning via Global Parameter Partitioning | 2605.14841 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14588) | Silent Collapse in Recursive Learning Systems | 2605.14588 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15138) | Forgetting That Sticks: Quantization-Permanent Unlearning via Circuit Attribution | 2605.15138 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14220) | Diagnosing Training Inference Mismatch in LLM Reinforcement Learning | 2605.14220 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15041) | Case-Based Calibration of Adaptive Reasoning and Execution for LLM Tool Use | 2605.15041 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14929) | A Hardware-Aware, Per-Layer Methodology for Post-Training Quantization of Large Language Models | 2605.14929 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14438) | BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE | 2605.14438 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14217) | PreFT: Prefill-only finetuning for efficient inference | 2605.14217 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14202) | LLM-Based Robustness Testing of Microservice Applications: An Empirical Study | 2605.14202 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.13986) | TabPFN-3: Technical Report | 2605.13986 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14389) | Nexus : An Agentic Framework for Time Series Forecasting | 2605.14389 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14205) | SimPersona: Learning Discrete Buyer Personas from Raw Clickstreams for Grounded E-Commerce Agents | 2605.14205 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14612) | In-IDE Toolkit for Developers of AI-Based Features | 2605.14612 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15053) | TFGN: Task-Free, Replay-Free Continual Pre-Training Without Catastrophic Forgetting at LLM Scale | 2605.15053 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14102) | ChromaFlow: A Negative Ablation Study of Orchestration Overhead in Tool-Augmented Agent Evaluation | 2605.14102 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.13941) | EvolveMem:Self-Evolving Memory Architecture via AutoResearch for LLM Agents | 2605.13941 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15184) | Is Grep All You Need? How Agent Harnesses Reshape Agentic Search | 2605.15184 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15079) | Croissant Baker: Metadata Generation for Discoverable, Governable, and Reusable ML Datasets | 2605.15079 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14163) | Agentic Systems as Boosting Weak Reasoning Models | 2605.14163 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14241) | Latency-Quality Routing for Functionally Equivalent Tools in LLM Agents | 2605.14241 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14445) | FrontierSmith: Synthesizing Open-Ended Coding Problems at Scale | 2605.14445 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15113) | Learning from Language Feedback via Variational Policy Distillation | 2605.15113 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14141) | Distribution-Aware Algorithm Design with LLM Agents | 2605.14141 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14200) | How to Scale Mixture-of-Experts: From muP to the Maximally Scale-Stable Parameterization | 2605.14200 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14458) | OmniDrop: Layer-wise Token Pruning for Omni-modal LLMs via Query-Guidance | 2605.14458 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14802) | A Heterogeneous Temporal Memory Governance Framework for Long-Term LLM Persona Consistency | 2605.14802 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15081) | ML-Embed: Inclusive and Efficient Embeddings for a Multilingual World | 2605.15081 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.13936) | Towards the Next Frontier of LLMs, Training on Private Data: A Cross-Domain Benchmark for Federated Fine-Tuning | 2605.13936 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15132) | APWA: A Distributed Architecture for Parallelizable Agentic Workflows | 2605.15132 |
+
+---
+
+## 一、三篇论文方向与六个创新点
+
+### 论文方向一：LLM Agent 系统鲁棒性与可靠性评估
+
+**拟定论文题目：** 面向工具编排与推理-执行不匹配的 LLM Agent 系统鲁棒性评估与诊断方法
+
+**论文核心问题：** 如何系统性地识别、量化和诊断 LLM Agent 在工具调用、编排开销、训练-推理不匹配等场景下的系统性失效模式，并构建可诊断、可复现的评估方法与基准。
+
+#### 创新点一：编排开销与工具调用失效的系统性诊断创新
+
+大多数现有方法将 LLM Agent 的最终任务准确率作为主要评估指标，忽略了工具编排过程中引入的操作性失效模式，如超时、回溯、工具调用失败等，导致评估结果无法反映系统瓶颈 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14415)[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14202)[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14102)。少数现有方法开始关注工具调用过程中的结构有效性，但通常将编排开销视为次要因素，缺乏对编排开销与最终性能之间因果关系的系统性诊断 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15041)[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15184)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14241)。为此，本文提出一种基于编排开销分解的诊断评估框架，将 Agent 执行轨迹中的工具调用失败、回溯次数、超时事件等编排开销指标与最终任务准确率进行因果关联分析，以量化编排开销对系统鲁棒性的影响。
+
+- **创新类型：** 评估方法创新 + 诊断框架创新
+- **创新性判断：** 文献池中 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14415) 关注链式升级任务评估但未诊断编排开销，[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14202) 关注微服务鲁棒性测试但未聚焦 Agent 编排，[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14102) 通过负消融实验揭示编排开销但未提出系统性诊断方法。本文创新点在于将编排开销从噪声提升为可诊断的系统性指标。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14415) | SWE-Chain | 评估编码 Agent 在链式包升级任务中的表现 | 支撑大多数方法仅关注最终准确率 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14202) | LLM-Based Robustness Testing of Microservice Applications | 使用 LLM 生成测试用例进行微服务鲁棒性测试 | 支撑大多数方法关注功能性而非编排开销 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14102) | ChromaFlow | 通过负消融实验揭示编排开销对 Agent 性能的影响 | 支撑少数方法开始关注编排开销 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15184) | Is Grep All You Need? | 比较不同检索策略在 Agent 编排中的表现 | 支撑少数方法关注工具调用方式的影响 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15041) | CAST | 提出基于案例的工具使用推理框架 | 支撑少数方法关注工具调用的结构有效性 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14241) | LQM-ContextRoute | 提出工具提供者的延迟-质量路由方法 | 支撑少数方法关注工具调用的运行时因素 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15132) | APWA | 提出分布式 Agent 工作流架构 | 支撑现有不足：缺乏编排开销的系统性诊断 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14163) | Agentic Systems as Boosting Weak Reasoning Models | 研究推理模型委员会的性能提升机制 | 支撑现有不足：编排开销的诊断方法缺失 |
+
+#### 创新点二：训练-推理不匹配（TIM）的鲁棒性影响评估创新
+
+大多数现有方法在评估 LLM Agent 系统时假设训练和推理阶段的模型行为一致，忽略了由于实现差异导致的训练-推理不匹配（TIM）对系统鲁棒性的影响 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14220)[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14438)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14217)。少数现有方法开始关注 TIM 问题，但通常将其视为数值噪声而非系统性扰动，缺乏对 TIM 在 Agent 系统中传播和放大的评估方法 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14588)[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15138)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15113)。为此，本文提出一种 TIM 敏感性评估方法，通过构造零不匹配诊断环境，量化 TIM 在 Agent 工具调用链中的传播效应，并建立 TIM 敏感度指标以评估 Agent 系统在不同实现差异下的鲁棒性。
+
+- **创新类型：** 评估指标创新 + 鲁棒性分析方法创新
+- **创新性判断：** 文献池中 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14220) 首次系统研究 TIM 问题但聚焦于 RL 训练稳定性，[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14438) 关注 MoE 路由的训练-推理不匹配，[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14217) 关注预填充-解码阶段的效率不匹配。本文创新点在于将 TIM 评估引入 Agent 系统鲁棒性评估领域。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14220) | Diagnosing Training Inference Mismatch in LLM RL | 研究 LLM RL 系统中的训练-推理不匹配问题 | 支撑大多数方法忽略 TIM 影响 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14438) | BEAM | 提出 MoE 动态路由方法，关注训练-推理不匹配 | 支撑少数方法开始关注 TIM |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14217) | PreFT | 提出预填充阶段微调方法，关注效率不匹配 | 支撑少数方法关注阶段不匹配 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14588) | Silent Collapse | 识别递归学习系统中的静默崩溃现象 | 支撑现有不足：TIM 可能引发系统性退化 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15138) | Forgetting That Sticks | 研究量化对遗忘效果的影响 | 支撑现有不足：实现差异可能导致不可逆影响 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15113) | Variational Policy Distillation | 提出从语言反馈中学习的变分策略蒸馏方法 | 支撑少数方法关注训练-推理差异 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14841) | GPart | 提出等距微调方法 | 支撑现有不足：参数映射的等距性影响 TIM |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15053) | TFGN | 提出无回放持续预训练方法 | 支撑现有不足：持续学习中的 TIM 评估缺失 |
+
+**该论文两个创新点之间的关系：**
+
+创新点一解决“如何诊断 Agent 编排过程中的系统性失效”，创新点二解决“如何评估训练-推理不匹配对 Agent 鲁棒性的影响”。二者属于同一篇论文主题（LLM Agent 系统鲁棒性评估），但分别对应编排开销诊断和 TIM 敏感性评估两个不同技术层面，不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 基于最终准确率的传统评估方法、基于消融实验的评估方法 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14102)、基于工具调用成功率的评估方法 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15041)
+- **实验数据或场景：** SWE-bench [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14415)、GAIA [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14102)、BFCLv2 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15041)
+- **评价指标：** 编排开销分解指标（回溯率、超时率、工具调用失败率）、TIM 敏感度指标、任务准确率
+- **消融实验：** 分别移除编排开销诊断模块和 TIM 评估模块，验证其对整体评估效果的贡献
+
+---
+
+### 论文方向二：大模型持续学习与记忆架构的自适应演化
+
+**拟定论文题目：** 面向长期交互场景的 LLM 记忆架构自演化与遗忘诊断方法
+
+**论文核心问题：** 针对 LLM 在持续预训练、长期对话、多会话交互中的灾难性遗忘与人格漂移问题，设计无回放、自演化的记忆与参数更新架构，并建立可诊断的遗忘评估方法。
+
+#### 创新点三：无回放持续预训练中的遗忘诊断与预警创新
+
+大多数现有方法依赖回放缓冲区、任务标识符或正则化惩罚来缓解持续预训练中的灾难性遗忘，这些方法在 LLM 规模下扩展性差，且无法在遗忘发生前提供预警信号 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14588)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15053)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.13936)。少数现有方法开始探索无回放持续学习方法，但通常缺乏对遗忘过程的早期诊断能力，无法区分可逆的短期遗忘与不可逆的长期退化 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14841)[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15138)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.13941)。为此，本文提出一种基于轨迹级前兆信号的遗忘诊断方法，通过监测锚点熵收缩、表示漂移冻结和尾部覆盖侵蚀三个前兆指标，在标准验证指标退化之前发出遗忘预警，以支持及时干预。
+
+- **创新类型：** 诊断方法创新 + 预警机制创新
+- **创新性判断：** 文献池中 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14588) 首次提出静默崩溃概念并识别前兆信号，[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15053) 提出无回放持续预训练方法但缺乏诊断机制，[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15138) 研究量化对遗忘的影响但未涉及预警。本文创新点在于将静默崩溃的前兆信号应用于持续预训练的遗忘诊断。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14588) | Silent Collapse | 识别递归学习中的静默崩溃现象及前兆信号 | 支撑大多数方法缺乏早期诊断能力 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15053) | TFGN | 提出无回放持续预训练架构 | 支撑少数方法探索无回放方法 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.13936) | Federated Fine-Tuning Benchmark | 研究联邦微调中的非 IID 数据挑战 | 支撑大多数方法依赖回放或正则化 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14841) | GPart | 提出等距微调方法 | 支撑少数方法关注参数映射的等距性 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15138) | Forgetting That Sticks | 研究量化对遗忘效果的永久性影响 | 支撑现有不足：遗忘可能不可逆 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.13941) | EvolveMem | 提出自演化记忆架构 | 支撑少数方法关注记忆架构演化 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14802) | ARPM | 提出异构时间记忆治理框架 | 支撑现有不足：缺乏遗忘预警机制 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15113) | Variational Policy Distillation | 提出从反馈中学习的变分方法 | 支撑现有不足：诊断信号的设计方法 |
+
+#### 创新点四：自演化记忆架构的闭环优化创新
+
+大多数现有记忆系统将检索基础设施视为固定不变的，仅更新存储内容而保持评分函数、融合策略和答案生成策略在部署后冻结，导致记忆系统无法适应交互模式的变化 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.13941)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14802)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14205)。少数现有方法开始探索记忆架构的自适应调整，但通常依赖人工配置或离线调优，缺乏自动化的闭环演化机制 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14588)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15053)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15113)。为此，本文提出一种自演化记忆架构，将完整的检索配置暴露为结构化动作空间，由 LLM 驱动的诊断模块在每轮演化中读取失败日志、识别根因并提出配置调整，同时配备自动回退和停滞探索保护机制，以实现记忆系统的持续自适应优化。
+
+- **创新类型：** 系统架构创新 + 闭环优化机制创新
+- **创新性判断：** 文献池中 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.13941) 提出自演化记忆架构但聚焦于检索配置演化，[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14802) 提出时间记忆治理框架但缺乏自演化能力，[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14205) 提出离散买家画像学习但未涉及记忆架构演化。本文创新点在于将记忆架构的自演化从检索配置扩展到完整的闭环优化。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.13941) | EvolveMem | 提出自演化记忆架构 | 支撑少数方法探索记忆架构演化 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14802) | ARPM | 提出异构时间记忆治理框架 | 支撑大多数方法固定检索基础设施 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14205) | SimPersona | 学习离散买家画像用于 Agent 个性化 | 支撑大多数方法依赖固定配置 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14588) | Silent Collapse | 识别递归学习中的退化现象 | 支撑现有不足：固定配置可能导致退化 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15053) | TFGN | 提出无回放持续预训练 | 支撑少数方法关注架构适应性 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15113) | Variational Policy Distillation | 提出从反馈中学习的变分方法 | 支撑现有不足：闭环优化机制的设计 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14841) | GPart | 提出等距微调方法 | 支撑现有不足：参数映射的演化需求 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.13936) | Federated Fine-Tuning Benchmark | 研究联邦微调中的非 IID 挑战 | 支撑现有不足：跨域适应中的记忆演化 |
+
+**该论文两个创新点之间的关系：**
+
+创新点三解决“如何诊断和预警持续学习中的遗忘”，创新点四解决“如何实现记忆架构的自适应演化”。二者属于同一篇论文主题（大模型持续学习与记忆架构），但分别对应遗忘诊断和架构演化两个不同技术层面，逻辑上形成递进关系：诊断提供演化依据，演化实现诊断后的自适应调整。
+
+**建议实验设计：**
+
+- **对比方法：** 基于回放的持续学习方法、基于正则化的方法 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15053)、固定配置的记忆系统 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14802)
+- **实验数据或场景：** 多领域文本数据（Prose, Python, Math, Biomedical）[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15053)、长期对话场景 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14802)
+- **评价指标：** 遗忘前兆信号检测准确率、标准验证指标（困惑度、准确率）、记忆检索成功率、演化收敛速度
+- **消融实验：** 分别移除遗忘诊断模块和自演化模块，验证其对整体性能的贡献
+
+---
+
+### 论文方向三：高效推理与模型压缩的协同优化
+
+**拟定论文题目：** 面向 MoE 路由与量化部署的协同推理优化方法
+
+**论文核心问题：** 针对 MoE 路由冗余、量化部署中的遗忘逆转、多适配器服务效率低下等问题，从系统层与算法层协同降低推理延迟与存储开销，同时保持模型能力。
+
+#### 创新点五：动态专家路由与量化感知的协同压缩创新
+
+大多数现有方法将 MoE 路由优化和模型量化视为独立问题，分别优化专家选择策略和权重压缩方案，忽略了二者之间的交互影响 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14929)[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14438)[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14200)。少数现有方法开始探索路由与量化的联合优化，但通常采用后处理方式，在量化后重新调整路由策略，导致优化效果受限 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15138)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14217)[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14458)。为此，本文提出一种路由-量化协同优化框架，在训练或微调阶段同时学习动态专家掩码和量化感知的路由策略，通过端到端的联合优化实现高稀疏度下的模型能力保持。
+
+- **创新类型：** 方法设计创新 + 协同优化机制创新
+- **创新性判断：** 文献池中 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14438) 提出 BEAM 方法实现动态专家路由但未考虑量化，[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14929) 提出硬件感知的逐层量化方法但未涉及路由优化，[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14200) 研究 MoE 的缩放参数化但未涉及协同优化。本文创新点在于将路由优化和量化压缩从独立优化提升为协同优化。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14438) | BEAM | 提出动态专家路由方法 | 支撑大多数方法独立优化路由 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14929) | Hardware-Aware Quantization | 提出逐层量化方法 | 支撑大多数方法独立优化量化 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14200) | How to Scale MoE | 研究 MoE 缩放参数化 | 支撑大多数方法关注缩放而非协同 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15138) | Forgetting That Sticks | 研究量化对遗忘的逆转效应 | 支撑少数方法关注量化与遗忘的交互 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14217) | PreFT | 提出预填充阶段微调方法 | 支撑少数方法关注阶段效率优化 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14458) | OmniDrop | 提出逐层 token 剪枝方法 | 支撑少数方法关注层级别压缩 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14841) | GPart | 提出等距微调方法 | 支撑现有不足：参数映射的等距性影响协同优化 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15081) | ML-Embed | 提出 3D Matryoshka 学习框架 | 支撑现有不足：多维度效率优化的设计方法 |
+
+#### 创新点六：多适配器高效服务中的预填充-解码协同优化创新
+
+大多数现有方法在服务多用户适配器时，将预填充和解码阶段视为统一的推理过程，忽略了二者在吞吐量和延迟特性上的根本差异，导致多适配器场景下的服务效率低下 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14217)[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14841)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15081)。少数现有方法开始关注预填充-解码阶段的效率不匹配，但通常仅优化其中一个阶段，缺乏对两阶段协同优化的系统性方法 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14220)[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14438)[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14458)。为此，本文提出一种预填充-解码协同优化框架，在预填充阶段应用适配器并丢弃，在解码阶段采用轻量级缓存策略，同时通过阶段感知的调度策略平衡两阶段的资源分配，以提高多适配器服务的整体吞吐量。
+
+- **创新类型：** 系统框架创新 + 阶段协同优化机制创新
+- **创新性判断：** 文献池中 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14217) 提出 PreFT 方法在预填充阶段应用适配器但未涉及解码阶段优化，[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14220) 研究训练-推理不匹配但未聚焦多适配器场景，[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14841) 提出等距微调方法但未涉及服务效率。本文创新点在于将预填充-解码的协同优化从单阶段优化提升为两阶段联合优化。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14217) | PreFT | 提出预填充阶段微调方法 | 支撑少数方法关注预填充-解码差异 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14841) | GPart | 提出等距微调方法 | 支撑大多数方法忽略阶段差异 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15081) | ML-Embed | 提出多维度效率优化框架 | 支撑大多数方法关注参数效率而非服务效率 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14220) | Diagnosing TIM | 研究训练-推理不匹配 | 支撑现有不足：阶段不匹配影响服务效率 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14438) | BEAM | 提出动态专家路由方法 | 支撑少数方法关注推理效率优化 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14458) | OmniDrop | 提出逐层 token 剪枝方法 | 支撑少数方法关注层级别效率优化 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14929) | Hardware-Aware Quantization | 提出硬件感知的量化方法 | 支撑现有不足：硬件感知的协同优化需求 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14200) | How to Scale MoE | 研究 MoE 缩放参数化 | 支撑现有不足：缩放中的阶段效率问题 |
+
+**该论文两个创新点之间的关系：**
+
+创新点五解决“如何协同优化 MoE 路由和模型量化”，创新点六解决“如何协同优化多适配器服务中的预填充和解码阶段”。二者属于同一篇论文主题（高效推理与模型压缩的协同优化），但分别对应路由-量化协同和预填充-解码协同两个不同技术层面，不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 独立路由优化方法 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14438)、独立量化方法 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14929)、独立预填充优化方法 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14217)
+- **实验数据或场景：** 多适配器服务场景 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14217)、MoE 模型推理场景 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14438)、量化部署场景 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14929)
+- **评价指标：** 推理延迟、吞吐量、模型能力保持率（准确率、困惑度）、存储开销
+- **消融实验：** 分别移除路由-量化协同模块和预填充-解码协同模块，验证其对整体效率的贡献
+
+---
+
+## 二、三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|:---:|:---|:---|:---|:---|:---|:---|:---:|
+| 论文一 | 面向工具编排与推理-执行不匹配的 LLM Agent 系统鲁棒性评估与诊断方法 | 如何系统性地识别、量化和诊断 LLM Agent 的系统性失效模式 | 编排开销诊断创新、TIM 敏感性评估创新 | 编排开销分解诊断、TIM 敏感性评估 | SWE-bench, GAIA, BFCLv2 | 聚焦 Agent 系统鲁棒性评估，而非模型训练或推理效率 | 低 |
+| 论文二 | 面向长期交互场景的 LLM 记忆架构自演化与遗忘诊断方法 | 如何设计无回放、自演化的记忆架构并建立遗忘诊断方法 | 遗忘诊断与预警创新、自演化记忆架构闭环优化创新 | 前兆信号诊断、闭环自演化优化 | 多领域文本数据、长期对话场景 | 聚焦持续学习与记忆架构演化，而非推理效率或 Agent 评估 | 低 |
+| 论文三 | 面向 MoE 路由与量化部署的协同推理优化方法 | 如何从系统层与算法层协同降低推理延迟与存储开销 | 路由-量化协同压缩创新、预填充-解码协同优化创新 | 端到端联合优化、阶段感知调度 | 多适配器服务、MoE 推理、量化部署 | 聚焦推理效率与模型压缩的协同优化，而非评估或记忆 | 低 |
+
+---
+
+## 三、每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|:---:|:---|:---|:---:|:---:|:---:|:---:|
+| 论文一 | 编排开销诊断创新 | TIM 敏感性评估创新 | 是 | 是（编排开销 vs. 训练-推理不匹配） | 否 | 可保留 |
+| 论文二 | 遗忘诊断与预警创新 | 自演化记忆架构闭环优化创新 | 是 | 是（诊断预警 vs. 架构演化） | 否 | 可保留 |
+| 论文三 | 路由-量化协同压缩创新 | 预填充-解码协同优化创新 | 是 | 是（路由-量化 vs. 预填充-解码） | 否 | 可保留 |
+
+---
+
+## 四、参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14415) SWE-Chain: Benchmarking Coding Agents on Chained Release-Level Package Upgrades. arXiv:2605.14415, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14841) GPart: End-to-End Isometric Fine-Tuning via Global Parameter Partitioning. arXiv:2605.14841, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14588) Silent Collapse in Recursive Learning Systems. arXiv:2605.14588, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15138) Forgetting That Sticks: Quantization-Permanent Unlearning via Circuit Attribution. arXiv:2605.15138, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14220) Diagnosing Training Inference Mismatch in LLM Reinforcement Learning. arXiv:2605.14220, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15041) Case-Based Calibration of Adaptive Reasoning and Execution for LLM Tool Use. arXiv:2605.15041, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14929) A Hardware-Aware, Per-Layer Methodology for Post-Training Quantization of Large Language Models. arXiv:2605.14929, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14438) BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE. arXiv:2605.14438, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14217) PreFT: Prefill-only finetuning for efficient inference. arXiv:2605.14217, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14202) LLM-Based Robustness Testing of Microservice Applications: An Empirical Study. arXiv:2605.14202, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.13986) TabPFN-3: Technical Report. arXiv:2605.13986, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14389) Nexus : An Agentic Framework for Time Series Forecasting. arXiv:2605.14389, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14205) SimPersona: Learning Discrete Buyer Personas from Raw Clickstreams for Grounded E-Commerce Agents. arXiv:2605.14205, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14612) In-IDE Toolkit for Developers of AI-Based Features. arXiv:2605.14612, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15053) TFGN: Task-Free, Replay-Free Continual Pre-Training Without Catastrophic Forgetting at LLM Scale. arXiv:2605.15053, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14102) ChromaFlow: A Negative Ablation Study of Orchestration Overhead in Tool-Augmented Agent Evaluation. arXiv:2605.14102, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.13941) EvolveMem:Self-Evolving Memory Architecture via AutoResearch for LLM Agents. arXiv:2605.13941, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15184) Is Grep All You Need? How Agent Harnesses Reshape Agentic Search. arXiv:2605.15184, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15079) Croissant Baker: Metadata Generation for Discoverable, Governable, and Reusable ML Datasets. arXiv:2605.15079, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14163) Agentic Systems as Boosting Weak Reasoning Models. arXiv:2605.14163, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14241) Latency-Quality Routing for Functionally Equivalent Tools in LLM Agents. arXiv:2605.14241, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14445) FrontierSmith: Synthesizing Open-Ended Coding Problems at Scale. arXiv:2605.14445, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15113) Learning from Language Feedback via Variational Policy Distillation. arXiv:2605.15113, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14141) Distribution-Aware Algorithm Design with LLM Agents. arXiv:2605.14141, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14200) How to Scale Mixture-of-Experts: From muP to the Maximally Scale-Stable Parameterization. arXiv:2605.14200, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14458) OmniDrop: Layer-wise Token Pruning for Omni-modal LLMs via Query-Guidance. arXiv:2605.14458, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.14802) A Heterogeneous Temporal Memory Governance Framework for Long-Term LLM Persona Consistency. arXiv:2605.14802, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15081) ML-Embed: Inclusive and Efficient Embeddings for a Multilingual World. arXiv:2605.15081, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.13936) Towards the Next Frontier of LLMs, Training on Private Data: A Cross-Domain Benchmark for Federated Fine-Tuning. arXiv:2605.13936, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-17&paperId=2605.15132) APWA: A Distributed Architecture for Parallelizable Agentic Workflows. arXiv:2605.15132, 2026.
+
+---
+
+## 五、自检结果
+
+| 检查项 | 结果 |
+|:---|:---:|
+| 是否按照「三篇论文，每篇两个创新点，总共六个创新点」组织 | 是 |
+| 是否避免将一篇论文拆成六个创新点 | 是 |
+| 是否避免生成六篇论文各一个创新点 | 是 |
+| 每篇论文内部两个创新点是否属于同一论文主题 | 是 |
+| 每篇论文内部两个创新点是否互补而不重复 | 是 |
+| 三篇论文之间是否研究问题不同 | 是 |
+| 三篇论文之间是否核心方法不同 | 是 |
+| 三篇论文之间是否实验验证重点不同 | 是 |
+| 每个创新点是否都采用「大多数现有方法……少数现有方法……为此……」结构 | 是 |
+| 每个创新点是否至少引用 3 篇池内文献 | 是 |
+| 是否说明每篇文献的支撑作用 | 是 |
+| 是否避免「首次提出」「填补空白」等绝对化表述 | 是 |
+| 是否建立三篇论文方向去重矩阵 | 是 |
+| 是否建立每篇论文内部创新点去重检查表 | 是 |
