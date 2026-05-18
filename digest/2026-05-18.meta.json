@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-18",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理效率与稀疏注意力机制",
+      "blurb": "围绕LLM推理中的注意力计算瓶颈，探索基于投机解码的稀疏注意力（STS）、并行投机解码（PSD）以及块注意力泛化（Block Attention）等方法，以降低长序列推理的计算与内存开销。"
+    },
+    {
+      "title": "编码智能体的上下文管理与长程软件开发评估",
+      "blurb": "聚焦编码智能体在真实仓库环境中的效率瓶颈，研究基于多维度潜在推理的上下文剪枝（LaMR）、仓库启动知识蒸馏（BootstrapAgent）以及长程版本升级基准（RoadmapBench）的评估方法。"
+    },
+    {
+      "title": "在线推理服务的自适应资源调度与冷启动优化",
+      "blurb": "针对容器化在线服务的动态负载与冷启动延迟问题，研究基于在线EWMA估计的自适应扩缩容（ADAPT）、GPU加速流式随机游走（Tempest）以及不确定性感知的桌面探索（ScreenSearch）等闭环调优方法。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.16182",
+      "title": "A GPU Accelerated Temporal Window-Based Random Walk Sampler"
+    },
+    {
+      "idx": 2,
+      "id": "2605.15617",
+      "title": "A Few GPUs, A Whole Lotta Scale: Faithful LLM Training Emulation with PrismLLM"
+    },
+    {
+      "idx": 3,
+      "id": "2605.15413",
+      "title": "Transformer Scalability Crisis: The First Comprehensive Empirical Analysis of Performance Walls in Modern Language Models"
+    },
+    {
+      "idx": 4,
+      "id": "2605.15399",
+      "title": "Breakeven complexity: A new perspective on neural partial differential equation solvers"
+    },
+    {
+      "idx": 5,
+      "id": "2605.15513",
+      "title": "CAPS: Cascaded Adaptive Pairwise Selection for Efficient Parallel Reasoning"
+    },
+    {
+      "idx": 6,
+      "id": "2605.15694",
+      "title": "Going Beyond the Edge: Distributed Inference of Transformer Models on Ultra-Low-Power Wireless Devices"
+    },
+    {
+      "idx": 7,
+      "id": "2605.15871",
+      "title": "Agentic Discovery of Neural Architectures: AIRA-Compose and AIRA-Design"
+    },
+    {
+      "idx": 8,
+      "id": "2605.15976",
+      "title": "Reference-Free Reinforcement Learning Fine-Tuning for MT: A Seq2Seq Perspective"
+    },
+    {
+      "idx": 9,
+      "id": "2605.15626",
+      "title": "IO-SVD: Input-Output Whitened SVD for Adaptive-Rank LLM Compression"
+    },
+    {
+      "idx": 10,
+      "id": "2605.15913",
+      "title": "Towards Generalization of Block Attention via Automatic Segmentation and Block Distillation"
+    },
+    {
+      "idx": 11,
+      "id": "2605.15228",
+      "title": "Verifiable Agentic Infrastructure: Proof-Derived Authorization for Sovereign AI Systems"
+    },
+    {
+      "idx": 12,
+      "id": "2605.15315",
+      "title": "Context Pruning for Coding Agents via Multi-Rubric Latent Reasoning"
+    },
+    {
+      "idx": 13,
+      "id": "2605.15301",
+      "title": "Solvita: Enhancing Large Language Models for Competitive Programming via Agentic Evolution"
+    },
+    {
+      "idx": 14,
+      "id": "2605.15609",
+      "title": "PSD: Pushing the Pareto Frontier of Diffusion LLMs via Parallel Speculative Decoding"
+    },
+    {
+      "idx": 15,
+      "id": "2605.15846",
+      "title": "RoadmapBench: Evaluating Long-Horizon Agentic Software Development Across Version Upgrades"
+    },
+    {
+      "idx": 16,
+      "id": "2605.15508",
+      "title": "STS: Efficient Sparse Attention with Speculative Token Sparsity"
+    },
+    {
+      "idx": 17,
+      "id": "2605.16138",
+      "title": "Surrogate Neural Architecture Codesign Package (SNAC-Pack)"
+    },
+    {
+      "idx": 18,
+      "id": "2605.15464",
+      "title": "GRLO: Towards Generalizable Reinforcement Learning in Open-Ended Environments from Zero"
+    },
+    {
+      "idx": 19,
+      "id": "2605.15437",
+      "title": "Open Science Data Federation -- operation and monitoring"
+    },
+    {
+      "idx": 20,
+      "id": "2605.16112",
+      "title": "Attention Dispersion in Dynamic Graph Transformers: Diagnosis and a Transferable Fix"
+    },
+    {
+      "idx": 21,
+      "id": "2605.15777",
+      "title": "SaaS-Bench: Can Computer-Use Agents Leverage Real-World SaaS to Solve Professional Workflows?"
+    },
+    {
+      "idx": 22,
+      "id": "2605.15788",
+      "title": "ADAPT: A Self-Calibrating Proactive Autoscaler for Container Orchestration"
+    },
+    {
+      "idx": 23,
+      "id": "2605.15665",
+      "title": "PRISM: Prompt Reliability via Iterative Simulation and Monitoring for Enterprise Conversational AI"
+    },
+    {
+      "idx": 24,
+      "id": "2605.15622",
+      "title": "Position: Zeroth-Order Optimization in Deep Learning Is Underexplored, Not Underpowered"
+    },
+    {
+      "idx": 25,
+      "id": "2605.15227",
+      "title": "NIMO Controller: a self-driving laboratory orchestrator based on the Model Context Protocol"
+    },
+    {
+      "idx": 26,
+      "id": "2605.15815",
+      "title": "BootstrapAgent: Distilling Repository Setup into Reusable Agent Knowledge"
+    },
+    {
+      "idx": 27,
+      "id": "2605.15874",
+      "title": "Ti-iLSTM: A TinyDL Approach for Logic-Level Anomaly Detection in Industrial Water Treatment Systems"
+    },
+    {
+      "idx": 28,
+      "id": "2605.15542",
+      "title": "DRS-GUI: Dynamic Region Search for Training-Free GUI Grounding"
+    },
+    {
+      "idx": 29,
+      "id": "2605.16017",
+      "title": "Accelerated Gradient Descent for Faster Convergence with Minimal Overhead"
+    },
+    {
+      "idx": 30,
+      "id": "2605.16024",
+      "title": "ScreenSearch: Uncertainty-Aware OS Exploration"
+    }
+  ]
+}
