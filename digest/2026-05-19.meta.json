@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-19",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "面向边缘部署与低延迟的智能体系统架构",
+      "blurb": "从云中心转向边缘的智能体架构设计，聚焦零延迟执行、本地上下文耦合与结构化协调，涵盖多智能体状态一致性、轻量推理与资源受限环境下的可部署性。"
+    },
+    {
+      "title": "大语言模型后训练与推理效率的在线优化",
+      "blurb": "围绕 RL 后训练、数据选择、知识编辑与推理加速，探索如何在保持性能的前提下大幅降低计算开销，包括离策略 GRPO、在线数据筛选、MoE 知识编辑与扩散模型加速。"
+    },
+    {
+      "title": "智能体技能复用与可治理的经验演化",
+      "blurb": "从轨迹中提炼可复用技能，通过可执行程序函数、生命周期治理框架与自蒸馏机制，实现智能体在长周期任务中的经验积累、安全演化与结构化干预。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.18535",
+      "title": "Beyond Scaling: Agents Are Heading to the Edge"
+    },
+    {
+      "idx": 2,
+      "id": "2605.17570",
+      "title": "How Off-Policy Can GRPO Be? Mu-GRPO for Efficient LLM Reinforcement Learning"
+    },
+    {
+      "idx": 3,
+      "id": "2605.17003",
+      "title": "Learning-Zone Energy: Online Data Selection for Efficient RL Post-Training"
+    },
+    {
+      "idx": 4,
+      "id": "2605.16562",
+      "title": "Scaling Accessible Mathematics on arXiv: HTML Conversion and MathML 4"
+    },
+    {
+      "idx": 5,
+      "id": "2605.18190",
+      "title": "Dual-Rate Diffusion: Accelerating diffusion models with an interleaved heavy-light network"
+    },
+    {
+      "idx": 6,
+      "id": "2605.16999",
+      "title": "Ranking-Aware Calibration for Reliable Multimodal Reinforcement Learning"
+    },
+    {
+      "idx": 7,
+      "id": "2605.18461",
+      "title": "One Developer Is All You Need: A Case Study of an AI-Augmented One-Person Squad in a Brownfield Enterprise"
+    },
+    {
+      "idx": 8,
+      "id": "2605.16686",
+      "title": "Scalable Knowledge Editing for Mixture-of-Experts LLMs via Tensor-Structured Updates"
+    },
+    {
+      "idx": 9,
+      "id": "2605.17076",
+      "title": "S-Bus: Automatic Read-Set Reconstruction for Multi-Agent LLM State Coordination"
+    },
+    {
+      "idx": 10,
+      "id": "2605.18401",
+      "title": "SkillsVote: Lifecycle Governance of Agent Skills from Collection, Recommendation to Evolution"
+    },
+    {
+      "idx": 11,
+      "id": "2605.18299",
+      "title": "SD-Search: On-Policy Hindsight Self-Distillation for Search-Augmented Reasoning"
+    },
+    {
+      "idx": 12,
+      "id": "2605.17316",
+      "title": "Learning Higher-Order Structure from Incomplete Spatiotemporal Data: Multi-Scale Hypergraph Laplacians with Neural Refinement"
+    },
+    {
+      "idx": 13,
+      "id": "2605.17159",
+      "title": "MADP: A Multi-Agent Pipeline for Sustainable Document Processing with Human-in-the-Loop"
+    },
+    {
+      "idx": 14,
+      "id": "2605.17234",
+      "title": "Active Budget Allocation for Efficient Scaling Law Estimation via Surrogate-Guided Pruning"
+    },
+    {
+      "idx": 15,
+      "id": "2605.17830",
+      "title": "Remembering More, Risking More: Longitudinal Safety Risks in Memory-Equipped LLM Agents"
+    },
+    {
+      "idx": 16,
+      "id": "2605.18692",
+      "title": "Democratizing Large-Scale Re-Optimization with LLM-Guided Model Patches"
+    },
+    {
+      "idx": 17,
+      "id": "2605.16882",
+      "title": "E-PMQ: Expert-Guided Post-Merge Quantization with Merged-Weight Anchoring"
+    },
+    {
+      "idx": 18,
+      "id": "2605.17734",
+      "title": "Harnessing LLM Agents with Skill Programs"
+    },
+    {
+      "idx": 19,
+      "id": "2605.18165",
+      "title": "Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs"
+    },
+    {
+      "idx": 20,
+      "id": "2605.17626",
+      "title": "Verifier-Guided Code Translation via Meta-Step Decoding"
+    },
+    {
+      "idx": 21,
+      "id": "2605.16757",
+      "title": "NeuroMAS: Multi-Agent Systems as Neural Networks with Joint Reinforcement Learning"
+    },
+    {
+      "idx": 22,
+      "id": "2605.16839",
+      "title": "CompactAttention: Accelerating Chunked Prefill with Block-Union KV Selection"
+    },
+    {
+      "idx": 23,
+      "id": "2605.18374",
+      "title": "Beyond Inference-Time Search: Reinforcement Learning Synthesizes Reusable Solvers"
+    },
+    {
+      "idx": 24,
+      "id": "2605.17806",
+      "title": "AMO: Adaptive Muon Orthogonalization"
+    },
+    {
+      "idx": 25,
+      "id": "2605.18697",
+      "title": "PopPy: Opportunistically Exploiting Parallelism in Python Compound AI Applications"
+    },
+    {
+      "idx": 26,
+      "id": "2605.16433",
+      "title": "Edge-AI-Driven Learning-to-Rank for Decentralized Task Allocation in Circular Smart Manufacturing"
+    },
+    {
+      "idx": 27,
+      "id": "2605.18597",
+      "title": "Latent Action Reparameterization for Efficient Agent Inference"
+    },
+    {
+      "idx": 28,
+      "id": "2605.17909",
+      "title": "Ethical Hyper-Velocity (EHV): A Provably Deterministic Governance-Aware JIT Compiler Architecture for Agentic Systems"
+    },
+    {
+      "idx": 29,
+      "id": "2605.17862",
+      "title": "$\\boldsymbol{f}$-OPD: Stabilizing Long-Horizon On-Policy Distillation with Freshness-Aware Control"
+    },
+    {
+      "idx": 30,
+      "id": "2605.17898",
+      "title": "Lightweight Gaussian Process Inference in C++ on Metal and CUDA"
+    }
+  ]
+}
