@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-20",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM 训练与优化：无调度策略、弹性并行与量化压缩",
+      "blurb": "围绕大语言模型训练效率与推理压缩，涵盖无学习率调度训练（ScheduleFree+）、弹性并行切换（DynaTrain）以及基于平坦度的理论最优量化（BDQ），探索从训练到部署的全链路优化。"
+    },
+    {
+      "title": "LLM 推理服务与路由：缓存管理、级联路由与智能体调度",
+      "blurb": "聚焦在线推理服务中的资源效率问题，包括语义感知前缀缓存淘汰（SAECache）、校准驱动的成本最优级联路由（UCCI）、多模型调度与卸载策略，以及智能体工具调用偏差诊断。"
+    },
+    {
+      "title": "AI 系统与工程实践：微服务架构、可观测性与自动化调优",
+      "blurb": "关注 AI 系统在生产环境中的工程化挑战，涵盖文档智能的微服务架构（OCR+LLM 流水线）、Kubernetes 运维记忆架构（OMA）、基于 LLM 智能体的数据库自动化调优（PerfEvolve），以及 AI 物料清单（AIBOM）的可信溯源。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.19095",
+      "title": "ScheduleFree+: Scaling Learning-Rate-Free & Schedule-Free Learning to Large Language Models"
+    },
+    {
+      "idx": 2,
+      "id": "2605.18815",
+      "title": "DynaTrain: Fast Online Parallelism Switching for Elastic LLM Training"
+    },
+    {
+      "idx": 3,
+      "id": "2605.18865",
+      "title": "From Sparsity to Simplicity: Enabling Simpler Sequential Replacements via Sparse Attention Distillation"
+    },
+    {
+      "idx": 4,
+      "id": "2605.18825",
+      "title": "Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches"
+    },
+    {
+      "idx": 5,
+      "id": "2605.18800",
+      "title": "Theory-optimal Quantization Based on Flatness"
+    },
+    {
+      "idx": 6,
+      "id": "2605.19373",
+      "title": "Conflict-Free Replicated Data Types for Neural Network Model Merging: A Two-Layer Architecture Enabling CRDT-Compliant Model Merging Across 26 Strategies"
+    },
+    {
+      "idx": 7,
+      "id": "2605.19633",
+      "title": "optimize_anything: A Universal API for Optimizing any Text Parameter"
+    },
+    {
+      "idx": 8,
+      "id": "2605.19282",
+      "title": "Rethinking Muon Beyond Pretraining: Spectral Failures and High-Pass Remedies for VLA and RLVR"
+    },
+    {
+      "idx": 9,
+      "id": "2605.18796",
+      "title": "UCCI: Calibrated Uncertainty for Cost-Optimal LLM Cascade Routing"
+    },
+    {
+      "idx": 10,
+      "id": "2605.19988",
+      "title": "A Case for Agentic Tuning: From Documentation to Action in PostgreSQL"
+    },
+    {
+      "idx": 11,
+      "id": "2605.19945",
+      "title": "GEM: GPU-Variability-Aware Expert to GPU Mapping for MoE Systems"
+    },
+    {
+      "idx": 12,
+      "id": "2605.18859",
+      "title": "TwinRouterBench: Fast Static and Live Dynamic Evaluation for Realistic Agentic LLM Routing"
+    },
+    {
+      "idx": 13,
+      "id": "2605.19677",
+      "title": "Agentic Discovery of Cryomicroneedle Formulations"
+    },
+    {
+      "idx": 14,
+      "id": "2605.18794",
+      "title": "Robust Basis Spline Decoupling for the Compression of Transformer Models"
+    },
+    {
+      "idx": 15,
+      "id": "2605.18810",
+      "title": "D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting"
+    },
+    {
+      "idx": 16,
+      "id": "2605.19276",
+      "title": "OpenCompass: A Universal Evaluation Platform for Large Language Models"
+    },
+    {
+      "idx": 17,
+      "id": "2605.19537",
+      "title": "The Silent Hyperparameter: Quantifying the Impact of Inference Backends on LLM Reproducibility"
+    },
+    {
+      "idx": 18,
+      "id": "2605.18755",
+      "title": "Operational Memory Architecture for Kubernetes:Preserving Causal Context Across the Evidence Horizon"
+    },
+    {
+      "idx": 19,
+      "id": "2605.19856",
+      "title": "StableGrad: Backward Scale Control without Batch Normalization"
+    },
+    {
+      "idx": 20,
+      "id": "2605.19385",
+      "title": "LatentBox: An Efficient Latent-First Storage System for AI-Generated Images"
+    },
+    {
+      "idx": 21,
+      "id": "2605.19108",
+      "title": "Unleashing the Power of Tree-of-Thoughts for Edge-Enabled AIGC Service Provisioning"
+    },
+    {
+      "idx": 22,
+      "id": "2605.19593",
+      "title": "Towards Multi-Model LLM Schedulers: Empirical Insights into Offloading and Preemption"
+    },
+    {
+      "idx": 23,
+      "id": "2605.19755",
+      "title": "Operationalising Artificial Intelligence Bills of Materials (AIBOMs) for Verifiable AI Provenance and Lifecycle Assurance"
+    },
+    {
+      "idx": 24,
+      "id": "2605.19775",
+      "title": "Understanding Inference Scaling for LLMs: Bottlenecks, Trade-offs, and Performance Principles"
+    },
+    {
+      "idx": 25,
+      "id": "2605.19972",
+      "title": "Block-Sphere Vector Quantization"
+    },
+    {
+      "idx": 26,
+      "id": "2605.19269",
+      "title": "CODA: Rewriting Transformer Blocks as GEMM-Epilogue Programs"
+    },
+    {
+      "idx": 27,
+      "id": "2605.19842",
+      "title": "Fast Tensorization of Neural Networks via Slice-wise Feature Distillation"
+    },
+    {
+      "idx": 28,
+      "id": "2605.18899",
+      "title": "Don't Let Bandit Feedback Pull Continual LLM-Recommender Updates Off Target"
+    },
+    {
+      "idx": 29,
+      "id": "2605.18882",
+      "title": "To Call or Not to Call: Diagnosing Intrinsic Over-Calling Bias in LLM Agents"
+    },
+    {
+      "idx": 30,
+      "id": "2605.18818",
+      "title": "Operationalizing Document AI: A Microservice Architecture for OCR and LLM Pipelines in Production"
+    }
+  ]
+}

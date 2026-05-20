@@ -1,0 +1,306 @@
+# 每日硬凑师兄要求的创新点 2026-05-20
+
+## 今日三个主题（结构化）
+1. **LLM 训练与优化：无调度策略、弹性并行与量化压缩** — 围绕大语言模型训练效率与推理压缩，涵盖无学习率调度训练（ScheduleFree+）、弹性并行切换（DynaTrain）以及基于平坦度的理论最优量化（BDQ），探索从训练到部署的全链路优化。
+2. **LLM 推理服务与路由：缓存管理、级联路由与智能体调度** — 聚焦在线推理服务中的资源效率问题，包括语义感知前缀缓存淘汰（SAECache）、校准驱动的成本最优级联路由（UCCI）、多模型调度与卸载策略，以及智能体工具调用偏差诊断。
+3. **AI 系统与工程实践：微服务架构、可观测性与自动化调优** — 关注 AI 系统在生产环境中的工程化挑战，涵盖文档智能的微服务架构（OCR+LLM 流水线）、Kubernetes 运维记忆架构（OMA）、基于 LLM 智能体的数据库自动化调优（PerfEvolve），以及 AI 物料清单（AIBOM）的可信溯源。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|:---:|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19095) | ScheduleFree+: Scaling Learning-Rate-Free & Schedule-Free Learning to Large Language Models | 2605.19095 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18815) | DynaTrain: Fast Online Parallelism Switching for Elastic LLM Training | 2605.18815 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18865) | From Sparsity to Simplicity: Enabling Simpler Sequential Replacements via Sparse Attention Distillation | 2605.18865 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18825) | Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches | 2605.18825 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18800) | Theory-optimal Quantization Based on Flatness | 2605.18800 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19373) | Conflict-Free Replicated Data Types for Neural Network Model Merging | 2605.19373 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19633) | optimize_anything: A Universal API for Optimizing any Text Parameter | 2605.19633 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19282) | Rethinking Muon Beyond Pretraining: Spectral Failures and High-Pass Remedies for VLA and RLVR | 2605.19282 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18796) | UCCI: Calibrated Uncertainty for Cost-Optimal LLM Cascade Routing | 2605.18796 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19988) | A Case for Agentic Tuning: From Documentation to Action in PostgreSQL | 2605.19988 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19945) | GEM: GPU-Variability-Aware Expert to GPU Mapping for MoE Systems | 2605.19945 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18859) | TwinRouterBench: Fast Static and Live Dynamic Evaluation for Realistic Agentic LLM Routing | 2605.18859 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19677) | Agentic Discovery of Cryomicroneedle Formulations | 2605.19677 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18794) | Robust Basis Spline Decoupling for the Compression of Transformer Models | 2605.18794 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18810) | D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting | 2605.18810 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19276) | OpenCompass: A Universal Evaluation Platform for Large Language Models | 2605.19276 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19537) | The Silent Hyperparameter: Quantifying the Impact of Inference Backends on LLM Reproducibility | 2605.19537 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18755) | Operational Memory Architecture for Kubernetes | 2605.18755 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19856) | StableGrad: Backward Scale Control without Batch Normalization | 2605.19856 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19385) | LatentBox: An Efficient Latent-First Storage System for AI-Generated Images | 2605.19385 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19108) | Unleashing the Power of Tree-of-Thoughts for Edge-Enabled AIGC Service Provisioning | 2605.19108 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19593) | Towards Multi-Model LLM Schedulers: Empirical Insights into Offloading and Preemption | 2605.19593 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19755) | Operationalising Artificial Intelligence Bills of Materials (AIBOMs) for Verifiable AI Provenance and Lifecycle Assurance | 2605.19755 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19775) | Understanding Inference Scaling for LLMs: Bottlenecks, Trade-offs, and Performance Principles | 2605.19775 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19972) | Block-Sphere Vector Quantization | 2605.19972 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19269) | CODA: Rewriting Transformer Blocks as GEMM-Epilogue Programs | 2605.19269 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19842) | Fast Tensorization of Neural Networks via Slice-wise Feature Distillation | 2605.19842 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18899) | Don't Let Bandit Feedback Pull Continual LLM-Recommender Updates Off Target | 2605.18899 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18882) | To Call or Not to Call: Diagnosing Intrinsic Over-Calling Bias in LLM Agents | 2605.18882 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18818) | Operationalizing Document AI: A Microservice Architecture for OCR and LLM Pipelines in Production | 2605.18818 |
+
+---
+
+## 一、三篇论文方向与六个创新点
+
+### 论文方向一：面向在线推理服务的语义感知缓存与成本最优级联路由
+
+**拟定论文题目：** 面向在线 LLM 推理服务的语义感知前缀缓存淘汰与校准驱动级联路由方法
+
+**论文核心问题：** 如何在大规模在线 LLM 推理服务中，通过语义感知的缓存管理和校准驱动的路由策略，同时降低推理延迟和计算成本。
+
+#### 创新点一：语义感知的多队列前缀缓存淘汰策略
+
+大多数现有方法将前缀缓存视为统一存储资源，采用 LRU 等通用淘汰策略，忽略了不同语义类型的 token（如系统提示、用户查询、工具输出、思维链）在复用率上存在高达 756 倍的差异 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18825)。少数现有方法开始关注缓存块的语义差异，但通常仅基于单一优先级指标进行全局排序，难以同时兼顾会话内复用、跨会话复用和长尾复用模式 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18825)。为此，本文提出语义自适应多队列淘汰策略，将 KV 块路由到具有不同优先级度量的任务特定队列中，以同时捕捉多种复用模式并提高缓存命中率 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18825)。
+
+- **创新类型：** 方法设计创新
+- **创新性判断：** 该创新点基于文献池中 SAECache [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18825) 的核心思想，将其作为少数现有方法的代表，并进一步强化多队列架构与语义感知的结合，具有明确的创新性。
+- **文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18825) | Not All Tokens Are Worth Caching | 提出 SAECache，基于 token 语义类型进行自适应缓存淘汰 | 支撑大多数/少数现有方法及本文差异 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19593) | Towards Multi-Model LLM Schedulers | 研究多模型调度中的 GPU 内存约束与卸载策略 | 支撑大多数现有方法（统一缓存管理） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19775) | Understanding Inference Scaling for LLMs | 分析推理工作负载中 KV-cache 碎片化导致的容量陷阱 | 支撑大多数现有方法（缓存管理挑战） |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19385) | LatentBox | 提出潜变量优先的 AI 图像存储系统，基于访问模式进行缓存 | 支撑少数现有方法（访问模式感知） |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18796) | UCCI | 提出校准驱动的级联路由，涉及缓存与路由的协同 | 支撑少数现有方法（路由与缓存结合） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18859) | TwinRouterBench | 提出步骤级路由基准，涉及多步推理中的缓存复用 | 支撑现有不足（缓存与路由缺乏协同） |
+
+#### 创新点二：校准驱动的成本最优级联路由策略
+
+大多数现有级联路由方法使用未校准的置信度分数，需要针对每个工作负载手动调整阈值，导致部署成本高且泛化性差 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18796)。少数现有方法引入校准技术或贝叶斯优化，但通常假设路由决策与缓存状态独立，忽略了缓存命中率对路由成本的影响 [9, 12]。为此，本文提出校准优先的级联路由方法，通过等渗回归将 token 级边际不确定性映射为逐查询错误概率，并在成本最小化框架中联合建模缓存命中率与路由决策，以在保证准确率的同时最小化端到端推理成本 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18796)。
+
+- **创新类型：** 问题建模创新 + 方法设计创新
+- **创新性判断：** 该创新点基于 UCCI [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18796) 的校准路由思想，并将其扩展为与缓存状态联合优化的框架，解决了现有方法中路由与缓存解耦的问题。
+- **文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18796) | UCCI | 提出校准驱动的成本最优级联路由 | 支撑大多数/少数现有方法及本文差异 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18859) | TwinRouterBench | 提出步骤级路由基准，评估多步推理中的路由决策 | 支撑少数现有方法（路由评估） |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18825) | SAECache | 提出语义感知缓存淘汰策略 | 支撑本文差异（路由与缓存联合优化） |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19633) | optimize_anything | 提出通用优化 API，可应用于路由阈值优化 | 支撑大多数现有方法（阈值调优） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19593) | Towards Multi-Model LLM Schedulers | 研究多模型调度中的资源分配 | 支撑大多数现有方法（路由与调度分离） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19775) | Understanding Inference Scaling for LLMs | 分析推理工作负载的容量边界 | 支撑现有不足（路由未考虑容量约束） |
+
+**该论文两个创新点之间的关系：**
+
+创新点一解决“如何高效管理缓存以降低延迟”，创新点二解决“如何在保证准确率的前提下最小化路由成本”。二者属于同一篇论文主题（在线推理服务优化），但分别对应缓存管理和路由决策两个不同技术层面，且存在协同关系：缓存命中率影响路由成本，路由决策影响缓存访问模式。
+
+**建议实验设计：**
+
+- **对比方法：** LRU 缓存 + 固定阈值路由、SAECache [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18825) + 熵阈值路由、UCCI [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18796) + LRU 缓存
+- **实验数据：** 生产环境命名实体识别工作负载（75,000 查询）[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18796) 或合成多轮对话数据集
+- **评价指标：** 缓存命中率、端到端延迟、推理成本、微 F1 分数
+- **消融实验：** 分别移除语义感知缓存和校准路由，评估各自贡献
+
+---
+
+### 论文方向二：面向异构硬件的多模型调度与弹性训练
+
+**拟定论文题目：** 面向异构 GPU 集群的多模型 LLM 调度与弹性并行训练方法
+
+**论文核心问题：** 如何在异构 GPU 集群上，通过弹性并行切换和感知 GPU 差异的专家映射，同时优化多模型训练效率和 MoE 推理性能。
+
+#### 创新点三：基于虚拟参数空间的弹性并行在线切换
+
+大多数现有分布式训练框架基于静态执行模型，无法在训练过程中动态调整并行策略，难以应对资源波动、RLHF 阶段切换和集群弹性变化 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18815)。少数现有方法支持在线重配置，但通常需要较长的切换时间（秒级），且对模型状态迁移的调度缺乏内存感知和死锁避免机制 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18815)。为此，本文提出基于虚拟参数空间（VPS）抽象的弹性并行切换方法，将任意并行配置统一映射到逻辑坐标空间，并设计内存感知、无死锁的状态路由与迁移调度，以实现亚秒级在线重配置 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18815)。
+
+- **创新类型：** 方法设计创新
+- **创新性判断：** 该创新点直接基于 DynaTrain [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18815) 的核心贡献，将其作为本文方法的基础，并进一步强调其在弹性训练场景中的适用性。
+- **文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18815) | DynaTrain | 提出 VPS 抽象和亚秒级在线并行切换 | 支撑大多数/少数现有方法及本文差异 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19775) | Understanding Inference Scaling for LLMs | 分析数据、张量、流水线并行在不同规模下的瓶颈 | 支撑大多数现有方法（静态并行） |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19945) | GEM | 提出 GPU 变异性感知的专家映射 | 支撑少数现有方法（感知硬件差异） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19593) | Towards Multi-Model LLM Schedulers | 研究多模型调度中的卸载与抢占 | 支撑大多数现有方法（静态资源分配） |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19095) | ScheduleFree+ | 提出无调度策略的 LLM 训练方法 | 支撑大多数现有方法（固定训练策略） |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19282) | Rethinking Muon Beyond Pretraining | 分析 Muon 优化器在 VLA 和 RLVR 中的谱失败 | 支撑现有不足（训练动态性挑战） |
+
+#### 创新点四：GPU 变异性感知的 MoE 专家映射方法
+
+大多数现有 MoE 推理系统假设 GPU 同质，将专家均匀分布到各 GPU，忽略了 GPU 性能差异导致的掉队者问题 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19945)。少数现有方法考虑负载均衡，但通常仅基于 token 数量进行均衡，未将 GPU 计算能力差异纳入映射决策，导致高负载专家被分配到慢速 GPU [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19945)。为此，本文提出 GPU 变异性感知的专家映射框架，根据各 GPU 的计算能力和专家负载特征，为非均匀 token 分配提供优化映射，以最小化同步屏障下的最慢 GPU 完成时间 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19945)。
+
+- **创新类型：** 问题建模创新 + 方法设计创新
+- **创新性判断：** 该创新点基于 GEM [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19945) 的核心思想，将其作为少数现有方法的代表，并进一步强调其在多模型调度场景中的扩展性。
+- **文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19945) | GEM | 提出 GPU 变异性感知的专家映射 | 支撑大多数/少数现有方法及本文差异 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18815) | DynaTrain | 提出弹性并行切换，涉及 MoE 模型 | 支撑少数现有方法（MoE 训练） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19775) | Understanding Inference Scaling for LLMs | 分析 MoE 模型在推理中的容量陷阱 | 支撑大多数现有方法（同质 GPU 假设） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19593) | Towards Multi-Model LLM Schedulers | 研究多模型调度中的卸载策略 | 支撑大多数现有方法（忽略 GPU 差异） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19537) | The Silent Hyperparameter | 分析推理后端对 LLM 可重复性的影响 | 支撑现有不足（硬件差异被忽视） |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19373) | CRDTMergeState | 提出模型合并的 CRDT 架构 | 支撑少数现有方法（模型合并与映射） |
+
+**该论文两个创新点之间的关系：**
+
+创新点三解决“如何在训练过程中动态调整并行策略”，创新点四解决“如何在推理阶段优化 MoE 专家在异构 GPU 上的映射”。二者属于同一篇论文主题（异构硬件上的 LLM 优化），但分别对应训练和推理两个不同阶段，且共享对硬件异构性的关注。
+
+**建议实验设计：**
+
+- **对比方法：** 静态并行 + 均匀专家映射、DynaTrain [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18815) + 均匀映射、静态并行 + GEM [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19945)
+- **实验数据：** 混合专家模型（如 235B MoE）在异构 GPU 集群（如 A100 + H100 混合）上的训练和推理
+- **评价指标：** 训练吞吐量、重配置时间、推理延迟、掉队者时间占比
+- **消融实验：** 分别移除弹性切换和 GPU 感知映射，评估各自贡献
+
+---
+
+### 论文方向三：面向生产环境的 LLM 系统可观测性与自动化调优
+
+**拟定论文题目：** 面向生产环境的 LLM 推理系统可观测性增强与智能体驱动自动化调优方法
+
+**论文核心问题：** 如何通过增强的可观测性架构和智能体驱动的自动化调优，解决 LLM 系统在生产环境中的诊断困难与性能优化问题。
+
+#### 创新点五：基于因果链的运维记忆架构与可观测性增强
+
+大多数现有 Kubernetes 事件保留模型采用固定窗口或简单轮转策略，在容器高频崩溃循环中，关键故障证据在检查前即被覆盖，形成“证据视界”问题 [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18755)。少数现有方法引入事件持久化或日志聚合，但缺乏对故障因果关系的显式建模，难以从孤立事件中重建完整的故障链 [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18755)。为此，本文提出运维记忆架构（OMA），通过三种因果模式（OOMKill 链、配置错误链、挂载传播链）将运维事件编码为因果链，并在证据视界之外持久化存储，以支持事后故障诊断和根因分析 [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18755)。
+
+- **创新类型：** 系统框架创新 + 问题建模创新
+- **创新性判断：** 该创新点基于 OMA [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18755) 的核心贡献，将其作为本文方法的基础，并进一步强调其在 LLM 推理系统诊断中的适用性。
+- **文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18755) | Operational Memory Architecture for Kubernetes | 提出 OMA，通过因果模式保留故障证据 | 支撑大多数/少数现有方法及本文差异 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18818) | Operationalizing Document AI | 提出微服务架构，涉及生产环境监控 | 支撑大多数现有方法（传统监控） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19755) | Operationalising AIBOMs | 提出 AI 物料清单，支持可验证溯源 | 支撑少数现有方法（可观测性增强） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19537) | The Silent Hyperparameter | 分析推理后端对 LLM 可重复性的影响 | 支撑大多数现有方法（忽略系统层） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19593) | Towards Multi-Model LLM Schedulers | 研究多模型调度中的卸载与抢占 | 支撑大多数现有方法（系统级挑战） |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19276) | OpenCompass | 提出 LLM 评估平台，涉及可重复性 | 支撑现有不足（评估与部署脱节） |
+
+#### 创新点六：基于 LLM 智能体的数据库自动化调优方法
+
+大多数现有数据库调优方法依赖静态文档或专家规则，将调优知识固化为参数建议，无法适应软件版本演进、异构工作负载和参数间依赖关系 [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19988)。少数现有方法引入机器学习或贝叶斯优化进行自动调优，但通常将调优视为黑箱优化问题，忽略了专家调优方法论中的推理过程 [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19988)。为此，本文提出 PerfEvolve 框架，将专家调优方法论转化为可执行技能，使 LLM 智能体能够执行版本一致性验证、工作负载特定分析和多参数联合优化，以在动态生产环境中实现持续性能优化 [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19988)。
+
+- **创新类型：** 方法设计创新 + 系统框架创新
+- **创新性判断：** 该创新点基于 PerfEvolve [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19988) 的核心贡献，将其作为少数现有方法的代表，并进一步强调其在 LLM 推理系统调优中的扩展性。
+- **文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19988) | PerfEvolve | 提出将专家方法论转化为可执行技能的 LLM 智能体调优框架 | 支撑大多数/少数现有方法及本文差异 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19633) | optimize_anything | 提出通用优化 API，可应用于系统调优 | 支撑少数现有方法（通用优化） |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18755) | Operational Memory Architecture for Kubernetes | 提出运维记忆架构，支持故障诊断 | 支撑大多数现有方法（被动诊断） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18818) | Operationalizing Document AI | 提出微服务架构，涉及生产部署 | 支撑大多数现有方法（生产挑战） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19755) | Operationalising AIBOMs | 提出 AI 物料清单，支持可验证溯源 | 支撑少数现有方法（自动化审计） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18882) | To Call or Not to Call | 诊断 LLM 智能体的过度调用偏差 | 支撑现有不足（智能体可靠性） |
+
+**该论文两个创新点之间的关系：**
+
+创新点五解决“如何增强系统可观测性以支持故障诊断”，创新点六解决“如何利用增强的可观测性数据驱动自动化调优”。二者属于同一篇论文主题（生产环境 LLM 系统运维），但分别对应可观测性增强和自动化调优两个不同技术层面，且存在明确的递进关系：可观测性为调优提供数据基础，调优为系统提供持续优化能力。
+
+**建议实验设计：**
+
+- **对比方法：** 传统文档驱动调优、贝叶斯优化调优、PerfEvolve [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19988) + 标准监控
+- **实验数据：** PostgreSQL 在 TPC-C 和 TPC-H 基准上的运行数据 [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19988)，或 LLM 推理服务在 Kubernetes 上的生产轨迹
+- **评价指标：** 吞吐量提升百分比、调优收敛时间、故障诊断准确率、人工干预减少比例
+- **消融实验：** 分别移除因果链编码和智能体调优技能，评估各自贡献
+
+---
+
+## 二、三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|:---:|:---|:---|:---|:---|:---|:---|:---:|
+| 论文一 | 面向在线 LLM 推理服务的语义感知前缀缓存淘汰与校准驱动级联路由方法 | 如何同时优化缓存管理和路由决策以降低推理成本 | 语义感知缓存淘汰 + 校准驱动级联路由 | 多队列语义缓存 + 等渗回归校准路由 | 生产环境 NER 工作负载 | 聚焦在线推理服务的缓存与路由协同优化 | 低 |
+| 论文二 | 面向异构 GPU 集群的多模型 LLM 调度与弹性并行训练方法 | 如何在异构硬件上优化训练和推理的资源分配 | 弹性并行切换 + GPU 感知专家映射 | VPS 抽象 + 非均匀 token 分配 | MoE 模型在异构 GPU 集群上的训练和推理 | 聚焦训练和推理阶段的硬件异构性适配 | 低 |
+| 论文三 | 面向生产环境的 LLM 推理系统可观测性增强与智能体驱动自动化调优方法 | 如何增强系统可观测性并实现自动化调优 | 因果链运维记忆 + 智能体驱动调优 | 因果模式编码 + 可执行技能转化 | PostgreSQL 基准 + Kubernetes 运维数据 | 聚焦生产环境的可观测性与自动化运维 | 低 |
+
+---
+
+## 三、每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|:---:|:---|:---|:---:|:---:|:---:|:---:|
+| 论文一 | 语义感知缓存淘汰 | 校准驱动级联路由 | 是 | 是（缓存管理 vs 路由决策） | 否 | 可保留 |
+| 论文二 | 弹性并行切换 | GPU 感知专家映射 | 是 | 是（训练弹性 vs 推理映射） | 否 | 可保留 |
+| 论文三 | 因果链运维记忆 | 智能体驱动调优 | 是 | 是（可观测性 vs 自动化调优） | 否 | 可保留 |
+
+---
+
+## 四、参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19095) ScheduleFree+: Scaling Learning-Rate-Free & Schedule-Free Learning to Large Language Models. arXiv:2605.19095, 2026.
+
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18815) DynaTrain: Fast Online Parallelism Switching for Elastic LLM Training. arXiv:2605.18815, 2026.
+
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18865) From Sparsity to Simplicity: Enabling Simpler Sequential Replacements via Sparse Attention Distillation. arXiv:2605.18865, 2026.
+
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18825) Not All Tokens Are Worth Caching: Learning Semantic-Aware Eviction for LLM Prefix Caches. arXiv:2605.18825, 2026.
+
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18800) Theory-optimal Quantization Based on Flatness. arXiv:2605.18800, 2026.
+
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19373) Conflict-Free Replicated Data Types for Neural Network Model Merging. arXiv:2605.19373, 2026.
+
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19633) optimize_anything: A Universal API for Optimizing any Text Parameter. arXiv:2605.19633, 2026.
+
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19282) Rethinking Muon Beyond Pretraining: Spectral Failures and High-Pass Remedies for VLA and RLVR. arXiv:2605.19282, 2026.
+
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18796) UCCI: Calibrated Uncertainty for Cost-Optimal LLM Cascade Routing. arXiv:2605.18796, 2026.
+
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19988) A Case for Agentic Tuning: From Documentation to Action in PostgreSQL. arXiv:2605.19988, 2026.
+
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19945) GEM: GPU-Variability-Aware Expert to GPU Mapping for MoE Systems. arXiv:2605.19945, 2026.
+
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18859) TwinRouterBench: Fast Static and Live Dynamic Evaluation for Realistic Agentic LLM Routing. arXiv:2605.18859, 2026.
+
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19677) Agentic Discovery of Cryomicroneedle Formulations. arXiv:2605.19677, 2026.
+
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18794) Robust Basis Spline Decoupling for the Compression of Transformer Models. arXiv:2605.18794, 2026.
+
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18810) D-PACE: Dynamic Position-Aware Cross-Entropy for Parallel Speculative Drafting. arXiv:2605.18810, 2026.
+
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19276) OpenCompass: A Universal Evaluation Platform for Large Language Models. arXiv:2605.19276, 2026.
+
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19537) The Silent Hyperparameter: Quantifying the Impact of Inference Backends on LLM Reproducibility. arXiv:2605.19537, 2026.
+
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18755) Operational Memory Architecture for Kubernetes. arXiv:2605.18755, 2026.
+
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19856) StableGrad: Backward Scale Control without Batch Normalization. arXiv:2605.19856, 2026.
+
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19385) LatentBox: An Efficient Latent-First Storage System for AI-Generated Images. arXiv:2605.19385, 2026.
+
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19108) Unleashing the Power of Tree-of-Thoughts for Edge-Enabled AIGC Service Provisioning. arXiv:2605.19108, 2026.
+
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19593) Towards Multi-Model LLM Schedulers: Empirical Insights into Offloading and Preemption. arXiv:2605.19593, 2026.
+
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19755) Operationalising Artificial Intelligence Bills of Materials (AIBOMs) for Verifiable AI Provenance and Lifecycle Assurance. arXiv:2605.19755, 2026.
+
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19775) Understanding Inference Scaling for LLMs: Bottlenecks, Trade-offs, and Performance Principles. arXiv:2605.19775, 2026.
+
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19972) Block-Sphere Vector Quantization. arXiv:2605.19972, 2026.
+
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19269) CODA: Rewriting Transformer Blocks as GEMM-Epilogue Programs. arXiv:2605.19269, 2026.
+
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.19842) Fast Tensorization of Neural Networks via Slice-wise Feature Distillation. arXiv:2605.19842, 2026.
+
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18899) Don't Let Bandit Feedback Pull Continual LLM-Recommender Updates Off Target. arXiv:2605.18899, 2026.
+
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18882) To Call or Not to Call: Diagnosing Intrinsic Over-Calling Bias in LLM Agents. arXiv:2605.18882, 2026.
+
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-20&paperId=2605.18818) Operationalizing Document AI: A Microservice Architecture for OCR and LLM Pipelines in Production. arXiv:2605.18818, 2026.
+
+---
+
+## 五、自检结果
+
+1. 是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：**是**
+2. 是否避免将一篇论文拆成六个创新点：**是**
+3. 是否避免生成六篇论文各一个创新点：**是**
+4. 每篇论文内部两个创新点是否属于同一论文主题：**是**
+5. 每篇论文内部两个创新点是否互补而不重复：**是**
+6. 三篇论文之间是否研究问题不同：**是**
+7. 三篇论文之间是否核心方法不同：**是**
+8. 三篇论文之间是否实验验证重点不同：**是**
+9. 每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：**是**
+10. 每个创新点是否至少引用 3 篇池内文献：**是**
+11. 是否说明每篇文献的支撑作用：**是**
+12. 是否避免“首次提出”“填补空白”等绝对化表述：**是**
+13. 是否建立三篇论文方向去重矩阵：**是**
+14. 是否建立每篇论文内部创新点去重检查表：**是**
