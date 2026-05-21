@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-21",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "面向LLM推理与部署的效率优化",
+      "blurb": "围绕大语言模型推理中的显存压缩、稀疏注意力加速、WebGPU浏览器端部署及功率感知调度，探索从模型架构到运行时系统的多层次效率提升方法。"
+    },
+    {
+      "title": "面向LLM智能体的诊断、治理与安全合规",
+      "blurb": "聚焦LLM智能体在生产环境中的轨迹诊断、策略即代码治理、在线风险控制与隐私合规删除，构建可审计、可治理的自主系统。"
+    },
+    {
+      "title": "面向分布式与异构学习的协同优化",
+      "blurb": "针对联邦学习、分布式SGD和异构计算场景，研究客户端选择、通信压缩、因果遗忘与统一训练框架，提升协同学习的效率、公平性与可解释性。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.20287",
+      "title": "FusionCell: Cross-Attentive Fusion of Layout Geometry and Netlist Topology for Standard-Cell Performance Prediction"
+    },
+    {
+      "idx": 2,
+      "id": "2605.20948",
+      "title": "Memory Grafting: Scaling Language Model Pre-training via Offline Conditional Memory"
+    },
+    {
+      "idx": 3,
+      "id": "2605.21434",
+      "title": "Agentic Model Checking"
+    },
+    {
+      "idx": 4,
+      "id": "2605.21405",
+      "title": "Stdlib or Third-Party? Empirical Performance and Correctness of LLM-Assisted Zero-Dependency Python Libraries"
+    },
+    {
+      "idx": 5,
+      "id": "2605.20723",
+      "title": "Memory-Efficient Partitioned DNN Inference on Resource-Constrained Android Crowds"
+    },
+    {
+      "idx": 6,
+      "id": "2605.20530",
+      "title": "AgentAtlas: Beyond Outcome Leaderboards for LLM Agents"
+    },
+    {
+      "idx": 7,
+      "id": "2605.20866",
+      "title": "LOSCAR-SGD: Local SGD with Communication-Computation Overlap and Delay-Corrected Sparse Model Averaging"
+    },
+    {
+      "idx": 8,
+      "id": "2605.20936",
+      "title": "DASH: Fast Differentiable Architecture Search for Hybrid Attention in Minutes on a Single GPU"
+    },
+    {
+      "idx": 9,
+      "id": "2605.20616",
+      "title": "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents"
+    },
+    {
+      "idx": 10,
+      "id": "2605.20608",
+      "title": "From Automated to Autonomous: Hierarchical Agent-native Network Architecture (HANA)"
+    },
+    {
+      "idx": 11,
+      "id": "2605.20813",
+      "title": "PulseCol: Periodically Refreshed Column-Sparse Attention for Accelerating Diffusion Language Models"
+    },
+    {
+      "idx": 12,
+      "id": "2605.20270",
+      "title": "Conformal Selective Acting: Anytime-Valid Risk Control for RLVR-Trained LLMs"
+    },
+    {
+      "idx": 13,
+      "id": "2605.21347",
+      "title": "Insights Generator: Systematic Corpus-Level Trace Diagnostics for LLM Agents"
+    },
+    {
+      "idx": 14,
+      "id": "2605.20285",
+      "title": "Introspective X Training: Feedback Conditioning Improves Scaling Across all LLM Training Stages"
+    },
+    {
+      "idx": 15,
+      "id": "2605.21226",
+      "title": "OCTOPUS: Optimized KV Cache for Transformers via Octahedral Parametrization Under optimal Squared error quantization"
+    },
+    {
+      "idx": 16,
+      "id": "2605.20706",
+      "title": "Llamas on the Web: Memory-Efficient, Performance-Portable, and Multi-Precision LLM Inference with WebGPU"
+    },
+    {
+      "idx": 17,
+      "id": "2605.20730",
+      "title": "Distributional Alignment as a Criterion for Designing Task Vectors in In-Context Learning"
+    },
+    {
+      "idx": 18,
+      "id": "2605.20876",
+      "title": "Terminal-World: Scaling Terminal-Agent Environments via Agent Skills"
+    },
+    {
+      "idx": 19,
+      "id": "2605.20975",
+      "title": "Choose Wisely and Privately: Proactive Client Selection for Fair and Efficient Federated Learning"
+    },
+    {
+      "idx": 20,
+      "id": "2605.20670",
+      "title": "LT2: Linear-Time Looped Transformers"
+    },
+    {
+      "idx": 21,
+      "id": "2605.21427",
+      "title": "PALS: Power-Aware LLM Serving for Mixture-of-Experts Models"
+    },
+    {
+      "idx": 22,
+      "id": "2605.20276",
+      "title": "OmniISR: A Unified Framework for Centralized and Federated Learning via Intermediate Supervision and Regularization"
+    },
+    {
+      "idx": 23,
+      "id": "2605.20341",
+      "title": "Causal Unlearning in Collaborative Optimization: Exact and Approximate Influence Reversal under Adversarial Contributions"
+    },
+    {
+      "idx": 24,
+      "id": "2605.21027",
+      "title": "Beyond Text-to-SQL: An Agentic LLM System for Governed Enterprise Analytics APIs"
+    },
+    {
+      "idx": 25,
+      "id": "2605.20815",
+      "title": "GraphRAG on Consumer Hardware: Benchmarking Local LLMs for Healthcare EHR Schema Retrieval"
+    },
+    {
+      "idx": 26,
+      "id": "2605.20690",
+      "title": "Declarative Data Services: Structured Agentic Discovery for Composing Data Systems"
+    },
+    {
+      "idx": 27,
+      "id": "2605.21180",
+      "title": "Domain-Adaptable Reinforcement Learning for Code Generation with Dense Rewards"
+    },
+    {
+      "idx": 28,
+      "id": "2605.21097",
+      "title": "WCXB: A Multi-Type Web Content Extraction Benchmark"
+    },
+    {
+      "idx": 29,
+      "id": "2605.21325",
+      "title": "Fast and Stable Triangular Inversion for Delta-Rule Linear Transformers"
+    },
+    {
+      "idx": 30,
+      "id": "2605.20874",
+      "title": "Governance by Construction for Generalist Agents"
+    }
+  ]
+}
