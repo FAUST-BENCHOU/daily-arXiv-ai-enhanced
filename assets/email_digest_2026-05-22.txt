@@ -1,0 +1,303 @@
+# 每日硬凑师兄要求的创新点 2026-05-22
+
+## 今日三个主题（结构化）
+1. **面向 LLM Agent 的运行时编排与轨迹优化** — 围绕 Agent 系统的运行时编排、轨迹压缩与推理时对齐，探讨如何通过事件溯源、轨迹编译和推理时规划提升 Agent 在复杂任务中的效率与可审计性。
+2. **面向 LLM 推理与训练的弹性资源配置与并行调度** — 聚焦大模型推理与训练场景下的资源弹性调优，涵盖实时重配置、设备内并行调度和跨区域 Spot 实例的智能部署，以降低成本和提升资源利用率。
+3. **面向 LLM 后训练与微调的稳定性与多样性增强** — 针对 RLVR 训练不稳定、多概念生成干扰和推理时搜索多样性不足等问题，提出裁剪边界恢复、双层级正交适应和向量策略优化等改进方法。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22743) | SeqLoRA: Bilevel Orthogonal Adaptation for Continual Multi-Concept Generation | 2605.22743 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21997) | The Log is the Agent: Event-Sourced Reactive Graphs for Auditable, Forkable Agentic Systems | 2605.21997 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21996) | From Patches to Trajectories: Privileged Process Supervision for Software-Engineering Agents | 2605.21996 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22205) | Skill Weaving: Efficient LLM Improvement via Modular Skillpacks | 2605.22205 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21984) | Echo: Learning from Experience Data via User-Driven Refinement | 2605.21984 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22166) | Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents | 2605.22166 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21850) | ACC: Compiling Agent Trajectories for Long-Context Training | 2605.21850 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22775) | MambaGaze: Bidirectional Mamba with Explicit Missing Data Modeling for Cognitive Load Assessment from Eye-Gaze Tracking Data | 2605.22775 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22014) | LiveR: Fine-Grained Elasticity via Live Reconfiguration for Model Training | 2605.22014 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22817) | Vector Policy Optimization: Training for Diversity Improves Test-Time Search | 2605.22817 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22393) | Nf-PEAK: Process-Based Energy Attribution for Nextflow Workflows on Kubernetes Clusters | 2605.22393 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22608) | Agentic CLEAR: Automating Multi-Level Evaluation of LLM Agents | 2605.22608 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22634) | Contractual Skills: A GovernSpec Design Framework for Enterprise AI Agents | 2605.22634 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22703) | Clipping Bottleneck: Stabilizing RLVR via Stochastic Recovery of Near-Boundary Signals | 2605.22703 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22337) | Meta-Soft: Leveraging Composable Meta-Tokens for Context-Preserving KV Cache Compression | 2605.22337 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22778) | AI-Driven Multi-Region Provisioning for Cloud Services Using Spot Fleets | 2605.22778 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22535) | TerminalWorld: Benchmarking Agents on Real-World Terminal Tasks | 2605.22535 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22480) | Implicit Regularization of Mini-Batch Training in Graph Neural Networks | 2605.22480 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22087) | Automated Repair of TEE Partitioning Issues via DSL-Guided and LLM-Assisted Patching | 2605.22087 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22502) | Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost | 2605.22502 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22177) | Maestro: Reinforcement Learning to Orchestrate Hierarchical Model-Skill Ensembles | 2605.22177 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22188) | From Sequential Nodes to GPU Batches: Parallel Branch and Bound for Optimal k-Sparse GLMs | 2605.22188 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22331) | SepsisAI Orchestrator: A Containerized and Scalable Platform for Deploying AI Models and Real-Time Monitoring in Early Sepsis Detection | 2605.22331 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21603) | DynaFlow: Transparent and Flexible Intra-Device Parallelism via Programmable Operator Scheduling | 2605.21603 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21516) | Harnesses for Inference-Time Alignment over Execution Trajectories | 2605.21516 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22498) | The Neural Compiler: Program-to-Network Translation for Hybrid Scientific Machine Learning | 2605.22498 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22564) | SynAE: A Framework for Measuring the Quality of Synthetic Data for Tool-Calling Agent Evaluations | 2605.22564 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22642) | Spreadsheet-RL: Advancing Large Language Model Agents on Realistic Spreadsheet Tasks via Reinforcement Learning | 2605.22642 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22154) | IdleSpec: Exploiting Idle Time via Speculative Planning for LLM Agents | 2605.22154 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22239) | An Architecture for Decentralised Deployment and Operation of Blockchain Applications | 2605.22239 |
+
+---
+
+## 三篇论文方向与六个创新点
+
+### 论文方向一：面向 LLM Agent 的运行时编排与轨迹优化
+
+**拟定论文题目：** 基于事件溯源与轨迹编译的 LLM Agent 运行时编排与可审计性增强方法
+
+**论文核心问题：** 如何通过重新设计 Agent 运行时架构（从以模型为中心转向以日志为中心），并结合轨迹编译与推理时对齐，提升 Agent 在复杂任务中的执行效率、可审计性与可复现性。
+
+#### 创新点一：事件溯源驱动的 Agent 运行时架构创新
+
+大多数现有方法将 LLM 对话循环作为 Agent 框架的核心，工具调用、规则和日志层作为附加组件，导致状态持久化依赖检索-摘要式记忆系统，难以实现确定性重放和端到端溯源 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21997)[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22166)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22608)。少数现有方法开始关注运行时日志的审计价值，但通常将日志视为事后观察工具，而非运行时状态的真实来源，且缺乏对 Agent 执行轨迹的轻量级分支与复现支持 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22634)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22535)[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21516)。为此，本文提出基于事件溯源的 Agent 运行时架构，以仅追加事件日志作为唯一真实来源，将工作图定义为日志的确定性投影，所有行为（函数、类、LLM 例程）通过响应图变化并发射新事件实现协调，从而提供确定性重放、低成本分支和端到端血缘追踪能力 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21997)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22154)。
+
+**创新类型：** 系统框架创新
+
+**创新性判断：** 该创新点从架构层面颠覆了现有 Agent 框架以模型为中心的设计范式，转向以日志为中心，解决了可审计性、可复现性和可分支性三个核心问题。文献池中 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21997) 直接支持该架构的核心思想，[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22166)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22634)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22535)[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21516) 从不同角度佐证了现有方法的局限。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 作者和年份 | 主要内容 | 支撑作用 |
+|------|----------|------------|----------|----------|
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21997) | The Log is the Agent: Event-Sourced Reactive Graphs for Auditable, Forkable Agentic Systems | 2026 | 提出 ActiveGraph 运行时，以事件日志为真实来源，工作图为确定性投影 | 支撑大多数现有方法的局限与本文架构核心 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22166) | Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents | 2026 | 提出 Life-Harness，通过运行时适配改进冻结 LLM Agent | 支撑大多数现有方法依赖模型参数更新的局限 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22608) | Agentic CLEAR: Automating Multi-Level Evaluation of LLM Agents | 2026 | 提出自动评估框架，强调对 Agent 行为的系统级、轨迹级和节点级分析 | 支撑大多数现有方法评估能力有限的判断 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22634) | Contractual Skills: A GovernSpec Design Framework for Enterprise AI Agents | 2026 | 提出契约式技能框架，强调技能的可检查性和可审计性 | 支撑少数现有方法对可审计性的关注 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22535) | TerminalWorld: Benchmarking Agents on Real-World Terminal Tasks | 2026 | 构建终端 Agent 基准，强调真实轨迹的评估价值 | 支撑少数现有方法对轨迹数据的重视 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21516) | Harnesses for Inference-Time Alignment over Execution Trajectories | 2026 | 研究推理时轨迹对齐的 harness 设计 | 支撑少数现有方法对执行轨迹的优化 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22154) | IdleSpec: Exploiting Idle Time via Speculative Planning for LLM Agents | 2026 | 利用空闲时间进行推测性规划，提升 Agent 性能 | 支撑本文架构中利用事件驱动进行前瞻性规划的可行性 |
+
+#### 创新点二：轨迹编译与推理时对齐的联合优化创新
+
+大多数现有方法将 Agent 工作流作为外部编排器在 LLM 之上运行，每轮注入指令和路由决策，消耗上下文窗口且依赖前沿模型，暴露专有流程 [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22502)[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21516)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22642)。少数现有方法尝试将工作流编译到模型权重中（如 SimpleTOD、FireAct），但开发者采纳仍以编排为主，且现有编译方法缺乏对推理时轨迹对齐的显式优化 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21996)[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21850)[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22502)。为此，本文提出轨迹编译与推理时对齐的联合优化方法，将 Agent 工作流编译为轻量级微调模型的权重（地下 Agent），同时在推理时通过任务分解和引导执行机制对齐轨迹，以在降低推理成本的同时保持任务成功率 [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22502)[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21516)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22154)。
+
+**创新类型：** 方法设计创新 + 性能优化创新
+
+**创新性判断：** 该创新点将轨迹编译（降低推理成本）与推理时对齐（保持任务成功率）两个目标联合优化，解决了现有方法中二者分离导致的效率-质量权衡问题。文献池中 [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22502) 直接支持轨迹编译的有效性，[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21516) 和 [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22154) 支持推理时对齐的必要性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 作者和年份 | 主要内容 | 支撑作用 |
+|------|----------|------------|----------|----------|
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22502) | Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost | 2026 | 将 Agent 工作流编译到小模型权重中，实现近前沿质量与极低成本 | 支撑大多数现有方法依赖外部编排器的局限 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21516) | Harnesses for Inference-Time Alignment over Execution Trajectories | 2026 | 研究推理时轨迹对齐的 harness 设计，量化任务分解与引导执行的影响 | 支撑少数现有方法对推理时对齐的关注 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22642) | Spreadsheet-RL: Advancing Large Language Model Agents on Realistic Spreadsheet Tasks via Reinforcement Learning | 2026 | 通过 RL 微调训练专用 Agent，强调多步工作流的复杂性 | 支撑大多数现有方法在复杂工作流上的局限 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21996) | From Patches to Trajectories: Privileged Process Supervision for Software-Engineering Agents | 2026 | 利用参考补丁作为特权信息监督轨迹生成 | 支撑少数现有方法对轨迹质量的优化 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21850) | ACC: Compiling Agent Trajectories for Long-Context Training | 2026 | 将 Agent 轨迹编译为长上下文 QA 对进行训练 | 支撑少数现有方法对轨迹编译的探索 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22154) | IdleSpec: Exploiting Idle Time via Speculative Planning for LLM Agents | 2026 | 利用空闲时间进行推测性规划，提升 Agent 性能 | 支撑本文推理时对齐方法的设计思路 |
+
+**该论文两个创新点之间的关系：**
+
+创新点一解决“Agent 运行时架构如何设计”的问题，创新点二解决“Agent 工作流如何高效执行与对齐”的问题。二者属于同一篇论文主题（LLM Agent 运行时编排与轨迹优化），但分别对应系统架构层和算法优化层，不存在重复。创新点一为创新点二提供可审计、可复现的运行时基础，创新点二在创新点一的架构上实现高效的轨迹编译与对齐。
+
+**建议实验设计：**
+
+- **对比方法：** 传统对话循环框架（如 LangGraph、CrewAI）、现有轨迹编译方法（如 SimpleTOD、FireAct）、推理时对齐方法（如 Life-Harness）
+- **实验数据或场景：** TerminalWorld 基准 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22535)、τ-bench 环境 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22166)、软件工程 Agent 任务 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21996)
+- **评价指标：** 任务成功率、推理成本（token 消耗）、可审计性（轨迹重放准确率）、分支成本（时间/存储）
+- **消融实验：** 事件溯源 vs. 传统日志、轨迹编译 vs. 外部编排、推理时对齐 vs. 无对齐
+
+---
+
+### 论文方向二：面向 LLM 推理与训练的弹性资源配置与并行调度
+
+**拟定论文题目：** 面向大模型推理与训练的弹性资源配置与设备内并行调度联合优化方法
+
+**论文核心问题：** 如何在 LLM 推理与训练场景中，通过实时重配置、设备内并行调度和跨区域 Spot 实例智能部署，降低资源成本并提升利用率。
+
+#### 创新点三：实时重配置与弹性训练运行时创新
+
+大多数现有方法将弹性训练的重配置视为停止-重启过程，通过检查点外部化分布式状态、在新拓扑上重建运行时并重启训练，导致每次调整都带来存储密集型恢复和大量停机时间 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22014)[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22778)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22331)。少数现有方法开始探索实时重配置技术，但通常局限于特定并行策略或需要侵入式代码修改，难以适应混合并行训练世界的动态切换 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22014)[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21603)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22239)。为此，本文提出实时重配置的弹性训练运行时，在当前训练世界继续运行的同时异步准备目标世界，在隔离环境中引导新加入的工作节点，通过有界内存交接实现混合并行训练世界之间的无缝切换，以消除检查点 I/O 和进程重启带来的停机时间 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22014)[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21603)。
+
+**创新类型：** 系统框架创新 + 性能优化创新
+
+**创新性判断：** 该创新点针对弹性训练中重配置开销大的核心问题，提出实时交接而非停止-重启的方案。文献池中 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22014) 直接支持该架构，[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21603) 支持设备内并行调度的灵活性需求，[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22778) 和 [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22331) 从不同角度佐证了现有弹性部署方案的局限。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 作者和年份 | 主要内容 | 支撑作用 |
+|------|----------|------------|----------|----------|
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22014) | LiveR: Fine-Grained Elasticity via Live Reconfiguration for Model Training | 2026 | 提出实时重配置运行时，通过有界内存交接实现弹性训练 | 支撑大多数现有方法停止-重启范式的局限 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22778) | AI-Driven Multi-Region Provisioning for Cloud Services Using Spot Fleets | 2026 | 提出 AI 驱动的多区域 Spot 实例部署服务 | 支撑大多数现有方法在弹性资源利用上的局限 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22331) | SepsisAI Orchestrator: A Containerized and Scalable Platform for Deploying AI Models | 2026 | 提出容器化 AI 模型部署平台，强调可扩展性 | 支撑少数现有方法对容器化部署的探索 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21603) | DynaFlow: Transparent and Flexible Intra-Device Parallelism via Programmable Operator Scheduling | 2026 | 提出可编程算子调度框架，实现设备内并行 | 支撑少数现有方法对灵活并行调度的探索 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22239) | An Architecture for Decentralised Deployment and Operation of Blockchain Applications | 2026 | 提出去中心化应用部署架构 | 支撑少数现有方法对分布式部署的关注 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22393) | Nf-PEAK: Process-Based Energy Attribution for Nextflow Workflows on Kubernetes Clusters | 2026 | 提出容器化工作流的能量归因方法 | 支撑本文对资源利用效率的评估需求 |
+
+#### 创新点四：可编程算子调度与设备内并行策略创新
+
+大多数现有方法采用静态、顺序的编程模型执行 ML 推理和训练，导致算子执行时资源利用率不足，且集成设备内并行策略需要侵入式、模型特定的代码重构 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21603)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22014)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22188)。少数现有方法开始探索设备内并行调度，但策略对执行上下文（工作负载、模型架构、硬件）高度敏感，开发者需要实现和维护多个专用解决方案，缺乏透明且灵活的集成方式 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21603)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22337)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22188)。为此，本文提出可编程算子调度框架，通过解耦逻辑模型定义与物理执行调度，提供图分区注解和可编程接口，允许开发者定义自定义设备内并行策略，同时后端自动管理算子调度与资源分配，以透明地提升资源利用率并降低工程成本 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21603)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22337)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22188)。
+
+**创新类型：** 方法设计创新 + 系统框架创新
+
+**创新性判断：** 该创新点解决了设备内并行策略集成的高工程成本问题，通过解耦和可编程接口实现透明集成。文献池中 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21603) 直接支持该框架的核心思想，[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22337) 和 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22188) 从不同角度佐证了现有方法的局限。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 作者和年份 | 主要内容 | 支撑作用 |
+|------|----------|------------|----------|----------|
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21603) | DynaFlow: Transparent and Flexible Intra-Device Parallelism via Programmable Operator Scheduling | 2026 | 提出可编程算子调度框架，解耦逻辑模型与物理执行 | 支撑大多数现有方法静态编程模型的局限 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22014) | LiveR: Fine-Grained Elasticity via Live Reconfiguration for Model Training | 2026 | 提出实时重配置运行时 | 支撑大多数现有方法在弹性训练中的局限 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22188) | From Sequential Nodes to GPU Batches: Parallel Branch and Bound for Optimal k-Sparse GLMs | 2026 | 提出 CPU-GPU 框架批量处理 BnB 节点 | 支撑少数现有方法对 GPU 并行化的探索 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22337) | Meta-Soft: Leveraging Composable Meta-Tokens for Context-Preserving KV Cache Compression | 2026 | 提出动态 KV 缓存压缩框架 | 支撑少数现有方法对推理效率的优化 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22778) | AI-Driven Multi-Region Provisioning for Cloud Services Using Spot Fleets | 2026 | 提出多区域 Spot 实例部署 | 支撑本文对资源配置优化的评估需求 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22393) | Nf-PEAK: Process-Based Energy Attribution for Nextflow Workflows on Kubernetes Clusters | 2026 | 提出容器化工作流能量归因方法 | 支撑本文对资源利用效率的评估需求 |
+
+**该论文两个创新点之间的关系：**
+
+创新点三解决“训练时如何弹性重配置”的问题，创新点四解决“推理时如何灵活并行调度”的问题。二者属于同一篇论文主题（LLM 推理与训练的弹性资源配置与并行调度），但分别对应训练场景和推理场景，且共享资源利用效率优化的核心目标，不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 传统停止-重启弹性训练、静态并行调度、现有设备内并行框架
+- **实验数据或场景：** LLM 训练任务（如 GPT 规模模型）、推理服务（如在线 LLM 推理）、Spot 实例环境
+- **评价指标：** 重配置停机时间、资源利用率、吞吐量、成本节省比例、工程成本（代码修改量）
+- **消融实验：** 实时交接 vs. 检查点恢复、可编程调度 vs. 固定策略、跨区域部署 vs. 单区域部署
+
+---
+
+### 论文方向三：面向 LLM 后训练与微调的稳定性与多样性增强
+
+**拟定论文题目：** 面向 LLM 后训练与微调的稳定性恢复与多样性增强联合优化方法
+
+**论文核心问题：** 如何解决 LLM 后训练（如 RLVR）中的训练不稳定问题，以及微调中的多概念生成干扰和推理时搜索多样性不足问题。
+
+#### 创新点五：基于裁剪边界恢复的 RLVR 训练稳定性创新
+
+大多数现有方法在 RLVR 训练中使用硬裁剪规则，将超出裁剪阈值的 tokens 直接丢弃，导致近边界区域的信息性信号被浪费，造成训练不稳定和次优收敛 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22703)[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22817)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22642)。少数现有方法尝试通过软裁剪或自适应阈值缓解此问题，但通常引入额外超参数或改变优化目标，难以作为即插即用模块集成到现有 GRPO 风格框架中 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22703)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22177)[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21516)。为此，本文提出近边界随机恢复（NSR）方法，通过随机保留略超出裁剪边界的 tokens 来恢复丢失信号，作为最小化的即插即用修改，在期望中引入隐式梯度衰减以稳定训练 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22703)[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22817)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22177)。
+
+**创新类型：** 方法设计创新
+
+**创新性判断：** 该创新点精准定位了 RLVR 训练中硬裁剪导致的信息丢失瓶颈，并提出极简的随机恢复方案。文献池中 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22703) 直接支持该方法的有效性，[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22817) 和 [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22642) 从不同角度佐证了 RLVR 训练的挑战。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 作者和年份 | 主要内容 | 支撑作用 |
+|------|----------|------------|----------|----------|
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22703) | Clipping Bottleneck: Stabilizing RLVR via Stochastic Recovery of Near-Boundary Signals | 2026 | 识别硬裁剪瓶颈，提出 NSR 方法随机恢复近边界信号 | 支撑大多数现有方法硬裁剪规则的局限 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22817) | Vector Policy Optimization: Training for Diversity Improves Test-Time Search | 2026 | 提出向量策略优化，训练策略产生多样化解决方案 | 支撑大多数现有方法标量奖励优化的局限 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22642) | Spreadsheet-RL: Advancing Large Language Model Agents on Realistic Spreadsheet Tasks via Reinforcement Learning | 2026 | 通过 RL 微调训练专用 Agent | 支撑少数现有方法对 RL 微调的探索 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22177) | Maestro: Reinforcement Learning to Orchestrate Hierarchical Model-Skill Ensembles | 2026 | 提出 RL 驱动的编排框架 | 支撑少数现有方法对 RL 在 Agent 中应用的探索 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21516) | Harnesses for Inference-Time Alignment over Execution Trajectories | 2026 | 研究推理时轨迹对齐 | 支撑本文对训练稳定性的评估需求 |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22743) | SeqLoRA: Bilevel Orthogonal Adaptation for Continual Multi-Concept Generation | 2026 | 提出序列正则化 LoRA 用于多概念生成 | 支撑本文对微调稳定性的关注 |
+
+#### 创新点六：双层级正交适应与向量策略优化的多样性增强创新
+
+大多数现有方法在 LLM 后训练中优化预定义的标量奖励，导致策略产生低熵响应分布，难以在推理时搜索中展现所需多样性 [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22817)[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22743)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22642)。少数现有方法开始关注多样性训练，但通常采用后处理融合或冻结适应子空间，限制了表达能力和概念保真度，且缺乏对多目标奖励空间的显式建模 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22743)[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22817)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22177)。为此，本文提出双层级正交适应与向量策略优化联合方法，在参数高效微调层面通过双层优化联合学习 LoRA 基以最小化残差干扰能量，在策略优化层面通过向量奖励估计器训练策略产生多样化解决方案，以在保持概念保真度的同时提升推理时搜索的多样性 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22743)[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22817)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22177)。
+
+**创新类型：** 方法设计创新 + 问题建模创新
+
+**创新性判断：** 该创新点将参数高效微调中的正交适应与策略优化中的多样性训练统一在同一框架下，解决了多概念生成干扰和推理时搜索多样性不足两个问题。文献池中 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22743) 和 [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22817) 分别支持两个层面的方法，[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22177) 支持多模型-技能编排的需求。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 作者和年份 | 主要内容 | 支撑作用 |
+|------|----------|------------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22743) | SeqLoRA: Bilevel Orthogonal Adaptation for Continual Multi-Concept Generation | 2026 | 提出序列正则化 LoRA，通过双层优化学习 LoRA 基 | 支撑大多数现有方法在概念融合中的干扰问题 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22817) | Vector Policy Optimization: Training for Diversity Improves Test-Time Search | 2026 | 提出向量策略优化，训练策略产生多样化解决方案 | 支撑大多数现有方法标量奖励优化的局限 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22642) | Spreadsheet-RL: Advancing Large Language Model Agents on Realistic Spreadsheet Tasks via Reinforcement Learning | 2026 | 通过 RL 微调训练专用 Agent | 支撑少数现有方法对 RL 微调的探索 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22177) | Maestro: Reinforcement Learning to Orchestrate Hierarchical Model-Skill Ensembles | 2026 | 提出 RL 驱动的编排框架，利用多模型互补优势 | 支撑少数现有方法对多模型协作的探索 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22205) | Skill Weaving: Efficient LLM Improvement via Modular Skillpacks | 2026 | 提出模块化技能包框架，实现多领域专业化 | 支撑本文对模块化适应的关注 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22703) | Clipping Bottleneck: Stabilizing RLVR via Stochastic Recovery of Near-Boundary Signals | 2026 | 提出 NSR 方法稳定 RLVR 训练 | 支撑本文对训练稳定性的评估需求 |
+
+**该论文两个创新点之间的关系：**
+
+创新点五解决“RLVR 训练如何稳定”的问题，创新点六解决“微调与策略优化如何增强多样性”的问题。二者属于同一篇论文主题（LLM 后训练与微调的稳定性与多样性增强），但分别对应训练稳定性和输出多样性两个不同技术层面，且可以联合部署（先稳定训练，再增强多样性），不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 标准 GRPO、硬裁剪 RLVR、标量奖励优化、现有 LoRA 变体、后处理融合方法
+- **实验数据或场景：** 多概念图像生成 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22743)、代码生成 [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22817)、电子表格任务 [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22642)、推理基准
+- **评价指标：** 训练收敛速度、训练稳定性（损失方差）、概念保真度、生成多样性（熵、独特解数量）、推理时搜索成功率
+- **消融实验：** NSR vs. 硬裁剪、正交适应 vs. 标准 LoRA、向量策略 vs. 标量策略、联合训练 vs. 分阶段训练
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|----------|--------------|----------|------------|----------|----------|----------------------|----------|
+| 论文一：面向 LLM Agent 的运行时编排与轨迹优化 | 基于事件溯源与轨迹编译的 LLM Agent 运行时编排与可审计性增强方法 | Agent 运行时架构与工作流执行效率 | 事件溯源架构 + 轨迹编译与推理时对齐 | 事件溯源运行时、轨迹编译、推理时对齐 | TerminalWorld、τ-bench、SWE 任务 | 关注 Agent 系统架构与执行效率，不涉及资源配置或训练稳定性 | 低 |
+| 论文二：面向 LLM 推理与训练的弹性资源配置与并行调度 | 面向大模型推理与训练的弹性资源配置与设备内并行调度联合优化方法 | 资源弹性与并行调度效率 | 实时重配置运行时 + 可编程算子调度 | 实时交接、可编程调度、GPU 并行化 | LLM 训练任务、推理服务、Spot 实例 | 关注资源管理与调度优化，不涉及 Agent 架构或训练算法 | 低 |
+| 论文三：面向 LLM 后训练与微调的稳定性与多样性增强 | 面向 LLM 后训练与微调的稳定性恢复与多样性增强联合优化方法 | 训练稳定性与输出多样性 | 裁剪边界恢复 + 正交适应与向量策略优化 | NSR、双层优化、向量策略优化 | 多概念生成、代码生成、推理基准 | 关注训练算法与微调方法，不涉及系统架构或资源调度 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|----------|----------|----------|----------------------|------------------|--------------|------|
+| 论文一 | 事件溯源驱动的 Agent 运行时架构 | 轨迹编译与推理时对齐的联合优化 | 是 | 是（系统架构 vs. 算法优化） | 否 | 可保留 |
+| 论文二 | 实时重配置与弹性训练运行时 | 可编程算子调度与设备内并行策略 | 是 | 是（训练场景 vs. 推理场景） | 否 | 可保留 |
+| 论文三 | 基于裁剪边界恢复的 RLVR 训练稳定性 | 双层级正交适应与向量策略优化的多样性增强 | 是 | 是（训练稳定性 vs. 输出多样性） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22743) SeqLoRA: Bilevel Orthogonal Adaptation for Continual Multi-Concept Generation. arXiv:2605.22743, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21997) The Log is the Agent: Event-Sourced Reactive Graphs for Auditable, Forkable Agentic Systems. arXiv:2605.21997, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21996) From Patches to Trajectories: Privileged Process Supervision for Software-Engineering Agents. arXiv:2605.21996, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22205) Skill Weaving: Efficient LLM Improvement via Modular Skillpacks. arXiv:2605.22205, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21984) Echo: Learning from Experience Data via User-Driven Refinement. arXiv:2605.21984, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22166) Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents. arXiv:2605.22166, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21850) ACC: Compiling Agent Trajectories for Long-Context Training. arXiv:2605.21850, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22775) MambaGaze: Bidirectional Mamba with Explicit Missing Data Modeling for Cognitive Load Assessment from Eye-Gaze Tracking Data. arXiv:2605.22775, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22014) LiveR: Fine-Grained Elasticity via Live Reconfiguration for Model Training. arXiv:2605.22014, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22817) Vector Policy Optimization: Training for Diversity Improves Test-Time Search. arXiv:2605.22817, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22393) Nf-PEAK: Process-Based Energy Attribution for Nextflow Workflows on Kubernetes Clusters. arXiv:2605.22393, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22608) Agentic CLEAR: Automating Multi-Level Evaluation of LLM Agents. arXiv:2605.22608, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22634) Contractual Skills: A GovernSpec Design Framework for Enterprise AI Agents. arXiv:2605.22634, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22703) Clipping Bottleneck: Stabilizing RLVR via Stochastic Recovery of Near-Boundary Signals. arXiv:2605.22703, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22337) Meta-Soft: Leveraging Composable Meta-Tokens for Context-Preserving KV Cache Compression. arXiv:2605.22337, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22778) AI-Driven Multi-Region Provisioning for Cloud Services Using Spot Fleets. arXiv:2605.22778, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22535) TerminalWorld: Benchmarking Agents on Real-World Terminal Tasks. arXiv:2605.22535, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22480) Implicit Regularization of Mini-Batch Training in Graph Neural Networks. arXiv:2605.22480, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22087) Automated Repair of TEE Partitioning Issues via DSL-Guided and LLM-Assisted Patching. arXiv:2605.22087, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22502) Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost. arXiv:2605.22502, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22177) Maestro: Reinforcement Learning to Orchestrate Hierarchical Model-Skill Ensembles. arXiv:2605.22177, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22188) From Sequential Nodes to GPU Batches: Parallel Branch and Bound for Optimal k-Sparse GLMs. arXiv:2605.22188, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22331) SepsisAI Orchestrator: A Containerized and Scalable Platform for Deploying AI Models and Real-Time Monitoring in Early Sepsis Detection. arXiv:2605.22331, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21603) DynaFlow: Transparent and Flexible Intra-Device Parallelism via Programmable Operator Scheduling. arXiv:2605.21603, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.21516) Harnesses for Inference-Time Alignment over Execution Trajectories. arXiv:2605.21516, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22498) The Neural Compiler: Program-to-Network Translation for Hybrid Scientific Machine Learning. arXiv:2605.22498, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22564) SynAE: A Framework for Measuring the Quality of Synthetic Data for Tool-Calling Agent Evaluations. arXiv:2605.22564, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22642) Spreadsheet-RL: Advancing Large Language Model Agents on Realistic Spreadsheet Tasks via Reinforcement Learning. arXiv:2605.22642, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22154) IdleSpec: Exploiting Idle Time via Speculative Planning for LLM Agents. arXiv:2605.22154, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-22&paperId=2605.22239) An Architecture for Decentralised Deployment and Operation of Blockchain Applications. arXiv:2605.22239, 2026.
+
+---
+
+## 自检结果
+
+一、是否按照「三篇论文，每篇两个创新点，总共六个创新点」组织：是。
+
+二、是否避免将一篇论文拆成六个创新点：是。
+
+三、是否避免生成六篇论文各一个创新点：是。
+
+四、每篇论文内部两个创新点是否属于同一论文主题：是。
+
+五、每篇论文内部两个创新点是否互补而不重复：是。
+
+六、三篇论文之间是否研究问题不同：是。
+
+七、三篇论文之间是否核心方法不同：是。
+
+八、三篇论文之间是否实验验证重点不同：是。
+
+九、每个创新点是否都采用「大多数现有方法……少数现有方法……为此……」结构：是。
+
+十、每个创新点是否至少引用 3 篇池内文献：是（最少 5 篇，最多 8 篇）。
+
+十一、是否说明每篇文献的支撑作用：是。
+
+十二、是否避免「首次提出」「填补空白」等绝对化表述：是。
+
+十三、是否建立三篇论文方向去重矩阵：是。
+
+十四、是否建立每篇论文内部创新点去重检查表：是。

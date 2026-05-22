@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-22",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "面向 LLM Agent 的运行时编排与轨迹优化",
+      "blurb": "围绕 Agent 系统的运行时编排、轨迹压缩与推理时对齐，探讨如何通过事件溯源、轨迹编译和推理时规划提升 Agent 在复杂任务中的效率与可审计性。"
+    },
+    {
+      "title": "面向 LLM 推理与训练的弹性资源配置与并行调度",
+      "blurb": "聚焦大模型推理与训练场景下的资源弹性调优，涵盖实时重配置、设备内并行调度和跨区域 Spot 实例的智能部署，以降低成本和提升资源利用率。"
+    },
+    {
+      "title": "面向 LLM 后训练与微调的稳定性与多样性增强",
+      "blurb": "针对 RLVR 训练不稳定、多概念生成干扰和推理时搜索多样性不足等问题，提出裁剪边界恢复、双层级正交适应和向量策略优化等改进方法。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.22743",
+      "title": "SeqLoRA: Bilevel Orthogonal Adaptation for Continual Multi-Concept Generation"
+    },
+    {
+      "idx": 2,
+      "id": "2605.21997",
+      "title": "The Log is the Agent: Event-Sourced Reactive Graphs for Auditable, Forkable Agentic Systems"
+    },
+    {
+      "idx": 3,
+      "id": "2605.21996",
+      "title": "From Patches to Trajectories: Privileged Process Supervision for Software-Engineering Agents"
+    },
+    {
+      "idx": 4,
+      "id": "2605.22205",
+      "title": "Skill Weaving: Efficient LLM Improvement via Modular Skillpacks"
+    },
+    {
+      "idx": 5,
+      "id": "2605.21984",
+      "title": "Echo: Learning from Experience Data via User-Driven Refinement"
+    },
+    {
+      "idx": 6,
+      "id": "2605.22166",
+      "title": "Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents"
+    },
+    {
+      "idx": 7,
+      "id": "2605.21850",
+      "title": "ACC: Compiling Agent Trajectories for Long-Context Training"
+    },
+    {
+      "idx": 8,
+      "id": "2605.22775",
+      "title": "MambaGaze: Bidirectional Mamba with Explicit Missing Data Modeling for Cognitive Load Assessment from Eye-Gaze Tracking Data"
+    },
+    {
+      "idx": 9,
+      "id": "2605.22014",
+      "title": "LiveR: Fine-Grained Elasticity via Live Reconfiguration for Model Training"
+    },
+    {
+      "idx": 10,
+      "id": "2605.22817",
+      "title": "Vector Policy Optimization: Training for Diversity Improves Test-Time Search"
+    },
+    {
+      "idx": 11,
+      "id": "2605.22393",
+      "title": "Nf-PEAK: Process-Based Energy Attribution for Nextflow Workflows on Kubernetes Clusters"
+    },
+    {
+      "idx": 12,
+      "id": "2605.22608",
+      "title": "Agentic CLEAR: Automating Multi-Level Evaluation of LLM Agents"
+    },
+    {
+      "idx": 13,
+      "id": "2605.22634",
+      "title": "Contractual Skills: A GovernSpec Design Framework for Enterprise AI Agents"
+    },
+    {
+      "idx": 14,
+      "id": "2605.22703",
+      "title": "Clipping Bottleneck: Stabilizing RLVR via Stochastic Recovery of Near-Boundary Signals"
+    },
+    {
+      "idx": 15,
+      "id": "2605.22337",
+      "title": "Meta-Soft: Leveraging Composable Meta-Tokens for Context-Preserving KV Cache Compression"
+    },
+    {
+      "idx": 16,
+      "id": "2605.22778",
+      "title": "AI-Driven Multi-Region Provisioning for Cloud Services Using Spot Fleets"
+    },
+    {
+      "idx": 17,
+      "id": "2605.22535",
+      "title": "TerminalWorld: Benchmarking Agents on Real-World Terminal Tasks"
+    },
+    {
+      "idx": 18,
+      "id": "2605.22480",
+      "title": "Implicit Regularization of Mini-Batch Training in Graph Neural Networks"
+    },
+    {
+      "idx": 19,
+      "id": "2605.22087",
+      "title": "Automated Repair of TEE Partitioning Issues via DSL-Guided and LLM-Assisted Patching"
+    },
+    {
+      "idx": 20,
+      "id": "2605.22502",
+      "title": "Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost"
+    },
+    {
+      "idx": 21,
+      "id": "2605.22177",
+      "title": "Maestro: Reinforcement Learning to Orchestrate Hierarchical Model-Skill Ensembles"
+    },
+    {
+      "idx": 22,
+      "id": "2605.22188",
+      "title": "From Sequential Nodes to GPU Batches: Parallel Branch and Bound for Optimal $k$-Sparse GLMs"
+    },
+    {
+      "idx": 23,
+      "id": "2605.22331",
+      "title": "SepsisAI Orchestrator: A Containerized and Scalable Platform for Deploying AI Models and Real-Time Monitoring in Early Sepsis Detection"
+    },
+    {
+      "idx": 24,
+      "id": "2605.21603",
+      "title": "DynaFlow: Transparent and Flexible Intra-Device Parallelism via Programmable Operator Scheduling"
+    },
+    {
+      "idx": 25,
+      "id": "2605.21516",
+      "title": "Harnesses for Inference-Time Alignment over Execution Trajectories"
+    },
+    {
+      "idx": 26,
+      "id": "2605.22498",
+      "title": "The Neural Compiler: Program-to-Network Translation for Hybrid Scientific Machine Learning"
+    },
+    {
+      "idx": 27,
+      "id": "2605.22564",
+      "title": "SynAE: A Framework for Measuring the Quality of Synthetic Data for Tool-Calling Agent Evaluations"
+    },
+    {
+      "idx": 28,
+      "id": "2605.22642",
+      "title": "Spreadsheet-RL: Advancing Large Language Model Agents on Realistic Spreadsheet Tasks via Reinforcement Learning"
+    },
+    {
+      "idx": 29,
+      "id": "2605.22154",
+      "title": "IdleSpec: Exploiting Idle Time via Speculative Planning for LLM Agents"
+    },
+    {
+      "idx": 30,
+      "id": "2605.22239",
+      "title": "An Architecture for Decentralised Deployment and Operation of Blockchain Applications"
+    }
+  ]
+}
