@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-23",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理效率与缓存管理",
+      "blurb": "围绕注意力汇剪枝、树状推理KV缓存管理、线性注意力状态编辑等方向，探索训练无关的推理加速与长上下文场景下的显存优化策略。"
+    },
+    {
+      "title": "智能体系统评估、训练与安全",
+      "blurb": "聚焦终端任务基准构建、长程记忆智能体的公平信用分配、多轮增量攻击安全评测，以及面向智能体轨迹的长上下文训练数据生成。"
+    },
+    {
+      "title": "模型部署、资源优化与自动化运维",
+      "blurb": "涵盖MCU端LLM驱动的神经网络定制、云端多区域Spot实例智能部署、容器化AI平台可扩展架构，以及去中心化区块链应用DevOps实践。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.22372",
+      "title": "ASAP: Attention Sink Anchored Pruning"
+    },
+    {
+      "idx": 2,
+      "id": "2605.22731",
+      "title": "Post-Training is About States, Not Tokens: A State Distribution View of SFT, RL, and On-Policy Distillation"
+    },
+    {
+      "idx": 3,
+      "id": "2605.21560",
+      "title": "AutoMCU: Feasibility-First MCU Neural Network Customization via LLM-based Multi-Agent Systems"
+    },
+    {
+      "idx": 4,
+      "id": "2605.22779",
+      "title": "FAME: Failure-Aware Mixture-of-Experts for Message-Level Log Anomaly Detection"
+    },
+    {
+      "idx": 5,
+      "id": "2605.22535",
+      "title": "TerminalWorld: Benchmarking Agents on Real-World Terminal Tasks"
+    },
+    {
+      "idx": 6,
+      "id": "2605.21994",
+      "title": "Ex-GraphRAG: Interpretable Evidence Routing for Graph-Augmented LLMs"
+    },
+    {
+      "idx": 7,
+      "id": "2605.22106",
+      "title": "ArborKV: Structure-Aware KV Cache Management for Scaling Tree-based LLM Reasoning"
+    },
+    {
+      "idx": 8,
+      "id": "2605.22817",
+      "title": "Vector Policy Optimization: Training for Diversity Improves Test-Time Search"
+    },
+    {
+      "idx": 9,
+      "id": "2605.22794",
+      "title": "MOSS: Self-Evolution through Source-Level Rewriting in Autonomous Agent Systems"
+    },
+    {
+      "idx": 10,
+      "id": "2605.22331",
+      "title": "SepsisAI Orchestrator: A Containerized and Scalable Platform for Deploying AI Models and Real-Time Monitoring in Early Sepsis Detection"
+    },
+    {
+      "idx": 11,
+      "id": "2605.21832",
+      "title": "FLUID: From Ephemeral IDs to Multimodal Semantic Codes for Industrial-Scale Livestreaming Recommendation"
+    },
+    {
+      "idx": 12,
+      "id": "2605.21850",
+      "title": "ACC: Compiling Agent Trajectories for Long-Context Training"
+    },
+    {
+      "idx": 13,
+      "id": "2605.22791",
+      "title": "Gated DeltaNet-2: Decoupling Erase and Write in Linear Attention"
+    },
+    {
+      "idx": 14,
+      "id": "2605.22608",
+      "title": "Agentic CLEAR: Automating Multi-Level Evaluation of LLM Agents"
+    },
+    {
+      "idx": 15,
+      "id": "2605.21768",
+      "title": "Memory-R2: Fair Credit Assignment for Long-Horizon Memory-Augmented LLM Agents"
+    },
+    {
+      "idx": 16,
+      "id": "2605.21996",
+      "title": "From Patches to Trajectories: Privileged Process Supervision for Software-Engineering Agents"
+    },
+    {
+      "idx": 17,
+      "id": "2605.22778",
+      "title": "AI-Driven Multi-Region Provisioning for Cloud Services Using Spot Fleets"
+    },
+    {
+      "idx": 18,
+      "id": "2605.22634",
+      "title": "Contractual Skills: A GovernSpec Design Framework for Enterprise AI Agents"
+    },
+    {
+      "idx": 19,
+      "id": "2605.22775",
+      "title": "MambaGaze: Bidirectional Mamba with Explicit Missing Data Modeling for Cognitive Load Assessment from Eye-Gaze Tracking Data"
+    },
+    {
+      "idx": 20,
+      "id": "2605.22537",
+      "title": "F-TIS: Harnessing Diverse Models in Collaborative GRPO"
+    },
+    {
+      "idx": 21,
+      "id": "2605.22705",
+      "title": "Tokenization with Split Trees"
+    },
+    {
+      "idx": 22,
+      "id": "2605.22723",
+      "title": "The Value of Covariance Matching in Gaussian DDPMs and the Lanczos Sampler"
+    },
+    {
+      "idx": 23,
+      "id": "2605.22643",
+      "title": "Boiling the Frog: A Multi-Turn Benchmark for Agentic Safety"
+    },
+    {
+      "idx": 24,
+      "id": "2605.22337",
+      "title": "Meta-Soft: Leveraging Composable Meta-Tokens for Context-Preserving KV Cache Compression"
+    },
+    {
+      "idx": 25,
+      "id": "2605.21751",
+      "title": "Models Can Model, But Can't Bind: Structured Grounding in Text-to-Optimization"
+    },
+    {
+      "idx": 26,
+      "id": "2605.21930",
+      "title": "PITMuS: A Tool for Automated Bug Dataset Generation via Source-Level Mutant Reconstruction"
+    },
+    {
+      "idx": 27,
+      "id": "2605.22239",
+      "title": "An Architecture for Decentralised Deployment and Operation of Blockchain Applications"
+    },
+    {
+      "idx": 28,
+      "id": "2605.22188",
+      "title": "From Sequential Nodes to GPU Batches: Parallel Branch and Bound for Optimal $k$-Sparse GLMs"
+    },
+    {
+      "idx": 29,
+      "id": "2605.22662",
+      "title": "Claw AI Lab: An Autonomous Multi-Agent Research Team"
+    },
+    {
+      "idx": 30,
+      "id": "2605.22733",
+      "title": "HarnessAPI: A Skill-First Framework for Unified Streaming APIs and MCP Tools"
+    }
+  ]
+}
