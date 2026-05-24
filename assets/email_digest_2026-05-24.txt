@@ -1,0 +1,275 @@
+# 每日硬凑师兄要求的创新点 2026-05-24
+
+## 今日三个主题（结构化）
+1. **大语言模型推理效率与内存管理** — 围绕混合架构缓存分页（AVMP）、稀疏解码支持恢复（EntmaxKV）以及推理轨迹压缩（Meta-Soft），探讨如何从系统层和算法层协同降低长上下文推理的显存瓶颈与解码延迟。
+2. **大语言模型训练与后训练优化机制** — 聚焦优化器对表示谱缩放的影响（Same Architecture）、自适应 PID 优化器的收敛稳定性改进（AdaPID），以及通过自蒸馏与向量策略优化提升推理时搜索多样性与自我进化能力（Search-E1、VPO）。
+3. **大语言模型智能体系统与部署基础设施** — 涵盖智能体运行时日志溯源架构（ActiveGraph）、空闲时间推测规划（IdleSpec）、工作流图管理（GraphFlow）、确定性环境接口适配（Life-Harness）以及多区域 Spot 实例弹性供给（AI-Driven Multi-Region），系统性地提升智能体的可审计性、鲁棒性与部署经济性。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|:---:|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22432) | AMUSE: Anytime Muon with Stable Gradient Evaluation | 2605.22432 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22331) | SepsisAI Orchestrator: A Containerized and Scalable Platform for Deploying AI Models and Real-Time Monitoring in Early Sepsis Detection | 2605.22331 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21803) | Same Architecture, Different Capacity: Optimizer-Induced Spectral Scaling Laws | 2605.21803 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22188) | From Sequential Nodes to GPU Batches: Parallel Branch and Bound for Optimal k-Sparse GLMs | 2605.22188 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22778) | AI-Driven Multi-Region Provisioning for Cloud Services Using Spot Fleets | 2605.22778 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22014) | LiveR: Fine-Grained Elasticity via Live Reconfiguration for Model Training | 2605.22014 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22416) | Asymmetric Virtual Memory Paging for Hybrid Mamba-Transformer Inference | 2605.22416 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22608) | Agentic CLEAR: Automating Multi-Level Evaluation of LLM Agents | 2605.22608 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22337) | Meta-Soft: Leveraging Composable Meta-Tokens for Context-Preserving KV Cache Compression | 2605.22337 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22564) | SynAE: A Framework for Measuring the Quality of Synthetic Data for Tool-Calling Agent Evaluations | 2605.22564 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22817) | Vector Policy Optimization: Training for Diversity Improves Test-Time Search | 2605.22817 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22511) | Search-E1: Self-Distillation Drives Self-Evolution in Search-Augmented Reasoning | 2605.22511 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22205) | Skill Weaving: Efficient LLM Improvement via Modular Skillpacks | 2605.22205 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21996) | From Patches to Trajectories: Privileged Process Supervision for Software-Engineering Agents | 2605.21996 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21649) | EntmaxKV: Support-Aware Decoding for Entmax Attention | 2605.21649 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22566) | GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving | 2605.22566 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22154) | IdleSpec: Exploiting Idle Time via Speculative Planning for LLM Agents | 2605.22154 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22821) | Tokenisation via Convex Relaxations | 2605.22821 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21770) | Manifold-Guided Attention Steering | 2605.21770 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22166) | Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents | 2605.22166 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21850) | ACC: Compiling Agent Trajectories for Long-Context Training | 2605.21850 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22211) | CLORE: Content-Level Optimization for Reasoning Efficiency | 2605.22211 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22779) | FAME: Failure-Aware Mixture-of-Experts for Message-Level Log Anomaly Detection | 2605.22779 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21997) | The Log is the Agent: Event-Sourced Reactive Graphs for Auditable, Forkable Agentic Systems | 2605.21997 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22428) | Exploiting Multicast for Accelerating Collective Communication | 2605.22428 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21810) | Trace2Skill: Verifier-Guided Skill Evolution for Long-Context EDA Agents | 2605.21810 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21537) | Articulate but Wrong: Self-Review Failures in LLM-Based Code Modernization | 2605.21537 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21751) | Models Can Model, But Can't Bind: Structured Grounding in Text-to-Optimization | 2605.21751 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21968) | An Improved Adaptive PID Optimizer with Enhanced Convergence and Stability for Deep Learning | 2605.21968 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21558) | From Parameters to Data: A Task-Parameter-Guided Fine-Tuning Pipeline for Efficient LLM Alignment | 2605.21558 |
+
+---
+
+## 论文方向一：大语言模型推理效率与内存管理
+
+**拟定论文题目：** 面向混合架构与长上下文推理的协同内存管理与稀疏解码方法
+
+**论文核心问题：** 如何从系统层（缓存分页）和算法层（稀疏注意力）协同降低大语言模型在长上下文推理中的显存瓶颈与解码延迟，同时保证推理质量。
+
+### 创新点一：面向混合架构的非对称虚拟内存分页机制
+
+大多数现有方法将大语言模型推理中的缓存视为统一对象进行管理，使用统一的内存池或固定大小的页表，难以适配混合架构（如Mamba-Transformer）中KV缓存与SSM状态在增长模式和内存占用上的根本差异 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22416)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22337)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21649)。少数现有方法开始关注分池管理或动态分配，但通常采用静态双池策略，无法在请求分布变化时自适应地迁移容量，导致内存利用率低下 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22416)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22205)。为此，本文提出非对称虚拟内存分页（AVMP）机制，将两种缓存类型置于物理分离但虚拟地址统一的内存池中，并在分配失败时触发池间容量迁移，以在保持确定性行为的同时提高内存利用率和请求吞吐量 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22416)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22337)。
+
+- **创新类型：** 系统框架创新 + 资源管理创新
+- **创新性判断：** 该创新点基于文献池中 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22416) 的核心思想，但将其从单一混合模型推广为面向混合架构推理引擎的通用内存管理策略，并结合 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22337) 的压缩思想与 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21649) 的稀疏解码需求，具有明确的系统创新性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22416) | Asymmetric Virtual Memory Paging for Hybrid Mamba-Transformer Inference | 提出AVMP，分离KV缓存与SSM状态的内存池并支持迁移 | 支撑大多数现有方法（统一池）的局限与本文方法的核心来源 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22337) | Meta-Soft: Leveraging Composable Meta-Tokens for Context-Preserving KV Cache Compression | 提出动态KV缓存压缩框架 | 支撑大多数现有方法（固定压缩策略）的局限 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21649) | EntmaxKV: Support-Aware Decoding for Entmax Attention | 提出entmax原生稀疏解码框架 | 支撑少数现有方法（稀疏解码）的进展与剩余不足 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22205) | Skill Weaving: Efficient LLM Improvement via Modular Skillpacks | 提出模块化改进框架 | 支撑少数现有方法（模块化/分池管理）的进展 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22014) | LiveR: Fine-Grained Elasticity via Live Reconfiguration for Model Training | 提出训练时的实时重配置 | 支撑现有不足（动态迁移的挑战） |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22428) | Exploiting Multicast for Accelerating Collective Communication | 提出多播加速通信 | 支撑现有不足（通信瓶颈） |
+
+### 创新点二：支持感知的稀疏解码与缓存压缩协同方法
+
+大多数现有稀疏解码方法针对softmax注意力设计，其密集的尾部概率分布使得任何截断都会丢弃非零概率质量，导致近似误差 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21649)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22337)[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22416)。少数现有方法引入entmax注意力或动态压缩机制，但通常将稀疏解码与缓存压缩作为独立模块处理，未能在解码前利用稀疏性信息指导缓存加载，导致仍需要流式传输完整缓存 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21649)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22337)。为此，本文提出支持感知的稀疏解码与缓存压缩协同方法，在entmax注意力框架下，利用查询感知的页面评分和支持感知的候选选择，在KV页面加载前确定稀疏支持集，并结合动态压缩元令牌（Meta-Tokens）保留被丢弃上下文的语义信息，以实现精确且高效的稀疏解码 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21649)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22337)[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22416)。
+
+- **创新类型：** 方法设计创新 + 系统协同创新
+- **创新性判断：** 该创新点融合了 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21649) 的entmax稀疏解码与 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22337) 的元令牌压缩，并引入协同机制，解决了现有方法中稀疏性与压缩性分离的问题，具有明确的方法创新性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21649) | EntmaxKV: Support-Aware Decoding for Entmax Attention | 提出entmax原生稀疏解码框架 | 支撑大多数现有方法（softmax稀疏解码）的局限与本文方法的核心来源 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22337) | Meta-Soft: Leveraging Composable Meta-Tokens for Context-Preserving KV Cache Compression | 提出动态KV缓存压缩框架 | 支撑大多数现有方法（固定压缩策略）的局限 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22416) | Asymmetric Virtual Memory Paging for Hybrid Mamba-Transformer Inference | 提出AVMP内存管理 | 支撑少数现有方法（动态内存管理）的进展 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21770) | Manifold-Guided Attention Steering | 提出轨迹感知的注意力干预 | 支撑少数现有方法（注意力优化）的进展 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22211) | CLORE: Content-Level Optimization for Reasoning Efficiency | 提出内容级推理效率优化 | 支撑现有不足（推理效率与质量平衡） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21751) | Models Can Model, But Can't Bind: Structured Grounding in Text-to-Optimization | 提出结构化绑定方法 | 支撑现有不足（数据绑定与稀疏性的关系） |
+
+**该论文两个创新点之间的关系：**
+
+创新点一解决“系统层如何管理异构缓存”，创新点二解决“算法层如何实现精确稀疏解码”。二者属于同一篇论文主题（大语言模型推理效率），但分别对应系统资源管理与算法协同优化，不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 统一内存池基线、静态双池基线、标准softmax稀疏解码、独立压缩+解码方法
+- **实验数据或场景：** ShareGPT轨迹回放、合成长上下文推理负载（如文档问答、代码库检索）
+- **评价指标：** 内存占用、请求吞吐量、解码延迟、尾部时延、稀疏解码精度（概率质量保留率）
+- **消融实验：** 分离AVMP与协同解码、不同迁移触发策略、不同元令牌数量
+
+---
+
+## 论文方向二：大语言模型训练与后训练优化机制
+
+**拟定论文题目：** 面向表示谱缩放与收敛稳定性的自适应优化器设计与训练后多样性增强方法
+
+**论文核心问题：** 如何从优化器设计（谱缩放与收敛稳定性）和训练后策略（多样性增强与自我进化）两个层面提升大语言模型的训练效率与推理时搜索能力。
+
+### 创新点三：优化器诱导的表示谱缩放分析与自适应PID优化器
+
+大多数现有方法将优化器视为固定的训练细节，认为模型性能主要由架构、数据和计算量决定，忽略了优化器对表示谱缩放的深刻影响 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21803)[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22432)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21968)。少数现有方法开始关注优化器对训练动态的影响，如Muon通过正交化改进更新几何，或PID优化器通过控制理论缓解超调，但Muon会放大主导方向噪声，而AdaPID仍继承Adam的收敛与稳定性问题 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22432)[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21803)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21968)。为此，本文提出谱感知的自适应PID优化器（Spectral-Aware AdaPID），在AdaPID框架中集成非递增有效学习率机制以解决收敛问题，并引入基于梯度差异的调制函数以增强稳定性，同时利用表示谱缩放分析指导超参数选择，以实现更高效的训练 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21803)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21968)[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22432)。
+
+- **创新类型：** 方法设计创新 + 理论分析创新
+- **创新性判断：** 该创新点基于 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21803) 的谱缩放发现和 [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21968) 的AdaPID改进，将理论分析与算法设计结合，解决了现有优化器在谱缩放与收敛稳定性上的双重不足，具有明确的理论与方法创新性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21803) | Same Architecture, Different Capacity: Optimizer-Induced Spectral Scaling Laws | 发现不同优化器导致不同的表示谱缩放定律 | 支撑大多数现有方法（忽略优化器影响）的局限与本文理论分析基础 |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22432) | AMUSE: Anytime Muon with Stable Gradient Evaluation | 分析Muon的河流-山谷损失景观并提出AMUSE | 支撑大多数现有方法（Muon的局限）与少数现有方法（AMUSE的进展） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21968) | An Improved Adaptive PID Optimizer with Enhanced Convergence and Stability for Deep Learning | 提出改进的AdaPID优化器 | 支撑大多数现有方法（AdaPID的局限）与本文方法的核心来源 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22817) | Vector Policy Optimization: Training for Diversity Improves Test-Time Search | 提出向量策略优化 | 支撑少数现有方法（多样性训练）的进展 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22511) | Search-E1: Self-Distillation Drives Self-Evolution in Search-Augmented Reasoning | 提出自蒸馏自我进化方法 | 支撑少数现有方法（自我进化）的进展 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22211) | CLORE: Content-Level Optimization for Reasoning Efficiency | 提出内容级推理效率优化 | 支撑现有不足（训练与推理效率的平衡） |
+
+### 创新点四：向量奖励驱动的多样性策略优化与自蒸馏自我进化方法
+
+大多数现有方法在语言模型后训练中优化预定义的标量奖励，导致模型产生低熵响应分布，难以在推理时搜索中提供所需的多样性 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22817)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22511)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22211)。少数现有方法引入向量奖励或多目标优化，或通过自蒸馏实现自我进化，但向量策略优化（VPO）主要关注奖励多样性，而Search-E1的自蒸馏方法依赖标准GRPO，未显式优化响应多样性 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22817)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22511)。为此，本文提出向量奖励驱动的多样性策略优化与自蒸馏自我进化联合框架（VPO-SE），在VPO的向量奖励优势估计基础上，引入自蒸馏机制从正确轨迹中提取多样化推理模式，并通过离线自蒸馏（OFSD）将多样性知识注入策略，以同时提升推理时搜索的多样性与正确性 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22817)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22511)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22211)。
+
+- **创新类型：** 方法设计创新 + 训练策略创新
+- **创新性判断：** 该创新点融合了 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22817) 的向量奖励优化与 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22511) 的自蒸馏自我进化，并引入联合训练机制，解决了现有方法中多样性优化与自我进化分离的问题，具有明确的方法创新性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22817) | Vector Policy Optimization: Training for Diversity Improves Test-Time Search | 提出向量策略优化，训练模型产生多样化响应 | 支撑大多数现有方法（标量奖励）的局限与本文方法的核心来源 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22511) | Search-E1: Self-Distillation Drives Self-Evolution in Search-Augmented Reasoning | 提出自蒸馏自我进化方法 | 支撑大多数现有方法（外部监督）的局限与本文方法的核心来源 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22211) | CLORE: Content-Level Optimization for Reasoning Efficiency | 提出内容级推理效率优化 | 支撑少数现有方法（推理优化）的进展 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21803) | Same Architecture, Different Capacity: Optimizer-Induced Spectral Scaling Laws | 发现优化器对表示谱缩放的影响 | 支撑少数现有方法（优化器影响）的进展 |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22432) | AMUSE: Anytime Muon with Stable Gradient Evaluation | 提出稳定梯度评估的Muon变体 | 支撑现有不足（训练稳定性与多样性的平衡） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21968) | An Improved Adaptive PID Optimizer with Enhanced Convergence and Stability for Deep Learning | 提出改进的AdaPID优化器 | 支撑现有不足（收敛与稳定性问题） |
+
+**该论文两个创新点之间的关系：**
+
+创新点三解决“训练阶段如何优化表示谱与收敛稳定性”，创新点四解决“后训练阶段如何增强多样性以实现自我进化”。二者属于同一篇论文主题（训练与后训练优化），但分别对应优化器设计与训练后策略，不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** AdamW、Muon、AMUSE、AdaPID、标准GRPO、VPO、Search-E1
+- **实验数据或场景：** 代码生成（如HumanEval）、数学推理（如MATH）、多任务基准
+- **评价指标：** 训练损失、表示谱缩放指数（硬/软谱秩）、收敛速度、响应多样性（熵、n-gram多样性）、推理时搜索成功率（pass@k）
+- **消融实验：** 分离谱感知组件与多样性优化组件、不同向量奖励组合、不同自蒸馏策略
+
+---
+
+## 论文方向三：大语言模型智能体系统与部署基础设施
+
+**拟定论文题目：** 面向智能体可审计性与鲁棒性的日志溯源架构与运行时自适应接口方法
+
+**论文核心问题：** 如何从系统架构（日志溯源与确定性回放）和运行时接口（自适应环境适配）两个层面提升大语言模型智能体的可审计性、鲁棒性与部署经济性。
+
+### 创新点五：事件溯源的反应式图运行时与确定性回放机制
+
+大多数现有方法将语言模型置于智能体框架的中心，以对话循环为核心，工具、规则和日志层作为附加组件，导致状态持久化依赖可检索的“记忆”，难以实现确定性回放和端到端溯源 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21997)[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22608)[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22566)。少数现有方法开始关注日志优先或事件溯源架构，但通常将日志仅作为观测层，未将其作为状态的真实来源，且缺乏对分支（fork）和确定性重放的原生支持 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21997)[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22608)。为此，本文提出事件溯源的反应式图运行时（ActiveGraph），以仅追加的事件日志为真实来源，工作图作为日志的确定性投影，行为（函数、LLM例程）通过响应图变化发射新事件，从而实现任何运行的确定性重放、低成本分支以及从高层目标到单个模型调用的端到端溯源 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21997)[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22608)[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22566)。
+
+- **创新类型：** 系统框架创新 + 可审计性创新
+- **创新性判断：** 该创新点基于 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21997) 的核心思想，将其从概念架构扩展为完整的智能体运行时，并结合 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22608) 的多级评估与 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22566) 的工作流管理，解决了现有框架中可审计性与可回放性不足的问题，具有明确的系统创新性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21997) | The Log is the Agent: Event-Sourced Reactive Graphs for Auditable, Forkable Agentic Systems | 提出事件溯源的反应式图运行时 | 支撑大多数现有方法（模型中心架构）的局限与本文方法的核心来源 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22608) | Agentic CLEAR: Automating Multi-Level Evaluation of LLM Agents | 提出多级智能体评估框架 | 支撑大多数现有方法（基本观测能力）的局限 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22566) | GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving | 提出基于图的工作流管理 | 支撑少数现有方法（工作流管理）的进展 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22166) | Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents | 提出运行时接口适配 | 支撑少数现有方法（接口适配）的进展 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21996) | From Patches to Trajectories: Privileged Process Supervision for Software-Engineering Agents | 提出特权过程监督 | 支撑现有不足（轨迹质量与可审计性） |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21850) | ACC: Compiling Agent Trajectories for Long-Context Training | 提出智能体轨迹编译 | 支撑现有不足（轨迹利用与可审计性） |
+
+### 创新点六：生命周期感知的运行时接口适配与多区域弹性供给方法
+
+大多数现有方法通过更新模型参数来适应新环境，忽略了智能体失败往往源于模型-环境接口（如工具使用、反馈解释、轨迹控制）的不匹配 [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22166)[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22778)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22154)。少数现有方法开始关注运行时接口适配，如Life-Harness通过转换训练轨迹中的重复交互失败为可复用干预，但主要针对确定性环境，未考虑云环境中Spot实例的动态定价、中断风险和区域差异 [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22166)[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22778)。为此，本文提出生命周期感知的运行时接口适配与多区域弹性供给联合框架（Life-Harness-MultiRegion），在Life-Harness的接口适配基础上，集成AI驱动的多区域Spot实例供给预测模型，通过监控供给计划、预测舰队配置和价格，实现成本感知的跨区域部署决策，同时保持接口适配的鲁棒性 [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22166)[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22778)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22154)。
+
+- **创新类型：** 方法设计创新 + 部署经济性创新
+- **创新性判断：** 该创新点融合了 [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22166) 的运行时接口适配与 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22778) 的多区域Spot实例供给，并引入联合优化机制，解决了现有方法中接口适配与部署经济性分离的问题，具有明确的方法与系统创新性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22166) | Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents | 提出生命周期感知的运行时接口适配 | 支撑大多数现有方法（模型参数更新）的局限与本文方法的核心来源 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22778) | AI-Driven Multi-Region Provisioning for Cloud Services Using Spot Fleets | 提出AI驱动的多区域Spot实例供给 | 支撑大多数现有方法（单区域部署）的局限与本文方法的核心来源 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22154) | IdleSpec: Exploiting Idle Time via Speculative Planning for LLM Agents | 提出利用空闲时间的推测规划 | 支撑少数现有方法（空闲时间利用）的进展 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22014) | LiveR: Fine-Grained Elasticity via Live Reconfiguration for Model Training | 提出训练时的实时重配置 | 支撑少数现有方法（弹性重配置）的进展 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22331) | SepsisAI Orchestrator: A Containerized and Scalable Platform for Deploying AI Models | 提出容器化AI部署平台 | 支撑现有不足（部署标准化与可扩展性） |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22428) | Exploiting Multicast for Accelerating Collective Communication | 提出多播加速通信 | 支撑现有不足（通信效率与部署成本） |
+
+**该论文两个创新点之间的关系：**
+
+创新点五解决“系统架构如何保证可审计性与确定性”，创新点六解决“运行时如何自适应环境变化并优化部署成本”。二者属于同一篇论文主题（智能体系统与部署基础设施），但分别对应系统架构设计与运行时自适应，不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 标准对话循环框架、日志后处理框架、Life-Harness、单区域Spot部署、静态接口适配
+- **实验数据或场景：** τ-bench确定性环境、AgentBench、AWS多区域Spot实例模拟
+- **评价指标：** 确定性回放成功率、分支成本、端到端溯源完整性、接口适配成功率、部署成本节省、预测准确率
+- **消融实验：** 分离事件溯源与接口适配、不同迁移策略、不同供给预测模型
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|:---:|:---|:---|:---|:---|:---|:---|:---:|
+| 论文一 | 面向混合架构与长上下文推理的协同内存管理与稀疏解码方法 | 如何从系统层和算法层协同降低长上下文推理的显存瓶颈与解码延迟 | 非对称虚拟内存分页、支持感知的稀疏解码与缓存压缩协同 | 系统内存管理 + 算法协同优化 | 长上下文推理负载、ShareGPT轨迹回放 | 聚焦推理阶段的内存与延迟优化，与训练优化和智能体部署无关 | 低 |
+| 论文二 | 面向表示谱缩放与收敛稳定性的自适应优化器设计与训练后多样性增强方法 | 如何从优化器设计和训练后策略提升训练效率与推理时搜索能力 | 谱感知的自适应PID优化器、向量奖励驱动的多样性策略优化与自蒸馏 | 优化器设计 + 训练后策略 | 代码生成、数学推理、多任务基准 | 聚焦训练与后训练阶段的优化，与推理系统架构和智能体部署无关 | 低 |
+| 论文三 | 面向智能体可审计性与鲁棒性的日志溯源架构与运行时自适应接口方法 | 如何从系统架构和运行时接口提升智能体的可审计性、鲁棒性与部署经济性 | 事件溯源的反应式图运行时、生命周期感知的运行时接口适配与多区域弹性供给 | 系统架构设计 + 运行时自适应 | 确定性环境基准、云Spot实例模拟 | 聚焦智能体系统架构与部署，与模型训练和推理优化无关 | 低 |
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|:---:|:---|:---|:---:|:---:|:---:|:---:|
+| 论文一 | 非对称虚拟内存分页（系统层） | 支持感知的稀疏解码与缓存压缩协同（算法层） | 是 | 是 | 否 | 可保留 |
+| 论文二 | 谱感知的自适应PID优化器（训练阶段） | 向量奖励驱动的多样性策略优化与自蒸馏（后训练阶段） | 是 | 是 | 否 | 可保留 |
+| 论文三 | 事件溯源的反应式图运行时（系统架构） | 生命周期感知的运行时接口适配与多区域弹性供给（运行时自适应） | 是 | 是 | 否 | 可保留 |
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22432) AMUSE: Anytime Muon with Stable Gradient Evaluation. arXiv:2605.22432, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22331) SepsisAI Orchestrator: A Containerized and Scalable Platform for Deploying AI Models and Real-Time Monitoring in Early Sepsis Detection. arXiv:2605.22331, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21803) Same Architecture, Different Capacity: Optimizer-Induced Spectral Scaling Laws. arXiv:2605.21803, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22188) From Sequential Nodes to GPU Batches: Parallel Branch and Bound for Optimal k-Sparse GLMs. arXiv:2605.22188, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22778) AI-Driven Multi-Region Provisioning for Cloud Services Using Spot Fleets. arXiv:2605.22778, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22014) LiveR: Fine-Grained Elasticity via Live Reconfiguration for Model Training. arXiv:2605.22014, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22416) Asymmetric Virtual Memory Paging for Hybrid Mamba-Transformer Inference. arXiv:2605.22416, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22608) Agentic CLEAR: Automating Multi-Level Evaluation of LLM Agents. arXiv:2605.22608, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22337) Meta-Soft: Leveraging Composable Meta-Tokens for Context-Preserving KV Cache Compression. arXiv:2605.22337, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22564) SynAE: A Framework for Measuring the Quality of Synthetic Data for Tool-Calling Agent Evaluations. arXiv:2605.22564, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22817) Vector Policy Optimization: Training for Diversity Improves Test-Time Search. arXiv:2605.22817, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22511) Search-E1: Self-Distillation Drives Self-Evolution in Search-Augmented Reasoning. arXiv:2605.22511, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22205) Skill Weaving: Efficient LLM Improvement via Modular Skillpacks. arXiv:2605.22205, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21996) From Patches to Trajectories: Privileged Process Supervision for Software-Engineering Agents. arXiv:2605.21996, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21649) EntmaxKV: Support-Aware Decoding for Entmax Attention. arXiv:2605.21649, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22566) GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving. arXiv:2605.22566, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22154) IdleSpec: Exploiting Idle Time via Speculative Planning for LLM Agents. arXiv:2605.22154, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22821) Tokenisation via Convex Relaxations. arXiv:2605.22821, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21770) Manifold-Guided Attention Steering. arXiv:2605.21770, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22166) Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents. arXiv:2605.22166, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21850) ACC: Compiling Agent Trajectories for Long-Context Training. arXiv:2605.21850, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22211) CLORE: Content-Level Optimization for Reasoning Efficiency. arXiv:2605.22211, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22779) FAME: Failure-Aware Mixture-of-Experts for Message-Level Log Anomaly Detection. arXiv:2605.22779, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21997) The Log is the Agent: Event-Sourced Reactive Graphs for Auditable, Forkable Agentic Systems. arXiv:2605.21997, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.22428) Exploiting Multicast for Accelerating Collective Communication. arXiv:2605.22428, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21810) Trace2Skill: Verifier-Guided Skill Evolution for Long-Context EDA Agents. arXiv:2605.21810, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21537) Articulate but Wrong: Self-Review Failures in LLM-Based Code Modernization. arXiv:2605.21537, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21751) Models Can Model, But Can't Bind: Structured Grounding in Text-to-Optimization. arXiv:2605.21751, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21968) An Improved Adaptive PID Optimizer with Enhanced Convergence and Stability for Deep Learning. arXiv:2605.21968, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-24&paperId=2605.21558) From Parameters to Data: A Task-Parameter-Guided Fine-Tuning Pipeline for Efficient LLM Alignment. arXiv:2605.21558, 2026.
+
+## 自检结果
+
+1.  **是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：** 是
+2.  **是否避免将一篇论文拆成六个创新点：** 是
+3.  **是否避免生成六篇论文各一个创新点：** 是
+4.  **每篇论文内部两个创新点是否属于同一论文主题：** 是
+5.  **每篇论文内部两个创新点是否互补而不重复：** 是
+6.  **三篇论文之间是否研究问题不同：** 是
+7.  **三篇论文之间是否核心方法不同：** 是
+8.  **三篇论文之间是否实验验证重点不同：** 是
+9.  **每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：** 是
+10. **每个创新点是否至少引用3篇池内文献：** 是
+11. **是否说明每篇文献的支撑作用：** 是
+12. **是否避免“首次提出”“填补空白”等绝对化表述：** 是
+13. **是否建立三篇论文方向去重矩阵：** 是
+14. **是否建立每篇论文内部创新点去重检查表：** 是

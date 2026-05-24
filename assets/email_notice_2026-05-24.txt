@@ -1,0 +1,9 @@
+每日硬凑师兄要求的创新点 2026-05-24
+
+今日三个主题概要：
+1. 大语言模型推理效率与内存管理 — 围绕混合架构缓存分页（AVMP）、稀疏解码支持恢复（EntmaxKV）以及推理轨迹压缩（Meta-Soft），探讨如何从系统层和算法层协同降低长上下文推理的显存瓶颈与解码延迟。
+2. 大语言模型训练与后训练优化机制 — 聚焦优化器对表示谱缩放的影响（Same Architecture）、自适应 PID 优化器的收敛稳定性改进（AdaPID），以及通过自蒸馏与向量策略优化提升推理时搜索多样性与自我进化能力（Search-E1、VPO）。
+3. 大语言模型智能体系统与部署基础设施 — 涵盖智能体运行时日志溯源架构（ActiveGraph）、空闲时间推测规划（IdleSpec）、工作流图管理（GraphFlow）、确定性环境接口适配（Life-Harness）以及多区域 Spot 实例弹性供给（AI-Driven Multi-Region），系统性地提升智能体的可审计性、鲁棒性与部署经济性。
+
+完整创新点、矩阵与文献引用见：
+https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/digest-viewer.html?date=2026-05-24

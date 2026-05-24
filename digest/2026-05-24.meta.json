@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-24",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理效率与内存管理",
+      "blurb": "围绕混合架构缓存分页（AVMP）、稀疏解码支持恢复（EntmaxKV）以及推理轨迹压缩（Meta-Soft），探讨如何从系统层和算法层协同降低长上下文推理的显存瓶颈与解码延迟。"
+    },
+    {
+      "title": "大语言模型训练与后训练优化机制",
+      "blurb": "聚焦优化器对表示谱缩放的影响（Same Architecture）、自适应 PID 优化器的收敛稳定性改进（AdaPID），以及通过自蒸馏与向量策略优化提升推理时搜索多样性与自我进化能力（Search-E1、VPO）。"
+    },
+    {
+      "title": "大语言模型智能体系统与部署基础设施",
+      "blurb": "涵盖智能体运行时日志溯源架构（ActiveGraph）、空闲时间推测规划（IdleSpec）、工作流图管理（GraphFlow）、确定性环境接口适配（Life-Harness）以及多区域 Spot 实例弹性供给（AI-Driven Multi-Region），系统性地提升智能体的可审计性、鲁棒性与部署经济性。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.22432",
+      "title": "AMUSE: Anytime Muon with Stable Gradient Evaluation"
+    },
+    {
+      "idx": 2,
+      "id": "2605.22331",
+      "title": "SepsisAI Orchestrator: A Containerized and Scalable Platform for Deploying AI Models and Real-Time Monitoring in Early Sepsis Detection"
+    },
+    {
+      "idx": 3,
+      "id": "2605.21803",
+      "title": "Same Architecture, Different Capacity: Optimizer-Induced Spectral Scaling Laws"
+    },
+    {
+      "idx": 4,
+      "id": "2605.22188",
+      "title": "From Sequential Nodes to GPU Batches: Parallel Branch and Bound for Optimal $k$-Sparse GLMs"
+    },
+    {
+      "idx": 5,
+      "id": "2605.22778",
+      "title": "AI-Driven Multi-Region Provisioning for Cloud Services Using Spot Fleets"
+    },
+    {
+      "idx": 6,
+      "id": "2605.22014",
+      "title": "LiveR: Fine-Grained Elasticity via Live Reconfiguration for Model Training"
+    },
+    {
+      "idx": 7,
+      "id": "2605.22416",
+      "title": "Asymmetric Virtual Memory Paging for Hybrid Mamba-Transformer Inference"
+    },
+    {
+      "idx": 8,
+      "id": "2605.22608",
+      "title": "Agentic CLEAR: Automating Multi-Level Evaluation of LLM Agents"
+    },
+    {
+      "idx": 9,
+      "id": "2605.22337",
+      "title": "Meta-Soft: Leveraging Composable Meta-Tokens for Context-Preserving KV Cache Compression"
+    },
+    {
+      "idx": 10,
+      "id": "2605.22564",
+      "title": "SynAE: A Framework for Measuring the Quality of Synthetic Data for Tool-Calling Agent Evaluations"
+    },
+    {
+      "idx": 11,
+      "id": "2605.22817",
+      "title": "Vector Policy Optimization: Training for Diversity Improves Test-Time Search"
+    },
+    {
+      "idx": 12,
+      "id": "2605.22511",
+      "title": "Search-E1: Self-Distillation Drives Self-Evolution in Search-Augmented Reasoning"
+    },
+    {
+      "idx": 13,
+      "id": "2605.22205",
+      "title": "Skill Weaving: Efficient LLM Improvement via Modular Skillpacks"
+    },
+    {
+      "idx": 14,
+      "id": "2605.21996",
+      "title": "From Patches to Trajectories: Privileged Process Supervision for Software-Engineering Agents"
+    },
+    {
+      "idx": 15,
+      "id": "2605.21649",
+      "title": "EntmaxKV: Support-Aware Decoding for Entmax Attention"
+    },
+    {
+      "idx": 16,
+      "id": "2605.22566",
+      "title": "GraphFlow: A Graph-Based Workflow Management for Efficient LLM-Agent Serving"
+    },
+    {
+      "idx": 17,
+      "id": "2605.22154",
+      "title": "IdleSpec: Exploiting Idle Time via Speculative Planning for LLM Agents"
+    },
+    {
+      "idx": 18,
+      "id": "2605.22821",
+      "title": "Tokenisation via Convex Relaxations"
+    },
+    {
+      "idx": 19,
+      "id": "2605.21770",
+      "title": "Manifold-Guided Attention Steering"
+    },
+    {
+      "idx": 20,
+      "id": "2605.22166",
+      "title": "Adapting the Interface, Not the Model: Runtime Harness Adaptation for Deterministic LLM Agents"
+    },
+    {
+      "idx": 21,
+      "id": "2605.21850",
+      "title": "ACC: Compiling Agent Trajectories for Long-Context Training"
+    },
+    {
+      "idx": 22,
+      "id": "2605.22211",
+      "title": "CLORE: Content-Level Optimization for Reasoning Efficiency"
+    },
+    {
+      "idx": 23,
+      "id": "2605.22779",
+      "title": "FAME: Failure-Aware Mixture-of-Experts for Message-Level Log Anomaly Detection"
+    },
+    {
+      "idx": 24,
+      "id": "2605.21997",
+      "title": "The Log is the Agent: Event-Sourced Reactive Graphs for Auditable, Forkable Agentic Systems"
+    },
+    {
+      "idx": 25,
+      "id": "2605.22428",
+      "title": "Exploiting Multicast for Accelerating Collective Communication"
+    },
+    {
+      "idx": 26,
+      "id": "2605.21810",
+      "title": "Trace2Skill: Verifier-Guided Skill Evolution for Long-Context EDA Agents"
+    },
+    {
+      "idx": 27,
+      "id": "2605.21537",
+      "title": "Articulate but Wrong: Self-Review Failures in LLM-Based Code Modernization"
+    },
+    {
+      "idx": 28,
+      "id": "2605.21751",
+      "title": "Models Can Model, But Can't Bind: Structured Grounding in Text-to-Optimization"
+    },
+    {
+      "idx": 29,
+      "id": "2605.21968",
+      "title": "An Improved Adaptive PID Optimizer with Enhanced Convergence and Stability for Deep Learning"
+    },
+    {
+      "idx": 30,
+      "id": "2605.21558",
+      "title": "From Parameters to Data: A Task-Parameter-Guided Fine-Tuning Pipeline for Efficient LLM Alignment"
+    }
+  ]
+}
