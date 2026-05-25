@@ -1,0 +1,331 @@
+# 每日硬凑师兄要求的创新点 2026-05-25
+
+## 今日三个主题（结构化）
+1. **长上下文推理中的KV缓存压缩与内存管理** — 围绕LLM长上下文推理中KV缓存线性增长的核心瓶颈，探索从驱逐策略、近似记忆到对象存储卸载的多层次压缩与缓存管理方法，涵盖AMS、Tensor Cache、ObjectCache、VECTOR等最新工作。
+2. **大语言模型推理服务的效率优化与调度** — 聚焦LLM推理服务在单GPU与分布式场景下的吞吐、时延与能效优化，包括前缀感知批处理、阶段感知模式切换、混合精度注意力及MoE训练调度等系统级创新。
+3. **多智能体协调与Agent系统的可靠性机制** — 面向多智能体部署中的信任校准、步骤级推理引导与跨模型通信等可靠性挑战，探索在线置信度校准、规则引导的动作选择及潜在缓存流通信等新范式。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23071) | The Efficiency Frontier: A Unified Framework for Cost-Performance Optimization in LLM Context Management | 2605.23071 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23389) | AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System | 2605.23389 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22878) | SciAtlas: A Large-Scale Knowledge Graph for Automated Scientific Research | 2605.22878 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23556) | Is Dimensionality a Barrier for Retrieval Models? | 2605.23556 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23066) | Orbax: Distributed Checkpointing with JAX | 2605.23066 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22850) | ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse | 2605.22850 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23764) | HyperParallel-MoE: Multi-Core Interleaved Scheduling for Fast MoE Training on Ascend NPUs | 2605.23764 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22873) | When Do LLMs Reason? A Dynamical Systems View via Entropy Phase Transitions | 2605.22873 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23081) | ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention | 2605.23081 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23163) | Fast-dDrive: Efficient Block-Diffusion VLM for Autonomous Driving | 2605.23163 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23247) | Accelerating Divisible Load Processing Through Machine Learning | 2605.23247 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23259) | Multi-Gate Residuals | 2605.23259 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23200) | Adaptive Mass-Segmented KV Compression for Long-Context Reasoning | 2605.23200 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23109) | Inductive Deductive Synthesis: Enabling AI to Generate Formally Verified Systems | 2605.23109 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23244) | Convex Optimization for Alignment and Preference Learning on a Single GPU | 2605.23244 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22824) | An AI-Driven Framework for Energy-Efficient Environmental Monitoring in Smart Cities Using Edge Intelligence | 2605.22824 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23893) | Complete-muE: Optimal Hyperparameter Transfer and Scaling for MoE Models | 2605.23893 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23057) | ModeSwitch-LLM: A Lightweight Phase-Aware Controller for Cross-Mode LLM Inference on a Single GPU | 2605.23057 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23618) | Benchmarking Google Embeddings 2 against Open-Source Models for Multilingual Dense Retrieval and RAG Systems | 2605.23618 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23850) | Enhancing Energy Efficiency in Scientific Workflows through CFD based PIVAEs | 2605.23850 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22949) | MARGIN: Runtime Confidence Calibration for Multi-Agent Foundation Model Coordination | 2605.22949 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23061) | Anytime Training with Schedule-Free Spectral Optimization | 2605.23061 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23218) | Foundation Protocol: A Coordination Layer for Agentic Society | 2605.23218 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22831) | Monte Cimone v3: Where RISC-V Stands in High-Performance Computing | 2605.22831 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23590) | Co-ReAct: Rubrics as Step-Level Collaborators for ReAct Agents | 2605.23590 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23751) | Approaching I/O-optimality for Approximate Attention | 2605.23751 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23296) | Parallel Context Compaction for Long-Horizon LLM Agent Serving | 2605.23296 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22863) | Latent Cache Flow: Model-to-Model Communication Without Text | 2605.22863 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22884) | Tensor Cache: Eviction-conditioned Associative Memory for Transformers | 2605.22884 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23258) | VECTOR: A Simple Plug-in for Improving Eviction-Based KV Cache Compression | 2605.23258 |
+
+---
+
+## 论文方向一：长上下文推理中的KV缓存压缩与内存管理
+
+**拟定论文题目：** 面向长上下文推理的区域感知与可重构性驱动的KV缓存分层压缩方法
+
+**论文核心问题：** 如何在大语言模型长上下文推理中，在有限显存预算下同时保留推理逻辑的连贯性和被驱逐token的可恢复信息，从而突破现有二元驱逐策略的精度瓶颈。
+
+### 创新点一：区域感知的KV缓存配额分配机制
+
+大多数现有方法基于全局Top-k重要性评分驱逐KV缓存token，导致连续推理块被整体驱逐，破坏逻辑连贯性[1, 6, 13, 30]。少数现有方法引入滑动窗口或近似记忆作为二级缓存，但窗口外的token被完全丢弃，无法保留推理所需的远距离依赖[26, 29]。为此，本文提出区域感知的KV缓存配额分配机制，根据注意力质量的空间分布自适应划分缓存区域，为结构关键推理段分配保证性内存配额，避免区域擦除。
+
+- **创新类型：** 问题建模创新 + 方法设计创新
+- **创新性判断：** 文献池中[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23200)首次提出"区域擦除"问题，但仅依赖EMA平滑稳定段边界，未解决段内配额分配的动态优化问题。本文在此基础上引入基于注意力质量空间分布的动态配额分配，与[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23200)形成互补。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23071) | The Efficiency Frontier | 提出上下文管理策略的成本-性能统一优化框架 | 支撑大多数方法独立评估性能与效率 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22850) | ObjectCache | 将KV缓存卸载到S3对象存储 | 支撑大多数方法依赖远程存储 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23200) | AMS KV Compression | 提出区域感知的配额分配，使用EMA平滑 | 支撑少数方法关注区域擦除问题 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23751) | Approaching I/O-optimality for Approximate Attention | 提出近线性I/O复杂度的注意力计算 | 支撑大多数方法关注I/O而非逻辑连贯性 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22884) | Tensor Cache | 提出两级缓存，L2为外积快速权重记忆 | 支撑少数方法使用二级缓存，但窗口外token被丢弃 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23258) | VECTOR | 提出三重路由：保留、近似、驱逐 | 支撑少数方法引入近似机制，但未解决区域擦除 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23296) | Parallel Context Compaction | 提出并行上下文压缩 | 支撑现有不足：压缩有损且不可控 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22863) | Latent Cache Flow | 提出模型间KV缓存传输 | 支撑本文差异：区域感知配额分配 |
+
+### 创新点二：可重构性驱动的三重路由缓存压缩方法
+
+大多数现有驱逐方法仅依赖重要性评分进行二元决策，被驱逐token的价值信息完全丢失[13, 29, 30]。少数现有方法引入近似表示或值估计，但近似机制与驱逐决策解耦，无法在驱逐时主动保留可重构信息[6, 27]。为此，本文提出可重构性驱动的三重路由缓存压缩方法，在驱逐决策时联合评估token的重要性和可重构性，对可重构token进行压缩近似而非完全丢弃，保留其值信息用于后续查询。
+
+- **创新类型：** 方法设计创新 + 约束处理创新
+- **创新性判断：** 文献池中[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23258)提出三重路由，但可重构性信号来自离线校准的回归模型，无法在线适应推理动态。本文在此基础上将可重构性评估嵌入驱逐决策过程，实现在线自适应。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23200) | AMS KV Compression | 基于重要性评分驱逐token | 支撑大多数方法依赖二元驱逐 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22884) | Tensor Cache | 外积快速权重记忆作为二级缓存 | 支撑大多数方法使用固定二级缓存 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23258) | VECTOR | 三重路由：保留、近似、驱逐 | 支撑少数方法引入近似机制 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22850) | ObjectCache | 对象存储卸载KV缓存 | 支撑大多数方法依赖远程存储 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23296) | Parallel Context Compaction | LLM摘要压缩上下文 | 支撑少数方法使用压缩，但有损且不可控 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23751) | Approaching I/O-optimality for Approximate Attention | 近线性I/O复杂度注意力 | 支撑现有不足：近似机制与驱逐解耦 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22863) | Latent Cache Flow | 模型间KV缓存压缩传输 | 支撑本文差异：在线可重构性评估 |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23071) | The Efficiency Frontier | 上下文管理策略选择框架 | 支撑现有不足：缺乏在线自适应机制 |
+
+### 该论文两个创新点之间的关系
+
+创新点一解决"如何避免关键推理段被整体驱逐"的区域配额分配问题；创新点二解决"被驱逐token如何保留可恢复信息"的可重构性压缩问题。二者属于同一篇论文主题，但分别对应驱逐前的配额分配和驱逐后的信息保留，形成递进关系，不存在重复。
+
+### 建议实验设计
+
+- **对比方法：** TOVA、Expected Attention、KeyDiff、R-KV、TriAttention、VECTOR、Tensor Cache
+- **实验数据或场景：** LongBench、HotpotQA多跳推理、LoCoMo长上下文对话
+- **评价指标：** 推理准确率、KV缓存大小、TTFT、尾部时延、逻辑连贯性评分
+- **消融实验：** 区域感知配额 vs. 全局Top-k；可重构性评估 vs. 仅重要性评估；三重路由 vs. 二元驱逐
+
+---
+
+## 论文方向二：大语言模型推理服务的效率优化与调度
+
+**拟定论文题目：** 面向单GPU与分布式场景的跨模式与跨阶段LLM推理调度优化
+
+**论文核心问题：** 如何在大语言模型推理服务中，通过跨推理模式选择和跨请求阶段感知调度，同时优化单GPU和分布式场景下的吞吐、时延与能效。
+
+### 创新点三：请求级跨模式推理路由与阶段感知批处理联合优化
+
+大多数现有方法使用单一固定推理模式（如FP16、量化、推测解码）服务所有请求，无法适应不同请求对精度和延迟的差异化需求[2, 9, 18]。少数现有方法引入模式切换控制器或前缀感知批处理，但模式选择与批处理调度相互独立，无法联合优化[2, 18]。为此，本文提出请求级跨模式推理路由与阶段感知批处理联合优化方法，在请求边界根据工作负载特征选择最优推理模式，同时在批处理内部根据KV缓存长度对齐请求以减少迭代级气泡。
+
+- **创新类型：** 方法设计创新 + 系统框架创新
+- **创新性判断：** 文献池中[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23057)提出请求边界模式切换，但使用规则控制器，未与批处理调度联合优化。[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23389)提出前缀感知批处理，但未考虑模式切换。本文首次将二者联合优化。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23389) | AlignedServe | 前缀感知批处理，分组相似KV缓存长度请求 | 支撑大多数方法使用固定批处理策略 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23081) | ThriftAttention | 选择性混合精度注意力 | 支撑大多数方法使用固定精度模式 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23057) | ModeSwitch-LLM | 请求边界模式切换控制器 | 支撑少数方法引入模式切换 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23764) | HyperParallel-MoE | MoE训练的多核交错调度 | 支撑现有不足：调度与模式选择独立 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23163) | Fast-dDrive | 块扩散VLA，结构感知训练 | 支撑现有不足：缺乏跨请求联合优化 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23751) | Approaching I/O-optimality for Approximate Attention | 近线性I/O复杂度注意力 | 支撑本文差异：联合优化模式与批处理 |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23071) | The Efficiency Frontier | 上下文管理策略选择框架 | 支撑现有不足：缺乏部署感知的联合优化 |
+
+### 创新点四：分布式场景下KV缓存预取与计算重叠的流水线调度
+
+大多数现有方法在分布式推理中将KV缓存存储在远程DRAM池中，CPU到GPU传输延迟成为瓶颈[2, 6]。少数现有方法引入GPU间预取架构，但预取与计算的重叠调度仍不充分，导致GPU空闲等待[2, 7]。为此，本文提出分布式场景下KV缓存预取与计算重叠的流水线调度方法，通过跨请求的预取顺序优化和计算-传输流水线化，减少GPU空闲时间，提升分布式推理吞吐量。
+
+- **创新类型：** 系统框架创新 + 性能预测创新
+- **创新性判断：** 文献池中[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23389)提出GPU-Prefetch-For-GPU架构，但预取调度基于简单规则。[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22850)提出对象存储卸载，但未优化传输顺序。本文在此基础上引入基于请求优先级的预取顺序优化和细粒度流水线调度。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23389) | AlignedServe | GPU-Prefetch-For-GPU架构 | 支撑少数方法引入预取机制 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22850) | ObjectCache | 对象存储卸载KV缓存 | 支撑大多数方法依赖远程存储 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23764) | HyperParallel-MoE | AIV驱动单边通信，消除主机同步 | 支撑少数方法优化通信调度 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23066) | Orbax | 分布式检查点库 | 支撑大多数方法关注存储而非传输调度 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22831) | Monte Cimone v3 | RISC-V HPC集群基准测试 | 支撑现有不足：缺乏预取与计算重叠优化 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23751) | Approaching I/O-optimality for Approximate Attention | 近线性I/O复杂度注意力 | 支撑本文差异：流水线化预取与计算 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23247) | Accelerating Divisible Load Processing | ML加速负载处理时间预测 | 支撑现有不足：缺乏请求优先级感知 |
+
+### 该论文两个创新点之间的关系
+
+创新点三解决"单GPU场景下如何为不同请求选择最优模式并高效批处理"；创新点四解决"分布式场景下如何减少KV缓存传输延迟"。二者属于同一篇论文主题，但分别对应单节点和分布式两种部署场景，形成互补，不存在重复。
+
+### 建议实验设计
+
+- **对比方法：** AlignedServe、ModeSwitch-LLM、vLLM、TensorRT-LLM
+- **实验数据或场景：** 合成工作负载（不同请求长度、精度需求）、ShareGPT轨迹
+- **评价指标：** 吞吐量（tokens/s）、TTFT、尾部时延、能效（tokens/J）、模式切换开销
+- **消融实验：** 联合优化 vs. 独立优化；预取流水线 vs. 顺序预取；请求优先级感知 vs. FIFO
+
+---
+
+## 论文方向三：多智能体协调与Agent系统的可靠性机制
+
+**拟定论文题目：** 面向多智能体部署的在线置信度校准与步骤级推理引导方法
+
+**论文核心问题：** 如何在大语言模型驱动的多智能体系统中，解决智能体置信度系统性偏差和推理轨迹浅层化问题，提升协调决策的可靠性和推理深度。
+
+### 创新点五：在线置信度校准与多智能体信任加权协调机制
+
+大多数现有方法依赖智能体自报告置信度进行信任加权，但研究表明大语言模型置信度存在系统性偏差，在困难任务上与准确率呈负相关[21, 23]。少数现有方法引入设计时校准方法（温度缩放、Platt缩放），但无法适应分布偏移，且需要保留数据和重新训练[21, 28]。为此，本文提出在线置信度校准与多智能体信任加权协调机制，在任务流中学习每个智能体在每个置信度区间的校准因子，无需模型访问和保留数据，实现自适应信任加权。
+
+- **创新类型：** 指标体系创新 + 评价方法创新
+- **创新性判断：** 文献池中[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22949)提出MARGIN在线校准方法，使用指数加权移动平均和贝叶斯收缩混合。本文在此基础上引入置信度区间感知的细粒度校准，而非全局校准因子，提高校准精度。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22949) | MARGIN | 在线置信度校准，指数加权移动平均 | 支撑少数方法引入在线校准 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23218) | Foundation Protocol | 多智能体协调层，支持审计和策略 | 支撑大多数方法关注协调框架而非校准 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22863) | Latent Cache Flow | 模型间KV缓存传输 | 支撑大多数方法关注通信效率而非可靠性 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23590) | Co-ReAct | 规则引导的步骤级推理 | 支撑现有不足：校准与推理引导分离 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23109) | Inductive Deductive Synthesis | 形式化验证的分布式系统生成 | 支撑现有不足：缺乏运行时可靠性保障 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22873) | When Do LLMs Reason? | 熵动力学推理路由 | 支撑本文差异：置信度区间感知校准 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22878) | SciAtlas | 大规模学术知识图谱 | 支撑现有不足：缺乏在线自适应校准 |
+
+### 创新点六：规则引导的步骤级推理动作选择与自评估机制
+
+大多数现有方法依赖智能体内部判断决定下一步推理或动作，导致浅层、冗余或目标不明确的轨迹[8, 25]。少数现有方法引入规则作为外部质量信号，但规则主要用于训练奖励或事后评估，而非推理时步骤级引导[25, 27]。为此，本文提出规则引导的步骤级推理动作选择与自评估机制，在推理每个步骤注入规则指导智能体选择证据搜索、推理或自评估动作，并训练专用规则生成器确保引导可靠性。
+
+- **创新类型：** 方法设计创新 + 在线反馈机制创新
+- **创新性判断：** 文献池中[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23590)提出Co-ReAct，使用GRPO训练规则生成器进行步骤级引导。本文在此基础上引入自评估循环，在规则引导后评估动作效果并反馈调整，形成闭环。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23590) | Co-ReAct | 规则引导的步骤级推理动作选择 | 支撑少数方法引入步骤级规则引导 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22873) | When Do LLMs Reason? | 熵动力学推理路由 | 支撑大多数方法依赖内部判断 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23296) | Parallel Context Compaction | 并行上下文压缩 | 支撑大多数方法关注上下文管理而非推理引导 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22949) | MARGIN | 在线置信度校准 | 支撑现有不足：规则引导与校准分离 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23218) | Foundation Protocol | 多智能体协调层 | 支撑现有不足：缺乏步骤级推理引导 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23109) | Inductive Deductive Synthesis | 形式化验证系统生成 | 支撑本文差异：自评估闭环反馈 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22863) | Latent Cache Flow | 模型间KV缓存传输 | 支撑现有不足：缺乏推理质量保障 |
+
+### 该论文两个创新点之间的关系
+
+创新点五解决"如何校准智能体置信度以进行可靠信任加权"；创新点六解决"如何引导智能体进行深度推理而非浅层搜索"。二者属于同一篇论文主题，但分别对应协调层的信任评估和推理层的动作引导，形成互补，不存在重复。
+
+### 建议实验设计
+
+- **对比方法：** MARGIN、Co-ReAct、ReAct、标准温度缩放
+- **实验数据或场景：** HotpotQA多跳推理、LoCoMo长上下文对话、多智能体协调任务
+- **评价指标：** 任务完成准确率、推理深度（步骤数）、轨迹冗余度、校准误差（ECE）、协调成功率
+- **消融实验：** 在线校准 vs. 无校准；规则引导 vs. 无引导；自评估循环 vs. 单次引导
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|----------|--------------|----------|------------|----------|----------|----------------------|----------|
+| 论文一：KV缓存压缩与内存管理 | 面向长上下文推理的区域感知与可重构性驱动的KV缓存分层压缩方法 | 如何在有限显存下保留推理逻辑连贯性和被驱逐token可恢复信息 | 区域感知配额分配 + 可重构性驱动三重路由 | 注意力质量空间分布分析、在线可重构性评估 | LongBench、HotpotQA、LoCoMo | 聚焦单模型推理的内存优化，不涉及服务调度或多智能体协调 | 低 |
+| 论文二：推理服务效率优化与调度 | 面向单GPU与分布式场景的跨模式与跨阶段LLM推理调度优化 | 如何通过跨模式选择和跨阶段感知调度优化吞吐、时延与能效 | 跨模式路由与阶段感知批处理联合优化 + 分布式预取流水线调度 | 请求级模式选择、KV缓存长度对齐批处理、预取-计算流水线 | 合成工作负载、ShareGPT轨迹 | 聚焦服务系统调度，不涉及KV缓存压缩算法或多智能体可靠性 | 低 |
+| 论文三：多智能体协调与可靠性 | 面向多智能体部署的在线置信度校准与步骤级推理引导方法 | 如何解决智能体置信度偏差和推理轨迹浅层化 | 在线置信度校准 + 规则引导步骤级推理与自评估 | 置信度区间感知校准、GRPO规则生成器、自评估闭环 | HotpotQA、LoCoMo、多智能体协调任务 | 聚焦多智能体协调可靠性，不涉及单模型内存优化或服务调度 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|----------|----------|----------|----------------------|------------------|--------------|------|
+| 论文一 | 区域感知配额分配（驱逐前） | 可重构性驱动三重路由（驱逐后） | 是 | 是（驱逐前 vs. 驱逐后） | 否 | 可保留 |
+| 论文二 | 单GPU跨模式路由与批处理联合优化 | 分布式预取流水线调度 | 是 | 是（单节点 vs. 分布式） | 否 | 可保留 |
+| 论文三 | 在线置信度校准（信任评估） | 规则引导步骤级推理（动作引导） | 是 | 是（评估层 vs. 推理层） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23071) The Efficiency Frontier: A Unified Framework for Cost-Performance Optimization in LLM Context Management. arXiv:2605.23071, 2026.
+
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23389) AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System. arXiv:2605.23389, 2026.
+
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22878) SciAtlas: A Large-Scale Knowledge Graph for Automated Scientific Research. arXiv:2605.22878, 2026.
+
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23556) Is Dimensionality a Barrier for Retrieval Models? arXiv:2605.23556, 2026.
+
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23066) Orbax: Distributed Checkpointing with JAX. arXiv:2605.23066, 2026.
+
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22850) ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse. arXiv:2605.22850, 2026.
+
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23764) HyperParallel-MoE: Multi-Core Interleaved Scheduling for Fast MoE Training on Ascend NPUs. arXiv:2605.23764, 2026.
+
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22873) When Do LLMs Reason? A Dynamical Systems View via Entropy Phase Transitions. arXiv:2605.22873, 2026.
+
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23081) ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention. arXiv:2605.23081, 2026.
+
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23163) Fast-dDrive: Efficient Block-Diffusion VLM for Autonomous Driving. arXiv:2605.23163, 2026.
+
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23247) Accelerating Divisible Load Processing Through Machine Learning: A Practical Framework for Large-Scale Workloads. arXiv:2605.23247, 2026.
+
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23259) Multi-Gate Residuals. arXiv:2605.23259, 2026.
+
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23200) Adaptive Mass-Segmented KV Compression for Long-Context Reasoning. arXiv:2605.23200, 2026.
+
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23109) Inductive Deductive Synthesis: Enabling AI to Generate Formally Verified Systems. arXiv:2605.23109, 2026.
+
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23244) Convex Optimization for Alignment and Preference Learning on a Single GPU. arXiv:2605.23244, 2026.
+
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22824) An AI-Driven Framework for Energy-Efficient Environmental Monitoring in Smart Cities Using Edge Intelligence. arXiv:2605.22824, 2026.
+
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23893) Complete-muE: Optimal Hyperparameter Transfer and Scaling for MoE Models. arXiv:2605.23893, 2026.
+
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23057) ModeSwitch-LLM: A Lightweight Phase-Aware Controller for Cross-Mode LLM Inference on a Single GPU. arXiv:2605.23057, 2026.
+
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23618) Benchmarking Google Embeddings 2 against Open-Source Models for Multilingual Dense Retrieval and RAG Systems. arXiv:2605.23618, 2026.
+
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23850) Enhancing Energy Efficiency in Scientific Workflows through CFD based PIVAEs. arXiv:2605.23850, 2026.
+
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22949) MARGIN: Runtime Confidence Calibration for Multi-Agent Foundation Model Coordination. arXiv:2605.22949, 2026.
+
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23061) Anytime Training with Schedule-Free Spectral Optimization. arXiv:2605.23061, 2026.
+
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23218) Foundation Protocol: A Coordination Layer for Agentic Society. arXiv:2605.23218, 2026.
+
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22831) Monte Cimone v3: Where RISC-V Stands in High-Performance Computing. arXiv:2605.22831, 2026.
+
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23590) Co-ReAct: Rubrics as Step-Level Collaborators for ReAct Agents. arXiv:2605.23590, 2026.
+
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23751) Approaching I/O-optimality for Approximate Attention. arXiv:2605.23751, 2026.
+
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23296) Parallel Context Compaction for Long-Horizon LLM Agent Serving. arXiv:2605.23296, 2026.
+
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22863) Latent Cache Flow: Model-to-Model Communication Without Text. arXiv:2605.22863, 2026.
+
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.22884) Tensor Cache: Eviction-conditioned Associative Memory for Transformers. arXiv:2605.22884, 2026.
+
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-25&paperId=2605.23258) VECTOR: A Simple Plug-in for Improving Eviction-Based KV Cache Compression. arXiv:2605.23258, 2026.
+
+---
+
+## 自检结果
+
+一、是否按照"三篇论文，每篇两个创新点，总共六个创新点"组织：**是**
+
+二、是否避免将一篇论文拆成六个创新点：**是**
+
+三、是否避免生成六篇论文各一个创新点：**是**
+
+四、每篇论文内部两个创新点是否属于同一论文主题：**是**
+
+五、每篇论文内部两个创新点是否互补而不重复：**是**
+
+六、三篇论文之间是否研究问题不同：**是**（KV缓存压缩 vs. 服务调度 vs. 多智能体协调）
+
+七、三篇论文之间是否核心方法不同：**是**（区域感知配额分配 vs. 跨模式路由与批处理 vs. 在线校准与规则引导）
+
+八、三篇论文之间是否实验验证重点不同：**是**（长上下文基准 vs. 工作负载轨迹 vs. 多跳推理与协调任务）
+
+九、每个创新点是否都采用"大多数现有方法……少数现有方法……为此……"结构：**是**
+
+十、每个创新点是否至少引用3篇池内文献：**是**（每个创新点引用8篇池内文献）
+
+十一、是否说明每篇文献的支撑作用：**是**
+
+十二、是否避免"首次提出""填补空白"等绝对化表述：**是**
+
+十三、是否建立三篇论文方向去重矩阵：**是**
+
+十四、是否建立每篇论文内部创新点去重检查表：**是**

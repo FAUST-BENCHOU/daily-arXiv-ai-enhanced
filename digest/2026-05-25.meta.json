@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-25",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "长上下文推理中的KV缓存压缩与内存管理",
+      "blurb": "围绕LLM长上下文推理中KV缓存线性增长的核心瓶颈，探索从驱逐策略、近似记忆到对象存储卸载的多层次压缩与缓存管理方法，涵盖AMS、Tensor Cache、ObjectCache、VECTOR等最新工作。"
+    },
+    {
+      "title": "大语言模型推理服务的效率优化与调度",
+      "blurb": "聚焦LLM推理服务在单GPU与分布式场景下的吞吐、时延与能效优化，包括前缀感知批处理、阶段感知模式切换、混合精度注意力及MoE训练调度等系统级创新。"
+    },
+    {
+      "title": "多智能体协调与Agent系统的可靠性机制",
+      "blurb": "面向多智能体部署中的信任校准、步骤级推理引导与跨模型通信等可靠性挑战，探索在线置信度校准、规则引导的动作选择及潜在缓存流通信等新范式。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.23071",
+      "title": "The Efficiency Frontier: A Unified Framework for Cost-Performance Optimization in LLM Context Management"
+    },
+    {
+      "idx": 2,
+      "id": "2605.23389",
+      "title": "AlignedServe: Orchestrating Prefix-aware Batching to Build a High-throughput and Computing-efficient LLM Serving System"
+    },
+    {
+      "idx": 3,
+      "id": "2605.22878",
+      "title": "SciAtlas: A Large-Scale Knowledge Graph for Automated Scientific Research"
+    },
+    {
+      "idx": 4,
+      "id": "2605.23556",
+      "title": "Is Dimensionality a Barrier for Retrieval Models?"
+    },
+    {
+      "idx": 5,
+      "id": "2605.23066",
+      "title": "Orbax: Distributed Checkpointing with JAX"
+    },
+    {
+      "idx": 6,
+      "id": "2605.22850",
+      "title": "ObjectCache: Layerwise Object-Storage Retrieval for KV Cache Reuse"
+    },
+    {
+      "idx": 7,
+      "id": "2605.23764",
+      "title": "HyperParallel-MoE: Multi-Core Interleaved Scheduling for Fast MoE Training on Ascend NPUs"
+    },
+    {
+      "idx": 8,
+      "id": "2605.22873",
+      "title": "When Do LLMs Reason? A Dynamical Systems View via Entropy Phase Transitions"
+    },
+    {
+      "idx": 9,
+      "id": "2605.23081",
+      "title": "ThriftAttention: Selective Mixed Precision for Long-Context FP4 Attention"
+    },
+    {
+      "idx": 10,
+      "id": "2605.23163",
+      "title": "Fast-dDrive: Efficient Block-Diffusion VLM for Autonomous Driving"
+    },
+    {
+      "idx": 11,
+      "id": "2605.23247",
+      "title": "Accelerating Divisible Load Processing Through Machine Learning: A Practical Framework for Large-Scale Workloads"
+    },
+    {
+      "idx": 12,
+      "id": "2605.23259",
+      "title": "Multi-Gate Residuals"
+    },
+    {
+      "idx": 13,
+      "id": "2605.23200",
+      "title": "Adaptive Mass-Segmented KV Compression for Long-Context Reasoning"
+    },
+    {
+      "idx": 14,
+      "id": "2605.23109",
+      "title": "Inductive Deductive Synthesis: Enabling AI to Generate Formally Verified Systems"
+    },
+    {
+      "idx": 15,
+      "id": "2605.23244",
+      "title": "Convex Optimization for Alignment and Preference Learning on a Single GPU"
+    },
+    {
+      "idx": 16,
+      "id": "2605.22824",
+      "title": "An AI-Driven Framework for Energy-Efficient Environmental Monitoring in Smart Cities Using Edge Intelligence"
+    },
+    {
+      "idx": 17,
+      "id": "2605.23893",
+      "title": "Complete-muE: Optimal Hyperparameter Transfer and Scaling for MoE Models"
+    },
+    {
+      "idx": 18,
+      "id": "2605.23057",
+      "title": "ModeSwitch-LLM: A Lightweight Phase-Aware Controller for Cross-Mode LLM Inference on a Single GPU"
+    },
+    {
+      "idx": 19,
+      "id": "2605.23618",
+      "title": "Benchmarking Google Embeddings 2 against Open-Source Models for Multilingual Dense Retrieval and RAG Systems"
+    },
+    {
+      "idx": 20,
+      "id": "2605.23850",
+      "title": "Enhancing Energy Efficiency in Scientific Workflows through CFD based PIVAEs"
+    },
+    {
+      "idx": 21,
+      "id": "2605.22949",
+      "title": "MARGIN: Runtime Confidence Calibration for Multi-Agent Foundation Model Coordination"
+    },
+    {
+      "idx": 22,
+      "id": "2605.23061",
+      "title": "Anytime Training with Schedule-Free Spectral Optimization"
+    },
+    {
+      "idx": 23,
+      "id": "2605.23218",
+      "title": "Foundation Protocol: A Coordination Layer for Agentic Society"
+    },
+    {
+      "idx": 24,
+      "id": "2605.22831",
+      "title": "Monte Cimone v3: Where RISC-V Stands in High-Performance Computing"
+    },
+    {
+      "idx": 25,
+      "id": "2605.23590",
+      "title": "Co-ReAct: Rubrics as Step-Level Collaborators for ReAct Agents"
+    },
+    {
+      "idx": 26,
+      "id": "2605.23751",
+      "title": "Approaching I/O-optimality for Approximate Attention"
+    },
+    {
+      "idx": 27,
+      "id": "2605.23296",
+      "title": "Parallel Context Compaction for Long-Horizon LLM Agent Serving"
+    },
+    {
+      "idx": 28,
+      "id": "2605.22863",
+      "title": "Latent Cache Flow: Model-to-Model Communication Without Text"
+    },
+    {
+      "idx": 29,
+      "id": "2605.22884",
+      "title": "Tensor Cache: Eviction-conditioned Associative Memory for Transformers"
+    },
+    {
+      "idx": 30,
+      "id": "2605.23258",
+      "title": "A Simple Plug-in for Improving Eviction-Based KV Cache Compression"
+    }
+  ]
+}
