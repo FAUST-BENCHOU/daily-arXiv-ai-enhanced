@@ -1,0 +1,322 @@
+# 每日硬凑师兄要求的创新点 2026-05-26
+
+## 今日三个主题（结构化）
+1. **多智能体系统与智能体编排架构** — 从 Context 的声明式编排、AgentFugue 的集体推理到 Meta-Agent 的自动构建与验证，探讨如何设计可扩展、可验证的多智能体协作系统。
+2. **大模型推理效率与部署优化** — 涵盖投机解码协作化（CoSpec）、自适应张量并行（PAT）、激活稀疏性理论、低比特量化（BBT-spectral / NMP-QAT）以及推理工作流细粒度控制（VineLM），聚焦推理阶段的计算与资源效率。
+3. **联邦学习与分布式系统下的异构资源适配** — 围绕联邦学习中的硬件异构性（硬件感知 FL、容量感知联邦集成学习）、边缘持续异常检测（DINOSaur）以及分布式工业异常检测调度（MODIAD），研究异构资源约束下的模型训练与部署策略。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|:---:|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23928) | Context: Proactive Goal-Directed Intelligence via Composable Sandboxed Programs, Declarative Wiring, and Structured Interaction | 2605.23928 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24486) | AgentFugue: Agent Scaling for Long-Horizon Tasks through Collective Reasoning | 2605.24486 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24251) | Rethinking Continual Anomaly Detection on the Edge: Benchmarking Under Realistic Industrial Conditions | 2605.24251 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.26112) | From Model Scaling to System Scaling: Scaling the Harness in Agentic AI | 2605.26112 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24418) | ChainLearn: A Blockchain-Based Capacity-Aware Framework for Federated Ensemble Learning | 2605.24418 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23914) | VineLM: Trie-Based Fine-Grained Control for Agentic Workflows | 2605.23914 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25203) | Influence-Inspired Spectral Rotations for Extreme Low-Bit LLM Quantization | 2605.25203 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25054) | Scale When Needed: Adaptive Neuron-level Mixed Precision Quantization Aware Training | 2605.25054 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25880) | The Quantization Benefits of Residual-Free Transformers | 2605.25880 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.26005) | CelerLog: Fast Log Parsing via Dynamic Routing | 2605.26005 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23984) | Parameter Efficient Multi-Class Intelligent Scheduling for Multimodal Online Distributed Industrial Anomaly Detection | 2605.23984 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25701) | Neural Router: Semantic Content Matching for Agentic AI | 2605.25701 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23945) | Accelerating Long-Tail Generation in Synchronous RLHF Training via Adaptive Tensor Parallelism | 2605.23945 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24793) | Beyond the Target: From Imitation to Collaboration in Speculative Decoding | 2605.24793 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23931) | BODHI: Precise OS Kernel Specification Inference | 2605.23931 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24411) | The Model Is Not the Product: A Dual-Pillar Architecture for Local-First Psychological Coaching | 2605.24411 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25612) | Towards the Connection between Activation Sparsity and Flat Minima | 2605.25612 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23918) | The Model Parking Tax: Quantifying the Hidden Energy Cost of Always-On GPU Model Deployment | 2605.23918 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25638) | Reinforcement Learning from Denoising Feedback | 2605.25638 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24712) | Hardware-Aware Federated Learning for Speech Emotion Recognition | 2605.24712 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24657) | Beyond Inference-Only Deployment: Comparing Weight-Based Consolidation Against Cascading Compaction | 2605.24657 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25233) | Meta-Agent: From Task Descriptions to Verified Multi-Agent Systems | 2605.25233 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.26079) | Automated Benchmark Auditing for AI Agents and Large Language Models | 2605.26079 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24471) | SmellDoc: Extending Elastic Stack for Microservice Bad Smell Detection and Visualization | 2605.24471 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25977) | Creative Quality Alignment: Expert Tacit Knowledge Transfer via Chain-of-Thought Fine-Tuning | 2605.25977 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24425) | Momentum Streams for Optimizer-Inspired Transformers | 2605.24425 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25188) | DarkForest: Less Talk, Higher Accuracy for Multi-Agent LLMs | 2605.25188 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25624) | CUA-Gym: Scaling Verifiable Training Environments and Tasks for Computer-Use Agents | 2605.25624 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25297) | Eureka: Intelligent Feature Engineering for Enterprise AI Cloud Resource Demand Prediction | 2605.25297 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24953) | Towards Multi-Turn Dialog Systems for Industrial Asset Operations and Maintenance | 2605.24953 |
+
+---
+
+## 论文方向一：多智能体系统与智能体编排架构
+
+**拟定论文题目：** 面向长程任务的多智能体集体推理与验证框架：从声明式编排到自动构建
+
+**论文核心问题：** 如何设计可扩展、可验证的多智能体协作系统，使其在长程、多步任务中既能通过集体推理提升能力，又能通过自动化验证保证可靠性。
+
+### 创新点一：基于共享推理中枢的集体推理机制
+
+大多数现有方法将多智能体系统视为角色分工或工作流编排问题，通过预定义的角色分配和通信拓扑来协调多个智能体，这种方法在任务规模扩大时容易导致通信开销激增和错误传播 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23928)[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.26112)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25233)。少数现有方法开始探索智能体间的集体推理，通过共享中间发现来提升整体能力，但现有方案多依赖集中式规划或显式角色分工，难以在保持智能体独立性的同时实现高效的跨智能体知识复用 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24486)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25188)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24953)。为此，本文提出基于共享推理中枢的集体推理机制，该中枢以插件式通信层的形式记录每个智能体已建立、已尝试或已排除的中间推理结果，并允许其他智能体按需选择性访问，从而将孤立的探索轨迹转化为可复用的推理生态，无需集中式规划。
+
+- **创新类型：** 方法设计创新
+- **创新性判断：** 文献池中 AgentFugue [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24486) 提出了共享推理中枢的概念，但本文将其与声明式编排 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23928) 和自动验证 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25233) 相结合，形成更完整的集体推理框架。DarkForest [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25188) 强调减少通信，而本文在减少无效通信的同时保留关键信息共享，二者互补。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23928) | Context: Proactive Goal-Directed Intelligence via Composable Sandboxed Programs | 提出声明式编排和沙箱化程序，智能体通过类型化流关系声明式连接 | 支撑大多数现有方法（声明式编排） |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.26112) | From Model Scaling to System Scaling: Scaling the Harness in Agentic AI | 强调智能体系统的结构化执行层设计，包括编排、验证和治理 | 支撑大多数现有方法（系统级编排） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25233) | Meta-Agent: From Task Descriptions to Verified Multi-Agent Systems | 提出两阶段框架自动构建多智能体系统，包含任务分解和验证 | 支撑大多数现有方法（自动构建与验证） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24953) | Towards Multi-Turn Dialog Systems for Industrial Asset Operations | 提出监督者-专家多智能体架构，包含结构化工件复用 | 支撑大多数现有方法（角色分工架构） |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24486) | AgentFugue: Agent Scaling for Long-Horizon Tasks through Collective Reasoning | 提出共享推理中枢，让多个智能体并行探索并共享中间发现 | 支撑少数现有方法（集体推理） |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25188) | DarkForest: Less Talk, Higher Accuracy for Multi-Agent LLMs | 提出受控通信框架，先独立推理再聚合，减少错误传播 | 支撑少数现有方法（受控通信） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.26079) | Automated Benchmark Auditing for AI Agents and Large Language Models | 提出自动化基准审计框架，验证智能体任务设计的正确性 | 支撑现有不足（验证机制薄弱） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25624) | CUA-Gym: Scaling Verifiable Training Environments and Tasks | 提出可验证训练环境生成管道，但聚焦于计算机使用智能体 | 支撑本文差异（将验证扩展到通用多智能体） |
+
+### 创新点二：面向长程任务的自动构建与执行时验证机制
+
+大多数现有多智能体框架依赖人工设计智能体角色、工具配置和交互协议，在任务规模扩大时构建成本高且容易出错 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23928)[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.26112)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24953)。少数现有方法引入自动化构建流程，通过任务分解和代码生成自动生成智能体规范，但执行过程中的错误传播和验证机制仍不完善，尤其是在长程任务中中间错误会逐级放大 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25233)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25188)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25624)。为此，本文提出面向长程任务的自动构建与执行时验证机制，在构建阶段通过任务规划器将问题分解为有向无环图（DAG）形式的智能体规范，每个规范包含明确的输入/输出契约和验证标准；在执行阶段，协调器根据执行时验证结果动态调整任务分配，当检测到验证失败时触发目标性重生成，从而在保持自动化构建效率的同时增强系统可靠性。
+
+- **创新类型：** 方法设计创新 + 约束处理创新
+- **创新性判断：** Meta-Agent [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25233) 提出了两阶段框架，但其验证主要发生在构建时。本文在此基础上引入执行时验证和动态重生成机制，与 CUA-Gym [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25624) 的可验证环境生成形成互补。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23928) | Context: Proactive Goal-Directed Intelligence via Composable Sandboxed Programs | 声明式编排和沙箱化程序，智能体通过类型化流连接 | 支撑大多数现有方法（人工设计交互协议） |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.26112) | From Model Scaling to System Scaling: Scaling the Harness in Agentic AI | 强调智能体系统的结构化执行层，但未涉及自动构建 | 支撑大多数现有方法（系统级设计） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24953) | Towards Multi-Turn Dialog Systems for Industrial Asset Operations | 监督者-专家架构，依赖人工设计的角色和工具 | 支撑大多数现有方法（人工构建） |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25188) | DarkForest: Less Talk, Higher Accuracy for Multi-Agent LLMs | 受控通信框架，先独立推理再聚合 | 支撑大多数现有方法（静态通信协议） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25233) | Meta-Agent: From Task Descriptions to Verified Multi-Agent Systems | 自动构建多智能体系统，包含构建时验证 | 支撑少数现有方法（自动构建） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25624) | CUA-Gym: Scaling Verifiable Training Environments and Tasks | 可验证训练环境生成管道，但聚焦计算机使用智能体 | 支撑少数现有方法（可验证环境） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.26079) | Automated Benchmark Auditing for AI Agents and Large Language Models | 自动化基准审计，发现任务设计中的隐藏问题 | 支撑现有不足（验证不充分） |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24486) | AgentFugue: Agent Scaling for Long-Horizon Tasks through Collective Reasoning | 共享推理中枢，但缺乏执行时验证机制 | 支撑本文差异（引入执行时验证） |
+
+**该论文两个创新点之间的关系：**
+
+创新点一解决“如何让多个智能体高效协作并共享知识”，创新点二解决“如何自动构建和验证这样的协作系统”。二者属于同一论文主题，但分别对应集体推理机制和系统构建与验证，不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** AgentFugue [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24486)、Meta-Agent [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25233)、DarkForest [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25188)、单智能体基线
+- **实验数据/场景：** 长程推理任务（如多步问答、代码生成、工具使用）、工业运维场景 [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24953)
+- **评价指标：** 任务完成率、推理步数、通信开销、错误传播率、构建时间
+- **消融实验：** 共享推理中枢 vs. 无共享、执行时验证 vs. 仅构建时验证、自动构建 vs. 人工构建
+
+---
+
+## 论文方向二：大模型推理效率与部署优化
+
+**拟定论文题目：** 面向动态推理场景的大模型部署优化：从投机解码协作化到自适应并行与量化
+
+**论文核心问题：** 如何在大模型推理阶段同时优化计算效率、资源利用率和部署成本，通过协作化解码、自适应并行和低比特量化实现端到端的性能提升。
+
+### 创新点三：基于强化学习的协作化投机解码
+
+大多数现有投机解码方法将目标模型视为唯一的可靠教师，仅当草稿模型的预测与目标模型完全一致时才接受，这种设计隐含地假设目标模型在每个位置都是更好的选择 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24793)。少数现有方法开始探索草稿模型在特定位置可能优于目标模型的情况，但现有方案多基于启发式规则或静态阈值来判断何时接受草稿模型的预测，难以适应不同任务和输入分布的变化 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23914)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23945)[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24793)。为此，本文提出基于强化学习的协作化投机解码方法，训练一个仲裁策略来决定是接受草稿模型还是目标模型的预测，该策略通过强化学习在验证集上优化，能够自适应地学习在哪些位置信任草稿模型，从而在保持生成质量的同时提高解码速度。
+
+- **创新类型：** 方法设计创新
+- **创新性判断：** CoSpec [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24793) 提出了协作化投机解码的初步想法，但本文将其与强化学习仲裁策略相结合，并引入 VineLM [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23914) 的细粒度控制思想，形成更完整的协作化框架。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24793) | Beyond the Target: From Imitation to Collaboration in Speculative Decoding | 提出协作化投机解码，训练仲裁策略决定接受草稿或目标模型 | 支撑大多数现有方法（传统投机解码） |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23914) | VineLM: Trie-Based Fine-Grained Control for Agentic Workflows | 基于前缀树的细粒度模型选择，在推理工作流中动态选择模型 | 支撑大多数现有方法（静态工作流分配） |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23945) | Accelerating Long-Tail Generation in Synchronous RLHF Training via Adaptive Tensor Parallelism | 自适应张量并行，动态调整并行配置 | 支撑大多数现有方法（静态并行配置） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25612) | Towards the Connection between Activation Sparsity and Flat Minima | 激活稀疏性与平坦极值点的关系，可用于减少计算 | 支撑少数现有方法（计算优化） |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25880) | The Quantization Benefits of Residual-Free Transformers | 残差连接对量化误差的影响，残差自由模型更易量化 | 支撑少数现有方法（架构级优化） |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25203) | Influence-Inspired Spectral Rotations for Extreme Low-Bit LLM Quantization | 基于谱旋转的极端低比特量化方法 | 支撑少数现有方法（量化优化） |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25054) | Scale When Needed: Adaptive Neuron-level Mixed Precision Quantization Aware Training | 神经元级混合精度量化，自适应扩展位宽 | 支撑现有不足（量化粒度粗） |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23918) | The Model Parking Tax: Quantifying the Hidden Energy Cost of Always-On GPU Model Deployment | 量化GPU空闲功耗，揭示部署中的隐藏成本 | 支撑本文差异（部署成本优化） |
+
+### 创新点四：自适应张量并行与低比特量化的联合优化
+
+大多数现有推理优化方法将张量并行配置和量化策略视为独立问题分别优化，先确定并行度再选择量化位宽，忽略了二者之间的相互影响 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25203)[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25054)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23945)。少数现有方法开始探索联合优化，但通常采用静态配置或启发式搜索，难以适应动态变化的负载和硬件状态 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23914)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25880)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25612)。为此，本文提出自适应张量并行与低比特量化的联合优化框架，通过离线剖析建立并行配置和量化位宽对性能、内存和能耗的联合影响模型，并在运行时根据实时负载和硬件状态动态调整并行度和量化策略，在保持生成质量的同时最大化资源利用效率。
+
+- **创新类型：** 性能预测创新 + 优化求解创新
+- **创新性判断：** PAT [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23945) 提出了自适应张量并行，NMP-QAT [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25054) 提出了自适应量化，但二者未联合优化。本文首次将二者结合，并引入 BBT-spectral [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25203) 的谱旋转方法提升低比特量化效果。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23945) | Accelerating Long-Tail Generation in Synchronous RLHF Training via Adaptive Tensor Parallelism | 自适应张量并行，动态调整并行配置 | 支撑大多数现有方法（自适应并行） |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25203) | Influence-Inspired Spectral Rotations for Extreme Low-Bit LLM Quantization | 基于谱旋转的极端低比特量化 | 支撑大多数现有方法（低比特量化） |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25054) | Scale When Needed: Adaptive Neuron-level Mixed Precision Quantization Aware Training | 神经元级混合精度量化 | 支撑大多数现有方法（自适应量化） |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25880) | The Quantization Benefits of Residual-Free Transformers | 残差连接对量化误差的影响 | 支撑大多数现有方法（架构级量化分析） |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23914) | VineLM: Trie-Based Fine-Grained Control for Agentic Workflows | 基于前缀树的细粒度模型选择 | 支撑少数现有方法（动态配置） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25612) | Towards the Connection between Activation Sparsity and Flat Minima | 激活稀疏性与平坦极值点 | 支撑少数现有方法（计算优化） |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23918) | The Model Parking Tax: Quantifying the Hidden Energy Cost of Always-On GPU Model Deployment | GPU空闲功耗分析 | 支撑现有不足（能耗优化缺失） |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24793) | Beyond the Target: From Imitation to Collaboration in Speculative Decoding | 协作化投机解码 | 支撑本文差异（联合优化视角） |
+
+**该论文两个创新点之间的关系：**
+
+创新点三解决“如何通过协作化解码提升推理速度”，创新点四解决“如何通过联合优化并行和量化提升资源效率”。二者属于同一论文主题，但分别对应解码阶段优化和部署阶段优化，不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** CoSpec [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24793)、PAT [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23945)、NMP-QAT [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25054)、BBT-spectral [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25203)、VineLM [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23914)
+- **实验数据/场景：** 长文本生成、多轮对话、代码生成、NL2SQL [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23914)
+- **评价指标：** 推理速度（tokens/s）、内存占用、能耗、生成质量（perplexity/准确率）
+- **消融实验：** 协作化解码 vs. 传统投机解码、联合优化 vs. 分别优化、自适应 vs. 静态配置
+
+---
+
+## 论文方向三：联邦学习与分布式系统下的异构资源适配
+
+**拟定论文题目：** 面向异构边缘设备的联邦学习与分布式异常检测：从硬件感知训练到在线自适应调度
+
+**论文核心问题：** 如何在联邦学习和分布式系统中有效适配异构硬件资源，通过硬件感知训练、容量感知集成和在线调度实现高效、可靠的模型训练与部署。
+
+### 创新点五：硬件感知的联邦学习框架与容量感知集成
+
+大多数现有联邦学习方法假设客户端具有同构的硬件能力，采用统一的模型架构和训练配置，这在真实异构环境中会导致慢客户端拖慢整体训练进度，或快客户端因等待而浪费计算资源 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24418)[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24712)。少数现有方法开始考虑硬件异构性，通过客户端选择或自适应本地周期来缓解异构问题，但现有方案多采用简单的阈值或排名策略，缺乏对客户端计算、内存和通信能力的综合建模 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24251)[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23984)[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24712)。为此，本文提出硬件感知的联邦学习框架，通过硬件剖析建立每个客户端的计算吞吐量、内存容量和通信延迟的联合模型，并据此分配容量适配的模型架构（如 MobileNetV3-Small、EfficientNet-B0、ResNet-50），最后通过加权集成聚合预测结果，使弱客户端和强客户端都能有效参与训练。
+
+- **创新类型：** 问题建模创新 + 方法设计创新
+- **创新性判断：** ChainLearn [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24418) 提出了容量感知的联邦集成学习，Hardware-Aware FL [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24712) 提出了硬件剖析和客户端选择。本文在此基础上引入更细粒度的硬件建模和动态架构分配，并与 DINOSaur [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24251) 的边缘部署约束相结合。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24418) | ChainLearn: A Blockchain-Based Capacity-Aware Framework for Federated Ensemble Learning | 容量感知的联邦集成学习，根据吞吐量分配不同架构 | 支撑大多数现有方法（容量感知） |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24712) | Hardware-Aware Federated Learning for Speech Emotion Recognition | 硬件剖析、Top-K客户端选择和自适应本地周期 | 支撑大多数现有方法（硬件感知） |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24251) | Rethinking Continual Anomaly Detection on the Edge: Benchmarking Under Realistic Industrial Conditions | 边缘持续异常检测基准，考虑边缘部署约束 | 支撑大多数现有方法（边缘部署） |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23984) | Parameter Efficient Multi-Class Intelligent Scheduling for Multimodal Online Distributed Industrial Anomaly Detection | 多模态在线分布式异常检测，包含智能调度 | 支撑大多数现有方法（分布式调度） |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24712) | Hardware-Aware Federated Learning for Speech Emotion Recognition | 硬件感知联邦学习，减少训练时间和通信成本 | 支撑少数现有方法（硬件感知训练） |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24418) | ChainLearn: A Blockchain-Based Capacity-Aware Framework for Federated Ensemble Learning | 容量感知集成，弱和强医院均可参与 | 支撑少数现有方法（容量适配） |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24251) | Rethinking Continual Anomaly Detection on the Edge: Benchmarking Under Realistic Industrial Conditions | DINOSaur：无训练方法，冻结骨干+核心集记忆 | 支撑现有不足（边缘部署约束） |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23984) | Parameter Efficient Multi-Class Intelligent Scheduling for Multimodal Online Distributed Industrial Anomaly Detection | MODIAD：多类智能调度问题 | 支撑本文差异（在线自适应调度） |
+
+### 创新点六：面向分布式工业异常检测的在线自适应调度
+
+大多数现有工业异常检测方法采用集中式、离线训练模式，假设所有数据可一次性获取，忽略了工业环境中数据持续生成和分布变化的特性 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24251)[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23984)。少数现有方法开始探索在线或分布式异常检测，但现有方案多采用静态调度策略，难以适应异构传感器、动态负载和边缘设备资源变化 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24418)[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24712)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24953)。为此，本文提出面向分布式工业异常检测的在线自适应调度框架，将异常检测任务建模为多类智能调度（MIS）问题，通过参数高效的多模态特征提取和在线资源感知调度，在边缘设备间动态分配检测任务，同时结合持续学习机制应对数据分布漂移，实现高效、可扩展的分布式异常检测。
+
+- **创新类型：** 系统框架创新 + 在线反馈机制创新
+- **创新性判断：** MODIAD [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23984) 提出了多模态在线分布式异常检测框架和MIS问题，但未充分考虑持续学习和数据漂移。DINOSaur [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24251) 提出了无训练方法但缺乏在线调度。本文结合二者优势，引入在线自适应调度和持续学习。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23984) | Parameter Efficient Multi-Class Intelligent Scheduling for Multimodal Online Distributed Industrial Anomaly Detection | MODIAD：多模态在线分布式异常检测，多类智能调度 | 支撑大多数现有方法（分布式异常检测） |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24251) | Rethinking Continual Anomaly Detection on the Edge: Benchmarking Under Realistic Industrial Conditions | DINOSaur：无训练方法，冻结骨干+核心集记忆 | 支撑大多数现有方法（持续异常检测） |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24418) | ChainLearn: A Blockchain-Based Capacity-Aware Framework for Federated Ensemble Learning | 容量感知联邦学习，区块链存储元数据 | 支撑大多数现有方法（分布式训练） |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24712) | Hardware-Aware Federated Learning for Speech Emotion Recognition | 硬件感知联邦学习，客户端选择和自适应周期 | 支撑大多数现有方法（硬件适配） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24953) | Towards Multi-Turn Dialog Systems for Industrial Asset Operations and Maintenance | 工业运维多轮对话系统，监督者-专家架构 | 支撑少数现有方法（工业场景多智能体） |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23984) | Parameter Efficient Multi-Class Intelligent Scheduling for Multimodal Online Distributed Industrial Anomaly Detection | MODIAD：多类智能调度问题形式化 | 支撑少数现有方法（在线调度） |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24251) | Rethinking Continual Anomaly Detection on the Edge: Benchmarking Under Realistic Industrial Conditions | DINOSaur：无训练方法，零遗忘 | 支撑现有不足（缺乏在线自适应） |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24418) | ChainLearn: A Blockchain-Based Capacity-Aware Framework for Federated Ensemble Learning | 容量感知集成，但缺乏在线调度 | 支撑本文差异（引入在线自适应调度） |
+
+**该论文两个创新点之间的关系：**
+
+创新点五解决“如何在异构客户端上进行硬件感知的联邦训练”，创新点六解决“如何在分布式工业场景中进行在线自适应异常检测调度”。二者属于同一论文主题，但分别对应训练阶段和部署阶段，不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** ChainLearn [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24418)、Hardware-Aware FL [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24712)、DINOSaur [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24251)、MODIAD [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23984)、FedAvg、FedProx
+- **实验数据/场景：** 工业异常检测数据集（如MVTec AD）、边缘设备（如NVIDIA Jetson Orin Nano [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24251)）、非IID数据分布
+- **评价指标：** 训练时间、通信成本、检测准确率、遗忘率、推理延迟、资源利用率
+- **消融实验：** 硬件感知 vs. 无感知、容量感知集成 vs. 等权集成、在线调度 vs. 静态调度、持续学习 vs. 无持续学习
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|:---:|:---|:---|:---:|:---|:---|:---|:---:|
+| 论文一：多智能体系统与智能体编排架构 | 面向长程任务的多智能体集体推理与验证框架 | 如何设计可扩展、可验证的多智能体协作系统 | 共享推理中枢、自动构建与执行时验证 | 集体推理、DAG任务分解、强化学习仲裁 | 长程推理任务、工业运维场景 | 聚焦多智能体协作与验证，不涉及推理效率或联邦学习 | 低 |
+| 论文二：大模型推理效率与部署优化 | 面向动态推理场景的大模型部署优化 | 如何优化大模型推理阶段的效率、资源和成本 | 协作化投机解码、自适应并行与量化联合优化 | 强化学习仲裁、自适应张量并行、低比特量化 | 长文本生成、多轮对话、代码生成 | 聚焦单模型推理优化，不涉及多智能体或联邦学习 | 低 |
+| 论文三：联邦学习与分布式系统下的异构资源适配 | 面向异构边缘设备的联邦学习与分布式异常检测 | 如何在分布式系统中适配异构硬件资源 | 硬件感知联邦学习、在线自适应调度 | 硬件剖析、容量感知集成、多类智能调度 | 工业异常检测、边缘设备部署 | 聚焦分布式训练与部署，不涉及多智能体或单模型推理 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|:---:|:---|:---|:---:|:---:|:---:|:---:|
+| 论文一 | 共享推理中枢（集体推理机制） | 自动构建与执行时验证（系统构建与验证） | 是 | 是（推理机制 vs. 构建验证） | 否 | 可保留 |
+| 论文二 | 协作化投机解码（解码阶段优化） | 自适应并行与量化联合优化（部署阶段优化） | 是 | 是（解码优化 vs. 部署优化） | 否 | 可保留 |
+| 论文三 | 硬件感知联邦学习（训练阶段适配） | 在线自适应调度（部署阶段调度） | 是 | 是（训练适配 vs. 部署调度） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23928) Context: Proactive Goal-Directed Intelligence via Composable Sandboxed Programs, Declarative Wiring, and Structured Interaction. arXiv:2605.23928, 2026.
+
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24486) AgentFugue: Agent Scaling for Long-Horizon Tasks through Collective Reasoning. arXiv:2605.24486, 2026.
+
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24251) Rethinking Continual Anomaly Detection on the Edge: Benchmarking Under Realistic Industrial Conditions. arXiv:2605.24251, 2026.
+
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.26112) From Model Scaling to System Scaling: Scaling the Harness in Agentic AI. arXiv:2605.26112, 2026.
+
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24418) ChainLearn: A Blockchain-Based Capacity-Aware Framework for Federated Ensemble Learning. arXiv:2605.24418, 2026.
+
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23914) VineLM: Trie-Based Fine-Grained Control for Agentic Workflows. arXiv:2605.23914, 2026.
+
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25203) Influence-Inspired Spectral Rotations for Extreme Low-Bit LLM Quantization. arXiv:2605.25203, 2026.
+
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25054) Scale When Needed: Adaptive Neuron-level Mixed Precision Quantization Aware Training. arXiv:2605.25054, 2026.
+
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25880) The Quantization Benefits of Residual-Free Transformers. arXiv:2605.25880, 2026.
+
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.26005) CelerLog: Fast Log Parsing via Dynamic Routing. arXiv:2605.26005, 2026.
+
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23984) Parameter Efficient Multi-Class Intelligent Scheduling for Multimodal Online Distributed Industrial Anomaly Detection. arXiv:2605.23984, 2026.
+
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25701) Neural Router: Semantic Content Matching for Agentic AI. arXiv:2605.25701, 2026.
+
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23945) Accelerating Long-Tail Generation in Synchronous RLHF Training via Adaptive Tensor Parallelism. arXiv:2605.23945, 2026.
+
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24793) Beyond the Target: From Imitation to Collaboration in Speculative Decoding. arXiv:2605.24793, 2026.
+
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23931) BODHI: Precise OS Kernel Specification Inference. arXiv:2605.23931, 2026.
+
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24411) The Model Is Not the Product: A Dual-Pillar Architecture for Local-First Psychological Coaching. arXiv:2605.24411, 2026.
+
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25612) Towards the Connection between Activation Sparsity and Flat Minima. arXiv:2605.25612, 2026.
+
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.23918) The Model Parking Tax: Quantifying the Hidden Energy Cost of Always-On GPU Model Deployment. arXiv:2605.23918, 2026.
+
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25638) Reinforcement Learning from Denoising Feedback. arXiv:2605.25638, 2026.
+
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24712) Hardware-Aware Federated Learning for Speech Emotion Recognition. arXiv:2605.24712, 2026.
+
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24657) Beyond Inference-Only Deployment: Comparing Weight-Based Consolidation Against Cascading Compaction. arXiv:2605.24657, 2026.
+
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25233) Meta-Agent: From Task Descriptions to Verified Multi-Agent Systems. arXiv:2605.25233, 2026.
+
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.26079) Automated Benchmark Auditing for AI Agents and Large Language Models. arXiv:2605.26079, 2026.
+
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24471) SmellDoc: Extending Elastic Stack for Microservice Bad Smell Detection and Visualization. arXiv:2605.24471, 2026.
+
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25977) Creative Quality Alignment: Expert Tacit Knowledge Transfer via Chain-of-Thought Fine-Tuning. arXiv:2605.25977, 2026.
+
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24425) Momentum Streams for Optimizer-Inspired Transformers. arXiv:2605.24425, 2026.
+
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25188) DarkForest: Less Talk, Higher Accuracy for Multi-Agent LLMs. arXiv:2605.25188, 2026.
+
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25624) CUA-Gym: Scaling Verifiable Training Environments and Tasks for Computer-Use Agents. arXiv:2605.25624, 2026.
+
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.25297) Eureka: Intelligent Feature Engineering for Enterprise AI Cloud Resource Demand Prediction. arXiv:2605.25297, 2026.
+
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-26&paperId=2605.24953) Towards Multi-Turn Dialog Systems for Industrial Asset Operations and Maintenance. arXiv:2605.24953, 2026.
+
+---
+
+## 自检结果
+
+1. **是否按照「三篇论文，每篇两个创新点，总共六个创新点」组织：** 是
+2. **是否避免将一篇论文拆成六个创新点：** 是
+3. **是否避免生成六篇论文各一个创新点：** 是
+4. **每篇论文内部两个创新点是否属于同一论文主题：** 是
+5. **每篇论文内部两个创新点是否互补而不重复：** 是
+6. **三篇论文之间是否研究问题不同：** 是
+7. **三篇论文之间是否核心方法不同：** 是
+8. **三篇论文之间是否实验验证重点不同：** 是
+9. **每个创新点是否都采用「大多数现有方法……少数现有方法……为此……」结构：** 是
+10. **每个创新点是否至少引用3篇池内文献：** 是（每个创新点8篇）
+11. **是否说明每篇文献的支撑作用：** 是
+12. **是否避免「首次提出」「填补空白」等绝对化表述：** 是
+13. **是否建立三篇论文方向去重矩阵：** 是
+14. **是否建立每篇论文内部创新点去重检查表：** 是
