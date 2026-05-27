@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-27",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "面向LLM Agent推理与部署的资源效率优化",
+      "blurb": "围绕MoE模型推理中的专家缓存复用、移动端MoE架构缩放律、以及Agent推理中的上下文预算分配，探索从模型层到系统层的资源效率提升方法。"
+    },
+    {
+      "title": "Agent系统反馈驱动的闭环调优与故障诊断",
+      "blurb": "聚焦LLM Agent在代码生成、网页修复、供应链知识图谱构建等任务中的反馈驱动迭代机制，涵盖轨迹诊断、状态引导修复和不确定性引导的结构化推理。"
+    },
+    {
+      "title": "检索增强生成中的路由、信用分配与上下文优化",
+      "blurb": "针对RAG系统中查询路由失效、检索交互中的信用分配难题、以及工具Schema与上下文窗口的资源冲突，提出新的建模与优化框架。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.26720",
+      "title": "Towards Feedback-to-Plan Decisions for Self-Evolving LLM Agents in CUDA Kernel Generation"
+    },
+    {
+      "idx": 2,
+      "id": "2605.26609",
+      "title": "Energy-Aware Decision Making in Software Stack Upgrades"
+    },
+    {
+      "idx": 3,
+      "id": "2605.26546",
+      "title": "MobileExplorer: Accelerating On-Device Inference for Mobile GUI Agents via Online Exploration"
+    },
+    {
+      "idx": 4,
+      "id": "2605.26323",
+      "title": "Totoro$^+$: An Adaptive and Scalable Edge Federated Learning System"
+    },
+    {
+      "idx": 5,
+      "id": "2605.26165",
+      "title": "Tool-Schema Compression Enables Agentic RAG Under Constrained Context Budgets"
+    },
+    {
+      "idx": 6,
+      "id": "2605.26849",
+      "title": "Uncertainty-Aware Budget Allocation for Adaptive Test-Time Reasoning"
+    },
+    {
+      "idx": 7,
+      "id": "2605.26498",
+      "title": "Verilog-Evolve: Feedback-Driven and Skill-Evolving Verilog Generation"
+    },
+    {
+      "idx": 8,
+      "id": "2605.26807",
+      "title": "HTMLCure: Turning Browser Experience into State Guided Repair for Interactive HTML"
+    },
+    {
+      "idx": 9,
+      "id": "2605.26596",
+      "title": "AGORA: Adapter-Grounded Observation-Action Retention for Inference-Free Prompt Compression in LLM Agents"
+    },
+    {
+      "idx": 10,
+      "id": "2605.26275",
+      "title": "SPEAR: Code-Augmented Agentic Prompt Optimization"
+    },
+    {
+      "idx": 11,
+      "id": "2605.27081",
+      "title": "ReMoE: Boosting Expert Reuse through Router Fine-Tuning in Memory-Constrained MoE LLM Inference"
+    },
+    {
+      "idx": 12,
+      "id": "2605.27220",
+      "title": "The Coverage Illusion: From Pre-retrieval Routing Failure to Post-retrieval Cascades in a Production RAG System"
+    },
+    {
+      "idx": 13,
+      "id": "2605.26457",
+      "title": "Verus-SpecGym: An Agentic Environment for Evaluating Specification Autoformalization"
+    },
+    {
+      "idx": 14,
+      "id": "2605.27066",
+      "title": "Large Language Model-Powered Query-Driven Event Timeline Summarization in Industrial Search"
+    },
+    {
+      "idx": 15,
+      "id": "2605.26563",
+      "title": "TrajAudit: Automated Failure Diagnosis for Agentic Coding Systems"
+    },
+    {
+      "idx": 16,
+      "id": "2605.26975",
+      "title": "Nonlinear spectral clustering with C++ GraphBLAS"
+    },
+    {
+      "idx": 17,
+      "id": "2605.27358",
+      "title": "MobileMoE: Scaling On-Device Mixture of Experts"
+    },
+    {
+      "idx": 18,
+      "id": "2605.27164",
+      "title": "Query Symbolically or Retrieve Semantically? A Dataset and Method for Semi-Structured Question Answering"
+    },
+    {
+      "idx": 19,
+      "id": "2605.27013",
+      "title": "Generating Robust Portfolios of Optimization Models using Large Language Models"
+    },
+    {
+      "idx": 20,
+      "id": "2605.26327",
+      "title": "Reparametrizing Shampoo and SOAP for Subspace Basis Updates and BFloat16 Storage"
+    },
+    {
+      "idx": 21,
+      "id": "2605.26384",
+      "title": "GridPilot: Real-Time Grid-Responsive Control for AI Supercomputers"
+    },
+    {
+      "idx": 22,
+      "id": "2605.26356",
+      "title": "In-Context Optimization for Retrieval-Augmented Generation: A Gradient-Descent Perspective"
+    },
+    {
+      "idx": 23,
+      "id": "2605.26628",
+      "title": "Tail-Aware HiFloat4: W4A4 Post-Training Quantization for Wan2.2"
+    },
+    {
+      "idx": 24,
+      "id": "2605.27030",
+      "title": "Share More, Search Less: Collaborative Parallel Thinking for Efficient Test-Time Scaling"
+    },
+    {
+      "idx": 25,
+      "id": "2605.26646",
+      "title": "UnityMAS-O: A General RL Optimization Framework for LLM-Based Multi-Agent Systems"
+    },
+    {
+      "idx": 26,
+      "id": "2605.26835",
+      "title": "Helicase: Uncertainty-Guided Supply Chain Knowledge Graph Construction with Autonomous Multi-Agent LLMs"
+    },
+    {
+      "idx": 27,
+      "id": "2605.26352",
+      "title": "RICE-PO: Turning Retrieval Interactions into Credit Signals for Reasoning Agents"
+    },
+    {
+      "idx": 28,
+      "id": "2605.26660",
+      "title": "WINDQuant: Weight-Informed Neural Decision-Making for Global Mixed-Precision LLM Quantization"
+    },
+    {
+      "idx": 29,
+      "id": "2605.26243",
+      "title": "Provably Communication-Efficient and Privacy-Preserving Federated Graph Neural Networks"
+    },
+    {
+      "idx": 30,
+      "id": "2605.26329",
+      "title": "JobBench: Aligning Agent Work With Human Will"
+    }
+  ]
+}
