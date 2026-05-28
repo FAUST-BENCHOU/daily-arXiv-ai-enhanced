@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-28",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "长上下文与稀疏注意力推理效率",
+      "blurb": "围绕 LLM 长上下文推理中位置编码耗尽、KV 缓存膨胀与稀疏注意力精度下降等核心瓶颈，探索周期性位置编码（P-RoPE）、递归增强注意力（RAT+）及通用 top-k 稀疏注意力框架（UNIQUE）等创新方案，以突破上下文窗口限制并提升推理效率。"
+    },
+    {
+      "title": "LLM 推理部署的资源管理与系统优化",
+      "blurb": "聚焦离线与在线 LLM 推理部署中的资源效率问题，涵盖面向边缘生成推理的可演化资源管理智能体（E³-Agent）、内存高效的数据并行范式（SiDP）以及将零阶微调重构为推理负载的执行路径优化，旨在降低部署成本并提升吞吐。"
+    },
+    {
+      "title": "Agent 系统的可靠性、安全性与可行性评估",
+      "blurb": "针对 LLM Agent 在工具使用、多步规划与持续服务中的可靠性挑战，研究批量条件下的拒绝鲁棒性测试协议、工具可行性感知评估（FeasiGen）以及结构化规划基准（DisasterBench），以提升 Agent 系统的安全边界与执行可信度。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.27980",
+      "title": "Periodic RoPE for Infinite Context LLMs"
+    },
+    {
+      "idx": 2,
+      "id": "2605.28791",
+      "title": "Skill-Conditioned Gated Self-Distillation for LLM Reasoning"
+    },
+    {
+      "idx": 3,
+      "id": "2605.28335",
+      "title": "Dimensionality Reduction for Robust Federated Learning: A Theoretical Analysis and Convergence Guarantee"
+    },
+    {
+      "idx": 4,
+      "id": "2605.28184",
+      "title": "Joint Training of Multi-Token Prediction in Reinforcement Learning via Optimal Coefficient Calibration"
+    },
+    {
+      "idx": 5,
+      "id": "2605.27992",
+      "title": "Patched-DeltaNet: Token-Level Event-Driven Memory for Linear-Time Anomaly Detection"
+    },
+    {
+      "idx": 6,
+      "id": "2605.27703",
+      "title": "Hierarchical Prompt-Domain Control and Learning for Resource-Constrained Agentic Language Models"
+    },
+    {
+      "idx": 7,
+      "id": "2605.28396",
+      "title": "ADWIN: Adaptive Windows for Horizon-Aware On-Policy Distillation"
+    },
+    {
+      "idx": 8,
+      "id": "2605.28760",
+      "title": "LLM Zeroth-Order Fine-Tuning is an Inference Workload"
+    },
+    {
+      "idx": 9,
+      "id": "2605.27782",
+      "title": "Revisiting ML Training under Fully Homomorphic Encryption: Convergence Guarantees, Differential Privacy, and Efficient Algorithms"
+    },
+    {
+      "idx": 10,
+      "id": "2605.27922",
+      "title": "Harness-Bench: Measuring Harness Effects across Models in Realistic Agent Workflows"
+    },
+    {
+      "idx": 11,
+      "id": "2605.27763",
+      "title": "A Paired Testing Protocol for Batch-Conditioned Refusal Robustness in LLM Serving"
+    },
+    {
+      "idx": 12,
+      "id": "2605.27570",
+      "title": "LaneRoPE: Positional Encoding for Collaborative Parallel Reasoning and Generation"
+    },
+    {
+      "idx": 13,
+      "id": "2605.27446",
+      "title": "Context-aware Simopt-Power: Using structural data with simulation metadata to optimise FPGA designs"
+    },
+    {
+      "idx": 14,
+      "id": "2605.27957",
+      "title": "DisasterBench: Benchmarking LLM Planning under Typed Tool Interface Constraints"
+    },
+    {
+      "idx": 15,
+      "id": "2605.28213",
+      "title": "Learning When to Optimize: Verified Optimization Skills from Expert GPU-Kernel Lineages"
+    },
+    {
+      "idx": 16,
+      "id": "2605.27740",
+      "title": "UNIQUE: Universal Top-k Sparse Attention for Training-free Inference and Sparsity-aware Training"
+    },
+    {
+      "idx": 17,
+      "id": "2605.28532",
+      "title": "Do Agents Know What They Can't Do? Evaluating Feasibility Awareness in Tool-Using Agents"
+    },
+    {
+      "idx": 18,
+      "id": "2605.28640",
+      "title": "Augmenting Attention with Exponentially Decaying Memory Improves Query-Aware KV Sparsity"
+    },
+    {
+      "idx": 19,
+      "id": "2605.28095",
+      "title": "SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference"
+    },
+    {
+      "idx": 20,
+      "id": "2605.28115",
+      "title": "CIVIC: End-to-End Sequence Compactness for Efficient Vision-Language Models"
+    },
+    {
+      "idx": 21,
+      "id": "2605.27428",
+      "title": "$E^3$-Agent: An Executable and Evolving Agent for Resource Management of Edge Generative Inference"
+    },
+    {
+      "idx": 22,
+      "id": "2605.28222",
+      "title": "Analyzing Quality-Latency-Resource Trade-offs in a Technical Documentation RAG Assistant Using LoRA Adaptation"
+    },
+    {
+      "idx": 23,
+      "id": "2605.28573",
+      "title": "Efficient Pre-Training of LLMs through Truncated SVD Layers"
+    },
+    {
+      "idx": 24,
+      "id": "2605.27786",
+      "title": "Locality-Aware Redundancy Pruning for LLM Depth Compression"
+    },
+    {
+      "idx": 25,
+      "id": "2605.27785",
+      "title": "A Query Engine for the Agents"
+    },
+    {
+      "idx": 26,
+      "id": "2605.28666",
+      "title": "An LLM-Based Assistance System for Intuitive and Flexible Capability-Based Planning"
+    },
+    {
+      "idx": 27,
+      "id": "2605.28704",
+      "title": "Expressive Power of Floating-Point Neural Networks with Arbitrary Reduction Orders and Inexact Activation Implementations"
+    },
+    {
+      "idx": 28,
+      "id": "2605.28282",
+      "title": "ResearchLoop: An Evidence-Gated Control Plane for AI-Assisted Research"
+    },
+    {
+      "idx": 29,
+      "id": "2605.27678",
+      "title": "Heterogeneous Parallelism for Multimodal Large Language Model Training"
+    },
+    {
+      "idx": 30,
+      "id": "2605.28642",
+      "title": "Bandwidth-Efficient and Privacy-Preserving Edge-Cloud Many-to-Many Speech Translation"
+    }
+  ]
+}
