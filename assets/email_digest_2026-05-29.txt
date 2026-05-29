@@ -1,0 +1,285 @@
+# 每日硬凑师兄要求的创新点 2026-05-29
+
+## 今日三个主题（结构化）
+1. **LLM推理加速与高效部署** — 围绕投机解码、低比特量化、注意力机制优化与编译器自动调优，探索从模型结构到系统层面的推理加速与部署效率提升方法。
+2. **LLM代理系统的可靠性与安全对齐** — 聚焦工具调用代理的行为一致性、过程奖励优化、安全对齐框架与技术债务治理，提升多步骤代理在生产环境中的可信度。
+3. **多模态检索与知识融合** — 面向异构知识源统一检索、文档级多模态问答、时序预测中的多模态上下文融合，突破单一模态与单一知识源的检索与推理瓶颈。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|:---:|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29343) | Draft-OPD: On-Policy Distillation for Speculative Draft Models | 2605.29343 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.28845) | HPC-vQPU: A Service-Export Architecture for Virtual QPUs on Batch-Scheduled HPC Systems | 2605.28845 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29250) | OmniRetrieval: Unified Retrieval across Heterogeneous Knowledge Sources | 2605.29250 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.28840) | How Consistent Are LLM Agents? Measuring Behavioral Reproducibility in Multi-Step Tool-Calling Pipelines | 2605.28840 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29606) | HiKEY: Hierarchical Multimodal Retrieval for Open-Domain Document Question Answering | 2605.29606 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29001) | FormInv: A Measurement Protocol for Semantic Invariance in Mathematical Reasoning Benchmarks | 2605.29001 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29129) | Governing Technical Debt in Agentic AI Systems | 2605.29129 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29486) | PhoneWorld: Scaling Phone-Use Agent Environments | 2605.29486 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29157) | Parallax: Parameterized Local Linear Attention for Language Modeling | 2605.29157 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29489) | Access Sets Matter: Budgeting Expert Reads for Scalable Weight-Space Model Merging | 2605.29489 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29843) | HARP: Hadamard-Preconditioned Adaptive Rotation Processor for Extreme LLM Quantization | 2605.29843 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29128) | Apertus LLM Family Expansion via Distillation and Quantization | 2605.29128 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29604) | TC-MIS: Maximal Independent Set on Tensor-cores | 2605.29604 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29401) | Rethinking Post-Training Recipes for Multimodal Time-Series Forecasting | 2605.29401 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29119) | PRO-CUA: Process-Reward Optimization for Computer Use Agents | 2605.29119 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29801) | AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security | 2605.29801 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29357) | PassNet: Scaling Large Language Models for Graph Compiler Pass Generation | 2605.29357 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.28835) | GenesisFunc: Multi-Agent Data Generation for Accurate and Generalizable Function-Calling | 2605.28835 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29860) | ESPO: Early-Stopping Proximal Policy Optimization | 2605.29860 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29310) | Rubric-Guided Process Reward for Stepwise Model Routing | 2605.29310 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29277) | Code-QA-Bench: Separating Code Reasoning from Documentation Memorization in Repository-Level QA | 2605.29277 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29734) | HTAM: Hierarchical Transition-Attended Memory for Operator Optimization | 2605.29734 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.30345) | SchGen: PCB Schematic Generation with Semantic-Grounded Code Representations | 2605.30345 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29280) | LoopFM: Learning frOm HistOrical RePresentations of Foundation Model for Recommendation | 2605.29280 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29078) | Bridging the Sim-to-Real Gap in Reinforcement Learning-Based Industrial Dispatching through Execution Semantics | 2605.29078 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29055) | Hallucination Mitigation with Agentic AI, Nested Learning, and AI Sustainability via Semantic Caching | 2605.29055 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29459) | Kronecker Embeddings: Byte-Level Structured Token Representations for Parameter-Efficient Language Models | 2605.29459 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29561) | ParaTool: Shifting Tool Representations from Context to Parameters | 2605.29561 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.30000) | Cookie-Bench: Continuous On-screen Key Interaction Evaluation for Web Generation | 2605.30000 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29307) | GrepSeek: Training Search Agents for Direct Corpus Interaction | 2605.29307 |
+
+---
+
+## 论文方向一：LLM推理加速与高效部署
+
+**拟定论文题目：** 面向投机解码与低比特量化的LLM推理加速协同优化方法
+
+**论文核心问题：** 如何将投机解码中的草稿模型蒸馏与低比特量化中的自适应旋转预处理进行协同设计，以在保持模型质量的前提下最大化推理吞吐量。
+
+### 创新点一：策略感知的草稿模型在线蒸馏方法
+
+大多数现有方法采用监督微调（SFT）在目标模型生成的固定轨迹上训练草稿模型，但这种方法存在离线到推理的不匹配问题：草稿模型在推理时基于自身策略生成候选块，而训练时却学习固定轨迹，导致接受长度很快达到平台期 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29343)。少数现有方法尝试引入在线策略蒸馏（OPD），但草稿模型无法独立可靠地生成完整序列，而目标辅助生成又会使收集的序列服从目标分布，从而消除在线策略信号 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29343)。为此，本文提出Draft-OPD，利用目标辅助展开生成稳定的连续序列，并结合重放缓冲区保留策略多样性，以在保持训练稳定性的同时实现草稿模型的在线策略蒸馏。
+
+- **创新类型：** 方法设计创新
+- **创新性判断：** 文献池中[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29343)直接提出了Draft-OPD方法，但本文将其作为核心创新点之一，并进一步与量化协同优化结合，形成更完整的推理加速方案。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29343) | Draft-OPD: On-Policy Distillation for Speculative Draft Models | 提出在线策略蒸馏方法解决SFT训练与推理不匹配问题 | 支撑大多数/少数现有方法及本文方法 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29128) | Apertus LLM Family Expansion via Distillation and Quantization | 验证蒸馏和量化作为扩展模型家族的经济有效方法 | 支撑大多数现有方法（蒸馏作为通用技术） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29357) | PassNet: Scaling Large Language Models for Graph Compiler Pass Generation | 提出LLM生成编译器pass的生态系统 | 支撑大多数现有方法（编译器优化方向） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29734) | HTAM: Hierarchical Transition-Attended Memory for Operator Optimization | 提出层次化过渡注意力记忆用于算子优化 | 支撑大多数现有方法（算子优化方向） |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29157) | Parallax: Parameterized Local Linear Attention for Language Modeling | 提出参数化局部线性注意力机制 | 支撑少数现有方法（注意力机制优化） |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29843) | HARP: Hadamard-Preconditioned Adaptive Rotation Processor for Extreme LLM Quantization | 提出可学习的结构化正交处理器替代固定Hadamard变换 | 支撑少数现有方法（量化预处理方向） |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29489) | Access Sets Matter: Budgeting Expert Reads for Scalable Weight-Space Model Merging | 提出专家访问集预算方法用于模型合并 | 支撑现有不足（I/O瓶颈问题） |
+
+### 创新点二：层自适应旋转预处理与低比特量化协同方法
+
+大多数现有后训练量化（PTQ）方法对激活值异常值和各向异性权重曲率敏感，在极端低位量化时精度损失严重 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29843)。少数现有方法引入基于非相干性的PTQ，使用固定的随机化Hadamard变换（RHT）缓解该问题，但固定变换无法根据层、校准分布或量化器自适应调整旋转基 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29843)。为此，本文提出HARP（Hadamard预条件自适应旋转处理器），将每个旋转表示为稀疏蝶形块正交阶段的乘积，支持非2的幂次维度，并在校准数据上拟合以自适应每层和每后端的量化基，从而在保持精确全精度等价性的同时提升极端低位量化鲁棒性。
+
+- **创新类型：** 方法设计创新 + 约束处理创新
+- **创新性判断：** 文献池中[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29843)直接提出了HARP方法，本文将其与创新点一的草稿模型蒸馏结合，形成从模型压缩到推理加速的完整协同优化链路。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29843) | HARP: Hadamard-Preconditioned Adaptive Rotation Processor for Extreme LLM Quantization | 提出可学习的结构化正交处理器替代固定Hadamard变换 | 支撑大多数/少数现有方法及本文方法 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29128) | Apertus LLM Family Expansion via Distillation and Quantization | 验证蒸馏和量化作为扩展模型家族的经济有效方法 | 支撑大多数现有方法（量化作为通用技术） |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29157) | Parallax: Parameterized Local Linear Attention for Language Modeling | 提出参数化局部线性注意力机制 | 支撑少数现有方法（注意力机制优化） |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29459) | Kronecker Embeddings: Byte-Level Structured Token Representations for Parameter-Efficient Language Models | 提出Kronecker嵌入替代学习嵌入表 | 支撑少数现有方法（参数效率优化） |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29489) | Access Sets Matter: Budgeting Expert Reads for Scalable Weight-Space Model Merging | 提出专家访问集预算方法 | 支撑现有不足（I/O和内存瓶颈） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29357) | PassNet: Scaling Large Language Models for Graph Compiler Pass Generation | 提出LLM生成编译器pass的生态系统 | 支撑大多数现有方法（编译优化方向） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29734) | HTAM: Hierarchical Transition-Attended Memory for Operator Optimization | 提出层次化过渡注意力记忆用于算子优化 | 支撑大多数现有方法（算子优化方向） |
+
+**该论文两个创新点之间的关系：**
+
+创新点一解决“草稿模型如何更有效地从目标模型学习”，创新点二解决“量化预处理如何自适应层和量化器”。二者属于同一篇论文主题（LLM推理加速与高效部署），但分别对应投机解码和低比特量化两个互补的技术层面，不存在重复。协同效应在于：量化后的目标模型可以更高效地服务于草稿模型的在线蒸馏过程，而蒸馏得到的更优草稿模型可以进一步提升投机解码的加速比。
+
+**建议实验设计：**
+
+- **对比方法：** 标准SFT蒸馏、固定RHT量化、EAGLE3、DFlash
+- **实验数据或场景：** 在Llama和Qwen系列模型上评估，使用数学推理和代码生成任务
+- **评价指标：** 接受长度、推理吞吐量、量化后精度（perplexity、下游任务准确率）
+- **消融实验：** 分别消融在线蒸馏组件和自适应旋转组件，验证协同增益
+
+---
+
+## 论文方向二：LLM代理系统的可靠性与安全对齐
+
+**拟定论文题目：** 面向多步骤工具调用代理的行为一致性与过程奖励优化方法
+
+**论文核心问题：** 如何通过过程奖励建模和在线反馈机制，提升多步骤工具调用代理在重复执行中的行为一致性，并降低因随机性导致的可靠性风险。
+
+### 创新点三：结构化工具有类型参数的行为一致性测量方法
+
+大多数现有方法关注ReAct风格代理（仅搜索、自由文本动作）的一致性，对结构化工具有类型参数和副作用的代理行为一致性研究不足 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.28840)。少数现有方法开始探索代理行为可重复性，但缺乏对工具选择、调用顺序和参数一致性的系统性测量框架 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.28840)。为此，本文提出基于结构化工具有类型参数的行为一致性测量协议，在重复相同调用条件下测量代理是否选择相同工具、相同顺序、相同参数，并引入参数级编辑距离和顺序违反率等细粒度指标，以量化多步骤工具调用代理的行为可重复性。
+
+- **创新类型：** 指标体系创新 + 评价方法创新
+- **创新性判断：** 文献池中[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.28840)直接提出了行为一致性实证研究，本文将其扩展为更系统的测量协议，并引入新的细粒度指标。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.28840) | How Consistent Are LLM Agents? Measuring Behavioral Reproducibility in Multi-Step Tool-Calling Pipelines | 系统性实证研究多步骤工具调用代理行为一致性 | 支撑大多数/少数现有方法及本文方法 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29129) | Governing Technical Debt in Agentic AI Systems | 提出智能体技术债务和随机税概念 | 支撑大多数现有方法（代理可靠性问题） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29119) | PRO-CUA: Process-Reward Optimization for Computer Use Agents | 提出过程奖励优化框架训练计算机使用代理 | 支撑少数现有方法（过程奖励方向） |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29801) | AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security | 提出轻量级可扩展代理安全对齐框架 | 支撑大多数现有方法（安全对齐方向） |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.28835) | GenesisFunc: Multi-Agent Data Generation for Accurate and Generalizable Function-Calling | 提出多代理数据生成管道用于函数调用训练 | 支撑大多数现有方法（函数调用数据生成） |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29310) | Rubric-Guided Process Reward for Stepwise Model Routing | 提出基于评分准则的过程奖励用于逐步模型路由 | 支撑少数现有方法（过程奖励方向） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29561) | ParaTool: Shifting Tool Representations from Context to Parameters | 提出将工具表示从上下文转移到参数 | 支撑现有不足（工具表示与行为一致性关系） |
+
+### 创新点四：过程奖励驱动的代理行为优化方法
+
+大多数现有代理训练方法依赖过滤式行为克隆，存在模仿瓶颈，包括专家演示的分布偏移和缺乏负学习信号 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29119)。少数现有方法引入轨迹级强化学习，但面临稀疏奖励、模糊信用分配和长程GUI交互的高基础设施成本 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29119)。为此，本文提出PRO-CUA，一种用于训练计算机使用代理的过程奖励优化框架，将在线策略环境交互与策略优化解耦：当前策略通过实时展开收集状态，为每个状态生成多样候选动作，从过程奖励模型（PRM）接收步骤级反馈，并使用组相对优势进行优化，以实现密集且灵活的信用分配。
+
+- **创新类型：** 方法设计创新 + 在线反馈机制创新
+- **创新性判断：** 文献池中[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29119)直接提出了PRO-CUA方法，本文将其与创新点三的行为一致性测量结合，形成从测量到优化的完整闭环。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29119) | PRO-CUA: Process-Reward Optimization for Computer Use Agents | 提出过程奖励优化框架训练计算机使用代理 | 支撑大多数/少数现有方法及本文方法 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29801) | AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security | 提出轻量级可扩展代理安全对齐框架 | 支撑大多数现有方法（安全对齐方向） |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.28835) | GenesisFunc: Multi-Agent Data Generation for Accurate and Generalizable Function-Calling | 提出多代理数据生成管道用于函数调用训练 | 支撑大多数现有方法（函数调用数据生成） |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29860) | ESPO: Early-Stopping Proximal Policy Optimization | 提出早停PPO方法检测轨迹失败并提前终止 | 支撑少数现有方法（强化学习优化方向） |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29310) | Rubric-Guided Process Reward for Stepwise Model Routing | 提出基于评分准则的过程奖励用于逐步模型路由 | 支撑少数现有方法（过程奖励方向） |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.28840) | How Consistent Are LLM Agents? Measuring Behavioral Reproducibility in Multi-Step Tool-Calling Pipelines | 系统性实证研究多步骤工具调用代理行为一致性 | 支撑大多数现有方法（行为一致性方向） |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29129) | Governing Technical Debt in Agentic AI Systems | 提出智能体技术债务和随机税概念 | 支撑现有不足（代理治理与可靠性） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29561) | ParaTool: Shifting Tool Representations from Context to Parameters | 提出将工具表示从上下文转移到参数 | 支撑大多数现有方法（工具表示优化） |
+
+**该论文两个创新点之间的关系：**
+
+创新点三解决“如何系统测量代理行为一致性”，创新点四解决“如何通过过程奖励优化代理行为”。二者属于同一篇论文主题（代理可靠性与安全对齐），但分别对应测量评估和优化改进两个互补的技术层面，不存在重复。协同效应在于：行为一致性测量结果可以作为过程奖励模型的训练信号，指导代理向更一致的行为方向优化。
+
+**建议实验设计：**
+
+- **对比方法：** 标准行为克隆、轨迹级PPO、ReAct风格代理
+- **实验数据或场景：** 在PhoneWorld [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29486) 和SWE-Bench相关任务上评估
+- **评价指标：** 行为一致性率（工具选择、顺序、参数）、任务成功率、平均步骤数
+- **消融实验：** 消融过程奖励组件、消融组相对优势机制
+
+---
+
+## 论文方向三：多模态检索与知识融合
+
+**拟定论文题目：** 面向异构知识源统一检索与文档级多模态问答的层次化融合方法
+
+**论文核心问题：** 如何构建统一的检索框架，在保留各知识源结构表达能力的同时，实现跨文本、表格、知识图谱的异构知识检索，并有效融合多模态证据以支持文档级问答。
+
+### 创新点五：异构知识源统一检索的语义原生查询调度方法
+
+大多数现有检索器在固定查询语言下一次只操作一个知识源，将文本、关系表、知识图谱和属性图等异构知识源碎片化在不兼容的接口后面 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29250)。少数现有方法尝试将所有知识源坍缩到共享空间，但这会抹去各知识源的结构表达能力（如模式、本体、组合算子） [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29250)。为此，本文提出OmniRetrieval框架，接收任意自然语言查询，识别合适的知识源，并向各知识源的原生执行引擎派发源原生查询，在保留各知识源结构表达能力的同时实现跨异构知识源的统一检索。
+
+- **创新类型：** 问题建模创新 + 方法设计创新
+- **创新性判断：** 文献池中[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29250)直接提出了OmniRetrieval框架，本文将其作为核心创新点，并进一步与层次化多模态融合结合。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29250) | OmniRetrieval: Unified Retrieval across Heterogeneous Knowledge Sources | 提出统一检索框架跨异构知识源 | 支撑大多数/少数现有方法及本文方法 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29606) | HiKEY: Hierarchical Multimodal Retrieval for Open-Domain Document Question Answering | 提出层次化树状多模态检索框架 | 支撑大多数现有方法（多模态检索方向） |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29401) | Rethinking Post-Training Recipes for Multimodal Time-Series Forecasting | 提出后训练LLM作为上下文引导修正器 | 支撑少数现有方法（多模态融合方向） |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29277) | Code-QA-Bench: Separating Code Reasoning from Documentation Memorization in Repository-Level QA | 提出仓库级代码理解基准合成框架 | 支撑大多数现有方法（知识检索评估方向） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29280) | LoopFM: Learning frOm HistOrical RePresentations of Foundation Model for Recommendation | 提出结构化FM中间嵌入作为输入特征 | 支撑少数现有方法（知识迁移方向） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29307) | GrepSeek: Training Search Agents for Direct Corpus Interaction | 提出直接语料交互搜索代理 | 支撑大多数现有方法（搜索代理方向） |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29055) | Hallucination Mitigation with Agentic AI, Nested Learning, and AI Sustainability via Semantic Caching | 提出幻觉缓解的多代理管道 | 支撑现有不足（检索质量与幻觉关系） |
+
+### 创新点六：层次化树状多模态证据融合方法
+
+大多数现有基于RAG的文档级开放域问答方法依赖平面文本块或页面级图像，难以精确定位目标文档和有机连接多模态证据（如表格和图表） [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29606)。少数现有方法引入层次化索引，但缺乏对文档层次结构（如父子关系）的显式编码，导致路由失败和证据碎片化 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29606)。为此，本文提出HiKEY，一种基于层次化树的多模态检索框架，通过文档层次解析（DHP）重构逻辑异构图，显式编码父子关系，并采用从粗到细的层次化策略：先通过层次化索引进行全局路由快速剪枝搜索空间，再在目标文档内进行局部多模态证据融合。
+
+- **创新类型：** 方法设计创新 + 特征表示创新
+- **创新性判断：** 文献池中[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29606)直接提出了HiKEY框架，本文将其与创新点五的异构知识源统一检索结合，形成从跨源检索到文档内证据融合的完整链路。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29606) | HiKEY: Hierarchical Multimodal Retrieval for Open-Domain Document Question Answering | 提出层次化树状多模态检索框架 | 支撑大多数/少数现有方法及本文方法 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29250) | OmniRetrieval: Unified Retrieval across Heterogeneous Knowledge Sources | 提出统一检索框架跨异构知识源 | 支撑大多数现有方法（统一检索方向） |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29401) | Rethinking Post-Training Recipes for Multimodal Time-Series Forecasting | 提出后训练LLM作为上下文引导修正器 | 支撑少数现有方法（多模态融合方向） |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29277) | Code-QA-Bench: Separating Code Reasoning from Documentation Memorization in Repository-Level QA | 提出仓库级代码理解基准合成框架 | 支撑大多数现有方法（知识检索评估方向） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29280) | LoopFM: Learning frOm HistOrical RePresentations of Foundation Model for Recommendation | 提出结构化FM中间嵌入作为输入特征 | 支撑少数现有方法（知识迁移方向） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29307) | GrepSeek: Training Search Agents for Direct Corpus Interaction | 提出直接语料交互搜索代理 | 支撑大多数现有方法（搜索代理方向） |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29055) | Hallucination Mitigation with Agentic AI, Nested Learning, and AI Sustainability via Semantic Caching | 提出幻觉缓解的多代理管道 | 支撑现有不足（检索质量与幻觉关系） |
+
+**该论文两个创新点之间的关系：**
+
+创新点五解决“如何跨异构知识源进行统一检索”，创新点六解决“如何在文档内进行层次化多模态证据融合”。二者属于同一篇论文主题（多模态检索与知识融合），但分别对应跨源检索和文档内融合两个互补的技术层面，不存在重复。协同效应在于：统一检索框架识别出合适的知识源后，层次化多模态融合方法在目标文档内进行精细的证据定位和融合。
+
+**建议实验设计：**
+
+- **对比方法：** 平面文本块RAG、页面级图像检索、标准密集检索
+- **实验数据或场景：** 在13个数据集、309个知识库的基准上评估，覆盖文本、关系表、知识图谱
+- **评价指标：** 检索准确率、答案F1、证据融合完整性、端到端问答准确率
+- **消融实验：** 消融层次化解析组件、消融全局路由组件、消融多模态融合组件
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|:---:|:---|:---|:---:|:---|:---|:---|:---:|
+| 论文一：LLM推理加速与高效部署 | 面向投机解码与低比特量化的LLM推理加速协同优化方法 | 如何协同优化草稿模型蒸馏与低比特量化 | 策略感知在线蒸馏 + 层自适应旋转量化 | 在线策略蒸馏、自适应旋转预处理 | Llama/Qwen系列，数学推理和代码生成任务 | 聚焦模型推理效率，不涉及代理行为或多模态检索 | 低 |
+| 论文二：代理可靠性与安全对齐 | 面向多步骤工具调用代理的行为一致性与过程奖励优化方法 | 如何提升代理行为一致性并降低随机性风险 | 行为一致性测量 + 过程奖励优化 | 行为一致性测量协议、过程奖励强化学习 | PhoneWorld、SWE-Bench，工具调用任务 | 聚焦代理行为可靠性和安全对齐，不涉及推理加速或多模态检索 | 低 |
+| 论文三：多模态检索与知识融合 | 面向异构知识源统一检索与文档级多模态问答的层次化融合方法 | 如何统一检索异构知识源并融合多模态证据 | 异构知识源统一检索 + 层次化多模态融合 | 语义原生查询调度、层次化树状检索 | 13数据集、309知识库，多模态问答任务 | 聚焦检索与知识融合，不涉及推理加速或代理行为 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一/三/五 | 创新点二/四/六 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|:---:|:---|:---|:---:|:---:|:---:|:---:|
+| 论文一 | 策略感知在线蒸馏 | 层自适应旋转量化 | 是 | 是（蒸馏 vs 量化） | 否 | 可保留 |
+| 论文二 | 行为一致性测量 | 过程奖励优化 | 是 | 是（测量 vs 优化） | 否 | 可保留 |
+| 论文三 | 异构知识源统一检索 | 层次化多模态融合 | 是 | 是（跨源检索 vs 文档内融合） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29343) Draft-OPD: On-Policy Distillation for Speculative Draft Models. arXiv:2605.29343, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29250) OmniRetrieval: Unified Retrieval across Heterogeneous Knowledge Sources. arXiv:2605.29250, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.28840) How Consistent Are LLM Agents? Measuring Behavioral Reproducibility in Multi-Step Tool-Calling Pipelines. arXiv:2605.28840, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29606) HiKEY: Hierarchical Multimodal Retrieval for Open-Domain Document Question Answering. arXiv:2605.29606, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29129) Governing Technical Debt in Agentic AI Systems. arXiv:2605.29129, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29157) Parallax: Parameterized Local Linear Attention for Language Modeling. arXiv:2605.29157, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29489) Access Sets Matter: Budgeting Expert Reads for Scalable Weight-Space Model Merging. arXiv:2605.29489, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29843) HARP: Hadamard-Preconditioned Adaptive Rotation Processor for Extreme LLM Quantization. arXiv:2605.29843, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29128) Apertus LLM Family Expansion via Distillation and Quantization. arXiv:2605.29128, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29401) Rethinking Post-Training Recipes for Multimodal Time-Series Forecasting. arXiv:2605.29401, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29119) PRO-CUA: Process-Reward Optimization for Computer Use Agents. arXiv:2605.29119, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29801) AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security. arXiv:2605.29801, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29357) PassNet: Scaling Large Language Models for Graph Compiler Pass Generation. arXiv:2605.29357, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.28835) GenesisFunc: Multi-Agent Data Generation for Accurate and Generalizable Function-Calling. arXiv:2605.28835, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29860) ESPO: Early-Stopping Proximal Policy Optimization. arXiv:2605.29860, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29310) Rubric-Guided Process Reward for Stepwise Model Routing. arXiv:2605.29310, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29277) Code-QA-Bench: Separating Code Reasoning from Documentation Memorization in Repository-Level QA. arXiv:2605.29277, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29734) HTAM: Hierarchical Transition-Attended Memory for Operator Optimization. arXiv:2605.29734, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29280) LoopFM: Learning frOm HistOrical RePresentations of Foundation Model for Recommendation. arXiv:2605.29280, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29055) Hallucination Mitigation with Agentic AI, Nested Learning, and AI Sustainability via Semantic Caching. arXiv:2605.29055, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29459) Kronecker Embeddings: Byte-Level Structured Token Representations for Parameter-Efficient Language Models. arXiv:2605.29459, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29561) ParaTool: Shifting Tool Representations from Context to Parameters. arXiv:2605.29561, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-29&paperId=2605.29307) GrepSeek: Training Search Agents for Direct Corpus Interaction. arXiv:2605.29307, 2026.
+
+---
+
+## 自检结果
+
+| 检查项 | 结果 |
+|:---|:---:|
+| 是否按照三篇论文组织 | 是 |
+| 是否每篇论文两个创新点 | 是 |
+| 是否总共六个创新点 | 是 |
+| 是否避免一篇论文拆成六个创新点 | 是 |
+| 是否避免六篇论文各一个创新点 | 是 |
+| 每篇论文内部两个创新点是否属于同一论文主题 | 是 |
+| 每篇论文内部两个创新点是否互补而不重复 | 是 |
+| 三篇论文之间是否研究问题不同 | 是 |
+| 三篇论文之间是否核心方法不同 | 是 |
+| 三篇论文之间是否实验验证重点不同 | 是 |
+| 每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构 | 是 |
+| 每个创新点是否至少引用3篇池内文献 | 是 |
+| 是否说明每篇文献的支撑作用 | 是 |
+| 是否避免“首次提出”“填补空白”等绝对化表述 | 是 |
+| 是否建立三篇论文方向去重矩阵 | 是 |
+| 是否建立每篇论文内部创新点去重检查表 | 是 |

@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-29",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM推理加速与高效部署",
+      "blurb": "围绕投机解码、低比特量化、注意力机制优化与编译器自动调优，探索从模型结构到系统层面的推理加速与部署效率提升方法。"
+    },
+    {
+      "title": "LLM代理系统的可靠性与安全对齐",
+      "blurb": "聚焦工具调用代理的行为一致性、过程奖励优化、安全对齐框架与技术债务治理，提升多步骤代理在生产环境中的可信度。"
+    },
+    {
+      "title": "多模态检索与知识融合",
+      "blurb": "面向异构知识源统一检索、文档级多模态问答、时序预测中的多模态上下文融合，突破单一模态与单一知识源的检索与推理瓶颈。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.29343",
+      "title": "Draft-OPD: On-Policy Distillation for Speculative Draft Models"
+    },
+    {
+      "idx": 2,
+      "id": "2605.28845",
+      "title": "HPC-vQPU: A Service-Export Architecture for Virtual QPUs on Batch-Scheduled HPC Systems"
+    },
+    {
+      "idx": 3,
+      "id": "2605.29250",
+      "title": "OmniRetrieval: Unified Retrieval across Heterogeneous Knowledge Sources"
+    },
+    {
+      "idx": 4,
+      "id": "2605.28840",
+      "title": "How Consistent Are LLM Agents? Measuring Behavioral Reproducibility in Multi-Step Tool-Calling Pipelines"
+    },
+    {
+      "idx": 5,
+      "id": "2605.29606",
+      "title": "HiKEY: Hierarchical Multimodal Retrieval for Open-Domain Document Question Answering"
+    },
+    {
+      "idx": 6,
+      "id": "2605.29001",
+      "title": "FormInv: A Measurement Protocol for Semantic Invariance in Mathematical Reasoning Benchmarks"
+    },
+    {
+      "idx": 7,
+      "id": "2605.29129",
+      "title": "Governing Technical Debt in Agentic AI Systems"
+    },
+    {
+      "idx": 8,
+      "id": "2605.29486",
+      "title": "PhoneWorld: Scaling Phone-Use Agent Environments"
+    },
+    {
+      "idx": 9,
+      "id": "2605.29157",
+      "title": "Parallax: Parameterized Local Linear Attention for Language Modeling"
+    },
+    {
+      "idx": 10,
+      "id": "2605.29489",
+      "title": "Access Sets Matter: Budgeting Expert Reads for Scalable Weight-Space Model Merging"
+    },
+    {
+      "idx": 11,
+      "id": "2605.29843",
+      "title": "HARP: Hadamard-Preconditioned Adaptive Rotation Processor for Extreme LLM Quantization"
+    },
+    {
+      "idx": 12,
+      "id": "2605.29128",
+      "title": "Apertus LLM Family Expansion via Distillation and Quantization"
+    },
+    {
+      "idx": 13,
+      "id": "2605.29604",
+      "title": "TC-MIS: Maximal Independent Set on Tensor-cores"
+    },
+    {
+      "idx": 14,
+      "id": "2605.29401",
+      "title": "Rethinking Post-Training Recipes for Multimodal Time-Series Forecasting"
+    },
+    {
+      "idx": 15,
+      "id": "2605.29119",
+      "title": "PRO-CUA: Process-Reward Optimization for Computer Use Agents"
+    },
+    {
+      "idx": 16,
+      "id": "2605.29801",
+      "title": "AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security"
+    },
+    {
+      "idx": 17,
+      "id": "2605.29357",
+      "title": "PassNet: Scaling Large Language Models for Graph Compiler Pass Generation"
+    },
+    {
+      "idx": 18,
+      "id": "2605.28835",
+      "title": "GenesisFunc: Multi-Agent Data Generation for Accurate and Generalizable Function-Calling"
+    },
+    {
+      "idx": 19,
+      "id": "2605.29860",
+      "title": "ESPO: Early-Stopping Proximal Policy Optimization"
+    },
+    {
+      "idx": 20,
+      "id": "2605.29310",
+      "title": "Rubric-Guided Process Reward for Stepwise Model Routing"
+    },
+    {
+      "idx": 21,
+      "id": "2605.29277",
+      "title": "Code-QA-Bench: Separating Code Reasoning from Documentation Memorization in Repository-Level QA"
+    },
+    {
+      "idx": 22,
+      "id": "2605.29734",
+      "title": "HTAM: Hierarchical Transition-Attended Memory for Operator Optimization"
+    },
+    {
+      "idx": 23,
+      "id": "2605.30345",
+      "title": "SchGen: PCB Schematic Generation with Semantic-Grounded Code Representations"
+    },
+    {
+      "idx": 24,
+      "id": "2605.29280",
+      "title": "LoopFM: Learning frOm HistOrical RePresentations of Foundation Model for Recommendation"
+    },
+    {
+      "idx": 25,
+      "id": "2605.29078",
+      "title": "Bridging the Sim-to-Real Gap in Reinforcement Learning-Based Industrial Dispatching through Execution Semantics"
+    },
+    {
+      "idx": 26,
+      "id": "2605.29055",
+      "title": "Hallucination Mitigation with Agentic AI, Nested Learning, and AI Sustainability via Semantic Caching"
+    },
+    {
+      "idx": 27,
+      "id": "2605.29459",
+      "title": "Kronecker Embeddings: Byte-Level Structured Token Representations for Parameter-Efficient Language Models"
+    },
+    {
+      "idx": 28,
+      "id": "2605.29561",
+      "title": "ParaTool: Shifting Tool Representations from Context to Parameters"
+    },
+    {
+      "idx": 29,
+      "id": "2605.30000",
+      "title": "Cookie-Bench: Continuous On-screen Key Interaction Evaluation for Web Generation"
+    },
+    {
+      "idx": 30,
+      "id": "2605.29307",
+      "title": "GrepSeek: Training Search Agents for Direct Corpus Interaction"
+    }
+  ]
+}
