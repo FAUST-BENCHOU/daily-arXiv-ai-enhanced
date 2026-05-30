@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-30",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM推理加速与缓存压缩",
+      "blurb": "围绕投机解码、KV缓存压缩、视觉token剪枝等方向，探索在推理阶段降低计算与内存开销的创新方法，涵盖Draft-OPD、Moment-KV、AsymVLM、Domino等池内工作。"
+    },
+    {
+      "title": "LLM安全对齐与智能体可靠性",
+      "blurb": "聚焦检索增强对安全对齐的侵蚀、过程级异常检测、安全护栏的延迟-精度权衡等议题，涉及AgentREVEAL、OpenClawBench、COLAGUARD、Redpanda ADP等池内工作。"
+    },
+    {
+      "title": "LLM训练效率与数据组织",
+      "blurb": "研究数据排序策略对训练效率的影响、MoE模型的后训练压缩、流水线并行加速等方向，涵盖STR/SAW、ConMoE、AMDP、Demystifying Data Organization等池内工作。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.28845",
+      "title": "HPC-vQPU: A Service-Export Architecture for Virtual QPUs on Batch-Scheduled HPC Systems"
+    },
+    {
+      "idx": 2,
+      "id": "2605.29910",
+      "title": "Agora: Toward Autonomous Bug Detection in Production-Level Consensus Protocols with LLM Agents"
+    },
+    {
+      "idx": 3,
+      "id": "2605.30343",
+      "title": "Unlocking the Working Memory of Large Language Models for Latent Reasoning"
+    },
+    {
+      "idx": 4,
+      "id": "2605.29676",
+      "title": "Notation Matters: A Benchmark Study of Token-Optimized Formats in Agentic AI Systems"
+    },
+    {
+      "idx": 5,
+      "id": "2605.29640",
+      "title": "VikingMem: A Memory Base Management System for Stateful LLM-based Applications"
+    },
+    {
+      "idx": 6,
+      "id": "2605.30290",
+      "title": "Self-Trained Verification for Training- and Test-Time Self-Improvement"
+    },
+    {
+      "idx": 7,
+      "id": "2605.29343",
+      "title": "Draft-OPD: On-Policy Distillation for Speculative Draft Models"
+    },
+    {
+      "idx": 8,
+      "id": "2605.29253",
+      "title": "OpenClawBench: Benchmarking Process-side Anomalies in Real-world Agent Execution Trajectories"
+    },
+    {
+      "idx": 9,
+      "id": "2605.29829",
+      "title": "OptSkills: Learning Generalizable Optimization Skills from Problem Archetypes via Cluster-Based Distillation"
+    },
+    {
+      "idx": 10,
+      "id": "2605.29659",
+      "title": "Opir: Efficient Multi-Task Safety Classification for Toxicity, Jailbreaks, Hate Speech, and Harmful Content"
+    },
+    {
+      "idx": 11,
+      "id": "2605.29489",
+      "title": "Access Sets Matter: Budgeting Expert Reads for Scalable Weight-Space Model Merging"
+    },
+    {
+      "idx": 12,
+      "id": "2605.29224",
+      "title": "Relevance as a Vulnerability: How Web Retrieval Degrades Safety Alignment in LLM Agents"
+    },
+    {
+      "idx": 13,
+      "id": "2605.29756",
+      "title": "LFQ: Logit-aware Final-block Quantization for Boosting the Generation Quality of Low-Bit Quantized LLMs"
+    },
+    {
+      "idx": 14,
+      "id": "2605.29319",
+      "title": "Rethinking Stepwise Model Routing: A Cost-Efficient Table Reasoning Perspective"
+    },
+    {
+      "idx": 15,
+      "id": "2605.29535",
+      "title": "AsymVLM: Asymmetric Token Pruning for Efficient Vision-Language Model Inference"
+    },
+    {
+      "idx": 16,
+      "id": "2605.30054",
+      "title": "Projectional Decoding: Towards Semantic-Aware LLM Generation"
+    },
+    {
+      "idx": 17,
+      "id": "2605.28835",
+      "title": "GenesisFunc: Multi-Agent Data Generation for Accurate and Generalizable Function-Calling"
+    },
+    {
+      "idx": 18,
+      "id": "2605.30152",
+      "title": "Do Proactive Agents Really Need an LLM to Decide When to Wake and What to Anchor?"
+    },
+    {
+      "idx": 19,
+      "id": "2605.29986",
+      "title": "Accelerating Constrained Decoding with Token Space Compression"
+    },
+    {
+      "idx": 20,
+      "id": "2605.29168",
+      "title": "Better Later Than Sooner: Neuro-Symbolic Knowledge Graph Construction via Ontology-grounded Post-extraction Correction"
+    },
+    {
+      "idx": 21,
+      "id": "2605.30334",
+      "title": "Demystifying Data Organization for Enhanced LLM Training"
+    },
+    {
+      "idx": 22,
+      "id": "2605.29307",
+      "title": "GrepSeek: Training Search Agents for Direct Corpus Interaction"
+    },
+    {
+      "idx": 23,
+      "id": "2605.29326",
+      "title": "NeuroEdge: Real-Time Hand Gesture Recognition with High-Density EMG Using Deep Learning at the Edge"
+    },
+    {
+      "idx": 24,
+      "id": "2605.29068",
+      "title": "Robust and Efficient Guardrails with Latent Reasoning"
+    },
+    {
+      "idx": 25,
+      "id": "2605.29873",
+      "title": "Moment-KV: Momentum-Based Decode-Time KV Cache Compression for Long Generation"
+    },
+    {
+      "idx": 26,
+      "id": "2605.28969",
+      "title": "Beyond Recall: Behavioral Specification as an Interpretive Layer for AI Personalization"
+    },
+    {
+      "idx": 27,
+      "id": "2605.29707",
+      "title": "Domino: Decoupling Causal Modeling from Autoregressive Drafting in Speculative Decoding"
+    },
+    {
+      "idx": 28,
+      "id": "2605.29350",
+      "title": "ConMoE: Expert-Pool Consolidation via Prototype Reassignment for MoE Compression"
+    },
+    {
+      "idx": 29,
+      "id": "2605.29664",
+      "title": "AMDP: Asynchronous Multi-Directional Pipeline Parallelism for Large-Scale Models Training"
+    },
+    {
+      "idx": 30,
+      "id": "2605.29082",
+      "title": "The Importance of Out-of-Band Metadata for Safe Autonomous Agents: The Redpanda Agentic Data Plane"
+    }
+  ]
+}

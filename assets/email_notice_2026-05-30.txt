@@ -1,0 +1,9 @@
+每日硬凑师兄要求的创新点 2026-05-30
+
+今日三个主题概要：
+1. LLM推理加速与缓存压缩 — 围绕投机解码、KV缓存压缩、视觉token剪枝等方向，探索在推理阶段降低计算与内存开销的创新方法，涵盖Draft-OPD、Moment-KV、AsymVLM、Domino等池内工作。
+2. LLM安全对齐与智能体可靠性 — 聚焦检索增强对安全对齐的侵蚀、过程级异常检测、安全护栏的延迟-精度权衡等议题，涉及AgentREVEAL、OpenClawBench、COLAGUARD、Redpanda ADP等池内工作。
+3. LLM训练效率与数据组织 — 研究数据排序策略对训练效率的影响、MoE模型的后训练压缩、流水线并行加速等方向，涵盖STR/SAW、ConMoE、AMDP、Demystifying Data Organization等池内工作。
+
+完整创新点、矩阵与文献引用见：
+https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/digest-viewer.html?date=2026-05-30
