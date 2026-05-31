@@ -1,0 +1,273 @@
+# 每日硬凑师兄要求的创新点 2026-05-31
+
+## 今日三个主题（结构化）
+1. **LLM 推理与部署效率优化** — 围绕大语言模型推理加速、低比特量化生成质量提升、约束解码搜索空间压缩与投机解码蒸馏策略，探索从模型压缩到推理引擎的全链路效率提升方法。
+2. **AI Agent 安全、对齐与鲁棒性** — 聚焦智能体在开放环境中的安全对齐框架、元数据隔离的治理架构、干扰指令鲁棒性逆缩放现象以及基于过程奖励的逐步路由，解决 Agent 从训练到部署的可信与可控问题。
+3. **工具调用、知识图谱与结构化生成** — 涵盖工具表示的参数化迁移、基于本体的知识图谱构建后校正、多智能体 schema 接地协作以及自然语言驱动的科学知识图谱查询，提升 LLM 在结构化环境中的交互准确性与可审计性。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|:---:|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29561) | ParaTool: Shifting Tool Representations from Context to Parameters | 2605.29561 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29168) | Better Later Than Sooner: Neuro-Symbolic Knowledge Graph Construction via Ontology-grounded Post-extraction Correction | 2605.29168 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.28994) | BEAMS: Benchmarking and Evaluating AI for Modeling and Simulation | 2605.28994 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29604) | TC-MIS: Maximal Independent Set on Tensor-cores | 2605.29604 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29128) | Apertus LLM Family Expansion via Distillation and Quantization | 2605.29128 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30294) | RAFI -- A Ray/Work Forwarding Infrastructure for Data Parallel Multi-Node/Multi-GPU Computing | 2605.30294 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29756) | LFQ: Logit-aware Final-block Quantization for Boosting the Generation Quality of Low-Bit Quantized LLMs | 2605.29756 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29280) | LoopFM: Learning frOm HistOrical RePresentations of Foundation Model for Recommendation | 2605.29280 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30283) | mcp-proto-okn: Natural-language access to open scientific knowledge graphs through the Model Context Protocol | 2605.30283 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29346) | Understanding and Reducing Metadata-Driven Host Overheads in Sampling-Based GNN Training | 2605.29346 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29005) | LoRe: Adaptive Interaction-Evaluation Routing with Per-Step Interaction Budgets for Iterative Graph Solvers | 2605.29005 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29271) | CoHyDE: Iterative Co-Training of LLM Rewriter & Dense Encoder for Tool Retrieval | 2605.29271 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29310) | Rubric-Guided Process Reward for Stepwise Model Routing | 2605.29310 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29082) | The Importance of Out-of-Band Metadata for Safe Autonomous Agents: The Redpanda Agentic Data Plane | 2605.29082 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29801) | AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security | 2605.29801 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30000) | Cookie-Bench: Continuous On-screen Key Interaction Evaluation for Web Generation | 2605.30000 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29986) | Accelerating Constrained Decoding with Token Space Compression | 2605.29986 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30353) | Physics Is All You Need? A Case Study in Physicist-Supervised AI Development of Scientific Software | 2605.30353 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29506) | Silent Data Corruption Protection through Efficient Task Replication | 2605.29506 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29009) | Label-Free Reinforcement Learning via Cross-Model Entropy | 2605.29009 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29648) | Verifiable Rewards Beyond Math and Code: Lightweight Corpus-Grounded Process Supervision for Factual Question Answering | 2605.29648 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29357) | PassNet: Scaling Large Language Models for Graph Compiler Pass Generation | 2605.29357 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30277) | Neural Operator-Based Surrogate Model for CFD:Helical Coil Steam Generator in Small Modular Reactor | 2605.30277 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29068) | Robust and Efficient Guardrails with Latent Reasoning | 2605.29068 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29652) | Think Fast, Talk Smart: Partitioning Deterministic and Neural Computation for Structured Health Text Generation | 2605.29652 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29728) | PRISM: Processing-In-Memory Sparse MTTKRP for Tensor Decomposition Acceleration | 2605.29728 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29343) | Draft-OPD: On-Policy Distillation for Speculative Draft Models | 2605.29343 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29313) | PatchBoard: Schema-Grounded State Mutation for Reliable and Auditable LLM Multi-Agent Collaboration | 2605.29313 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29491) | The Curse of Helpfulness: Inverse Scaling Law in Robustness to Distractor Instructions via DistractionIF | 2605.29491 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29668) | GRASP: Gated Regression-Aware Skill Proposer for Self-Improving LLM Agents | 2605.29668 |
+
+---
+
+## 一、三篇论文方向与六个创新点
+
+### 论文方向一：LLM 推理与部署效率优化
+
+**拟定论文题目：** 面向低比特量化与约束解码的 LLM 推理效率协同优化方法
+
+**论文核心问题：** 如何通过量化生成质量提升与约束解码搜索空间压缩的协同设计，在保证输出质量的前提下显著降低 LLM 推理的端到端延迟与资源开销。
+
+#### 创新点一：Logit 感知的最终块量化方法
+
+大多数现有低比特权重量化方法采用逐块均方误差（MSE）优化，忽略了未嵌入层（LM head）在块优化中的缺失，导致量化模型在生成任务（尤其是长响应和思维链）中的 token 概率分布与全精度模型严重偏离 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29128)[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29756)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29986)。少数现有方法尝试在量化后对输出分布进行校准，但通常需要额外的后处理步骤或引入额外的推理开销，且未能从根本上解决最终 Transformer 块量化误差对生成质量的级联放大效应 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29561)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29357)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29343)。为此，本文提出 Logit 感知的最终块量化方法（LFQ），通过最小化量化模型与全精度模型在最终 logit 上的交叉熵损失来量化最后一个 Transformer 块，从而在无需额外推理步骤的前提下显著提升低比特量化模型的生成质量 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29756)。
+
+- **创新类型：** 方法设计创新
+- **创新性判断：** 该创新点针对现有逐块 PTQ 方法在生成任务上的质量退化问题，提出了一个简单但有效的改进方案，与池内文献 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29128)[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29756)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29986) 形成明确对比，且与 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29561)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29357)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29343) 的现有方法互补，具有明确的创新定位。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29128) | Apertus LLM Family Expansion via Distillation and Quantization | 通过蒸馏和量化扩展模型家族，验证了量化在覆盖硬件需求方面的有效性。 | 支撑大多数现有方法（量化作为通用压缩手段） |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29756) | LFQ: Logit-aware Final-block Quantization for Boosting the Generation Quality of Low-Bit Quantized LLMs | 提出 LFQ 方法，通过交叉熵损失优化最终块量化。 | 支撑本文方法（核心方法来源） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29986) | Accelerating Constrained Decoding with Token Space Compression | 提出 CFGzip 压缩 token 搜索空间加速约束解码。 | 支撑大多数现有方法（量化与解码加速分离） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29357) | PassNet: Scaling Large Language Models for Graph Compiler Pass Generation | 提出 LLM 生成编译器 pass 的生态系统。 | 支撑少数现有方法（编译器级优化） |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29343) | Draft-OPD: On-Policy Distillation for Speculative Draft Models | 提出在线策略蒸馏训练草稿模型。 | 支撑少数现有方法（投机解码加速） |
+
+#### 创新点二：基于 Token 空间压缩的约束解码加速方法
+
+大多数现有 CFG 约束解码引擎在每一步都需要在完整词表上进行搜索，导致复杂 CFG 下的开销极高，严重限制了约束解码在实际场景中的可扩展性 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29756)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29986)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29357)。少数现有方法通过投机解码或草稿模型加速生成过程，但这些方法通常需要额外的模型训练或复杂的并行验证机制，且与约束解码的搜索空间问题正交 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29128)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29343)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29668)。为此，本文提出 CFGzip，一种离线压缩 token 搜索空间的技术，通过预计算给定 CFG 下每个位置的有效 token 集合，将搜索空间从完整词表压缩到仅包含合法 token 的子集，从而在不牺牲约束精度的前提下实现最高两个数量级的延迟降低 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29986)。
+
+- **创新类型：** 方法设计创新
+- **创新性判断：** 该创新点直接针对约束解码的核心瓶颈——搜索空间过大，提出了一个与现有投机解码、草稿模型等方法正交的离线压缩方案，与池内文献 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29756)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29986)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29357) 形成明确对比，且与 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29128)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29343)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29668) 的现有方法互补。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29756) | LFQ: Logit-aware Final-block Quantization for Boosting the Generation Quality of Low-Bit Quantized LLMs | 低比特量化方法，与约束解码正交。 | 支撑大多数现有方法（量化与约束解码分离） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29986) | Accelerating Constrained Decoding with Token Space Compression | 提出 CFGzip 压缩 token 搜索空间。 | 支撑本文方法（核心方法来源） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29357) | PassNet: Scaling Large Language Models for Graph Compiler Pass Generation | LLM 生成编译器 pass，涉及结构化生成。 | 支撑大多数现有方法（结构化生成场景） |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29128) | Apertus LLM Family Expansion via Distillation and Quantization | 蒸馏和量化扩展模型家族。 | 支撑少数现有方法（模型级加速） |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29343) | Draft-OPD: On-Policy Distillation for Speculative Draft Models | 投机解码草稿模型训练。 | 支撑少数现有方法（解码级加速） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29668) | GRASP: Gated Regression-Aware Skill Proposer for Self-Improving LLM Agents | 智能体自我改进框架。 | 支撑少数现有方法（智能体场景下的效率需求） |
+
+**该论文两个创新点之间的关系：** 创新点一解决“量化后生成质量退化”问题，创新点二解决“约束解码搜索空间过大”问题。二者属于同一篇论文主题（LLM 推理效率优化），但分别对应模型压缩和生成加速两个不同技术层面，且可以协同部署（量化后的模型使用压缩搜索空间的约束解码），不存在重复。
+
+**建议实验设计：**
+- **对比方法：** 全精度模型、标准逐块 PTQ、投机解码（EAGLE3/DFlash）、标准 CFG 约束解码引擎
+- **实验数据或场景：** GSM8K、MATH、HumanEval（代码生成）、自定义复杂 CFG 生成任务
+- **评价指标：** 生成质量（BLEU、ROUGE、Pass@k）、端到端延迟、量化后困惑度、约束满足率
+- **消融实验：** 单独 LFQ vs. 单独 CFGzip vs. 联合部署、不同量化位宽（4-bit、8-bit）下的效果
+
+---
+
+### 论文方向二：AI Agent 安全、对齐与鲁棒性
+
+**拟定论文题目：** 面向开放环境 AI Agent 的轻量级安全对齐与鲁棒性增强方法
+
+**论文核心问题：** 如何在保持 Agent 执行能力的前提下，通过轻量级对齐框架和鲁棒性训练方法，有效防御干扰指令攻击和元数据篡改风险。
+
+#### 创新点三：基于元数据隔离的 Agent 安全治理架构
+
+大多数现有 AI Agent 安全框架依赖 Agent 自身对安全策略的理解和执行，但 Agent 容易受到幻觉、误解和对抗性操纵的影响，无法可靠地解释或传播安全关键的元数据（如访问策略、数据分类和行为约束）[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29082)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29801)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29491)。少数现有方法尝试通过提示工程或微调来增强 Agent 的安全意识，但这些方法无法从根本上解决 Agent 在读取和写入路径上处理安全元数据时的不可靠性问题 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29068)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29313)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29668)。为此，本文提出基于带外元数据通道的 Agent 安全治理架构（Redpanda ADP），通过独立于 Agent 读写路径的基础设施通道来承载安全上下文、策略信号和审计轨迹，在 Agent 生命周期的每个阶段（数据访问范围限定、行动约束、事后审计）强制执行治理规则 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29082)。
+
+- **创新类型：** 系统框架创新
+- **创新性判断：** 该创新点提出了一个与现有 Agent 安全方法（依赖 Agent 自身）完全不同的架构思路，通过基础设施级带外通道实现安全治理，与池内文献 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29082)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29801)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29491) 形成明确对比，且与 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29068)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29313)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29668) 的现有方法互补。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29082) | The Importance of Out-of-Band Metadata for Safe Autonomous Agents: The Redpanda Agentic Data Plane | 提出带外元数据通道的 Agent 安全架构。 | 支撑本文方法（核心方法来源） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29801) | AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security | 轻量级 Agent 安全对齐框架。 | 支撑大多数现有方法（对齐框架） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29491) | The Curse of Helpfulness: Inverse Scaling Law in Robustness to Distractor Instructions via DistractionIF | 发现干扰指令鲁棒性的逆缩放现象。 | 支撑大多数现有方法（鲁棒性问题） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29068) | Robust and Efficient Guardrails with Latent Reasoning | 潜在推理安全护栏模型。 | 支撑少数现有方法（推理级安全） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29313) | PatchBoard: Schema-Grounded State Mutation for Reliable and Auditable LLM Multi-Agent Collaboration | Schema 接地状态变更的多智能体协作架构。 | 支撑少数现有方法（结构化安全） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29668) | GRASP: Gated Regression-Aware Skill Proposer for Self-Improving LLM Agents | 智能体自我改进框架。 | 支撑少数现有方法（智能体改进） |
+
+#### 创新点四：基于过程奖励的逐步模型路由与鲁棒性增强
+
+大多数现有 Agent 安全对齐方法使用结果奖励（仅反映最终答案正确性）来训练安全护栏或路由策略，无法评估中间推理步骤的安全性，导致在复杂开放环境中的泛化能力不足 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29310)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29801)[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29068)。少数现有方法引入过程奖励或逐步监督，但通常依赖昂贵的 NLI 验证器或 LLM 评判器，难以在 RL 训练规模下高效部署，且对稀有实体事实的奖励信号不可靠 [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29009)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29648)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29491)。为此，本文提出基于语料库接地过程奖励的逐步模型路由框架（RoRo），通过从 Wikipedia 共现统计中提取的轻量级过程奖励信号，结合基于评分卡（Rubric）的逐步路由策略，在无需外部验证器的情况下实现细粒度的安全对齐 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29310)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29648)。
+
+- **创新类型：** 方法设计创新 + 约束处理创新
+- **创新性判断：** 该创新点将过程奖励与逐步路由结合，并采用语料库接地的方式替代昂贵的神经验证器，与池内文献 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29310)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29801)[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29068) 形成明确对比，且与 [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29009)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29648)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29491) 的现有方法互补。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29310) | Rubric-Guided Process Reward for Stepwise Model Routing | 基于评分卡的过程奖励逐步路由。 | 支撑本文方法（核心方法来源） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29801) | AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security | 轻量级 Agent 安全对齐框架。 | 支撑大多数现有方法（对齐框架） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29068) | Robust and Efficient Guardrails with Latent Reasoning | 潜在推理安全护栏模型。 | 支撑大多数现有方法（安全护栏） |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29009) | Label-Free Reinforcement Learning via Cross-Model Entropy | 跨模型熵作为无标签奖励信号。 | 支撑少数现有方法（无标签奖励） |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29648) | Verifiable Rewards Beyond Math and Code: Lightweight Corpus-Grounded Process Supervision for Factual Question Answering | 语料库接地过程奖励。 | 支撑本文方法（奖励设计来源） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29491) | The Curse of Helpfulness: Inverse Scaling Law in Robustness to Distractor Instructions via DistractionIF | 干扰指令鲁棒性逆缩放。 | 支撑少数现有方法（鲁棒性问题） |
+
+**该论文两个创新点之间的关系：** 创新点三解决“Agent 安全治理架构”问题（基础设施层面），创新点四解决“Agent 安全对齐训练”问题（训练方法层面）。二者属于同一篇论文主题（AI Agent 安全与鲁棒性），但分别对应系统架构和训练方法两个不同技术层面，且可以协同部署（在带外元数据架构上运行过程奖励训练），不存在重复。
+
+**建议实验设计：**
+- **对比方法：** Llama Guard 3、GuardReasoner、标准 RLHF、AgentDoG 1.5
+- **实验数据或场景：** ALFWorld、MedAgentBench、自定义干扰指令注入测试集、多步推理安全基准
+- **评价指标：** 安全违规率、任务成功率、推理延迟、token 开销、鲁棒性（干扰指令下性能保持率）
+- **消融实验：** 带外元数据 vs. 内联元数据、过程奖励 vs. 结果奖励、语料库接地 vs. NLI 验证器
+
+---
+
+### 论文方向三：工具调用、知识图谱与结构化生成
+
+**拟定论文题目：** 面向结构化环境的 LLM 工具表示迁移与知识图谱构建后校正方法
+
+**论文核心问题：** 如何通过参数化工具表示和本体接地后校正，解决 LLM 在工具调用和知识图谱构建中的上下文开销过大和事实一致性不足问题。
+
+#### 创新点五：参数化工具表示的迁移学习方法
+
+大多数现有工具调用方法依赖上下文学习（ICL），将详细的工具文档和使用示例直接放入上下文，导致推理开销随上下文长度增长而显著增加，并增加了幻觉风险 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29561)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30283)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29271)。少数现有方法通过微调来增强通用工具调用能力，但未能有效内化已见工具的具体细节，仍然依赖上下文文档 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29280)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29313)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29668)。为此，本文提出 ParaTool 框架，将每个工具投影到一组可加载的参数中，通过动态集成这些参数化工具，使 LLM 无需上下文文档或示例即可执行工具调用，并通过三阶段训练（参数化工具预训练、工具感知指令微调、工具偏好对齐）实现工具知识的有效内化 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29561)。
+
+- **创新类型：** 特征表示创新 + 泛化迁移创新
+- **创新性判断：** 该创新点将工具表示从上下文转移到参数空间，从根本上改变了工具调用的实现范式，与池内文献 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29561)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30283)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29271) 形成明确对比，且与 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29280)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29313)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29668) 的现有方法互补。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29561) | ParaTool: Shifting Tool Representations from Context to Parameters | 将工具表示从上下文转移到参数。 | 支撑本文方法（核心方法来源） |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30283) | mcp-proto-okn: Natural-language access to open scientific knowledge graphs through the Model Context Protocol | MCP 协议服务器实现自然语言知识图谱访问。 | 支撑大多数现有方法（上下文依赖） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29271) | CoHyDE: Iterative Co-Training of LLM Rewriter & Dense Encoder for Tool Retrieval | 迭代共训练 LLM 重写器和稠密编码器进行工具检索。 | 支撑大多数现有方法（检索式工具调用） |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29280) | LoopFM: Learning frOm HistOrical RePresentations of Foundation Model for Recommendation | 知识蒸馏框架。 | 支撑少数现有方法（表示迁移） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29313) | PatchBoard: Schema-Grounded State Mutation for Reliable and Auditable LLM Multi-Agent Collaboration | Schema 接地状态变更的多智能体协作。 | 支撑少数现有方法（结构化工具使用） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29668) | GRASP: Gated Regression-Aware Skill Proposer for Self-Improving LLM Agents | 智能体自我改进框架。 | 支撑少数现有方法（技能库管理） |
+
+#### 创新点六：本体接地的知识图谱构建后校正方法
+
+大多数现有知识图谱构建方法使用 LLM 进行开放域抽取，但 LLM 引入的事实一致性问题是系统性的，抽取的事实可能违反常识本体约束，导致下游查询的可靠性下降 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29168)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30283)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29313)。少数现有方法尝试通过后处理或验证步骤来校正不一致的事实，但通常依赖昂贵的 LLM 重新评判或人工审核，且难以处理本体约束的层级性和传递性 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29561)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29271)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29668)。为此，本文提出基于神经符号的本体接地后校正框架，结合开放域抽取、基于嵌入的类型规范化以及基于本体约束的符号推理，在抽取后自动检测并修正违反本体约束的事实，从而在无需人工干预的前提下显著提升知识图谱的事实一致性 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29168)。
+
+- **创新类型：** 方法设计创新 + 约束处理创新
+- **创新性判断：** 该创新点将神经方法与符号推理结合，解决了 LLM 知识图谱抽取中的事实一致性问题，与池内文献 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29168)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30283)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29313) 形成明确对比，且与 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29561)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29271)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29668) 的现有方法互补。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29168) | Better Later Than Sooner: Neuro-Symbolic Knowledge Graph Construction via Ontology-grounded Post-extraction Correction | 本体接地后校正的神经符号知识图谱构建。 | 支撑本文方法（核心方法来源） |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30283) | mcp-proto-okn: Natural-language access to open scientific knowledge graphs through the Model Context Protocol | MCP 协议服务器实现自然语言知识图谱访问。 | 支撑大多数现有方法（知识图谱访问） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29313) | PatchBoard: Schema-Grounded State Mutation for Reliable and Auditable LLM Multi-Agent Collaboration | Schema 接地状态变更的多智能体协作。 | 支撑大多数现有方法（结构化状态管理） |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29561) | ParaTool: Shifting Tool Representations from Context to Parameters | 参数化工具表示。 | 支撑少数现有方法（工具表示） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29271) | CoHyDE: Iterative Co-Training of LLM Rewriter & Dense Encoder for Tool Retrieval | 迭代共训练工具检索。 | 支撑少数现有方法（检索增强） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29668) | GRASP: Gated Regression-Aware Skill Proposer for Self-Improving LLM Agents | 智能体自我改进框架。 | 支撑少数现有方法（智能体改进） |
+
+**该论文两个创新点之间的关系：** 创新点五解决“工具调用如何摆脱上下文依赖”问题（工具表示层面），创新点六解决“知识图谱构建如何保证事实一致性”问题（知识构建层面）。二者属于同一篇论文主题（结构化环境中的 LLM 交互），但分别对应工具调用和知识图谱两个不同应用场景，且可以协同部署（参数化工具表示可用于知识图谱查询工具），不存在重复。
+
+**建议实验设计：**
+- **对比方法：** 标准 ICL 工具调用、检索增强工具调用（CoHyDE）、标准 LLM 知识图谱抽取、后处理验证方法
+- **实验数据或场景：** ToolBench、API Bank、WebQSP、自定义本体约束测试集
+- **评价指标：** 工具调用成功率、上下文 token 节省率、知识图谱事实一致性（精确率、召回率）、查询回答准确率
+- **消融实验：** 参数化 vs. 上下文表示、本体接地 vs. 无接地、神经符号 vs. 纯神经方法
+
+---
+
+## 二、三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|:---:|:---|:---|:---|:---|:---|:---|:---:|
+| 论文一：LLM 推理与部署效率优化 | 面向低比特量化与约束解码的 LLM 推理效率协同优化方法 | 量化生成质量与约束解码搜索空间压缩的协同设计 | 创新点一：Logit 感知最终块量化；创新点二：Token 空间压缩约束解码加速 | 量化优化 + 搜索空间压缩 | 生成质量、端到端延迟、量化困惑度 | 聚焦推理效率，与安全/结构化生成正交 | 低 |
+| 论文二：AI Agent 安全、对齐与鲁棒性 | 面向开放环境 AI Agent 的轻量级安全对齐与鲁棒性增强方法 | 轻量级安全对齐与干扰指令防御 | 创新点三：元数据隔离安全治理架构；创新点四：过程奖励逐步路由 | 系统架构 + 过程奖励训练 | 安全违规率、任务成功率、鲁棒性 | 聚焦安全对齐，与推理效率/工具调用正交 | 低 |
+| 论文三：工具调用、知识图谱与结构化生成 | 面向结构化环境的 LLM 工具表示迁移与知识图谱构建后校正方法 | 工具表示参数化与知识图谱事实一致性 | 创新点五：参数化工具表示迁移；创新点六：本体接地后校正 | 参数化表示 + 神经符号推理 | 工具调用成功率、知识图谱一致性 | 聚焦结构化交互，与推理效率/安全对齐正交 | 低 |
+
+---
+
+## 三、每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|:---:|:---|:---|:---:|:---:|:---:|:---:|
+| 论文一 | Logit 感知最终块量化 | Token 空间压缩约束解码加速 | 是（LLM 推理效率优化） | 是（模型压缩 vs. 生成加速） | 否 | 可保留 |
+| 论文二 | 元数据隔离安全治理架构 | 过程奖励逐步路由与鲁棒性增强 | 是（AI Agent 安全对齐） | 是（系统架构 vs. 训练方法） | 否 | 可保留 |
+| 论文三 | 参数化工具表示迁移 | 本体接地知识图谱后校正 | 是（结构化环境 LLM 交互） | 是（工具表示 vs. 知识构建） | 否 | 可保留 |
+
+---
+
+## 四、参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29561) ParaTool: Shifting Tool Representations from Context to Parameters. arXiv:2605.29561, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29168) Better Later Than Sooner: Neuro-Symbolic Knowledge Graph Construction via Ontology-grounded Post-extraction Correction. arXiv:2605.29168, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.28994) BEAMS: Benchmarking and Evaluating AI for Modeling and Simulation. arXiv:2605.28994, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29604) TC-MIS: Maximal Independent Set on Tensor-cores. arXiv:2605.29604, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29128) Apertus LLM Family Expansion via Distillation and Quantization. arXiv:2605.29128, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30294) RAFI -- A Ray/Work Forwarding Infrastructure for Data Parallel Multi-Node/Multi-GPU Computing. arXiv:2605.30294, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29756) LFQ: Logit-aware Final-block Quantization for Boosting the Generation Quality of Low-Bit Quantized LLMs. arXiv:2605.29756, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29280) LoopFM: Learning frOm HistOrical RePresentations of Foundation Model for Recommendation. arXiv:2605.29280, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30283) mcp-proto-okn: Natural-language access to open scientific knowledge graphs through the Model Context Protocol. arXiv:2605.30283, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29346) Understanding and Reducing Metadata-Driven Host Overheads in Sampling-Based GNN Training. arXiv:2605.29346, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29005) LoRe: Adaptive Interaction-Evaluation Routing with Per-Step Interaction Budgets for Iterative Graph Solvers. arXiv:2605.29005, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29271) CoHyDE: Iterative Co-Training of LLM Rewriter & Dense Encoder for Tool Retrieval. arXiv:2605.29271, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29310) Rubric-Guided Process Reward for Stepwise Model Routing. arXiv:2605.29310, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29082) The Importance of Out-of-Band Metadata for Safe Autonomous Agents: The Redpanda Agentic Data Plane. arXiv:2605.29082, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29801) AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security. arXiv:2605.29801, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30000) Cookie-Bench: Continuous On-screen Key Interaction Evaluation for Web Generation. arXiv:2605.30000, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29986) Accelerating Constrained Decoding with Token Space Compression. arXiv:2605.29986, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30353) Physics Is All You Need? A Case Study in Physicist-Supervised AI Development of Scientific Software. arXiv:2605.30353, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29506) Silent Data Corruption Protection through Efficient Task Replication. arXiv:2605.29506, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29009) Label-Free Reinforcement Learning via Cross-Model Entropy. arXiv:2605.29009, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29648) Verifiable Rewards Beyond Math and Code: Lightweight Corpus-Grounded Process Supervision for Factual Question Answering. arXiv:2605.29648, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29357) PassNet: Scaling Large Language Models for Graph Compiler Pass Generation. arXiv:2605.29357, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.30277) Neural Operator-Based Surrogate Model for CFD:Helical Coil Steam Generator in Small Modular Reactor. arXiv:2605.30277, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29068) Robust and Efficient Guardrails with Latent Reasoning. arXiv:2605.29068, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29652) Think Fast, Talk Smart: Partitioning Deterministic and Neural Computation for Structured Health Text Generation. arXiv:2605.29652, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29728) PRISM: Processing-In-Memory Sparse MTTKRP for Tensor Decomposition Acceleration. arXiv:2605.29728, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29343) Draft-OPD: On-Policy Distillation for Speculative Draft Models. arXiv:2605.29343, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29313) PatchBoard: Schema-Grounded State Mutation for Reliable and Auditable LLM Multi-Agent Collaboration. arXiv:2605.29313, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29491) The Curse of Helpfulness: Inverse Scaling Law in Robustness to Distractor Instructions via DistractionIF. arXiv:2605.29491, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-05-31&paperId=2605.29668) GRASP: Gated Regression-Aware Skill Proposer for Self-Improving LLM Agents. arXiv:2605.29668, 2026.
+
+---
+
+## 五、自检结果
+
+1.  **是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：** 是
+2.  **是否避免将一篇论文拆成六个创新点：** 是
+3.  **是否避免生成六篇论文各一个创新点：** 是
+4.  **每篇论文内部两个创新点是否属于同一论文主题：** 是
+5.  **每篇论文内部两个创新点是否互补而不重复：** 是
+6.  **三篇论文之间是否研究问题不同：** 是
+7.  **三篇论文之间是否核心方法不同：** 是
+8.  **三篇论文之间是否实验验证重点不同：** 是
+9.  **每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：** 是
+10. **每个创新点是否至少引用 3 篇池内文献：** 是（每个创新点引用 5-6 篇池内文献）
+11. **是否说明每篇文献的支撑作用：** 是
+12. **是否避免“首次提出”“填补空白”等绝对化表述：** 是
+13. **是否建立三篇论文方向去重矩阵：** 是
+14. **是否建立每篇论文内部创新点去重检查表：** 是

@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-31",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM 推理与部署效率优化",
+      "blurb": "围绕大语言模型推理加速、低比特量化生成质量提升、约束解码搜索空间压缩与投机解码蒸馏策略，探索从模型压缩到推理引擎的全链路效率提升方法。"
+    },
+    {
+      "title": "AI Agent 安全、对齐与鲁棒性",
+      "blurb": "聚焦智能体在开放环境中的安全对齐框架、元数据隔离的治理架构、干扰指令鲁棒性逆缩放现象以及基于过程奖励的逐步路由，解决 Agent 从训练到部署的可信与可控问题。"
+    },
+    {
+      "title": "工具调用、知识图谱与结构化生成",
+      "blurb": "涵盖工具表示的参数化迁移、基于本体的知识图谱构建后校正、多智能体 schema 接地协作以及自然语言驱动的科学知识图谱查询，提升 LLM 在结构化环境中的交互准确性与可审计性。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.29561",
+      "title": "ParaTool: Shifting Tool Representations from Context to Parameters"
+    },
+    {
+      "idx": 2,
+      "id": "2605.29168",
+      "title": "Better Later Than Sooner: Neuro-Symbolic Knowledge Graph Construction via Ontology-grounded Post-extraction Correction"
+    },
+    {
+      "idx": 3,
+      "id": "2605.28994",
+      "title": "BEAMS: Benchmarking and Evaluating AI for Modeling and Simulation"
+    },
+    {
+      "idx": 4,
+      "id": "2605.29604",
+      "title": "TC-MIS: Maximal Independent Set on Tensor-cores"
+    },
+    {
+      "idx": 5,
+      "id": "2605.29128",
+      "title": "Apertus LLM Family Expansion via Distillation and Quantization"
+    },
+    {
+      "idx": 6,
+      "id": "2605.30294",
+      "title": "RAFI -- A Ray/Work Forwarding Infrastructure for Data Parallel Multi-Node/Multi-GPU Computing"
+    },
+    {
+      "idx": 7,
+      "id": "2605.29756",
+      "title": "LFQ: Logit-aware Final-block Quantization for Boosting the Generation Quality of Low-Bit Quantized LLMs"
+    },
+    {
+      "idx": 8,
+      "id": "2605.29280",
+      "title": "LoopFM: Learning frOm HistOrical RePresentations of Foundation Model for Recommendation"
+    },
+    {
+      "idx": 9,
+      "id": "2605.30283",
+      "title": "mcp-proto-okn: Natural-language access to open scientific knowledge graphs through the Model Context Protocol"
+    },
+    {
+      "idx": 10,
+      "id": "2605.29346",
+      "title": "Understanding and Reducing Metadata-Driven Host Overheads in Sampling-Based GNN Training"
+    },
+    {
+      "idx": 11,
+      "id": "2605.29005",
+      "title": "LoRe: Adaptive Interaction-Evaluation Routing with Per-Step Interaction Budgets for Iterative Graph Solvers"
+    },
+    {
+      "idx": 12,
+      "id": "2605.29271",
+      "title": "CoHyDE: Iterative Co-Training of LLM Rewriter & Dense Encoder for Tool Retrieval"
+    },
+    {
+      "idx": 13,
+      "id": "2605.29310",
+      "title": "Rubric-Guided Process Reward for Stepwise Model Routing"
+    },
+    {
+      "idx": 14,
+      "id": "2605.29082",
+      "title": "The Importance of Out-of-Band Metadata for Safe Autonomous Agents: The Redpanda Agentic Data Plane"
+    },
+    {
+      "idx": 15,
+      "id": "2605.29801",
+      "title": "AgentDoG 1.5: A Lightweight and Scalable Alignment Framework for AI Agent Safety and Security"
+    },
+    {
+      "idx": 16,
+      "id": "2605.30000",
+      "title": "Cookie-Bench: Continuous On-screen Key Interaction Evaluation for Web Generation"
+    },
+    {
+      "idx": 17,
+      "id": "2605.29986",
+      "title": "Accelerating Constrained Decoding with Token Space Compression"
+    },
+    {
+      "idx": 18,
+      "id": "2605.30353",
+      "title": "Physics Is All You Need? A Case Study in Physicist-Supervised AI Development of Scientific Software"
+    },
+    {
+      "idx": 19,
+      "id": "2605.29506",
+      "title": "Silent Data Corruption Protection through Efficient Task Replication"
+    },
+    {
+      "idx": 20,
+      "id": "2605.29009",
+      "title": "Label-Free Reinforcement Learning via Cross-Model Entropy"
+    },
+    {
+      "idx": 21,
+      "id": "2605.29648",
+      "title": "Verifiable Rewards Beyond Math and Code: Lightweight Corpus-Grounded Process Supervision for Factual Question Answering"
+    },
+    {
+      "idx": 22,
+      "id": "2605.29357",
+      "title": "PassNet: Scaling Large Language Models for Graph Compiler Pass Generation"
+    },
+    {
+      "idx": 23,
+      "id": "2605.30277",
+      "title": "Neural Operator-Based Surrogate Model for CFD:Helical Coil Steam Generator in Small Modular Reactor"
+    },
+    {
+      "idx": 24,
+      "id": "2605.29068",
+      "title": "Robust and Efficient Guardrails with Latent Reasoning"
+    },
+    {
+      "idx": 25,
+      "id": "2605.29652",
+      "title": "Think Fast, Talk Smart: Partitioning Deterministic and Neural Computation for Structured Health Text Generation"
+    },
+    {
+      "idx": 26,
+      "id": "2605.29728",
+      "title": "PRISM: Processing-In-Memory Sparse MTTKRP for Tensor Decomposition Acceleration"
+    },
+    {
+      "idx": 27,
+      "id": "2605.29343",
+      "title": "Draft-OPD: On-Policy Distillation for Speculative Draft Models"
+    },
+    {
+      "idx": 28,
+      "id": "2605.29313",
+      "title": "PatchBoard: Schema-Grounded State Mutation for Reliable and Auditable LLM Multi-Agent Collaboration"
+    },
+    {
+      "idx": 29,
+      "id": "2605.29491",
+      "title": "The Curse of Helpfulness: Inverse Scaling Law in Robustness to Distractor Instructions via DistractionIF"
+    },
+    {
+      "idx": 30,
+      "id": "2605.29668",
+      "title": "GRASP: Gated Regression-Aware Skill Proposer for Self-Improving LLM Agents"
+    }
+  ]
+}
