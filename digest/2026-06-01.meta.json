@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-01",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理加速与解码效率优化",
+      "blurb": "围绕扩散LLM并行解码、推测解码流水线、KV缓存压缩等方向，探索在不牺牲生成质量的前提下降低推理延迟与显存开销的新方法。"
+    },
+    {
+      "title": "LLM智能体记忆管理与经验演化机制",
+      "blurb": "聚焦智能体长期记忆的写侧控制、经验图结构复用、以及上下文解耦管理，解决多会话场景下记忆检索效率与可审计性问题。"
+    },
+    {
+      "title": "强化学习后训练中的信号退化与多样性增强",
+      "blurb": "针对GRPO/RLVR训练中优势退化、rollout多样性不足、以及小模型作为天然探索器的现象，提出新的训练框架与奖励信号设计策略。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2605.31215",
+      "title": "Fixed-Point Masked Generative Modeling"
+    },
+    {
+      "idx": 2,
+      "id": "2605.31494",
+      "title": "Consolidating Rewarded Perturbations for LLM Post-Training"
+    },
+    {
+      "idx": 3,
+      "id": "2605.30729",
+      "title": "SemStruct: Contextualizing Semantic Embeddings with Structural Information for Schema Matching"
+    },
+    {
+      "idx": 4,
+      "id": "2605.30712",
+      "title": "ExpGraph: Model-Agnostic Experience Learning with Graph-Structured Memory for LLM Agents"
+    },
+    {
+      "idx": 5,
+      "id": "2605.30859",
+      "title": "DARTS: Distribution-Aware Active Rollout Trajectory Shaping for Accelerating LLM Reinforcement Learning"
+    },
+    {
+      "idx": 6,
+      "id": "2605.30771",
+      "title": "Eywa: Provenance-Grounded Long-Term Memory for AI Agents"
+    },
+    {
+      "idx": 7,
+      "id": "2605.30813",
+      "title": "Incremental BPE Tokenization"
+    },
+    {
+      "idx": 8,
+      "id": "2605.30711",
+      "title": "SAGE: A Novelty Gate for Efficient Memory Evolution in Agentic LLMs"
+    },
+    {
+      "idx": 9,
+      "id": "2605.31594",
+      "title": "A Tight Theory of Error Feedback Algorithms in Distributed Optimization"
+    },
+    {
+      "idx": 10,
+      "id": "2605.31105",
+      "title": "GRKV: Global Regression for Training-Free KV Cache Compression in Long-Context LLMs"
+    },
+    {
+      "idx": 11,
+      "id": "2605.30542",
+      "title": "Physically Viable World Models: A Case for Query-Conditioned Embodied AI"
+    },
+    {
+      "idx": 12,
+      "id": "2605.30621",
+      "title": "Harness Updating Is Not Harness Benefit: Disentangling Evolution Capabilities in Self-Evolving LLM Agents"
+    },
+    {
+      "idx": 13,
+      "id": "2605.30876",
+      "title": "dMoE: dLLMs with Learnable Block Experts"
+    },
+    {
+      "idx": 14,
+      "id": "2605.30728",
+      "title": "Reducing the GPU Memory Bottleneck with Lossless Compression for ML -- Extended"
+    },
+    {
+      "idx": 15,
+      "id": "2605.31062",
+      "title": "AdaptR1: Reinforcement Learning Based Adaptive Interleaved Thinking in Multi-hop Question Answering"
+    },
+    {
+      "idx": 16,
+      "id": "2605.31371",
+      "title": "Softsign: Smooth Sign in Your Optimizer For Better Parameter Heterogeneity Handling"
+    },
+    {
+      "idx": 17,
+      "id": "2605.30842",
+      "title": "CoMem: Context Management with A Decoupled Long-Context Model"
+    },
+    {
+      "idx": 18,
+      "id": "2605.31367",
+      "title": "Trading Complexity for Expressivity Through Structured Generalized Linear Token Mixing"
+    },
+    {
+      "idx": 19,
+      "id": "2605.31245",
+      "title": "Toward Identifiable Sparse Autoencoders"
+    },
+    {
+      "idx": 20,
+      "id": "2605.30789",
+      "title": "Smaller Models are Natural Explorers for Policy-Level Diversity in GRPO"
+    },
+    {
+      "idx": 21,
+      "id": "2605.30898",
+      "title": "UniScale: Adaptive Unified Inference Scaling via Online Joint Optimization of Model Routing and Test-Time Scaling"
+    },
+    {
+      "idx": 22,
+      "id": "2605.30852",
+      "title": "Speculative Pipeline Decoding: Higher-Accruacy and Zero-Bubble Speculation via Pipeline Parallelism"
+    },
+    {
+      "idx": 23,
+      "id": "2605.30914",
+      "title": "Automating Formal Verification with Reinforcement Learning and Recursive Inference"
+    },
+    {
+      "idx": 24,
+      "id": "2605.30777",
+      "title": "What Breaks When LLMs Code? Characterizing Operational Safety Failures of Agentic Code Assistants"
+    },
+    {
+      "idx": 25,
+      "id": "2605.30753",
+      "title": "Efficient Diffusion LLMs via Temporal-Spatial Parallel Decoding and Confidence Extrapolation"
+    },
+    {
+      "idx": 26,
+      "id": "2605.31228",
+      "title": "EchoRL: Reinforcement Learning via Rollout Echoing"
+    },
+    {
+      "idx": 27,
+      "id": "2605.30501",
+      "title": "Linear Ensembles Wash Away Watermarks: On the Fragility of Distributional Perturbations in LLMs"
+    },
+    {
+      "idx": 28,
+      "id": "2605.30723",
+      "title": "Skill is Not One-Size-Fits-All: Model-Aware Skill Alignment for LLM Agents"
+    },
+    {
+      "idx": 29,
+      "id": "2605.31268",
+      "title": "Mellum2 Technical Report"
+    },
+    {
+      "idx": 30,
+      "id": "2605.31167",
+      "title": "LLM-FACETS: A Privacy-Preserving Framework for Evaluating LLM Transparency and Accountability"
+    }
+  ]
+}

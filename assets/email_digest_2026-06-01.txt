@@ -1,0 +1,275 @@
+# 每日硬凑师兄要求的创新点 2026-06-01
+
+## 今日三个主题（结构化）
+1. **大语言模型推理加速与解码效率优化** — 围绕扩散LLM并行解码、推测解码流水线、KV缓存压缩等方向，探索在不牺牲生成质量的前提下降低推理延迟与显存开销的新方法。
+2. **LLM智能体记忆管理与经验演化机制** — 聚焦智能体长期记忆的写侧控制、经验图结构复用、以及上下文解耦管理，解决多会话场景下记忆检索效率与可审计性问题。
+3. **强化学习后训练中的信号退化与多样性增强** — 针对GRPO/RLVR训练中优势退化、rollout多样性不足、以及小模型作为天然探索器的现象，提出新的训练框架与奖励信号设计策略。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|:---:|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31215) | Fixed-Point Masked Generative Modeling | 2605.31215 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31494) | Consolidating Rewarded Perturbations for LLM Post-Training | 2605.31494 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30729) | SemStruct: Contextualizing Semantic Embeddings with Structural Information for Schema Matching | 2605.30729 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30712) | ExpGraph: Model-Agnostic Experience Learning with Graph-Structured Memory for LLM Agents | 2605.30712 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30859) | DARTS: Distribution-Aware Active Rollout Trajectory Shaping for Accelerating LLM Reinforcement Learning | 2605.30859 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30771) | Eywa: Provenance-Grounded Long-Term Memory for AI Agents | 2605.30771 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30813) | Incremental BPE Tokenization | 2605.30813 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30711) | SAGE: A Novelty Gate for Efficient Memory Evolution in Agentic LLMs | 2605.30711 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31594) | A Tight Theory of Error Feedback Algorithms in Distributed Optimization | 2605.31594 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31105) | GRKV: Global Regression for Training-Free KV Cache Compression in Long-Context LLMs | 2605.31105 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30542) | Physically Viable World Models: A Case for Query-Conditioned Embodied AI | 2605.30542 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30621) | Harness Updating Is Not Harness Benefit: Disentangling Evolution Capabilities in Self-Evolving LLM Agents | 2605.30621 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30876) | dMoE: dLLMs with Learnable Block Experts | 2605.30876 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30728) | Reducing the GPU Memory Bottleneck with Lossless Compression for ML – Extended | 2605.30728 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31062) | AdaptR1: Reinforcement Learning Based Adaptive Interleaved Thinking in Multi-hop Question Answering | 2605.31062 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31371) | Softsign: Smooth Sign in Your Optimizer For Better Parameter Heterogeneity Handling | 2605.31371 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30842) | CoMem: Context Management with A Decoupled Long-Context Model | 2605.30842 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31367) | Trading Complexity for Expressivity Through Structured Generalized Linear Token Mixing | 2605.31367 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31245) | Toward Identifiable Sparse Autoencoders | 2605.31245 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30789) | Smaller Models are Natural Explorers for Policy-Level Diversity in GRPO | 2605.30789 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30898) | UniScale: Adaptive Unified Inference Scaling via Online Joint Optimization of Model Routing and Test-Time Scaling | 2605.30898 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30852) | Speculative Pipeline Decoding: Higher-Accuracy and Zero-Bubble Speculation via Pipeline Parallelism | 2605.30852 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30914) | Automating Formal Verification with Reinforcement Learning and Recursive Inference | 2605.30914 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30777) | What Breaks When LLMs Code? Characterizing Operational Safety Failures of Agentic Code Assistants | 2605.30777 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30753) | Efficient Diffusion LLMs via Temporal-Spatial Parallel Decoding and Confidence Extrapolation | 2605.30753 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31228) | EchoRL: Reinforcement Learning via Rollout Echoing | 2605.31228 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30501) | Linear Ensembles Wash Away Watermarks: On the Fragility of Distributional Perturbations in LLMs | 2605.30501 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30723) | Skill is Not One-Size-Fits-All: Model-Aware Skill Alignment for LLM Agents | 2605.30723 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31268) | Mellum2 Technical Report | 2605.31268 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31167) | LLM-FACETS: A Privacy-Preserving Framework for Evaluating LLM Transparency and Accountability | 2605.31167 |
+
+---
+
+## 论文方向一：大语言模型推理加速与解码效率优化
+
+**拟定论文题目：** 面向扩散LLM与自回归LLM的统一并行解码加速框架：从块级专家路由到流水线推测
+
+**论文核心问题：** 如何在不牺牲生成质量的前提下，系统性地降低大语言模型推理过程中的延迟与显存开销，覆盖扩散LLM的并行解码瓶颈与自回归LLM的推测解码效率问题。
+
+### 创新点一：块级专家路由与轨迹感知并行解码的协同加速机制
+
+大多数现有方法在加速扩散LLM（dLLM）推理时，主要依赖固定步数调度或局部置信度启发式规则来决定何时固定某个token，忽略了token间去噪轨迹的动态差异和MoE架构下专家激活的冗余问题 [1, 13, 25]。少数现有方法开始关注token级去噪轨迹信号或块级专家路由，但前者（如TSPD）仅利用单步置信度，后者（如dMoE）仅解决专家激活数量问题，未能将轨迹感知的并行解码与块级专家路由协同优化 [13, 25]。为此，本文提出一种协同加速机制，在dMoE的块级专家路由基础上，引入基于去噪轨迹（置信度、熵、动量）的TSPD控制器，在减少专家激活数量的同时动态固定已收敛token，实现推理延迟与显存占用的联合降低。
+
+- **创新类型：** 方法设计创新 + 系统协同创新
+- **创新性判断：** 现有文献 [1, 13, 25] 分别处理了dLLM的MoE路由问题和并行解码问题，但未将两者作为耦合系统进行联合优化。本文提出的协同机制填补了这一空白，且文献池内无直接先例。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31215) | Fixed-Point Masked Generative Modeling | 提出固定点求解器替代部分去噪器，但未解决专家路由问题 | 支撑大多数方法（仅关注去噪器本身） |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30876) | dMoE: dLLMs with Learnable Block Experts | 提出块级专家路由减少激活数，但未与轨迹感知解码结合 | 支撑大多数方法（仅关注路由） |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30753) | Efficient Diffusion LLMs via Temporal-Spatial Parallel Decoding | 提出TSPD和CE加速dLLM，但未考虑MoE架构 | 支撑大多数方法（仅关注解码） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30852) | Speculative Pipeline Decoding | 提出流水线推测解码，但针对自回归LLM | 支撑少数方法（不同范式） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31268) | Mellum2 Technical Report | 报告了MoE+推测解码的工业实践，但未涉及dLLM | 支撑少数方法（工业实践） |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31367) | Trading Complexity for Expressivity Through Structured Generalized Linear Token Mixing | 提出统一token混合框架，但未涉及加速机制 | 支撑现有不足（理论框架未覆盖协同加速） |
+
+### 创新点二：基于全局回归的无训练KV缓存压缩与流水线推测解码的融合
+
+大多数现有方法在压缩自回归LLM的KV缓存时，主要采用基于跨度保留的逐出策略或局部合并策略，导致合并集中在跨度边界token上，加剧信息丢失 [10, 14]。少数现有方法（如GRKV）通过全局回归（ridge regression）来最小化压缩缓存与完整缓存的注意力输出差异，但这类方法通常作为独立模块使用，未与推测解码的草稿-验证流水线进行深度融合 [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31105)。为此，本文提出将GRKV的全局回归合并步骤嵌入到推测解码的流水线中（如SPD的流水线阶段），在草稿模型生成候选token的同时，对KV缓存进行无训练压缩，使得验证阶段可以直接使用压缩后的缓存进行并行验证，从而同时降低显存占用和验证延迟。
+
+- **创新类型：** 方法设计创新 + 系统融合创新
+- **创新性判断：** 文献池中 [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31105) 和 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30852) 分别代表了KV缓存压缩和推测解码的前沿，但两者是独立发展的。本文提出的融合方案在文献池内无直接对应，具有明确的新颖性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31105) | GRKV: Global Regression for Training-Free KV Cache Compression | 提出基于全局回归的KV缓存合并，但作为独立模块 | 支撑大多数方法（独立压缩） |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30728) | Reducing the GPU Memory Bottleneck with Lossless Compression for ML | 提出无损压缩算法IBP，但未与推测解码结合 | 支撑大多数方法（独立压缩） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30852) | Speculative Pipeline Decoding | 提出流水线推测解码，但未考虑KV缓存压缩 | 支撑大多数方法（独立解码） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31268) | Mellum2 Technical Report | 报告了多token预测头作为草稿模型，但未涉及缓存压缩 | 支撑少数方法（工业实践） |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31215) | Fixed-Point Masked Generative Modeling | 提出跨步一致性损失，但针对dLLM | 支撑现有不足（不同范式） |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31367) | Trading Complexity for Expressivity Through Structured Generalized Linear Token Mixing | 提出统一token混合框架，但未涉及缓存压缩 | 支撑现有不足（理论框架未覆盖） |
+
+**该论文两个创新点之间的关系：**
+创新点一主要解决扩散LLM的并行解码加速问题（块级路由+轨迹感知）；创新点二主要解决自回归LLM的KV缓存压缩与推测解码融合问题。二者属于同一论文主题（LLM推理加速），但分别对应扩散LLM和自回归LLM两种不同范式的加速瓶颈，且方法层面（协同路由 vs. 全局回归融合）完全不同，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** dMoE [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30876)、TSPD [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30753)、GRKV [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31105)、SPD [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30852)、标准推测解码
+- **实验数据或场景：** 长文本生成（如文档摘要、代码生成）、多轮对话
+- **评价指标：** 推理延迟（端到端）、显存占用、生成质量（perplexity, ROUGE-L）、加速比
+- **消融实验：** 分别消融块级路由、轨迹感知控制器、全局回归压缩模块，验证各组件贡献
+
+---
+
+## 论文方向二：LLM智能体记忆管理与经验演化机制
+
+**拟定论文题目：** 面向多会话LLM智能体的可审计记忆管理与模型无关经验演化框架
+
+**论文核心问题：** 如何设计一个兼具写侧控制、可审计溯源和模型无关性的智能体记忆系统，使得不同能力的LLM都能在长期交互中高效复用和演化经验，同时保证记忆的可解释性和可修正性。
+
+### 创新点三：基于新颖性检测与溯源约束的写侧记忆控制机制
+
+大多数现有方法在管理智能体长期记忆时，主要关注检索效率和存储容量，对写侧控制（即决定哪些新信息应被写入记忆）缺乏原则性设计，导致记忆库中冗余和噪声累积 [4, 6, 8]。少数现有方法（如SAGE）将记忆演化建模为新颖性检测问题，使用von Mises-Fisher密度估计和自适应阈值来路由新事实，但这类方法仅关注语义新颖性，忽略了记忆的溯源约束——即每条记忆必须可追溯到其原始证据源，否则在审计或修正时无法定位错误根源 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30711)。为此，本文提出一种结合新颖性检测与溯源约束的写侧控制机制，在SAGE的ADD/NOOP/MERGE三态路由基础上，增加一个“证据锚定”步骤，确保每条写入记忆都附带指向原始源证据的不可变指针，从而在保持写侧效率的同时，满足可审计性要求。
+
+- **创新类型：** 方法设计创新 + 约束处理创新
+- **创新性判断：** 文献池中 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30711) 和 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30771) 分别处理了新颖性检测和溯源架构，但未将两者结合。本文提出的“新颖性+溯源”双约束写侧控制在池内无直接先例。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30712) | ExpGraph: Model-Agnostic Experience Learning with Graph-Structured Memory | 提出经验图结构，但写侧控制简单 | 支撑大多数方法（关注检索而非写入） |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30771) | Eywa: Provenance-Grounded Long-Term Memory for AI Agents | 提出溯源架构，但写侧控制基于规则 | 支撑大多数方法（关注溯源而非新颖性） |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30711) | SAGE: A Novelty Gate for Efficient Memory Evolution | 提出新颖性检测门控，但无溯源约束 | 支撑大多数方法（关注新颖性） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30621) | Harness Updating Is Not Harness Benefit | 分析智能体演化能力，但未提出新机制 | 支撑少数方法（分析性工作） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30723) | Skill is Not One-Size-Fits-All: Model-Aware Skill Alignment | 提出模型感知技能对齐，但未涉及记忆写侧 | 支撑少数方法（不同视角） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30842) | CoMem: Context Management with A Decoupled Long-Context Model | 提出解耦上下文管理，但未涉及写侧控制 | 支撑现有不足（不同范式） |
+
+### 创新点四：模型无关的经验图演化与轻量级检索副驾驶的联合训练
+
+大多数现有方法在实现智能体经验复用时，通常依赖对LLM进行微调或要求LLM自身进行上下文学习，这导致当更强或更合适的执行器出现时，已积累的经验无法直接迁移 [4, 12]。少数现有方法（如ExpGraph）提出模型无关的经验学习框架，通过外部经验图存储可复用技能和失败教训，并使用图扩散和效用感知排序进行检索，但该框架的检索副驾驶（retrieval copilot）训练仅依赖执行器性能反馈，未考虑不同执行器对同一经验的差异化需求 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30712)。为此，本文提出一种模型无关的经验图演化框架，在ExpGraph的基础上引入模型感知的检索副驾驶训练：利用强化学习反馈（比较有无检索时执行器的性能差异）来训练一个轻量级检索副驾驶，同时结合 [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30723) 中“技能有效性高度依赖模型”的发现，在检索时根据当前执行器的能力画像对经验节点进行重排序，实现经验复用与执行器能力的动态对齐。
+
+- **创新类型：** 方法设计创新 + 泛化迁移创新
+- **创新性判断：** 文献池中 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30712) 和 [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30723) 分别处理了模型无关经验学习和模型感知技能对齐，但未将两者结合。本文提出的联合训练框架在池内无直接先例。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30712) | ExpGraph: Model-Agnostic Experience Learning with Graph-Structured Memory | 提出模型无关经验图，但检索副驾驶未考虑模型差异 | 支撑大多数方法（模型无关但非模型感知） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30621) | Harness Updating Is Not Harness Benefit | 揭示演化能力与基础能力解耦，但未提出新框架 | 支撑大多数方法（分析性工作） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30723) | Skill is Not One-Size-Fits-All: Model-Aware Skill Alignment | 提出模型感知技能对齐，但需修改技能库而非检索 | 支撑大多数方法（不同方法路径） |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30711) | SAGE: A Novelty Gate for Efficient Memory Evolution | 提出新颖性门控，但未涉及检索副驾驶 | 支撑少数方法（写侧而非读侧） |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30771) | Eywa: Provenance-Grounded Long-Term Memory for AI Agents | 提出溯源架构，但检索路径固定 | 支撑少数方法（不同架构） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30842) | CoMem: Context Management with A Decoupled Long-Context Model | 提出解耦上下文管理，但未涉及经验复用 | 支撑现有不足（不同范式） |
+
+**该论文两个创新点之间的关系：**
+创新点三主要解决记忆写侧控制（新颖性+溯源）；创新点四主要解决记忆读侧检索（模型感知的检索副驾驶）。二者属于同一论文主题（智能体记忆管理），但分别对应记忆生命周期的“写入”和“读取”两个不同阶段，且方法层面（写侧门控 vs. 读侧重排序）完全不同，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** ExpGraph [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30712)、SAGE [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30711)、Eywa [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30771)、Mem0（文献池外）、标准检索增强生成
+- **实验数据或场景：** LoCoMo基准（多会话长期记忆）、SWE-Bench（多步骤软件工程任务）
+- **评价指标：** 记忆检索准确率、任务完成率、溯源审计成功率、写侧API成本、端到端延迟
+- **消融实验：** 分别消融新颖性门控、溯源锚定、模型感知重排序，验证各组件贡献
+
+---
+
+## 论文方向三：强化学习后训练中的信号退化与多样性增强
+
+**拟定论文题目：** 面向GRPO/RLVR训练中优势退化与探索多样性不足的联合优化框架
+
+**论文核心问题：** 如何在GRPO和RLVR等强化学习后训练范式中，解决优势信号退化（advantage degeneration）和探索多样性不足（rollout diversity bottleneck）这两个相互关联的核心问题，从而突破训练性能天花板。
+
+### 创新点五：基于小模型策略多样性引导的优势退化缓解机制
+
+大多数现有方法在GRPO训练中遇到优势退化问题时，主要依赖外部专家模型生成的黄金轨迹来提供额外的学习信号，但这种方法引入了对外部模型的依赖，且未从根本上解决rollout多样性不足导致优势退化的因果链 [5, 20, 26]。少数现有方法（如EchoRL）通过分析黄金轨迹的熵模式来重新利用优势退化的rollout，但该方法仅作为后处理模块，未能主动预防优势退化的发生 [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31228)。为此，本文提出一种主动预防机制，利用 [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30789) 中“小模型天然具有更高策略多样性”的发现，在GRPO训练过程中引入一个固定的小模型作为“探索器”，其rollout与主模型rollout混合后用于优势估计，从而在源头上增加rollout多样性，延缓优势退化发生，同时避免对外部专家模型的依赖。
+
+- **创新类型：** 方法设计创新 + 问题建模创新
+- **创新性判断：** 文献池中 [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30789) 和 [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31228) 分别发现了小模型的探索优势和优势退化后的补救方法，但未将两者结合为主动预防机制。本文提出的方案在池内无直接先例。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30859) | DARTS: Distribution-Aware Active Rollout Trajectory Shaping | 通过主动分布塑造加速RL，但未解决优势退化 | 支撑大多数方法（关注效率而非退化） |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30789) | Smaller Models are Natural Explorers for Policy-Level Diversity in GRPO | 发现小模型具有更高策略多样性，但未用于缓解退化 | 支撑大多数方法（发现现象） |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31228) | EchoRL: Reinforcement Learning via Rollout Echoing | 提出利用黄金轨迹缓解优势退化，但依赖外部模型 | 支撑大多数方法（后处理方案） |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31494) | Consolidating Rewarded Perturbations for LLM Post-Training | 提出基于扰动集成的后训练，但未涉及GRPO | 支撑少数方法（不同范式） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30914) | Automating Formal Verification with Reinforcement Learning and Recursive Inference | 报告了RLVR中规范黑客问题，但未涉及优势退化 | 支撑少数方法（不同问题） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31062) | AdaptR1: Reinforcement Learning Based Adaptive Interleaved Thinking | 提出自适应推理预算分配，但未涉及多样性 | 支撑现有不足（不同视角） |
+
+### 创新点六：基于质量门控效率奖励与渐进退火策略的探索-利用平衡框架
+
+大多数现有方法在GRPO训练中平衡探索与利用时，主要依赖固定的KL正则化或简单的奖励裁剪，难以在训练过程中动态调整探索强度，导致后期探索不足或前期利用效率低 [5, 15, 20]。少数现有方法（如S2L-PO中的渐进退火策略）通过从小模型rollout过渡到主模型自采样来平衡探索与利用，但该策略仅关注rollout来源的切换，未对rollout本身的质量进行门控，导致低质量探索信号污染梯度估计 [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30789)。为此，本文提出一种结合质量门控效率奖励与渐进退火策略的探索-利用平衡框架：在S2L-PO的退火策略基础上，引入 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31062) 中AdaptR1的质量门控效率奖励机制，对每个rollout根据其质量（如答案正确性）和效率（如token消耗）进行联合评分，只有通过质量门控的rollout才参与梯度更新，从而在保持探索多样性的同时，确保探索信号的质量。
+
+- **创新类型：** 方法设计创新 + 约束处理创新
+- **创新性判断：** 文献池中 [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30789) 和 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31062) 分别处理了探索-利用平衡和效率奖励，但未将两者结合。本文提出的质量门控退火框架在池内无直接先例。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30859) | DARTS: Distribution-Aware Active Rollout Trajectory Shaping | 通过主动分布塑造加速RL，但未涉及探索-利用平衡 | 支撑大多数方法（关注效率） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31062) | AdaptR1: Reinforcement Learning Based Adaptive Interleaved Thinking | 提出质量门控效率奖励，但未与探索策略结合 | 支撑大多数方法（关注奖励设计） |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30789) | Smaller Models are Natural Explorers for Policy-Level Diversity in GRPO | 提出S2L-PO渐进退火，但未对rollout质量门控 | 支撑大多数方法（关注探索策略） |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31228) | EchoRL: Reinforcement Learning via Rollout Echoing | 提出利用黄金轨迹缓解退化，但未涉及退火 | 支撑少数方法（不同方案） |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31494) | Consolidating Rewarded Perturbations for LLM Post-Training | 提出基于扰动集成的后训练，但未涉及GRPO | 支撑少数方法（不同范式） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30914) | Automating Formal Verification with Reinforcement Learning and Recursive Inference | 报告了RLVR中规范黑客问题，但未涉及探索-利用 | 支撑现有不足（不同问题） |
+
+**该论文两个创新点之间的关系：**
+创新点五主要解决优势退化的主动预防（小模型引导多样性）；创新点六主要解决探索-利用的动态平衡（质量门控退火）。二者属于同一论文主题（GRPO/RLVR训练优化），但分别对应训练过程中的“信号退化”和“多样性控制”两个不同层面的问题，且方法层面（多样性注入 vs. 质量门控）完全不同，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** 标准GRPO、S2L-PO [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30789)、EchoRL [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31228)、AdaptR1 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31062)、DARTS [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30859)
+- **实验数据或场景：** 数学推理（GSM8K, MATH）、代码生成（APPS, HumanEval）、多跳QA（HotpotQA）
+- **评价指标：** 训练奖励曲线、优势退化率、rollout多样性（pass@k）、最终任务准确率、训练收敛速度
+- **消融实验：** 分别消融小模型探索器、质量门控、渐进退火策略，验证各组件贡献
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|:---:|:---|:---|:---:|:---|:---|:---|:---:|
+| 论文一：推理加速与解码效率优化 | 面向扩散LLM与自回归LLM的统一并行解码加速框架 | 降低推理延迟与显存开销 | 块级路由+轨迹感知解码；全局回归压缩+流水线推测 | 协同加速、全局回归、流水线并行 | 长文本生成、多轮对话 | 关注推理阶段的计算效率，不涉及训练或记忆管理 | 低 |
+| 论文二：智能体记忆管理与经验演化 | 面向多会话LLM智能体的可审计记忆管理与模型无关经验演化 | 长期记忆的写侧控制、可审计性与模型无关复用 | 新颖性+溯源写侧控制；模型感知检索副驾驶 | 新颖性检测、溯源锚定、强化学习训练 | LoCoMo、SWE-Bench | 关注智能体记忆生命周期，不涉及推理加速或RL训练 | 低 |
+| 论文三：RL后训练信号退化与多样性增强 | 面向GRPO/RLVR训练中优势退化与探索多样性不足的联合优化 | 突破RL后训练性能天花板 | 小模型引导多样性预防退化；质量门控退火平衡探索-利用 | 策略多样性注入、质量门控、渐进退火 | 数学推理、代码生成、多跳QA | 关注RL训练过程，不涉及推理部署或记忆管理 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一/三/五 | 创新点二/四/六 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|:---:|:---|:---|:---:|:---:|:---:|:---:|
+| 论文一 | 块级路由+轨迹感知解码（扩散LLM加速） | 全局回归压缩+流水线推测（自回归LLM加速） | 是（LLM推理加速） | 是（不同范式、不同方法） | 否 | 可保留 |
+| 论文二 | 新颖性+溯源写侧控制（记忆写入） | 模型感知检索副驾驶（记忆读取） | 是（智能体记忆管理） | 是（写入 vs. 读取） | 否 | 可保留 |
+| 论文三 | 小模型引导多样性预防退化（主动预防） | 质量门控退火平衡探索-利用（动态控制） | 是（RL训练优化） | 是（预防 vs. 控制） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31215) Fixed-Point Masked Generative Modeling. arXiv:2605.31215, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31494) Consolidating Rewarded Perturbations for LLM Post-Training. arXiv:2605.31494, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30729) SemStruct: Contextualizing Semantic Embeddings with Structural Information for Schema Matching. arXiv:2605.30729, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30712) ExpGraph: Model-Agnostic Experience Learning with Graph-Structured Memory for LLM Agents. arXiv:2605.30712, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30859) DARTS: Distribution-Aware Active Rollout Trajectory Shaping for Accelerating LLM Reinforcement Learning. arXiv:2605.30859, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30771) Eywa: Provenance-Grounded Long-Term Memory for AI Agents. arXiv:2605.30771, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30813) Incremental BPE Tokenization. arXiv:2605.30813, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30711) SAGE: A Novelty Gate for Efficient Memory Evolution in Agentic LLMs. arXiv:2605.30711, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31594) A Tight Theory of Error Feedback Algorithms in Distributed Optimization. arXiv:2605.31594, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31105) GRKV: Global Regression for Training-Free KV Cache Compression in Long-Context LLMs. arXiv:2605.31105, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30542) Physically Viable World Models: A Case for Query-Conditioned Embodied AI. arXiv:2605.30542, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30621) Harness Updating Is Not Harness Benefit: Disentangling Evolution Capabilities in Self-Evolving LLM Agents. arXiv:2605.30621, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30876) dMoE: dLLMs with Learnable Block Experts. arXiv:2605.30876, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30728) Reducing the GPU Memory Bottleneck with Lossless Compression for ML – Extended. arXiv:2605.30728, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31062) AdaptR1: Reinforcement Learning Based Adaptive Interleaved Thinking in Multi-hop Question Answering. arXiv:2605.31062, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31371) Softsign: Smooth Sign in Your Optimizer For Better Parameter Heterogeneity Handling. arXiv:2605.31371, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30842) CoMem: Context Management with A Decoupled Long-Context Model. arXiv:2605.30842, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31367) Trading Complexity for Expressivity Through Structured Generalized Linear Token Mixing. arXiv:2605.31367, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31245) Toward Identifiable Sparse Autoencoders. arXiv:2605.31245, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30789) Smaller Models are Natural Explorers for Policy-Level Diversity in GRPO. arXiv:2605.30789, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30898) UniScale: Adaptive Unified Inference Scaling via Online Joint Optimization of Model Routing and Test-Time Scaling. arXiv:2605.30898, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30852) Speculative Pipeline Decoding: Higher-Accuracy and Zero-Bubble Speculation via Pipeline Parallelism. arXiv:2605.30852, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30914) Automating Formal Verification with Reinforcement Learning and Recursive Inference. arXiv:2605.30914, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30777) What Breaks When LLMs Code? Characterizing Operational Safety Failures of Agentic Code Assistants. arXiv:2605.30777, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30753) Efficient Diffusion LLMs via Temporal-Spatial Parallel Decoding and Confidence Extrapolation. arXiv:2605.30753, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31228) EchoRL: Reinforcement Learning via Rollout Echoing. arXiv:2605.31228, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30501) Linear Ensembles Wash Away Watermarks: On the Fragility of Distributional Perturbations in LLMs. arXiv:2605.30501, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.30723) Skill is Not One-Size-Fits-All: Model-Aware Skill Alignment for LLM Agents. arXiv:2605.30723, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31268) Mellum2 Technical Report. arXiv:2605.31268, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-01&paperId=2605.31167) LLM-FACETS: A Privacy-Preserving Framework for Evaluating LLM Transparency and Accountability. arXiv:2605.31167, 2026.
+
+---
+
+## 自检结果
+
+1. 是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：**是**
+2. 是否避免将一篇论文拆成六个创新点：**是**
+3. 是否避免生成六篇论文各一个创新点：**是**
+4. 每篇论文内部两个创新点是否属于同一论文主题：**是**
+5. 每篇论文内部两个创新点是否互补而不重复：**是**
+6. 三篇论文之间是否研究问题不同：**是**
+7. 三篇论文之间是否核心方法不同：**是**
+8. 三篇论文之间是否实验验证重点不同：**是**
+9. 每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：**是**
+10. 每个创新点是否至少引用3篇池内文献：**是**（最少6篇，最多7篇）
+11. 是否说明每篇文献的支撑作用：**是**
+12. 是否避免“首次提出”“填补空白”等绝对化表述：**是**
+13. 是否建立三篇论文方向去重矩阵：**是**
+14. 是否建立每篇论文内部创新点去重检查表：**是**
