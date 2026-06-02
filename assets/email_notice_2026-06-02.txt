@@ -1,0 +1,9 @@
+每日硬凑师兄要求的创新点 2026-06-02
+
+今日三个主题概要：
+1. LLM 推理效率与量化压缩的协同优化 — 围绕低比特量化、剪枝与稀疏训练中的稳定性与精度恢复问题，探讨 ProjQ、TwinQuant、CRePE、SMET 等方法如何通过子空间投影、可学习分解与动态稀疏性实现高效推理。
+2. 长上下文推理中的 KV 缓存管理与注意力机制改进 — 聚焦 MomentKV、Soft-NBCE、CCQ 等方案，从缓存驱逐策略、软融合注意力与曲率条件化查询角度突破长序列推理的内存与语义瓶颈。
+3. 多智能体编排与在线服务系统的可观测性与资源调度 — 涵盖 ATLAS、DEFT、Augur、Failure-Aware Observability 等工作，探讨测试时扩展、工作流调度、能耗预测与故障诊断在复杂 LLM 服务系统中的闭环控制。
+
+完整创新点、矩阵与文献引用见：
+https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/digest-viewer.html?date=2026-06-02

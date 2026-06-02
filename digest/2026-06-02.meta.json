@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-02",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM 推理效率与量化压缩的协同优化",
+      "blurb": "围绕低比特量化、剪枝与稀疏训练中的稳定性与精度恢复问题，探讨 ProjQ、TwinQuant、CRePE、SMET 等方法如何通过子空间投影、可学习分解与动态稀疏性实现高效推理。"
+    },
+    {
+      "title": "长上下文推理中的 KV 缓存管理与注意力机制改进",
+      "blurb": "聚焦 MomentKV、Soft-NBCE、CCQ 等方案，从缓存驱逐策略、软融合注意力与曲率条件化查询角度突破长序列推理的内存与语义瓶颈。"
+    },
+    {
+      "title": "多智能体编排与在线服务系统的可观测性与资源调度",
+      "blurb": "涵盖 ATLAS、DEFT、Augur、Failure-Aware Observability 等工作，探讨测试时扩展、工作流调度、能耗预测与故障诊断在复杂 LLM 服务系统中的闭环控制。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.00494",
+      "title": "ProjQ: Project-and-Quantize for Adapter-Aware LLM Compression"
+    },
+    {
+      "idx": 2,
+      "id": "2606.01927",
+      "title": "Scaling LLM Inference Beyond Amdahl`s Limits via Eliminating Non-Scalable Overheads"
+    },
+    {
+      "idx": 3,
+      "id": "2606.01387",
+      "title": "Fail-Closed Lowering of Resident KV Claims onto LLM Serving Runtimes"
+    },
+    {
+      "idx": 4,
+      "id": "2606.00579",
+      "title": "Sandboxed Coding Agents are Competitive Omni-modal Task Solvers"
+    },
+    {
+      "idx": 5,
+      "id": "2606.01563",
+      "title": "MomentKV: Closing the Directional Gap in KV Cache Eviction for Long-Context Inference"
+    },
+    {
+      "idx": 6,
+      "id": "2606.01667",
+      "title": "ATLAS: Agentic Test-time Learning-to-Allocate Scaling"
+    },
+    {
+      "idx": 7,
+      "id": "2606.01111",
+      "title": "LeAP: Learnable Adaptive Permutation for Feature Selection in Heterogeneous and Sparse Recommender Systems"
+    },
+    {
+      "idx": 8,
+      "id": "2606.00288",
+      "title": "Model-Native Computing Architecture: Envisioning Future System Architecture Through the Lens of Computer Architecture"
+    },
+    {
+      "idx": 9,
+      "id": "2606.01393",
+      "title": "Dr. DocBench: A Comprehensive Benchmark for Expert-Level and Difficult Document Parsing"
+    },
+    {
+      "idx": 10,
+      "id": "2606.00376",
+      "title": "The Deterministic Horizon: When Extended Reasoning Fails and Tool Delegation Becomes Necessary"
+    },
+    {
+      "idx": 11,
+      "id": "2606.01556",
+      "title": "TwinQuant: Learnable Subspace Decomposition for 4-Bit LLM Quantization"
+    },
+    {
+      "idx": 12,
+      "id": "2606.01544",
+      "title": "CRePE: Convolution-aware Relative Importance in Post-training Pruning with Efficient Search"
+    },
+    {
+      "idx": 13,
+      "id": "2606.01162",
+      "title": "Deft Scheduling of Dynamic Cloud Workflows with Varying Deadlines via Mixture-of-Experts"
+    },
+    {
+      "idx": 14,
+      "id": "2606.01304",
+      "title": "When Hard Negatives Hurt: Bridging the Generative-Discriminative Gap in Hard Negative Synthesis for Retrieval"
+    },
+    {
+      "idx": 15,
+      "id": "2606.01513",
+      "title": "Compliance-Scored Best-of-N Guardrail Orchestration for Multimodal Document Generation in Payments Dispute Defense"
+    },
+    {
+      "idx": 16,
+      "id": "2606.00348",
+      "title": "Augur: Pre-Execution Energy Prediction for Workflow Tasks in Heterogeneous Clusters"
+    },
+    {
+      "idx": 17,
+      "id": "2606.00888",
+      "title": "Memory-Efficient LLM Training with Dynamic Sparsity: From Stability to Practical Scaling"
+    },
+    {
+      "idx": 18,
+      "id": "2606.02011",
+      "title": "Extreme Low-Bit Inference in Reasoning Models: Failure Modes and Targeted Recovery"
+    },
+    {
+      "idx": 19,
+      "id": "2606.01385",
+      "title": "Bridging Requirements and Architecture: Multi-Agent Orchestration with External Knowledge and Hierarchical Memory"
+    },
+    {
+      "idx": 20,
+      "id": "2606.00289",
+      "title": "Inner Product Aware Quantization: Provably Fast, Accurate, and Adaptive Algorithms"
+    },
+    {
+      "idx": 21,
+      "id": "2606.00021",
+      "title": "SENSE: Semantic Embedding Navigation with Soft-gated Evaluation for Retrieval-based Speculative Decoding"
+    },
+    {
+      "idx": 22,
+      "id": "2606.01326",
+      "title": "Reducing Token Usage of State-in-Context Agents using Minification"
+    },
+    {
+      "idx": 23,
+      "id": "2606.01666",
+      "title": "DOT-MoE: Differentiable Optimal Transport for MoEfication"
+    },
+    {
+      "idx": 24,
+      "id": "2606.01101",
+      "title": "Soft-NBCE: Entropy-Weighted Chunk Fusion for Long-Context"
+    },
+    {
+      "idx": 25,
+      "id": "2606.01279",
+      "title": "ANDES: Agent Native Data Evolving Synthesis Tool for Autonomous Instruction Alignment"
+    },
+    {
+      "idx": 26,
+      "id": "2606.01365",
+      "title": "Early Diagnosis of Wasted Computation in Multi-Agent LLM Systems via Failure-Aware Observability"
+    },
+    {
+      "idx": 27,
+      "id": "2606.01294",
+      "title": "Don't Read Everything: A Curvature-Conditioned Query for Linear Attention"
+    },
+    {
+      "idx": 28,
+      "id": "2606.01139",
+      "title": "SkillRevise: Improving LLM-Authored Agent Skills via Trace-Conditioned Skill Revision"
+    },
+    {
+      "idx": 29,
+      "id": "2606.00539",
+      "title": "GNMR: Runtime Stability Control for Low-Precision Large Language Model Training"
+    },
+    {
+      "idx": 30,
+      "id": "2606.00644",
+      "title": "ForeSci: Evaluating LLM Agents for Forward-Looking AI Research Judgment"
+    }
+  ]
+}

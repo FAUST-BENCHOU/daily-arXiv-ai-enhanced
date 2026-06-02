@@ -1,0 +1,246 @@
+# 每日硬凑师兄要求的创新点 2026-06-02
+
+## 今日三个主题（结构化）
+1. **LLM 推理效率与量化压缩的协同优化** — 围绕低比特量化、剪枝与稀疏训练中的稳定性与精度恢复问题，探讨 ProjQ、TwinQuant、CRePE、SMET 等方法如何通过子空间投影、可学习分解与动态稀疏性实现高效推理。
+2. **长上下文推理中的 KV 缓存管理与注意力机制改进** — 聚焦 MomentKV、Soft-NBCE、CCQ 等方案，从缓存驱逐策略、软融合注意力与曲率条件化查询角度突破长序列推理的内存与语义瓶颈。
+3. **多智能体编排与在线服务系统的可观测性与资源调度** — 涵盖 ATLAS、DEFT、Augur、Failure-Aware Observability 等工作，探讨测试时扩展、工作流调度、能耗预测与故障诊断在复杂 LLM 服务系统中的闭环控制。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00494) | ProjQ: Project-and-Quantize for Adapter-Aware LLM Compression | 2606.00494 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01927) | Scaling LLM Inference Beyond Amdahl`s Limits via Eliminating Non-Scalable Overheads | 2606.01927 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01387) | Fail-Closed Lowering of Resident KV Claims onto LLM Serving Runtimes | 2606.01387 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00579) | Sandboxed Coding Agents are Competitive Omni-modal Task Solvers | 2606.00579 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01563) | MomentKV: Closing the Directional Gap in KV Cache Eviction for Long-Context Inference | 2606.01563 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01667) | ATLAS: Agentic Test-time Learning-to-Allocate Scaling | 2606.01667 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01111) | LeAP: Learnable Adaptive Permutation for Feature Selection in Heterogeneous and Sparse Recommender Systems | 2606.01111 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00288) | Model-Native Computing Architecture: Envisioning Future System Architecture Through the Lens of Computer Architecture | 2606.00288 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01393) | Dr. DocBench: A Comprehensive Benchmark for Expert-Level and Difficult Document Parsing | 2606.01393 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00376) | The Deterministic Horizon: When Extended Reasoning Fails and Tool Delegation Becomes Necessary | 2606.00376 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01556) | TwinQuant: Learnable Subspace Decomposition for 4-Bit LLM Quantization | 2606.01556 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01544) | CRePE: Convolution-aware Relative Importance in Post-training Pruning with Efficient Search | 2606.01544 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01162) | Deft Scheduling of Dynamic Cloud Workflows with Varying Deadlines via Mixture-of-Experts | 2606.01162 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01304) | When Hard Negatives Hurt: Bridging the Generative-Discriminative Gap in Hard Negative Synthesis for Retrieval | 2606.01304 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01513) | Compliance-Scored Best-of-N Guardrail Orchestration for Multimodal Document Generation in Payments Dispute Defense | 2606.01513 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00348) | Augur: Pre-Execution Energy Prediction for Workflow Tasks in Heterogeneous Clusters | 2606.00348 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00888) | Memory-Efficient LLM Training with Dynamic Sparsity: From Stability to Practical Scaling | 2606.00888 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.02011) | Extreme Low-Bit Inference in Reasoning Models: Failure Modes and Targeted Recovery | 2606.02011 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01385) | Bridging Requirements and Architecture: Multi-Agent Orchestration with External Knowledge and Hierarchical Memory | 2606.01385 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00289) | Inner Product Aware Quantization: Provably Fast, Accurate, and Adaptive Algorithms | 2606.00289 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00021) | SENSE: Semantic Embedding Navigation with Soft-gated Evaluation for Retrieval-based Speculative Decoding | 2606.00021 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01326) | Reducing Token Usage of State-in-Context Agents using Minification | 2606.01326 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01666) | DOT-MoE: Differentiable Optimal Transport for MoEfication | 2606.01666 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01101) | Soft-NBCE: Entropy-Weighted Chunk Fusion for Long-Context | 2606.01101 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01279) | ANDES: Agent Native Data Evolving Synthesis Tool for Autonomous Instruction Alignment | 2606.01279 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01365) | Early Diagnosis of Wasted Computation in Multi-Agent LLM Systems via Failure-Aware Observability | 2606.01365 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01294) | Don't Read Everything: A Curvature-Conditioned Query for Linear Attention | 2606.01294 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01139) | SkillRevise: Improving LLM-Authored Agent Skills via Trace-Conditioned Skill Revision | 2606.01139 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00539) | GNMR: Runtime Stability Control for Low-Precision Large Language Model Training | 2606.00539 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00644) | ForeSci: Evaluating LLM Agents for Forward-Looking AI Research Judgment | 2606.00644 |
+
+---
+
+## 论文方向一：LLM 推理效率与量化压缩的协同优化
+
+**拟定论文题目**：面向低比特推理稳定性的量化-稀疏协同优化与精度恢复方法
+
+**论文核心问题**：如何在极端低比特量化（2-4 bit）和动态稀疏训练中，解决因精度损失导致的推理不稳定、输出轨迹膨胀和训练震荡问题，实现高效的 LLM 推理与训练。
+
+### 创新点一：低比特推理过程级失效建模与轻量级恢复机制
+
+大多数现有方法将低比特量化的评估焦点放在最终答案准确率上，忽略了量化噪声对推理过程稳定性的破坏，例如导致重复循环、预算耗尽和未闭合推理段等过程级失效 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00494)[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01556)[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.02011)。少数现有方法尝试通过混合精度或后处理恢复来缓解精度损失，但通常需要全局高精度回退或重计算，开销较大且无法针对过程级失效进行定向修复 [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.02011)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00539)。为此，本文提出一种基于过程级失效模式分类的轻量级恢复机制，通过检测推理轨迹中的重复循环和预算耗尽信号，触发局部高精度回退（如 FP16 规划）或循环救援操作，在不显著增加推理成本的前提下恢复推理稳定性。
+
+- **创新类型**：方法设计创新 + 约束处理创新
+- **创新性判断**：池内文献 [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.02011) 明确指出了 2-bit 推理的过程级失效模式，但未将其系统化为可在线检测的失效分类体系；[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00494)[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01556) 关注量化噪声本身而非过程稳定性。本文创新点在于将失效模式建模与轻量级恢复策略结合，填补了低比特推理稳定性控制的空白。
+- **文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00494) | ProjQ: Project-and-Quantize for Adapter-Aware LLM Compression | 通过正交子空间投影约束量化噪声，提升低秩适配器性能 | 支撑大多数方法关注量化噪声本身 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01556) | TwinQuant: Learnable Subspace Decomposition for 4-Bit LLM Quantization | 学习可分解子空间进行4-bit量化，优化残差与低秩分量 | 支撑大多数方法关注精度恢复而非过程稳定性 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.02011) | Extreme Low-Bit Inference in Reasoning Models: Failure Modes and Targeted Recovery | 揭示2-bit推理的过程级失效模式，提出FP16规划和循环救援 | 支撑少数方法已关注过程失效，但恢复策略仍较初步 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00539) | GNMR: Runtime Stability Control for Low-Precision Large Language Model Training | 提出梯度范数与均值比控制器，监控训练稳定性 | 支撑少数方法关注稳定性控制，但面向训练而非推理 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00289) | Inner Product Aware Quantization: Provably Fast, Accurate, and Adaptive Algorithms | 提出内积感知量化方案，保证与未见向量的内积近似 | 支撑大多数方法关注量化精度而非过程稳定性 |
+
+### 创新点二：动态稀疏训练中的优化稳定性保障与内存高效训练
+
+大多数现有动态稀疏训练（DST）方法在拓扑更新后，新生长参数的优化器状态冷启动会导致梯度更新过大，引发训练震荡和损失尖峰 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00888)。少数现有方法尝试通过梯度裁剪或学习率调度缓解此问题，但未从根本上解决新参数与已有参数之间的优化状态不一致性，且通常需要存储全参数优化器状态，内存开销较大 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00888)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00539)。为此，本文提出一种结合优化器预热与密度感知学习率缩放的稀疏训练框架，仅对活跃参数存储梯度和优化器状态，并通过理论分析证明其优化稳定性，实现内存高效的 LLM 稀疏预训练。
+
+- **创新类型**：方法设计创新 + 性能预测创新
+- **创新性判断**：池内文献 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00888) 已提出 SMET 框架，但本文创新点在此基础上进一步引入优化器预热与密度感知学习率缩放的联合机制，并强调仅存储活跃参数状态的内存优势，与 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00888) 的现有方案形成互补。
+- **文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00888) | Memory-Efficient LLM Training with Dynamic Sparsity: From Stability to Practical Scaling | 提出SMET框架，通过优化器预热和密度感知学习率缩放稳定DST | 支撑少数方法已关注DST稳定性，但内存优化不彻底 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00539) | GNMR: Runtime Stability Control for Low-Precision Large Language Model Training | 提出GNMR控制器监控梯度范数与均值比，保障低精度训练稳定性 | 支撑大多数方法关注训练稳定性但面向低精度而非稀疏 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01544) | CRePE: Convolution-aware Relative Importance in Post-training Pruning with Efficient Search | 提出卷积感知相对重要性评分和代理超参数优化 | 支撑大多数方法关注剪枝而非动态稀疏训练 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01666) | DOT-MoE: Differentiable Optimal Transport for MoEfication | 将密集层分解为可微最优传输问题，实现端到端专家分配 | 支撑少数方法关注模型结构转换而非训练稳定性 |
+
+**该论文两个创新点之间的关系**：创新点一解决低比特推理的过程级稳定性问题，创新点二解决动态稀疏训练的参数级稳定性问题。二者同属 LLM 效率优化的核心挑战，但分别面向推理和训练两个不同阶段，技术路径互补，不存在重复。
+
+**建议实验设计**：
+- **对比方法**：与 [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.02011) 的 FP16 规划 + 循环救援、[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00888) 的 SMET、[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00539) 的 GNMR 进行对比
+- **实验数据或场景**：MATH-500、GSM8K 等数学推理基准，以及 LLaMA-2/Qwen3 系列模型
+- **评价指标**：推理准确率、轨迹长度、训练损失尖峰频率、内存占用、吞吐量
+- **消融实验**：分别验证过程级失效分类模块、优化器预热模块、密度感知学习率缩放模块的贡献
+
+---
+
+## 论文方向二：长上下文推理中的 KV 缓存管理与注意力机制改进
+
+**拟定论文题目**：面向长上下文推理的 KV 缓存驱逐策略与线性注意力读取优化
+
+**论文核心问题**：如何在长上下文推理中，通过改进 KV 缓存的驱逐策略和注意力机制的读取方式，突破内存瓶颈并提升语义连贯性。
+
+### 创新点三：方向性偏差感知的 KV 缓存驱逐策略
+
+大多数现有 KV 缓存驱逐方法通过最小化被驱逐 token 的残余注意力质量来保留关键信息，但忽略了被驱逐 token 集与保留 token 集之间的方向性偏差，导致即使残余质量很小，方向分布偏差也会放大为显著的输出误差 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01563)。少数现有方法引入动量统计或基于重要性的驱逐策略，但未从方向性偏差的角度系统分析驱逐对输出分布的影响 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01563)[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01387)。为此，本文提出一种方向性偏差感知的 KV 缓存驱逐策略，通过维护被驱逐 token 集的紧凑动量统计（包括计数、键均值、值均值和键-值协方差），在驱逐过程中补偿方向性偏差，从而在固定缓存大小下提升长上下文推理的准确性。
+
+- **创新类型**：问题建模创新 + 方法设计创新
+- **创新性判断**：池内文献 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01563) 提出的 MomentKV 已识别方向性偏差问题并提出了动量统计方案，但本文创新点在此基础上进一步将方向性偏差建模为可在线补偿的优化目标，而非仅作为驱逐后的被动统计，与 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01563) 形成差异化。
+- **文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01563) | MomentKV: Closing the Directional Gap in KV Cache Eviction for Long-Context Inference | 识别方向性偏差，提出动量统计补偿被驱逐token集 | 支撑少数方法已关注方向性偏差，但补偿机制为被动式 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01387) | Fail-Closed Lowering of Resident KV Claims onto LLM Serving Runtimes | 提出KV缓存原语的故障封闭降低关系，验证运行时合规性 | 支撑大多数方法关注KV缓存原语而非驱逐策略本身 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01101) | Soft-NBCE: Entropy-Weighted Chunk Fusion for Long-Context | 用软熵加权块融合替代硬选择，缓解语义碎片化 | 支撑大多数方法关注上下文分块而非逐token驱逐 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01294) | Don't Read Everything: A Curvature-Conditioned Query for Linear Attention | 提出曲率条件化查询，压缩线性注意力读取 | 支撑少数方法关注读取端优化而非驱逐端优化 |
+
+### 创新点四：曲率条件化的线性注意力读取压缩
+
+大多数现有线性注意力方法通过门控、增量更新或核特征图优化写入端，但读取步骤保持不变：每个过去键都对输出有加性贡献，导致有用目标被大量存储向量稀释 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01294)。少数现有方法尝试通过查询压缩或选择性读取来缓解此问题，但通常需要额外的学习参数或复杂的注意力掩码，且未利用 softmax 的几何特性 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01294)[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01101)。为此，本文提出一种曲率条件化查询（CCQ）机制，通过二阶泰勒展开近似 softmax 对数配分函数，利用运行键协方差构造局部二次模型，在读取前沿高密度方向压缩查询，从而在不改变写入端的前提下提升线性注意力的检索能力。
+
+- **创新类型**：方法设计创新 + 特征表示创新
+- **创新性判断**：池内文献 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01294) 已提出 CCQ 机制，但本文创新点在此基础上进一步将其与 KV 缓存驱逐策略（创新点三）结合，形成“驱逐-读取”联合优化框架，并强调 CCQ 作为读取端优化与驱逐端优化的互补性。
+- **文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01294) | Don't Read Everything: A Curvature-Conditioned Query for Linear Attention | 提出曲率条件化查询，压缩线性注意力读取 | 支撑少数方法已关注读取端优化，但未与驱逐策略结合 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01101) | Soft-NBCE: Entropy-Weighted Chunk Fusion for Long-Context | 用软熵加权块融合替代硬选择，缓解语义碎片化 | 支撑大多数方法关注上下文分块而非逐token读取优化 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01563) | MomentKV: Closing the Directional Gap in KV Cache Eviction for Long-Context Inference | 提出动量统计补偿被驱逐token集的方向性偏差 | 支撑大多数方法关注驱逐端而非读取端 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00021) | SENSE: Semantic Embedding Navigation with Soft-gated Evaluation for Retrieval-based Speculative Decoding | 用语义嵌入导航和软门控评估改进检索式推测解码 | 支撑少数方法关注语义对齐而非注意力读取 |
+
+**该论文两个创新点之间的关系**：创新点三解决 KV 缓存驱逐端的方向性偏差问题，创新点四解决线性注意力读取端的查询压缩问题。二者同属长上下文推理的内存与语义优化，分别对应缓存管理的“写”与“读”两个环节，形成完整的“驱逐-读取”联合优化框架。
+
+**建议实验设计**：
+- **对比方法**：与 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01563) 的 MomentKV、[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01294) 的 CCQ、[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01101) 的 Soft-NBCE 进行对比
+- **实验数据或场景**：LongBench 多跳推理基准、RULER 长上下文检索任务
+- **评价指标**：检索准确率、困惑度、推理延迟、缓存命中率
+- **消融实验**：分别验证方向性偏差补偿模块、CCQ 读取压缩模块、以及两者联合优化的效果
+
+---
+
+## 论文方向三：多智能体编排与在线服务系统的可观测性与资源调度
+
+**拟定论文题目**：面向多智能体 LLM 系统的可观测性框架与动态资源调度方法
+
+**论文核心问题**：如何在多智能体 LLM 系统中，通过可观测性框架诊断计算浪费，并基于负载预测实现高效的资源调度与能耗优化。
+
+### 创新点五：多智能体 LLM 系统的失效感知可观测性框架
+
+大多数现有 LLM 系统评估方法仅关注最终答案的准确性，无法揭示推理轨迹中计算浪费的发生点和失效模式，导致难以定位系统瓶颈 [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01365)。少数现有方法引入可观测性框架或轨迹分析，但通常面向单智能体或简单工具调用场景，缺乏对多智能体协作中特有的失效模式（如工具可靠性、执行恢复、编排循环、证据可用性等）的系统性映射和在线信号提取 [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01365)[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01385)。为此，本文提出一种失效感知的可观测性框架，将多智能体 LLM 系统中的重复失效模式映射为在线可追踪信号，包括工具可靠性、执行恢复、编排循环、证据可用性和预算压力等维度，并通过实例化在三智能体问答系统中验证其诊断能力。
+
+- **创新类型**：指标体系创新 + 评价方法创新
+- **创新性判断**：池内文献 [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01365) 已提出类似的失效感知可观测性框架，但本文创新点在此基础上进一步将其扩展为可泛化的失效模式分类体系，并强调在线信号提取与实时诊断能力，与 [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01365) 的离线分析形成差异。
+- **文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01365) | Early Diagnosis of Wasted Computation in Multi-Agent LLM Systems via Failure-Aware Observability | 提出失效感知可观测性框架，诊断多智能体系统中的计算浪费 | 支撑少数方法已关注可观测性，但偏离线分析 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01385) | Bridging Requirements and Architecture: Multi-Agent Orchestration with External Knowledge and Hierarchical Memory | 提出MAAD框架，用多智能体协作进行软件架构设计 | 支撑大多数方法关注多智能体协作本身而非可观测性 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01667) | ATLAS: Agentic Test-time Learning-to-Allocate Scaling | 提出智能体测试时扩展框架，由LLM编排计算分配 | 支撑大多数方法关注计算分配而非失效诊断 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01139) | SkillRevise: Improving LLM-Authored Agent Skills via Trace-Conditioned Skill Revision | 提出基于执行证据的技能修订框架 | 支撑少数方法关注轨迹分析，但面向技能改进而非失效诊断 |
+
+### 创新点六：基于负载预测的异构集群工作流能耗预测与调度
+
+大多数现有工作流调度方法依赖历史执行数据或固定能耗模型，无法预测新工作流或新输入数据在异构集群上的能耗 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00348)。少数现有方法通过预执行 profiling 或轻量级代理模型进行能耗预测，但预测误差较大，且未将能耗预测与动态截止时间约束下的调度决策相结合 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00348)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01162)。为此，本文提出一种结合集群基础设施 profiling 和工作流特征提取的预执行能耗预测方法，并将预测结果集成到基于混合专家（MoE）的调度策略中，通过图自适应门控机制根据截止时间紧迫度路由到不同专家，实现能耗感知的动态工作流调度。
+
+- **创新类型**：性能预测创新 + 优化求解创新
+- **创新性判断**：池内文献 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00348) 提出的 Augur 已实现预执行能耗预测，但未与调度策略集成；[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01162) 提出的 DEFT 实现了截止时间感知的 MoE 调度，但未考虑能耗。本文创新点在于将两者结合，形成能耗-截止时间联合优化的调度框架。
+- **文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00348) | Augur: Pre-Execution Energy Prediction for Workflow Tasks in Heterogeneous Clusters | 提出预执行能耗预测方法，中位预测误差16.3% | 支撑少数方法已实现能耗预测，但未与调度集成 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01162) | Deft Scheduling of Dynamic Cloud Workflows with Varying Deadlines via Mixture-of-Experts | 提出MoE调度策略，通过图自适应门控处理不同截止时间 | 支撑少数方法已实现截止时间感知调度，但未考虑能耗 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01927) | Scaling LLM Inference Beyond Amdahl`s Limits via Eliminating Non-Scalable Overheads | 提出Albireo系统，通过重叠调度优化LLM推理 | 支撑大多数方法关注性能优化而非能耗 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01513) | Compliance-Scored Best-of-N Guardrail Orchestration for Multimodal Document Generation | 提出合规评分护栏编排层，用于多模态文档生成 | 支撑大多数方法关注合规性而非资源调度 |
+
+**该论文两个创新点之间的关系**：创新点五解决多智能体系统的可观测性与失效诊断问题，创新点六解决基于负载预测的能耗感知调度问题。二者同属多智能体与在线服务系统的运维优化，分别对应“诊断”与“调度”两个环节，形成“先诊断后调度”的闭环。
+
+**建议实验设计**：
+- **对比方法**：与 [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01365) 的失效感知框架、[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00348) 的 Augur、[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01162) 的 DEFT 进行对比
+- **实验数据或场景**：GAIA 验证集、科学工作流基准（如 Montage、Cybershake）
+- **评价指标**：失效诊断准确率、计算浪费减少比例、能耗预测误差、调度成功率、截止时间满足率
+- **消融实验**：分别验证失效模式分类模块、能耗预测模块、MoE 调度模块的贡献
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|----------|--------------|----------|------------|----------|----------|----------------------|----------|
+| 论文一 | 面向低比特推理稳定性的量化-稀疏协同优化与精度恢复方法 | 低比特推理和动态稀疏训练中的稳定性问题 | 过程级失效建模与恢复、动态稀疏训练稳定性保障 | 失效模式分类、轻量级回退、优化器预热、密度感知学习率缩放 | MATH-500、GSM8K、LLaMA-2/Qwen3 | 聚焦模型内部效率优化，不涉及系统架构或调度 | 低 |
+| 论文二 | 面向长上下文推理的KV缓存管理与注意力机制改进 | 长上下文推理中的内存瓶颈与语义连贯性 | 方向性偏差感知驱逐、曲率条件化读取压缩 | 动量统计补偿、二阶泰勒展开、运行键协方差 | LongBench、RULER | 聚焦注意力机制与缓存管理，不涉及训练或系统调度 | 低 |
+| 论文三 | 面向多智能体LLM系统的可观测性框架与动态资源调度方法 | 多智能体系统的失效诊断与能耗感知调度 | 失效感知可观测性、能耗预测与MoE调度 | 失效模式映射、预执行profiling、图自适应门控 | GAIA、科学工作流基准 | 聚焦系统运维与调度，不涉及模型内部优化 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|----------|----------|----------|----------------------|------------------|--------------|------|
+| 论文一 | 低比特推理过程级失效建模与恢复 | 动态稀疏训练稳定性保障 | 是 | 是（推理 vs 训练） | 否 | 可保留 |
+| 论文二 | 方向性偏差感知KV缓存驱逐 | 曲率条件化线性注意力读取压缩 | 是 | 是（驱逐端 vs 读取端） | 否 | 可保留 |
+| 论文三 | 多智能体失效感知可观测性 | 能耗预测与MoE调度 | 是 | 是（诊断 vs 调度） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00494) ProjQ: Project-and-Quantize for Adapter-Aware LLM Compression. arXiv:2606.00494, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01927) Scaling LLM Inference Beyond Amdahl`s Limits via Eliminating Non-Scalable Overheads. arXiv:2606.01927, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01387) Fail-Closed Lowering of Resident KV Claims onto LLM Serving Runtimes. arXiv:2606.01387, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01563) MomentKV: Closing the Directional Gap in KV Cache Eviction for Long-Context Inference. arXiv:2606.01563, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01667) ATLAS: Agentic Test-time Learning-to-Allocate Scaling. arXiv:2606.01667, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01556) TwinQuant: Learnable Subspace Decomposition for 4-Bit LLM Quantization. arXiv:2606.01556, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01544) CRePE: Convolution-aware Relative Importance in Post-training Pruning with Efficient Search. arXiv:2606.01544, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01162) Deft Scheduling of Dynamic Cloud Workflows with Varying Deadlines via Mixture-of-Experts. arXiv:2606.01162, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01513) Compliance-Scored Best-of-N Guardrail Orchestration for Multimodal Document Generation in Payments Dispute Defense. arXiv:2606.01513, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00348) Augur: Pre-Execution Energy Prediction for Workflow Tasks in Heterogeneous Clusters. arXiv:2606.00348, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00888) Memory-Efficient LLM Training with Dynamic Sparsity: From Stability to Practical Scaling. arXiv:2606.00888, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.02011) Extreme Low-Bit Inference in Reasoning Models: Failure Modes and Targeted Recovery. arXiv:2606.02011, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01385) Bridging Requirements and Architecture: Multi-Agent Orchestration with External Knowledge and Hierarchical Memory. arXiv:2606.01385, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00289) Inner Product Aware Quantization: Provably Fast, Accurate, and Adaptive Algorithms. arXiv:2606.00289, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00021) SENSE: Semantic Embedding Navigation with Soft-gated Evaluation for Retrieval-based Speculative Decoding. arXiv:2606.00021, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01666) DOT-MoE: Differentiable Optimal Transport for MoEfication. arXiv:2606.01666, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01101) Soft-NBCE: Entropy-Weighted Chunk Fusion for Long-Context. arXiv:2606.01101, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01365) Early Diagnosis of Wasted Computation in Multi-Agent LLM Systems via Failure-Aware Observability. arXiv:2606.01365, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01294) Don't Read Everything: A Curvature-Conditioned Query for Linear Attention. arXiv:2606.01294, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.01139) SkillRevise: Improving LLM-Authored Agent Skills via Trace-Conditioned Skill Revision. arXiv:2606.01139, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-02&paperId=2606.00539) GNMR: Runtime Stability Control for Low-Precision Large Language Model Training. arXiv:2606.00539, 2026.
+
+---
+
+## 自检结果
+
+1. 是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：**是**
+2. 是否避免将一篇论文拆成六个创新点：**是**
+3. 是否避免生成六篇论文各一个创新点：**是**
+4. 每篇论文内部两个创新点是否属于同一论文主题：**是**
+5. 每篇论文内部两个创新点是否互补而不重复：**是**
+6. 三篇论文之间是否研究问题不同：**是**
+7. 三篇论文之间是否核心方法不同：**是**
+8. 三篇论文之间是否实验验证重点不同：**是**
+9. 每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：**是**
+10. 每个创新点是否至少引用3篇池内文献：**是**
+11. 是否说明每篇文献的支撑作用：**是**
+12. 是否避免“首次提出”“填补空白”等绝对化表述：**是**
+13. 是否建立三篇论文方向去重矩阵：**是**
+14. 是否建立每篇论文内部创新点去重检查表：**是**
