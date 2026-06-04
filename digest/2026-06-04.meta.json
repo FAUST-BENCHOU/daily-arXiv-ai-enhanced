@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-04",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理加速与解码优化",
+      "blurb": "围绕扩散模型加速、推测解码、KV缓存复用与位置编码解耦等方向，探索如何在不牺牲生成质量的前提下显著降低推理延迟与计算开销。"
+    },
+    {
+      "title": "大语言模型服务系统的资源调度与虚拟化",
+      "blurb": "聚焦NPU虚拟化、预填充-解码阶段协同调度、专家并行负载均衡与静默错误诊断，解决多阶段、多设备场景下的资源利用与系统可靠性问题。"
+    },
+    {
+      "title": "智能体系统的记忆、通信与在线学习机制",
+      "blurb": "面向多智能体推理、智能体记忆系统、在线技能学习与级联幻觉检测，提升智能体在长程任务中的信息保持、协同效率与错误鲁棒性。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.04974",
+      "title": "SAID: Accelerating Diffusion-Based Language Models via Scaffold-Aware Iterative Decoding"
+    },
+    {
+      "idx": 2,
+      "id": "2606.04661",
+      "title": "CRAFT: Cost-aware Refinement And Front-aware Tuning of Prompts"
+    },
+    {
+      "idx": 3,
+      "id": "2606.04799",
+      "title": "UModel: An Agent-Ready Observability Data Modeling Method at Scale"
+    },
+    {
+      "idx": 4,
+      "id": "2606.04646",
+      "title": "QO-Bench: Diagnosing Query-Operator-Preserving Retrieval over Typed Event Tuples"
+    },
+    {
+      "idx": 5,
+      "id": "2606.04058",
+      "title": "Spectral Scaling Laws of Muon"
+    },
+    {
+      "idx": 6,
+      "id": "2606.04115",
+      "title": "dMX: Differentiable Mixed-Precision Assignment for Low-Precision Floating-Point Formats"
+    },
+    {
+      "idx": 7,
+      "id": "2606.04560",
+      "title": "Rollout-Level Advantage-Prioritized Experience Replay for GRPO"
+    },
+    {
+      "idx": 8,
+      "id": "2606.04063",
+      "title": "LLM Compression with Jointly Optimizing Architectural and Quantization choices"
+    },
+    {
+      "idx": 9,
+      "id": "2606.05081",
+      "title": "Graph Traversal on Tensor Cores: A BFS Framework for Modern GPUs"
+    },
+    {
+      "idx": 10,
+      "id": "2606.04101",
+      "title": "UltraEP: Unleash MoE Training and Inference on Rack-Scale Nodes with Near-Optimal Load Balancing"
+    },
+    {
+      "idx": 11,
+      "id": "2606.04484",
+      "title": "AgentJet: A Flexible Swarm Training Framework for Agentic Reinforcement Learning"
+    },
+    {
+      "idx": 12,
+      "id": "2606.04505",
+      "title": "Simulate, Reason, Decide: Scientific Reasoning with LLMs for Simulation-Driven Decision Making"
+    },
+    {
+      "idx": 13,
+      "id": "2606.04302",
+      "title": "LazyAttention: Efficient Retrieval-Augmented Generation with Deferred Positional Encoding"
+    },
+    {
+      "idx": 14,
+      "id": "2606.04557",
+      "title": "Cartridges at Scale: Training Modular KV Caches over Large Document Collections"
+    },
+    {
+      "idx": 15,
+      "id": "2606.04866",
+      "title": "Provably Reduced Sample Cost in Prior-Guided Hyperparameter Optimization"
+    },
+    {
+      "idx": 16,
+      "id": "2606.04261",
+      "title": "Can Generalist Agents Automate Data Curation?"
+    },
+    {
+      "idx": 17,
+      "id": "2606.04017",
+      "title": "Neither Layer Alone: Epistemic Integrity Requires Hierarchical Joint Design for Long-Running AI Agents"
+    },
+    {
+      "idx": 18,
+      "id": "2606.05158",
+      "title": "Streaming Communication in Multi-Agent Reasoning"
+    },
+    {
+      "idx": 19,
+      "id": "2606.04435",
+      "title": "Cascading Hallucination in Agentic RAG: The CHARM Framework for Detection and Mitigation"
+    },
+    {
+      "idx": 20,
+      "id": "2606.05165",
+      "title": "STRIDE: Training Data Attribution via Sparse Recovery from Subset Perturbations"
+    },
+    {
+      "idx": 21,
+      "id": "2606.04446",
+      "title": "D^2SD: Accelerating Speculative Decoding with Dual Diffusion Draft Models"
+    },
+    {
+      "idx": 22,
+      "id": "2606.04315",
+      "title": "Exploring Cross-Scenario Generality of Agentic Memory Systems: Diagnostics and a Strong Baseline"
+    },
+    {
+      "idx": 23,
+      "id": "2606.04415",
+      "title": "FlexNPU: Transparent NPU Virtualization for Dynamic LLM Prefill-Decode Co-location"
+    },
+    {
+      "idx": 24,
+      "id": "2606.04366",
+      "title": "MeshTok: Efficient Multi-Scale Tokenization for Scalable PDE Transformers"
+    },
+    {
+      "idx": 25,
+      "id": "2606.04391",
+      "title": "Online Skill Learning for Web Agents via State-Grounded Dynamic Retrieval"
+    },
+    {
+      "idx": 26,
+      "id": "2606.04594",
+      "title": "Ekka: Automated Diagnosis of Silent Errors in LLM Inference"
+    },
+    {
+      "idx": 27,
+      "id": "2606.04442",
+      "title": "MemoryDocDataSet: A Benchmark for Joint Conversational Memory and Long Document Reasoning"
+    },
+    {
+      "idx": 28,
+      "id": "2606.05152",
+      "title": "Reinforcement Learning from Rich Feedback with Distributional DAgger"
+    },
+    {
+      "idx": 29,
+      "id": "2606.04375",
+      "title": "When Do Fewer Coordinates Suffice in DP-SGD?"
+    },
+    {
+      "idx": 30,
+      "id": "2606.04402",
+      "title": "Not All Errors Are Equal: Consequence-Aware Reasoning Compute Allocation"
+    }
+  ]
+}
