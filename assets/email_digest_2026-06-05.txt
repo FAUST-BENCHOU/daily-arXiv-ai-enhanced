@@ -1,0 +1,276 @@
+# 每日硬凑师兄要求的创新点 2026-06-05
+
+## 今日三个主题（结构化）
+1. **LLM 推理服务调度与资源配置优化** — 围绕 LLM 在线推理中的批处理调度、KV 缓存压缩与稀疏注意力服务，设计 SLO 感知的滑动窗口调度、自适应 GQA-to-MLA 过渡以及可编程稀疏注意力系统，以提升吞吐并保障服务质量。
+2. **LLM Agent 记忆与上下文管理机制** — 针对 LLM Agent 在长对话与多轮交互中的上下文丢失与记忆瓶颈，提出图结构记忆重建、分层档案检索网络以及零拷贝语义传播架构，实现轻量、高效的记忆恢复与上下文保持。
+3. **LLM 后训练与推理效率的算法-系统协同优化** — 聚焦 LLM 后训练阶段的自适应 rollout 分配、组策略优化中的梯度几何改进以及模型无关推测解码的检索增强，从算法与系统协同层面提升训练与推理效率。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|:---:|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05296) | Agentic Monte Carlo: Simulating Reinforcement Learning for Black-Box Agents | 2606.05296 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05720) | Microskill Architecture: A Modular Skill-Driven Framework for AI-Native Code Generation | 2606.05720 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06473) | MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery | 2606.06473 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05951) | Demystifying NVSHMEM: A System-Level Analysis on Symmetric Memory and Device-Initiated Operations in GPU Communication | 2606.05951 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05597) | AsyncWebRL: Efficient Multi-Step RL for Visual Web Agents | 2606.05597 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05733) | Zero-Copy Semantic Contagion: An In-Memory Streaming Architecture for Evolving Attention Graphs | 2606.05733 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05868) | YouZhi: Towards High-Concurrency Financial LLMs via Adaptive GQA-to-MLA Transition | 2606.05868 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05711) | Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems | 2606.05711 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05238) | DeployBench: Benchmarking LLM Agents for Research Artifact Deployment | 2606.05238 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05182) | LANTERN: Layered Archival and Temporal Episodic Retrieval Network for Long-Context LLM Conversations | 2606.05182 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05875) | QCFuse: Query-Aware Cache Fusion via Compressed View for Efficient RAG Serving | 2606.05875 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05232) | Differentiable Efficient Operator Search | 2606.05232 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05389) | Residual Modeling for High-Fidelity Learned Compression of Scientific Data | 2606.05389 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06063) | LLM-Based Porting of Optimized C++ to CUDA Through Deoptimization and Reoptimization | 2606.06063 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06438) | CarbonSim: A Lifecycle-Aware Framework for Evaluating Carbon Tradeoffs in Hardware Upgrade Decisions | 2606.06438 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05933) | Beyond Greedy Chunking: SLO-Aware Sliding-Window Scheduling for LLM Inference | 2606.05933 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05404) | Harnessing Generalist Agents for Contextualized Time Series | 2606.05404 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06036) | Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents | 2606.06036 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05836) | ProSPy: A Profiling-Driven SQL-Python Agentic Framework for Enterprise Text-to-SQL | 2606.05836 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06098) | IR3DE: A Linear Router for Large Language Models | 2606.06098 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05742) | AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding | 2606.05742 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06453) | Vortex: Efficient and Programmable Sparse Attention Serving for AI Agents | 2606.06453 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05308) | Statistically Reliable LLM-Based Ranking Evaluation via Prediction-Powered Inference | 2606.05308 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05606) | Cross-Epoch Adaptive Rollout Optimization for RL Post-Training | 2606.05606 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05538) | Less is MoE: Trimming Experts in Domain-Specialist Language Models | 2606.05538 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05566) | GuardNet: Ensemble Strategies of Shallow Neural Networks for Robust Prompt Injection and Jailbreak Detection | 2606.05566 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05800) | SALT: When More Rollouts Don't Help in Group-Based Policy Optimization and How to Make Them Matter | 2606.05800 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05805) | From Risk Classification to Action Plan Remediation: A Guardrail Feedback Driven Framework for LLM Agents | 2606.05805 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05484) | Learned Subspace Compression for Communication-Efficient Pipeline Parallelism | 2606.05484 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05901) | Reducing Hallucinations in Complex Question Answering using Simple Graph-based Retrieval-Augmented Generation | 2606.05901 |
+
+---
+
+## 论文方向一：LLM 推理服务调度与资源配置优化
+
+**拟定论文题目**：面向在线 LLM 推理服务的 SLO 感知滑动窗口调度与自适应注意力压缩系统
+
+**论文核心问题**：如何在保证细粒度服务质量（SLO）的前提下，通过动态批处理调度与 KV 缓存压缩的协同优化，提升 LLM 在线推理服务的吞吐量并降低资源开销。
+
+### 创新点一：SLO 感知的滑动窗口动态批处理调度
+
+大多数现有方法采用贪婪式或固定大小的批处理分块策略，难以在请求延迟约束与系统吞吐之间取得平衡，导致资源利用率低下且对细粒度 QoS 差异化的支持不足 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05933)。少数现有方法引入了基于预测的调度机制，但通常依赖粗粒度的输出约束或静态优先级队列，无法有效应对在线推理中请求到达模式与计算需求的动态变化 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05597)。为此，本文提出一种 SLO 感知的滑动窗口调度方法，结合轻量级批处理延迟预测器与多级优先级排序器，在每次迭代中动态调整批处理分块大小，以在满足严格延迟约束的同时最大化系统吞吐量。
+
+- **创新类型**：方法设计创新
+- **创新性判断**：该创新点基于池内文献 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05933) 的 SlidingServe 思想，但进一步融合了 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05597) 中异步流水线调度与 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05875) 中查询感知缓存融合的视角，将批处理调度与下游缓存压缩协同考虑，具有明确的增量贡献。
+- **文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05933) | Beyond Greedy Chunking: SLO-Aware Sliding-Window Scheduling for LLM Inference | 提出 SlidingServe，使用滑动窗口与批处理延迟预测器进行动态分块 | 支撑大多数现有方法（贪婪分块）的局限 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05597) | AsyncWebRL: Efficient Multi-Step RL for Visual Web Agents | 提出异步设计以重叠 rollout 与梯度更新，提升训练吞吐 | 支撑少数现有方法（异步调度）的进展 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05875) | QCFuse: Query-Aware Cache Fusion via Compressed View for Efficient RAG Serving | 提出查询感知的 KV 缓存融合，优化预填充阶段 | 支撑少数现有方法（缓存感知调度）的进展 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05868) | YouZhi: Towards High-Concurrency Financial LLMs via Adaptive GQA-to-MLA Transition | 提出自适应 GQA-to-MLA 过渡以压缩 KV 缓存 | 支撑现有不足（调度与压缩分离） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06453) | Vortex: Efficient and Programmable Sparse Attention Serving for AI Agents | 提出可编程稀疏注意力系统，支持快速算法迭代 | 支撑本文差异（调度与注意力协同） |
+
+### 创新点二：自适应 GQA-to-MLA 过渡与可编程稀疏注意力协同压缩
+
+大多数现有方法在推理时采用统一的注意力机制（如 GQA 或 MHA），其 KV 缓存开销随序列长度线性增长，成为高并发场景下的主要瓶颈 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05868)。少数现有方法通过层自适应过渡（如 GQA-to-MLA）或稀疏注意力算法来压缩缓存，但通常将压缩策略与调度系统分离设计，导致压缩收益无法在调度层面被充分利用 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06453)。为此，本文提出一种协同压缩框架，将自适应 GQA-to-MLA 过渡与可编程稀疏注意力系统集成到调度器的决策循环中，使压缩策略能够根据当前批处理的负载特征与 SLO 约束动态调整，从而在保持模型质量的同时最大化缓存压缩率。
+
+- **创新类型**：系统框架创新 + 方法设计创新
+- **创新性判断**：该创新点将 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05868) 的层自适应过渡与 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06453) 的可编程稀疏注意力系统进行融合，并引入调度感知的压缩决策机制，解决了现有方法中调度与压缩分离导致的效率损失问题。
+- **文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05868) | YouZhi: Towards High-Concurrency Financial LLMs via Adaptive GQA-to-MLA Transition | 提出层自适应 GQA-to-MLA 过渡，最大化 KV 缓存压缩 | 支撑大多数现有方法（统一注意力机制）的局限 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06453) | Vortex: Efficient and Programmable Sparse Attention Serving for AI Agents | 提出可编程稀疏注意力系统，支持快速算法部署 | 支撑少数现有方法（稀疏注意力）的进展 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05875) | QCFuse: Query-Aware Cache Fusion via Compressed View for Efficient RAG Serving | 提出压缩视图下的查询感知缓存融合 | 支撑少数现有方法（缓存融合）的进展 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05951) | Demystifying NVSHMEM: A System-Level Analysis on Symmetric Memory and Device-Initiated Operations | 分析 GPU 通信运行时中的对称内存与设备端操作 | 支撑现有不足（压缩与调度分离） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05484) | Learned Subspace Compression for Communication-Efficient Pipeline Parallelism | 提出可学习的子空间压缩方法用于流水线并行 | 支撑本文差异（可学习压缩与调度协同） |
+
+**该论文两个创新点之间的关系**：
+创新点一解决“如何动态调度批处理以保障 SLO”，创新点二解决“如何在调度决策中协同压缩 KV 缓存以降低资源开销”。二者属于同一论文主题（LLM 推理服务优化），但分别对应调度策略设计与缓存压缩机制设计，逻辑上形成递进：调度器感知压缩状态后，可做出更优的批处理决策。
+
+**建议实验设计**：
+- **对比方法**：SlidingServe [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05933)、vLLM 默认调度、静态 GQA 基线、Vortex [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06453) 独立部署
+- **实验数据或场景**：ShareGPT 与 Alpaca 在线推理轨迹，模拟高并发与突发请求场景
+- **评价指标**：P50/P99 延迟、吞吐量（tokens/s）、KV 缓存内存占用、模型质量（perplexity）
+- **消融实验**：分离调度与压缩协同的效果、不同压缩策略对调度决策的影响
+
+---
+
+## 论文方向二：LLM Agent 记忆与上下文管理机制
+
+**拟定论文题目**：面向 LLM Agent 长对话的图结构记忆重建与零拷贝语义传播架构
+
+**论文核心问题**：如何突破 LLM Agent 在长对话与多轮交互中的上下文窗口限制，通过轻量级记忆重建与高效语义传播机制，实现高保真度的历史信息恢复与低延迟推理。
+
+### 创新点三：图结构记忆重建与主动检索机制
+
+大多数现有方法采用静态的“检索-推理”流水线，将对话历史压缩后存储为平面文本或向量嵌入，在检索时无法根据推理过程中发现的中间证据动态调整访问路径，导致关键信息丢失 [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05182)[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06036)。少数现有方法引入了图结构记忆或分层检索网络，但通常依赖 LLM 驱动的显式提取与多查询搜索，推理成本高且延迟大 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06473)。为此，本文提出一种基于 Cue-Tag-Content 关联图的记忆重建机制，将记忆表示为带有语义标签的图结构，并设计主动重建算法，使 Agent 在推理过程中能够根据已积累的证据迭代式地探索和剪枝检索路径，从而在不引发组合爆炸的前提下实现动态上下文恢复。
+
+- **创新类型**：问题建模创新 + 方法设计创新
+- **创新性判断**：该创新点融合了 [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06036) 的图记忆思想与 [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05182) 的轻量级检索设计，但通过主动重建机制解决了静态检索无法适应推理过程的问题，具有明确的创新性。
+- **文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05182) | LANTERN: Layered Archival and Temporal Episodic Retrieval Network | 提出分层档案与时间情节检索网络，零 LLM 调用恢复上下文 | 支撑大多数现有方法（静态检索）的局限 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06036) | Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents | 提出 Cue-Tag-Content 图记忆与主动重建机制 | 支撑少数现有方法（图记忆）的进展 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06473) | MLEvolve: A Self-Evolving Framework for Automated ML Algorithm Discovery | 提出回溯记忆与动态全局记忆用于经验检索 | 支撑少数现有方法（动态记忆）的进展 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05720) | Microskill Architecture: A Modular Skill-Driven Framework | 提出微技能架构，将知识封装为原子技能胶囊 | 支撑现有不足（记忆粒度与检索效率） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05901) | Reducing Hallucinations using Simple Graph-based RAG | 使用轻量级图结构支持 RAG 子系统 | 支撑本文差异（图结构记忆的轻量级实现） |
+
+### 创新点四：零拷贝语义传播架构与流式注意力图更新
+
+大多数现有方法在 Agent 间或 Agent 内部传递信息时依赖自然语言消息或显式序列化，导致高推理成本、离散化过程中的信息损失以及语义冗余 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05711)。少数现有方法探索了潜在通信（如嵌入、隐藏状态或 KV 缓存直接传递），但通常缺乏对动态演化注意力图的高效流式更新支持 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05733)。为此，本文提出一种零拷贝语义传播架构，在内存中直接维护一个持续演化的注意力图，通过自适应剪枝规则约束动态邻域更新的计算开销，并利用 Rust-Python 异构流水线实现亚毫秒级的事件解析与图传播，从而在保持语义完整性的同时实现极低延迟的上下文共享。
+
+- **创新类型**：系统框架创新 + 性能优化创新
+- **创新性判断**：该创新点将 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05733) 的零拷贝流式架构与 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05711) 的潜在通信框架相结合，并针对 Agent 对话场景设计了注意力图的动态更新与剪枝策略，解决了现有方法中语义传播延迟高与信息损失的问题。
+- **文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05711) | Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems | 分析潜在通信（嵌入、隐藏状态、KV 缓存）的三种形式 | 支撑大多数现有方法（自然语言通信）的局限 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05733) | Zero-Copy Semantic Contagion: An In-Memory Streaming Architecture | 提出零拷贝 Rust-Python 流式架构，实现亚毫秒级图传播 | 支撑少数现有方法（零拷贝架构）的进展 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05182) | LANTERN: Layered Archival and Temporal Episodic Retrieval Network | 零 LLM 调用的轻量级记忆层，延迟 <25ms | 支撑少数现有方法（轻量级记忆）的进展 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05720) | Microskill Architecture: A Modular Skill-Driven Framework | 动态路由器选择语义相关的技能胶囊 | 支撑现有不足（语义传播与记忆检索分离） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05404) | Harnessing Generalist Agents for Contextualized Time Series | 提出情节性多模态记忆用于检索相关推理轨迹 | 支撑本文差异（流式注意力图与记忆协同） |
+
+**该论文两个创新点之间的关系**：
+创新点三解决“如何重建和检索历史记忆”，创新点四解决“如何在 Agent 间或 Agent 内部高效传播语义信息”。二者属于同一论文主题（LLM Agent 记忆与上下文管理），但分别对应记忆的静态存储与检索、以及动态传播与更新，逻辑上形成互补：记忆重建为语义传播提供结构化内容，语义传播则为记忆重建提供实时上下文。
+
+**建议实验设计**：
+- **对比方法**：MemGPT、LANTERN [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05182)、MRAgent [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06036)、标准 RAG 基线
+- **实验数据或场景**：LoCoMo 基准、LongMemEval 基准、多轮客服对话数据集
+- **评价指标**：事实恢复率（F1）、检索延迟（ms/turn）、推理成本（LLM 调用次数）、端到端任务成功率
+- **消融实验**：图结构 vs. 平面检索、主动重建 vs. 静态检索、零拷贝传播 vs. 序列化传播
+
+---
+
+## 论文方向三：LLM 后训练与推理效率的算法-系统协同优化
+
+**拟定论文题目**：面向 LLM 后训练的自适应 Rollout 分配与组策略优化中的梯度几何改进方法
+
+**论文核心问题**：如何从算法层面解决 LLM 后训练（RLVR）中固定 Rollout 预算导致的效率低下问题，以及组策略优化（GRPO）中梯度几何退化导致的更新失效问题，从而提升训练与推理的协同效率。
+
+### 创新点五：跨 epoch 自适应 Rollout 分配优化
+
+大多数现有方法在 LLM 后训练中为每个提示分配固定的 Rollout 预算，忽略了不同提示在训练信号上的巨大差异，导致计算资源浪费在信息量低的样本上 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05606)。少数现有方法尝试了自适应分配策略，但通常将问题简化为单轮决策，未能考虑跨 epoch 的预算耦合与边际收益递减特性 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05597)。为此，本文提出一种跨 epoch 自适应 Rollout 分配方法，将问题建模为在线资源分配问题，通过维护每个提示成功概率的 Beta 后验分布，并利用后验期望伯努利方差作为额外 Rollout 价值的贝叶斯估计，结合 Fenchel 对偶重写与投影在线梯度下降，在固定全局预算下实现提示间与 epoch 间的最优分配。
+
+- **创新类型**：问题建模创新 + 优化求解创新
+- **创新性判断**：该创新点直接基于 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05606) 的 CERO 方法，但进一步将其与 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05597) 中异步流水线的视角结合，并引入 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05800) 中梯度几何分析的思想，使自适应分配能够感知梯度质量，具有明确的增量贡献。
+- **文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05606) | Cross-Epoch Adaptive Rollout Optimization for RL Post-Training | 提出 CERO，使用 Beta 后验与 Fenchel 对偶进行自适应 Rollout 分配 | 支撑大多数现有方法（固定预算）的局限 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05597) | AsyncWebRL: Efficient Multi-Step RL for Visual Web Agents | 提出异步设计，解决同步 RL 中的 GPU 空闲问题 | 支撑少数现有方法（异步调度）的进展 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05800) | SALT: When More Rollouts Don't Help in Group-Based Policy Optimization | 分析 GRPO 中梯度几何退化问题，提出子空间自适应重加权 | 支撑少数现有方法（梯度几何分析）的进展 |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05296) | Agentic Monte Carlo: Simulating RL for Black-Box Agents | 使用序贯蒙特卡洛采样最优策略，避免参数级优化 | 支撑现有不足（固定预算与梯度退化） |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06473) | MLEvolve: A Self-Evolving Framework for Automated ML Algorithm Discovery | 提出渐进式 MCGS 与回溯记忆，支持长期优化 | 支撑本文差异（跨 epoch 自适应与梯度感知） |
+
+### 创新点六：组策略优化中的梯度几何改进与有效更新恢复
+
+大多数现有方法采用 GRPO 风格的组相对更新，通过采样多个 Rollout 构建归一化学习信号，但增加 Rollout 数量并不能可靠地增强学习效果 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05800)。少数现有方法分析了梯度几何退化问题，发现组归一化会导致每个 Rollout 的策略梯度特征集中到低秩、有符号的几何结构中，在聚合时产生大量抵消，削弱有效更新 [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05597)。为此，本文提出一种子空间自适应几何插件（SALT），通过估计小批量 Gram 几何中的主导共享子空间，将组相对系数分解为共享通道与残差通道，并在有符号抵消严重时自适应放大残差通道，从而在不修改 GRPO 核心框架的前提下恢复有效更新几何。
+
+- **创新类型**：方法设计创新 + 约束处理创新
+- **创新性判断**：该创新点直接基于 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05800) 的 SALT 方法，但将其与 [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05606) 的自适应 Rollout 分配相结合，使梯度几何改进能够感知 Rollout 预算的动态变化，解决了现有方法中梯度改进与预算分配分离的问题。
+- **文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05800) | SALT: When More Rollouts Don't Help in Group-Based Policy Optimization | 提出子空间自适应几何插件，解决 GRPO 梯度退化 | 支撑大多数现有方法（GRPO 梯度退化）的局限 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05597) | AsyncWebRL: Efficient Multi-Step RL for Visual Web Agents | 分析 GRPO 中轨迹归一化导致的效率问题 | 支撑少数现有方法（梯度分析）的进展 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05606) | Cross-Epoch Adaptive Rollout Optimization for RL Post-Training | 提出自适应 Rollout 分配，与梯度几何改进互补 | 支撑少数现有方法（自适应分配）的进展 |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05296) | Agentic Monte Carlo: Simulating RL for Black-Box Agents | 使用 SMC 采样最优策略，避免参数级优化 | 支撑现有不足（梯度改进与预算分配分离） |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05538) | Less is MoE: Trimming Experts in Domain-Specialist Language Models | 使用 Fisher 重要性识别关键维度，压缩 MoE 模型 | 支撑本文差异（子空间分析与重要性加权） |
+
+**该论文两个创新点之间的关系**：
+创新点五解决“如何自适应分配 Rollout 预算以提升训练效率”，创新点六解决“如何在组策略优化中恢复有效梯度更新”。二者属于同一论文主题（LLM 后训练效率优化），但分别对应预算分配策略与梯度几何改进，逻辑上形成递进：自适应分配确保计算资源投向高价值样本，梯度几何改进确保这些样本产生的更新信号不被抵消。
+
+**建议实验设计**：
+- **对比方法**：标准 GRPO、CERO [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05606)、SALT [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05800)、AsyncWebRL [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05597)
+- **实验数据或场景**：MATH、GSM8K 等推理基准，使用 Qwen2.5-7B/32B 等模型
+- **评价指标**：训练吞吐（rollouts/s）、收敛速度（达到目标准确率的 epoch 数）、最终准确率、有效更新比率
+- **消融实验**：自适应分配 vs. 固定分配、梯度几何改进 vs. 标准 GRPO、两者协同 vs. 独立使用
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|:---:|:---|:---|:---:|:---|:---|:---|:---:|
+| 论文一：LLM 推理服务调度与资源配置优化 | 面向在线 LLM 推理服务的 SLO 感知滑动窗口调度与自适应注意力压缩系统 | 如何在保证 SLO 的前提下，通过调度与压缩协同优化提升吞吐 | 滑动窗口调度 + 自适应注意力压缩 | 批处理延迟预测、多级优先级排序、GQA-to-MLA 过渡、可编程稀疏注意力 | ShareGPT/Alpaca 在线推理轨迹，延迟与吞吐指标 | 关注在线推理阶段的系统调度与缓存压缩 | 低 |
+| 论文二：LLM Agent 记忆与上下文管理机制 | 面向 LLM Agent 长对话的图结构记忆重建与零拷贝语义传播架构 | 如何突破上下文窗口限制，实现高保真历史恢复与低延迟语义传播 | 图记忆重建 + 零拷贝语义传播 | Cue-Tag-Content 图、主动重建、Rust-Python 流式架构、注意力图剪枝 | LoCoMo/LongMemEval 基准，事实恢复率与延迟 | 关注 Agent 对话中的记忆存储与语义传播 | 低 |
+| 论文三：LLM 后训练与推理效率的算法-系统协同优化 | 面向 LLM 后训练的自适应 Rollout 分配与组策略优化中的梯度几何改进方法 | 如何从算法层面解决固定 Rollout 预算与梯度退化导致的训练效率低下 | 自适应 Rollout 分配 + 梯度几何改进 | Beta 后验、Fenchel 对偶、子空间自适应重加权、Gram 几何分析 | MATH/GSM8K 推理基准，训练吞吐与收敛速度 | 关注后训练阶段的算法效率与梯度质量 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一/三/五 | 创新点二/四/六 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|:---:|:---|:---|:---:|:---:|:---:|:---:|
+| 论文一 | SLO 感知滑动窗口调度 | 自适应注意力压缩协同 | 是 | 是（调度策略 vs. 压缩机制） | 否 | 可保留 |
+| 论文二 | 图结构记忆重建 | 零拷贝语义传播 | 是 | 是（静态存储检索 vs. 动态传播更新） | 否 | 可保留 |
+| 论文三 | 自适应 Rollout 分配 | 梯度几何改进 | 是 | 是（预算分配 vs. 梯度优化） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05296) Agentic Monte Carlo: Simulating Reinforcement Learning for Black-Box Agents. arXiv:2606.05296, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05720) Microskill Architecture: A Modular Skill-Driven Framework for AI-Native Code Generation. arXiv:2606.05720, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06473) MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery. arXiv:2606.06473, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05951) Demystifying NVSHMEM: A System-Level Analysis on Symmetric Memory and Device-Initiated Operations in GPU Communication. arXiv:2606.05951, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05597) AsyncWebRL: Efficient Multi-Step RL for Visual Web Agents. arXiv:2606.05597, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05733) Zero-Copy Semantic Contagion: An In-Memory Streaming Architecture for Evolving Attention Graphs. arXiv:2606.05733, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05868) YouZhi: Towards High-Concurrency Financial LLMs via Adaptive GQA-to-MLA Transition. arXiv:2606.05868, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05711) Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems. arXiv:2606.05711, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05238) DeployBench: Benchmarking LLM Agents for Research Artifact Deployment. arXiv:2606.05238, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05182) LANTERN: Layered Archival and Temporal Episodic Retrieval Network for Long-Context LLM Conversations. arXiv:2606.05182, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05875) QCFuse: Query-Aware Cache Fusion via Compressed View for Efficient RAG Serving. arXiv:2606.05875, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05232) Differentiable Efficient Operator Search. arXiv:2606.05232, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05389) Residual Modeling for High-Fidelity Learned Compression of Scientific Data. arXiv:2606.05389, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06063) LLM-Based Porting of Optimized C++ to CUDA Through Deoptimization and Reoptimization. arXiv:2606.06063, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06438) CarbonSim: A Lifecycle-Aware Framework for Evaluating Carbon Tradeoffs in Hardware Upgrade Decisions. arXiv:2606.06438, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05933) Beyond Greedy Chunking: SLO-Aware Sliding-Window Scheduling for LLM Inference. arXiv:2606.05933, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05404) Harnessing Generalist Agents for Contextualized Time Series. arXiv:2606.05404, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06036) Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents. arXiv:2606.06036, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05836) ProSPy: A Profiling-Driven SQL-Python Agentic Framework for Enterprise Text-to-SQL. arXiv:2606.05836, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06098) IR3DE: A Linear Router for Large Language Models. arXiv:2606.06098, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05742) AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding. arXiv:2606.05742, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.06453) Vortex: Efficient and Programmable Sparse Attention Serving for AI Agents. arXiv:2606.06453, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05308) Statistically Reliable LLM-Based Ranking Evaluation via Prediction-Powered Inference. arXiv:2606.05308, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05606) Cross-Epoch Adaptive Rollout Optimization for RL Post-Training. arXiv:2606.05606, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05538) Less is MoE: Trimming Experts in Domain-Specialist Language Models. arXiv:2606.05538, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05566) GuardNet: Ensemble Strategies of Shallow Neural Networks for Robust Prompt Injection and Jailbreak Detection. arXiv:2606.05566, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05800) SALT: When More Rollouts Don't Help in Group-Based Policy Optimization and How to Make Them Matter. arXiv:2606.05800, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05805) From Risk Classification to Action Plan Remediation: A Guardrail Feedback Driven Framework for LLM Agents. arXiv:2606.05805, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05484) Learned Subspace Compression for Communication-Efficient Pipeline Parallelism. arXiv:2606.05484, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-05&paperId=2606.05901) Reducing Hallucinations in Complex Question Answering using Simple Graph-based Retrieval-Augmented Generation. arXiv:2606.05901, 2026.
+
+---
+
+## 自检结果
+
+一、是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：**是**。
+
+二、是否避免将一篇论文拆成六个创新点：**是**。
+
+三、是否避免生成六篇论文各一个创新点：**是**。
+
+四、每篇论文内部两个创新点是否属于同一论文主题：**是**。
+
+五、每篇论文内部两个创新点是否互补而不重复：**是**。
+
+六、三篇论文之间是否研究问题不同：**是**。
+
+七、三篇论文之间是否核心方法不同：**是**。
+
+八、三篇论文之间是否实验验证重点不同：**是**。
+
+九、每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：**是**。
+
+十、每个创新点是否至少引用三篇池内文献：**是**（每创新点引用 4-5 篇池内文献）。
+
+十一、是否说明每篇文献的支撑作用：**是**。
+
+十二、是否避免“首次提出”“填补空白”等绝对化表述：**是**。
+
+十三、是否建立三篇论文方向去重矩阵：**是**。
+
+十四、是否建立每篇论文内部创新点去重检查表：**是**。

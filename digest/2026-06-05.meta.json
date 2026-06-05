@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-05",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM 推理服务调度与资源配置优化",
+      "blurb": "围绕 LLM 在线推理中的批处理调度、KV 缓存压缩与稀疏注意力服务，设计 SLO 感知的滑动窗口调度、自适应 GQA-to-MLA 过渡以及可编程稀疏注意力系统，以提升吞吐并保障服务质量。"
+    },
+    {
+      "title": "LLM Agent 记忆与上下文管理机制",
+      "blurb": "针对 LLM Agent 在长对话与多轮交互中的上下文丢失与记忆瓶颈，提出图结构记忆重建、分层档案检索网络以及零拷贝语义传播架构，实现轻量、高效的记忆恢复与上下文保持。"
+    },
+    {
+      "title": "LLM 后训练与推理效率的算法-系统协同优化",
+      "blurb": "聚焦 LLM 后训练阶段的自适应 rollout 分配、组策略优化中的梯度几何改进以及模型无关推测解码的检索增强，从算法与系统协同层面提升训练与推理效率。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.05296",
+      "title": "Agentic Monte Carlo: Simulating Reinforcement Learning for Black-Box Agents"
+    },
+    {
+      "idx": 2,
+      "id": "2606.05720",
+      "title": "Microskill Architecture: A Modular Skill-Driven Framework for AI-Native Code Generation"
+    },
+    {
+      "idx": 3,
+      "id": "2606.06473",
+      "title": "MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery"
+    },
+    {
+      "idx": 4,
+      "id": "2606.05951",
+      "title": "Demystifying NVSHMEM: A System-Level Analysis on Symmetric Memory and Device-Initiated Operations in GPU Communication"
+    },
+    {
+      "idx": 5,
+      "id": "2606.05597",
+      "title": "AsyncWebRL: Efficient Multi-Step RL for Visual Web Agents"
+    },
+    {
+      "idx": 6,
+      "id": "2606.05733",
+      "title": "Zero-Copy Semantic Contagion: An In-Memory Streaming Architecture for Evolving Attention Graphs"
+    },
+    {
+      "idx": 7,
+      "id": "2606.05868",
+      "title": "YouZhi: Towards High-Concurrency Financial LLMs via Adaptive GQA-to-MLA Transition"
+    },
+    {
+      "idx": 8,
+      "id": "2606.05711",
+      "title": "Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems"
+    },
+    {
+      "idx": 9,
+      "id": "2606.05238",
+      "title": "DeployBench: Benchmarking LLM Agents for Research Artifact Deployment"
+    },
+    {
+      "idx": 10,
+      "id": "2606.05182",
+      "title": "LANTERN: Layered Archival and Temporal Episodic Retrieval Network for Long-Context LLM Conversations"
+    },
+    {
+      "idx": 11,
+      "id": "2606.05875",
+      "title": "QCFuse: Query-Aware Cache Fusion via Compressed View for Efficient RAG Serving"
+    },
+    {
+      "idx": 12,
+      "id": "2606.05232",
+      "title": "Differentiable Efficient Operator Search"
+    },
+    {
+      "idx": 13,
+      "id": "2606.05389",
+      "title": "Residual Modeling for High-Fidelity Learned Compression of Scientific Data"
+    },
+    {
+      "idx": 14,
+      "id": "2606.06063",
+      "title": "LLM-Based Porting of Optimized C++ to CUDA Through Deoptimization and Reoptimization"
+    },
+    {
+      "idx": 15,
+      "id": "2606.06438",
+      "title": "CarbonSim: A Lifecycle-Aware Framework for Evaluating Carbon Tradeoffs in Hardware Upgrade Decisions"
+    },
+    {
+      "idx": 16,
+      "id": "2606.05933",
+      "title": "Beyond Greedy Chunking: SLO-Aware Sliding-Window Scheduling for LLM Inference"
+    },
+    {
+      "idx": 17,
+      "id": "2606.05404",
+      "title": "Harnessing Generalist Agents for Contextualized Time Series"
+    },
+    {
+      "idx": 18,
+      "id": "2606.06036",
+      "title": "Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents"
+    },
+    {
+      "idx": 19,
+      "id": "2606.05836",
+      "title": "ProSPy: A Profiling-Driven SQL-Python Agentic Framework for Enterprise Text-to-SQL"
+    },
+    {
+      "idx": 20,
+      "id": "2606.06098",
+      "title": "IR3DE: A Linear Router for Large Language Models"
+    },
+    {
+      "idx": 21,
+      "id": "2606.05742",
+      "title": "AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding"
+    },
+    {
+      "idx": 22,
+      "id": "2606.06453",
+      "title": "Vortex: Efficient and Programmable Sparse Attention Serving for AI Agents"
+    },
+    {
+      "idx": 23,
+      "id": "2606.05308",
+      "title": "Statistically Reliable LLM-Based Ranking Evaluation via Prediction-Powered Inference"
+    },
+    {
+      "idx": 24,
+      "id": "2606.05606",
+      "title": "Cross-Epoch Adaptive Rollout Optimization for RL Post-Training"
+    },
+    {
+      "idx": 25,
+      "id": "2606.05538",
+      "title": "Less is MoE: Trimming Experts in Domain-Specialist Language Models"
+    },
+    {
+      "idx": 26,
+      "id": "2606.05566",
+      "title": "GuardNet: Ensemble Strategies of Shallow Neural Networks for Robust Prompt Injection and Jailbreak Detection"
+    },
+    {
+      "idx": 27,
+      "id": "2606.05800",
+      "title": "SALT: When More Rollouts Don't Help in Group-Based Policy Optimization and How to Make Them Matter"
+    },
+    {
+      "idx": 28,
+      "id": "2606.05805",
+      "title": "From Risk Classification to Action Plan Remediation: A Guardrail Feedback Driven Framework for LLM Agents"
+    },
+    {
+      "idx": 29,
+      "id": "2606.05484",
+      "title": "Learned Subspace Compression for Communication-Efficient Pipeline Parallelism"
+    },
+    {
+      "idx": 30,
+      "id": "2606.05901",
+      "title": "Reducing Hallucinations in Complex Question Answering using Simple Graph-based Retrieval-Augmented Generation (long version)"
+    }
+  ]
+}
