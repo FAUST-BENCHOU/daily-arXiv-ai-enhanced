@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-07",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "多智能体系统通信协议与效率优化",
+      "blurb": "围绕 LLM 多智能体系统中自然语言通信的冗余、歧义与成本问题，探索协议化通信（PACT）与潜在空间通信（latent communication）两种替代范式，并评估其对系统性能与推理开销的影响。"
+    },
+    {
+      "title": "LLM 推理部署与资源效率优化",
+      "blurb": "聚焦大语言模型推理阶段的性能瓶颈，涵盖 KV 缓存压缩（GQA-to-MLA 自适应过渡）、投机解码检索增强（AdaPLD）、CUDA 图调度优化（SET）以及超低比特量化（SAGE-PTQ）等方法，旨在降低推理延迟与显存开销。"
+    },
+    {
+      "title": "智能体训练与对齐中的信用分配与反馈机制",
+      "blurb": "针对 LLM 智能体在强化学习后训练、工具调用和护栏反馈中的信用误分配问题，提出工具感知策略优化（TAPO）、基于轨迹诊断的框架修复（HarnessFix）以及护栏反馈驱动的风险分类与补救（TRIAD）等方法。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.06459",
+      "title": "Event Detection for Parameter-to-KPI Dependency Learning for AI-RAN"
+    },
+    {
+      "idx": 2,
+      "id": "2606.06098",
+      "title": "IR3DE: A Linear Router for Large Language Models"
+    },
+    {
+      "idx": 3,
+      "id": "2606.05670",
+      "title": "Do More Agents Help? Controlled and Protocol-Aligned Evaluation of LLM Agent Workflows"
+    },
+    {
+      "idx": 4,
+      "id": "2606.06473",
+      "title": "MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery"
+    },
+    {
+      "idx": 5,
+      "id": "2606.06080",
+      "title": "On Advantage Estimates for Max@K Policy Gradients"
+    },
+    {
+      "idx": 6,
+      "id": "2606.05805",
+      "title": "From Risk Classification to Action Plan Remediation: A Guardrail Feedback Driven Framework for LLM Agents"
+    },
+    {
+      "idx": 7,
+      "id": "2606.06054",
+      "title": "Beyond Similarity: Trustworthy Memory Search for Personal AI Agents"
+    },
+    {
+      "idx": 8,
+      "id": "2606.05389",
+      "title": "Residual Modeling for High-Fidelity Learned Compression of Scientific Data"
+    },
+    {
+      "idx": 9,
+      "id": "2606.05433",
+      "title": "Zero knowledge verification for frontier AI training is possible"
+    },
+    {
+      "idx": 10,
+      "id": "2606.05495",
+      "title": "SET: Stream-Event-Triggered Scheduling for Efficient CUDA Graph Pipelines"
+    },
+    {
+      "idx": 11,
+      "id": "2606.05429",
+      "title": "Minimizing the Hidden Cost of Scales: Graph-Guided Ultra-Low-Bit Quantization for Large Language Models"
+    },
+    {
+      "idx": 12,
+      "id": "2606.06418",
+      "title": "Double Preconditioning (DoPr): Optimization for Test-Time Performance, not Validation Loss"
+    },
+    {
+      "idx": 13,
+      "id": "2606.06154",
+      "title": "Amortizing Federated Adaptation: Hypernetwork Driven LoRA for Personalized Foundation Models"
+    },
+    {
+      "idx": 14,
+      "id": "2606.05304",
+      "title": "What Should Agents Say? Action-state Communication for Efficient Multi-Agent Systems"
+    },
+    {
+      "idx": 15,
+      "id": "2606.05711",
+      "title": "Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems"
+    },
+    {
+      "idx": 16,
+      "id": "2606.05308",
+      "title": "Statistically Reliable LLM-Based Ranking Evaluation via Prediction-Powered Inference"
+    },
+    {
+      "idx": 17,
+      "id": "2606.06324",
+      "title": "From Failed Trajectories to Reliable LLM Agents: Diagnosing and Repairing Harness Flaws"
+    },
+    {
+      "idx": 18,
+      "id": "2606.05868",
+      "title": "YouZhi: Towards High-Concurrency Financial LLMs via Adaptive GQA-to-MLA Transition"
+    },
+    {
+      "idx": 19,
+      "id": "2606.06212",
+      "title": "Evaluating Agentic Configuration Repair for Computer Networks"
+    },
+    {
+      "idx": 20,
+      "id": "2606.05784",
+      "title": "TAPO: Tool-Aware Policy Optimization via Credit Transfer for Multimodal Search Agents"
+    },
+    {
+      "idx": 21,
+      "id": "2606.05516",
+      "title": "Dominant-Layer ZO: A Single Layer Dominates Zeroth-Order Fine-Tuning of LLMs"
+    },
+    {
+      "idx": 22,
+      "id": "2606.06021",
+      "title": "OPRD: On-Policy Representation Distillation"
+    },
+    {
+      "idx": 23,
+      "id": "2606.05250",
+      "title": "Towards Persistent Case-Based Memory for Autonomous Data Science: A CBR-Augmented R&D-Agent with a Locally Deployable Small Language Model"
+    },
+    {
+      "idx": 24,
+      "id": "2606.05742",
+      "title": "AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding"
+    },
+    {
+      "idx": 25,
+      "id": "2606.05232",
+      "title": "Differentiable Efficient Operator Search"
+    },
+    {
+      "idx": 26,
+      "id": "2606.05733",
+      "title": "Zero-Copy Semantic Contagion: An In-Memory Streaming Architecture for Evolving Attention Graphs"
+    },
+    {
+      "idx": 27,
+      "id": "2606.06063",
+      "title": "LLM-Based Porting of Optimized C++ to CUDA Through Deoptimization and Reoptimization"
+    },
+    {
+      "idx": 28,
+      "id": "2606.06470",
+      "title": "PC Layer: Polynomial Weight Preconditioning for Improving LLM Pre-Training"
+    },
+    {
+      "idx": 29,
+      "id": "2606.05792",
+      "title": "Can LLMs Write Correct TLA+ Specifications? Evaluating Natural-Language-to-TLA+ Generation"
+    },
+    {
+      "idx": 30,
+      "id": "2606.05548",
+      "title": "ADK Arena: Evaluating Agent Development Kits via LLM-as-a-Developer"
+    }
+  ]
+}
