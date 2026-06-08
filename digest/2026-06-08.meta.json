@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-08",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理服务冷启动与部署效率优化",
+      "blurb": "围绕 vLLM 冷启动延迟分析与预测建模，结合低比特量化与低秩压缩方法，探讨推理服务在启动阶段和部署阶段的效率瓶颈与优化路径。"
+    },
+    {
+      "title": "多DNN与异构加速器上的实时调度与资源配置",
+      "blurb": "面向多DNN工作负载与异构加速器集群，研究层变体调度、进程组感知的集合通信合成以及跨规模泛化的强化学习调度方法。"
+    },
+    {
+      "title": "AI驱动工作流的自动化编排与自适应调优",
+      "blurb": "聚焦AI-HPC工作流设计、CI/CD流水线生成、Web agent观察压缩与编码agent仓库探索等自动化与自适应能力，提升复杂工作流的构建与运行效率。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.07362",
+      "title": "Breaking the Ice: Analyzing Cold Start Latency in vLLM"
+    },
+    {
+      "idx": 2,
+      "id": "2606.06708",
+      "title": "Signal-Driven Observation for Long-Horizon Web Agents"
+    },
+    {
+      "idx": 3,
+      "id": "2606.07116",
+      "title": "OffQ: Taming Structured Outliers in LLM Quantization by Offsetting"
+    },
+    {
+      "idx": 4,
+      "id": "2606.06818",
+      "title": "Terastal: Layer-Variant-based Scheduling for Real-Time Multi-DNN Workloads on Heterogeneous Accelerators"
+    },
+    {
+      "idx": 5,
+      "id": "2606.07404",
+      "title": "Reversible Foundations: Training a 120B Sparse MoE through State-Preserving Scaling"
+    },
+    {
+      "idx": 6,
+      "id": "2606.07412",
+      "title": "Socratic-SWE: Self-Evolving Coding Agents via Trace-Derived Agent Skills"
+    },
+    {
+      "idx": 7,
+      "id": "2606.07019",
+      "title": "PCCL: Process Group-Aware Scalable and Generic Collective Algorithm Synthesizer"
+    },
+    {
+      "idx": 8,
+      "id": "2606.06535",
+      "title": "Architecturally Significant MLOps Guidelines for ML Model Integration and Deployment: a Gray Literature Review"
+    },
+    {
+      "idx": 9,
+      "id": "2606.06663",
+      "title": "Explainable Runtime Dependency Tracking for AI-RAN Conflict Monitoring"
+    },
+    {
+      "idx": 10,
+      "id": "2606.07046",
+      "title": "Predictive Autoscaling in Cloud-Native and Federated Cloud-Edge Computing Environments: A Taxonomy and Future Directions"
+    },
+    {
+      "idx": 11,
+      "id": "2606.06698",
+      "title": "RECAP: Regression Evaluation for Continual Adaptation of Prompts"
+    },
+    {
+      "idx": 12,
+      "id": "2606.06545",
+      "title": "Queen-Bee Agents: A BeeSpec-Centered Architecture for Governed Enterprise MCP Orchestration"
+    },
+    {
+      "idx": 13,
+      "id": "2606.06976",
+      "title": "Exploring Agentic Tool-Calling Decisions via Uncertainty-Aligned Reinforcement Learning"
+    },
+    {
+      "idx": 14,
+      "id": "2606.06662",
+      "title": "AutoPipelineAI: Context-Aware CI/CD Pipeline Generation from Natural Language"
+    },
+    {
+      "idx": 15,
+      "id": "2606.06910",
+      "title": "Communication Strategy Selection for Multi-GPU 3D FDTD with Convolutional Perfectly Matched Boundary Layers"
+    },
+    {
+      "idx": 16,
+      "id": "2606.07299",
+      "title": "DuMate-DeepResearch: An Auditable Multi-Agent System with Recursive Search and Rubric-Grounded Reasoning"
+    },
+    {
+      "idx": 17,
+      "id": "2606.06641",
+      "title": "Accelerated Fourier SAT (AFSAT): Fully Realising a GPU-based Symmetric Pseudo-Boolean SAT Solver"
+    },
+    {
+      "idx": 18,
+      "id": "2606.06915",
+      "title": "ThinkBooster: A Unified Framework for Seamless Test-Time Scaling of LLM Reasoning"
+    },
+    {
+      "idx": 19,
+      "id": "2606.07491",
+      "title": "Twelve quick tips for designing AI-driven HPC workflows"
+    },
+    {
+      "idx": 20,
+      "id": "2606.06821",
+      "title": "Chiseling Out Efficiency: Structured Skeleton Supervision for Efficient Code Generation"
+    },
+    {
+      "idx": 21,
+      "id": "2606.07074",
+      "title": "SlimSearcher: Training Efficiency-Aware Web Agents via Adaptive Reward Gating"
+    },
+    {
+      "idx": 22,
+      "id": "2606.07345",
+      "title": "TabSwift: An Efficient Tabular Foundation Model with Row-Wise Attention"
+    },
+    {
+      "idx": 23,
+      "id": "2606.06742",
+      "title": "TorchKM: A GPU-Oriented Library for Kernel Learning and Model Selection"
+    },
+    {
+      "idx": 24,
+      "id": "2606.07297",
+      "title": "SWE-Explore: Benchmarking How Coding Agents Explore Repositories"
+    },
+    {
+      "idx": 25,
+      "id": "2606.06747",
+      "title": "Tensor Algebraic Property Skeletons: Amplifying Property-Based Testing for AI Compilers"
+    },
+    {
+      "idx": 26,
+      "id": "2606.06892",
+      "title": "GRASP: Geometry-aware Residual Alignment for Scalable Pretraining Data Attribution"
+    },
+    {
+      "idx": 27,
+      "id": "2606.07291",
+      "title": "Trio: Learning Time-Series Forecasting with Temporal-Spatial-Sample Attention and Structural Causal Priors"
+    },
+    {
+      "idx": 28,
+      "id": "2606.06820",
+      "title": "SCALE: Scalable Cross-Attention Learning with Extrapolation for Agentic Workflow Scheduling"
+    },
+    {
+      "idx": 29,
+      "id": "2606.06751",
+      "title": "StageFrontier: Synchronization-Aware Stage Accounting for Distributed ML Training"
+    },
+    {
+      "idx": 30,
+      "id": "2606.07098",
+      "title": "SigmaScale: LLM Compression with SVD-based Low-Rank Decomposition and Learned Scaling Matrices"
+    }
+  ]
+}

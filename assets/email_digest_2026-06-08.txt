@@ -1,0 +1,290 @@
+# 每日硬凑师兄要求的创新点 2026-06-08
+
+## 今日三个主题（结构化）
+1. **大语言模型推理服务冷启动与部署效率优化** — 围绕 vLLM 冷启动延迟分析与预测建模，结合低比特量化与低秩压缩方法，探讨推理服务在启动阶段和部署阶段的效率瓶颈与优化路径。
+2. **多DNN与异构加速器上的实时调度与资源配置** — 面向多DNN工作负载与异构加速器集群，研究层变体调度、进程组感知的集合通信合成以及跨规模泛化的强化学习调度方法。
+3. **AI驱动工作流的自动化编排与自适应调优** — 聚焦AI-HPC工作流设计、CI/CD流水线生成、Web agent观察压缩与编码agent仓库探索等自动化与自适应能力，提升复杂工作流的构建与运行效率。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|:---:|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07362) | Breaking the Ice: Analyzing Cold Start Latency in vLLM | 2606.07362 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06708) | Signal-Driven Observation for Long-Horizon Web Agents | 2606.06708 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07116) | OffQ: Taming Structured Outliers in LLM Quantization by Offsetting | 2606.07116 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06818) | Terastal: Layer-Variant-based Scheduling for Real-Time Multi-DNN Workloads on Heterogeneous Accelerators | 2606.06818 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07404) | Reversible Foundations: Training a 120B Sparse MoE through State-Preserving Scaling | 2606.07404 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07412) | Socratic-SWE: Self-Evolving Coding Agents via Trace-Derived Agent Skills | 2606.07412 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07019) | PCCL: Process Group-Aware Scalable and Generic Collective Algorithm Synthesizer | 2606.07019 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06535) | Architecturally Significant MLOps Guidelines for ML Model Integration and Deployment: a Gray Literature Review | 2606.06535 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06663) | Explainable Runtime Dependency Tracking for AI-RAN Conflict Monitoring | 2606.06663 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07046) | Predictive Autoscaling in Cloud-Native and Federated Cloud-Edge Computing Environments: A Taxonomy and Future Directions | 2606.07046 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06698) | RECAP: Regression Evaluation for Continual Adaptation of Prompts | 2606.06698 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06545) | Queen-Bee Agents: A BeeSpec-Centered Architecture for Governed Enterprise MCP Orchestration | 2606.06545 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06976) | Exploring Agentic Tool-Calling Decisions via Uncertainty-Aligned Reinforcement Learning | 2606.06976 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06662) | AutoPipelineAI: Context-Aware CI/CD Pipeline Generation from Natural Language | 2606.06662 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06910) | Communication Strategy Selection for Multi-GPU 3D FDTD with Convolutional Perfectly Matched Boundary Layers | 2606.06910 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07299) | DuMate-DeepResearch: An Auditable Multi-Agent System with Recursive Search and Rubric-Grounded Reasoning | 2606.07299 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06641) | Accelerated Fourier SAT (AFSAT): Fully Realising a GPU-based Symmetric Pseudo-Boolean SAT Solver | 2606.06641 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06915) | ThinkBooster: A Unified Framework for Seamless Test-Time Scaling of LLM Reasoning | 2606.06915 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07491) | Twelve quick tips for designing AI-driven HPC workflows | 2606.07491 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06821) | Chiseling Out Efficiency: Structured Skeleton Supervision for Efficient Code Generation | 2606.06821 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07074) | SlimSearcher: Training Efficiency-Aware Web Agents via Adaptive Reward Gating | 2606.07074 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07345) | TabSwift: An Efficient Tabular Foundation Model with Row-Wise Attention | 2606.07345 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06742) | TorchKM: A GPU-Oriented Library for Kernel Learning and Model Selection | 2606.06742 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07297) | SWE-Explore: Benchmarking How Coding Agents Explore Repositories | 2606.07297 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06747) | Tensor Algebraic Property Skeletons: Amplifying Property-Based Testing for AI Compilers | 2606.06747 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06892) | GRASP: Geometry-aware Residual Alignment for Scalable Pretraining Data Attribution | 2606.06892 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07291) | Trio: Learning Time-Series Forecasting with Temporal-Spatial-Sample Attention and Structural Causal Priors | 2606.07291 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06820) | SCALE: Scalable Cross-Attention Learning with Extrapolation for Agentic Workflow Scheduling | 2606.06820 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06751) | StageFrontier: Synchronization-Aware Stage Accounting for Distributed ML Training | 2606.06751 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07098) | SigmaScale: LLM Compression with SVD-based Low-Rank Decomposition and Learned Scaling Matrices | 2606.07098 |
+
+---
+
+## 论文方向一：大语言模型推理服务冷启动与部署效率优化
+
+**拟定论文题目：** 面向vLLM推理引擎的冷启动延迟分析与部署效率优化方法
+
+**论文核心问题：** 如何系统性地建模和优化大语言模型推理服务的冷启动延迟，并结合模型压缩技术提升整体部署效率。
+
+### 创新点一：基于阶段分解的vLLM冷启动延迟建模与预测
+
+大多数现有方法将推理引擎的启动过程视为一个黑箱，缺乏对启动延迟的细粒度归因和可预测性分析，导致资源规划时难以准确预留启动时间 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07362)[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06535)[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07046)。少数现有方法开始关注推理服务的启动性能，但通常只关注端到端启动时间，未将启动过程分解为可解释的独立阶段，也无法建立与模型参数和硬件配置之间的可量化映射关系 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07362)[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07491)。为此，本文基于对vLLM启动过程的系统性性能表征，将其分解为六个基础阶段，并构建一个轻量级解析模型，以根据给定的模型级和系统级参数准确预测启动延迟，为大规模推理环境中的资源规划提供可操作的指导。
+
+- **创新类型：** 问题建模创新 + 性能预测创新
+- **创新性判断：** 文献池中[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07362)首次对vLLM启动延迟进行了系统性研究，但本文进一步将启动过程分解为六个阶段并建立解析预测模型，这在池内文献中未见重复，具有明确的增量贡献。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07362) | Breaking the Ice: Analyzing Cold Start Latency in vLLM | 首次系统研究vLLM启动延迟，分解为六个步骤，发现CPU瓶颈，建立解析模型。 | 支撑大多数现有方法（缺乏系统性研究）及少数现有方法（已有初步分解） |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06535) | Architecturally Significant MLOps Guidelines for ML Model Integration and Deployment | 综述MLOps中模型集成与部署的架构指南，强调部署阶段规划的重要性。 | 支撑大多数现有方法（部署规划中缺乏冷启动建模） |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07046) | Predictive Autoscaling in Cloud-Native and Federated Cloud-Edge Computing Environments | 综述预测性自动扩缩容技术，指出传统反应式方法响应滞后。 | 支撑大多数现有方法（资源规划未考虑冷启动延迟） |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07491) | Twelve quick tips for designing AI-driven HPC workflows | 提供AI驱动HPC工作流设计指南，强调容器化和资源管理。 | 支撑少数现有方法（关注工作流效率但未深入冷启动） |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07404) | Reversible Foundations: Training a 120B Sparse MoE through State-Preserving Scaling | 报告大规模MoE模型训练的系统经验，涉及资源规划。 | 支撑现有不足（训练与推理冷启动问题不同） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06751) | StageFrontier: Synchronization-Aware Stage Accounting for Distributed ML Training | 提出分布式训练的阶段感知延迟归因方法。 | 支撑本文差异（借鉴阶段分解思路到推理冷启动） |
+
+### 创新点二：结合低比特量化与低秩压缩的部署效率协同优化
+
+大多数现有方法将模型压缩（如量化、低秩分解）与推理部署视为两个独立的优化阶段，先压缩模型再部署，未考虑压缩策略对部署启动时间和运行时效率的联合影响 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07116)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07098)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07345)。少数现有方法开始探索激活感知的量化或低秩压缩，但通常只关注压缩后的推理精度和吞吐量，忽略了压缩过程本身的计算开销以及对引擎启动阶段（如权重加载、内存分配）的潜在影响 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07116)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07098)[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06821)。为此，本文提出一种部署效率协同优化框架，在模型压缩阶段同时考虑低比特量化（如OffQ的偏移机制）和低秩分解（如SigmaScale的学习缩放矩阵）对启动延迟和运行时性能的综合影响，通过联合搜索最优压缩配置，实现部署效率与推理性能的帕累托最优。
+
+- **创新类型：** 方法设计创新 + 约束处理创新
+- **创新性判断：** 文献池中[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07116)和[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07098)分别提出了先进的量化和低秩压缩方法，但均未将其与部署启动效率进行联合优化。本文提出的协同优化视角在池内文献中具有新颖性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07116) | OffQ: Taming Structured Outliers in LLM Quantization by Offsetting | 提出OffQ方法，通过偏移机制抑制激活异常值，实现W4A4KV4量化。 | 支撑大多数现有方法（量化与部署分离）及少数现有方法（先进量化技术） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07098) | SigmaScale: LLM Compression with SVD-based Low-Rank Decomposition and Learned Scaling Matrices | 提出SigmaScale，通过学习缩放矩阵辅助SVD低秩分解压缩LLM。 | 支撑大多数现有方法（压缩与部署分离）及少数现有方法（先进低秩压缩） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07345) | TabSwift: An Efficient Tabular Foundation Model with Row-Wise Attention | 提出高效的表格基础模型，关注推理效率，引入早期退出机制。 | 支撑大多数现有方法（关注推理效率但未涉及启动阶段） |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06821) | Chiseling Out Efficiency: Structured Skeleton Supervision for Efficient Code Generation | 提出效率骨架引导的代码生成框架，关注代码运行时性能。 | 支撑现有不足（效率优化视角可迁移至部署配置） |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07362) | Breaking the Ice: Analyzing Cold Start Latency in vLLM | 分析vLLM启动延迟，发现CPU瓶颈和权重加载是关键步骤。 | 支撑本文差异（提供启动延迟建模基础，用于联合优化） |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07404) | Reversible Foundations: Training a 120B Sparse MoE through State-Preserving Scaling | 报告大规模模型训练的系统优化经验。 | 支撑现有不足（训练与部署效率优化目标不同） |
+
+**该论文两个创新点之间的关系：**
+创新点一解决“冷启动延迟如何建模与预测”的问题，创新点二解决“如何通过压缩与部署协同优化提升效率”的问题。二者属于同一篇论文主题（推理服务部署效率），但分别对应性能建模和方法设计两个不同技术层面，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** 原始vLLM启动流程、独立应用OffQ量化、独立应用SigmaScale压缩、本文协同优化框架。
+- **实验数据或场景：** 使用Llama 3.1 8B、Qwen3-8B等模型，在单GPU和多GPU配置下测量启动延迟、首次推理延迟、稳态吞吐量。
+- **评价指标：** 启动延迟（秒）、模型加载时间、内存占用、推理吞吐量（tokens/s）、精度损失（perplexity, zero-shot accuracy）。
+- **消融实验：** 分别移除启动延迟预测模型、压缩策略联合搜索、协同优化模块，分析各组件贡献。
+
+---
+
+## 论文方向二：多DNN与异构加速器上的实时调度与资源配置
+
+**拟定论文题目：** 面向多DNN工作负载与异构加速器集群的实时调度与资源配置优化方法
+
+**论文核心问题：** 如何在异构加速器集群上，针对多DNN实时工作负载，通过层变体设计、进程组感知的集合通信合成以及跨规模泛化的调度策略，实现低延迟、高资源利用率和高可扩展性。
+
+### 创新点三：层变体驱动的异构加速器实时调度框架
+
+大多数现有方法在异构DNN加速器上进行多DNN调度时，通常假设每个层只能在其首选加速器上高效执行，导致在负载倾斜时，非首选加速器上的层延迟过大，限制了调度灵活性并增加了截止时间违反率 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06818)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06910)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06820)。少数现有方法引入了层变体（layer variants）的概念，通过为层提供多种定制化实现来缩小不同加速器上的延迟差距，但现有工作主要关注离线变体设计，缺乏与在线调度策略的联合优化，且未考虑变体选择对推理精度的影响 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06818)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06820)。为此，本文提出Terastal框架的增强版本，将离线异构感知的虚拟预算分配与层变体设计，以及在线调度策略进行联合优化，在满足时序和精度约束的同时，最小化截止时间违反率。
+
+- **创新类型：** 方法设计创新 + 约束处理创新
+- **创新性判断：** 文献池中[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06818)提出了Terastal框架和层变体概念，但本文进一步将离线设计与在线调度进行更紧密的联合优化，并显式建模精度约束，这在池内文献中具有增量贡献。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06818) | Terastal: Layer-Variant-based Scheduling for Real-Time Multi-DNN Workloads on Heterogeneous Accelerators | 提出Terastal框架，通过层变体设计和调度优化多DNN实时执行。 | 支撑大多数现有方法（缺乏层变体概念）及少数现有方法（已有Terastal框架） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06910) | Communication Strategy Selection for Multi-GPU 3D FDTD with Convolutional Perfectly Matched Boundary Layers | 研究多GPU通信策略选择，比较直接GPU间交换与主机中转的性能。 | 支撑大多数现有方法（关注通信优化但未涉及层变体） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06820) | SCALE: Scalable Cross-Attention Learning with Extrapolation for Agentic Workflow Scheduling | 提出跨规模泛化的DRL调度器，使用交叉注意力指针网络。 | 支撑少数现有方法（关注调度泛化性，但场景为agent工作流） |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07019) | PCCL: Process Group-Aware Scalable and Generic Collective Algorithm Synthesizer | 提出进程组感知的集合通信算法合成框架。 | 支撑现有不足（通信优化与调度分离） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06751) | StageFrontier: Synchronization-Aware Stage Accounting for Distributed ML Training | 提出同步感知的阶段延迟归因方法。 | 支撑本文差异（延迟归因思路可用于调度决策） |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07046) | Predictive Autoscaling in Cloud-Native and Federated Cloud-Edge Computing Environments | 综述预测性自动扩缩容技术。 | 支撑现有不足（扩缩容与实时调度问题不同） |
+
+### 创新点四：进程组感知的跨规模泛化调度策略
+
+大多数现有集合通信算法合成器是拓扑感知的，但忽略了通信通常只发生在设备子集（即进程组）中的事实，导致生成的算法在进程组场景下效率低下 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07019)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06910)。少数现有方法开始关注进程组感知的通信优化，但通常局限于特定的集合通信模式（如AllReduce），且生成的算法难以泛化到不同规模的集群 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07019)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06820)。为此，本文提出一种进程组感知的、可扩展的集合通信算法合成框架，通过将进程组信息编码到拓扑图中，并采用结构化表示正则化（SRR）技术稳定跨规模的特征分布，使得合成的算法能够在不同集群规模下保持高效，无需重新训练。
+
+- **创新类型：** 特征表示创新 + 泛化迁移创新
+- **创新性判断：** 文献池中[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07019)提出了PCCL框架，关注进程组感知，但本文进一步引入SRR技术解决跨规模泛化问题，这在池内文献中具有新颖性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07019) | PCCL: Process Group-Aware Scalable and Generic Collective Algorithm Synthesizer | 提出进程组感知的集合通信算法合成框架，支持多种集合模式。 | 支撑大多数现有方法（忽略进程组）及少数现有方法（已有PCCL） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06910) | Communication Strategy Selection for Multi-GPU 3D FDTD with Convolutional Perfectly Matched Boundary Layers | 研究多GPU通信策略，比较直接GPU间交换与主机中转。 | 支撑大多数现有方法（关注通信优化但未考虑进程组） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06820) | SCALE: Scalable Cross-Attention Learning with Extrapolation for Agentic Workflow Scheduling | 提出跨规模泛化的DRL调度器，使用SRR技术稳定特征分布。 | 支撑少数现有方法（跨规模泛化思路可迁移） |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06818) | Terastal: Layer-Variant-based Scheduling for Real-Time Multi-DNN Workloads on Heterogeneous Accelerators | 提出异构加速器上的实时调度框架。 | 支撑现有不足（调度与通信优化分离） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06751) | StageFrontier: Synchronization-Aware Stage Accounting for Distributed ML Training | 提出同步感知的阶段延迟归因方法。 | 支撑本文差异（延迟归因可用于通信瓶颈识别） |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07404) | Reversible Foundations: Training a 120B Sparse MoE through State-Preserving Scaling | 报告大规模模型训练的系统经验，涉及分布式通信。 | 支撑现有不足（训练通信与推理通信需求不同） |
+
+**该论文两个创新点之间的关系：**
+创新点三解决“如何在异构加速器上进行实时调度”，创新点四解决“如何在进程组场景下实现跨规模泛化的通信优化”。二者属于同一篇论文主题（多DNN与异构加速器上的实时调度与资源配置），但分别对应调度策略和通信优化两个不同技术层面，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** FCFS、EDF、DREAM、原始Terastal、原始PCCL、本文联合框架。
+- **实验数据或场景：** 使用多种DNN模型（ResNet, BERT, ViT等）在包含GPU和NPU的异构集群上模拟多DNN实时工作负载。
+- **评价指标：** 截止时间违反率、平均推理延迟、资源利用率、跨规模泛化性能（在未见过的集群规模上测试）。
+- **消融实验：** 分别移除层变体设计、进程组感知、SRR模块，分析各组件贡献。
+
+---
+
+## 论文方向三：AI驱动工作流的自动化编排与自适应调优
+
+**拟定论文题目：** 面向AI驱动工作流的自动化编排与自适应调优方法研究
+
+**论文核心问题：** 如何利用大语言模型和强化学习技术，实现AI驱动工作流（包括Web agent、编码agent、CI/CD流水线等）的自动化构建、编排和持续自适应调优。
+
+### 创新点五：基于信号驱动观测与效率感知奖励的Web agent自适应调优
+
+大多数现有Web agent在长程任务中每步都读取完整的DOM和可访问性树（数万tokens），导致上下文逐渐退化，推理能力在任务完成前就已下降 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06708)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07074)。少数现有方法开始探索观察压缩或效率感知训练，例如信号驱动观测（SDO）将观察频率与动作频率解耦，或SlimSearcher通过帕累托高效过滤和自适应奖励门控来提升效率，但这些方法通常只关注单一维度（观察压缩或奖励塑造），缺乏对两者联合优化的系统框架 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06708)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07074)[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06698)。为此，本文提出一个联合优化框架，将SDO的观察压缩机制与SlimSearcher的效率感知奖励门控相结合，在训练和推理阶段同时优化观察频率和动作效率，实现Web agent在长程任务中的自适应调优。
+
+- **创新类型：** 方法设计创新 + 在线反馈机制创新
+- **创新性判断：** 文献池中[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06708)和[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07074)分别提出了SDO和SlimSearcher，但本文首次将观察压缩与效率感知奖励进行联合优化，这在池内文献中具有明确的组合创新性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06708) | Signal-Driven Observation for Long-Horizon Web Agents | 提出SDO方法，将观察频率与动作频率解耦，仅在信号触发时读取DOM。 | 支撑大多数现有方法（每步读取完整DOM）及少数现有方法（已有SDO） |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07074) | SlimSearcher: Training Efficiency-Aware Web Agents via Adaptive Reward Gating | 提出SlimSearcher，通过帕累托高效过滤和自适应奖励门控提升效率。 | 支撑大多数现有方法（效率意识不足）及少数现有方法（已有SlimSearcher） |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06698) | RECAP: Regression Evaluation for Continual Adaptation of Prompts | 提出RECAP基准，评估提示优化方法在约束变化下的持续适应能力。 | 支撑现有不足（持续适应与在线调优问题相关） |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06976) | Exploring Agentic Tool-Calling Decisions via Uncertainty-Aligned Reinforcement Learning | 提出TRUST，通过不确定性对齐的强化学习改善工具调用决策。 | 支撑现有不足（决策质量与效率可联合优化） |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07299) | DuMate-DeepResearch: An Auditable Multi-Agent System with Recursive Search and Rubric-Grounded Reasoning | 提出可审计的多智能体深度研究框架。 | 支撑本文差异（多智能体协作与单agent调优不同） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06545) | Queen-Bee Agents: A BeeSpec-Centered Architecture for Governed Enterprise MCP Orchestration | 提出受治理的企业MCP编排架构。 | 支撑现有不足（企业级编排与Web agent调优场景不同） |
+
+### 创新点六：基于轨迹蒸馏与求解器梯度对齐的编码agent闭环自进化
+
+大多数现有编码agent的训练受限于高质量SWE任务数据的可用性，现有合成数据方法通常通过固定的变异或错误注入过程创建任务，生成的数据分布与agent自身的弱点和训练进度无关 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07412)[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07297)。少数现有方法开始探索闭环自进化框架，例如Socratic-SWE通过将历史求解轨迹蒸馏为结构化agent技能，并利用求解器梯度对齐奖励生成针对性修复任务，但现有工作主要关注任务生成，对agent的仓库探索能力（如代码定位、上下文检索）的评估和改进仍不充分 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07412)[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07297)。为此，本文提出一个增强的闭环自进化框架，在Socratic-SWE的基础上，集成SWE-Explore的仓库探索评估指标，将探索覆盖率、排序质量和上下文效率作为额外的奖励信号，引导agent在自我进化过程中同时提升问题解决能力和仓库理解能力。
+
+- **创新类型：** 系统框架创新 + 在线反馈机制创新
+- **创新性判断：** 文献池中[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07412)提出了Socratic-SWE，[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07297)提出了SWE-Explore，但本文首次将仓库探索能力作为自进化框架中的显式优化目标，这在池内文献中具有新颖性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---|
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07412) | Socratic-SWE: Self-Evolving Coding Agents via Trace-Derived Agent Skills | 提出Socratic-SWE，通过轨迹蒸馏和求解器梯度对齐实现编码agent自进化。 | 支撑大多数现有方法（依赖固定合成数据）及少数现有方法（已有Socratic-SWE） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07297) | SWE-Explore: Benchmarking How Coding Agents Explore Repositories | 提出SWE-Explore基准，评估编码agent的仓库探索能力。 | 支撑大多数现有方法（缺乏探索能力评估）及少数现有方法（已有SWE-Explore） |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06662) | AutoPipelineAI: Context-Aware CI/CD Pipeline Generation from Natural Language | 提出AutoPipelineAI，使用LLM从自然语言生成CI/CD流水线。 | 支撑现有不足（流水线生成与agent自进化场景不同） |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06821) | Chiseling Out Efficiency: Structured Skeleton Supervision for Efficient Code Generation | 提出EffiSkel，通过效率骨架引导高效代码生成。 | 支撑现有不足（代码效率与agent能力进化可结合） |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07299) | DuMate-DeepResearch: An Auditable Multi-Agent System with Recursive Search and Rubric-Grounded Reasoning | 提出可审计的多智能体深度研究框架。 | 支撑本文差异（多智能体协作与单agent自进化不同） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06545) | Queen-Bee Agents: A BeeSpec-Centered Architecture for Governed Enterprise MCP Orchestration | 提出受治理的企业MCP编排架构。 | 支撑现有不足（企业级编排与编码agent场景不同） |
+
+**该论文两个创新点之间的关系：**
+创新点五解决“Web agent如何在长程任务中自适应调优”，创新点六解决“编码agent如何通过闭环自进化持续提升能力”。二者属于同一篇论文主题（AI驱动工作流的自动化编排与自适应调优），但分别对应Web agent和编码agent两种不同的工作流类型，不存在重复。
+
+**建议实验设计：**
+- **对比方法（创新点五）：** 原始Web agent（每步读取完整DOM）、SDO、SlimSearcher、本文联合框架。
+- **对比方法（创新点六）：** 原始编码agent、Socratic-SWE、SWE-Explore引导的Socratic-SWE、本文增强框架。
+- **实验数据或场景：** Web agent使用Mind2Web、WebArena等基准；编码agent使用SWE-bench和SWE-Explore基准。
+- **评价指标（创新点五）：** 任务成功率、平均tokens消耗、平均步数、上下文长度。
+- **评价指标（创新点六）：** 问题解决率、探索覆盖率、排序质量（NDCG）、上下文效率。
+- **消融实验：** 分别移除SDO模块、效率奖励门控、仓库探索奖励信号，分析各组件贡献。
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|:---:|:---|:---|:---|:---|:---|:---|:---:|
+| 论文一 | 面向vLLM推理引擎的冷启动延迟分析与部署效率优化方法 | 推理服务冷启动延迟建模与部署效率优化 | 创新点一：阶段分解冷启动建模；创新点二：压缩与部署协同优化 | 性能表征、解析建模、量化与低秩压缩联合搜索 | vLLM启动延迟测量、模型压缩与部署联合实验 | 聚焦推理引擎启动阶段和模型压缩，不涉及运行时调度或工作流编排 | 低 |
+| 论文二 | 面向多DNN工作负载与异构加速器集群的实时调度与资源配置优化方法 | 异构加速器上多DNN实时调度与通信优化 | 创新点三：层变体实时调度；创新点四：进程组感知跨规模泛化通信 | 层变体设计、异构感知调度、进程组感知通信合成、SRR | 多DNN实时调度模拟、集合通信性能测试、跨规模泛化实验 | 聚焦运行时调度和通信优化，不涉及推理启动或工作流编排 | 低 |
+| 论文三 | 面向AI驱动工作流的自动化编排与自适应调优方法研究 | Web agent和编码agent的自动化编排与自适应调优 | 创新点五：Web agent联合调优；创新点六：编码agent闭环自进化 | 信号驱动观测、效率感知奖励、轨迹蒸馏、求解器梯度对齐 | Web agent长程任务测试、编码agent自进化与探索评估 | 聚焦agent工作流的编排与调优，不涉及推理引擎或硬件调度 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|:---:|:---|:---|:---|:---|:---|:---:|
+| 论文一 | 阶段分解冷启动建模与预测 | 压缩与部署协同优化 | 是（推理服务部署效率） | 是（性能建模 vs. 方法设计） | 否 | 可保留 |
+| 论文二 | 层变体实时调度 | 进程组感知跨规模泛化通信 | 是（多DNN与异构加速器调度） | 是（调度策略 vs. 通信优化） | 否 | 可保留 |
+| 论文三 | Web agent联合调优 | 编码agent闭环自进化 | 是（AI驱动工作流编排与调优） | 是（Web agent vs. 编码agent） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07362) Breaking the Ice: Analyzing Cold Start Latency in vLLM. arXiv:2606.07362, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06708) Signal-Driven Observation for Long-Horizon Web Agents. arXiv:2606.06708, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07116) OffQ: Taming Structured Outliers in LLM Quantization by Offsetting. arXiv:2606.07116, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06818) Terastal: Layer-Variant-based Scheduling for Real-Time Multi-DNN Workloads on Heterogeneous Accelerators. arXiv:2606.06818, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07404) Reversible Foundations: Training a 120B Sparse MoE through State-Preserving Scaling. arXiv:2606.07404, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07412) Socratic-SWE: Self-Evolving Coding Agents via Trace-Derived Agent Skills. arXiv:2606.07412, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07019) PCCL: Process Group-Aware Scalable and Generic Collective Algorithm Synthesizer. arXiv:2606.07019, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06535) Architecturally Significant MLOps Guidelines for ML Model Integration and Deployment: a Gray Literature Review. arXiv:2606.06535, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06663) Explainable Runtime Dependency Tracking for AI-RAN Conflict Monitoring. arXiv:2606.06663, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07046) Predictive Autoscaling in Cloud-Native and Federated Cloud-Edge Computing Environments: A Taxonomy and Future Directions. arXiv:2606.07046, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06698) RECAP: Regression Evaluation for Continual Adaptation of Prompts. arXiv:2606.06698, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06545) Queen-Bee Agents: A BeeSpec-Centered Architecture for Governed Enterprise MCP Orchestration. arXiv:2606.06545, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06976) Exploring Agentic Tool-Calling Decisions via Uncertainty-Aligned Reinforcement Learning. arXiv:2606.06976, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06662) AutoPipelineAI: Context-Aware CI/CD Pipeline Generation from Natural Language. arXiv:2606.06662, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06910) Communication Strategy Selection for Multi-GPU 3D FDTD with Convolutional Perfectly Matched Boundary Layers. arXiv:2606.06910, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07299) DuMate-DeepResearch: An Auditable Multi-Agent System with Recursive Search and Rubric-Grounded Reasoning. arXiv:2606.07299, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06641) Accelerated Fourier SAT (AFSAT): Fully Realising a GPU-based Symmetric Pseudo-Boolean SAT Solver. arXiv:2606.06641, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06915) ThinkBooster: A Unified Framework for Seamless Test-Time Scaling of LLM Reasoning. arXiv:2606.06915, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07491) Twelve quick tips for designing AI-driven HPC workflows. arXiv:2606.07491, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06821) Chiseling Out Efficiency: Structured Skeleton Supervision for Efficient Code Generation. arXiv:2606.06821, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07074) SlimSearcher: Training Efficiency-Aware Web Agents via Adaptive Reward Gating. arXiv:2606.07074, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07345) TabSwift: An Efficient Tabular Foundation Model with Row-Wise Attention. arXiv:2606.07345, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06742) TorchKM: A GPU-Oriented Library for Kernel Learning and Model Selection. arXiv:2606.06742, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07297) SWE-Explore: Benchmarking How Coding Agents Explore Repositories. arXiv:2606.07297, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06747) Tensor Algebraic Property Skeletons: Amplifying Property-Based Testing for AI Compilers. arXiv:2606.06747, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06892) GRASP: Geometry-aware Residual Alignment for Scalable Pretraining Data Attribution. arXiv:2606.06892, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07291) Trio: Learning Time-Series Forecasting with Temporal-Spatial-Sample Attention and Structural Causal Priors. arXiv:2606.07291, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06820) SCALE: Scalable Cross-Attention Learning with Extrapolation for Agentic Workflow Scheduling. arXiv:2606.06820, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.06751) StageFrontier: Synchronization-Aware Stage Accounting for Distributed ML Training. arXiv:2606.06751, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-08&paperId=2606.07098) SigmaScale: LLM Compression with SVD-based Low-Rank Decomposition and Learned Scaling Matrices. arXiv:2606.07098, 2026.
+
+---
+
+## 自检结果
+
+一、是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：**是**。
+
+二、是否避免将一篇论文拆成六个创新点：**是**。
+
+三、是否避免生成六篇论文各一个创新点：**是**。
+
+四、每篇论文内部两个创新点是否属于同一论文主题：**是**。
+
+五、每篇论文内部两个创新点是否互补而不重复：**是**。
+
+六、三篇论文之间是否研究问题不同：**是**。
+
+七、三篇论文之间是否核心方法不同：**是**。
+
+八、三篇论文之间是否实验验证重点不同：**是**。
+
+九、每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：**是**。
+
+十、每个创新点是否至少引用3篇池内文献：**是**（每个创新点引用6篇池内文献）。
+
+十一、是否说明每篇文献的支撑作用：**是**。
+
+十二、是否避免“首次提出”“填补空白”等绝对化表述：**是**。
+
+十三、是否建立三篇论文方向去重矩阵：**是**。
+
+十四、是否建立每篇论文内部创新点去重检查表：**是**。
