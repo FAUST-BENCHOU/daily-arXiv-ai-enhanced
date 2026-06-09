@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-09",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理效率与压缩",
+      "blurb": "围绕LLM推理加速，从动态深度路由、纯W4A4量化、联合剪枝与混合精度量化、自适应张量化等角度探索模型压缩与推理效率优化方法。"
+    },
+    {
+      "title": "LLM Agent服务与资源调度",
+      "blurb": "聚焦多轮Agent服务的仿真评估、技能重写与成本权衡、KV缓存管理、以及面向动态负载的在线资源调优与调度策略。"
+    },
+    {
+      "title": "AI系统可靠性与自动化",
+      "blurb": "涵盖日志异常检测、BFT协议自适应调优、代码现代化Agent、代码优先审稿协议等，关注AI系统在部署与运维中的可靠性、自动化与可验证性。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.09613",
+      "title": "AGENTSERVESIM: A Hardware-aware Simulator for Multi-Turn LLM Agent Serving"
+    },
+    {
+      "idx": 2,
+      "id": "2606.08491",
+      "title": "What Makes a Desired Graph for Relational Deep Learning?"
+    },
+    {
+      "idx": 3,
+      "id": "2606.08976",
+      "title": "RTL-BenchLS: A Large-Scale Benchmark for RTL Reasoning and Generation with Large Language Models"
+    },
+    {
+      "idx": 4,
+      "id": "2606.09514",
+      "title": "BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference"
+    },
+    {
+      "idx": 5,
+      "id": "2606.09377",
+      "title": "Scaling Neural Network Verification with Tensor Parallelism and Fully Sharded Data Parallelism"
+    },
+    {
+      "idx": 6,
+      "id": "2606.09120",
+      "title": "AutoPilot: Learning to Steer High Speed Robust BFT"
+    },
+    {
+      "idx": 7,
+      "id": "2606.07587",
+      "title": "The Routing Plateau: Understanding and Breaking the Accuracy Limits of LLM Routers"
+    },
+    {
+      "idx": 8,
+      "id": "2606.07520",
+      "title": "TinyJudge: Unverifiable Constraint Alignment via Lightweight Specialist Ensembles"
+    },
+    {
+      "idx": 9,
+      "id": "2606.09131",
+      "title": "Late-Layer Fusion is Enough: Dual-Path Vision Token Routing for Multimodal Large Language Models under Visual Saturation"
+    },
+    {
+      "idx": 10,
+      "id": "2606.07819",
+      "title": "Joint Structural Pruning and Mixed-Precision Quantization for LLM Compression"
+    },
+    {
+      "idx": 11,
+      "id": "2606.08950",
+      "title": "When More Cores Hurts: The Vector Database Scaling Paradox in HPC"
+    },
+    {
+      "idx": 12,
+      "id": "2606.07992",
+      "title": "VATS: Exploiting Implicit Authority in Error-Path Injection via Systematic Mutation"
+    },
+    {
+      "idx": 13,
+      "id": "2606.09672",
+      "title": "Correlation Is Not Enough: Embedding Human Metadata for Individual Causal Discovery"
+    },
+    {
+      "idx": 14,
+      "id": "2606.08761",
+      "title": "APEX4: Efficient Pure W4A4 LLM Inference via Intra-SM Compute Rebalancing"
+    },
+    {
+      "idx": 15,
+      "id": "2606.07565",
+      "title": "STARIXNet: Multivariate and Multi-attribute Deep Learning Approach to Real-Time Resource Allocation in Cloud Platforms"
+    },
+    {
+      "idx": 16,
+      "id": "2606.08446",
+      "title": "Sparrow: Sparse Rollout for Stable and Efficient Long-context RL of Large Language Models"
+    },
+    {
+      "idx": 17,
+      "id": "2606.09643",
+      "title": "FMplex: Model Virtualization for Serving Extensible Foundation Models"
+    },
+    {
+      "idx": 18,
+      "id": "2606.08348",
+      "title": "Bayesian-Agent: Posterior-Guided Skill Evolution for LLM Agent Harnesses"
+    },
+    {
+      "idx": 19,
+      "id": "2606.08153",
+      "title": "LogNEO: A GPT-Neo Reinforcement Learning Framework for Accurate Real-Time Log Anomaly Detection"
+    },
+    {
+      "idx": 20,
+      "id": "2606.09318",
+      "title": "Engineering Scalable Distributed List Ranking"
+    },
+    {
+      "idx": 21,
+      "id": "2606.09421",
+      "title": "What Should a Skill Remember? Quality-Cost Trade-offs in Cost-Aware Skill Rewriting for Language Model Agents"
+    },
+    {
+      "idx": 22,
+      "id": "2606.08710",
+      "title": "Structuring agentic AI for HPC code modernization"
+    },
+    {
+      "idx": 23,
+      "id": "2606.09730",
+      "title": "SearchSwarm: Towards Delegation Intelligence in Agentic LLMs for Long-Horizon Deep Research"
+    },
+    {
+      "idx": 24,
+      "id": "2606.09071",
+      "title": "REFLECT: Intervention-Supported Error Attribution for Silent Failures in LLM Agent Traces"
+    },
+    {
+      "idx": 25,
+      "id": "2606.08565",
+      "title": "EinSort: Sorting is All We Need for Tensorizing LLM"
+    },
+    {
+      "idx": 26,
+      "id": "2606.09682",
+      "title": "AutoMegaKernel: A Statically-Checked Agent Harness for Self-Retargeting Megakernel Synthesis"
+    },
+    {
+      "idx": 27,
+      "id": "2606.07683",
+      "title": "Review the Code, Not the Story: A Vision and Protocol for Code-First Peer Review"
+    },
+    {
+      "idx": 28,
+      "id": "2606.09080",
+      "title": "Beyond FLOPs: Benchmarking Real Inference Acceleration of LLM Pruning under a GEMM-Centric Taxonomy"
+    },
+    {
+      "idx": 29,
+      "id": "2606.07808",
+      "title": "Where Instruction Hierarchy Breaks: Diagnosing and Repairing Failures in Reasoning Language Models"
+    },
+    {
+      "idx": 30,
+      "id": "2606.07571",
+      "title": "Enabling KV Caching of Shared Prefix for Diffusion Language Models"
+    }
+  ]
+}

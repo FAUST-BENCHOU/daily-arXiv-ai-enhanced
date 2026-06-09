@@ -1,0 +1,252 @@
+# 每日硬凑师兄要求的创新点 2026-06-09
+
+## 今日三个主题（结构化）
+1. **大语言模型推理效率与压缩** — 围绕LLM推理加速，从动态深度路由、纯W4A4量化、联合剪枝与混合精度量化、自适应张量化等角度探索模型压缩与推理效率优化方法。
+2. **LLM Agent服务与资源调度** — 聚焦多轮Agent服务的仿真评估、技能重写与成本权衡、KV缓存管理、以及面向动态负载的在线资源调优与调度策略。
+3. **AI系统可靠性与自动化** — 涵盖日志异常检测、BFT协议自适应调优、代码现代化Agent、代码优先审稿协议等，关注AI系统在部署与运维中的可靠性、自动化与可验证性。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|:---:|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09613) | AGENTSERVESIM: A Hardware-aware Simulator for Multi-Turn LLM Agent Serving | 2606.09613 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08491) | What Makes a Desired Graph for Relational Deep Learning? | 2606.08491 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08976) | RTL-BenchLS: A Large-Scale Benchmark for RTL Reasoning and Generation with Large Language Models | 2606.08976 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09514) | BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference | 2606.09514 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09377) | Scaling Neural Network Verification with Tensor Parallelism and Fully Sharded Data Parallelism | 2606.09377 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09120) | AutoPilot: Learning to Steer High Speed Robust BFT | 2606.09120 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07587) | The Routing Plateau: Understanding and Breaking the Accuracy Limits of LLM Routers | 2606.07587 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07520) | TinyJudge: Unverifiable Constraint Alignment via Lightweight Specialist Ensembles | 2606.07520 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09131) | Late-Layer Fusion is Enough: Dual-Path Vision Token Routing for Multimodal Large Language Models under Visual Saturation | 2606.09131 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07819) | Joint Structural Pruning and Mixed-Precision Quantization for LLM Compression | 2606.07819 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08950) | When More Cores Hurts: The Vector Database Scaling Paradox in HPC | 2606.08950 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07992) | VATS: Exploiting Implicit Authority in Error-Path Injection via Systematic Mutation | 2606.07992 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09672) | Correlation Is Not Enough: Embedding Human Metadata for Individual Causal Discovery | 2606.09672 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08761) | APEX4: Efficient Pure W4A4 LLM Inference via Intra-SM Compute Rebalancing | 2606.08761 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07565) | STARIXNet: Multivariate and Multi-attribute Deep Learning Approach to Real-Time Resource Allocation in Cloud Platforms | 2606.07565 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08446) | Sparrow: Sparse Rollout for Stable and Efficient Long-context RL of Large Language Models | 2606.08446 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09643) | FMplex: Model Virtualization for Serving Extensible Foundation Models | 2606.09643 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08348) | Bayesian-Agent: Posterior-Guided Skill Evolution for LLM Agent Harnesses | 2606.08348 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08153) | LogNEO: A GPT-Neo Reinforcement Learning Framework for Accurate Real-Time Log Anomaly Detection | 2606.08153 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09318) | Engineering Scalable Distributed List Ranking | 2606.09318 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09421) | What Should a Skill Remember? Quality-Cost Trade-offs in Cost-Aware Skill Rewriting for Language Model Agents | 2606.09421 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08710) | Structuring agentic AI for HPC code modernization | 2606.08710 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09730) | SearchSwarm: Towards Delegation Intelligence in Agentic LLMs for Long-Horizon Deep Research | 2606.09730 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09071) | REFLECT: Intervention-Supported Error Attribution for Silent Failures in LLM Agent Traces | 2606.09071 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08565) | EinSort: Sorting is All We Need for Tensorizing LLM | 2606.08565 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09682) | AutoMegaKernel: A Statically-Checked Agent Harness for Self-Retargeting Megakernel Synthesis | 2606.09682 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07683) | Review the Code, Not the Story: A Vision and Protocol for Code-First Peer Review | 2606.07683 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09080) | Beyond FLOPs: Benchmarking Real Inference Acceleration of LLM Pruning under a GEMM-Centric Taxonomy | 2606.09080 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07808) | Where Instruction Hierarchy Breaks: Diagnosing and Repairing Failures in Reasoning Language Models | 2606.07808 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07571) | Enabling KV Caching of Shared Prefix for Diffusion Language Models | 2606.07571 |
+
+---
+
+## 论文方向一：大语言模型推理效率与压缩
+
+**拟定论文题目：** 面向硬件感知与动态预算的LLM推理深度路由与量化协同优化方法
+
+**论文核心问题：** 如何结合动态深度路由与纯低比特量化，在满足用户指定计算预算的前提下，实现LLM推理的端到端加速，并解决不同硬件架构下量化效率差异带来的部署难题。
+
+### 创新点一：预算驱动的动态深度路由与解码时自适应机制
+
+大多数现有方法通过静态深度剪枝或固定路由路径来减少LLM推理中的Transformer层数，但无法在用户指定的计算预算下提供灵活的控制，且解码过程中上下文增长时路由路径无法自适应调整 [4, 28]。少数现有方法引入了动态路由或自适应推理机制，但通常需要额外的训练开销，或在解码阶段缺乏对KV缓存的有效利用，导致路由决策与上下文演化脱节 [4, 9]。为此，本文提出一种预算驱动的动态深度路由框架，通过轻量级决策模块根据输入特征和当前预算动态选择Top-k层执行，并在解码阶段复用首层KV缓存作为全局上下文源，结合最新token表示进行路由决策，以实现对计算预算的精确满足和解码时的高效自适应 [4, 14]。
+
+- **创新类型：** 方法设计创新 + 系统机制创新
+- **创新性判断：** 该创新点将动态深度路由与解码时自适应机制相结合，并引入预算预测器以支持无显式预算场景，区别于现有静态或半动态方法，具有明确的创新性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09514) | BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference | 提出预算驱动的动态深度路由框架，使用轻量级决策模块选择Top-k层，并复用首层KV缓存支持解码时自适应。 | 支撑大多数现有方法（静态路由）的局限，以及本文方法的直接基础。 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09080) | Beyond FLOPs: Benchmarking Real Inference Acceleration of LLM Pruning under a GEMM-Centric Taxonomy | 通过GEMM中心分类法系统评估不同剪枝方法的实际加速效果，指出静态深度剪枝在Pareto前沿上的优势。 | 支撑大多数现有方法（静态剪枝）的现状。 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09131) | Late-Layer Fusion is Enough: Dual-Path Vision Token Routing for Multimodal Large Language Models under Visual Saturation | 提出双路径视觉token路由方法，通过分析层间注意力变化实现模态非对称计算。 | 支撑少数现有方法（动态路由）的进展。 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08761) | APEX4: Efficient Pure W4A4 LLM Inference via Intra-SM Compute Rebalancing | 提出纯W4A4推理方法，通过SM内计算重平衡解决反量化瓶颈，并指出硬件架构对量化效率的影响。 | 支撑本文差异（硬件感知与量化协同）。 |
+
+### 创新点二：硬件感知的纯W4A4量化与反量化瓶颈消除方法
+
+大多数现有方法在LLM量化中采用混合精度策略或W8A16等较低压缩比方案，以避免纯W4A4量化带来的严重精度损失和反量化开销 [10, 14]。少数现有方法尝试实现纯W4A4推理，但受限于CUDA Core上的组反量化瓶颈，在特定硬件（如A100）上实际速度反而下降，且缺乏对硬件特性的自适应调整 [14, 25]。为此，本文提出一种硬件感知的纯W4A4量化推理方法，通过分析Tensor Core与CUDA Core的吞吐比（ρ），动态调整量化粒度以平衡计算负载，并设计ρ感知的粒度自适应内核，从而在不同GPU架构上实现稳定的端到端加速 [14, 10]。
+
+- **创新类型：** 方法设计创新 + 硬件-算法协同设计
+- **创新性判断：** 该创新点将硬件特性（ρ值）直接纳入量化粒度决策，解决了纯W4A4推理的平台依赖性问题，与现有仅关注算法精度的方法有本质区别。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08761) | APEX4: Efficient Pure W4A4 LLM Inference via Intra-SM Compute Rebalancing | 首次系统研究SM内计算平衡对W4A4推理的影响，提出ρ感知的粒度自适应方法。 | 支撑大多数现有方法（混合精度）的局限，以及本文方法的核心基础。 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07819) | Joint Structural Pruning and Mixed-Precision Quantization for LLM Compression | 提出联合结构剪枝与混合精度量化的端到端框架，但采用逐层优化策略。 | 支撑大多数现有方法（混合精度）的现状。 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08565) | EinSort: Sorting is All We Need for Tensorizing LLM | 提出自适应张量化方法，通过索引排序发现低秩结构用于压缩。 | 支撑少数现有方法（低比特量化/张量化）的进展。 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09080) | Beyond FLOPs: Benchmarking Real Inference Acceleration of LLM Pruning under a GEMM-Centric Taxonomy | 指出不同剪枝方法在实际硬件上的加速效果差异巨大，强调硬件感知的重要性。 | 支撑本文差异（硬件感知的必要性）。 |
+
+**该论文两个创新点之间的关系：**
+创新点一解决“如何在动态预算下自适应选择推理路径”，创新点二解决“如何在选定路径上实现硬件最优的低比特计算”。二者属于同一论文主题（LLM推理效率优化），但分别对应计算图层面的路由优化和算子层面的量化加速，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** 静态深度剪枝、混合精度量化（如W8A16）、现有动态路由方法（如Early Exit）、现有纯W4A4方法（如Atom-g128）。
+- **实验数据/场景：** Llama系列模型（如Llama-2-7B/13B/70B）、Qwen模型；在多种GPU（RTX 3090, A100, H100）上评估。
+- **评价指标：** 端到端延迟、吞吐量、困惑度（PPL）、零样本准确率、预算满足率。
+- **消融实验：** 预算预测器的影响、解码时自适应机制的效果、不同ρ值下的粒度选择策略。
+
+---
+
+## 论文方向二：LLM Agent服务与资源调度
+
+**拟定论文题目：** 面向多轮Agent服务的仿真评估与成本感知技能优化方法
+
+**论文核心问题：** 如何通过硬件感知仿真准确评估多轮Agent服务的调度策略，并在此基础上优化Agent技能（Skill）的表示与重写，以在保证任务质量的前提下降低服务成本。
+
+### 创新点三：面向多轮Agent程序执行的硬件感知仿真框架
+
+大多数现有LLM服务仿真器针对无状态请求级工作负载设计，忽略了多轮Agent服务的核心动态特性：程序级执行、跨轮缓存局部性以及工具调用间隙期间的KV缓存驻留 [1, 17]。少数现有方法开始关注Agent服务的调度与资源管理，但通常依赖真实系统进行策略评估，成本高昂且难以在不同配置间快速迭代 [1, 23]。为此，本文提出一种硬件感知的多轮Agent服务仿真器，通过可组合模块（程序编排器、缓存模拟器、调度策略引擎）在程序粒度上评估服务策略，支持对轮次依赖、工具间隙和可复用KV状态的精确建模，从而为Agent服务调度提供低成本、高保真的评估平台 [1, 17]。
+
+- **创新类型：** 系统框架创新 + 问题建模创新
+- **创新性判断：** 该创新点将仿真粒度从请求级提升到程序级，并首次系统建模Agent服务的独特动态特性，填补了现有仿真工具的空白。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09613) | AGENTSERVESIM: A Hardware-aware Simulator for Multi-Turn LLM Agent Serving | 提出硬件感知的多轮Agent服务仿真器，支持程序级策略评估。 | 支撑大多数现有方法（无状态仿真）的局限，以及本文方法的核心基础。 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09643) | FMplex: Model Virtualization for Serving Extensible Foundation Models | 提出模型虚拟化方法，通过共享物理骨干网络服务多个定制化任务。 | 支撑少数现有方法（Agent服务调度）的进展。 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09730) | SearchSwarm: Towards Delegation Intelligence in Agentic LLMs for Long-Horizon Deep Research | 探索长时域Agent任务中的委派智能，通过主代理分解任务并分发给子代理。 | 支撑少数现有方法（Agent任务分解）的进展。 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09421) | What Should a Skill Remember? Quality-Cost Trade-offs in Cost-Aware Skill Rewriting for Language Model Agents | 研究技能重写中的质量-成本权衡，指出技能压缩可能增加推理成本。 | 支撑本文差异（仿真与技能优化的结合）。 |
+
+### 创新点四：成本感知的技能重写与质量-成本权衡优化方法
+
+大多数现有方法将Agent技能重写视为提示压缩问题，追求更短的技能表示以降低token消耗，但忽略了过度压缩可能移除关键操作锚点，导致Agent在推理过程中需要更多探索和调试，反而增加总成本 [18, 21]。少数现有方法开始关注技能的质量-成本权衡，但通常采用启发式策略或单一优化目标，缺乏对技能结构（如API调用、工作流规则）与任务类型之间匹配关系的系统建模 [18, 21]。为此，本文提出一种成本感知的技能重写框架，通过分析技能的结构特征（API/代码锚点、工作流守卫、规则/公式锚点），采用信息保留策略进行重写，并学习一个策略模型在不同任务族下选择最优重写模板，以在保证任务成功率的同时最小化总服务成本 [21, 18]。
+
+- **创新类型：** 方法设计创新 + 优化求解创新
+- **创新性判断：** 该创新点将技能重写从单纯的压缩问题重新定义为成本-质量多目标优化问题，并引入结构感知的策略学习，区别于现有启发式方法。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09421) | What Should a Skill Remember? Quality-Cost Trade-offs in Cost-Aware Skill Rewriting for Language Model Agents | 系统研究技能重写中的质量-成本权衡，发现不同重写策略对不同任务族有差异化影响。 | 支撑大多数现有方法（压缩导向）的局限，以及本文方法的核心基础。 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08348) | Bayesian-Agent: Posterior-Guided Skill Evolution for LLM Agent Harnesses | 提出贝叶斯框架，将技能视为假设，通过后验更新指导技能的修补、拆分、压缩等操作。 | 支撑少数现有方法（技能演化）的进展。 |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09613) | AGENTSERVESIM: A Hardware-aware Simulator for Multi-Turn LLM Agent Serving | 提供Agent服务仿真环境，可用于评估技能重写策略的实际效果。 | 支撑本文差异（仿真辅助评估）。 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09730) | SearchSwarm: Towards Delegation Intelligence in Agentic LLMs for Long-Horizon Deep Research | 探讨长时域任务中的委派与技能管理，强调技能对任务分解的重要性。 | 支撑本文差异（技能与任务匹配）。 |
+
+**该论文两个创新点之间的关系：**
+创新点三解决“如何低成本、高保真地评估Agent服务策略”，创新点四解决“如何在评估指导下优化Agent技能以降低成本”。二者属于同一论文主题（LLM Agent服务效率），但分别对应评估基础设施和优化算法，形成“评估-优化”闭环。
+
+**建议实验设计：**
+- **对比方法：** 现有无状态仿真器、真实系统评估、启发式技能压缩方法、固定模板重写。
+- **实验数据/场景：** SkillsBench、SOP-Bench、Lifelong AgentBench；多种Agent任务（工具使用、多跳推理、代码生成）。
+- **评价指标：** 仿真保真度（与真实系统延迟/吞吐的误差）、任务成功率、总token消耗、端到端成本。
+- **消融实验：** 不同重写策略（API锚定、工作流守卫、规则锚定）的独立效果、策略模型的学习曲线。
+
+---
+
+## 论文方向三：AI系统可靠性与自动化
+
+**拟定论文题目：** 面向LLM Agent的静默故障归因与代码优先审阅协议方法
+
+**论文核心问题：** 如何通过干预支持的错误归因方法精确定位LLM Agent执行轨迹中的静默故障，并设计一种代码优先的同行审阅协议，将审阅焦点从叙述性论文转向可执行的研究工件，以提升AI系统的可靠性与可验证性。
+
+### 创新点五：干预支持的静默故障归因与对比证据精炼方法
+
+大多数现有方法通过分类器或LLM评判器预测可疑步骤，或通过重试恢复正确答案，但无法将干预结果反馈回归因过程本身，导致对静默故障（执行完成但结果错误）的定位能力不足 [24, 29]。少数现有方法引入了错误归因或诊断框架，但通常仅输出单一归因结果，缺乏利用对比证据（如修复前后的行为差异）来精炼归因的能力 [24, 12]。为此，本文提出一种干预支持的错误归因方法，通过诊断候选错误步骤、使用特定补丁进行受控重放，并将验证结果翻转作为对比证据来精炼最终归因，从而在无需真实答案的情况下提供可操作的故障定位 [24, 29]。
+
+- **创新类型：** 方法设计创新 + 反馈机制创新
+- **创新性判断：** 该创新点将“诊断-干预-验证-精炼”闭环引入静默故障归因，利用对比证据提升归因准确性，区别于现有单向归因方法。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09071) | REFLECT: Intervention-Supported Error Attribution for Silent Failures in LLM Agent Traces | 提出干预支持的错误归因方法，通过诊断、补丁重放和对比证据精炼归因。 | 支撑大多数现有方法（无反馈归因）的局限，以及本文方法的核心基础。 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07808) | Where Instruction Hierarchy Breaks: Diagnosing and Repairing Failures in Reasoning Language Models | 引入白盒诊断框架，将指令层次故障分解为指令识别、冲突解决和响应实现。 | 支撑少数现有方法（故障诊断）的进展。 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07992) | VATS: Exploiting Implicit Authority in Error-Path Injection via Systematic Mutation | 研究错误路径注入攻击，揭示错误处理循环中的隐式权威。 | 支撑少数现有方法（错误路径分析）的进展。 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07683) | Review the Code, Not the Story: A Vision and Protocol for Code-First Peer Review | 提出代码优先审阅协议，强调可执行工件在验证中的核心地位。 | 支撑本文差异（归因与可验证性的结合）。 |
+
+### 创新点六：代码优先的同行审阅协议与可执行证据契约
+
+大多数现有同行审阅流程以作者手稿为中心，审阅者难以在有限时间内检查实现细节、复现结果或检测无依据的声明 [27, 22]。少数现有方法尝试引入AI辅助审阅或自动化验证工具，但通常作为附加模块而非核心协议，未能从根本上改变审阅焦点 [27, 26]。为此，本文提出一种代码优先的同行审阅协议，要求作者提交可执行的研究工件和最小声明清单，由场所控制的AI系统构建环境、执行实验、审计代码路径、将声明映射到证据，并生成标准化的审阅包供人类审阅者使用，从而将审阅目标从精炼的叙述转向可执行的证据 [27, 26, 22]。
+
+- **创新类型：** 系统框架创新 + 协议设计创新
+- **创新性判断：** 该创新点重新定义了同行审阅的工作流和核心契约，将AI从辅助工具提升为审阅基础设施，具有范式转变意义。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07683) | Review the Code, Not the Story: A Vision and Protocol for Code-First Peer Review | 提出代码优先审阅协议，定义声明-证据契约和AI生成的审阅包。 | 支撑大多数现有方法（手稿中心）的局限，以及本文方法的核心基础。 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08710) | Structuring agentic AI for HPC code modernization | 展示AI辅助代码现代化的成功经验，强调结构化方法和持续可构建性。 | 支撑少数现有方法（AI辅助代码分析）的进展。 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09682) | AutoMegaKernel: A Statically-Checked Agent Harness for Self-Retargeting Megakernel Synthesis | 提出静态检查的Agent框架，可自动验证调度计划的安全性。 | 支撑少数现有方法（自动化验证）的进展。 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09071) | REFLECT: Intervention-Supported Error Attribution for Silent Failures in LLM Agent Traces | 提供故障归因方法，可作为审阅包中证据映射的技术基础。 | 支撑本文差异（归因与审阅的结合）。 |
+
+**该论文两个创新点之间的关系：**
+创新点五解决“如何精确定位AI系统中的静默故障”，创新点六解决“如何从协议层面确保AI系统研究的可验证性”。二者属于同一论文主题（AI系统可靠性与自动化），但分别对应故障诊断技术和审阅基础设施，形成“定位问题-验证声明”的互补关系。
+
+**建议实验设计：**
+- **对比方法（创新点五）：** 现有LLM评判器、分类器归因、简单重试策略、TraceCare基线。
+- **对比方法（创新点六）：** 传统手稿审阅流程、现有AI辅助审阅工具、仅代码审阅（无AI基础设施）。
+- **实验数据/场景（创新点五）：** 多跳推理基准、结构化工具使用轨迹、静默故障注入数据集。
+- **实验数据/场景（创新点六）：** 模拟审阅实验，使用真实论文及其代码工件，评估审阅效率、错误检出率、审阅者满意度。
+- **评价指标（创新点五）：** 故障定位准确率、归因精炼提升率、无需真实答案时的定位可用性。
+- **评价指标（创新点六）：** 审阅时间、复现成功率、未支持声明检出率、审阅者工作负载评分。
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|:---:|:---|:---|:---:|:---|:---|:---|:---:|
+| 论文一：LLM推理效率与压缩 | 面向硬件感知与动态预算的LLM推理深度路由与量化协同优化方法 | 结合动态深度路由与纯低比特量化实现端到端加速 | 预算驱动动态路由 + 硬件感知纯W4A4量化 | 动态路由决策模块、ρ感知量化粒度自适应 | Llama/Qwen模型，多种GPU，延迟/吞吐/PPL | 聚焦单模型推理加速，不涉及Agent服务或审阅协议 | 低 |
+| 论文二：LLM Agent服务与资源调度 | 面向多轮Agent服务的仿真评估与成本感知技能优化方法 | 通过仿真评估Agent调度策略并优化技能表示以降低成本 | 多轮Agent程序级仿真 + 成本感知技能重写 | 可组合仿真模块、结构感知策略学习 | SkillsBench，Agent任务，仿真保真度/成本 | 聚焦Agent服务系统与技能管理，不涉及模型压缩或审阅 | 低 |
+| 论文三：AI系统可靠性与自动化 | 面向LLM Agent的静默故障归因与代码优先审阅协议方法 | 精确定位静默故障并设计可执行证据驱动的审阅协议 | 干预支持错误归因 + 代码优先审阅协议 | 诊断-干预-验证闭环、声明-证据契约 | 故障定位基准、模拟审阅实验 | 聚焦系统可靠性与可验证性，不涉及推理加速或服务调度 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一/三/五 | 创新点二/四/六 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|:---:|:---|:---|:---:|:---:|:---:|:---:|
+| 论文一 | 预算驱动动态路由 | 硬件感知纯W4A4量化 | 是 | 是（计算图路由 vs. 算子量化） | 否 | 可保留 |
+| 论文二 | 多轮Agent程序级仿真 | 成本感知技能重写 | 是 | 是（评估基础设施 vs. 优化算法） | 否 | 可保留 |
+| 论文三 | 干预支持错误归因 | 代码优先审阅协议 | 是 | 是（故障诊断技术 vs. 审阅基础设施） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09613) AGENTSERVESIM: A Hardware-aware Simulator for Multi-Turn LLM Agent Serving. arXiv:2606.09613, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09514) BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference. arXiv:2606.09514, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09131) Late-Layer Fusion is Enough: Dual-Path Vision Token Routing for Multimodal Large Language Models under Visual Saturation. arXiv:2606.09131, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07819) Joint Structural Pruning and Mixed-Precision Quantization for LLM Compression. arXiv:2606.07819, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07992) VATS: Exploiting Implicit Authority in Error-Path Injection via Systematic Mutation. arXiv:2606.07992, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08761) APEX4: Efficient Pure W4A4 LLM Inference via Intra-SM Compute Rebalancing. arXiv:2606.08761, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09643) FMplex: Model Virtualization for Serving Extensible Foundation Models. arXiv:2606.09643, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08348) Bayesian-Agent: Posterior-Guided Skill Evolution for LLM Agent Harnesses. arXiv:2606.08348, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09421) What Should a Skill Remember? Quality-Cost Trade-offs in Cost-Aware Skill Rewriting for Language Model Agents. arXiv:2606.09421, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08710) Structuring agentic AI for HPC code modernization. arXiv:2606.08710, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09730) SearchSwarm: Towards Delegation Intelligence in Agentic LLMs for Long-Horizon Deep Research. arXiv:2606.09730, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09071) REFLECT: Intervention-Supported Error Attribution for Silent Failures in LLM Agent Traces. arXiv:2606.09071, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.08565) EinSort: Sorting is All We Need for Tensorizing LLM. arXiv:2606.08565, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09682) AutoMegaKernel: A Statically-Checked Agent Harness for Self-Retargeting Megakernel Synthesis. arXiv:2606.09682, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07683) Review the Code, Not the Story: A Vision and Protocol for Code-First Peer Review. arXiv:2606.07683, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.09080) Beyond FLOPs: Benchmarking Real Inference Acceleration of LLM Pruning under a GEMM-Centric Taxonomy. arXiv:2606.09080, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-09&paperId=2606.07808) Where Instruction Hierarchy Breaks: Diagnosing and Repairing Failures in Reasoning Language Models. arXiv:2606.07808, 2026.
+
+---
+
+## 自检结果
+
+1.  **是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：** 是。
+2.  **是否避免将一篇论文拆成六个创新点：** 是。
+3.  **是否避免生成六篇论文各一个创新点：** 是。
+4.  **每篇论文内部两个创新点是否属于同一论文主题：** 是。
+5.  **每篇论文内部两个创新点是否互补而不重复：** 是。
+6.  **三篇论文之间是否研究问题不同：** 是。
+7.  **三篇论文之间是否核心方法不同：** 是。
+8.  **三篇论文之间是否实验验证重点不同：** 是。
+9.  **每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：** 是。
+10. **每个创新点是否至少引用3篇池内文献：** 是（每个创新点均引用4篇池内文献）。
+11. **是否说明每篇文献的支撑作用：** 是。
+12. **是否避免“首次提出”“填补空白”等绝对化表述：** 是。
+13. **是否建立三篇论文方向去重矩阵：** 是。
+14. **是否建立每篇论文内部创新点去重检查表：** 是。
