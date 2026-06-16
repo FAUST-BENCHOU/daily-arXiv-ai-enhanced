@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-16",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理效率与缓存管理",
+      "blurb": "围绕KV缓存压缩、异构分配策略及编码智能体工作负载下的缓存优化，探索在有限显存预算下提升长上下文推理吞吐与服务质量的方法。"
+    },
+    {
+      "title": "LLM智能体的行为建模、技能复用与运行时治理",
+      "blurb": "从序列级行为分析、技能文档到LoRA适配器的行为压缩、工具菜单过滤与意图感知工具发现，系统提升多步智能体的可靠性、安全性与token效率。"
+    },
+    {
+      "title": "数据受限下的训练策略与模型压缩",
+      "blurb": "针对数据天花板与低资源场景，研究数据增强正则化、数据混合优化、小参数基础模型适配及低比特量化感知训练，以在有限数据或计算预算下维持模型能力。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.15378",
+      "title": "Rethinking the Role of Efficient Attention in Hybrid Architectures"
+    },
+    {
+      "idx": 2,
+      "id": "2606.16000",
+      "title": "GRACE-DS: a Guarded Reward-guided Agent Correction Environment in Data Science"
+    },
+    {
+      "idx": 3,
+      "id": "2606.15682",
+      "title": "ReQAT: Achieving Full-Precision Reasoning Accuracy with 4-bit Floating-Point Quantization-Aware Training"
+    },
+    {
+      "idx": 4,
+      "id": "2606.15579",
+      "title": "Your Agent Has a Genome: Sequence-Level Behavioral Analysis and Runtime Governance of LLM-Powered Autonomous Agents"
+    },
+    {
+      "idx": 5,
+      "id": "2606.15912",
+      "title": "On-Policy Distillation with Curriculum Turn-level Guidance for Multi-turn Agents"
+    },
+    {
+      "idx": 6,
+      "id": "2606.16242",
+      "title": "Rapid Poison: Practical Poisoning Attacks Against the Rapid Response Framework"
+    },
+    {
+      "idx": 7,
+      "id": "2606.16905",
+      "title": "Speaking the Language of Science: Toward a General-Purpose Generative Foundation Model for the Natural Sciences"
+    },
+    {
+      "idx": 8,
+      "id": "2606.15345",
+      "title": "Beyond Monolingual Deep Research: Evaluating Agents and Retrievers with Cross-Lingual BrowseComp-Plus"
+    },
+    {
+      "idx": 9,
+      "id": "2606.15734",
+      "title": "Retrievable Gradients: Continual Post-Training Without Cumulative Weight Drift"
+    },
+    {
+      "idx": 10,
+      "id": "2606.16908",
+      "title": "LESS Is More: Mutual-Stability Sampling for Diffusion Language Models"
+    },
+    {
+      "idx": 11,
+      "id": "2606.15943",
+      "title": "Graphical-Probabilistic Modeling of Generative Flows in LLM-Native Software Systems"
+    },
+    {
+      "idx": 12,
+      "id": "2606.17029",
+      "title": "DEEPRUBRIC: Evidence-Tree Rubric Supervision for Efficient Reinforcement Learning of Deep Research Agents"
+    },
+    {
+      "idx": 13,
+      "id": "2606.15179",
+      "title": "CONCORD: Asynchronous Sparse Aggregation for Device-Cloud RAG under Document Isolation"
+    },
+    {
+      "idx": 14,
+      "id": "2606.16824",
+      "title": "CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents"
+    },
+    {
+      "idx": 15,
+      "id": "2606.15283",
+      "title": "AI-driven Software Development: A Pragmatic Path to Agentic Development Processes"
+    },
+    {
+      "idx": 16,
+      "id": "2606.15508",
+      "title": "ToolMenuBench: Benchmarking Tool-Menu Filtering Strategies for Reliable and Efficient LLM Agents"
+    },
+    {
+      "idx": 17,
+      "id": "2606.16591",
+      "title": "SING: Synthetic Intention Graph for Scalable Active Tool Discovery in LLM Agents"
+    },
+    {
+      "idx": 18,
+      "id": "2606.14710",
+      "title": "Poster: EdgeCitadel -- Hybrid NATS-MQTT Orchestration for Edge Multi-Agent Systems"
+    },
+    {
+      "idx": 19,
+      "id": "2606.16215",
+      "title": "PACT: Privileged Trace Co-Training for Multi-Turn Tool-Use Agents"
+    },
+    {
+      "idx": 20,
+      "id": "2606.15319",
+      "title": "Adaptive Resource Management and Quality Control for Streaming Video Generation"
+    },
+    {
+      "idx": 21,
+      "id": "2606.15157",
+      "title": "PolyKV: Heterogeneous Retention and Allocation for KV Cache Compression"
+    },
+    {
+      "idx": 22,
+      "id": "2606.16383",
+      "title": "Surpassing Scale by Efficiency: A Compact 135M Parameter Foundational LLM Natively Adapted for the Bangla Language"
+    },
+    {
+      "idx": 23,
+      "id": "2606.14971",
+      "title": "FastMix: Fast Data Mixture Optimization via Gradient Descent"
+    },
+    {
+      "idx": 24,
+      "id": "2606.16352",
+      "title": "Communication-Efficient Verifiable Attention for LLM Inference"
+    },
+    {
+      "idx": 25,
+      "id": "2606.15959",
+      "title": "Quantifying the Impact of Lossy Compression on Neural Generative Surrogate Modeling"
+    },
+    {
+      "idx": 26,
+      "id": "2606.15490",
+      "title": "Is RISC-V Ready for Massively Parallel Astrophysical Codes?"
+    },
+    {
+      "idx": 27,
+      "id": "2606.16769",
+      "title": "Skill-to-LoRA: From Using Skills to Learning Behaviors for Token-Efficient LLM Agents"
+    },
+    {
+      "idx": 28,
+      "id": "2606.14832",
+      "title": "PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions"
+    },
+    {
+      "idx": 29,
+      "id": "2606.16523",
+      "title": "SkillWiki: A Living Knowledge Infrastructure for Agent Skills"
+    },
+    {
+      "idx": 30,
+      "id": "2606.16246",
+      "title": "Data Augmentations for Data-Constrained Language Model Pretraining"
+    }
+  ]
+}

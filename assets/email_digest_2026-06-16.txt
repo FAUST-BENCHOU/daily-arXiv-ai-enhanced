@@ -1,0 +1,275 @@
+# 每日硬凑师兄要求的创新点 2026-06-16
+
+## 今日三个主题（结构化）
+1. **大语言模型推理效率与缓存管理** — 围绕KV缓存压缩、异构分配策略及编码智能体工作负载下的缓存优化，探索在有限显存预算下提升长上下文推理吞吐与服务质量的方法。
+2. **LLM智能体的行为建模、技能复用与运行时治理** — 从序列级行为分析、技能文档到LoRA适配器的行为压缩、工具菜单过滤与意图感知工具发现，系统提升多步智能体的可靠性、安全性与token效率。
+3. **数据受限下的训练策略与模型压缩** — 针对数据天花板与低资源场景，研究数据增强正则化、数据混合优化、小参数基础模型适配及低比特量化感知训练，以在有限数据或计算预算下维持模型能力。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15378) | Rethinking the Role of Efficient Attention in Hybrid Architectures | 2606.15378 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16000) | GRACE-DS: a Guarded Reward-guided Agent Correction Environment in Data Science | 2606.16000 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15682) | ReQAT: Achieving Full-Precision Reasoning Accuracy with 4-bit Floating-Point Quantization-Aware Training | 2606.15682 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15579) | Your Agent Has a Genome: Sequence-Level Behavioral Analysis and Runtime Governance of LLM-Powered Autonomous Agents | 2606.15579 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15912) | On-Policy Distillation with Curriculum Turn-level Guidance for Multi-turn Agents | 2606.15912 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16242) | Rapid Poison: Practical Poisoning Attacks Against the Rapid Response Framework | 2606.16242 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16905) | Speaking the Language of Science: Toward a General-Purpose Generative Foundation Model for the Natural Sciences | 2606.16905 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15345) | Beyond Monolingual Deep Research: Evaluating Agents and Retrievers with Cross-Lingual BrowseComp-Plus | 2606.15345 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15734) | Retrievable Gradients: Continual Post-Training Without Cumulative Weight Drift | 2606.15734 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16908) | LESS Is More: Mutual-Stability Sampling for Diffusion Language Models | 2606.16908 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15943) | Graphical-Probabilistic Modeling of Generative Flows in LLM-Native Software Systems | 2606.15943 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.17029) | DEEPRUBRIC: Evidence-Tree Rubric Supervision for Efficient Reinforcement Learning of Deep Research Agents | 2606.17029 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15179) | CONCORD: Asynchronous Sparse Aggregation for Device-Cloud RAG under Document Isolation | 2606.15179 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16824) | CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents | 2606.16824 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15283) | AI-driven Software Development: A Pragmatic Path to Agentic Development Processes | 2606.15283 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15508) | ToolMenuBench: Benchmarking Tool-Menu Filtering Strategies for Reliable and Efficient LLM Agents | 2606.15508 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16591) | SING: Synthetic Intention Graph for Scalable Active Tool Discovery in LLM Agents | 2606.16591 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.14710) | Poster: EdgeCitadel -- Hybrid NATS-MQTT Orchestration for Edge Multi-Agent Systems | 2606.14710 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16215) | PACT: Privileged Trace Co-Training for Multi-Turn Tool-Use Agents | 2606.16215 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15319) | Adaptive Resource Management and Quality Control for Streaming Video Generation | 2606.15319 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15157) | PolyKV: Heterogeneous Retention and Allocation for KV Cache Compression | 2606.15157 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16383) | Surpassing Scale by Efficiency: A Compact 135M Parameter Foundational LLM Natively Adapted for the Bangla Language | 2606.16383 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.14971) | FastMix: Fast Data Mixture Optimization via Gradient Descent | 2606.14971 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16352) | Communication-Efficient Verifiable Attention for LLM Inference | 2606.16352 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15959) | Quantifying the Impact of Lossy Compression on Neural Generative Surrogate Modeling | 2606.15959 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15490) | Is RISC-V Ready for Massively Parallel Astrophysical Codes? | 2606.15490 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16769) | Skill-to-LoRA: From Using Skills to Learning Behaviors for Token-Efficient LLM Agents | 2606.16769 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.14832) | PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions | 2606.14832 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16523) | SkillWiki: A Living Knowledge Infrastructure for Agent Skills | 2606.16523 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16246) | Data Augmentations for Data-Constrained Language Model Pretraining | 2606.16246 |
+
+---
+
+## 论文方向一：大语言模型推理效率与缓存管理
+
+**拟定论文题目：** 面向编码智能体工作负载的异构KV缓存压缩与分配方法
+
+**论文核心问题：** 如何针对编码智能体工作负载中重复大前缀和持续KV缓存压力的特点，设计异构的缓存压缩策略与非均匀的缓存预算分配方法，以在有限显存预算下提升长上下文推理吞吐与服务质量。
+
+### 创新点一：工作负载感知的KV缓存压缩策略选择
+
+大多数现有方法对KV缓存压缩采用统一的策略（如固定窗口驱逐或单一重要性评分），忽略了不同Transformer层在预填充和解码阶段扮演的不同角色，导致压缩效果受限 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15378)[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16824)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15157)。少数现有方法如PolyKV开始探索逐层选择压缩策略，但策略选择仅基于层内信号，未考虑编码智能体工作负载中重复大前缀和工具调用元数据等外部可预测信息 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16824)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15157)。为此，本文提出一种工作负载感知的KV缓存压缩策略选择方法，将编码智能体会话中的工具调用元数据（如函数名、文件路径）作为轻量级预测信号，引导各层选择最适配的压缩策略，以在保持长上下文检索能力的同时最大化缓存压缩率。
+
+- **创新类型：** 方法设计创新 + 约束处理创新
+- **创新性判断：** 文献池中[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15378)分析了高效注意力模块对长上下文能力的影响，[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16824)揭示了编码智能体工作负载的重复前缀特征，[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15157)提出了逐层策略选择但未利用外部元数据。本文创新点在于将工作负载特征显式引入策略选择过程，填补了现有方法在负载感知方面的空白。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15378) | Rethinking the Role of Efficient Attention in Hybrid Architectures | 分析混合架构中高效注意力模块对长上下文能力的影响 | 支撑大多数方法忽视层间差异 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16824) | CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents | 发现编码智能体工作负载的重复大前缀特征，提出前缀感知调度 | 支撑少数方法关注编码工作负载 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15157) | PolyKV: Heterogeneous Retention and Allocation for KV Cache Compression | 提出逐层KV压缩策略选择与非均匀预算分配 | 支撑少数方法探索异构压缩，但未利用外部元数据 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16352) | Communication-Efficient Verifiable Attention for LLM Inference | 提出TEE-GPU注意力验证，涉及KV缓存分区 | 支撑大多数方法关注通用场景 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15179) | CONCORD: Asynchronous Sparse Aggregation for Device-Cloud RAG | 提出异步稀疏聚合，涉及等待债务控制 | 支撑现有不足：缺乏负载感知 |
+
+### 创新点二：基于层间重要性差异的非均匀缓存预算分配
+
+大多数现有方法为所有Transformer层分配均匀的KV缓存预算，忽略了不同层在长距离检索和局部建模中的不同贡献 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15378)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15157)。少数现有方法如PolyKV尝试非均匀预算分配，但预算分配的依据仅基于层内统计信号，未考虑解码阶段不同层对缓存容量的动态需求差异 [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15157)。为此，本文提出一种基于层间重要性差异的非均匀缓存预算分配方法，通过在线监测各层在解码阶段的注意力头激活模式和检索成功率，动态调整各层的缓存预算，在固定总预算下最大化长上下文任务的性能。
+
+- **创新类型：** 性能预测创新 + 优化求解创新
+- **创新性判断：** 文献池中[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15378)揭示了全注意力层承担长距离检索、高效注意力层影响优化轨迹的机制，[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15157)提出了非均匀预算分配但依据静态信号。本文创新点在于将解码阶段的动态层间重要性差异作为预算分配依据，与创新点一的策略选择形成互补。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15378) | Rethinking the Role of Efficient Attention in Hybrid Architectures | 揭示全注意力与高效注意力的不同角色 | 支撑大多数方法忽视层间差异 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15157) | PolyKV: Heterogeneous Retention and Allocation for KV Cache Compression | 提出逐层非均匀预算分配 | 支撑少数方法探索非均匀分配 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16824) | CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents | 编码智能体工作负载分析 | 支撑实验场景选择 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16352) | Communication-Efficient Verifiable Attention for LLM Inference | 涉及KV缓存分区与传输优化 | 支撑现有不足：缺乏动态分配 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16908) | LESS Is More: Mutual-Stability Sampling for Diffusion Language Models | 提出自适应采样，涉及在线停止问题 | 支撑方法思路：在线动态决策 |
+
+**该论文两个创新点之间的关系：**
+
+创新点一解决“如何为各层选择压缩策略”，创新点二解决“如何为各层分配缓存预算”。二者属于同一论文主题（KV缓存管理），但分别对应策略选择和资源分配两个不同技术层面，逻辑上形成递进：先确定策略类型，再分配预算额度，不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 统一策略基线（如固定窗口驱逐）、PolyKV、CacheWise
+- **实验数据/场景：** 使用[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16824)中收集的编码智能体真实轨迹数据集
+- **评价指标：** LongBench性能、KV缓存命中率、平均解码时延、显存占用
+- **消融实验：** 分别消融工作负载感知策略选择模块和非均匀预算分配模块
+
+---
+
+## 论文方向二：LLM智能体的行为建模、技能复用与运行时治理
+
+**拟定论文题目：** 面向多步工具使用智能体的行为序列建模与技能压缩运行时治理方法
+
+**论文核心问题：** 如何通过序列级行为分析识别高风险模式，并将技能文档压缩为轻量级行为表示（如LoRA适配器），以提升多步智能体的可靠性、安全性与token效率。
+
+### 创新点三：基于行为序列基因组分析的高风险模式识别
+
+大多数现有方法对LLM智能体的运行时行为缺乏系统性的序列级分析，通常仅关注单步动作的正确性或最终任务成功率，难以发现跨步骤的高风险行为模式 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15579)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15283)[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15508)。少数现有方法如Base Sequence Analysis（[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15579)）引入了四字母行为编码和n-gram模式挖掘，但其分析局限于ReAct框架下的固定行为类别，且未将识别出的高风险模式直接用于运行时干预策略的设计 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15579)。为此，本文提出一种扩展的行为序列基因组分析方法，将工具调用、环境交互和内部推理步骤统一编码为行为序列，通过马尔可夫转移矩阵和点双列相关分析识别跨框架的高风险模式，并基于识别结果设计轻量级运行时干预规则。
+
+- **创新类型：** 指标体系创新 + 评价方法创新
+- **创新性判断：** 文献池中[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15579)提出了行为序列分析框架，[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15283)讨论了AI驱动软件开发中的治理需求，[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15508)关注工具菜单过滤对可靠性的影响。本文创新点在于将行为序列分析从单一框架扩展到多框架场景，并将分析结果直接映射为可执行的运行时干预规则。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15579) | Your Agent Has a Genome: Sequence-Level Behavioral Analysis and Runtime Governance | 提出Base Sequence Analysis和Governor干预系统 | 支撑少数方法探索行为序列分析 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15283) | AI-driven Software Development: A Pragmatic Path to Agentic Development Processes | 讨论AI驱动开发中的治理需求 | 支撑大多数方法缺乏系统治理 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15508) | ToolMenuBench: Benchmarking Tool-Menu Filtering Strategies | 评估工具菜单过滤对可靠性的影响 | 支撑大多数方法关注单步动作 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16591) | SING: Synthetic Intention Graph for Scalable Active Tool Discovery | 提出意图-工具图用于工具发现 | 支撑现有不足：缺乏跨步骤模式分析 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16215) | PACT: Privileged Trace Co-Training for Multi-Turn Tool-Use Agents | 多轮工具使用智能体的共训练框架 | 支撑实验场景选择 |
+
+### 创新点四：技能文档到LoRA适配器的行为压缩与动态加载
+
+大多数现有方法将智能体技能以SKILL.md等人类可读文档形式存储，每次执行时需将完整文档注入运行时上下文，导致显著的token开销和上下文窗口压力 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16769)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16523)。少数现有方法如Skill-to-LoRA（[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16769)）提出将技能文档压缩为LoRA适配器，但其行为建模仅基于技能引导的演示合成，未考虑技能之间的协作模式和冲突避免 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16769)。为此，本文提出一种增强的技能压缩方法，在将技能文档转换为LoRA适配器的过程中，显式建模技能间的协作图（如工具共享、调用顺序约束），并通过适配器组合时的冲突检测机制确保多技能协同执行时的行为一致性。
+
+- **创新类型：** 特征表示创新 + 泛化迁移创新
+- **创新性判断：** 文献池中[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16769)提出了Skill-to-LoRA的基本范式，[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16523)提出了SkillWiki技能管理基础设施，[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16591)提出了意图-工具图建模。本文创新点在于将技能间协作关系显式编码到LoRA适配器的训练和组合过程中，解决了现有方法在多技能协同场景下的局限性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16769) | Skill-to-LoRA: From Using Skills to Learning Behaviors for Token-Efficient LLM Agents | 提出将技能文档压缩为LoRA适配器 | 支撑少数方法探索技能压缩 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16523) | SkillWiki: A Living Knowledge Infrastructure for Agent Skills | 提出技能全生命周期管理基础设施 | 支撑大多数方法依赖文档注入 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16591) | SING: Synthetic Intention Graph for Scalable Active Tool Discovery | 构建意图-工具协作图 | 支撑方法思路：技能协作建模 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15508) | ToolMenuBench: Benchmarking Tool-Menu Filtering Strategies | 评估工具菜单对可靠性的影响 | 支撑现有不足：缺乏多技能协同 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15912) | On-Policy Distillation with Curriculum Turn-level Guidance for Multi-turn Agents | 多轮智能体的课程蒸馏 | 支撑实验设计：多轮场景评估 |
+
+**该论文两个创新点之间的关系：**
+
+创新点三解决“如何识别高风险行为模式”，创新点四解决“如何将技能压缩为高效行为表示”。二者属于同一论文主题（智能体行为建模与治理），但分别对应行为分析和技能表示两个不同技术层面，逻辑上形成递进：先识别需要治理的模式，再提供高效的技能执行方式，不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 无技能基线、Full Skill Text基线、Skill-to-LoRA、Base Sequence Analysis
+- **实验数据/场景：** 使用[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15579)中的生产ReAct系统轨迹和[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16769)中的SWE-Skills-Bench子集
+- **评价指标：** 任务成功率、每步token消耗、高风险模式出现频率、运行时干预触发率
+- **消融实验：** 分别消融行为序列分析模块和技能协作建模模块
+
+---
+
+## 论文方向三：数据受限下的训练策略与模型压缩
+
+**拟定论文题目：** 面向数据受限预训练的数据增强正则化与低比特量化感知训练方法
+
+**论文核心问题：** 在高质量文本数据增长放缓、计算能力相对充裕的背景下，如何通过数据增强正则化缓解多轮训练中的过拟合，并结合低比特量化感知训练保持推理精度，以在有限数据或计算预算下维持模型能力。
+
+### 创新点五：面向数据受限预训练的正交数据增强正则化框架
+
+大多数现有方法在数据受限场景下仍采用标准自回归预训练，当多轮训练同一固定语料时，模型迅速达到最优后持续退化，过拟合严重 [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16246)[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16383)。少数现有方法如[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16246)开始探索数据增强作为正则化手段，但仅对三种增强类别（词元级噪声、序列排列、目标偏移预测）进行了独立消融，未研究不同增强类别之间的正交组合效应及其与训练轮次的动态交互 [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16246)。为此，本文提出一种正交数据增强正则化框架，将词元级噪声、序列排列和目标偏移预测三类增强进行系统组合，并引入基于训练轮次的增强强度调度策略，在早期轮次使用强增强以探索数据多样性，在后期轮次逐渐减弱以稳定学习，从而在数百轮训练中持续降低验证损失。
+
+- **创新类型：** 问题建模创新 + 方法设计创新
+- **创新性判断：** 文献池中[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16246)系统研究了数据增强对数据受限预训练的影响，[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16383)展示了小参数模型在低资源语言上的高效训练。本文创新点在于提出正交组合与轮次调度策略，超越了[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16246)中独立消融的局限性。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16246) | Data Augmentations for Data-Constrained Language Model Pretraining | 研究三类数据增强对多轮预训练的影响 | 支撑少数方法探索数据增强正则化 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16383) | Surpassing Scale by Efficiency: A Compact 135M Parameter Foundational LLM | 小参数模型在低资源语言上的高效训练 | 支撑大多数方法面临数据天花板 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.14971) | FastMix: Fast Data Mixture Optimization via Gradient Descent | 数据混合优化的双层优化框架 | 支撑现有不足：缺乏增强组合研究 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15959) | Quantifying the Impact of Lossy Compression on Neural Generative Surrogate Modeling | 有损压缩对生成模型质量的影响 | 支撑方法思路：数据质量与模型性能关系 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15682) | ReQAT: Achieving Full-Precision Reasoning Accuracy with 4-bit Quantization | 推理模型的低比特量化感知训练 | 支撑实验场景：量化与训练结合 |
+
+### 创新点六：推理感知的低比特量化训练方法
+
+大多数现有量化感知训练方法在标准预训练或微调场景下有效，但在长链推理模型上，全量化（W4A4KV4）会导致严重的推理退化，尤其是在低熵词元（如数字、运算符）上量化噪声会放大采样误差并级联传播 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15682)。少数现有方法如ReQAT（[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15682)）针对推理模型提出了轨迹对齐QAT和选择性熵最小化，但其方法依赖于对完整推理轨迹的重新访问，计算开销较大，且未考虑数据受限场景下训练数据有限对量化训练的影响 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15682)。为此，本文提出一种推理感知的低比特量化训练方法，在数据受限条件下，通过识别推理轨迹中的关键低熵位置并施加差异化量化精度保护，同时利用数据增强生成多样化的推理轨迹以弥补数据不足，在保持全精度推理精度的同时实现高效的4位量化部署。
+
+- **创新类型：** 方法设计创新 + 约束处理创新
+- **创新性判断：** 文献池中[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15682)提出了推理感知的FP4量化训练框架，[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16246)研究了数据增强对预训练的影响。本文创新点在于将数据增强与量化感知训练结合，解决数据受限场景下量化训练的数据不足问题，与[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15682)形成互补。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15682) | ReQAT: Achieving Full-Precision Reasoning Accuracy with 4-bit Quantization | 推理模型的FP4量化感知训练 | 支撑少数方法探索推理感知量化 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16246) | Data Augmentations for Data-Constrained Language Model Pretraining | 数据增强正则化 | 支撑方法思路：数据增强弥补数据不足 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16383) | Surpassing Scale by Efficiency: A Compact 135M Parameter Foundational LLM | 小参数模型高效训练 | 支撑大多数方法面临部署成本约束 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16352) | Communication-Efficient Verifiable Attention for LLM Inference | TEE-GPU注意力验证 | 支撑现有不足：缺乏数据受限下的量化研究 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15959) | Quantifying the Impact of Lossy Compression on Neural Generative Surrogate Modeling | 有损压缩对模型质量的影响 | 支撑方法思路：压缩误差与模型鲁棒性 |
+
+**该论文两个创新点之间的关系：**
+
+创新点五解决“如何在数据受限下通过数据增强缓解过拟合”，创新点六解决“如何在数据受限下实现低比特量化部署”。二者属于同一论文主题（数据受限下的训练与压缩），但分别对应训练阶段的正则化策略和部署阶段的压缩策略，逻辑上形成递进：先通过数据增强获得更鲁棒的模型，再通过量化感知训练实现高效部署，不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 标准自回归预训练、独立数据增强基线、ReQAT、GPTQ
+- **实验数据/场景：** 使用固定语料进行多轮训练（如50-200轮），在推理基准（如GSM8K、MATH）上评估
+- **评价指标：** 验证损失、推理准确率、量化后精度损失、显存占用
+- **消融实验：** 分别消融正交增强组合模块、轮次调度策略、差异化精度保护模块
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|----------|--------------|----------|------------|----------|----------|----------------------|----------|
+| 论文一：推理效率与缓存管理 | 面向编码智能体工作负载的异构KV缓存压缩与分配方法 | 编码智能体工作负载下的KV缓存管理 | 工作负载感知策略选择 + 非均匀预算分配 | 元数据引导的逐层策略选择与动态预算分配 | 编码智能体轨迹数据集、LongBench | 聚焦推理系统层的缓存优化，与智能体行为建模和训练策略无关 | 低 |
+| 论文二：智能体行为建模与治理 | 面向多步工具使用智能体的行为序列建模与技能压缩运行时治理方法 | 多步智能体的行为分析与技能高效表示 | 行为序列基因组分析 + 技能到LoRA行为压缩 | 行为编码与模式挖掘 + 技能协作感知的LoRA训练 | 生产ReAct轨迹、SWE-Skills-Bench | 聚焦智能体行为分析与技能表示，与系统缓存优化和训练策略无关 | 低 |
+| 论文三：数据受限训练与压缩 | 面向数据受限预训练的数据增强正则化与低比特量化感知训练方法 | 数据受限下的过拟合缓解与量化部署 | 正交数据增强正则化 + 推理感知量化训练 | 增强组合与轮次调度 + 差异化精度保护 | 固定语料多轮训练、推理基准 | 聚焦训练策略与模型压缩，与推理系统优化和智能体行为无关 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一/三/五 | 创新点二/四/六 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|----------|----------------|----------------|----------------------|------------------|--------------|------|
+| 论文一 | 工作负载感知策略选择 | 非均匀预算分配 | 是 | 是（策略选择 vs 资源分配） | 否 | 可保留 |
+| 论文二 | 行为序列基因组分析 | 技能到LoRA行为压缩 | 是 | 是（行为分析 vs 技能表示） | 否 | 可保留 |
+| 论文三 | 正交数据增强正则化 | 推理感知量化训练 | 是 | 是（训练正则化 vs 部署压缩） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15378) Rethinking the Role of Efficient Attention in Hybrid Architectures. arXiv:2606.15378, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16000) GRACE-DS: a Guarded Reward-guided Agent Correction Environment in Data Science. arXiv:2606.16000, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15682) ReQAT: Achieving Full-Precision Reasoning Accuracy with 4-bit Floating-Point Quantization-Aware Training. arXiv:2606.15682, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15579) Your Agent Has a Genome: Sequence-Level Behavioral Analysis and Runtime Governance of LLM-Powered Autonomous Agents. arXiv:2606.15579, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15912) On-Policy Distillation with Curriculum Turn-level Guidance for Multi-turn Agents. arXiv:2606.15912, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16242) Rapid Poison: Practical Poisoning Attacks Against the Rapid Response Framework. arXiv:2606.16242, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16905) Speaking the Language of Science: Toward a General-Purpose Generative Foundation Model for the Natural Sciences. arXiv:2606.16905, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15345) Beyond Monolingual Deep Research: Evaluating Agents and Retrievers with Cross-Lingual BrowseComp-Plus. arXiv:2606.15345, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15734) Retrievable Gradients: Continual Post-Training Without Cumulative Weight Drift. arXiv:2606.15734, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16908) LESS Is More: Mutual-Stability Sampling for Diffusion Language Models. arXiv:2606.16908, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15943) Graphical-Probabilistic Modeling of Generative Flows in LLM-Native Software Systems. arXiv:2606.15943, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.17029) DEEPRUBRIC: Evidence-Tree Rubric Supervision for Efficient Reinforcement Learning of Deep Research Agents. arXiv:2606.17029, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15179) CONCORD: Asynchronous Sparse Aggregation for Device-Cloud RAG under Document Isolation. arXiv:2606.15179, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16824) CacheWise: Understanding Workloads and Optimizing KVCache Management for Efficiently Serving LLM Coding Agents. arXiv:2606.16824, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15283) AI-driven Software Development: A Pragmatic Path to Agentic Development Processes. arXiv:2606.15283, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15508) ToolMenuBench: Benchmarking Tool-Menu Filtering Strategies for Reliable and Efficient LLM Agents. arXiv:2606.15508, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16591) SING: Synthetic Intention Graph for Scalable Active Tool Discovery in LLM Agents. arXiv:2606.16591, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.14710) Poster: EdgeCitadel -- Hybrid NATS-MQTT Orchestration for Edge Multi-Agent Systems. arXiv:2606.14710, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16215) PACT: Privileged Trace Co-Training for Multi-Turn Tool-Use Agents. arXiv:2606.16215, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15319) Adaptive Resource Management and Quality Control for Streaming Video Generation. arXiv:2606.15319, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15157) PolyKV: Heterogeneous Retention and Allocation for KV Cache Compression. arXiv:2606.15157, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16383) Surpassing Scale by Efficiency: A Compact 135M Parameter Foundational LLM Natively Adapted for the Bangla Language. arXiv:2606.16383, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.14971) FastMix: Fast Data Mixture Optimization via Gradient Descent. arXiv:2606.14971, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16352) Communication-Efficient Verifiable Attention for LLM Inference. arXiv:2606.16352, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15959) Quantifying the Impact of Lossy Compression on Neural Generative Surrogate Modeling. arXiv:2606.15959, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.15490) Is RISC-V Ready for Massively Parallel Astrophysical Codes? arXiv:2606.15490, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16769) Skill-to-LoRA: From Using Skills to Learning Behaviors for Token-Efficient LLM Agents. arXiv:2606.16769, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.14832) PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions. arXiv:2606.14832, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16523) SkillWiki: A Living Knowledge Infrastructure for Agent Skills. arXiv:2606.16523, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-16&paperId=2606.16246) Data Augmentations for Data-Constrained Language Model Pretraining. arXiv:2606.16246, 2026.
+
+---
+
+## 自检结果
+
+1. 是否按照"三篇论文，每篇两个创新点，总共六个创新点"组织：**是**
+2. 是否避免将一篇论文拆成六个创新点：**是**
+3. 是否避免生成六篇论文各一个创新点：**是**
+4. 每篇论文内部两个创新点是否属于同一论文主题：**是**
+5. 每篇论文内部两个创新点是否互补而不重复：**是**
+6. 三篇论文之间是否研究问题不同：**是**
+7. 三篇论文之间是否核心方法不同：**是**
+8. 三篇论文之间是否实验验证重点不同：**是**
+9. 每个创新点是否都采用"大多数现有方法……少数现有方法……为此……"结构：**是**
+10. 每个创新点是否至少引用3篇池内文献：**是**（每个创新点引用4-5篇池内文献）
+11. 是否说明每篇文献的支撑作用：**是**
+12. 是否避免"首次提出""填补空白"等绝对化表述：**是**
+13. 是否建立三篇论文方向去重矩阵：**是**
+14. 是否建立每篇论文内部创新点去重检查表：**是**
