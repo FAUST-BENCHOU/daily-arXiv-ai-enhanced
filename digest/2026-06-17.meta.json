@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-17",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM 推理服务中的去中心化缓存与路由机制",
+      "blurb": "针对分布式 LLM 推理中前缀缓存复用效率低、集中协调开销大的问题，探索去中心化缓存感知路由、点对点缓存同步与弱一致性路由决策机制。"
+    },
+    {
+      "title": "LLM 推理的混合注意力与稀疏计算架构优化",
+      "blurb": "面向 LLM 推理中注意力机制的计算瓶颈，研究可学习稀疏注意力分配、混合 FA/SWA 架构、以及算子级剪枝与量化感知训练等硬件友好型优化方法。"
+    },
+    {
+      "title": "LLM 在线推理的配置选择与性能预测",
+      "blurb": "针对在线 LLM 服务中模型选择、资源配置与性能预估的决策难题，研究约束条件下的在线学习选择、无微架构先验的延迟预测以及微调前性能预判方法。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.17059",
+      "title": "Towards Distributed Inference of LLMs on a P2P Network"
+    },
+    {
+      "idx": 2,
+      "id": "2606.17952",
+      "title": "SoftMoE: Soft Differentiable Routing for Mixture-of-Experts in LLMs"
+    },
+    {
+      "idx": 3,
+      "id": "2606.17500",
+      "title": "Reconfigurable Computing Challenge: Transformer for Jet Tagging on Versal AI Engines"
+    },
+    {
+      "idx": 4,
+      "id": "2606.17199",
+      "title": "PowerOPD: Stabilizing On-Policy Distillation with Bounded Power Transformation"
+    },
+    {
+      "idx": 5,
+      "id": "2606.18051",
+      "title": "Compositional Skill Routing for LLM Agents: Decompose, Retrieve, and Compose"
+    },
+    {
+      "idx": 6,
+      "id": "2606.17930",
+      "title": "How Inference Compute Shapes Frontier LLM Evaluation"
+    },
+    {
+      "idx": 7,
+      "id": "2606.17546",
+      "title": "SEAGym: An Evaluation Environment for Self-Evolving LLM Agents"
+    },
+    {
+      "idx": 8,
+      "id": "2606.18056",
+      "title": "ConSA: Controllable Sparsity in Hybrid Attention via Learnable Allocation"
+    },
+    {
+      "idx": 9,
+      "id": "2606.17489",
+      "title": "Online LLM Selection via Constrained Bandits with Time-Varying Demand"
+    },
+    {
+      "idx": 10,
+      "id": "2606.17094",
+      "title": "LogCopilot: Automating Log Aggregation Analysis through Large Language Models"
+    },
+    {
+      "idx": 11,
+      "id": "2606.17454",
+      "title": "Dissecting model behavior through agent trajectories"
+    },
+    {
+      "idx": 12,
+      "id": "2606.18114",
+      "title": "Ternary Mamba: Grouped Quantization-Aware Training of W1.58A16 State Space Models"
+    },
+    {
+      "idx": 13,
+      "id": "2606.17981",
+      "title": "Planning to Hammer: Difficulty-Aware Decomposition for Automating Rocq Proofs"
+    },
+    {
+      "idx": 14,
+      "id": "2606.17518",
+      "title": "SpecGen: Accelerating Agentic Kernel Optimization with Speculative Generation"
+    },
+    {
+      "idx": 15,
+      "id": "2606.17645",
+      "title": "Beyond Domains: Reusing Web Skills via Transferable Interaction Patterns"
+    },
+    {
+      "idx": 16,
+      "id": "2606.17058",
+      "title": "Evaluating LLM Coding Agents on SZ-Family Lossy Compression Across Architectures"
+    },
+    {
+      "idx": 17,
+      "id": "2606.18096",
+      "title": "S4oP: Operator-level Pruning of Structured State Space Models for Resource-Constrained Devices"
+    },
+    {
+      "idx": 18,
+      "id": "2606.17118",
+      "title": "MODE: Modality-Decomposed Expert-Level Mixed-Precision Quantization for MoE Multimodal LLMs"
+    },
+    {
+      "idx": 19,
+      "id": "2606.17368",
+      "title": "Distributed General-Purpose Agent Networks: Architecture, Key Mechanisms, and Prototypes"
+    },
+    {
+      "idx": 20,
+      "id": "2606.18246",
+      "title": "Variable-Width Transformers"
+    },
+    {
+      "idx": 21,
+      "id": "2606.18042",
+      "title": "Latency Prediction for LLM Inference on NPU Systems"
+    },
+    {
+      "idx": 22,
+      "id": "2606.18122",
+      "title": "Embedded Machine Learning for Microcontroller-Class Edge Devices: Data, Feature, Evaluation, and Deployment Pipelines"
+    },
+    {
+      "idx": 23,
+      "id": "2606.18075",
+      "title": "A Unified Framework for Context-Aware and Relation-Aware Graph Retrieval-Augmented Generation"
+    },
+    {
+      "idx": 24,
+      "id": "2606.17999",
+      "title": "VoidPadding: Let [VOID] Handle Padding in Masked Diffusion Language Models so that [EOS] Can Focus on Semantic Termination"
+    },
+    {
+      "idx": 25,
+      "id": "2606.17927",
+      "title": "KANLib -- An Modular, Extensible and Fast Kolmogorov-Arnold Network Implementation"
+    },
+    {
+      "idx": 26,
+      "id": "2606.17660",
+      "title": "TuneAhead: Predicting Fine-tuning Performance Before Full Training Begins"
+    },
+    {
+      "idx": 27,
+      "id": "2606.18237",
+      "title": "ReproRepo: Scaling Reproducibility Audits with GitHub Repository Issues"
+    },
+    {
+      "idx": 28,
+      "id": "2606.17315",
+      "title": "Space-Efficient Lock-Free Linear-Probing Hash Table"
+    },
+    {
+      "idx": 29,
+      "id": "2606.18147",
+      "title": "WEQA: Wearable hEalth Question Answering with Query-Adaptive Agentic Reasoning"
+    },
+    {
+      "idx": 30,
+      "id": "2606.18203",
+      "title": "RubricsTree: Scalable and Evolving Open-Ended Evaluation of Personal Health Agents across Health Memory and Medical Skills"
+    }
+  ]
+}
