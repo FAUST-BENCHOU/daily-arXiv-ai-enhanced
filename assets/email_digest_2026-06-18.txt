@@ -1,0 +1,277 @@
+# 每日硬凑师兄要求的创新点 2026-06-18
+
+## 今日三个主题（结构化）
+1. **大语言模型推理服务与系统优化** — 围绕 LLM 在线推理的延迟瓶颈、并行拓扑动态重配置、异构 GPU 集群成本优化等系统级问题，探索高性能、低成本的推理服务方案。
+2. **模型训练与数据效率的智能优化** — 聚焦 LLM 训练中的数据选择、自蒸馏轨迹构造、MoE 结构化压缩、扩散模型流水线并行等方向，提升训练效率与模型质量。
+3. **智能体系统与多模态交互的工程化** — 涵盖计算机用智能体的多模态技能库、多轮工具使用智能体的在线数据合成、工业级用户画像构建、RAG 层次化检索等应用导向的系统设计。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18967) | EfficientRollout: System-Aware Self-Speculative Decoding for RL Rollouts | 2606.18967 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18381) | SproutRAG: Attention-Guided Tree Search with Progressive Embeddings for Long-Document RAG | 2606.18381 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18448) | VISUALSKILL: Multimodal Skills for Computer-Use Agents | 2606.18448 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18463) | Mixed-Precision Communication-Avoiding SGD for Generalized Linear Models on GPUs | 2606.18463 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18271) | NAVI-Orbital: First In-Orbit Demonstration of a Zero-Shot Vision-Language Model for Autonomous Earth Observation | 2606.18271 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19042) | Where Did the Variability Go? From Vibe Coding to Product Lines by Regeneration | 2606.19042 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18587) | Dual Dimensionality for Local and Global Attention | 2606.18587 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18502) | Towards Scalable Customization and Deployment of Multi-Agent Systems for Enterprise Applications | 2606.18502 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18741) | ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving | 2606.18741 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19172) | User as Engram: Internalizing Per-User Memory as Local Parametric Edits | 2606.19172 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19108) | JourneyFormer: Encoding Airbnb Guest Journey with Sequence Modeling | 2606.19108 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18600) | ShuntServe: Cost-Efficient LLM Serving on Heterogeneous Spot GPU Clusters | 2606.18600 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18844) | Learning from Your Own Mistakes: Constructing Learnable Micro-Reflective Trajectories for Self-Distillation | 2606.18844 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18642) | HI-HCQC: A Tightly-Coupled Hardware Interface with High-Efficiency Communication for Hybrid Classical-Quantum Computing | 2606.18642 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18958) | LiveStack: OS Support for Cluster-Scale Full-Stack Live Simulation | 2606.18958 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18304) | Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression | 2606.18304 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18284) | Breaking the Solver Bottleneck: Training Task Generators at the Learnable Frontier | 2606.18284 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18803) | ProfiLLM: Utility-Aligned Agentic User Profiling for Industrial Ride-Hailing Dispatch | 2606.18803 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18377) | Exploring Statistical Change Point Detection Techniques for Performance Anomaly Detection at Mozilla | 2606.18377 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18677) | Bounded Context Management for Tabular Foundation Models on Stream Learning | 2606.18677 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18900) | Compressed-Resident Genomics: Full-Pipeline Device-Resident GPU LZ77 Decode with Position-Invariant Random Access | 2606.18900 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18810) | Learning from Own Solutions: Self-Conditioned Credit Assignment for Reinforcement Learning with Verifiable Rewards | 2606.18810 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18774) | RouteJudge: An Open Platform for Reproducible and Preference-Aware LLM Routing | 2606.18774 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19262) | Detecting Hidden ML Training With Zero-Overhead Telemetry | 2606.19262 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18588) | Splaxel: Efficient Distributed Training of 3D Gaussian Splatting for Large-scale Scene Reconstruction via Pixel-level Communication | 2606.18588 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18650) | BLADE: Scalable Bi-level Adaptive Data Selection for LLM Training | 2606.18650 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18524) | On the Residual Scaling of Looped Transformers: Stability and Transferability | 2606.18524 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18315) | Ghost Attractor Networks: Basin-Structured Dynamical Decoders for Closed-Loop Sequential Generation | 2606.18315 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19163) | Pulse: Training Acceleration for Large Diffusion Models with Automatic Pipeline Parallelism | 2606.19163 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19047) | RODS: Reward-Driven Online Data Synthesis for Multi-Turn Tool-Use Agents | 2606.19047 |
+
+---
+
+## 三篇论文方向与六个创新点
+
+### 论文方向一：面向动态推理负载的 LLM 服务拓扑与资源配置在线调优
+
+**拟定论文题目：** 面向动态推理负载的大语言模型服务拓扑与资源配置在线闭环调优方法
+
+**论文核心问题：** 如何在 LLM 在线推理服务中，根据实时变化的负载特征，动态调整模型并行拓扑（TP/PP 配置）和 GPU 资源配置，以在保证服务质量的前提下降低推理成本。
+
+#### 创新点一：负载感知的并行拓扑动态重配置方法
+
+大多数现有方法将 LLM 推理系统的模型并行拓扑（TP/PP 配置）视为静态设定，无法在运行时根据负载变化进行调整，导致在负载波动场景下资源利用率低下或服务质量下降 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18967)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18741)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18600)。少数现有方法开始探索运行时重配置，但通常需要重启服务或中断推理过程，导致分钟级的服务中断和 KV 缓存丢失，难以满足在线服务的连续性要求 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18741)。为此，本文提出负载感知的并行拓扑动态重配置方法，通过解耦模型并行拓扑与运行时状态，设计二维 KV 缓存迁移机制以保留可复用缓存状态，实现低停机时间的在线拓扑切换。
+
+- **创新类型：** 方法设计创新 + 系统机制创新
+- **创新性判断：** 现有工作 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18741) 已提出低停机时间重配置框架，但尚未与负载预测和在线反馈机制深度耦合。本文创新点在于将拓扑重配置决策与实时负载特征绑定，并引入缓存状态迁移以消除重配置后的冷启动开销。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18967) | EfficientRollout: System-Aware Self-Speculative Decoding for RL Rollouts | 指出 RL rollout 生成中活跃批次大小动态缩小，导致解码从计算受限变为内存受限 | 支撑大多数方法忽略负载动态性 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18741) | ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving | 提出运行时模型并行重配置框架，但依赖服务重启 | 支撑少数方法已有进展及剩余不足 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18600) | ShuntServe: Cost-Efficient LLM Serving on Heterogeneous Spot GPU Clusters | 针对异构 GPU 集群设计负载均衡方案，但拓扑配置仍为静态 | 支撑大多数方法静态配置的局限 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18958) | LiveStack: OS Support for Cluster-Scale Full-Stack Live Simulation | 提出模拟导向调度和实时内存管理，为运行时状态迁移提供思路 | 支撑本文差异（状态迁移机制） |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18377) | Exploring Statistical Change Point Detection Techniques for Performance Anomaly Detection at Mozilla | 展示性能异常检测中负载变化点识别的重要性 | 支撑负载感知的必要性 |
+
+#### 创新点二：异构 GPU 集群中成本感知的资源配置优化
+
+大多数现有方法在 LLM 推理部署中依赖同构 GPU 集群，或简单地将异构 GPU 视为独立资源池进行负载均衡，未能充分利用不同 GPU 类型的互补可用性模式和成本差异 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18600)。少数现有方法开始探索异构 spot 实例集群，但通常采用基于 roofline 模型的静态性能估计器，难以适应在线推理中请求长度分布和并发度的实时变化 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18600)。为此，本文提出基于动态规划的成本感知资源配置优化方法，将 GPU 类型选择、实例数量分配和请求路由联合建模为约束优化问题，并引入在线性能反馈以持续校正资源配置决策。
+
+- **创新类型：** 问题建模创新 + 优化求解创新
+- **创新性判断：** 现有工作 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18600) 已提出针对异构 spot 集群的静态优化方案，但未考虑负载动态变化对性能估计的影响。本文创新点在于将资源配置优化与在线性能反馈闭环耦合，实现成本与性能的实时权衡。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18600) | ShuntServe: Cost-Efficient LLM Serving on Heterogeneous Spot GPU Clusters | 提出基于 roofline 模型的静态性能估计器和动态规划优化 | 支撑少数方法已有进展及剩余不足 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18741) | ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving | 展示拓扑重配置对资源利用的影响 | 支撑大多数方法忽略动态调整 |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18967) | EfficientRollout: System-Aware Self-Speculative Decoding for RL Rollouts | 揭示解码阶段内存受限特性对资源配置的影响 | 支撑大多数方法忽略阶段差异 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18774) | RouteJudge: An Open Platform for Reproducible and Preference-Aware LLM Routing | 提出路由器级别的偏好感知评估框架 | 支撑在线反馈机制的设计思路 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18377) | Exploring Statistical Change Point Detection Techniques for Performance Anomaly Detection at Mozilla | 展示性能时间序列中变化点检测方法 | 支撑在线性能反馈的技术基础 |
+
+**该论文两个创新点之间的关系：**
+
+创新点一解决“如何动态调整并行拓扑”，创新点二解决“如何在异构集群中优化资源配置”。二者属于同一篇论文主题（LLM 推理服务在线调优），但分别对应系统拓扑层面和资源分配层面，逻辑上形成递进：拓扑重配置决定了模型在 GPU 间的分布方式，资源配置优化决定了 GPU 的类型和数量选择。两者不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 静态 TP/PP 配置基线、ReMP [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18741) 的离线重配置方案、ShuntServe [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18600) 的静态优化方案
+- **实验数据或场景：** 基于真实 LLM 推理负载 trace（如 Azure LLM 推理 trace），构造包含请求到达率波动、请求长度分布变化、GPU spot 实例中断事件的动态场景
+- **评价指标：** 服务中断时间、平均时延、尾部时延（P99）、每小时推理成本、服务质量达标率
+- **消融实验：** 分别移除负载感知模块、在线反馈模块、KV 缓存迁移模块，评估各模块贡献
+
+---
+
+### 论文方向二：面向 LLM 训练的数据效率与模型结构协同优化
+
+**拟定论文题目：** 面向大语言模型训练的数据选择与模型结构协同优化方法
+
+**论文核心问题：** 如何在 LLM 训练过程中，通过数据选择策略与模型结构压缩的协同设计，在降低训练和推理成本的同时保持模型性能。
+
+#### 创新点三：自适应数据选择与模型状态协同优化方法
+
+大多数现有 LLM 数据选择方法采用静态启发式过滤或基于固定参考模型的 excess-loss 方法，无法适应训练过程中代理模型（proxy model）的持续演化，导致早期选择的高质量数据在后期变得冗余 [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18650)。少数现有方法引入基于影响函数（influence function）的双层优化框架，但需要计算不可行的逆 Hessian 矩阵，限制了在大规模场景下的实用性 [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18650)。为此，本文提出自适应数据选择与模型状态协同优化方法，通过将双层优化重新表述为带惩罚的单层目标，利用拉格朗日乘子避免逆 Hessian 计算，并引入动态参考模型更新机制以保持数据选择与模型状态的持续对齐。
+
+- **创新类型：** 问题建模创新 + 方法设计创新
+- **创新性判断：** 现有工作 [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18650) 已提出 Hessian-free 的双层优化框架，但尚未与模型结构压缩（如 MoE 剪枝）协同考虑。本文创新点在于将数据选择与模型状态（如专家重要性）联合优化，实现训练效率与模型质量的协同提升。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18650) | BLADE: Scalable Bi-level Adaptive Data Selection for LLM Training | 提出 Hessian-free 的双层优化数据选择框架 | 支撑少数方法已有进展及剩余不足 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18304) | Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression | 提出基于归因的 MoE 结构化剪枝方法 | 支撑模型结构压缩与数据选择的协同可能 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18844) | Learning from Your Own Mistakes: Constructing Learnable Micro-Reflective Trajectories for Self-Distillation | 展示利用模型自身输出构建训练轨迹的方法 | 支撑自适应数据生成的思路 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18284) | Breaking the Solver Bottleneck: Training Task Generators at the Learnable Frontier | 提出求解器摊销的任务生成器训练框架 | 支撑数据生成与模型状态对齐的思路 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18810) | Learning from Own Solutions: Self-Conditioned Credit Assignment for Reinforcement Learning with Verifiable Rewards | 展示利用模型自身验证轨迹进行信用分配的方法 | 支撑模型状态感知的数据选择 |
+
+#### 创新点四：归因驱动的结构化 MoE 压缩与训练联合优化
+
+大多数现有 MoE 模型压缩方法在专家级别进行操作，通过移除整个专家或基于粗粒度重要性分数进行排序，忽略了专家内部通道级别的细粒度冗余，导致压缩预算分配不当 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18304)。少数现有方法开始探索通道级别的结构化剪枝，但通常将压缩视为训练后的独立阶段，未能利用训练过程中的梯度信息指导压缩决策 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18304)。为此，本文提出归因驱动的结构化 MoE 压缩与训练联合优化方法，将剪枝比率分配建模为通道分数覆盖最大化问题，并通过基于归因的近似方法高效求解，同时将压缩感知的梯度信号反馈到训练数据选择过程中。
+
+- **创新类型：** 方法设计创新 + 约束处理创新
+- **创新性判断：** 现有工作 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18304) 已提出基于归因的 MoE 结构化剪枝框架，但压缩与训练过程相互独立。本文创新点在于将压缩决策与训练数据选择联合优化，使压缩感知的梯度信号指导数据选择，同时使数据选择结果影响压缩策略。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18304) | Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression | 提出基于归因的 MoE 结构化剪枝方法 | 支撑少数方法已有进展及剩余不足 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18650) | BLADE: Scalable Bi-level Adaptive Data Selection for LLM Training | 提出自适应数据选择框架 | 支撑数据选择与压缩协同的可能 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18524) | On the Residual Scaling of Looped Transformers: Stability and Transferability | 分析循环 Transformer 的残差缩放稳定性 | 支撑模型结构优化中的稳定性分析 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18502) | Towards Scalable Customization and Deployment of Multi-Agent Systems for Enterprise Applications | 展示模型定制与推理优化的联合框架 | 支撑联合优化框架的设计思路 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18844) | Learning from Your Own Mistakes: Constructing Learnable Micro-Reflective Trajectories for Self-Distillation | 展示利用模型自身输出进行训练的方法 | 支撑压缩感知训练信号的生成 |
+
+**该论文两个创新点之间的关系：**
+
+创新点三解决“如何选择训练数据以适应模型演化”，创新点四解决“如何在训练过程中压缩模型结构”。二者属于同一篇论文主题（LLM 训练效率优化），但分别对应数据层面和模型结构层面，逻辑上形成协同：数据选择影响模型训练轨迹，模型压缩改变模型状态，两者联合优化可实现比独立优化更好的效果。两者不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 随机数据选择 + 无压缩基线、BLADE [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18650) 独立数据选择、归因剪枝 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18304) 独立压缩、数据选择与压缩顺序执行
+- **实验数据或场景：** 在 DeepSeek 和 Qwen MoE 模型上进行预训练或继续训练实验，使用 C4、Pile 等公开数据集
+- **评价指标：** 训练损失、下游任务准确率、模型推理吞吐量、模型内存占用、训练时间
+- **消融实验：** 分别移除数据选择模块、压缩模块、联合优化模块，评估各模块贡献
+
+---
+
+### 论文方向三：面向多轮工具使用智能体的在线数据合成与训练优化
+
+**拟定论文题目：** 面向多轮工具使用智能体的在线数据合成与训练优化方法
+
+**论文核心问题：** 如何在多轮工具使用智能体的强化学习训练中，解决静态数据集信息样本快速耗尽的问题，实现持续的数据合成与高效的训练信号分配。
+
+#### 创新点五：奖励方差驱动的在线数据合成方法
+
+大多数现有方法依赖静态数据集进行多轮工具使用智能体的强化学习训练，随着训练进行，模型能力边界持续移动，静态数据集中信息样本（即模型成功与失败概率相当的样本）快速耗尽，导致梯度信号衰减 [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19047)。少数现有方法引入在线数据合成，但通常需要额外的推理开销或人工标注来识别模型的能力边界，难以在训练过程中低成本地持续生成有效样本 [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19047)。为此，本文提出奖励方差驱动的在线数据合成方法，利用 GRPO 训练中已计算的 rollout 奖励方差作为零成本的边界检测器，自动识别模型能力边界附近的样本，并通过技能对齐的重采样策略生成结构复杂度匹配的新样本。
+
+- **创新类型：** 特征表示创新 + 方法设计创新
+- **创新性判断：** 现有工作 [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19047) 已提出奖励方差驱动的在线数据合成框架，但尚未与细粒度信用分配机制结合。本文创新点在于将数据合成与训练信号分配联合优化，使合成数据不仅匹配能力边界，还能为关键推理步骤提供更强的梯度信号。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19047) | RODS: Reward-Driven Online Data Synthesis for Multi-Turn Tool-Use Agents | 提出奖励方差驱动的在线数据合成方法 | 支撑少数方法已有进展及剩余不足 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18810) | Learning from Own Solutions: Self-Conditioned Credit Assignment for Reinforcement Learning with Verifiable Rewards | 展示利用模型自身验证轨迹进行信用分配的方法 | 支撑训练信号优化的思路 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18844) | Learning from Your Own Mistakes: Constructing Learnable Micro-Reflective Trajectories for Self-Distillation | 展示利用模型自身错误构建训练轨迹的方法 | 支撑数据合成与训练信号联合优化 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18284) | Breaking the Solver Bottleneck: Training Task Generators at the Learnable Frontier | 提出求解器摊销的任务生成器训练框架 | 支撑能力边界检测的思路 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18502) | Towards Scalable Customization and Deployment of Multi-Agent Systems for Enterprise Applications | 展示多智能体系统的定制化与部署框架 | 支撑工具使用智能体的应用场景 |
+
+#### 创新点六：自条件化信用分配与轨迹级训练信号优化
+
+大多数现有 RLVR 方法（如 GRPO）对所有 token 分配均匀信用，浪费梯度在常规 token 上，而对关键推理步骤的信用不足，导致训练效率低下 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18810)。少数现有方法探索 token 级信用分配，但需要外部过程奖励模型、真实答案或教师模型等额外资源，限制了在纯 RLVR 设置中的适用性 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18810)。为此，本文提出自条件化信用分配方法，通过将模型条件化在其自身验证轨迹上，利用条件化分布与原始分布之间的可测量 per-token KL 散度作为信用信号，无需外部资源即可实现细粒度信用分配，并与在线数据合成方法协同，为合成样本中的关键步骤提供更强的梯度信号。
+
+- **创新类型：** 方法设计创新 + 约束处理创新
+- **创新性判断：** 现有工作 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18810) 已提出自条件化信用分配的理论框架，但尚未与在线数据合成方法结合。本文创新点在于将信用分配与数据合成联合设计，使合成数据的目标分布与信用分配机制对齐，实现训练信号的全链路优化。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18810) | Learning from Own Solutions: Self-Conditioned Credit Assignment for Reinforcement Learning with Verifiable Rewards | 提出自条件化信用分配方法 | 支撑少数方法已有进展及剩余不足 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19047) | RODS: Reward-Driven Online Data Synthesis for Multi-Turn Tool-Use Agents | 提出奖励方差驱动的在线数据合成方法 | 支撑数据合成与信用分配协同 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18844) | Learning from Your Own Mistakes: Constructing Learnable Micro-Reflective Trajectories for Self-Distillation | 展示利用模型自身错误构建训练轨迹的方法 | 支撑轨迹级训练信号优化 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18284) | Breaking the Solver Bottleneck: Training Task Generators at the Learnable Frontier | 提出求解器摊销的任务生成器训练框架 | 支撑训练信号与数据生成协同 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18502) | Towards Scalable Customization and Deployment of Multi-Agent Systems for Enterprise Applications | 展示多智能体系统的定制化与部署框架 | 支撑工具使用智能体的应用场景 |
+
+**该论文两个创新点之间的关系：**
+
+创新点五解决“如何持续生成有效训练数据”，创新点六解决“如何为生成数据分配细粒度训练信号”。二者属于同一篇论文主题（多轮工具使用智能体的训练优化），但分别对应数据生成层面和训练信号分配层面，逻辑上形成递进：数据合成决定了训练样本的分布，信用分配决定了样本中哪些 token 获得更强的梯度信号。两者协同可实现比独立优化更好的训练效果。两者不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 静态数据集 + GRPO 基线、RODS [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19047) 独立数据合成、自条件化信用分配 [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18810) 独立应用、数据合成与信用分配顺序执行
+- **实验数据或场景：** 在多轮工具使用基准（如 ToolBench、API-Bank）上进行 RL 训练实验，使用开源 LLM（如 Llama、Qwen）作为基础模型
+- **评价指标：** 任务完成率、平均工具调用步数、训练收敛速度、梯度信号强度（per-token KL 散度分布）
+- **消融实验：** 分别移除在线数据合成模块、信用分配模块、联合优化模块，评估各模块贡献
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|----------|--------------|----------|------------|----------|----------|----------------------|----------|
+| 论文一 | 面向动态推理负载的大语言模型服务拓扑与资源配置在线闭环调优方法 | LLM 推理服务在线调优 | 负载感知拓扑重配置、成本感知资源配置优化 | 运行时重配置、动态规划优化、在线反馈 | LLM 推理负载 trace 实验 | 聚焦推理服务系统层面，与训练无关 | 低 |
+| 论文二 | 面向大语言模型训练的数据选择与模型结构协同优化方法 | LLM 训练效率优化 | 自适应数据选择、归因驱动 MoE 压缩 | 双层优化、结构化剪枝、联合优化 | 预训练/继续训练实验 | 聚焦训练阶段，与推理服务无关 | 低 |
+| 论文三 | 面向多轮工具使用智能体的在线数据合成与训练优化方法 | 工具使用智能体训练优化 | 奖励方差驱动数据合成、自条件化信用分配 | 在线数据合成、token 级信用分配 | 工具使用基准 RL 实验 | 聚焦智能体训练，与基础模型训练和推理服务均不同 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|----------|----------|----------|----------------------|------------------|--------------|------|
+| 论文一 | 负载感知拓扑重配置 | 成本感知资源配置优化 | 是 | 是（系统拓扑 vs 资源分配） | 否 | 可保留 |
+| 论文二 | 自适应数据选择 | 归因驱动 MoE 压缩 | 是 | 是（数据层面 vs 模型结构层面） | 否 | 可保留 |
+| 论文三 | 奖励方差驱动数据合成 | 自条件化信用分配 | 是 | 是（数据生成 vs 信号分配） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18967) EfficientRollout: System-Aware Self-Speculative Decoding for RL Rollouts. arXiv:2606.18967, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18381) SproutRAG: Attention-Guided Tree Search with Progressive Embeddings for Long-Document RAG. arXiv:2606.18381, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18448) VISUALSKILL: Multimodal Skills for Computer-Use Agents. arXiv:2606.18448, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18463) Mixed-Precision Communication-Avoiding SGD for Generalized Linear Models on GPUs. arXiv:2606.18463, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18271) NAVI-Orbital: First In-Orbit Demonstration of a Zero-Shot Vision-Language Model for Autonomous Earth Observation. arXiv:2606.18271, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19042) Where Did the Variability Go? From Vibe Coding to Product Lines by Regeneration. arXiv:2606.19042, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18587) Dual Dimensionality for Local and Global Attention. arXiv:2606.18587, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18502) Towards Scalable Customization and Deployment of Multi-Agent Systems for Enterprise Applications. arXiv:2606.18502, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18741) ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving. arXiv:2606.18741, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19172) User as Engram: Internalizing Per-User Memory as Local Parametric Edits. arXiv:2606.19172, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19108) JourneyFormer: Encoding Airbnb Guest Journey with Sequence Modeling. arXiv:2606.19108, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18600) ShuntServe: Cost-Efficient LLM Serving on Heterogeneous Spot GPU Clusters. arXiv:2606.18600, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18844) Learning from Your Own Mistakes: Constructing Learnable Micro-Reflective Trajectories for Self-Distillation. arXiv:2606.18844, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18642) HI-HCQC: A Tightly-Coupled Hardware Interface with High-Efficiency Communication for Hybrid Classical-Quantum Computing. arXiv:2606.18642, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18958) LiveStack: OS Support for Cluster-Scale Full-Stack Live Simulation. arXiv:2606.18958, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18304) Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression. arXiv:2606.18304, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18284) Breaking the Solver Bottleneck: Training Task Generators at the Learnable Frontier. arXiv:2606.18284, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18803) ProfiLLM: Utility-Aligned Agentic User Profiling for Industrial Ride-Hailing Dispatch. arXiv:2606.18803, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18377) Exploring Statistical Change Point Detection Techniques for Performance Anomaly Detection at Mozilla. arXiv:2606.18377, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18677) Bounded Context Management for Tabular Foundation Models on Stream Learning. arXiv:2606.18677, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18900) Compressed-Resident Genomics: Full-Pipeline Device-Resident GPU LZ77 Decode with Position-Invariant Random Access. arXiv:2606.18900, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18810) Learning from Own Solutions: Self-Conditioned Credit Assignment for Reinforcement Learning with Verifiable Rewards. arXiv:2606.18810, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18774) RouteJudge: An Open Platform for Reproducible and Preference-Aware LLM Routing. arXiv:2606.18774, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19262) Detecting Hidden ML Training With Zero-Overhead Telemetry. arXiv:2606.19262, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18588) Splaxel: Efficient Distributed Training of 3D Gaussian Splatting for Large-scale Scene Reconstruction via Pixel-level Communication. arXiv:2606.18588, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18650) BLADE: Scalable Bi-level Adaptive Data Selection for LLM Training. arXiv:2606.18650, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18524) On the Residual Scaling of Looped Transformers: Stability and Transferability. arXiv:2606.18524, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.18315) Ghost Attractor Networks: Basin-Structured Dynamical Decoders for Closed-Loop Sequential Generation. arXiv:2606.18315, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19163) Pulse: Training Acceleration for Large Diffusion Models with Automatic Pipeline Parallelism. arXiv:2606.19163, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-18&paperId=2606.19047) RODS: Reward-Driven Online Data Synthesis for Multi-Turn Tool-Use Agents. arXiv:2606.19047, 2026.
+
+---
+
+## 自检结果
+
+1. **是否按照「三篇论文，每篇两个创新点，总共六个创新点」组织：** 是
+2. **是否避免将一篇论文拆成六个创新点：** 是
+3. **是否避免生成六篇论文各一个创新点：** 是
+4. **每篇论文内部两个创新点是否属于同一论文主题：** 是
+5. **每篇论文内部两个创新点是否互补而不重复：** 是
+6. **三篇论文之间是否研究问题不同：** 是（推理服务调优 vs 训练效率优化 vs 智能体训练优化）
+7. **三篇论文之间是否核心方法不同：** 是（运行时重配置 vs 数据选择与压缩协同 vs 在线数据合成与信用分配）
+8. **三篇论文之间是否实验验证重点不同：** 是（推理 trace 实验 vs 预训练实验 vs 工具使用 RL 实验）
+9. **每个创新点是否都采用「大多数现有方法……少数现有方法……为此……」结构：** 是
+10. **每个创新点是否至少引用 3 篇池内文献：** 是（每个创新点引用 5 篇池内文献）
+11. **是否说明每篇文献的支撑作用：** 是
+12. **是否避免「首次提出」「填补空白」等绝对化表述：** 是
+13. **是否建立三篇论文方向去重矩阵：** 是
+14. **是否建立每篇论文内部创新点去重检查表：** 是

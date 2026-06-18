@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-18",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理服务与系统优化",
+      "blurb": "围绕 LLM 在线推理的延迟瓶颈、并行拓扑动态重配置、异构 GPU 集群成本优化等系统级问题，探索高性能、低成本的推理服务方案。"
+    },
+    {
+      "title": "模型训练与数据效率的智能优化",
+      "blurb": "聚焦 LLM 训练中的数据选择、自蒸馏轨迹构造、MoE 结构化压缩、扩散模型流水线并行等方向，提升训练效率与模型质量。"
+    },
+    {
+      "title": "智能体系统与多模态交互的工程化",
+      "blurb": "涵盖计算机用智能体的多模态技能库、多轮工具使用智能体的在线数据合成、工业级用户画像构建、RAG 层次化检索等应用导向的系统设计。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.18967",
+      "title": "EfficientRollout: System-Aware Self-Speculative Decoding for RL Rollouts"
+    },
+    {
+      "idx": 2,
+      "id": "2606.18381",
+      "title": "SproutRAG: Attention-Guided Tree Search with Progressive Embeddings for Long-Document RAG"
+    },
+    {
+      "idx": 3,
+      "id": "2606.18448",
+      "title": "VISUALSKILL: Multimodal Skills for Computer-Use Agents"
+    },
+    {
+      "idx": 4,
+      "id": "2606.18463",
+      "title": "Mixed-Precision Communication-Avoiding SGD for Generalized Linear Models on GPUs"
+    },
+    {
+      "idx": 5,
+      "id": "2606.18271",
+      "title": "NAVI-Orbital: First In-Orbit Demonstration of a Zero-Shot Vision-Language Model for Autonomous Earth Observation"
+    },
+    {
+      "idx": 6,
+      "id": "2606.19042",
+      "title": "Where Did the Variability Go? From Vibe Coding to Product Lines by Regeneration"
+    },
+    {
+      "idx": 7,
+      "id": "2606.18587",
+      "title": "Dual Dimensionality for Local and Global Attention"
+    },
+    {
+      "idx": 8,
+      "id": "2606.18502",
+      "title": "Towards Scalable Customization and Deployment of Multi-Agent Systems for Enterprise Applications"
+    },
+    {
+      "idx": 9,
+      "id": "2606.18741",
+      "title": "ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving"
+    },
+    {
+      "idx": 10,
+      "id": "2606.19172",
+      "title": "User as Engram: Internalizing Per-User Memory as Local Parametric Edits"
+    },
+    {
+      "idx": 11,
+      "id": "2606.19108",
+      "title": "JourneyFormer: Encoding Airbnb Guest Journey with Sequence Modeling"
+    },
+    {
+      "idx": 12,
+      "id": "2606.18600",
+      "title": "ShuntServe: Cost-Efficient LLM Serving on Heterogeneous Spot GPU Clusters"
+    },
+    {
+      "idx": 13,
+      "id": "2606.18844",
+      "title": "Learning from Your Own Mistakes: Constructing Learnable Micro-Reflective Trajectories for Self-Distillation"
+    },
+    {
+      "idx": 14,
+      "id": "2606.18642",
+      "title": "HI-HCQC: A Tightly-Coupled Hardware Interface with High-Efficiency Communication for Hybrid Classical-Quantum Computing"
+    },
+    {
+      "idx": 15,
+      "id": "2606.18958",
+      "title": "LiveStack: OS Support for Cluster-Scale Full-Stack Live Simulation"
+    },
+    {
+      "idx": 16,
+      "id": "2606.18304",
+      "title": "Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression"
+    },
+    {
+      "idx": 17,
+      "id": "2606.18284",
+      "title": "Breaking the Solver Bottleneck: Training Task Generators at the Learnable Frontier"
+    },
+    {
+      "idx": 18,
+      "id": "2606.18803",
+      "title": "ProfiLLM: Utility-Aligned Agentic User Profiling for Industrial Ride-Hailing Dispatch"
+    },
+    {
+      "idx": 19,
+      "id": "2606.18377",
+      "title": "Exploring Statistical Change Point Detection Techniques for Performance Anomaly Detection at Mozilla"
+    },
+    {
+      "idx": 20,
+      "id": "2606.18677",
+      "title": "Bounded Context Management for Tabular Foundation Models on Stream Learning"
+    },
+    {
+      "idx": 21,
+      "id": "2606.18900",
+      "title": "Compressed-Resident Genomics: Full-Pipeline Device-Resident GPU LZ77 Decode with Position-Invariant Random Access"
+    },
+    {
+      "idx": 22,
+      "id": "2606.18810",
+      "title": "Learning from Own Solutions: Self-Conditioned Credit Assignment for Reinforcement Learning with Verifiable Rewards"
+    },
+    {
+      "idx": 23,
+      "id": "2606.18774",
+      "title": "RouteJudge: An Open Platform for Reproducible and Preference-Aware LLM Routing"
+    },
+    {
+      "idx": 24,
+      "id": "2606.19262",
+      "title": "Detecting Hidden ML Training With Zero-Overhead Telemetry"
+    },
+    {
+      "idx": 25,
+      "id": "2606.18588",
+      "title": "Splaxel: Efficient Distributed Training of 3D Gaussian Splatting for Large-scale Scene Reconstruction via Pixel-level Communication"
+    },
+    {
+      "idx": 26,
+      "id": "2606.18650",
+      "title": "BLADE: Scalable Bi-level Adaptive Data Selection for LLM Training"
+    },
+    {
+      "idx": 27,
+      "id": "2606.18524",
+      "title": "On the Residual Scaling of Looped Transformers: Stability and Transferability"
+    },
+    {
+      "idx": 28,
+      "id": "2606.18315",
+      "title": "Ghost Attractor Networks: Basin-Structured Dynamical Decoders for Closed-Loop Sequential Generation"
+    },
+    {
+      "idx": 29,
+      "id": "2606.19163",
+      "title": "Pulse: Training Acceleration for Large Diffusion Models with Automatic Pipeline Parallelism"
+    },
+    {
+      "idx": 30,
+      "id": "2606.19047",
+      "title": "RODS: Reward-Driven Online Data Synthesis for Multi-Turn Tool-Use Agents"
+    }
+  ]
+}
