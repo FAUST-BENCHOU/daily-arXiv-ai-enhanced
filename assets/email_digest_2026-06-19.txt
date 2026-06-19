@@ -1,0 +1,289 @@
+# 每日硬凑师兄要求的创新点 2026-06-19
+
+## 今日三个主题（结构化）
+1. **LLM代理系统的运行时治理与故障恢复** — 围绕多代理、跨设备、事件驱动的LLM代理系统，研究运行时状态追踪、层次化故障恢复与去中心化协调机制，解决代理系统在复杂生产环境中的可观测性、可信性与弹性问题。
+2. **大模型推理效率与资源配置优化** — 聚焦LLM推理服务的成本、延迟与内存瓶颈，探索缓存感知的请求调度、低秩压缩与在线路由策略，在满足服务质量约束的前提下实现推理效率的显著提升。
+3. **面向代理的软件工程与代码智能** — 研究AI编码代理在仓库级软件开发中的协调、评估与安全治理问题，包括多代理冲突检测、仓库引导文件调优以及代理故障的分类与缓解。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19795) | Agentic Electronic Design Automation: A Handoff Perspective | 2606.19795 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20374) | ARGUS: Production-Scale Tracing and Performance Diagnosis for over 10,000-GPU Clusters | 2606.20374 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19993) | Activation- and Influence-Aware Ranks (AIR): Function-Preserving SVD Compression for LLMs | 2606.19993 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19376) | Cost-Optimal LLM Routing with Limited User Feedback under User Satisfaction Guarantees | 2606.19376 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19528) | Techniques for Peak Memory Reduction for LoRA Fine-tuning of LLMs on Edge Devices | 2606.19528 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19356) | Trustworthy Multi-Agent Systems: Mitigating Semantic Drift with the Argent Signaling Protocol | 2606.19356 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19348) | DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence | 2606.19348 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19409) | OpenRath: Session-Centered Runtime State for Agent Systems | 2606.19409 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19562) | Advances in Scientific Machine Learning for Coupled Fluid Flow and Transport | 2606.19562 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19363) | When to Trust, How to Distill: Multi-Foundation Model Guidance for Lightweight, Robust Scientific Time Series Forecasting | 2606.19363 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19667) | CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference | 2606.19667 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20487) | Beyond Global Replanning: Hierarchical Recovery for Cross-Device Agent Systems | 2606.20487 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19377) | Emyx: Fast and efficient all-atom protein generation | 2606.19377 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19347) | How LLMs Fail and Generalize in RTL Coding for Hardware Design? | 2606.19347 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19380) | AgentArmor: A Framework, Evaluation, & Mitigation of Coding Agent Failures | 2606.19380 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19935) | PhysDrift: Bridging the Embodiment Gap in Humanoid Co-Speech Motion Generation | 2606.19935 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616) | Before the Pull Request: Mining Multi-Agent Coordination | 2606.19616 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19992) | Beyond Static Endpoints: Tool Programs as an Interface for Flexible Agentic Web Services | 2606.19992 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20512) | Probe-and-Refine Tuning of Repository Guidance for Coding Agents | 2606.20512 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19595) | IHBench: Evaluating Post-Interruption Recovery in Voice Agents with Structured Workflows | 2606.19595 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20295) | Token-Operations-Oriented Inference Optimization Techniques for Large Models | 2606.20295 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19869) | EVM Workloads in the Wild: Evidence for Multi-Dimensional Gas Metering, State Growth, Delayed Execution, and Parallelism | 2606.19869 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19549) | Predicting Mergeability of Parameter-Efficient Fine-Tuning Updates | 2606.19549 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19782) | AgentFinVQA: A Deployable Multi-Agent Pipeline for Auditable Financial Chart QA | 2606.19782 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19365) | Performance Analysis and Optimization of 3D Generative Diffusion Models across GPU Architectures | 2606.19365 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19857) | Large Language Models Do Not Always Need Readable Language | 2606.19857 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19464) | Deontic Policies for Runtime Governance of Agentic AI Systems | 2606.19464 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20058) | Autonomous Event-Driven Multi-Agent Orchestration for Enterprise AI at Scale | 2606.20058 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19704) | Beyond Static Leaderboards: Predictive Validity for the Evaluation of LLM Agents | 2606.19704 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19787) | ORAgentBench: Can LLM Agents Solve Challenging Operations Research Tasks End to End? | 2606.19787 |
+
+---
+
+## 论文方向一：LLM代理系统的运行时治理与故障恢复
+
+**拟定论文题目**：面向多代理系统的运行时状态追踪与层次化故障恢复框架
+
+**论文核心问题**：如何为多代理、跨设备、事件驱动的LLM代理系统设计统一的运行时状态表示与层次化故障恢复机制，以解决代理系统在复杂生产环境中的可观测性、可信性与弹性问题。
+
+### 创新点一：会话中心化的运行时状态统一表示
+
+大多数现有方法将代理系统的运行时状态分散记录为独立的对话历史、工具调用日志、内存事件和工作空间快照，导致状态碎片化，难以进行跨会话的追溯和复现 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19356)[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19409)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616)。少数现有方法尝试通过中心化的运行时抽象来整合状态，但通常依赖外部追踪系统或事后重建，缺乏将状态作为一等运行时值在代理间传递的能力 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20374)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20487)。为此，本文提出基于会话（Session）作为核心运行时抽象的统一状态表示方法，将会话设计为可分支、可检查、可回放、后端感知且可组合的一等值，使其携带对话片段、沙箱位置、谱系元数据、令牌使用和工具证据，从而将分叉、合并和回放变为显式的运行时操作 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19409)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19464)。
+
+**创新类型**：问题建模创新 + 系统框架创新
+
+**创新性判断**：池内文献 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19409) 提出了OpenRath的Session抽象，但侧重于编程模型层面，未将其与故障恢复和治理策略深度耦合。本文在此基础上，将Session抽象扩展为故障恢复的原子单元，并引入层次化恢复策略的决策依据。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19356) | Trustworthy Multi-Agent Systems: Mitigating Semantic Drift with the Argent Signaling Protocol | 提出结构化质量信号（确定性、接地性、随机性）来区分可修复与不可修复的故障 | 支撑大多数方法将状态与质量信号分离 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19409) | OpenRath: Session-Centered Runtime State for Agent Systems | 提出Session作为核心运行时抽象，支持分支、检查、回放 | 支撑少数方法的状态统一表示 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20487) | Beyond Global Replanning: Hierarchical Recovery for Cross-Device Agent Systems | 提出层次化重规划框架，区分设备本地恢复与跨设备重规划 | 支撑少数方法的层次化恢复思想 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616) | Before the Pull Request: Mining Multi-Agent Coordination | 研究多代理协调中的冲突与重复工作，日志记录在git中 | 支撑大多数方法的状态分散记录 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19464) | Deontic Policies for Runtime Governance of Agentic AI Systems | 提出道义策略框架，涵盖许可、禁止、义务和豁免 | 支撑本文状态表示与治理策略的耦合 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20058) | Autonomous Event-Driven Multi-Agent Orchestration for Enterprise AI at Scale | 评估DAG Plan and Execute和ReAct在企业规模下的表现 | 支撑大多数方法缺乏统一状态表示的问题 |
+
+### 创新点二：层次化故障恢复与去中心化协调机制
+
+大多数现有方法在代理执行失败时采用粗粒度的全局重规划或简单重试策略，无法区分可在当前设备内修复的故障与需要跨设备重规划的故障 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20487)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19380)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20058)。少数现有方法引入了层次化恢复思想，但恢复策略空间的定义仍不够系统，且缺乏对去中心化协调场景下故障传播的建模 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19356)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19464)。为此，本文提出一种层次化故障恢复框架，通过紧凑的跨层故障抽象将设备本地策略恢复与编排器级全局重规划分离，并引入去中心化协调协议，使代理在无中心服务器的情况下通过共享的不可变事件日志达成一致，从而在降低协调开销的同时提升故障恢复的鲁棒性 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20487)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19464)。
+
+**创新类型**：方法设计创新 + 系统框架创新
+
+**创新性判断**：池内文献 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20487) 提出了H-RePlan的层次化重规划，但侧重于多设备场景下的策略空间定义。本文在此基础上，将层次化恢复与去中心化协调协议结合，并利用共享事件日志（如 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616) 的grite）实现无中心服务器的故障恢复协调。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19356) | Trustworthy Multi-Agent Systems: Mitigating Semantic Drift with the Argent Signaling Protocol | 区分可修复与不可修复故障，但未系统化恢复策略 | 支撑少数方法的质量信号区分 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20487) | Beyond Global Replanning: Hierarchical Recovery for Cross-Device Agent Systems | 提出H-RePlan层次化重规划框架 | 支撑少数方法的层次化恢复 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19380) | AgentArmor: A Framework, Evaluation, & Mitigation of Coding Agent Failures | 分类代理故障为未指定、能力错误和工具错误 | 支撑大多数方法的粗粒度重试策略 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616) | Before the Pull Request: Mining Multi-Agent Coordination | 提出grite去中心化协调协议，日志存储在git中 | 支撑本文的去中心化协调机制 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19464) | Deontic Policies for Runtime Governance of Agentic AI Systems | 提出道义策略框架，涵盖义务生命周期管理 | 支撑本文的故障恢复与治理策略结合 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20058) | Autonomous Event-Driven Multi-Agent Orchestration for Enterprise AI at Scale | 评估企业规模下的代理编排，发现规模是主要瓶颈 | 支撑大多数方法缺乏层次化恢复的问题 |
+
+**该论文两个创新点之间的关系**：创新点一解决“运行时状态如何统一表示”，创新点二解决“故障如何层次化恢复”。二者属于同一论文主题，但分别对应状态建模与恢复机制设计，不存在重复。
+
+**建议实验设计**：
+- **对比方法**：OpenRath [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19409)、H-RePlan [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20487)、AgentArmor [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19380)、grite [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616)
+- **实验数据或场景**：多设备计算机用任务（如 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20487) 的HeraBench）、企业级多代理编排场景（如 [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20058) 的Persona/Department/Enterprise规模）
+- **评价指标**：故障恢复成功率、恢复延迟、协调开销、状态可追溯性
+- **消融实验**：去中心化 vs. 中心化协调、层次化 vs. 全局重规划、Session状态 vs. 分散状态
+
+---
+
+## 论文方向二：大模型推理效率与资源配置优化
+
+**拟定论文题目**：面向服务质量约束的大模型推理缓存感知调度与低秩压缩联合优化
+
+**论文核心问题**：如何在满足服务质量（SLA）约束的前提下，通过缓存感知的请求调度、低秩压缩与在线路由策略，显著提升LLM推理服务的效率并降低成本。
+
+### 创新点三：缓存感知的请求调度与证据排序
+
+大多数现有方法在检索增强生成（RAG）推理中，将检索到的证据按检索分数排序后直接拼接，忽略了前缀缓存的重用机会，导致预填充阶段的计算开销随证据数量线性增长 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19667)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20295)。少数现有方法引入了前缀缓存机制，但仅在请求共享相同令牌前缀时有效，而相邻查询检索到的重叠证据因排序不同而无法形成可重用的前缀 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19376)[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19667)。为此，本文提出一种缓存感知的证据排序方法，通过维护最近服务的证据序列前缀树，采用贪心遍历将最可能重用的前缀置于首位，在不改变服务引擎和检索证据集的前提下，将中位首令牌时间（TTFT）降低约20-33%，且贪心策略可达最优排序97.5%的TTFT增益 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19667)。
+
+**创新类型**：方法设计创新 + 性能预测创新
+
+**创新性判断**：池内文献 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19667) 提出了CacheWeaver的缓存感知证据排序，但侧重于单次推理的TTFT优化。本文在此基础上，将缓存感知排序与请求调度策略结合，并引入SLA约束下的成本优化目标。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19376) | Cost-Optimal LLM Routing with Limited User Feedback under User Satisfaction Guarantees | 提出SLARouter在线路由算法，提供成本最优性和SLA合规保证 | 支撑少数方法的SLA感知路由 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19348) | DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence | 提出混合注意力架构（CSA和HCA）提升长上下文效率 | 支撑大多数方法关注模型架构优化 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19667) | CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference | 提出缓存感知的证据排序方法，降低TTFT | 支撑少数方法的缓存感知排序 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20295) | Token-Operations-Oriented Inference Optimization Techniques for Large Models | 提出四层推理优化技术架构 | 支撑大多数方法缺乏缓存感知调度 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20058) | Autonomous Event-Driven Multi-Agent Orchestration for Enterprise AI at Scale | 评估企业规模下的代理编排，发现规模是主要瓶颈 | 支撑大多数方法忽略请求级缓存优化 |
+
+### 创新点四：激活与影响感知的低秩压缩与在线路由联合优化
+
+大多数现有方法将LLM压缩与请求路由视为独立问题，压缩方法仅关注模型质量保持，路由方法仅关注成本与延迟，忽略了压缩后模型在不同请求上的性能差异对路由决策的影响 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19993)[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19376)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20295)。少数现有方法开始探索压缩与路由的联合优化，但通常依赖离线训练或固定压缩策略，缺乏对在线负载变化的适应性 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19993)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19549)。为此，本文提出一种激活与影响感知的低秩压缩框架（AIR），在SVD压缩中引入反向信号影响度量，并将压缩后的模型质量预测作为路由决策的输入，使路由策略能够根据压缩模型在不同请求类型上的表现动态选择最优模型，从而在满足SLA约束的同时最大化成本效益 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19993)[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19376)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19549)。
+
+**创新类型**：方法设计创新 + 优化求解创新
+
+**创新性判断**：池内文献 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19993) 提出了AIR压缩框架，文献 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19376) 提出了SLARouter路由算法，但两者未联合优化。本文首次将激活-影响感知压缩与SLA感知路由结合，利用压缩模型的质量预测指导路由决策。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19993) | Activation- and Influence-Aware Ranks (AIR): Function-Preserving SVD Compression for LLMs | 提出激活与影响感知的SVD压缩框架 | 支撑少数方法的激活感知压缩 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19376) | Cost-Optimal LLM Routing with Limited User Feedback under User Satisfaction Guarantees | 提出SLARouter在线路由算法 | 支撑少数方法的SLA感知路由 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19528) | Techniques for Peak Memory Reduction for LoRA Fine-tuning of LLMs on Edge Devices | 提出量化、选择性激活缓存等内存缩减技术 | 支撑大多数方法的压缩方法 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20295) | Token-Operations-Oriented Inference Optimization Techniques for Large Models | 提出四层推理优化技术架构 | 支撑大多数方法将压缩与路由分离 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19549) | Predicting Mergeability of Parameter-Efficient Fine-Tuning Updates | 预测LoRA适配器的可合并性 | 支撑少数方法的可合并性预测 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19365) | Performance Analysis and Optimization of 3D Generative Diffusion Models across GPU Architectures | 分析GPU架构上的性能优化 | 支撑大多数方法缺乏跨模型路由 |
+
+**该论文两个创新点之间的关系**：创新点三解决“如何通过缓存感知调度降低推理延迟”，创新点四解决“如何通过压缩与路由联合优化降低成本”。二者属于同一论文主题，但分别对应请求级调度优化与模型级资源配置优化，不存在重复。
+
+**建议实验设计**：
+- **对比方法**：CacheWeaver [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19667)、SLARouter [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19376)、AIR [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19993)、SVD-LLM(W) [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19993)
+- **实验数据或场景**：LLM推理基准测试（如 [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19376) 的LLM benchmarks）、RAG问答场景（如 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19667) 的QA tests）
+- **评价指标**：TTFT、吞吐量、SLA合规率、运营成本、压缩率与质量保持
+- **消融实验**：缓存感知排序 vs. 检索顺序排序、AIR压缩 vs. 标准SVD、联合优化 vs. 分阶段优化
+
+---
+
+## 论文方向三：面向代理的软件工程与代码智能
+
+**拟定论文题目**：面向仓库级软件开发的AI编码代理协调、评估与安全治理
+
+**论文核心问题**：如何设计多AI编码代理在仓库级软件开发中的协调机制、评估方法与安全治理框架，以解决代理冲突检测、仓库引导文件调优以及代理故障的分类与缓解问题。
+
+### 创新点五：基于共享事件日志的多代理协调与冲突检测
+
+大多数现有方法将AI编码代理视为独立个体，通过拉取请求（PR）级别的指标评估其表现，忽略了代理在并发工作中如何声明、划分和碰撞于共享工作的问题 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19380)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616)[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20512)。少数现有方法引入了多代理协调协议，但通常依赖中心化服务器或外部协调器，增加了系统复杂性和单点故障风险 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20058)。为此，本文提出一种基于共享不可变事件日志的去中心化协调机制，将协调记录直接存储在git中，使每个代理的日志副本收敛到相同状态，并通过可挖掘的日志工件识别具体的故障模式（如冲突编辑、锁饥饿、重复发现），从而将重复工作从78%降至0%，同时使有效吞吐量提升三倍以上 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616)。
+
+**创新类型**：问题建模创新 + 系统框架创新
+
+**创新性判断**：池内文献 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616) 提出了grite去中心化协调协议，但侧重于协调日志的记录与收敛。本文在此基础上，将日志挖掘与故障模式分类结合，并引入代理故障的自动检测与缓解机制。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19380) | AgentArmor: A Framework, Evaluation, & Mitigation of Coding Agent Failures | 分类代理故障为未指定、能力错误和工具错误 | 支撑大多数方法的故障分类 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616) | Before the Pull Request: Mining Multi-Agent Coordination | 提出grite去中心化协调协议 | 支撑少数方法的去中心化协调 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20512) | Probe-and-Refine Tuning of Repository Guidance for Coding Agents | 提出探针-精调方法优化仓库引导文件 | 支撑大多数方法的PR级评估 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20058) | Autonomous Event-Driven Multi-Agent Orchestration for Enterprise AI at Scale | 评估企业规模下的代理编排 | 支撑大多数方法缺乏去中心化协调 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19787) | ORAgentBench: Can LLM Agents Solve Challenging Operations Research Tasks End to End? | 评估代理在运筹学任务上的端到端能力 | 支撑大多数方法缺乏协调评估 |
+
+### 创新点六：仓库引导文件的探针-精调优化与代理故障缓解
+
+大多数现有方法依赖工程师手动维护的仓库引导文件（如AGENTS.md）为编码代理提供上下文，但研究表明LLM生成的引导文件对代理性能的影响存在争议，有时甚至有害 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19380)[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20512)。少数现有方法尝试自动生成或优化引导文件，但通常需要代理循环或工具使用，调优成本高且难以保证效果 [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20512)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19549)。为此，本文提出一种探针-精调（probe-and-refine）方法，通过合成bug修复探针迭代诊断和修补仓库引导文件，仅需单次LLM调用，无需代理循环或工具使用，在SWE-bench Verified上将平均解决率从28.3%提升至33.0%，并进一步结合AgentArmor的工具修改（扩展系统提示、命令分类器、三击策略、确定性护栏），在保持性能的同时显著提升安全性 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19380)[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20512)。
+
+**创新类型**：方法设计创新 + 安全治理创新
+
+**创新性判断**：池内文献 [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20512) 提出了探针-精调方法，文献 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19380) 提出了AgentArmor安全框架，但两者未结合。本文首次将引导文件优化与代理安全治理联合考虑，在提升性能的同时确保安全合规。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19347) | How LLMs Fail and Generalize in RTL Coding for Hardware Design? | 提出硬件编码错误分类法 | 支撑大多数方法的错误分类 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19380) | AgentArmor: A Framework, Evaluation, & Mitigation of Coding Agent Failures | 提出AgentArmor安全框架 | 支撑少数方法的代理安全治理 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20512) | Probe-and-Refine Tuning of Repository Guidance for Coding Agents | 提出探针-精调方法优化引导文件 | 支撑少数方法的引导文件优化 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19549) | Predicting Mergeability of Parameter-Efficient Fine-Tuning Updates | 预测LoRA适配器的可合并性 | 支撑大多数方法缺乏引导文件优化 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19464) | Deontic Policies for Runtime Governance of Agentic AI Systems | 提出道义策略框架 | 支撑本文的安全治理与策略结合 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19704) | Beyond Static Leaderboards: Predictive Validity for the Evaluation of LLM Agents | 提出预测有效性评估方法 | 支撑大多数方法的静态评估局限 |
+
+**该论文两个创新点之间的关系**：创新点五解决“多代理如何协调与冲突检测”，创新点六解决“代理引导文件如何优化与故障如何缓解”。二者属于同一论文主题，但分别对应协调机制设计与安全治理优化，不存在重复。
+
+**建议实验设计**：
+- **对比方法**：grite [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616)、AgentArmor [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19380)、探针-精调 [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20512)、静态AGENTS.md基线
+- **实验数据或场景**：SWE-bench Verified（如 [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20512)）、多代理编码场景（如 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616) 的协调实验）、故障注入基准（如 [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19380) 的8种评估）
+- **评价指标**：PR解决率、重复工作率、冲突检测率、安全违规率、调优成本
+- **消融实验**：去中心化 vs. 中心化协调、探针-精调 vs. 静态引导、AgentArmor vs. 无安全措施
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|----------|--------------|----------|------------|----------|----------|----------------------|----------|
+| 论文一：LLM代理系统的运行时治理与故障恢复 | 面向多代理系统的运行时状态追踪与层次化故障恢复框架 | 多代理系统的可观测性、可信性与弹性 | 会话中心化状态表示、层次化故障恢复与去中心化协调 | Session抽象、层次化恢复协议、去中心化事件日志 | 多设备计算机用任务、企业级多代理编排 | 关注代理系统的运行时治理与故障恢复，不涉及推理效率或代码智能 | 低 |
+| 论文二：大模型推理效率与资源配置优化 | 面向服务质量约束的大模型推理缓存感知调度与低秩压缩联合优化 | 满足SLA约束下的推理效率与成本优化 | 缓存感知证据排序、激活-影响感知压缩与路由联合优化 | 前缀树缓存感知排序、AIR压缩、SLA感知路由 | LLM推理基准、RAG问答场景 | 关注推理服务的效率与成本优化，不涉及代理协调或代码智能 | 低 |
+| 论文三：面向代理的软件工程与代码智能 | 面向仓库级软件开发的AI编码代理协调、评估与安全治理 | 多代理协调、引导文件优化与安全治理 | 去中心化协调与冲突检测、探针-精调优化与安全缓解 | 共享事件日志、探针-精调、AgentArmor安全框架 | SWE-bench Verified、多代理编码场景 | 关注编码代理的协调、评估与安全，不涉及运行时治理或推理效率 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一/三/五 | 创新点二/四/六 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|----------|----------------|----------------|----------------------|------------------|--------------|------|
+| 论文一 | 会话中心化状态表示 | 层次化故障恢复与去中心化协调 | 是 | 是（状态建模 vs. 恢复机制） | 否 | 可保留 |
+| 论文二 | 缓存感知证据排序 | 激活-影响感知压缩与路由联合优化 | 是 | 是（请求级调度 vs. 模型级配置） | 否 | 可保留 |
+| 论文三 | 去中心化协调与冲突检测 | 探针-精调优化与安全缓解 | 是 | 是（协调机制 vs. 安全治理） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19795) Agentic Electronic Design Automation: A Handoff Perspective. arXiv:2606.19795, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20374) ARGUS: Production-Scale Tracing and Performance Diagnosis for over 10,000-GPU Clusters. arXiv:2606.20374, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19993) Activation- and Influence-Aware Ranks (AIR): Function-Preserving SVD Compression for LLMs. arXiv:2606.19993, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19376) Cost-Optimal LLM Routing with Limited User Feedback under User Satisfaction Guarantees. arXiv:2606.19376, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19528) Techniques for Peak Memory Reduction for LoRA Fine-tuning of LLMs on Edge Devices. arXiv:2606.19528, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19356) Trustworthy Multi-Agent Systems: Mitigating Semantic Drift with the Argent Signaling Protocol. arXiv:2606.19356, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19348) DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence. arXiv:2606.19348, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19409) OpenRath: Session-Centered Runtime State for Agent Systems. arXiv:2606.19409, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19562) Advances in Scientific Machine Learning for Coupled Fluid Flow and Transport. arXiv:2606.19562, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19363) When to Trust, How to Distill: Multi-Foundation Model Guidance for Lightweight, Robust Scientific Time Series Forecasting. arXiv:2606.19363, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19667) CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference. arXiv:2606.19667, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20487) Beyond Global Replanning: Hierarchical Recovery for Cross-Device Agent Systems. arXiv:2606.20487, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19377) Emyx: Fast and efficient all-atom protein generation. arXiv:2606.19377, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19347) How LLMs Fail and Generalize in RTL Coding for Hardware Design? arXiv:2606.19347, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19380) AgentArmor: A Framework, Evaluation, & Mitigation of Coding Agent Failures. arXiv:2606.19380, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19935) PhysDrift: Bridging the Embodiment Gap in Humanoid Co-Speech Motion Generation. arXiv:2606.19935, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19616) Before the Pull Request: Mining Multi-Agent Coordination. arXiv:2606.19616, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19992) Beyond Static Endpoints: Tool Programs as an Interface for Flexible Agentic Web Services. arXiv:2606.19992, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20512) Probe-and-Refine Tuning of Repository Guidance for Coding Agents. arXiv:2606.20512, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19595) IHBench: Evaluating Post-Interruption Recovery in Voice Agents with Structured Workflows. arXiv:2606.19595, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20295) Token-Operations-Oriented Inference Optimization Techniques for Large Models. arXiv:2606.20295, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19869) EVM Workloads in the Wild: Evidence for Multi-Dimensional Gas Metering, State Growth, Delayed Execution, and Parallelism. arXiv:2606.19869, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19549) Predicting Mergeability of Parameter-Efficient Fine-Tuning Updates. arXiv:2606.19549, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19782) AgentFinVQA: A Deployable Multi-Agent Pipeline for Auditable Financial Chart QA. arXiv:2606.19782, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19365) Performance Analysis and Optimization of 3D Generative Diffusion Models across GPU Architectures. arXiv:2606.19365, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19857) Large Language Models Do Not Always Need Readable Language. arXiv:2606.19857, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19464) Deontic Policies for Runtime Governance of Agentic AI Systems. arXiv:2606.19464, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.20058) Autonomous Event-Driven Multi-Agent Orchestration for Enterprise AI at Scale. arXiv:2606.20058, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19704) Beyond Static Leaderboards: Predictive Validity for the Evaluation of LLM Agents. arXiv:2606.19704, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-19&paperId=2606.19787) ORAgentBench: Can LLM Agents Solve Challenging Operations Research Tasks End to End? arXiv:2606.19787, 2026.
+
+---
+
+## 自检结果
+
+一、是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：是。
+
+二、是否避免将一篇论文拆成六个创新点：是。
+
+三、是否避免生成六篇论文各一个创新点：是。
+
+四、每篇论文内部两个创新点是否属于同一论文主题：是。
+
+五、每篇论文内部两个创新点是否互补而不重复：是。
+
+六、三篇论文之间是否研究问题不同：是（运行时治理 vs. 推理效率 vs. 代码智能）。
+
+七、三篇论文之间是否核心方法不同：是（状态抽象与恢复协议 vs. 缓存感知与压缩路由 vs. 协调日志与安全治理）。
+
+八、三篇论文之间是否实验验证重点不同：是（多设备故障恢复 vs. 推理延迟与成本 vs. 编码协调与安全）。
+
+九、每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：是。
+
+十、每个创新点是否至少引用3篇池内文献：是（每个创新点引用4-6篇池内文献）。
+
+十一、是否说明每篇文献的支撑作用：是。
+
+十二、是否避免“首次提出”“填补空白”等绝对化表述：是。
+
+十三、是否建立三篇论文方向去重矩阵：是。
+
+十四、是否建立每篇论文内部创新点去重检查表：是。

@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-19",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM代理系统的运行时治理与故障恢复",
+      "blurb": "围绕多代理、跨设备、事件驱动的LLM代理系统，研究运行时状态追踪、层次化故障恢复与去中心化协调机制，解决代理系统在复杂生产环境中的可观测性、可信性与弹性问题。"
+    },
+    {
+      "title": "大模型推理效率与资源配置优化",
+      "blurb": "聚焦LLM推理服务的成本、延迟与内存瓶颈，探索缓存感知的请求调度、低秩压缩与在线路由策略，在满足服务质量约束的前提下实现推理效率的显著提升。"
+    },
+    {
+      "title": "面向代理的软件工程与代码智能",
+      "blurb": "研究AI编码代理在仓库级软件开发中的协调、评估与安全治理问题，包括多代理冲突检测、仓库引导文件调优以及代理故障的分类与缓解。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.19795",
+      "title": "Agentic Electronic Design Automation: A Handoff Perspective"
+    },
+    {
+      "idx": 2,
+      "id": "2606.20374",
+      "title": "ARGUS: Production-Scale Tracing and Performance Diagnosis for over 10,000-GPU Clusters"
+    },
+    {
+      "idx": 3,
+      "id": "2606.19993",
+      "title": "Activation- and Influence-Aware Ranks (AIR): Function-Preserving SVD Compression for LLMs"
+    },
+    {
+      "idx": 4,
+      "id": "2606.19376",
+      "title": "Cost-Optimal LLM Routing with Limited User Feedback under User Satisfaction Guarantees"
+    },
+    {
+      "idx": 5,
+      "id": "2606.19528",
+      "title": "Techniques for Peak Memory Reduction for LoRA Fine-tuning of LLMs on Edge Devices"
+    },
+    {
+      "idx": 6,
+      "id": "2606.19356",
+      "title": "Trustworthy Multi-Agent Systems: Mitigating Semantic Drift with the Argent Signaling Protocol"
+    },
+    {
+      "idx": 7,
+      "id": "2606.19348",
+      "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence"
+    },
+    {
+      "idx": 8,
+      "id": "2606.19409",
+      "title": "OpenRath: Session-Centered Runtime State for Agent Systems"
+    },
+    {
+      "idx": 9,
+      "id": "2606.19562",
+      "title": "Advances in Scientific Machine Learning for Coupled Fluid Flow and Transport"
+    },
+    {
+      "idx": 10,
+      "id": "2606.19363",
+      "title": "When to Trust, How to Distill: Multi-Foundation Model Guidance for Lightweight, Robust Scientific Time Series Forecasting"
+    },
+    {
+      "idx": 11,
+      "id": "2606.19667",
+      "title": "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
+    },
+    {
+      "idx": 12,
+      "id": "2606.20487",
+      "title": "Beyond Global Replanning: Hierarchical Recovery for Cross-Device Agent Systems"
+    },
+    {
+      "idx": 13,
+      "id": "2606.19377",
+      "title": "Emyx: Fast and efficient all-atom protein generation"
+    },
+    {
+      "idx": 14,
+      "id": "2606.19347",
+      "title": "How LLMs Fail and Generalize in RTL Coding for Hardware Design?"
+    },
+    {
+      "idx": 15,
+      "id": "2606.19380",
+      "title": "AgentArmor: A Framework, Evaluation, \\& Mitigation of Coding Agent Failures"
+    },
+    {
+      "idx": 16,
+      "id": "2606.19935",
+      "title": "PhysDrift: Bridging the Embodiment Gap in Humanoid Co-Speech Motion Generation"
+    },
+    {
+      "idx": 17,
+      "id": "2606.19616",
+      "title": "Before the Pull Request: Mining Multi-Agent Coordination"
+    },
+    {
+      "idx": 18,
+      "id": "2606.19992",
+      "title": "Beyond Static Endpoints: Tool Programs as an Interface for Flexible Agentic Web Services"
+    },
+    {
+      "idx": 19,
+      "id": "2606.20512",
+      "title": "Probe-and-Refine Tuning of Repository Guidance for Coding Agents"
+    },
+    {
+      "idx": 20,
+      "id": "2606.19595",
+      "title": "IHBench: Evaluating Post-Interruption Recovery in Voice Agents with Structured Workflows"
+    },
+    {
+      "idx": 21,
+      "id": "2606.20295",
+      "title": "Token-Operations-Oriented Inference Optimization Techniques for Large Models"
+    },
+    {
+      "idx": 22,
+      "id": "2606.19869",
+      "title": "EVM Workloads in the Wild: Evidence for Multi-Dimensional Gas Metering, State Growth, Delayed Execution, and Parallelism"
+    },
+    {
+      "idx": 23,
+      "id": "2606.19549",
+      "title": "Predicting Mergeability of Parameter-Efficient Fine-Tuning Updates"
+    },
+    {
+      "idx": 24,
+      "id": "2606.19782",
+      "title": "AgentFinVQA: A Deployable Multi-Agent Pipeline for Auditable Financial Chart QA"
+    },
+    {
+      "idx": 25,
+      "id": "2606.19365",
+      "title": "Performance Analysis and Optimization of 3D Generative Diffusion Models across GPU Architectures"
+    },
+    {
+      "idx": 26,
+      "id": "2606.19857",
+      "title": "Large Language Models Do Not Always Need Readable Language"
+    },
+    {
+      "idx": 27,
+      "id": "2606.19464",
+      "title": "Deontic Policies for Runtime Governance of Agentic AI Systems"
+    },
+    {
+      "idx": 28,
+      "id": "2606.20058",
+      "title": "Autonomous Event-Driven Multi-Agent Orchestration for Enterprise AI at Scale"
+    },
+    {
+      "idx": 29,
+      "id": "2606.19704",
+      "title": "Beyond Static Leaderboards: Predictive Validity for the Evaluation of LLM Agents"
+    },
+    {
+      "idx": 30,
+      "id": "2606.19787",
+      "title": "ORAgentBench: Can LLM Agents Solve Challenging Operations Research Tasks End to End?"
+    }
+  ]
+}
