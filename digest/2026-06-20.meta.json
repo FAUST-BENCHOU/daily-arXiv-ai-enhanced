@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-20",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大模型推理与KV缓存优化",
+      "blurb": "围绕长上下文推理中的注意力蒸馏、KV缓存压缩与稀疏注意力系统的内存效率问题，探索融合GPU原语、4-bit量化与CXL内存池的优化路径。"
+    },
+    {
+      "title": "多智能体编排与系统可靠性",
+      "blurb": "聚焦多智能体系统在软件工程与工业场景中的编排、状态管理与故障诊断，涵盖事件驱动编排、会话运行时抽象与可问责根因分析。"
+    },
+    {
+      "title": "LLM服务成本、质量与自适应路由",
+      "blurb": "面向生产级LLM服务的成本-质量权衡，研究在线路由策略、用户反馈驱动的SLA保障机制以及缓存感知的RAG推理优化。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.20005",
+      "title": "StreamKL: Fast and Memory-Efficient KL Divergence for Boosting Attention Distillation"
+    },
+    {
+      "idx": 2,
+      "id": "2606.19350",
+      "title": "Pruning via Causal Attribution Preserves Reasoning Performance in Large Language Models"
+    },
+    {
+      "idx": 3,
+      "id": "2606.20373",
+      "title": "AutoPass: Evidence-Guided LLM Agents for Compiler Performance Tuning"
+    },
+    {
+      "idx": 4,
+      "id": "2606.20158",
+      "title": "N-Version Programming with Coding Agents"
+    },
+    {
+      "idx": 5,
+      "id": "2606.20374",
+      "title": "ARGUS: Production-Scale Tracing and Performance Diagnosis for over 10,000-GPU Clusters"
+    },
+    {
+      "idx": 6,
+      "id": "2606.19992",
+      "title": "Beyond Static Endpoints: Tool Programs as an Interface for Flexible Agentic Web Services"
+    },
+    {
+      "idx": 7,
+      "id": "2606.19409",
+      "title": "OpenRath: Session-Centered Runtime State for Agent Systems"
+    },
+    {
+      "idx": 8,
+      "id": "2606.20097",
+      "title": "HydraHead: From Head-Level Functional Heterogeneity to Specialized Attention Hybridization"
+    },
+    {
+      "idx": 9,
+      "id": "2606.20058",
+      "title": "Autonomous Event-Driven Multi-Agent Orchestration for Enterprise AI at Scale"
+    },
+    {
+      "idx": 10,
+      "id": "2606.19814",
+      "title": "CoRaCommit: A VS Code Extension for Commit Message Generation with Exemplar Retrieval"
+    },
+    {
+      "idx": 11,
+      "id": "2606.19407",
+      "title": "JustDiag!: A Diagnostic Justification Engine for Accountable Root Cause Analysis"
+    },
+    {
+      "idx": 12,
+      "id": "2606.20128",
+      "title": "The Correctness Illusion in LLM-Generated GPU Kernels"
+    },
+    {
+      "idx": 13,
+      "id": "2606.19549",
+      "title": "Predicting Mergeability of Parameter-Efficient Fine-Tuning Updates"
+    },
+    {
+      "idx": 14,
+      "id": "2606.19382",
+      "title": "DynAMO:Dynamic Asset Management Orchestration via Topological Multi-Agent Scheduling"
+    },
+    {
+      "idx": 15,
+      "id": "2606.19365",
+      "title": "Performance Analysis and Optimization of 3D Generative Diffusion Models across GPU Architectures"
+    },
+    {
+      "idx": 16,
+      "id": "2606.20243",
+      "title": "Phoenix: Safe GitHub Issue Resolution via Multi-Agent LLMs"
+    },
+    {
+      "idx": 17,
+      "id": "2606.20474",
+      "title": "UltraQuant: 4-bit KV Caching for Context-Heavy Agents"
+    },
+    {
+      "idx": 18,
+      "id": "2606.19616",
+      "title": "Before the Pull Request: Mining Multi-Agent Coordination"
+    },
+    {
+      "idx": 19,
+      "id": "2606.20295",
+      "title": "Token-Operations-Oriented Inference Optimization Techniques for Large Models"
+    },
+    {
+      "idx": 20,
+      "id": "2606.19857",
+      "title": "Large Language Models Do Not Always Need Readable Language"
+    },
+    {
+      "idx": 21,
+      "id": "2606.19980",
+      "title": "ENPIRE: Agentic Robot Policy Self-Improvement in the Real World"
+    },
+    {
+      "idx": 22,
+      "id": "2606.19348",
+      "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence"
+    },
+    {
+      "idx": 23,
+      "id": "2606.19753",
+      "title": "Grounded Inference: Principles for Deterministically Encapsulated Generative Models"
+    },
+    {
+      "idx": 24,
+      "id": "2606.19697",
+      "title": "Efficiently Representing Algorithms With Chain-of-Thought Transformers"
+    },
+    {
+      "idx": 25,
+      "id": "2606.19746",
+      "title": "SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL"
+    },
+    {
+      "idx": 26,
+      "id": "2606.20113",
+      "title": "When Does Streaming Tool Use Help? Characterizing Tool-Intent Stabilization in Streaming Retrieval-Augmented Generation"
+    },
+    {
+      "idx": 27,
+      "id": "2606.19376",
+      "title": "Cost-Optimal LLM Routing with Limited User Feedback under User Satisfaction Guarantees"
+    },
+    {
+      "idx": 28,
+      "id": "2606.20529",
+      "title": "LedgerAgent: Structured State for Policy-Adherent Tool-Calling Agents"
+    },
+    {
+      "idx": 29,
+      "id": "2606.19363",
+      "title": "When to Trust, How to Distill: Multi-Foundation Model Guidance for Lightweight, Robust Scientific Time Series Forecasting"
+    },
+    {
+      "idx": 30,
+      "id": "2606.19667",
+      "title": "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
+    }
+  ]
+}
