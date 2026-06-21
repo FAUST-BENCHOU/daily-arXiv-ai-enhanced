@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-21",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大模型推理服务中的资源解耦与高效缓存管理",
+      "blurb": "面向稀疏注意力模型与长上下文场景，利用 CXL 等新型互连技术实现 KV 缓存的细粒度按需取回，以及 4-bit 量化压缩在上下文密集型 Agent 负载下的部署优化。"
+    },
+    {
+      "title": "多 Agent 系统的运行时状态管理与编排效率",
+      "blurb": "针对多 Agent 协作中状态碎片化、并发冲突与编排开销问题，提出会话中心运行时抽象、拓扑感知并行调度与事件驱动任务管理等方法。"
+    },
+    {
+      "title": "LLM 推理与微调中的成本-质量权衡与自适应控制",
+      "blurb": "在 SLA 约束下实现成本最优的 LLM 请求路由、预算感知的推理验证分配，以及边缘设备上 LoRA 微调的峰值内存压缩技术。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.19746",
+      "title": "SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL"
+    },
+    {
+      "idx": 2,
+      "id": "2606.20474",
+      "title": "UltraQuant: 4-bit KV Caching for Context-Heavy Agents"
+    },
+    {
+      "idx": 3,
+      "id": "2606.20529",
+      "title": "LedgerAgent: Structured State for Policy-Adherent Tool-Calling Agents"
+    },
+    {
+      "idx": 4,
+      "id": "2606.19382",
+      "title": "DynAMO:Dynamic Asset Management Orchestration via Topological Multi-Agent Scheduling"
+    },
+    {
+      "idx": 5,
+      "id": "2606.19704",
+      "title": "Beyond Static Leaderboards: Predictive Validity for the Evaluation of LLM Agents"
+    },
+    {
+      "idx": 6,
+      "id": "2606.20512",
+      "title": "Probe-and-Refine Tuning of Repository Guidance for Coding Agents"
+    },
+    {
+      "idx": 7,
+      "id": "2606.20058",
+      "title": "Autonomous Event-Driven Multi-Agent Orchestration for Enterprise AI at Scale"
+    },
+    {
+      "idx": 8,
+      "id": "2606.19376",
+      "title": "Cost-Optimal LLM Routing with Limited User Feedback under User Satisfaction Guarantees"
+    },
+    {
+      "idx": 9,
+      "id": "2606.19919",
+      "title": "ADaPT: Token-Level Decoupling for Efficient Large Reasoning Models"
+    },
+    {
+      "idx": 10,
+      "id": "2606.19605",
+      "title": "FAPO: Fully Autonomous Prompt Optimization of Multi-Step LLM Pipelines"
+    },
+    {
+      "idx": 11,
+      "id": "2606.19409",
+      "title": "OpenRath: Session-Centered Runtime State for Agent Systems"
+    },
+    {
+      "idx": 12,
+      "id": "2606.20374",
+      "title": "ARGUS: Production-Scale Tracing and Performance Diagnosis for over 10,000-GPU Clusters"
+    },
+    {
+      "idx": 13,
+      "id": "2606.19980",
+      "title": "ENPIRE: Agentic Robot Policy Self-Improvement in the Real World"
+    },
+    {
+      "idx": 14,
+      "id": "2606.19616",
+      "title": "Before the Pull Request: Mining Multi-Agent Coordination"
+    },
+    {
+      "idx": 15,
+      "id": "2606.19753",
+      "title": "Grounded Inference: Principles for Deterministically Encapsulated Generative Models"
+    },
+    {
+      "idx": 16,
+      "id": "2606.19528",
+      "title": "Techniques for Peak Memory Reduction for LoRA Fine-tuning of LLMs on Edge Devices"
+    },
+    {
+      "idx": 17,
+      "id": "2606.19989",
+      "title": "Online Dynamic Batching with Formal Guarantees for LLM Training"
+    },
+    {
+      "idx": 18,
+      "id": "2606.19644",
+      "title": "Prompt Quality and Pull Request Outcomes: A Stage-Based Empirical Study of LLM-Assisted Development"
+    },
+    {
+      "idx": 19,
+      "id": "2606.19771",
+      "title": "Beyond Entropy: Learning from Token-Level Distributional Deviations for LLM Reasoning"
+    },
+    {
+      "idx": 20,
+      "id": "2606.19363",
+      "title": "When to Trust, How to Distill: Multi-Foundation Model Guidance for Lightweight, Robust Scientific Time Series Forecasting"
+    },
+    {
+      "idx": 21,
+      "id": "2606.19348",
+      "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence"
+    },
+    {
+      "idx": 22,
+      "id": "2606.20381",
+      "title": "Rethinking Shrinkage Bias in LLM FP4 Pretraining: Geometric Origin, Systemic Impact, and UFP4 Recipe"
+    },
+    {
+      "idx": 23,
+      "id": "2606.19725",
+      "title": "Library-Aware Doubles and Iterative Repair for Large Language Model-Generated Unit Tests in OpenSIL Firmware"
+    },
+    {
+      "idx": 24,
+      "id": "2606.20373",
+      "title": "AutoPass: Evidence-Guided LLM Agents for Compiler Performance Tuning"
+    },
+    {
+      "idx": 25,
+      "id": "2606.19808",
+      "title": "Think Again or Think Longer? Selective Verification for Budget-Aware Reasoning"
+    },
+    {
+      "idx": 26,
+      "id": "2606.20295",
+      "title": "Token-Operations-Oriented Inference Optimization Techniques for Large Models"
+    },
+    {
+      "idx": 27,
+      "id": "2606.19602",
+      "title": "Configurable Clinical Information Extraction with Agentic RAG: What Works, What Breaks, and Why"
+    },
+    {
+      "idx": 28,
+      "id": "2606.19549",
+      "title": "Predicting Mergeability of Parameter-Efficient Fine-Tuning Updates"
+    },
+    {
+      "idx": 29,
+      "id": "2606.19380",
+      "title": "AgentArmor: A Framework, Evaluation, \\& Mitigation of Coding Agent Failures"
+    },
+    {
+      "idx": 30,
+      "id": "2606.19830",
+      "title": "JAMER: Project-Level Code Framework Dataset and Benchmark on Professional Game Engines"
+    }
+  ]
+}
