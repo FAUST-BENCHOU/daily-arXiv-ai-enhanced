@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-22",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "多智能体系统运行时治理与协调",
+      "blurb": "围绕LLM驱动的多智能体系统的运行时治理策略、协调协议与状态管理，探讨如何通过去中心化信令、运行时策略和会话中心运行时状态来保证系统可信、可审计与可复现。"
+    },
+    {
+      "title": "LLM推理效率优化：缓存、压缩与调度",
+      "blurb": "聚焦大语言模型推理阶段的性能瓶颈，从KV缓存压缩、前缀缓存感知排序、稀疏注意力解耦缓存到在线动态批处理，提出多项面向长上下文和agent工作负载的推理优化方法。"
+    },
+    {
+      "title": "LLM压缩与路由：剪枝、蒸馏与服务级成本优化",
+      "blurb": "关注LLM部署中的模型压缩（因果剪枝、SVD压缩、注意力蒸馏）与成本感知路由策略，在保证服务质量的前提下降低推理开销，并探索非标准文本表示作为信息压缩的新范式。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.19464",
+      "title": "Deontic Policies for Runtime Governance of Agentic AI Systems"
+    },
+    {
+      "idx": 2,
+      "id": "2606.19356",
+      "title": "Trustworthy Multi-Agent Systems: Mitigating Semantic Drift with the Argent Signaling Protocol"
+    },
+    {
+      "idx": 3,
+      "id": "2606.19364",
+      "title": "Closing the Social-Semantic Gap: SPSD for Edge-Based Prompt Compression in Cloud LLM Inference"
+    },
+    {
+      "idx": 4,
+      "id": "2606.19911",
+      "title": "Multi-Agent Transactive Memory"
+    },
+    {
+      "idx": 5,
+      "id": "2606.19993",
+      "title": "Activation- and Influence-Aware Ranks (AIR): Function-Preserving SVD Compression for LLMs"
+    },
+    {
+      "idx": 6,
+      "id": "2606.20295",
+      "title": "Token-Operations-Oriented Inference Optimization Techniques for Large Models"
+    },
+    {
+      "idx": 7,
+      "id": "2606.19830",
+      "title": "JAMER: Project-Level Code Framework Dataset and Benchmark on Professional Game Engines"
+    },
+    {
+      "idx": 8,
+      "id": "2606.20475",
+      "title": "Marginal Advantage Accumulation for Memory-Driven Agent Self-Evolution"
+    },
+    {
+      "idx": 9,
+      "id": "2606.19605",
+      "title": "FAPO: Fully Autonomous Prompt Optimization of Multi-Step LLM Pipelines"
+    },
+    {
+      "idx": 10,
+      "id": "2606.19910",
+      "title": "Light-weight Pronunciation Assessment via Discrete Speech Token Surprisal"
+    },
+    {
+      "idx": 11,
+      "id": "2606.19365",
+      "title": "Performance Analysis and Optimization of 3D Generative Diffusion Models across GPU Architectures"
+    },
+    {
+      "idx": 12,
+      "id": "2606.20058",
+      "title": "Autonomous Event-Driven Multi-Agent Orchestration for Enterprise AI at Scale"
+    },
+    {
+      "idx": 13,
+      "id": "2606.19667",
+      "title": "CacheWeaver: Cache-Aware Evidence Ordering for Efficient Grounded RAG Inference"
+    },
+    {
+      "idx": 14,
+      "id": "2606.20374",
+      "title": "ARGUS: Production-Scale Tracing and Performance Diagnosis for over 10,000-GPU Clusters"
+    },
+    {
+      "idx": 15,
+      "id": "2606.19616",
+      "title": "Before the Pull Request: Mining Multi-Agent Coordination"
+    },
+    {
+      "idx": 16,
+      "id": "2606.20474",
+      "title": "UltraQuant: 4-bit KV Caching for Context-Heavy Agents"
+    },
+    {
+      "idx": 17,
+      "id": "2606.19363",
+      "title": "When to Trust, How to Distill: Multi-Foundation Model Guidance for Lightweight, Robust Scientific Time Series Forecasting"
+    },
+    {
+      "idx": 18,
+      "id": "2606.19399",
+      "title": "VERITAS: Verifier-Guided Proof Search for Zero-Shot Formal Theorem Proving"
+    },
+    {
+      "idx": 19,
+      "id": "2606.20158",
+      "title": "N-Version Programming with Coding Agents"
+    },
+    {
+      "idx": 20,
+      "id": "2606.19746",
+      "title": "SAC: Disaggregated KV Cache System for Sparse Attention LLMs with CXL"
+    },
+    {
+      "idx": 21,
+      "id": "2606.19350",
+      "title": "Pruning via Causal Attribution Preserves Reasoning Performance in Large Language Models"
+    },
+    {
+      "idx": 22,
+      "id": "2606.20005",
+      "title": "StreamKL: Fast and Memory-Efficient KL Divergence for Boosting Attention Distillation"
+    },
+    {
+      "idx": 23,
+      "id": "2606.19376",
+      "title": "Cost-Optimal LLM Routing with Limited User Feedback under User Satisfaction Guarantees"
+    },
+    {
+      "idx": 24,
+      "id": "2606.19409",
+      "title": "OpenRath: Session-Centered Runtime State for Agent Systems"
+    },
+    {
+      "idx": 25,
+      "id": "2606.19857",
+      "title": "Large Language Models Do Not Always Need Readable Language"
+    },
+    {
+      "idx": 26,
+      "id": "2606.19992",
+      "title": "Beyond Static Endpoints: Tool Programs as an Interface for Flexible Agentic Web Services"
+    },
+    {
+      "idx": 27,
+      "id": "2606.19390",
+      "title": "Execution-bound advisory automation for agentic AI: a reproducible AIBOM-driven CSAF-VEX framework"
+    },
+    {
+      "idx": 28,
+      "id": "2606.19980",
+      "title": "ENPIRE: Agentic Robot Policy Self-Improvement in the Real World"
+    },
+    {
+      "idx": 29,
+      "id": "2606.19989",
+      "title": "Online Dynamic Batching with Formal Guarantees for LLM Training"
+    },
+    {
+      "idx": 30,
+      "id": "2606.20512",
+      "title": "Probe-and-Refine Tuning of Repository Guidance for Coding Agents"
+    }
+  ]
+}
