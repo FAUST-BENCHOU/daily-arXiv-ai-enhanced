@@ -1,0 +1,275 @@
+# 每日硬凑师兄要求的创新点 2026-06-23
+
+## 今日三个主题（结构化）
+1. **LLM 智能体技能与记忆系统的评估与优化** — 围绕 LLM 智能体的程序性记忆、技能审计与假设驱动优化，探讨技能的可迁移性、评估框架与安全更新机制。
+2. **大模型推理与部署的效率优化：量化、批处理与容错** — 聚焦 LLM 推理阶段的量化压缩、批处理架构与 GPU 容错机制，解决内存带宽瓶颈、长上下文吞吐与故障恢复问题。
+3. **分布式训练与模型压缩的协同优化** — 从分布式训练通信优化、量化压缩管道与低资源硬件适配出发，降低大规模模型训练与部署的计算与存储开销。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23127) | Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation | 2606.23127 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22613) | SkillAudit: From Fixed-Suite Benchmarking to Skill-Centered Assessment | 2606.22613 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22768) | Factored Gossip DiLoCo: Reducing Blocking Communication in DiLoCo | 2606.22768 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22917) | GRAIN: Group Aggregation via Min-Norm Objective | 2606.22917 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22807) | KaLM-Reranker-V1: Fast but Not Late Interaction for Compressed Document Reranking | 2606.22807 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23419) | GRINQH: Graded Input-based Quantization Hierarchy for Efficient LLM Generation | 2606.23419 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.20683) | From Question Answering to Task Completion: A Survey on Agent System and Harness Design | 2606.20683 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21712) | BatchGen: An Architecture for Scalable and Efficient Batch Inference | 2606.21712 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23521) | Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference | 2606.23521 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.20989) | OxyMake: A Formally-Specified, Content-Addressable Workflow Engine | 2606.20989 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22906) | From Fragments to Paths: Task-Level Context Recovery for Large Industrial Codebases | 2606.22906 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22330) | Hypothesis-Driven Skill Optimization for LLM Agents | 2606.22330 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21497) | Breaking chains with trees: Deep learning with O(log N) parallel time complexity | 2606.21497 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.20670) | Towards CSI-Native Foundation Models: A Channel-Adaptive Roadmap for 6G | 2606.20670 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21868) | WiSP: A Working-Set View of Mixture-of-Experts Serving on Extremely Low-Resource Hardware | 2606.21868 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23406) | HyperQuant: A Rate-Distortion-Optimal Quantization Pipeline for Large Language and Diffusion Models | 2606.23406 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21144) | AdaMem: Learning What to Remember for Personalized Long-Horizon LLM Agents | 2606.21144 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22953) | Plans Don't Persist: Why Context Management Is Load Bearing for LLM Agents | 2606.22953 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.20740) | VeriBound: PAC-Bayesian Generalization Bounds for Process Reward Models Trained with Formal Verification Tools | 2606.20740 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23575) | Solve for the Hyperparameter, Skip the Search: Kolmogorov-Optimal Scaling Laws for Spline Regression | 2606.23575 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21005) | Building Agent Harnesses for Scientific Curation from Multimodal Sources | 2606.21005 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.20758) | A Topology-Aware, Memory-Centric Architecture that Separates Root-Cause Derivation from Root-Cause Explanation | 2606.20758 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22189) | L20-Edu-135M: An Auditable Single-GPU Study of Data-Efficient Small Language Modeling | 2606.22189 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23265) | Node-Level Performance and Energy Characterization of Flagship Science Applications on SuperMUC-NG Phase 2 | 2606.23265 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23375) | Measuring & Mitigating Over-Alignment for LLMs in Multilingual Criminal Law Courts | 2606.23375 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21633) | HERALD: High-Throughput Block Diffusion LLM Serving via CPU-GPU Cooperative KV Cache Retrieval | 2606.21633 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21072) | An Efficient and Effective Architecture for Large-Scale Traffic Prediction via Geometry-Adaptive Square Partitioning | 2606.21072 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22502) | WebCQ: Cooperative Multi-Agent Deep Reinforcement Learning for Scalable Web GUI Testing | 2606.22502 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21257) | An Empirical Study of OpenPangu Quantization on Ascend NPUs | 2606.21257 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21101) | DPIFrame: A Dual-Level Parallelism Acceleration Framework for CTR Model Inference | 2606.21101 |
+
+---
+
+## 论文方向一：LLM 智能体技能与记忆系统的评估与优化
+
+**拟定论文题目**：面向 LLM 智能体的程序性记忆评估与假设驱动技能优化方法
+
+**论文核心问题**：如何系统性地评估 LLM 智能体技能的可迁移性与安全性，并在此基础上实现无需重新训练的技能优化与更新。
+
+### 创新点一：技能可迁移性与安全性的多维评估框架
+
+大多数现有方法依赖固定任务套件评估智能体技能，通过预定义任务和环境中的表现来判断技能价值，这种方式容易混淆技能的边际贡献与骨干模型能力，且无法评估技能在预期范围之外的任务中的表现 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23127)[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22613)[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.20683)。少数现有方法开始关注技能中心化评估，如 SkillAudit 框架能够自动生成涵盖效用、效率/成本和安全性等多维度的评估报告，但其评估任务构建仍主要基于技能包本身，对技能在不同角色、不同骨干模型间的迁移泛化能力刻画不足 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22613)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22330)。为此，本文提出一个多维技能评估框架，将技能的可迁移性（跨任务、跨角色、跨模型）与安全性（拒绝服务、信息泄露、越狱风险）纳入统一评估体系，通过受控的配对执行实验（控制组/处理组）分离技能的边际贡献，以提供更全面的技能部署决策依据 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23127)[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22613)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22330)。
+
+- **创新类型**：指标体系创新 + 评价方法创新
+- **创新性判断**：文献池中 AFTER 基准 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23127) 和 SkillAudit [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22613) 分别关注了技能迁移和技能评估，但尚未将可迁移性与安全性评估整合为一个统一框架。HDSO [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22330) 提出了假设驱动的技能验证，但其重点在于优化流程而非评估体系。本文提出的多维评估框架填补了这一空白。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23127) | Managing Procedural Memory in LLM Agents | 提出 AFTER 基准，评估技能跨任务、跨角色、跨模型迁移 | 支撑大多数现有方法（固定套件评估）及少数方法（迁移评估） |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22613) | SkillAudit | 提出技能中心化评估框架，覆盖效用、效率/成本、安全性 | 支撑少数现有方法（多维评估）及现有不足（未整合迁移性） |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.20683) | From QA to Task Completion: A Survey on Agent System and Harness Design | 综述智能体系统与执行框架设计 | 支撑大多数现有方法（固定套件评估范式） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22330) | Hypothesis-Driven Skill Optimization | 提出假设驱动的技能验证框架 | 支撑少数现有方法（技能验证）及本文差异（评估体系整合） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21144) | AdaMem | 提出自适应记忆系统，学习用户角色相关的记忆策略 | 支撑现有不足（角色依赖性的评估缺失） |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22953) | Plans Don't Persist | 分析上下文管理中计划信号的衰减 | 支撑现有不足（技能持久性评估缺失） |
+
+### 创新点二：基于可证伪假设的技能优化与安全更新机制
+
+大多数现有方法在技能优化时依赖从稀疏或噪声轨迹中蒸馏技能，容易将有用的过程、虚假的捷径或执行器无法可靠遵循的规则一同编码进技能包，导致技能更新存在风险 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22330)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21144)。少数现有方法如 HDSO 提出了无训练框架，通过配对控制/处理执行验证技能假设，但其验证计划仍依赖人工设计或简单规则，对复杂场景下的假设生成和失败回滚机制支持不足 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22330)[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23127)。为此，本文提出一个基于可证伪假设的技能优化与安全更新机制，将技能优化过程形式化为假设提出、验证计划生成、配对执行、行为差异审查和失败回滚的闭环流程，并通过渐进式技能披露策略（progressive disclosure）降低更新风险，确保在技能失效时能回退到纯执行器路径 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22330)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21144)[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22953)。
+
+- **创新类型**：方法设计创新 + 在线反馈机制创新
+- **创新性判断**：HDSO [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22330) 是文献池中最接近的工作，但其假设验证计划生成和失败回滚机制较为简单。AdaMem [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21144) 提出了基于反馈的写控制策略，但聚焦于记忆而非技能。本文的创新在于将可证伪假设方法与渐进式披露策略结合，形成一个更鲁棒的技能安全更新闭环。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22330) | Hypothesis-Driven Skill Optimization | 提出 HDSO 无训练技能优化框架 | 支撑大多数现有方法（轨迹蒸馏）及少数方法（假设驱动） |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23127) | Managing Procedural Memory in LLM Agents | 研究程序性记忆的迁移与泛化 | 支撑大多数现有方法（技能更新风险） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21144) | AdaMem | 提出基于反馈的自适应记忆写控制 | 支撑少数现有方法（反馈驱动更新）及本文差异（渐进式披露） |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22953) | Plans Don't Persist | 分析计划信号在上下文中的衰减 | 支撑现有不足（技能持久性） |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.20683) | From QA to Task Completion: A Survey | 综述智能体执行框架设计 | 支撑大多数现有方法（技能更新范式） |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22613) | SkillAudit | 技能中心化评估框架 | 支撑现有不足（安全评估与更新脱节） |
+
+**该论文两个创新点之间的关系**：
+创新点一解决“如何评估技能的可迁移性与安全性”，创新点二解决“如何基于评估结果安全地优化和更新技能”。二者属于同一论文主题，但分别对应评估体系构建和优化机制设计，不存在重复。
+
+**建议实验设计**：
+- **对比方法**：AFTER 基准 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23127)、SkillAudit [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22613)、HDSO [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22330)
+- **实验数据或场景**：ALFWorld 环境（如 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22330) 所用）、企业级任务套件（如 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23127) 的 382 个任务）
+- **评价指标**：技能迁移成功率、跨模型泛化准确率、安全违规率、更新失败回滚率
+- **消融实验**：分离可迁移性评估与安全性评估的贡献；比较渐进式披露与全量更新的效果差异
+
+---
+
+## 论文方向二：大模型推理与部署的效率优化：量化、批处理与容错
+
+**拟定论文题目**：面向大模型推理的量化压缩、批处理架构与 GPU 容错协同优化方法
+
+**论文核心问题**：如何通过量化压缩、批处理架构创新和 GPU 容错机制的协同设计，突破 LLM 推理的内存带宽瓶颈、长上下文吞吐限制与故障恢复问题。
+
+### 创新点三：阶段感知的混合精度量化与稀疏化协同压缩方法
+
+大多数现有量化方法将 LLM 推理视为统一过程，未能区分预填充阶段（计算密集型）和解码阶段（内存带宽密集型）在计算特征和资源需求上的不对称性，导致量化策略在解码阶段效率不足 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23419)[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23406)。少数现有方法如 GRINQH 利用激活幅度作为计算重要性的代理，动态分配权重通道到不同精度级别，实现了灵活的平局比特宽度，但其精度分配策略主要基于静态重要性度量，未与两阶段的计算特征动态适配 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23419)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21868)。为此，本文提出阶段感知的混合精度量化与稀疏化协同压缩方法，在预填充阶段采用高精度计算以保持推理质量，在解码阶段根据激活幅度动态分配权重通道到不同精度级别并协同稀疏化，利用层级嵌套内存布局实现多精度存储，以在保持模型质量的同时最大化解码吞吐 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23419)[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23406)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21868)。
+
+- **创新类型**：方法设计创新 + 约束处理创新
+- **创新性判断**：GRINQH [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23419) 和 HyperQuant [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23406) 分别提出了分级量化和率失真最优量化管道，但均未将量化策略与预填充/解码两阶段的计算特征动态适配。WiSP [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21868) 关注 MoE 模型的工作集管理，其思路可借鉴到量化场景。本文的创新在于将阶段感知与量化-稀疏化协同结合。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23419) | GRINQH | 分级输入量化层次，利用激活幅度分配精度 | 支撑大多数现有方法（统一量化）及少数方法（分级量化） |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23406) | HyperQuant | 统一后训练量化管道，覆盖权重和 KV 缓存 | 支撑大多数现有方法（统一量化）及现有不足（未阶段感知） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21868) | WiSP | MoE 模型的工作集管理 | 支撑现有不足（内存带宽瓶颈分析） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21257) | OpenPangu Quantization on Ascend NPUs | 系统评估多种量化方法在 NPU 上的表现 | 支撑大多数现有方法（量化方法分类） |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22807) | KaLM-Reranker-V1 | 解耦查询和段落计算的重新排序器 | 支撑现有不足（解耦计算思路） |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21633) | HERALD | 块扩散 LLM 的 KV 缓存卸载系统 | 支撑现有不足（长上下文内存压力） |
+
+### 创新点四：基于序列协程模型的批处理架构与 GPU 容错协同机制
+
+大多数现有批处理推理引擎沿用为交互式服务设计的执行模型，在处理百万级序列的批处理工作负载时，无法应对运行时才暴露的极端序列间和序列内负载变化，也难以在大型 GPU 集群上维持高利用率 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21712)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23521)。少数现有方法如 BatchGen 提出了序列协程计算模型，将每个序列表示为细粒度事件驱动的协程，允许运行时动态重组工作，但其容错机制仍依赖传统的检查点重启，未将 GPU 驻留执行上下文作为容错基板 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21712)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23521)。为此，本文提出基于序列协程模型的批处理架构与 GPU 容错协同机制，将 BatchGen 的协程计算模型与 Concordia 的设备驻留持久内核检查点技术结合，在设备同步点插入检查点钩子，利用 PTX/SASS 级插桩实现框架无关的 KV 缓存和调度器状态恢复，以在保持批处理高吞吐的同时实现亚秒级故障恢复 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21712)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23521)[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21633)。
+
+- **创新类型**：系统框架创新 + 在线反馈机制创新
+- **创新性判断**：BatchGen [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21712) 和 Concordia [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23521) 分别解决了批处理架构和 GPU 容错问题，但两者是独立的工作。HERALD [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21633) 关注块扩散 LLM 的 KV 缓存卸载，其思路可借鉴。本文的创新在于将批处理架构与 GPU 容错机制进行协同设计，而非各自独立优化。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21712) | BatchGen | 序列协程计算模型的批处理架构 | 支撑大多数现有方法（交互式执行模型）及少数方法（协程模型） |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23521) | Concordia | 设备驻留持久内核检查点技术 | 支撑少数现有方法（GPU 容错）及本文差异（协同设计） |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21633) | HERALD | 块扩散 LLM 的 KV 缓存卸载 | 支撑现有不足（长上下文恢复） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21868) | WiSP | MoE 模型的工作集管理 | 支撑大多数现有方法（批处理内存管理） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21101) | DPIFrame | CTR 模型推理的双层并行加速框架 | 支撑现有不足（并行计算模式） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23265) | Node-Level Performance and Energy Characterization | 科学工作负载的性能与能效表征 | 支撑大多数现有方法（性能评估方法） |
+
+**该论文两个创新点之间的关系**：
+创新点三解决“如何通过量化压缩减少内存带宽需求”，创新点四解决“如何通过架构创新提升批处理吞吐和容错能力”。二者属于同一论文主题，但分别对应模型压缩和系统架构两个技术层面，不存在重复。
+
+**建议实验设计**：
+- **对比方法**：GRINQH [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23419)、HyperQuant [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23406)、BatchGen [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21712)、Concordia [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23521)
+- **实验数据或场景**：Llama3/Qwen3 系列模型（如 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23419) 所用）、长上下文推理场景（如 [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21633) 所用）
+- **评价指标**：解码吞吐量、量化后模型质量（困惑度/下游任务准确率）、故障恢复时间、GPU 利用率
+- **消融实验**：分离阶段感知量化与稀疏化的贡献；比较协同设计与独立优化的效果差异
+
+---
+
+## 论文方向三：分布式训练与模型压缩的协同优化
+
+**拟定论文题目**：面向低带宽环境的分布式训练通信优化与量化压缩管道协同方法
+
+**论文核心问题**：如何通过近似同步通信优化、量化压缩管道与低资源硬件适配的协同设计，降低大规模模型训练与部署的计算与存储开销。
+
+### 创新点五：基于因子化 Gossip 的非阻塞分布式训练通信优化
+
+大多数现有分布式训练方法依赖精确同步，如 DiLoCo 虽然降低了通信频率，但其外同步仍然是带宽密集型的，且对掉队者和瞬时故障脆弱 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22768)[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22917)。少数现有方法如 Factored Gossip DiLoCo 将精确同步松弛为通过混合/gossip 实现的近似同步，在延迟和通信故障下优雅降级，但其非阻塞混合步骤与阻塞混合步骤的权衡策略仍基于固定规则，未能根据实时网络条件和计算负载动态调整 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22768)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21497)。为此，本文提出基于因子化 Gossip 的非阻塞分布式训练通信优化方法，将 DiLoCo 同步分解为可重叠计算的非阻塞混合步骤和收紧工作节点一致性的阻塞混合步骤，并引入基于网络带宽和计算利用率的动态权衡机制，以在低带宽条件下最大化计算利用率的同时保持优化稳定性 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22768)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21497)[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22917)。
+
+- **创新类型**：方法设计创新 + 性能预测创新
+- **创新性判断**：Factored Gossip DiLoCo [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22768) 是文献池中最接近的工作，但其权衡策略是静态的。GRAIN [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22917) 提出了基于最小范数的梯度聚合方法，可借鉴其思路。HBLL [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21497) 提出了 O(log N) 并行时间复杂度的分层块局部学习，其非阻塞思路可参考。本文的创新在于将动态权衡机制引入因子化 Gossip 框架。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22768) | Factored Gossip DiLoCo | 因子化 Gossip 近似同步框架 | 支撑大多数现有方法（精确同步）及少数方法（近似同步） |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22917) | GRAIN | 基于最小范数的梯度聚合 | 支撑现有不足（梯度冲突解决） |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21497) | HBLL | O(log N) 并行时间复杂度的分层块局部学习 | 支撑少数现有方法（非阻塞学习）及本文差异（动态权衡） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22189) | L20-Edu-135M | 单 GPU 数据高效小语言模型训练 | 支撑大多数现有方法（资源受限训练） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23265) | Node-Level Performance and Energy Characterization | 科学工作负载性能与能效表征 | 支撑现有不足（性能建模） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21257) | OpenPangu Quantization on Ascend NPUs | 量化方法在 NPU 上的系统评估 | 支撑大多数现有方法（训练后量化） |
+
+### 创新点六：率失真最优的量化压缩管道与低资源硬件适配
+
+大多数现有量化压缩方法在 LLM 和扩散模型上取得了显著效果，但在低资源硬件（如单 GPU、NPU）上的适配仍不充分，尤其是在超低精度（2-bit 及以下）设置下，量化后模型质量急剧下降 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23406)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21257)。少数现有方法如 HyperQuant 通过组合随机 Hadamard 变换、最优格点量化和近熵最优编码实现了率失真最优的量化管道，但其在低资源硬件上的计算开销和内存布局优化尚未系统研究 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23406)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22189)。为此，本文提出率失真最优的量化压缩管道与低资源硬件适配方法，在 HyperQuant 的率失真最优框架基础上，引入层级嵌套内存布局和计算-存储权衡策略，针对单 GPU 和 NPU 的有限显存和计算能力进行适配，以在 3-4 bit 设置下实现近无损压缩，在 2-bit 设置下保持可用的模型质量 [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23406)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22189)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21257)。
+
+- **创新类型**：方法设计创新 + 泛化迁移创新
+- **创新性判断**：HyperQuant [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23406) 是文献池中最先进的量化管道，但其在低资源硬件上的适配尚未系统研究。L20-Edu-135M [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22189) 展示了单 GPU 训练的可行性。OpenPangu 量化研究 [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21257) 揭示了超低精度量化的挑战。本文的创新在于将率失真最优量化管道适配到低资源硬件场景。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23406) | HyperQuant | 率失真最优量化管道 | 支撑大多数现有方法（量化压缩）及少数方法（率失真最优） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21257) | OpenPangu Quantization on Ascend NPUs | 量化方法在 NPU 上的系统评估 | 支撑大多数现有方法（低资源量化）及现有不足（超低精度挑战） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22189) | L20-Edu-135M | 单 GPU 数据高效训练 | 支撑现有不足（低资源硬件适配） |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23419) | GRINQH | 分级输入量化层次 | 支撑少数现有方法（分级量化）及本文差异（率失真框架） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21868) | WiSP | MoE 模型的工作集管理 | 支撑现有不足（内存布局优化） |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22807) | KaLM-Reranker-V1 | 解耦查询和段落计算 | 支撑现有不足（计算-存储权衡） |
+
+**该论文两个创新点之间的关系**：
+创新点五解决“分布式训练中如何减少通信开销”，创新点六解决“模型压缩后如何在低资源硬件上高效部署”。二者属于同一论文主题（训练与部署的协同优化），但分别对应训练阶段和部署阶段，不存在重复。
+
+**建议实验设计**：
+- **对比方法**：Factored Gossip DiLoCo [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22768)、HyperQuant [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23406)、GRINQH [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23419)
+- **实验数据或场景**：亿级参数语言模型（如 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22768) 所用）、单 GPU/NPU 环境（如 [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22189)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21257) 所用）
+- **评价指标**：计算利用率、训练进度（损失/下游任务准确率）、量化后模型质量、压缩比、故障恢复能力
+- **消融实验**：分离动态权衡机制与静态权衡的贡献；比较率失真最优管道与固定精度量化的效果差异
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|----------|--------------|----------|------------|----------|----------|----------------------|----------|
+| 论文一 | 面向 LLM 智能体的程序性记忆评估与假设驱动技能优化方法 | 如何评估和优化智能体技能的可迁移性与安全性 | 多维评估框架 + 假设驱动安全更新 | 技能评估体系、配对执行验证、渐进式披露 | ALFWorld、企业任务套件 | 聚焦智能体技能层，不涉及推理效率或训练优化 | 低 |
+| 论文二 | 面向大模型推理的量化压缩、批处理架构与 GPU 容错协同优化方法 | 如何突破推理的内存带宽、吞吐和容错瓶颈 | 阶段感知量化压缩 + 协程批处理与容错协同 | 混合精度量化、序列协程模型、持久内核检查点 | Llama3/Qwen3 推理、长上下文场景 | 聚焦推理部署效率，不涉及智能体技能或训练优化 | 低 |
+| 论文三 | 面向低带宽环境的分布式训练通信优化与量化压缩管道协同方法 | 如何降低训练与部署的计算和存储开销 | 因子化 Gossip 通信优化 + 率失真最优量化适配 | 近似同步、动态权衡、层级内存布局 | 亿级参数模型训练、单 GPU/NPU 部署 | 聚焦训练与部署协同，不涉及智能体技能或推理架构 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|----------|----------|----------|----------------------|------------------|--------------|------|
+| 论文一 | 技能可迁移性与安全性评估框架 | 基于可证伪假设的技能优化与安全更新 | 是 | 是（评估 vs 优化） | 否 | 可保留 |
+| 论文二 | 阶段感知混合精度量化与稀疏化协同压缩 | 基于序列协程模型的批处理架构与 GPU 容错协同 | 是 | 是（模型压缩 vs 系统架构） | 否 | 可保留 |
+| 论文三 | 基于因子化 Gossip 的非阻塞分布式训练通信优化 | 率失真最优量化压缩管道与低资源硬件适配 | 是 | 是（训练通信 vs 部署压缩） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23127) Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation. arXiv:2606.23127, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22613) SkillAudit: From Fixed-Suite Benchmarking to Skill-Centered Assessment. arXiv:2606.22613, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22768) Factored Gossip DiLoCo: Reducing Blocking Communication in DiLoCo. arXiv:2606.22768, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22917) GRAIN: Group Aggregation via Min-Norm Objective. arXiv:2606.22917, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22807) KaLM-Reranker-V1: Fast but Not Late Interaction for Compressed Document Reranking. arXiv:2606.22807, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23419) GRINQH: Graded Input-based Quantization Hierarchy for Efficient LLM Generation. arXiv:2606.23419, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.20683) From Question Answering to Task Completion: A Survey on Agent System and Harness Design. arXiv:2606.20683, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21712) BatchGen: An Architecture for Scalable and Efficient Batch Inference. arXiv:2606.21712, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23521) Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference. arXiv:2606.23521, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.20989) OxyMake: A Formally-Specified, Content-Addressable Workflow Engine. arXiv:2606.20989, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22906) From Fragments to Paths: Task-Level Context Recovery for Large Industrial Codebases. arXiv:2606.22906, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22330) Hypothesis-Driven Skill Optimization for LLM Agents. arXiv:2606.22330, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21497) Breaking chains with trees: Deep learning with O(log N) parallel time complexity. arXiv:2606.21497, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.20670) Towards CSI-Native Foundation Models: A Channel-Adaptive Roadmap for 6G. arXiv:2606.20670, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21868) WiSP: A Working-Set View of Mixture-of-Experts Serving on Extremely Low-Resource Hardware. arXiv:2606.21868, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23406) HyperQuant: A Rate-Distortion-Optimal Quantization Pipeline for Large Language and Diffusion Models. arXiv:2606.23406, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21144) AdaMem: Learning What to Remember for Personalized Long-Horizon LLM Agents. arXiv:2606.21144, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22953) Plans Don't Persist: Why Context Management Is Load Bearing for LLM Agents. arXiv:2606.22953, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.20740) VeriBound: PAC-Bayesian Generalization Bounds for Process Reward Models Trained with Formal Verification Tools. arXiv:2606.20740, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23575) Solve for the Hyperparameter, Skip the Search: Kolmogorov-Optimal Scaling Laws for Spline Regression. arXiv:2606.23575, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21005) Building Agent Harnesses for Scientific Curation from Multimodal Sources. arXiv:2606.21005, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.20758) A Topology-Aware, Memory-Centric Architecture that Separates Root-Cause Derivation from Root-Cause Explanation. arXiv:2606.20758, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22189) L20-Edu-135M: An Auditable Single-GPU Study of Data-Efficient Small Language Modeling. arXiv:2606.22189, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23265) Node-Level Performance and Energy Characterization of Flagship Science Applications on SuperMUC-NG Phase 2. arXiv:2606.23265, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.23375) Measuring & Mitigating Over-Alignment for LLMs in Multilingual Criminal Law Courts. arXiv:2606.23375, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21633) HERALD: High-Throughput Block Diffusion LLM Serving via CPU-GPU Cooperative KV Cache Retrieval. arXiv:2606.21633, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21072) An Efficient and Effective Architecture for Large-Scale Traffic Prediction via Geometry-Adaptive Square Partitioning. arXiv:2606.21072, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.22502) WebCQ: Cooperative Multi-Agent Deep Reinforcement Learning for Scalable Web GUI Testing. arXiv:2606.22502, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21257) An Empirical Study of OpenPangu Quantization on Ascend NPUs. arXiv:2606.21257, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-23&paperId=2606.21101) DPIFrame: A Dual-Level Parallelism Acceleration Framework for CTR Model Inference. arXiv:2606.21101, 2026.
+
+---
+
+## 自检结果
+
+1. 是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：**是**
+2. 是否避免将一篇论文拆成六个创新点：**是**
+3. 是否避免生成六篇论文各一个创新点：**是**
+4. 每篇论文内部两个创新点是否属于同一论文主题：**是**
+5. 每篇论文内部两个创新点是否互补而不重复：**是**
+6. 三篇论文之间是否研究问题不同：**是**
+7. 三篇论文之间是否核心方法不同：**是**
+8. 三篇论文之间是否实验验证重点不同：**是**
+9. 每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：**是**
+10. 每个创新点是否至少引用 3 篇池内文献：**是**（每个创新点引用 6 篇池内文献）
+11. 是否说明每篇文献的支撑作用：**是**
+12. 是否避免“首次提出”“填补空白”等绝对化表述：**是**
+13. 是否建立三篇论文方向去重矩阵：**是**
+14. 是否建立每篇论文内部创新点去重检查表：**是**

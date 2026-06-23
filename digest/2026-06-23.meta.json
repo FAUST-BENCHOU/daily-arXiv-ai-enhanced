@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-23",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM 智能体技能与记忆系统的评估与优化",
+      "blurb": "围绕 LLM 智能体的程序性记忆、技能审计与假设驱动优化，探讨技能的可迁移性、评估框架与安全更新机制。"
+    },
+    {
+      "title": "大模型推理与部署的效率优化：量化、批处理与容错",
+      "blurb": "聚焦 LLM 推理阶段的量化压缩、批处理架构与 GPU 容错机制，解决内存带宽瓶颈、长上下文吞吐与故障恢复问题。"
+    },
+    {
+      "title": "分布式训练与模型压缩的协同优化",
+      "blurb": "从分布式训练通信优化、量化压缩管道与低资源硬件适配出发，降低大规模模型训练与部署的计算与存储开销。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.23127",
+      "title": "Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation"
+    },
+    {
+      "idx": 2,
+      "id": "2606.22613",
+      "title": "SkillAudit: From Fixed-Suite Benchmarking to Skill-Centered Assessment"
+    },
+    {
+      "idx": 3,
+      "id": "2606.22768",
+      "title": "Factored Gossip DiLoCo: Reducing Blocking Communication in DiLoCo"
+    },
+    {
+      "idx": 4,
+      "id": "2606.22917",
+      "title": "GRAIN: Group Aggregation via Min-Norm Objective"
+    },
+    {
+      "idx": 5,
+      "id": "2606.22807",
+      "title": "KaLM-Reranker-V1: Fast but Not Late Interaction for Compressed Document Reranking"
+    },
+    {
+      "idx": 6,
+      "id": "2606.23419",
+      "title": "GRINQH: Graded Input-based Quantization Hierarchy for Efficient LLM Generation"
+    },
+    {
+      "idx": 7,
+      "id": "2606.20683",
+      "title": "From Question Answering to Task Completion: A Survey on Agent System and Harness Design"
+    },
+    {
+      "idx": 8,
+      "id": "2606.21712",
+      "title": "BatchGen: An Architecture for Scalable and Efficient Batch Inference"
+    },
+    {
+      "idx": 9,
+      "id": "2606.23521",
+      "title": "Concordia: JIT-Compiled Persistent-Kernel Checkpointing for Fault-Tolerant LLM Inference"
+    },
+    {
+      "idx": 10,
+      "id": "2606.20989",
+      "title": "OxyMake: A Formally-Specified, Content-Addressable Workflow Engine"
+    },
+    {
+      "idx": 11,
+      "id": "2606.22906",
+      "title": "From Fragments to Paths: Task-Level Context Recovery for Large Industrial Codebases"
+    },
+    {
+      "idx": 12,
+      "id": "2606.22330",
+      "title": "Hypothesis-Driven Skill Optimization for LLM Agents"
+    },
+    {
+      "idx": 13,
+      "id": "2606.21497",
+      "title": "Breaking chains with trees: Deep learning with $\\mathcal{O}(\\log N)$ parallel time complexity"
+    },
+    {
+      "idx": 14,
+      "id": "2606.20670",
+      "title": "Towards CSI-Native Foundation Models: A Channel-Adaptive Roadmap for 6G"
+    },
+    {
+      "idx": 15,
+      "id": "2606.21868",
+      "title": "WiSP: A Working-Set View of Mixture-of-Experts Serving on Extremely Low-Resource Hardware"
+    },
+    {
+      "idx": 16,
+      "id": "2606.23406",
+      "title": "HyperQuant: A Rate-Distortion-Optimal Quantization Pipeline for Large Language and Diffusion Models"
+    },
+    {
+      "idx": 17,
+      "id": "2606.21144",
+      "title": "AdaMem: Learning What to Remember for Personalized Long-Horizon LLM Agents"
+    },
+    {
+      "idx": 18,
+      "id": "2606.22953",
+      "title": "Plans Don't Persist: Why Context Management Is Load Bearing for LLM Agents"
+    },
+    {
+      "idx": 19,
+      "id": "2606.20740",
+      "title": "VeriBound: PAC-Bayesian Generalization Bounds for Process Reward Models Trained with Formal Verification Tools"
+    },
+    {
+      "idx": 20,
+      "id": "2606.23575",
+      "title": "Solve for the Hyperparameter, Skip the Search: Kolmogorov-Optimal Scaling Laws for Spline Regression"
+    },
+    {
+      "idx": 21,
+      "id": "2606.21005",
+      "title": "Building Agent Harnesses for Scientific Curation from Multimodal Sources"
+    },
+    {
+      "idx": 22,
+      "id": "2606.20758",
+      "title": "A Topology-Aware, Memory-Centric Architecture that Separates Root-Cause Derivation from Root-Cause Explanation"
+    },
+    {
+      "idx": 23,
+      "id": "2606.22189",
+      "title": "L20-Edu-135M: An Auditable Single-GPU Study of Data-Efficient Small Language Modeling"
+    },
+    {
+      "idx": 24,
+      "id": "2606.23265",
+      "title": "Node-Level Performance and Energy Characterization of Flagship Science Applications on SuperMUC-NG Phase 2"
+    },
+    {
+      "idx": 25,
+      "id": "2606.23375",
+      "title": "Measuring & Mitigating Over-Alignment for LLMs in Multilingual Criminal Law Courts"
+    },
+    {
+      "idx": 26,
+      "id": "2606.21633",
+      "title": "HERALD: High-Throughput Block Diffusion LLM Serving via CPU-GPU Cooperative KV Cache Retrieval"
+    },
+    {
+      "idx": 27,
+      "id": "2606.21072",
+      "title": "An Efficient and Effective Architecture for Large-Scale Traffic Prediction via Geometry-Adaptive Square Partitioning"
+    },
+    {
+      "idx": 28,
+      "id": "2606.22502",
+      "title": "WebCQ: Cooperative Multi-Agent Deep Reinforcement Learning for Scalable Web GUI Testing"
+    },
+    {
+      "idx": 29,
+      "id": "2606.21257",
+      "title": "An Empirical Study of OpenPangu Quantization on Ascend NPUs"
+    },
+    {
+      "idx": 30,
+      "id": "2606.21101",
+      "title": "DPIFrame: A Dual-Level Parallelism Acceleration Framework for CTR Model Inference"
+    }
+  ]
+}
