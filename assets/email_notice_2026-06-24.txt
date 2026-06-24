@@ -1,0 +1,9 @@
+每日硬凑师兄要求的创新点 2026-06-24
+
+今日三个主题概要：
+1. 面向长上下文与流式推理的 KV-Cache 压缩与量化方法 — 针对 LLM 推理中 KV-Cache 内存瓶颈，从语义检索引导的逐层预算分配（CompressKV）、RoPE 感知的块级比特分配（Block-GTQ）以及基于桥接令牌与加权采样的流式驱逐（Nexus Sampling）三个角度设计创新方案。
+2. 异构环境下的分布式训练与推理系统优化 — 围绕半异步联邦学习（FedSaSync）、去中心化分块训练（BlockTrain）以及 GPU 机密计算下的推理性能恢复（Serialized Bridge）等系统级挑战，提出面向客户端异构性、通信效率和可信硬件的调优框架。
+3. 面向智能体与工作流的可迁移、可诊断与可审计框架 — 针对 LLM 智能体在代码修复定位（SHERLOC）、遗留工作流迁移（Strangler Fig 路径）以及长时任务执行边界管理（LemonHarness）中的可迁移性与可审计性不足，提出无需微调的定位框架、渐进式重构分类法和集成执行边界。
+
+完整创新点、矩阵与文献引用见：
+https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/digest-viewer.html?date=2026-06-24

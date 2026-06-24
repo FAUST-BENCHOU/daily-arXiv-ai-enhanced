@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-24",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "面向长上下文与流式推理的 KV-Cache 压缩与量化方法",
+      "blurb": "针对 LLM 推理中 KV-Cache 内存瓶颈，从语义检索引导的逐层预算分配（CompressKV）、RoPE 感知的块级比特分配（Block-GTQ）以及基于桥接令牌与加权采样的流式驱逐（Nexus Sampling）三个角度设计创新方案。"
+    },
+    {
+      "title": "异构环境下的分布式训练与推理系统优化",
+      "blurb": "围绕半异步联邦学习（FedSaSync）、去中心化分块训练（BlockTrain）以及 GPU 机密计算下的推理性能恢复（Serialized Bridge）等系统级挑战，提出面向客户端异构性、通信效率和可信硬件的调优框架。"
+    },
+    {
+      "title": "面向智能体与工作流的可迁移、可诊断与可审计框架",
+      "blurb": "针对 LLM 智能体在代码修复定位（SHERLOC）、遗留工作流迁移（Strangler Fig 路径）以及长时任务执行边界管理（LemonHarness）中的可迁移性与可审计性不足，提出无需微调的定位框架、渐进式重构分类法和集成执行边界。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.24531",
+      "title": "Unified Position-Invariant Random Access Through Two Compression Layers via Absolute-Offset Coordinates: A Bit-Perfect Device-Resident Proof"
+    },
+    {
+      "idx": 2,
+      "id": "2606.24040",
+      "title": "Towards Version-aware Operations and Transaction Memories for Multi-layer MeMo"
+    },
+    {
+      "idx": 3,
+      "id": "2606.24722",
+      "title": "Decentralised AI Training and Inference with BlockTrain"
+    },
+    {
+      "idx": 4,
+      "id": "2606.24420",
+      "title": "Beyond Logprobs: A Multi-Signal Confidence Engine for LLM-Based Document Field Extraction"
+    },
+    {
+      "idx": 5,
+      "id": "2606.24855",
+      "title": "OpenThoughts-Agent: Data Recipes for Agentic Models"
+    },
+    {
+      "idx": 6,
+      "id": "2606.24230",
+      "title": "Semi-asynchronous Federated Learning in Flower: Framework Extension and Performance Assessment"
+    },
+    {
+      "idx": 7,
+      "id": "2606.24007",
+      "title": "Fast and Slow Variational Continual Learning"
+    },
+    {
+      "idx": 8,
+      "id": "2606.24073",
+      "title": "Hash Table Design for RDMA:Challenges and Opportunities"
+    },
+    {
+      "idx": 9,
+      "id": "2606.24748",
+      "title": "A Natively Blocked, Device-Resident Algebraic Multigrid GPU Path in PETSc"
+    },
+    {
+      "idx": 10,
+      "id": "2606.24173",
+      "title": "Lightweight Transformer Models for On-Device Fault Detection: A Benchmark Study on Resource-Constrained Deployment"
+    },
+    {
+      "idx": 11,
+      "id": "2606.24597",
+      "title": "Qwen-AgentWorld: Language World Models for General Agents"
+    },
+    {
+      "idx": 12,
+      "id": "2606.24820",
+      "title": "SHERLOC: Structured Diagnostic Localization for Code Repair Agents"
+    },
+    {
+      "idx": 13,
+      "id": "2606.24311",
+      "title": "LemonHarness Technical Report"
+    },
+    {
+      "idx": 14,
+      "id": "2606.23690",
+      "title": "Beyond the Autoregressive Horizon: A Comprehensive Survey of Diffusion Models, World Modelling, and State Space Models for Code"
+    },
+    {
+      "idx": 15,
+      "id": "2606.24083",
+      "title": "CAVEWOMAN: How Large Language Models Behave Under Linguistic Input and Output Compression"
+    },
+    {
+      "idx": 16,
+      "id": "2606.23969",
+      "title": "The Serialized Bridge: Understanding and Recovering LLM Serving Performance under Blackwell GPU Confidential Computing"
+    },
+    {
+      "idx": 17,
+      "id": "2606.24598",
+      "title": "Toward Self-Evolution-Ready Workflow Harnesses: A Reversible Migration Path and Convertibility Taxonomy for Expert LLM Pipelines"
+    },
+    {
+      "idx": 18,
+      "id": "2606.24286",
+      "title": "AVOC: Enhancing Hour-Level Audio-Video Understanding in Omni-Modal LLMs via Retrieval-Inspired Token Compression"
+    },
+    {
+      "idx": 19,
+      "id": "2606.24467",
+      "title": "CompressKV: Semantic-Retrieval-Guided KV-Cache Compression for Resource-Efficient Long-Context LLM Inference"
+    },
+    {
+      "idx": 20,
+      "id": "2606.24780",
+      "title": "BluTrain: A C++/CUDA Framework for AI Systems"
+    },
+    {
+      "idx": 21,
+      "id": "2606.24417",
+      "title": "cuSBF: A Minimizer-Aware Bloom Filter for Genomic Sequence Data on Modern GPUs"
+    },
+    {
+      "idx": 22,
+      "id": "2606.24530",
+      "title": "NatureBench: Can Coding Agents Match the Published SOTA of Nature-Family Papers?"
+    },
+    {
+      "idx": 23,
+      "id": "2606.24133",
+      "title": "Holistic Data Scheduler for LLM Pre-training via Multi-Objective Reinforcement Learning"
+    },
+    {
+      "idx": 24,
+      "id": "2606.24460",
+      "title": "The African Language Tax: Quantifying the Cost, Latency, and Context Penalty of Tokenizing African Languages in Frontier LLMs"
+    },
+    {
+      "idx": 25,
+      "id": "2606.24650",
+      "title": "Harmonic: Hierarchical State Space Models for Efficient Long-Context Language Modeling"
+    },
+    {
+      "idx": 26,
+      "id": "2606.23961",
+      "title": "Forget Without Compromise: Nexus Sampling for Streaming KV-Cache Eviction Under Fixed Budgets"
+    },
+    {
+      "idx": 27,
+      "id": "2606.23927",
+      "title": "RIFT-Bench: Dynamic Red-teaming For Agentic AI Systems"
+    },
+    {
+      "idx": 28,
+      "id": "2606.23742",
+      "title": "Low-power analogue neural networks with trainable nonlinear connections for continuous control"
+    },
+    {
+      "idx": 29,
+      "id": "2606.24033",
+      "title": "RoPE-Aware Bit Allocation for KV-Cache Quantization"
+    },
+    {
+      "idx": 30,
+      "id": "2606.23001",
+      "title": "EnerInfer: Energy-Aware On-Device LLM Inference"
+    }
+  ]
+}
