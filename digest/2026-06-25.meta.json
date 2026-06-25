@@ -1,0 +1,110 @@
+{
+  "date": "2026-06-25",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理效率与缓存管理",
+      "blurb": "围绕 KV-Cache 淘汰策略、量化位分配与冷 MoE 模型跨池共享，探索在固定预算与长上下文场景下提升推理吞吐与内存利用率的系统级方法。"
+    },
+    {
+      "title": "大语言模型部署与资源调优",
+      "blurb": "面向端侧能效感知推理、在线数据混合调度与异步策略蒸馏中的陈旧性权衡，研究在资源约束下兼顾性能、能耗与训练效率的优化机制。"
+    },
+    {
+      "title": "智能体经济与工作流工程",
+      "blurb": "聚焦 Web4 自主智能体生态实证、遗留 LLM 工作流可逆迁移路径以及代码生成模型的时间知识分层，探讨智能体系统从部署到演化的工程挑战与治理需求。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.25876",
+      "title": "The Web4 Agent Economy: A Large-Scale Empirical Study of the Landscape, Challenges, and Opportunities"
+    },
+    {
+      "idx": 2,
+      "id": "2606.23961",
+      "title": "Forget Without Compromise: Nexus Sampling for Streaming KV-Cache Eviction Under Fixed Budgets"
+    },
+    {
+      "idx": 3,
+      "id": "2606.25402",
+      "title": "LibEvoBench: Probing Temporal Knowledge Stratification in Code Generation Models"
+    },
+    {
+      "idx": 4,
+      "id": "2606.24143",
+      "title": "AsyncOPD: How Stale Can On-Policy Distillation Be?"
+    },
+    {
+      "idx": 5,
+      "id": "2606.23001",
+      "title": "EnerInfer: Energy-Aware On-Device LLM Inference"
+    },
+    {
+      "idx": 6,
+      "id": "2606.24506",
+      "title": "CrossPool: Efficient Multi-LLM Serving for Cold MoE Models through KV-Cache and Weight Disaggregation"
+    },
+    {
+      "idx": 7,
+      "id": "2606.24650",
+      "title": "Harmonic: Hierarchical State Space Models for Efficient Long-Context Language Modeling"
+    },
+    {
+      "idx": 8,
+      "id": "2606.23993",
+      "title": "Learning to Trigger: Reinforcement Learning at the Large Hadron Collider"
+    },
+    {
+      "idx": 9,
+      "id": "2606.24083",
+      "title": "CAVEWOMAN: How Large Language Models Behave Under Linguistic Input and Output Compression"
+    },
+    {
+      "idx": 10,
+      "id": "2606.25949",
+      "title": "The Dependency Black Hole"
+    },
+    {
+      "idx": 11,
+      "id": "2606.23742",
+      "title": "Low-power analogue neural networks with trainable nonlinear connections for continuous control"
+    },
+    {
+      "idx": 12,
+      "id": "2606.24598",
+      "title": "Toward Self-Evolution-Ready Workflow Harnesses: A Reversible Migration Path and Convertibility Taxonomy for Expert LLM Pipelines"
+    },
+    {
+      "idx": 13,
+      "id": "2606.24113",
+      "title": "FedUP: One-Shot Federated Unlearning via Centroid-Guided Plug-in Filters"
+    },
+    {
+      "idx": 14,
+      "id": "2606.24133",
+      "title": "Holistic Data Scheduler for LLM Pre-training via Multi-Objective Reinforcement Learning"
+    },
+    {
+      "idx": 15,
+      "id": "2606.24679",
+      "title": "FlowPipe: LLM-Enhanced Conditional Generative Flow Networks for Data Preparation Pipeline Construction"
+    },
+    {
+      "idx": 16,
+      "id": "2606.25120",
+      "title": "Fifty Years of Specification Completeness: What Aviation Certification Tells AI Governance About Epoch Limits, Proof Surfaces, and the Structural Gap"
+    },
+    {
+      "idx": 17,
+      "id": "2606.24033",
+      "title": "RoPE-Aware Bit Allocation for KV-Cache Quantization"
+    },
+    {
+      "idx": 18,
+      "id": "2606.24173",
+      "title": "Lightweight Transformer Models for On-Device Fault Detection: A Benchmark Study on Resource-Constrained Deployment"
+    }
+  ]
+}
