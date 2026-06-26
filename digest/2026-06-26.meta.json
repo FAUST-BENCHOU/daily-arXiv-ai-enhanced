@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-26",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理加速与视觉/扩散/缓存压缩",
+      "blurb": "围绕 MLLM 视觉 Token 剪枝、扩散 LLM 动态缓存与并行解码、KV Cache 信息感知压缩等方向，探索训练无关、模型无关的推理加速方法。"
+    },
+    {
+      "title": "LLM 服务系统与异构资源编排",
+      "blurb": "聚焦 MoE 模型运行时并行度切换、长上下文分页调度、异构训练模拟器与自适应资源编排，解决生产级 LLM 部署中的动态负载与异构硬件挑战。"
+    },
+    {
+      "title": "LLM 智能体与代码协作的可靠性与治理",
+      "blurb": "研究代码智能体的静态锚定导航、知识协作的信任工作流、以及自主 AI 系统的机构化治理模型，提升 LLM 智能体在软件工程与高风险场景中的可复现性与可控性。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.27161",
+      "title": "TOPS: First-Principles Visual Token Pruning via Constructing Token Optimal Preservation Sets for Efficient MLLM Inference"
+    },
+    {
+      "idx": 2,
+      "id": "2606.26979",
+      "title": "How Much Static Structure Do Code Agents Need? A Study of Deterministic Anchoring"
+    },
+    {
+      "idx": 3,
+      "id": "2606.26686",
+      "title": "Do Safety Guardrails Need to Reason? LeanGuard: A Fast and Light Approach for Robust Moderation"
+    },
+    {
+      "idx": 4,
+      "id": "2605.00410",
+      "title": "Agent Capsules: Quality-Gated Granularity Control for Multi-Agent LLM Pipelines"
+    },
+    {
+      "idx": 5,
+      "id": "2606.26292",
+      "title": "FinWhale: An Optimally Resilient Two-Round Terminating DAG Protocol"
+    },
+    {
+      "idx": 6,
+      "id": "2606.26657",
+      "title": "Target-Aware Bandit Allocation for Scalable Surrogate Optimization in Chemical Space"
+    },
+    {
+      "idx": 7,
+      "id": "2606.26383",
+      "title": "SOLAR: AI-Powered Speed-of-Light Performance Analysis"
+    },
+    {
+      "idx": 8,
+      "id": "2606.26538",
+      "title": "CascadeFormer: Depth-Tapered Transformers Motivated by Gradient Fan-in Asymmetry"
+    },
+    {
+      "idx": 9,
+      "id": "2606.26721",
+      "title": "Knowledge-Based Pull Requests: A Trusted Workflow for Agent-Mediated Knowledge Collaboration"
+    },
+    {
+      "idx": 10,
+      "id": "2606.26511",
+      "title": "Temporal Validity in Retrieval Memory: Eliminating Stale-Fact Errors for AI Agents over Evolving Knowledge"
+    },
+    {
+      "idx": 11,
+      "id": "2606.26861",
+      "title": "Cascaded Multi-Granularity Pruning for On-Device LLM Inference in Industrial IoT"
+    },
+    {
+      "idx": 12,
+      "id": "2606.26744",
+      "title": "HyperDFlash: MHC-Aligned Block Speculative Decoding with Gated Residual Reduction"
+    },
+    {
+      "idx": 13,
+      "id": "2606.27242",
+      "title": "The Geometry of Updates: Fisher Alignment at Vocabulary Scale"
+    },
+    {
+      "idx": 14,
+      "id": "2606.26671",
+      "title": "NebulaExp-8B: An Empirical Post-Training Pipeline via Full-Scale Ablation Research"
+    },
+    {
+      "idx": 15,
+      "id": "2606.26298",
+      "title": "Governing Actions, Not Agents: Institutional Attestation as a Governance Model for Autonomous AI Systems"
+    },
+    {
+      "idx": 16,
+      "id": "2606.26769",
+      "title": "ResilPhase: Plug-and-Play Phase Mapping and Noise-Resilient Macro-Trajectory Extrapolation for Diffusion Acceleration"
+    },
+    {
+      "idx": 17,
+      "id": "2606.26120",
+      "title": "Dynamic-dLLM: Dynamic Cache-Budget and Adaptive Parallel Decoding for Training-Free Acceleration of Diffusion LLM"
+    },
+    {
+      "idx": 18,
+      "id": "2606.26650",
+      "title": "CAT-Q: Cost-efficient and Accurate Ternary Quantization for LLMs"
+    },
+    {
+      "idx": 19,
+      "id": "2606.26217",
+      "title": "Fast LeWorldModel"
+    },
+    {
+      "idx": 20,
+      "id": "2606.26493",
+      "title": "Nemotron-TwoTower: Diffusion Language Modeling with Pretrained Autoregressive Context"
+    },
+    {
+      "idx": 21,
+      "id": "2606.26453",
+      "title": "Optimizing CUDA like a Human: Micro-Profiling Tools as Expert Surrogates for LLM-Based GPU Kernel Optimization"
+    },
+    {
+      "idx": 22,
+      "id": "2606.26633",
+      "title": "Simulating Unified Tensor Resharding in heterogeneous AI systems"
+    },
+    {
+      "idx": 23,
+      "id": "2606.26346",
+      "title": "How Do Tool-Augmented LLM Agents Perform on Real-World Energy Analytics Tasks?"
+    },
+    {
+      "idx": 24,
+      "id": "2606.27005",
+      "title": "Adaptive Utility driven Resource Orchestration for Resilient AI (AURORA-AI)"
+    },
+    {
+      "idx": 25,
+      "id": "2606.26421",
+      "title": "Otter Weather: Skillful and Computationally Efficient Medium-Range Weather Forecasting"
+    },
+    {
+      "idx": 26,
+      "id": "2606.26185",
+      "title": "Necessary but Not Sufficient: Temperature Control and Reproducibility in LLM-as-Judge Safety Evaluations"
+    },
+    {
+      "idx": 27,
+      "id": "2606.27045",
+      "title": "The Spec Growth Engine: Spec-Anchored, Code-Coupled, Drift-Enforced Architecture for AI-Assisted Software Development"
+    },
+    {
+      "idx": 28,
+      "id": "2606.26875",
+      "title": "Information-Aware KV Cache Compression for Long Reasoning"
+    },
+    {
+      "idx": 29,
+      "id": "2606.26607",
+      "title": "Moebius: Serving Mixture-of-Expert Models with Seamless Runtime Parallelism Switch"
+    },
+    {
+      "idx": 30,
+      "id": "2606.26666",
+      "title": "PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs"
+    }
+  ]
+}
