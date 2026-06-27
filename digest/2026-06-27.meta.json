@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-27",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM推理加速与缓存压缩",
+      "blurb": "围绕扩散LLM、KV缓存压缩、投机解码等方向，探索训练无关的推理加速方法与信息感知的缓存管理策略。"
+    },
+    {
+      "title": "AI智能体代码生成与自动修复",
+      "blurb": "聚焦LLM编码智能体的确定性控制、静态结构锚定、基础设施即代码安全修复以及内核自动生成中的专家引导优化。"
+    },
+    {
+      "title": "多模型系统与分布式训练优化",
+      "blurb": "研究多模型路由/投票的共失效上限、异构环境下的分布式训练模拟器、以及矩阵正交化优化器的高效分布式实现。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.26859",
+      "title": "AgentX: Towards Agent-Driven Self-Iteration of Industrial Recommender Systems"
+    },
+    {
+      "idx": 2,
+      "id": "2606.26383",
+      "title": "SOLAR: AI-Powered Speed-of-Light Performance Analysis"
+    },
+    {
+      "idx": 3,
+      "id": "2606.26120",
+      "title": "Dynamic-dLLM: Dynamic Cache-Budget and Adaptive Parallel Decoding for Training-Free Acceleration of Diffusion LLM"
+    },
+    {
+      "idx": 4,
+      "id": "2606.26511",
+      "title": "Temporal Validity in Retrieval Memory: Eliminating Stale-Fact Errors for AI Agents over Evolving Knowledge"
+    },
+    {
+      "idx": 5,
+      "id": "2606.27019",
+      "title": "MinGram: A Minimalist Unigram Tokenizer with High Compression and Competitive Morphological Alignment"
+    },
+    {
+      "idx": 6,
+      "id": "2606.26590",
+      "title": "Empirical Software Engineering TerraProbe: A Layered-Oracle Framework for Detecting Deceptive Fixes in LLM-Assisted Terraform"
+    },
+    {
+      "idx": 7,
+      "id": "2606.27354",
+      "title": "Error-Conditioned Neural Solvers"
+    },
+    {
+      "idx": 8,
+      "id": "2606.26650",
+      "title": "CAT-Q: Cost-efficient and Accurate Ternary Quantization for LLMs"
+    },
+    {
+      "idx": 9,
+      "id": "2606.26924",
+      "title": "A Deterministic Control Plane for LLM Coding Agents"
+    },
+    {
+      "idx": 10,
+      "id": "2606.26979",
+      "title": "How Much Static Structure Do Code Agents Need? A Study of Deterministic Anchoring"
+    },
+    {
+      "idx": 11,
+      "id": "2606.26453",
+      "title": "Optimizing CUDA like a Human: Micro-Profiling Tools as Expert Surrogates for LLM-Based GPU Kernel Optimization"
+    },
+    {
+      "idx": 12,
+      "id": "2606.26164",
+      "title": "\\chisao{}: A GPU-Native Parallel Optimizer for Multimodal Black-Box Functions via Convergence-Anticonvergence Oscillation"
+    },
+    {
+      "idx": 13,
+      "id": "2606.26350",
+      "title": "OpenFinGym: A Verifiable Multi-Task Gym Environment for Evaluating Quant Agents"
+    },
+    {
+      "idx": 14,
+      "id": "2606.26105",
+      "title": "Context Recycling for Long-Horizon LLM Inference"
+    },
+    {
+      "idx": 15,
+      "id": "2606.26758",
+      "title": "EGG: An Expert-Guided Agent Framework for Kernel Generation"
+    },
+    {
+      "idx": 16,
+      "id": "2606.27154",
+      "title": "OpenRCA 2.0: From Outcome Labels to Causal Process Supervision"
+    },
+    {
+      "idx": 17,
+      "id": "2606.26493",
+      "title": "Nemotron-TwoTower: Diffusion Language Modeling with Pretrained Autoregressive Context"
+    },
+    {
+      "idx": 18,
+      "id": "2606.27045",
+      "title": "The Spec Growth Engine: Spec-Anchored, Code-Coupled, Drift-Enforced Architecture for AI-Assisted Software Development"
+    },
+    {
+      "idx": 19,
+      "id": "2606.27330",
+      "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning"
+    },
+    {
+      "idx": 20,
+      "id": "2606.26769",
+      "title": "ResilPhase: Plug-and-Play Phase Mapping and Noise-Resilient Macro-Trajectory Extrapolation for Diffusion Acceleration"
+    },
+    {
+      "idx": 21,
+      "id": "2606.26744",
+      "title": "HyperDFlash: MHC-Aligned Block Speculative Decoding with Gated Residual Reduction"
+    },
+    {
+      "idx": 22,
+      "id": "2606.26649",
+      "title": "Autoformalization of Agent Instructions into Policy-as-Code"
+    },
+    {
+      "idx": 23,
+      "id": "2606.27288",
+      "title": "When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models"
+    },
+    {
+      "idx": 24,
+      "id": "2606.26488",
+      "title": "What Survives When You Compress a Recursive Reasoner for the Edge?"
+    },
+    {
+      "idx": 25,
+      "id": "2606.27217",
+      "title": "CHAMB-GA: A Containerized HPC Scalable Microservice-Based Framework for Genetic Algorithms"
+    },
+    {
+      "idx": 26,
+      "id": "2606.26421",
+      "title": "Otter Weather: Skillful and Computationally Efficient Medium-Range Weather Forecasting"
+    },
+    {
+      "idx": 27,
+      "id": "2606.26292",
+      "title": "FinWhale: An Optimally Resilient Two-Round Terminating DAG Protocol"
+    },
+    {
+      "idx": 28,
+      "id": "2606.26633",
+      "title": "Simulating Unified Tensor Resharding in heterogeneous AI systems"
+    },
+    {
+      "idx": 29,
+      "id": "2606.27153",
+      "title": "DMuon: Efficient Distributed Muon Training with Near-Adam Overhead"
+    },
+    {
+      "idx": 30,
+      "id": "2606.26875",
+      "title": "Information-Aware KV Cache Compression for Long Reasoning"
+    }
+  ]
+}
