@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-28",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM 推理效率与缓存管理",
+      "blurb": "围绕大语言模型推理中的 KV 缓存淘汰、视觉 Token 剪枝、扩散模型加速及长上下文推理优化，探索无需重训练或注意力矩阵的高效推理方法。"
+    },
+    {
+      "title": "AI 智能体与代码系统的结构化可靠性",
+      "blurb": "聚焦代码智能体的确定性锚定、规范-代码漂移检测、形式化策略自动生成以及多智能体管线的质量门控，解决 AI 辅助软件开发中的可复现性与安全性问题。"
+    },
+    {
+      "title": "分布式训练与异构资源优化",
+      "blurb": "针对异构集群上的 LLM 强化学习训练、张量重分片仿真、联邦学习量化及 GBDT 特征筛选，提出面向非均匀硬件与动态负载的资源调度与加速方案。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.26979",
+      "title": "How Much Static Structure Do Code Agents Need? A Study of Deterministic Anchoring"
+    },
+    {
+      "idx": 2,
+      "id": "2606.26657",
+      "title": "Target-Aware Bandit Allocation for Scalable Surrogate Optimization in Chemical Space"
+    },
+    {
+      "idx": 3,
+      "id": "2606.27161",
+      "title": "TOPS: First-Principles Visual Token Pruning via Constructing Token Optimal Preservation Sets for Efficient MLLM Inference"
+    },
+    {
+      "idx": 4,
+      "id": "2606.26649",
+      "title": "Autoformalization of Agent Instructions into Policy-as-Code"
+    },
+    {
+      "idx": 5,
+      "id": "2606.26472",
+      "title": "Epiphany-Aware KV Cache Eviction Without the Attention Matrix"
+    },
+    {
+      "idx": 6,
+      "id": "2606.26997",
+      "title": "RolloutPipe: Overlapping Pipelined Rollout and Training in Disaggregated On-Policy LLM Reinforcement Learning"
+    },
+    {
+      "idx": 7,
+      "id": "2606.26337",
+      "title": "EMA-FS: Accelerating GBDT Training via Gain-Informed Feature Screening"
+    },
+    {
+      "idx": 8,
+      "id": "2606.26859",
+      "title": "AgentX: Towards Agent-Driven Self-Iteration of Industrial Recommender Systems"
+    },
+    {
+      "idx": 9,
+      "id": "2606.26511",
+      "title": "Temporal Validity in Retrieval Memory: Eliminating Stale-Fact Errors for AI Agents over Evolving Knowledge"
+    },
+    {
+      "idx": 10,
+      "id": "2606.26105",
+      "title": "Context Recycling for Long-Horizon LLM Inference"
+    },
+    {
+      "idx": 11,
+      "id": "2606.27288",
+      "title": "When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models"
+    },
+    {
+      "idx": 12,
+      "id": "2606.26769",
+      "title": "ResilPhase: Plug-and-Play Phase Mapping and Noise-Resilient Macro-Trajectory Extrapolation for Diffusion Acceleration"
+    },
+    {
+      "idx": 13,
+      "id": "2606.26308",
+      "title": "Priceless: An examination of Serverless Functions-as-a-Service (FaaS) pricing models"
+    },
+    {
+      "idx": 14,
+      "id": "2606.27045",
+      "title": "The Spec Growth Engine: Spec-Anchored, Code-Coupled, Drift-Enforced Architecture for AI-Assisted Software Development"
+    },
+    {
+      "idx": 15,
+      "id": "2606.26666",
+      "title": "PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs"
+    },
+    {
+      "idx": 16,
+      "id": "2606.26978",
+      "title": "To Run or Not to Run: Analyzing the Cost-Effectiveness of Code Execution in LLM-Based Program Repair"
+    },
+    {
+      "idx": 17,
+      "id": "2606.26633",
+      "title": "Simulating Unified Tensor Resharding in heterogeneous AI systems"
+    },
+    {
+      "idx": 18,
+      "id": "2606.26453",
+      "title": "Optimizing CUDA like a Human: Micro-Profiling Tools as Expert Surrogates for LLM-Based GPU Kernel Optimization"
+    },
+    {
+      "idx": 19,
+      "id": "2606.26590",
+      "title": "Empirical Software Engineering TerraProbe: A Layered-Oracle Framework for Detecting Deceptive Fixes in LLM-Assisted Terraform"
+    },
+    {
+      "idx": 20,
+      "id": "2606.26300",
+      "title": "The Verification Horizon: No Silver Bullet for Coding Agent Rewards"
+    },
+    {
+      "idx": 21,
+      "id": "2606.26787",
+      "title": "AIGP: An LLM-Based Framework for Long-Term Value Alignment in E-Commerce Pricing"
+    },
+    {
+      "idx": 22,
+      "id": "2606.26861",
+      "title": "Cascaded Multi-Granularity Pruning for On-Device LLM Inference in Industrial IoT"
+    },
+    {
+      "idx": 23,
+      "id": "2606.26493",
+      "title": "Nemotron-TwoTower: Diffusion Language Modeling with Pretrained Autoregressive Context"
+    },
+    {
+      "idx": 24,
+      "id": "2606.26120",
+      "title": "Dynamic-dLLM: Dynamic Cache-Budget and Adaptive Parallel Decoding for Training-Free Acceleration of Diffusion LLM"
+    },
+    {
+      "idx": 25,
+      "id": "2606.26488",
+      "title": "What Survives When You Compress a Recursive Reasoner for the Edge?"
+    },
+    {
+      "idx": 26,
+      "id": "2606.26822",
+      "title": "Quantization in Federated Learning: Methods, Challenges and Future Directions"
+    },
+    {
+      "idx": 27,
+      "id": "2606.26346",
+      "title": "How Do Tool-Augmented LLM Agents Perform on Real-World Energy Analytics Tasks?"
+    },
+    {
+      "idx": 28,
+      "id": "2605.00410",
+      "title": "Agent Capsules: Quality-Gated Granularity Control for Multi-Agent LLM Pipelines"
+    },
+    {
+      "idx": 29,
+      "id": "2606.27005",
+      "title": "Adaptive Utility driven Resource Orchestration for Resilient AI (AURORA-AI)"
+    },
+    {
+      "idx": 30,
+      "id": "2606.27154",
+      "title": "OpenRCA 2.0: From Outcome Labels to Causal Process Supervision"
+    }
+  ]
+}
