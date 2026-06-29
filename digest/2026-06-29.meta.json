@@ -1,0 +1,130 @@
+{
+  "date": "2026-06-29",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理效率与压缩",
+      "blurb": "围绕MoE专家剪枝、多token预测调度、全注意力层选择等方向，探索训练后/免训练压缩与推理加速方法，在保持模型质量的前提下降低计算与存储开销。"
+    },
+    {
+      "title": "分布式训练稳定性与资源优化",
+      "blurb": "聚焦LLM训练中的故障预检测、异构检查点加速、知识蒸馏中的非对称分区策略，以及HPC集群上的资源建模与配置推荐，提升大规模训练的可恢复性与资源利用率。"
+    },
+    {
+      "title": "RLHF与智能体系统的对齐与记忆",
+      "blurb": "针对RLHF中延迟奖励校正、标注者偏差校准、多轮智能体蒸馏与记忆更新瓶颈，提出在线对齐与长期交互场景下的鲁棒性改进方案。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.27695",
+      "title": "How far does a random forest generalize from a 54-run LAMMPS+SPICA benchmark?"
+    },
+    {
+      "idx": 2,
+      "id": "2606.27715",
+      "title": "Aurora: A Leverage-Aware Spectral Optimizer"
+    },
+    {
+      "idx": 3,
+      "id": "2606.27580",
+      "title": "Retroactive Advantage Correction: Closed-Form V-Trace Bias Correction for Delay-Aware RLHF"
+    },
+    {
+      "idx": 4,
+      "id": "2606.27401",
+      "title": "Recall Before Rerank: Benchmarking Deep Learning Models for Large-Scale Code-to-Code Retrieval"
+    },
+    {
+      "idx": 5,
+      "id": "2606.28037",
+      "title": "Evolution-Aware Regression Test Prioritization of ML-Enabled Systems Using Gradient-Based Behavior Vectors"
+    },
+    {
+      "idx": 6,
+      "id": "2606.27866",
+      "title": "FlexMoE: One-for-All Nested Intra-Expert Pruning for MoE Language Models"
+    },
+    {
+      "idx": 7,
+      "id": "2606.27785",
+      "title": "Output-Space Allocation Costs for Calibration-Guided LLM Compression: An Empirical Study"
+    },
+    {
+      "idx": 8,
+      "id": "2606.27578",
+      "title": "PEBS: Per-rater Empirical-Bayes Shrinkage for RLHF Reward-Model Calibration"
+    },
+    {
+      "idx": 9,
+      "id": "2606.27733",
+      "title": "BashCoder-R1: Towards Robust and Explainable Bash Code Generation with Robustness-Aware Group Relative Policy Optimization"
+    },
+    {
+      "idx": 10,
+      "id": "2606.27797",
+      "title": "Optimizing Teacher-Student Partitioning for Scalable Knowledge Distillation on HPC Systems"
+    },
+    {
+      "idx": 11,
+      "id": "2606.27841",
+      "title": "WattLayer: Get Layers Right to Estimate Inference Energy of Neural Networks"
+    },
+    {
+      "idx": 12,
+      "id": "2606.28070",
+      "title": "JD Oxygen AI Item Center (Oxygen AIIC) V1: An Industrial-Scale LLM/VLM-Centric Solution for Item Understanding, Management, and Applications"
+    },
+    {
+      "idx": 13,
+      "id": "2606.27791",
+      "title": "NLL-Guided Full-Attention Layer Selection for Training-Free Sliding-Window Adaptation"
+    },
+    {
+      "idx": 14,
+      "id": "2606.27814",
+      "title": "ATOD: Annealed Turn-aware On-policy Distillation for Multi-turn Autonomous Agents"
+    },
+    {
+      "idx": 15,
+      "id": "2601.16956",
+      "title": "DataStates-LLM: Scalable Checkpointing for Transformer Models Using Composable State Providers"
+    },
+    {
+      "idx": 16,
+      "id": "2606.28116",
+      "title": "Mechanism-Driven Monitors for Preemptive Detection of LLM Training Instability"
+    },
+    {
+      "idx": 17,
+      "id": "2606.27550",
+      "title": "EntMTP: Accelerating LLM Inference with Entropy Guided Multi Token Prediction"
+    },
+    {
+      "idx": 18,
+      "id": "2606.27472",
+      "title": "Supersede: Diagnosing and Training the Memory-Update Gap in LLM Agents"
+    },
+    {
+      "idx": 19,
+      "id": "2606.27611",
+      "title": "COOPA: A Modular LLM Agent Architecture for Operations Research Problems"
+    },
+    {
+      "idx": 20,
+      "id": "2606.27919",
+      "title": "RAMSES: Secure high-performance computing for sensitive data"
+    },
+    {
+      "idx": 21,
+      "id": "2606.27750",
+      "title": "Lightweight Multi-Vehicle Collaborative Perception Acceleration with Fusion Position Adjustment"
+    },
+    {
+      "idx": 22,
+      "id": "2606.28127",
+      "title": "From Tokens to States: LLMs as a Special Case of World Models and the Continuous Path Beyond"
+    }
+  ]
+}
