@@ -1,0 +1,170 @@
+{
+  "date": "2026-06-30",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "面向 LLM 推理服务的能效感知调度与资源弹性管理",
+      "blurb": "结合文献池中 Festina、SMART-MIG、KernelFlume 等工作，探讨如何在共享 GPU 环境下通过调度、分区与核心-注意力解耦实现能效优化与弹性扩展。"
+    },
+    {
+      "title": "面向长上下文与动态负载的 KV 缓存压缩与推理加速",
+      "blurb": "围绕 ReFreeKV、K-VEC、DEX、KernelFlume 等文献，研究无阈值 KV 缓存压缩、覆盖驱动驱逐策略与深度并行解码，以降低长上下文推理的内存与计算开销。"
+    },
+    {
+      "title": "面向预算约束与多跳推理的自适应检索增强生成",
+      "blurb": "基于 AB-RAG、D2R-RAG、TIGRAG、QASA-RAG 等文献，探索在固定预算下通过置信度估计、诊断-修复框架与图结构检索提升 RAG 系统的可靠性与效率。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.30391",
+      "title": "Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs"
+    },
+    {
+      "idx": 2,
+      "id": "2606.28737",
+      "title": "5ting at SemEval-2026 Task 8: Strong End-to-End Multi-Turn RAG via LLM-Based Reranking and Faithfulness Control"
+    },
+    {
+      "idx": 3,
+      "id": "2606.30560",
+      "title": "TraceLab: Characterizing Coding Agent Workloads for LLM Serving"
+    },
+    {
+      "idx": 4,
+      "id": "2606.29215",
+      "title": "Multi-Block Diffusion Language Models"
+    },
+    {
+      "idx": 5,
+      "id": "2606.28911",
+      "title": "MALOQ: Massively Accelerated Learning of Operators for Quantum Transport"
+    },
+    {
+      "idx": 6,
+      "id": "2606.29223",
+      "title": "Depth Exploration for LLM Decoding"
+    },
+    {
+      "idx": 7,
+      "id": "2606.30616",
+      "title": "Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent"
+    },
+    {
+      "idx": 8,
+      "id": "2502.16886",
+      "title": "ReFreeKV: Towards Threshold-Free KV Cache Compression"
+    },
+    {
+      "idx": 9,
+      "id": "2606.29377",
+      "title": "Diagnosing and Repairing Factual Errors in RAG under Budget Constraints"
+    },
+    {
+      "idx": 10,
+      "id": "2606.30068",
+      "title": "Predictive Objectives Discard Exogenous Control-Relevant Features: A Controlled Mechanistic Study"
+    },
+    {
+      "idx": 11,
+      "id": "2606.29775",
+      "title": "SMART-MIG: A Learning Framework for Scalable and Energy-Efficient GPU Scheduling"
+    },
+    {
+      "idx": 12,
+      "id": "2606.29207",
+      "title": "KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding"
+    },
+    {
+      "idx": 13,
+      "id": "2606.29708",
+      "title": "Demystifying the Design Space and Best Practices for Heterogeneous LLM Inference and Serving"
+    },
+    {
+      "idx": 14,
+      "id": "2606.29424",
+      "title": "EntroRouter: Learning Efficient Model Routing via Entropy Regulation"
+    },
+    {
+      "idx": 15,
+      "id": "2606.28438",
+      "title": "When AI Reviews Its Own Code: Recursive Self-Training Collapse in Code LLMs"
+    },
+    {
+      "idx": 16,
+      "id": "2606.30563",
+      "title": "Data Replication Meets Function Scheduling in the Edge-Cloud Continuum"
+    },
+    {
+      "idx": 17,
+      "id": "2606.29563",
+      "title": "Coverage-Driven KV Cache Eviction for Efficient and Improved Inference of LLM"
+    },
+    {
+      "idx": 18,
+      "id": "2606.29158",
+      "title": "On the Nonlinearity of Learning Rate Scaling for LLM Training"
+    },
+    {
+      "idx": 19,
+      "id": "2606.29700",
+      "title": "Toward Secure and Reliable PDDL Formalization of Large Language Models with Planner-in-the-Loop Feedback"
+    },
+    {
+      "idx": 20,
+      "id": "2606.28707",
+      "title": "BV-Blend: Uncertainty-Weighted Historical Baselines for Stable Critic-Free RL with Verifiable Rewards"
+    },
+    {
+      "idx": 21,
+      "id": "2606.30634",
+      "title": "One-Step Gradient Delay is Not a Barrier for Large-Scale Asynchronous Pipeline Parallel LLM Pretraining"
+    },
+    {
+      "idx": 22,
+      "id": "2606.30455",
+      "title": "Curvature-Weighted Gradient Diversity: A Noise Measure for Geometry-Adaptive SGD Schedules"
+    },
+    {
+      "idx": 23,
+      "id": "2606.28434",
+      "title": "SWE-MeM: Learning Adaptive Memory Management for Long-Horizon Coding Agents"
+    },
+    {
+      "idx": 24,
+      "id": "2606.30292",
+      "title": "DreamForge-World 0.1 Preview: A Low-Compute Real-Time Controllable World Model"
+    },
+    {
+      "idx": 25,
+      "id": "2606.29483",
+      "title": "Fog Computing and Large Language Models: A vision for the mutual beneficiaries"
+    },
+    {
+      "idx": 26,
+      "id": "2606.29272",
+      "title": "PCGD: Physics-Guided Conditional Graph Diffusion for TCAD Device Simulation"
+    },
+    {
+      "idx": 27,
+      "id": "2606.29090",
+      "title": "AB-RAG: Adaptive Budgeted Retrieval-Augmented Generation for Reliable Question Answering"
+    },
+    {
+      "idx": 28,
+      "id": "2606.30533",
+      "title": "Spandana: Reconciling Strict SLOs with Low Cost under Fine-Grained Load Fluctuations"
+    },
+    {
+      "idx": 29,
+      "id": "2606.30133",
+      "title": "Query-Aware Spreading Activation for Multi-Hop Retrieval over Knowledge Graphs"
+    },
+    {
+      "idx": 30,
+      "id": "2606.30093",
+      "title": "Efficient Retrieval-Augmented Generation via Token Co-occurrence Graphs"
+    }
+  ]
+}

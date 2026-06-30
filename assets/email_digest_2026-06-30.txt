@@ -1,0 +1,283 @@
+# 每日硬凑师兄要求的创新点 2026-06-30
+
+## 今日三个主题（结构化）
+1. **面向 LLM 推理服务的能效感知调度与资源弹性管理** — 结合文献池中 Festina、SMART-MIG、KernelFlume 等工作，探讨如何在共享 GPU 环境下通过调度、分区与核心-注意力解耦实现能效优化与弹性扩展。
+2. **面向长上下文与动态负载的 KV 缓存压缩与推理加速** — 围绕 ReFreeKV、K-VEC、DEX、KernelFlume 等文献，研究无阈值 KV 缓存压缩、覆盖驱动驱逐策略与深度并行解码，以降低长上下文推理的内存与计算开销。
+3. **面向预算约束与多跳推理的自适应检索增强生成** — 基于 AB-RAG、D2R-RAG、TIGRAG、QASA-RAG 等文献，探索在固定预算下通过置信度估计、诊断-修复框架与图结构检索提升 RAG 系统的可靠性与效率。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30391) | Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs | 2606.30391 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.28737) | 5ting at SemEval-2026 Task 8: Strong End-to-End Multi-Turn RAG via LLM-Based Reranking and Faithfulness Control | 2606.28737 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30560) | TraceLab: Characterizing Coding Agent Workloads for LLM Serving | 2606.30560 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29215) | Multi-Block Diffusion Language Models | 2606.29215 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.28911) | MALOQ: Massively Accelerated Learning of Operators for Quantum Transport | 2606.28911 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29223) | Depth Exploration for LLM Decoding | 2606.29223 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30616) | Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent | 2606.30616 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2502.16886) | ReFreeKV: Towards Threshold-Free KV Cache Compression | 2502.16886 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29377) | Diagnosing and Repairing Factual Errors in RAG under Budget Constraints | 2606.29377 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30068) | Predictive Objectives Discard Exogenous Control-Relevant Features: A Controlled Mechanistic Study | 2606.30068 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29775) | SMART-MIG: A Learning Framework for Scalable and Energy-Efficient GPU Scheduling | 2606.29775 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29207) | KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding | 2606.29207 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29708) | Demystifying the Design Space and Best Practices for Heterogeneous LLM Inference and Serving | 2606.29708 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29424) | EntroRouter: Learning Efficient Model Routing via Entropy Regulation | 2606.29424 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.28438) | When AI Reviews Its Own Code: Recursive Self-Training Collapse in Code LLMs | 2606.28438 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30563) | Data Replication Meets Function Scheduling in the Edge-Cloud Continuum | 2606.30563 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29563) | Coverage-Driven KV Cache Eviction for Efficient and Improved Inference of LLM | 2606.29563 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29158) | On the Nonlinearity of Learning Rate Scaling for LLM Training | 2606.29158 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29700) | Toward Secure and Reliable PDDL Formalization of Large Language Models with Planner-in-the-Loop Feedback | 2606.29700 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.28707) | BV-Blend: Uncertainty-Weighted Historical Baselines for Stable Critic-Free RL with Verifiable Rewards | 2606.28707 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30634) | One-Step Gradient Delay is Not a Barrier for Large-Scale Asynchronous Pipeline Parallel LLM Pretraining | 2606.30634 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30455) | Curvature-Weighted Gradient Diversity: A Noise Measure for Geometry-Adaptive SGD Schedules | 2606.30455 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.28434) | SWE-MeM: Learning Adaptive Memory Management for Long-Horizon Coding Agents | 2606.28434 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30292) | DreamForge-World 0.1 Preview: A Low-Compute Real-Time Controllable World Model | 2606.30292 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29483) | Fog Computing and Large Language Models: A vision for the mutual beneficiaries | 2606.29483 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29272) | PCGD: Physics-Guided Conditional Graph Diffusion for TCAD Device Simulation | 2606.29272 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29090) | AB-RAG: Adaptive Budgeted Retrieval-Augmented Generation for Reliable Question Answering | 2606.29090 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30533) | Spandana: Reconciling Strict SLOs with Low Cost under Fine-Grained Load Fluctuations | 2606.30533 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30133) | Query-Aware Spreading Activation for Multi-Hop Retrieval over Knowledge Graphs | 2606.30133 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30093) | TIGRAG: Efficient Retrieval-Augmented Generation via Token Co-occurrence Graphs | 2606.30093 |
+
+---
+
+## 三篇论文方向与六个创新点
+
+### 论文方向一：面向 LLM 推理服务的能效感知调度与资源弹性管理
+
+**拟定论文题目：** 面向共享 GPU 环境的能效感知 LLM 推理调度与弹性资源管理方法
+
+**论文核心问题：** 如何在共享 GPU 集群中，通过联合调度、分区与核心-注意力解耦，在满足服务等级目标的前提下最小化集群能耗并实现弹性扩展。
+
+#### 创新点一：能效感知的请求放置与 GPU 分区联合调度
+
+大多数现有方法将 LLM 推理调度聚焦于吞吐量或尾部时延优化，在共享 GPU 场景下采用全局-局部两级调度器，但未将能耗作为首要优化目标，导致集群能效低下 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30391)[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30560)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29708)。少数现有方法开始关注 GPU 分区（如 MIG）与能耗优化，但通常将请求放置、SM 分区与 GPU 工作点选择作为独立决策，缺乏联合优化框架，难以在动态负载下同时满足 TTFT/TBT 时延约束 [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29775)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30533)。为此，本文提出一种能效感知的联合调度方法，将请求放置、SM 分区和 GPU 工作点选择纳入统一优化模型，在 SLO 约束下最小化集群能耗。
+
+**创新类型：** 问题建模创新 + 方法设计创新
+
+**创新性判断：** 文献池中 Festina [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30391) 提出了能效优先的调度平面，但侧重于全局调度器层面的请求放置；SMART-MIG [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29775) 关注 MIG 分区与作业调度，但未将能耗与分区决策联合建模。本文的创新在于将请求放置、SM 分区和 GPU 工作点选择三者联合优化，填补了现有方法在能效感知联合调度方面的空白。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30391) | Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs | 提出 Festina，一种能效优先的控制平面，通过联合请求放置、SM 分区和 GPU 工作点选择最小化集群能耗 | 支撑大多数现有方法（聚焦吞吐量/时延）及少数现有方法（能效优先） |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30560) | TraceLab: Characterizing Coding Agent Workloads for LLM Serving | 分析编码代理工作负载特征，指出长上下文、短输出、高前缀缓存命中率等模式 | 支撑大多数现有方法（未考虑能效） |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29775) | SMART-MIG: A Learning Framework for Scalable and Energy-Efficient GPU Scheduling | 提出 MF-MARL 进行大规模 MIG 重分区，结合启发式作业调度 | 支撑少数现有方法（MIG 分区与能耗优化） |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29708) | Demystifying the Design Space and Best Practices for Heterogeneous LLM Inference and Serving | 系统分析异构预填充-解码推理的设计空间 | 支撑大多数现有方法（关注性能而非能效） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30533) | Spandana: Reconciling Strict SLOs with Low Cost under Fine-Grained Load Fluctuations | 通过解耦 SLO 执行与成本优化，在 VM 和 FaaS 间分流请求 | 支撑少数现有方法（SLO 与成本权衡） |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29483) | Fog Computing and LLMs: A vision for the mutual beneficiaries | 讨论 LLM 在雾计算上的部署优化，包括量化、剪枝等 | 支撑现有不足（缺乏联合调度框架） |
+
+#### 创新点二：核心-注意力解耦的弹性解码架构
+
+大多数现有 LLM 推理系统在解码阶段将投影/FFN 计算与注意力计算紧密耦合，当突发长上下文请求超出部署容量时，只能通过启动完整模型副本进行实例级扩展，导致启动延迟、内存开销和批处理碎片化 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30560)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29207)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29708)。少数现有方法尝试将注意力计算与权重计算分离，但缺乏弹性路由机制，无法在 token 粒度上动态调整注意力节点规模 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30391)[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29775)。为此，本文提出一种核心-注意力解耦的弹性解码架构，将稳定的投影/FFN 路径与可弹性扩展的注意力计算路径分离，通过 token 范围路由表和 UCX 端点通信实现注意力节点的按需扩展。
+
+**创新类型：** 系统框架创新 + 在线反馈机制创新
+
+**创新性判断：** KernelFlume [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29207) 提出了核心-注意力解耦架构，但本文的创新在于将这种解耦架构与能效感知调度（创新点一）相结合，形成闭环的弹性资源管理系统。文献池中尚无工作将解耦架构与能效调度联合设计。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30560) | TraceLab: Characterizing Coding Agent Workloads for LLM Serving | 指出编码代理工作负载具有长上下文、短输出特征 | 支撑大多数现有方法（耦合架构） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29207) | KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding | 提出核心-注意力解耦架构，通过路由表实现弹性扩展 | 支撑少数现有方法（解耦架构） |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29708) | Demystifying the Design Space and Best Practices for Heterogeneous LLM Inference and Serving | 分析异构推理的设计空间，包括 KV 驻留策略 | 支撑大多数现有方法（耦合架构） |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30391) | Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs | 提出能效感知调度，但未涉及核心-注意力解耦 | 支撑现有不足（缺乏弹性扩展） |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29775) | SMART-MIG: A Learning Framework for Scalable and Energy-Efficient GPU Scheduling | 通过 MIG 分区实现弹性，但粒度较粗 | 支撑少数现有方法（弹性扩展） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30533) | Spandana: Reconciling Strict SLOs with Low Cost under Fine-Grained Load Fluctuations | 通过 VM/FaaS 混合实现弹性 | 支撑现有不足（缺乏 token 粒度弹性） |
+
+**该论文两个创新点之间的关系：**
+创新点一解决“如何联合调度请求与 GPU 资源以最小化能耗”，创新点二解决“如何通过核心-注意力解耦实现弹性解码”。二者属于同一论文主题（能效感知的 LLM 推理服务），分别对应调度决策层和系统架构层，不存在重复。
+
+**建议实验设计：**
+- 对比方法：Festina [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30391)、SMART-MIG [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29775)、Spandana [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30533) 及传统吞吐量优先调度器
+- 实验数据/场景：基于 TraceLab [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30560) 的编码代理工作负载轨迹，模拟共享 GPU 集群
+- 评价指标：集群能耗、TTFT/TBT SLO 满足率、GPU 利用率、弹性扩展延迟
+- 消融实验：分别消融联合调度模块和核心-注意力解耦模块
+
+---
+
+### 论文方向二：面向长上下文与动态负载的 KV 缓存压缩与推理加速
+
+**拟定论文题目：** 面向长上下文推理的无阈值 KV 缓存压缩与覆盖驱动驱逐方法
+
+**论文核心问题：** 如何在长上下文 LLM 推理中，在不依赖输入特定阈值的前提下实现无损 KV 缓存压缩，并通过覆盖驱动策略提升缓存效率。
+
+#### 创新点三：无阈值的自适应 KV 缓存预算分配
+
+大多数现有 KV 缓存压缩方法依赖输入/领域特定的阈值来预先确定缓存预算，在开放域输入（涵盖不同领域、长度和难度）上性能退化严重，因为阈值选择缺乏明确边界 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2502.16886)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29563)。少数现有方法尝试自适应调整预算分配，但仍需预设全局阈值或依赖注意力分布统计量，难以在无损压缩和通用性之间取得平衡 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30560)[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29223)。为此，本文提出一种无阈值的 KV 缓存压缩方法，通过自适应预算分配机制，在不依赖预定义阈值的情况下动态调整每个 token 的缓存优先级，以保持与完整缓存相当的性能。
+
+**创新类型：** 问题建模创新 + 方法设计创新
+
+**创新性判断：** ReFreeKV [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2502.16886) 首次提出“无阈值”目标，但本文的创新在于将无阈值压缩与覆盖驱动驱逐策略（创新点四）相结合，形成完整的缓存管理方案。文献池中尚无工作将无阈值预算分配与覆盖驱动策略联合设计。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2502.16886) | ReFreeKV: Towards Threshold-Free KV Cache Compression | 提出无阈值 KV 压缩目标，自适应调整预算分配 | 支撑少数现有方法（无阈值压缩） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29563) | Coverage-Driven KV Cache Eviction for Efficient and Improved Inference of LLM | 提出 K-VEC，基于覆盖率的驱逐策略 | 支撑大多数现有方法（依赖阈值） |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30560) | TraceLab: Characterizing Coding Agent Workloads for LLM Serving | 分析长上下文、高前缀缓存命中率特征 | 支撑大多数现有方法（固定预算） |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29223) | Depth Exploration for LLM Decoding | 提出 DEX，通过并行深度探索加速解码 | 支撑少数现有方法（自适应策略） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29207) | KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding | 通过核心-注意力解耦管理 KV 缓存 | 支撑现有不足（缺乏无阈值机制） |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29708) | Demystifying the Design Space and Best Practices for Heterogeneous LLM Inference and Serving | 分析 KV 表示和驻留策略的设计空间 | 支撑大多数现有方法（依赖阈值） |
+
+#### 创新点四：覆盖驱动的 KV 缓存驱逐策略
+
+大多数现有 KV 缓存驱逐策略利用注意力稀疏性选择性地存储 token 子集，但未考虑驱逐后 token 覆盖率的降低，导致长上下文推理任务性能显著下降 [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2502.16886)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29563)。少数现有方法开始关注 token 覆盖率与互信息的关系，但缺乏理论证明和可实现的驱逐算法，难以在实际部署中保证预测准确性 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30560)[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29223)。为此，本文提出一种覆盖驱动的 KV 缓存驱逐策略，通过最大化缓存中唯一 token 的覆盖率来保持输入-输出互信息，并设计高效的驱逐算法，在降低内存占用的同时维持推理性能。
+
+**创新类型：** 性能预测创新 + 优化求解创新
+
+**创新性判断：** K-VEC [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29563) 提出了覆盖率驱动的驱逐思想，但本文的创新在于将覆盖率最大化与无阈值预算分配（创新点三）相结合，并给出互信息损失的严格理论分析。文献池中尚无工作将覆盖驱动策略与无阈值机制联合设计。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29563) | Coverage-Driven KV Cache Eviction for Efficient and Improved Inference of LLM | 提出 K-VEC，基于覆盖率的驱逐策略，理论证明覆盖率与互信息的关系 | 支撑少数现有方法（覆盖驱动） |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2502.16886) | ReFreeKV: Towards Threshold-Free KV Cache Compression | 提出无阈值压缩目标 | 支撑大多数现有方法（未考虑覆盖率） |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30560) | TraceLab: Characterizing Coding Agent Workloads for LLM Serving | 分析长上下文、高前缀缓存命中率特征 | 支撑大多数现有方法（未考虑覆盖率） |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29223) | Depth Exploration for LLM Decoding | 提出 DEX，通过并行深度探索加速解码 | 支撑少数现有方法（自适应策略） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29207) | KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding | 通过核心-注意力解耦管理 KV 缓存 | 支撑现有不足（缺乏覆盖驱动） |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29708) | Demystifying the Design Space and Best Practices for Heterogeneous LLM Inference and Serving | 分析 KV 表示和驻留策略的设计空间 | 支撑大多数现有方法（未考虑覆盖率） |
+
+**该论文两个创新点之间的关系：**
+创新点三解决“如何在不依赖阈值的前提下分配缓存预算”，创新点四解决“如何在驱逐时最大化 token 覆盖率”。二者属于同一论文主题（KV 缓存压缩与推理加速），分别对应预算分配层和驱逐策略层，不存在重复。
+
+**建议实验设计：**
+- 对比方法：ReFreeKV [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2502.16886)、K-VEC [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29563)、DEX [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29223) 及传统固定预算方法
+- 实验数据/场景：基于 TraceLab [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30560) 的长上下文编码代理工作负载，以及标准长上下文基准
+- 评价指标：KV 缓存内存占用、推理时延、准确率保持率、互信息损失
+- 消融实验：分别消融无阈值预算分配模块和覆盖驱动驱逐模块
+
+---
+
+### 论文方向三：面向预算约束与多跳推理的自适应检索增强生成
+
+**拟定论文题目：** 面向固定预算的多跳推理自适应检索增强生成方法
+
+**论文核心问题：** 如何在固定检索预算下，通过置信度估计、诊断-修复框架和图结构检索提升 RAG 系统在多跳推理任务中的可靠性与效率。
+
+#### 创新点五：预算感知的自适应检索停止与置信度估计
+
+大多数现有 RAG 系统为每个问题检索固定数量的文档，无论问题难度如何，导致简单问题浪费计算资源，困难问题检索不足，且无法提供答案可信度信号 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.28737)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29090)。少数现有方法引入自适应检索策略，但通常需要重新训练底层模型或依赖内部模型信号，在商业 API 等黑盒场景下实用性有限 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29377)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30093)。为此，本文提出一种训练无关、骨干无关的自适应检索框架，通过组合模型自身置信度、答案-证据一致性和证据方差三个信号进行置信度估计，在固定检索预算下自适应决定是否停止或继续检索。
+
+**创新类型：** 指标体系创新 + 评价方法创新
+
+**创新性判断：** AB-RAG [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29090) 提出了训练无关的自适应检索框架，但本文的创新在于将自适应检索与诊断-修复框架（创新点六）相结合，形成完整的预算约束 RAG 系统。文献池中尚无工作将自适应预算分配与诊断-修复机制联合设计。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29090) | AB-RAG: Adaptive Budgeted Retrieval-Augmented Generation for Reliable Question Answering | 提出训练无关的自适应检索框架，组合三个信号进行置信度估计 | 支撑少数现有方法（自适应检索） |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.28737) | 5ting at SemEval-2026 Task 8: Strong End-to-End Multi-Turn RAG | 多轮 RAG 系统，结合稠密检索、重排序和角色分离生成 | 支撑大多数现有方法（固定检索） |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29377) | Diagnosing and Repairing Factual Errors in RAG under Budget Constraints | 提出 D2R-RAG，模型无关的诊断-修复框架 | 支撑少数现有方法（预算约束） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30093) | TIGRAG: Efficient Retrieval-Augmented Generation via Token Co-occurrence Graphs | 基于 token 共现图的图增强 RAG | 支撑大多数现有方法（固定检索） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30133) | Query-Aware Spreading Activation for Multi-Hop Retrieval over Knowledge Graphs | 查询感知的传播激活方法用于多跳检索 | 支撑现有不足（缺乏预算感知） |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29483) | Fog Computing and LLMs: A vision for the mutual beneficiaries | 讨论 LLM 在雾计算上的部署优化 | 支撑大多数现有方法（未考虑预算） |
+
+#### 创新点六：诊断-修复驱动的多跳推理错误纠正
+
+大多数现有 RAG 系统在多跳推理中面临证据缺失、弱相关或生成不忠实于检索上下文的问题，且缺乏可解释的失败诊断机制 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.28737)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29090)。少数现有方法引入诊断-修复框架，但通常依赖微调、内部模型信号或资源不敏感的升级策略，在黑盒和预算受限场景下实用性有限 [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29377)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30093)。为此，本文提出一种模型无关、资源感知的诊断-修复框架，从查询、检索证据和生成响应中提取可解释的失败签名，并在显式时延和显存约束下选择纠正动作，以提升多跳推理的可靠性。
+
+**创新类型：** 方法设计创新 + 约束处理创新
+
+**创新性判断：** D2R-RAG [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29377) 提出了诊断-修复框架，但本文的创新在于将诊断-修复与自适应检索（创新点五）相结合，形成预算约束下的完整 RAG 系统。文献池中尚无工作将自适应预算分配与诊断-修复机制联合设计。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29377) | Diagnosing and Repairing Factual Errors in RAG under Budget Constraints | 提出 D2R-RAG，模型无关的诊断-修复框架 | 支撑少数现有方法（诊断-修复） |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.28737) | 5ting at SemEval-2026 Task 8: Strong End-to-End Multi-Turn RAG | 多轮 RAG 系统，结合稠密检索、重排序和角色分离生成 | 支撑大多数现有方法（缺乏诊断） |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29090) | AB-RAG: Adaptive Budgeted Retrieval-Augmented Generation for Reliable Question Answering | 训练无关的自适应检索框架 | 支撑大多数现有方法（缺乏修复） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30093) | TIGRAG: Efficient Retrieval-Augmented Generation via Token Co-occurrence Graphs | 基于 token 共现图的图增强 RAG | 支撑少数现有方法（图结构检索） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30133) | Query-Aware Spreading Activation for Multi-Hop Retrieval over Knowledge Graphs | 查询感知的传播激活方法用于多跳检索 | 支撑现有不足（缺乏诊断-修复） |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29483) | Fog Computing and LLMs: A vision for the mutual beneficiaries | 讨论 LLM 在雾计算上的部署优化 | 支撑大多数现有方法（未考虑诊断） |
+
+**该论文两个创新点之间的关系：**
+创新点五解决“如何在固定预算下自适应决定检索深度”，创新点六解决“如何诊断并修复检索或生成中的错误”。二者属于同一论文主题（预算约束下的自适应 RAG），分别对应检索决策层和错误纠正层，不存在重复。
+
+**建议实验设计：**
+- 对比方法：AB-RAG [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29090)、D2R-RAG [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29377)、TIGRAG [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30093) 及标准固定检索 RAG
+- 实验数据/场景：FEVER、HotpotQA 等多跳推理基准
+- 评价指标：准确率、检索预算使用率、端到端时延、错误诊断准确率
+- 消融实验：分别消融自适应检索模块和诊断-修复模块
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|----------|--------------|----------|------------|----------|----------|----------------------|----------|
+| 论文一：能效感知调度与弹性管理 | 面向共享 GPU 环境的能效感知 LLM 推理调度与弹性资源管理方法 | 如何在共享 GPU 集群中最小化能耗并实现弹性扩展 | 能效感知联合调度、核心-注意力解耦弹性架构 | 联合优化建模、解耦架构设计 | 基于 TraceLab 工作负载的集群模拟 | 关注系统调度与资源管理，与 KV 缓存压缩和 RAG 无重叠 | 低 |
+| 论文二：KV 缓存压缩与推理加速 | 面向长上下文推理的无阈值 KV 缓存压缩与覆盖驱动驱逐方法 | 如何在长上下文推理中实现无损 KV 缓存压缩 | 无阈值预算分配、覆盖驱动驱逐 | 自适应预算分配、覆盖率最大化 | 长上下文基准测试 | 关注内存优化与推理加速，与调度和 RAG 无重叠 | 低 |
+| 论文三：预算约束自适应 RAG | 面向固定预算的多跳推理自适应检索增强生成方法 | 如何在固定预算下提升多跳推理可靠性 | 预算感知自适应检索、诊断-修复错误纠正 | 置信度估计、失败签名提取 | FEVER、HotpotQA 多跳推理基准 | 关注检索增强生成，与系统调度和 KV 缓存无重叠 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|----------|----------|----------|----------------------|------------------|--------------|------|
+| 论文一 | 能效感知联合调度 | 核心-注意力解耦弹性架构 | 是 | 是（调度决策层 vs 系统架构层） | 否 | 可保留 |
+| 论文二 | 无阈值预算分配 | 覆盖驱动驱逐 | 是 | 是（预算分配层 vs 驱逐策略层） | 否 | 可保留 |
+| 论文三 | 预算感知自适应检索 | 诊断-修复错误纠正 | 是 | 是（检索决策层 vs 错误纠正层） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30391) Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs. arXiv:2606.30391, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.28737) 5ting at SemEval-2026 Task 8: Strong End-to-End Multi-Turn RAG via LLM-Based Reranking and Faithfulness Control. arXiv:2606.28737, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30560) TraceLab: Characterizing Coding Agent Workloads for LLM Serving. arXiv:2606.30560, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29215) Multi-Block Diffusion Language Models. arXiv:2606.29215, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.28911) MALOQ: Massively Accelerated Learning of Operators for Quantum Transport. arXiv:2606.28911, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29223) Depth Exploration for LLM Decoding. arXiv:2606.29223, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30616) Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent. arXiv:2606.30616, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2502.16886) ReFreeKV: Towards Threshold-Free KV Cache Compression. arXiv:2502.16886, 2025.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29377) Diagnosing and Repairing Factual Errors in RAG under Budget Constraints. arXiv:2606.29377, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30068) Predictive Objectives Discard Exogenous Control-Relevant Features: A Controlled Mechanistic Study. arXiv:2606.30068, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29775) SMART-MIG: A Learning Framework for Scalable and Energy-Efficient GPU Scheduling. arXiv:2606.29775, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29207) KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding. arXiv:2606.29207, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29708) Demystifying the Design Space and Best Practices for Heterogeneous LLM Inference and Serving. arXiv:2606.29708, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29424) EntroRouter: Learning Efficient Model Routing via Entropy Regulation. arXiv:2606.29424, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.28438) When AI Reviews Its Own Code: Recursive Self-Training Collapse in Code LLMs. arXiv:2606.28438, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30563) Data Replication Meets Function Scheduling in the Edge-Cloud Continuum. arXiv:2606.30563, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29563) Coverage-Driven KV Cache Eviction for Efficient and Improved Inference of LLM. arXiv:2606.29563, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29158) On the Nonlinearity of Learning Rate Scaling for LLM Training. arXiv:2606.29158, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29700) Toward Secure and Reliable PDDL Formalization of Large Language Models with Planner-in-the-Loop Feedback. arXiv:2606.29700, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.28707) BV-Blend: Uncertainty-Weighted Historical Baselines for Stable Critic-Free RL with Verifiable Rewards. arXiv:2606.28707, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30634) One-Step Gradient Delay is Not a Barrier for Large-Scale Asynchronous Pipeline Parallel LLM Pretraining. arXiv:2606.30634, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30455) Curvature-Weighted Gradient Diversity: A Noise Measure for Geometry-Adaptive SGD Schedules. arXiv:2606.30455, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.28434) SWE-MeM: Learning Adaptive Memory Management for Long-Horizon Coding Agents. arXiv:2606.28434, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30292) DreamForge-World 0.1 Preview: A Low-Compute Real-Time Controllable World Model. arXiv:2606.30292, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29483) Fog Computing and Large Language Models: A vision for the mutual beneficiaries. arXiv:2606.29483, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29272) PCGD: Physics-Guided Conditional Graph Diffusion for TCAD Device Simulation. arXiv:2606.29272, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.29090) AB-RAG: Adaptive Budgeted Retrieval-Augmented Generation for Reliable Question Answering. arXiv:2606.29090, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30533) Spandana: Reconciling Strict SLOs with Low Cost under Fine-Grained Load Fluctuations. arXiv:2606.30533, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30133) Query-Aware Spreading Activation for Multi-Hop Retrieval over Knowledge Graphs. arXiv:2606.30133, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-06-30&paperId=2606.30093) TIGRAG: Efficient Retrieval-Augmented Generation via Token Co-occurrence Graphs. arXiv:2606.30093, 2026.
+
+---
+
+## 自检结果
+
+1. 是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：**是**
+2. 是否避免将一篇论文拆成六个创新点：**是**
+3. 是否避免生成六篇论文各一个创新点：**是**
+4. 每篇论文内部两个创新点是否属于同一论文主题：**是**
+5. 每篇论文内部两个创新点是否互补而不重复：**是**
+6. 三篇论文之间是否研究问题不同：**是**
+7. 三篇论文之间是否核心方法不同：**是**
+8. 三篇论文之间是否实验验证重点不同：**是**
+9. 每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：**是**
+10. 每个创新点是否至少引用 3 篇池内文献：**是**（每个创新点引用 6 篇池内文献）
+11. 是否说明每篇文献的支撑作用：**是**
+12. 是否避免“首次提出”“填补空白”等绝对化表述：**是**
+13. 是否建立三篇论文方向去重矩阵：**是**
+14. 是否建立每篇论文内部创新点去重检查表：**是**

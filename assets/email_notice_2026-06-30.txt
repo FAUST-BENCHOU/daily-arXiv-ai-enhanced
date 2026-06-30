@@ -1,0 +1,9 @@
+每日硬凑师兄要求的创新点 2026-06-30
+
+今日三个主题概要：
+1. 面向 LLM 推理服务的能效感知调度与资源弹性管理 — 结合文献池中 Festina、SMART-MIG、KernelFlume 等工作，探讨如何在共享 GPU 环境下通过调度、分区与核心-注意力解耦实现能效优化与弹性扩展。
+2. 面向长上下文与动态负载的 KV 缓存压缩与推理加速 — 围绕 ReFreeKV、K-VEC、DEX、KernelFlume 等文献，研究无阈值 KV 缓存压缩、覆盖驱动驱逐策略与深度并行解码，以降低长上下文推理的内存与计算开销。
+3. 面向预算约束与多跳推理的自适应检索增强生成 — 基于 AB-RAG、D2R-RAG、TIGRAG、QASA-RAG 等文献，探索在固定预算下通过置信度估计、诊断-修复框架与图结构检索提升 RAG 系统的可靠性与效率。
+
+完整创新点、矩阵与文献引用见：
+https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/digest-viewer.html?date=2026-06-30
