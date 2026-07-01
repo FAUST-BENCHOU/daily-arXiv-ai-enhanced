@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-01",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM 推理服务中的上下文与缓存管理",
+      "blurb": "围绕长上下文推理中 KV 缓存压缩与选择性记忆管理，从 SeKV 的分辨率自适应语义缓存、ECHO 的源索引轨迹重建到 ACE 的可逆弹性上下文编排，探讨如何在有限窗口下保留细粒度信息并支持可追溯学习。"
+    },
+    {
+      "title": "自动化代码生成与软件优化的智能体工作流",
+      "blurb": "聚焦 LLM 驱动的端到端自动化：MOA 的内存反模式检测与补丁生成、AgRefactor 的 HLS 兼容性重构、以及面向 MPI 透明检查点的代码生成，分析多智能体协作、自演化记忆与工具集成如何提升生产级代码优化的可扩展性。"
+    },
+    {
+      "title": "分布式与边缘推理系统的资源弹性与合规路由",
+      "blurb": "面向异构部署场景，涵盖 Omni-Flow 的多模态工作流编排与 KV 缓存共享、LASER 的负载感知早期退出策略、以及 ComplianceGate 的分类器门控合规路由，研究如何在资源约束、负载波动与监管要求下实现高效可靠的推理服务。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2606.31002",
+      "title": "Beyond Compilation: Evaluating Faithful Natural-Language-to-Lean Statement Formalization"
+    },
+    {
+      "idx": 2,
+      "id": "2606.31368",
+      "title": "MOA: A Profiling-Guided LLM Framework for Memory-Optimization Automation at Codebase Scale"
+    },
+    {
+      "idx": 3,
+      "id": "2606.31648",
+      "title": "Think in English, Answer in Korean: Efficient Adaptation of Multilingual Tool-Using Agents"
+    },
+    {
+      "idx": 4,
+      "id": "2606.31238",
+      "title": "A Multi-Dimensional, Per-Pass Empirical Study of the LLVM Optimization Pipeline"
+    },
+    {
+      "idx": 5,
+      "id": "2606.30775",
+      "title": "A Single Rewrite Suffices: Empirical Lessons from Production Skill Description Optimization"
+    },
+    {
+      "idx": 6,
+      "id": "2606.31551",
+      "title": "AutoTrainess: Teaching Language Models to Improve Language Models Autonomously"
+    },
+    {
+      "idx": 7,
+      "id": "2606.31651",
+      "title": "FARS: A Fully Automated Research System Deployed at Scale"
+    },
+    {
+      "idx": 8,
+      "id": "2606.31145",
+      "title": "SeKV: Resolution-Adaptive KV Cache with Hierarchical Semantic Memory for Long-Context LLM Inference"
+    },
+    {
+      "idx": 9,
+      "id": "2606.30813",
+      "title": "Gradient Smoothing: Coupling Layer-wise Updates for Improved Optimization"
+    },
+    {
+      "idx": 10,
+      "id": "2606.30921",
+      "title": "Towards Transparent Checkpointing with AI-driven Code Generation"
+    },
+    {
+      "idx": 11,
+      "id": "2606.30949",
+      "title": "AgRefactor: Self-Evolving Agentic Workflow for HLS Compatibility and Performance"
+    },
+    {
+      "idx": 12,
+      "id": "2606.31963",
+      "title": "Signed-Permutation Coordinate Transport for RMSNorm Transformers"
+    },
+    {
+      "idx": 13,
+      "id": "2606.31232",
+      "title": "Delta-JEPA: Learning Action-Sensitive World Models via Latent Difference Decoding"
+    },
+    {
+      "idx": 14,
+      "id": "2606.31650",
+      "title": "ECHO: Prune to act, trace to learn with selective turn memory in agentic RL"
+    },
+    {
+      "idx": 15,
+      "id": "2606.31252",
+      "title": "Embodied CAD: Solver-Grounded LLM Agents for Parametric B-Rep Assembly Modeling"
+    },
+    {
+      "idx": 16,
+      "id": "2606.30771",
+      "title": "Protecting Futures against Silent Data Corruption -- Efficient Task Replication for Dynamic Data Dependencies"
+    },
+    {
+      "idx": 17,
+      "id": "2606.31564",
+      "title": "ACE: Pluggable Adaptive Context Elasticizer across Agents"
+    },
+    {
+      "idx": 18,
+      "id": "2606.30970",
+      "title": "AgentBound: Verifiable Behavioral Governance for Autonomous AI Agents"
+    },
+    {
+      "idx": 19,
+      "id": "2606.31470",
+      "title": "CLOUDADV: Decision-Aligned Instance Sizing with Zero-Shot Foundation Models under Drift"
+    },
+    {
+      "idx": 20,
+      "id": "2606.31174",
+      "title": "ClawArena-Team: Benchmarking Subagent Orchestration and Dynamic Workflows in Language-Model Agents"
+    },
+    {
+      "idx": 21,
+      "id": "2606.31093",
+      "title": "Omni-Flow: A Unified Workflow Orchestration and Distributed KV Cache Sharing Framework for Multimodal Inference"
+    },
+    {
+      "idx": 22,
+      "id": "2606.31331",
+      "title": "Expected Gain-based Escalation in Vertical Federated Learning"
+    },
+    {
+      "idx": 23,
+      "id": "2606.31276",
+      "title": "AC$^2$P$^2$SL: Adaptive Communication-Computation Pipeline Parallel Split Learning over Edge Networks"
+    },
+    {
+      "idx": 24,
+      "id": "2606.31163",
+      "title": "ComplianceGate: Classifier-Gated Multi-Tier LLM Routing for Inference in Regulated Industries"
+    },
+    {
+      "idx": 25,
+      "id": "2606.31458",
+      "title": "Performance Analysis in Parallel Programming Education: A Comparative Usability Study"
+    },
+    {
+      "idx": 26,
+      "id": "2606.31796",
+      "title": "CHERRY: Compressed Hierarchical Experts with Recurrent Representational Yield"
+    },
+    {
+      "idx": 27,
+      "id": "2606.31041",
+      "title": "A Semantic-Layer-Mediated Agent for Natural Language to SQL over Heterogeneous Enterprise Databases"
+    },
+    {
+      "idx": 28,
+      "id": "2606.32014",
+      "title": "Scalable Behaviour Cloning on Browser Using via Skill Distillation"
+    },
+    {
+      "idx": 29,
+      "id": "2606.31580",
+      "title": "LASER: Load-Aware Serving with Early-Exit for Reasoning LLMs at the Edge"
+    },
+    {
+      "idx": 30,
+      "id": "2606.30848",
+      "title": "StreamGuard: Low-Overhead Resilience for Real-time HPC Data Streams"
+    }
+  ]
+}
