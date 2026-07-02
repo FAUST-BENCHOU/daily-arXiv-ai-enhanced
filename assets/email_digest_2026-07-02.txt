@@ -1,0 +1,269 @@
+# 每日硬凑师兄要求的创新点 2026-07-02
+
+## 今日三个主题（结构化）
+1. **面向LLM Agent的治理与安全运行时** — 从事务化工作流准入、注册表驱动的Agent生命周期到技能供应链依赖分析，探讨如何让AI生成的动作和Agent系统在可审计、可回滚、可治理的约束下安全运行。
+2. **LLM推理与服务的性能优化架构** — 覆盖PD分离MoE路由、原生Metal推理运行时、长上下文KV缓存压缩以及对数量化，聚焦于降低推理延迟、提升吞吐和适配异构硬件。
+3. **Agent驱动的软件工程自动化与修复** — 从仓库级兼容性救援、漏洞知识增强修复到多轮SWE任务路由，研究LLM Agent如何在真实代码库中自主诊断、定位和修复问题。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00173) | TallyTrain: Communication-Efficient Federated Distillation | 2607.00173 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01224) | AutoMem: Automated Learning of Memory as a Cognitive Skill | 2607.01224 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00269) | Mnemosyne: Agentic Transaction Processing for Validating and Repairing AI-generated Workflows | 2607.00269 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00455) | CloudyGUI: A Novel Python-based Framework for Auto-Scaling and Cloud Workload Analysis | 2607.00455 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00041) | ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis | 2607.00041 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01232) | Is One Layer Enough? Training A Single Transformer Layer Can Match Full-Parameter RL Training | 2607.01232 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00089) | Representation as a Bottleneck for Mechanistic Interpretability | 2607.00089 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00436) | PHREEQC-MCQ-200: A Diagnostic Benchmark for Tool-Augmented Scientific Simulator Agents | 2607.00436 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00303) | Promise-Future Synchronization for Cluster Asynchronous Many-Task Runtimes via MPI One-Sided Communication | 2607.00303 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00555) | Rise From The Ashes: LLM-based Static Analysis for Deep Learning Framework Bugs | 2607.00555 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01188) | Optimal Resource Utilization for Autonomous Laboratory Orchestrators | 2607.01188 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00151) | SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering | 2607.00151 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01213) | RepoRescue: An Empirical Study of LLM Agents on Whole-Repository Compatibility Rescue | 2607.01213 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00466) | ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving | 2607.00466 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00820) | Knowledge-Enhanced Agentic Vulnerability Repair | 2607.00820 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00035) | Making Failure Safe: A Constrained, Verifiable Agent Framework for Open-Web Data Collection | 2607.00035 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00700) | LLVM-Bench: Benchmarking and Advancing Large Language Models for LLVM Compiler Issue Resolution | 2607.00700 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00510) | Prototype Language Models | 2607.00510 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00501) | BaseRT: Best-in-Class LLM Inference on Apple Silicon via Native Metal | 2607.00501 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00562) | Towards Better Linux Kernel Fault Localization: Leveraging Contrastive Reasoning and Hierarchical Context Analysis | 2607.00562 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00740) | Stochastic Connectivity as the Foundation of a Runtime Model for Microservice Availability Analysis | 2607.00740 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00162) | FRAME: Learning the Adaptation Domain with a Mixture of Fractional-Fourier Experts | 2607.00162 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01087) | Cheap Code, Costly Judgment: A Case Study on Governable Agentic Software Engineering | 2607.01087 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01120) | Next-Generation Agentic Reinforcement Learning Systems Enable Self-Evolving Agents | 2607.01120 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00760) | MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression | 2607.00760 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01127) | LogₐQuant: Quantizing Language Models in Logarithmic Space | 2607.01127 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00053) | SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks | 2607.00053 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00095) | SNAP-FM: Sparse Nonlinear Accelerated Projection for Physics-Constrained Generative Modeling | 2607.00095 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00345) | Registry-Governed Agent Lifecycle: Completing EDDOps with Evaluation-Driven Registration, Promotion, and Retirement on AWS AgentCore | 2607.00345 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01136) | Skills Are Not Islands: Measuring Dependency and Risk in Agent Skill Supply Chains | 2607.01136 |
+
+---
+
+## 一、三篇论文方向与六个创新点
+
+### 论文方向一：面向LLM Agent的治理与安全运行时
+
+**拟定论文题目：** 基于事务化准入与注册表驱动的LLM Agent安全运行时框架
+
+**论文核心问题：** 如何构建一个可审计、可回滚、可治理的运行时环境，使AI生成的动作和Agent系统在约束下安全运行，同时支持技能供应链的依赖分析与生命周期管理。
+
+#### 创新点一：事务化工作流准入与补偿机制
+
+大多数现有方法将LLM Agent生成的动作视为可信提案直接执行，缺乏对动作语法有效但语义冲突、状态过时或破坏性后果的运行时防护 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00269)[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00041)[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00035)。少数现有方法引入约束检查或验证步骤，但通常采用后验过滤或拒绝策略，无法在动作提交前进行确定性准入判断，且缺乏对已提交动作的依赖安全补偿能力 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00269)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01087)。为此，本文提出基于Agentic Transaction Processing (ATP) 的事务化工作流准入机制，将生成动作视为未信任提案，通过声明式约束集进行确定性准入，并引入依赖安全补偿和有效状态投影，确保提交状态正确性独立于生成层的智能水平 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00269)[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00041)。
+
+- **创新类型：** 系统框架创新 + 约束处理创新
+- **创新性判断：** 文献池中 [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00269) 提出了ATP模型的核心思想，[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00041) 提出了CID代理的写入准入机制，[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00035) 提出了约束验证框架，但均未将事务化准入、补偿机制与技能供应链依赖分析进行系统集成。本文创新点在于将ATP的事务化提交模型与依赖安全补偿统一到一个运行时框架中。
+- **文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00269) | Mnemosyne: Agentic Transaction Processing for Validating and Repairing AI-generated Workflows | 提出ATP事务模型，将生成动作视为未信任提案，通过约束集准入 | 支撑大多数现有方法（后验执行）的不足，以及少数方法（ATP）的进展 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00041) | ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis | 提出CID代理的写入准入机制，支持并发写入的确定性组合 | 支撑少数现有方法（准入机制） |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00035) | Making Failure Safe: A Constrained, Verifiable Agent Framework for Open-Web Data Collection | 提出约束验证框架，将LLM输出转为类型化JSON配置 | 支撑大多数现有方法（自由生成）的不足 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01087) | Cheap Code, Costly Judgment: A Case Study on Governable Agentic Software Engineering | 提出治理转换理论，讨论AI中介开发的可检查性和可维护性 | 支撑现有不足（治理需求） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00345) | Registry-Governed Agent Lifecycle: Completing EDDOps with Evaluation-Driven Registration, Promotion, and Retirement on AWS AgentCore | 提出注册表驱动的Agent生命周期管理 | 支撑本文差异（注册表集成） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01136) | Skills Are Not Islands: Measuring Dependency and Risk in Agent Skill Supply Chains | 提出Agent技能供应链依赖分析 | 支撑本文差异（依赖分析与补偿集成） |
+
+#### 创新点二：注册表驱动的Agent生命周期与技能供应链依赖分析
+
+大多数现有方法将Agent技能视为独立的功能模块，缺乏对技能间依赖关系、版本兼容性和供应链风险的显式建模 [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01136)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00345)。少数现有方法引入注册表或物料清单概念，但通常仅关注元数据记录，未将依赖分析与运行时准入、生命周期状态转换（注册、晋升、退役）进行闭环集成 [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00345)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01136)。为此，本文提出注册表驱动的Agent生命周期管理框架，将技能依赖图与运行时准入机制绑定，通过依赖安全补偿和版本兼容性检查，实现从注册到退役的全生命周期治理 [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00345)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01136)[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00269)。
+
+- **创新类型：** 指标体系创新 + 系统框架创新
+- **创新性判断：** 文献池中 [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01136) 提出了Agent技能供应链（ASSC）和SkillDepAnalyzer，[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00345) 提出了注册表驱动的生命周期管理，但两者未进行系统集成。本文创新点在于将依赖分析与生命周期管理统一到一个治理框架中。
+- **文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00345) | Registry-Governed Agent Lifecycle: Completing EDDOps with Evaluation-Driven Registration, Promotion, and Retirement on AWS AgentCore | 提出注册表驱动的Agent生命周期管理 | 支撑少数现有方法（注册表管理） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01136) | Skills Are Not Islands: Measuring Dependency and Risk in Agent Skill Supply Chains | 提出ASSC和SkillDepAnalyzer，分析技能依赖图 | 支撑大多数现有方法（技能独立）的不足 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00269) | Mnemosyne: Agentic Transaction Processing for Validating and Repairing AI-generated Workflows | 提出ATP事务模型和依赖安全补偿 | 支撑本文差异（依赖分析与补偿集成） |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00041) | ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis | 提出CID代理的写入准入 | 支撑本文差异（准入与生命周期绑定） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01087) | Cheap Code, Costly Judgment: A Case Study on Governable Agentic Software Engineering | 讨论AI中介开发的治理需求 | 支撑现有不足（治理需求） |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00035) | Making Failure Safe: A Constrained, Verifiable Agent Framework for Open-Web Data Collection | 提出约束验证框架 | 支撑大多数现有方法（无治理）的不足 |
+
+**该论文两个创新点之间的关系：**
+创新点一解决“运行时如何安全执行动作”（事务化准入与补偿），创新点二解决“Agent如何被治理”（注册表生命周期与依赖分析）。二者属于同一论文主题，但分别对应运行时安全与治理框架两个不同技术层面，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** 无治理的Agent框架（如直接LLM生成执行）、后验过滤框架（如[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00035)）、纯注册表框架（如[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00345)）
+- **实验数据或场景：** 多Agent协作代码合成任务、开放网络数据采集任务
+- **评价指标：** 动作提交成功率、状态回滚率、依赖冲突检测率、运行时故障率
+- **消融实验：** 去除事务化准入、去除依赖安全补偿、去除注册表生命周期管理
+
+---
+
+### 论文方向二：LLM推理与服务的性能优化架构
+
+**拟定论文题目：** 面向PD分离与长上下文的LLM推理服务性能优化架构
+
+**论文核心问题：** 如何通过专家局部性感知路由、动态KV缓存压缩和对数量化，降低推理延迟、提升吞吐并适配异构硬件。
+
+#### 创新点三：专家局部性感知的PD分离MoE路由
+
+大多数现有方法在PD分离架构中仅根据负载均衡进行解码路由，忽略了MoE模型中不同专家权重加载对解码延迟的影响，导致负载均衡但延迟不均 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00466)。少数现有方法开始关注专家局部性，但通常采用静态分区或离线聚类，无法适应前缀缓存导致的专家激活模式变化 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00466)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00151)。为此，本文提出专家局部性感知的解码路由方法，通过预填充阶段的专家激活签名预测生成阶段的专家激活模式，结合签名缓存与KV块粒度的协同索引，实现在线局部性感知路由 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00466)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00151)。
+
+- **创新类型：** 方法设计创新 + 性能预测创新
+- **创新性判断：** 文献池中 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00466) 提出了ELDR路由器的核心思想，[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00151) 提出了lookahead上下文工程。本文创新点在于将专家签名预测与lookahead KV缓存准备进行协同优化。
+- **文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00466) | ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving | 提出专家局部性感知路由，通过签名预测和K-means分区 | 支撑少数现有方法（局部性感知路由） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00151) | SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering | 提出lookahead上下文工程，异步准备KV缓存 | 支撑本文差异（lookahead与路由协同） |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00501) | BaseRT: Best-in-Class LLM Inference on Apple Silicon via Native Metal | 提出原生Metal推理运行时 | 支撑大多数现有方法（通用运行时）的不足 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00760) | MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression | 提出动态二维KV缓存压缩 | 支撑本文差异（缓存压缩与路由集成） |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00455) | CloudyGUI: A Novel Python-based Framework for Auto-Scaling and Cloud Workload Analysis | 提出云负载分析与自动扩缩框架 | 支撑大多数现有方法（负载均衡路由）的不足 |
+
+#### 创新点四：动态二维KV缓存压缩与对数量化
+
+大多数现有KV缓存压缩方法仅针对序列维度或通道维度进行压缩，在上下文窗口扩展时压缩空间有限 [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00760)。少数现有方法尝试二维压缩，但直接应用两种压缩会导致显著的精度损失 [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00760)[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01127)。为此，本文提出动态二维KV缓存压缩方法，利用KV缓存中元素重要性分布的非均匀性，在向量粒度选择压缩策略，并结合可调底数的对数量化方法，在4-bit精度下实现优于非对称线性量化的性能 [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00760)[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01127)。
+
+- **创新类型：** 方法设计创新 + 性能预测创新
+- **创新性判断：** 文献池中 [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00760) 提出了MosaicKV的动态二维压缩，[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01127) 提出了LogₐQuant对数量化。本文创新点在于将动态二维压缩与对数量化进行联合优化。
+- **文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00760) | MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression | 提出动态二维KV缓存压缩 | 支撑少数现有方法（二维压缩） |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01127) | LogₐQuant: Quantizing Language Models in Logarithmic Space | 提出可调底数的对数量化 | 支撑少数现有方法（对数量化） |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00501) | BaseRT: Best-in-Class LLM Inference on Apple Silicon via Native Metal | 提出原生Metal推理运行时 | 支撑大多数现有方法（通用量化）的不足 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00466) | ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving | 提出专家局部性感知路由 | 支撑本文差异（压缩与路由协同） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00151) | SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering | 提出lookahead上下文工程 | 支撑大多数现有方法（无压缩）的不足 |
+
+**该论文两个创新点之间的关系：**
+创新点三解决“如何路由”（专家局部性感知路由），创新点四解决“如何压缩”（动态二维KV缓存压缩与量化）。二者属于同一论文主题，但分别对应路由优化与内存优化两个不同技术层面，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** 负载均衡路由（如vLLM默认）、静态专家分区、单维压缩、均匀量化
+- **实验数据或场景：** MoE模型（如Mixtral 8x7B、Qwen2.5-MoE）、长上下文任务（128K-1M tokens）
+- **评价指标：** TPOT（每个输出token的时间）、TTFT（首token时间）、吞吐量、GPU内存占用、精度损失
+- **消融实验：** 去除专家签名预测、去除动态二维压缩、去除对数量化
+
+---
+
+### 论文方向三：Agent驱动的软件工程自动化与修复
+
+**拟定论文题目：** 基于知识增强与多轮路由的Agent驱动软件工程自动化修复方法
+
+**论文核心问题：** 如何使LLM Agent在真实代码库中自主诊断、定位和修复问题，包括仓库级兼容性救援、漏洞知识增强修复和多轮SWE任务路由。
+
+#### 创新点五：仓库级兼容性救援与知识增强修复
+
+大多数现有方法聚焦于单文件或单函数的bug修复，无法处理因生态系统漂移导致的仓库级兼容性问题 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01213)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00820)。少数现有方法开始研究仓库级兼容性救援，但通常仅提供修复补丁，缺乏对历史修复知识的系统化利用和根因诊断 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01213)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00820)。为此，本文提出仓库级兼容性救援与知识增强修复方法，从历史漏洞-补丁对中提取多维漏洞知识构建检索知识库，结合工具增强的ReAct推理进行根因诊断，并基于知识级检索增强生成进行补丁迭代优化 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01213)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00820)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00700)。
+
+- **创新类型：** 问题建模创新 + 方法设计创新
+- **创新性判断：** 文献池中 [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01213) 提出了RepoRescue仓库级兼容性救援，[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00820) 提出了KeaRepair知识增强修复。本文创新点在于将仓库级兼容性救援与知识增强修复进行系统集成。
+- **文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01213) | RepoRescue: An Empirical Study of LLM Agents on Whole-Repository Compatibility Rescue | 提出仓库级兼容性救援任务和基准 | 支撑少数现有方法（仓库级救援） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00820) | Knowledge-Enhanced Agentic Vulnerability Repair | 提出KeaRepair知识增强修复 | 支撑少数现有方法（知识增强修复） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00700) | LLVM-Bench: Benchmarking and Advancing Large Language Models for LLVM Compiler Issue Resolution | 提出LLVM编译器问题解决基准 | 支撑大多数现有方法（单文件修复）的不足 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00562) | Towards Better Linux Kernel Fault Localization: Leveraging Contrastive Reasoning and Hierarchical Context Analysis | 提出对比推理和层次上下文分析的故障定位 | 支撑本文差异（根因诊断） |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00053) | SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks | 提出基于部分轨迹的路由方法 | 支撑本文差异（多轮迭代） |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00555) | Rise From The Ashes: LLM-based Static Analysis for Deep Learning Framework Bugs | 提出基于LLM的静态分析 | 支撑大多数现有方法（无知识增强）的不足 |
+
+#### 创新点六：基于部分轨迹的价值感知多轮SWE任务路由
+
+大多数现有方法将每个SWE任务路由到固定模型，忽略了任务难度的异质性，导致简单任务浪费昂贵模型资源 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00053)。少数现有方法引入基于任务描述的路由，但在Agent设置中存在信息论贝叶斯误差下限：相似描述可能隐藏局部错误或多模块重构 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00053)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01087)。为此，本文提出基于部分轨迹的价值感知路由方法，让廉价模型先运行若干探索轮次，基于部分轨迹决定是继续使用廉价模型还是升级到昂贵模型，并提供贝叶斯最优性证明 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00053)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01087)[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01120)。
+
+- **创新类型：** 方法设计创新 + 性能预测创新
+- **创新性判断：** 文献池中 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00053) 提出了SWE-Router的核心思想，[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01120) 讨论了自进化Agent系统。本文创新点在于将部分轨迹路由与自进化学习机制结合。
+- **文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00053) | SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks | 提出基于部分轨迹的价值感知路由 | 支撑少数现有方法（部分轨迹路由） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01120) | Next-Generation Agentic Reinforcement Learning Systems Enable Self-Evolving Agents | 讨论自进化Agent系统和在线RL系统 | 支撑本文差异（自进化与路由结合） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01087) | Cheap Code, Costly Judgment: A Case Study on Governable Agentic Software Engineering | 讨论AI中介开发的治理需求 | 支撑大多数现有方法（固定路由）的不足 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01213) | RepoRescue: An Empirical Study of LLM Agents on Whole-Repository Compatibility Rescue | 提出仓库级兼容性救援 | 支撑本文差异（多轮路由在仓库级任务中的应用） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00820) | Knowledge-Enhanced Agentic Vulnerability Repair | 提出KeaRepair知识增强修复 | 支撑大多数现有方法（无路由）的不足 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00700) | LLVM-Bench: Benchmarking and Advancing Large Language Models for LLVM Compiler Issue Resolution | 提出LLVM编译器问题解决基准 | 支撑本文差异（路由在编译器任务中的应用） |
+
+**该论文两个创新点之间的关系：**
+创新点五解决“如何修复”（仓库级兼容性救援与知识增强修复），创新点六解决“何时升级模型”（基于部分轨迹的价值感知路由）。二者属于同一论文主题，但分别对应修复方法与成本优化两个不同技术层面，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** 固定模型路由、基于任务描述的路由、无知识增强的修复、单文件修复
+- **实验数据或场景：** RepoRescue基准（Python 193个、Java 122个仓库）、LLVM-Bench基准（423个任务）、SWE-bench
+- **评价指标：** 全补丁通过率、源码修复率、成本效率（修复成功率/总成本）、平均修复轮次
+- **消融实验：** 去除知识增强、去除部分轨迹路由、去除自进化学习
+
+---
+
+## 二、三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|----------|--------------|----------|------------|----------|----------|----------------------|----------|
+| 论文一：面向LLM Agent的治理与安全运行时 | 基于事务化准入与注册表驱动的LLM Agent安全运行时框架 | 如何构建可审计、可回滚、可治理的运行时环境 | 事务化工作流准入与补偿机制；注册表驱动的Agent生命周期与技能供应链依赖分析 | ATP事务模型、注册表管理、依赖图分析 | 多Agent协作代码合成、开放网络数据采集 | 关注运行时安全与治理，而非推理性能或代码修复 | 低 |
+| 论文二：LLM推理与服务的性能优化架构 | 面向PD分离与长上下文的LLM推理服务性能优化架构 | 如何降低推理延迟、提升吞吐并适配异构硬件 | 专家局部性感知的PD分离MoE路由；动态二维KV缓存压缩与对数量化 | 专家签名预测、动态二维压缩、对数量化 | MoE模型长上下文推理、异构硬件部署 | 关注推理性能优化，而非Agent治理或代码修复 | 低 |
+| 论文三：Agent驱动的软件工程自动化与修复 | 基于知识增强与多轮路由的Agent驱动软件工程自动化修复方法 | 如何使LLM Agent在真实代码库中自主诊断、定位和修复问题 | 仓库级兼容性救援与知识增强修复；基于部分轨迹的价值感知多轮SWE任务路由 | 知识增强修复、部分轨迹路由、ReAct推理 | 仓库级兼容性救援、LLVM编译器问题修复 | 关注代码修复与路由，而非运行时治理或推理性能 | 低 |
+
+---
+
+## 三、每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|----------|----------|----------|----------------------|------------------|--------------|------|
+| 论文一 | 事务化工作流准入与补偿机制 | 注册表驱动的Agent生命周期与技能供应链依赖分析 | 是 | 是（运行时安全 vs 治理框架） | 否 | 可保留 |
+| 论文二 | 专家局部性感知的PD分离MoE路由 | 动态二维KV缓存压缩与对数量化 | 是 | 是（路由优化 vs 内存优化） | 否 | 可保留 |
+| 论文三 | 仓库级兼容性救援与知识增强修复 | 基于部分轨迹的价值感知多轮SWE任务路由 | 是 | 是（修复方法 vs 成本优化） | 否 | 可保留 |
+
+---
+
+## 四、参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00173) TallyTrain: Communication-Efficient Federated Distillation. arXiv:2607.00173, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01224) AutoMem: Automated Learning of Memory as a Cognitive Skill. arXiv:2607.01224, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00269) Mnemosyne: Agentic Transaction Processing for Validating and Repairing AI-generated Workflows. arXiv:2607.00269, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00455) CloudyGUI: A Novel Python-based Framework for Auto-Scaling and Cloud Workload Analysis. arXiv:2607.00455, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00041) ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis. arXiv:2607.00041, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01232) Is One Layer Enough? Training A Single Transformer Layer Can Match Full-Parameter RL Training. arXiv:2607.01232, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00089) Representation as a Bottleneck for Mechanistic Interpretability: The Manifestation Unit Protocol. arXiv:2607.00089, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00436) PHREEQC-MCQ-200: A Diagnostic Benchmark for Tool-Augmented Scientific Simulator Agents. arXiv:2607.00436, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00303) Promise-Future Synchronization for Cluster Asynchronous Many-Task Runtimes via MPI One-Sided Communication. arXiv:2607.00303, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00555) Rise From The Ashes: LLM-based Static Analysis for Deep Learning Framework Bugs. arXiv:2607.00555, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01188) Optimal Resource Utilization for Autonomous Laboratory Orchestrators. arXiv:2607.01188, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00151) SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering. arXiv:2607.00151, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01213) RepoRescue: An Empirical Study of LLM Agents on Whole-Repository Compatibility Rescue. arXiv:2607.01213, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00466) ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving. arXiv:2607.00466, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00820) Knowledge-Enhanced Agentic Vulnerability Repair. arXiv:2607.00820, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00035) Making Failure Safe: A Constrained, Verifiable Agent Framework for Open-Web Data Collection. arXiv:2607.00035, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00700) LLVM-Bench: Benchmarking and Advancing Large Language Models for LLVM Compiler Issue Resolution. arXiv:2607.00700, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00510) Prototype Language Models. arXiv:2607.00510, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00501) BaseRT: Best-in-Class LLM Inference on Apple Silicon via Native Metal. arXiv:2607.00501, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00562) Towards Better Linux Kernel Fault Localization: Leveraging Contrastive Reasoning and Hierarchical Context Analysis. arXiv:2607.00562, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00740) Stochastic Connectivity as the Foundation of a Runtime Model for Microservice Availability Analysis. arXiv:2607.00740, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00162) FRAME: Learning the Adaptation Domain with a Mixture of Fractional-Fourier Experts. arXiv:2607.00162, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01087) Cheap Code, Costly Judgment: A Case Study on Governable Agentic Software Engineering. arXiv:2607.01087, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01120) Next-Generation Agentic Reinforcement Learning Systems Enable Self-Evolving Agents. arXiv:2607.01120, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00760) MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression. arXiv:2607.00760, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01127) LogₐQuant: Quantizing Language Models in Logarithmic Space. arXiv:2607.01127, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00053) SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks. arXiv:2607.00053, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00095) SNAP-FM: Sparse Nonlinear Accelerated Projection for Physics-Constrained Generative Modeling. arXiv:2607.00095, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.00345) Registry-Governed Agent Lifecycle: Completing EDDOps with Evaluation-Driven Registration, Promotion, and Retirement on AWS AgentCore. arXiv:2607.00345, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-02&paperId=2607.01136) Skills Are Not Islands: Measuring Dependency and Risk in Agent Skill Supply Chains. arXiv:2607.01136, 2026.
+
+---
+
+## 五、自检结果
+
+1. 是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：**是**
+2. 是否避免将一篇论文拆成六个创新点：**是**
+3. 是否避免生成六篇论文各一个创新点：**是**
+4. 每篇论文内部两个创新点是否属于同一论文主题：**是**
+5. 每篇论文内部两个创新点是否互补而不重复：**是**
+6. 三篇论文之间是否研究问题不同：**是**
+7. 三篇论文之间是否核心方法不同：**是**
+8. 三篇论文之间是否实验验证重点不同：**是**
+9. 每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：**是**
+10. 每个创新点是否至少引用3篇池内文献：**是**（每个创新点引用5-6篇池内文献）
+11. 是否说明每篇文献的支撑作用：**是**
+12. 是否避免“首次提出”“填补空白”等绝对化表述：**是**
+13. 是否建立三篇论文方向去重矩阵：**是**
+14. 是否建立每篇论文内部创新点去重检查表：**是**

@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-02",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "面向LLM Agent的治理与安全运行时",
+      "blurb": "从事务化工作流准入、注册表驱动的Agent生命周期到技能供应链依赖分析，探讨如何让AI生成的动作和Agent系统在可审计、可回滚、可治理的约束下安全运行。"
+    },
+    {
+      "title": "LLM推理与服务的性能优化架构",
+      "blurb": "覆盖PD分离MoE路由、原生Metal推理运行时、长上下文KV缓存压缩以及对数量化，聚焦于降低推理延迟、提升吞吐和适配异构硬件。"
+    },
+    {
+      "title": "Agent驱动的软件工程自动化与修复",
+      "blurb": "从仓库级兼容性救援、漏洞知识增强修复到多轮SWE任务路由，研究LLM Agent如何在真实代码库中自主诊断、定位和修复问题。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2607.00173",
+      "title": "TallyTrain: Communication-Efficient Federated Distillation"
+    },
+    {
+      "idx": 2,
+      "id": "2607.01224",
+      "title": "AutoMem: Automated Learning of Memory as a Cognitive Skill"
+    },
+    {
+      "idx": 3,
+      "id": "2607.00269",
+      "title": "Mnemosyne: Agentic Transaction Processing for Validating and Repairing AI-generated Workflows"
+    },
+    {
+      "idx": 4,
+      "id": "2607.00455",
+      "title": "CloudyGUI: A Novel Python-based Framework for Auto-Scaling and Cloud Workload Analysis"
+    },
+    {
+      "idx": 5,
+      "id": "2607.00041",
+      "title": "ATM: CID-Brokered Pre-Write Admission for Multi-Agent Code Co-Synthesis"
+    },
+    {
+      "idx": 6,
+      "id": "2607.01232",
+      "title": "Is One Layer Enough? Training A Single Transformer Layer Can Match Full-Parameter RL Training"
+    },
+    {
+      "idx": 7,
+      "id": "2607.00089",
+      "title": "Representation as a Bottleneck for Mechanistic Interpretability: The Manifestation Unit Protocol"
+    },
+    {
+      "idx": 8,
+      "id": "2607.00436",
+      "title": "PHREEQC-MCQ-200: A Diagnostic Benchmark for Tool-Augmented Scientific Simulator Agents"
+    },
+    {
+      "idx": 9,
+      "id": "2607.00303",
+      "title": "Promise-Future Synchronization for Cluster Asynchronous Many-Task Runtimes via MPI One-Sided Communication"
+    },
+    {
+      "idx": 10,
+      "id": "2607.00555",
+      "title": "Rise From The Ashes: LLM-based Static Analysis for Deep Learning Framework Bugs"
+    },
+    {
+      "idx": 11,
+      "id": "2607.01188",
+      "title": "Optimal Resource Utilization for Autonomous Laboratory Orchestrators"
+    },
+    {
+      "idx": 12,
+      "id": "2607.00151",
+      "title": "SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering"
+    },
+    {
+      "idx": 13,
+      "id": "2607.01213",
+      "title": "RepoRescue: An Empirical Study of LLM Agents on Whole-Repository Compatibility Rescue"
+    },
+    {
+      "idx": 14,
+      "id": "2607.00466",
+      "title": "ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving"
+    },
+    {
+      "idx": 15,
+      "id": "2607.00820",
+      "title": "Knowledge-Enhanced Agentic Vulnerability Repair"
+    },
+    {
+      "idx": 16,
+      "id": "2607.00035",
+      "title": "Making Failure Safe: A Constrained, Verifiable Agent Framework for Open-Web Data Collection"
+    },
+    {
+      "idx": 17,
+      "id": "2607.00700",
+      "title": "LLVM-Bench: Benchmarking and Advancing Large Language Models for LLVM Compiler Issue Resolution"
+    },
+    {
+      "idx": 18,
+      "id": "2607.00510",
+      "title": "Prototype Language Models"
+    },
+    {
+      "idx": 19,
+      "id": "2607.00501",
+      "title": "BaseRT: Best-in-Class LLM Inference on Apple Silicon via Native Metal"
+    },
+    {
+      "idx": 20,
+      "id": "2607.00562",
+      "title": "Towards Better Linux Kernel Fault Localization: Leveraging Contrastive Reasoning and Hierarchical Context Analysis"
+    },
+    {
+      "idx": 21,
+      "id": "2607.00740",
+      "title": "Stochastic Connectivity as the Foundation of a Runtime Model for Microservice Availability Analysis"
+    },
+    {
+      "idx": 22,
+      "id": "2607.00162",
+      "title": "FRAME: Learning the Adaptation Domain with a Mixture of Fractional-Fourier Experts"
+    },
+    {
+      "idx": 23,
+      "id": "2607.01087",
+      "title": "Cheap Code, Costly Judgment: A Case Study on Governable Agentic Software Engineering"
+    },
+    {
+      "idx": 24,
+      "id": "2607.01120",
+      "title": "Next-Generation Agentic Reinforcement Learning Systems Enable Self-Evolving Agents"
+    },
+    {
+      "idx": 25,
+      "id": "2607.00760",
+      "title": "MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression"
+    },
+    {
+      "idx": 26,
+      "id": "2607.01127",
+      "title": "$\\text{Log}_\\text{b}$Quant: Quantizing Language Models in Logarithmic Space"
+    },
+    {
+      "idx": 27,
+      "id": "2607.00053",
+      "title": "SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks"
+    },
+    {
+      "idx": 28,
+      "id": "2607.00095",
+      "title": "SNAP-FM: Sparse Nonlinear Accelerated Projection for Physics-Constrained Generative Modeling"
+    },
+    {
+      "idx": 29,
+      "id": "2607.00345",
+      "title": "Registry-Governed Agent Lifecycle:Completing EDDOps with Evaluation-DrivenRegistration, Promotion, and Retirement on AWS AgentCore"
+    },
+    {
+      "idx": 30,
+      "id": "2607.01136",
+      "title": "Skills Are Not Islands: Measuring Dependency and Risk in Agent Skill Supply Chains"
+    }
+  ]
+}
