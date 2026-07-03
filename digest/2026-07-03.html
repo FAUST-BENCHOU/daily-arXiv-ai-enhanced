@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日硬凑师兄要求的创新点 · 2026-07-03</title>
+</head>
+<body style="margin:0;background:#e8eef5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;color:#334155;">
+<div style="max-width:900px;margin:0 auto;padding:28px 16px 48px;">
+<nav style="font-size:14px;margin-bottom:18px;">
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html" style="color:#2563eb;text-decoration:none;font-weight:600;">论文列表主页</a>
+<span style="color:#94a3b8;margin:0 8px;">/</span>
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/digest-index.html" style="color:#2563eb;text-decoration:none;font-weight:600;">历史创新点</a>
+</nav>
+<header style="background:linear-gradient(135deg,#1e40af 0%,#3b82f6 100%);color:#fff;border-radius:14px;padding:22px 26px;margin-bottom:22px;">
+<p style="margin:0;font-size:12px;opacity:0.88;">读文献 · 憋创新点 · GitHub Pages</p>
+<h1 style="margin:10px 0 0;font-size:22px;font-weight:700;line-height:1.35;">每日硬凑师兄要求的创新点 · 2026-07-03</h1>
+</header>
+<section style="margin-bottom:22px;">
+<h2 style="font-size:18px;color:#0f172a;margin:0 0 14px;border-bottom:2px solid #2563eb;padding-bottom:8px;">今日三个主题</h2>
+<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;margin-bottom:12px;">
+<div style="font-size:12px;color:#64748b;margin-bottom:6px;">主题 1</div>
+<div style="font-size:17px;font-weight:700;color:#0f172a;margin-bottom:8px;">长序列与混合注意力 LLM 推理服务的通信-计算重叠与缓存优化</div>
+<div style="font-size:14px;color:#475569;line-height:1.55;">针对长序列并行注意力中的通信-计算串行瓶颈与混合注意力模型的位置无关缓存缺失问题，分别从多流流水线重叠和段累积状态代数原语两个方向提出系统级加速方案。</div>
+</div>
+<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;margin-bottom:12px;">
+<div style="font-size:12px;color:#64748b;margin-bottom:6px;">主题 2</div>
+<div style="font-size:17px;font-weight:700;color:#0f172a;margin-bottom:8px;">编码智能体强化学习与可扩展监督的基础设施开销与约束治理</div>
+<div style="font-size:14px;color:#475569;line-height:1.55;">聚焦编码智能体 RL 后训练中执行基础设施的冷启动与资源税问题，以及通过访问控制、网络策略等传统工程约束实现可扩展监督的可行性验证。</div>
+</div>
+<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;margin-bottom:12px;">
+<div style="font-size:12px;color:#64748b;margin-bottom:6px;">主题 3</div>
+<div style="font-size:17px;font-weight:700;color:#0f172a;margin-bottom:8px;">多轮 LLM 编程会话中的回归累积检测与智能体无限循环静态分析</div>
+<div style="font-size:14px;color:#475569;line-height:1.55;">针对 LLM 辅助编程中多轮需求演化导致的回归累积现象，以及智能体因反馈路径未有效边界化而陷入无限循环的故障模式，分别提出大规模实证分析与静态检测工具。</div>
+</div>
+</section>
+<section style="margin-bottom:22px;">
+<h2 style="font-size:18px;color:#0f172a;margin:0 0 14px;border-bottom:2px solid #2563eb;padding-bottom:8px;">文献池（点击跳转当日论文详情）</h2>
+<table style='width:100%;border-collapse:collapse;font-size:13px;margin:16px 0;'><thead><tr style='background:#f3f4f6;'><th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>编号</th><th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>题目</th><th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>ID</th><th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>链接</th></tr></thead><tbody><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[1]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>HCMS: Head-Chunked Multi-Stream Pipeline for Communication-Computation Overlap in Long-Sequence Parallel Attention</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01817</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01817' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[2]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Beyond Next-Token Prediction: An RLVR Proof of Concept for Tool-Use Agents on Atlassian Workflows</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01465</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01465' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[3]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>KRCA: An Efficient Root Cause Analysis System in Hyper-Scale Microservice Systems via Agentic AI</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01788</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01788' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[4]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>ContextNest: Verifiable Context Governance for Autonomous AI Agent</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.02116</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02116' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[5]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>The Rollout Infrastructure Tax in Coding-Agent Reinforcement Learning</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01415</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01415' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[6]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Steerability via constraints: a substrate for scalable oversight of coding agents</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.02389</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02389' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[7]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01299</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01299' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[8]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Atomic Task Graph: A Unified Framework for Agentic Planning and Execution</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01942</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01942' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[9]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Distributed Attacks in Persistent-State AI Control</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.02514</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02514' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[10]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>DecompRL: Solving Harder Problems by Learning Modular Code Generation</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.02390</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02390' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[11]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>World Feedback for Clinical Agents: Diagnosing RL in FHIR Environments</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01470</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01470' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[12]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Exploiting Task-Based Parallelism for the Red-Black Gauss-Seidel Method on 2D Grids</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01735</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01735' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[13]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>SLFS: a Flexible, Low-Cost Distributed File System Using Serverless Designs</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01486</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01486' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[14]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>A Single Patch Is Not Enough: Deterministic Fusion of Repair Candidates</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01597</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01597' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[15]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Arachne: Orchestrating Cascades for Efficient Text-to-Video Model Training</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01701</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01701' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[16]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Adoption and Impact of Command-Line AI Coding Agents: A Study of Microsoft&#x27;s Early 2026 Rollout of Claude Code and GitHub Copilot CLI</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01418</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01418' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[17]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Expander Sparse Autoencoders: Parameter-Efficient Dictionaries for Mechanistic Interpretability</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01799</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01799' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[18]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Repair the Amplifier, Not the Symptom: Stable World-Model Correction for Agent Rollouts</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01767</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01767' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[19]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Multi-Head Recurrent Memory Agents</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01523</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01523' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[20]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Criticality-Based Guard Rail Validation for AI Agent Decisions in Autonomous Telecom Networks</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.02210</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02210' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[21]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Agent4cs: A Multi-agent System for Code Summarization in Large Hierarchical Codebases</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01425</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01425' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[22]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>ContextSniper: AntTrail&#x27;s Token-Efficient Code Memory for Repository-Level Program Repair</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01916</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01916' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[23]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>When Agents Do Not Stop: Uncovering Infinite Agentic Loops in LLM Agents</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01641</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01641' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[24]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Kani: A Model Checker for Rust</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01504</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01504' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[25]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>An Optimisation Framework for the Well-Conditioned Training of Physics-Informed Neural Networks</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.02194</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02194' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[26]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Cadence: Extreme Pipelining with Multiple Concurrent Proposers</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.02275</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02275' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[27]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01793</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01793' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[28]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Regression Accumulation in Multi-Turn LLM Programming Conversations</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01855</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01855' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[29]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Token Geometry</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.01455</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01455' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[30]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Privacy-Preserving and Verifiable Approximate Distributed Coded Computing</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.02187</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02187' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr></tbody></table>
+</section>
+<article class="digest-body" style="background:#fff;border-radius:12px;padding:24px 26px 32px;box-shadow:0 4px 24px rgba(15,23,42,0.06);">
+<style type="text/css">
+.digest-body h2 { font-size:18px; color:#111827; margin:26px 0 12px; padding-bottom:8px; border-bottom:2px solid #cbd5e1; font-weight:700; }
+.digest-body h3 { font-size:15px; color:#1f2937; margin:18px 0 10px; font-weight:600; }
+.digest-body h4 { font-size:14px; color:#374151; margin:14px 0 8px; font-weight:600; }
+.digest-body p { margin:10px 0; line-height:1.65; }
+.digest-body ul, .digest-body ol { margin:10px 0; padding-left:22px; }
+.digest-body li { margin:5px 0; }
+.digest-body table { border-collapse:collapse; width:100%; margin:16px 0; font-size:13px; }
+.digest-body th, .digest-body td { border:1px solid #e5e7eb; padding:10px 12px; vertical-align:top; }
+.digest-body th { background:#f3f4f6; font-weight:600; color:#111827; }
+.digest-body hr { border:none; border-top:1px solid #e5e7eb; margin:22px 0; }
+.digest-body blockquote { margin:12px 0; padding:10px 14px; border-left:4px solid #93c5fd; background:#f8fafc; color:#475569; }
+.digest-body a { color:#2563eb; }
+.digest-body code { font-size:13px; background:#f1f5f9; padding:2px 6px; border-radius:4px; }
+.digest-body pre { background:#1e293b; color:#e2e8f0; padding:14px; border-radius:8px; overflow-x:auto; font-size:13px; }
+.digest-body pre code { background:transparent; color:inherit; padding:0; }
+</style>
+<h2>当日文献池编号一览</h2>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题目</th>
+<th>arXiv ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01817">1</a></td>
+<td>HCMS: Head-Chunked Multi-Stream Pipeline for Communication-Computation Overlap in Long-Sequence Parallel Attention</td>
+<td>2607.01817</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01465">2</a></td>
+<td>Beyond Next-Token Prediction: An RLVR Proof of Concept for Tool-Use Agents on Atlassian Workflows</td>
+<td>2607.01465</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01788">3</a></td>
+<td>KRCA: An Efficient Root Cause Analysis System in Hyper-Scale Microservice Systems via Agentic AI</td>
+<td>2607.01788</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02116">4</a></td>
+<td>ContextNest: Verifiable Context Governance for Autonomous AI Agent</td>
+<td>2607.02116</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01415">5</a></td>
+<td>The Rollout Infrastructure Tax in Coding-Agent Reinforcement Learning</td>
+<td>2607.01415</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02389">6</a></td>
+<td>Steerability via constraints: a substrate for scalable oversight of coding agents</td>
+<td>2607.02389</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01299">7</a></td>
+<td>HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching</td>
+<td>2607.01299</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01942">8</a></td>
+<td>Atomic Task Graph: A Unified Framework for Agentic Planning and Execution</td>
+<td>2607.01942</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02514">9</a></td>
+<td>Distributed Attacks in Persistent-State AI Control</td>
+<td>2607.02514</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02390">10</a></td>
+<td>DecompRL: Solving Harder Problems by Learning Modular Code Generation</td>
+<td>2607.02390</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01470">11</a></td>
+<td>World Feedback for Clinical Agents: Diagnosing RL in FHIR Environments</td>
+<td>2607.01470</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01735">12</a></td>
+<td>Exploiting Task-Based Parallelism for the Red-Black Gauss-Seidel Method on 2D Grids</td>
+<td>2607.01735</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01486">13</a></td>
+<td>SLFS: a Flexible, Low-Cost Distributed File System Using Serverless Designs</td>
+<td>2607.01486</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01597">14</a></td>
+<td>A Single Patch Is Not Enough: Deterministic Fusion of Repair Candidates</td>
+<td>2607.01597</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01701">15</a></td>
+<td>Arachne: Orchestrating Cascades for Efficient Text-to-Video Model Training</td>
+<td>2607.01701</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01418">16</a></td>
+<td>Adoption and Impact of Command-Line AI Coding Agents: A Study of Microsoft's Early 2026 Rollout of Claude Code and GitHub Copilot CLI</td>
+<td>2607.01418</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01799">17</a></td>
+<td>Expander Sparse Autoencoders: Parameter-Efficient Dictionaries for Mechanistic Interpretability</td>
+<td>2607.01799</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01767">18</a></td>
+<td>Repair the Amplifier, Not the Symptom: Stable World-Model Correction for Agent Rollouts</td>
+<td>2607.01767</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01523">19</a></td>
+<td>Multi-Head Recurrent Memory Agents</td>
+<td>2607.01523</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02210">20</a></td>
+<td>Criticality-Based Guard Rail Validation for AI Agent Decisions in Autonomous Telecom Networks</td>
+<td>2607.02210</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01425">21</a></td>
+<td>Agent4cs: A Multi-agent System for Code Summarization in Large Hierarchical Codebases</td>
+<td>2607.01425</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01916">22</a></td>
+<td>ContextSniper: AntTrail's Token-Efficient Code Memory for Repository-Level Program Repair</td>
+<td>2607.01916</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01641">23</a></td>
+<td>When Agents Do Not Stop: Uncovering Infinite Agentic Loops in LLM Agents</td>
+<td>2607.01641</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01504">24</a></td>
+<td>Kani: A Model Checker for Rust</td>
+<td>2607.01504</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02194">25</a></td>
+<td>An Optimisation Framework for the Well-Conditioned Training of Physics-Informed Neural Networks</td>
+<td>2607.02194</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02275">26</a></td>
+<td>Cadence: Extreme Pipelining with Multiple Concurrent Proposers</td>
+<td>2607.02275</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01793">27</a></td>
+<td>Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification</td>
+<td>2607.01793</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01855">28</a></td>
+<td>Regression Accumulation in Multi-Turn LLM Programming Conversations</td>
+<td>2607.01855</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01455">29</a></td>
+<td>Token Geometry</td>
+<td>2607.01455</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02187">30</a></td>
+<td>Privacy-Preserving and Verifiable Approximate Distributed Coded Computing</td>
+<td>2607.02187</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>三篇论文方向与六个创新点</h2>
+<h3>论文方向一：长序列与混合注意力 LLM 推理服务的通信-计算重叠与缓存优化</h3>
+<p><strong>拟定论文题目：</strong> 面向长序列并行注意力与混合注意力模型的 LLM 推理服务通信-计算重叠与位置无关缓存协同优化</p>
+<p><strong>论文核心问题：</strong> 如何系统性地解决长序列并行注意力中的通信-计算串行瓶颈，以及混合注意力模型中位置无关缓存（PIC）与线性注意力状态无法共存的代数障碍，从而加速 LLM 推理服务的预填充阶段。</p>
+<h4>创新点一：基于多头分块与多流流水线的通信-计算重叠方法</h4>
+<p>大多数现有方法在基于 all-to-all 的序列并行注意力中，将通信与计算严格串行执行，导致 GPU 硬件资源在等待通信完成时处于空闲状态，利用率低下 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01817">1</a>。少数现有方法尝试通过流水线或异步调度来缓解这一问题，但通常需要修改底层注意力内核（如 FlashAttention），或仅支持均匀分块，缺乏与现有优化技术的正交兼容性 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01817">1</a>。为此，本文提出 Head-Chunked Multi-Stream Pipeline（HCMS），利用多头注意力的计算独立性，将注意力头划分为多个块，并通过双 CUDA 流实现细粒度的通信-计算重叠，无需修改底层内核，支持非均匀分块并保持数值等价性 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01817">1</a>。</p>
+<ul>
+<li><strong>创新类型：</strong> 方法设计创新（系统级并行优化）</li>
+<li><strong>创新性判断：</strong> 该创新点基于文献池中 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01817">1</a> 的核心思想，将其提炼为一种通用的通信-计算重叠范式。文献池中其他论文未涉及序列并行注意力中的细粒度流水线重叠问题，因此该创新点在池内具有独特性。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01817">1</a></td>
+<td>HCMS: Head-Chunked Multi-Stream Pipeline for Communication-Computation Overlap in Long-Sequence Parallel Attention</td>
+<td>提出基于多头分块和双 CUDA 流的通信-计算重叠方法，在 2-8 GPU 规模下对 31K-56K token 序列实现 10%-17.5% 加速。</td>
+<td>支撑大多数现有方法（串行执行）和本文方法（HCMS 核心思想）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01299">7</a></td>
+<td>HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching</td>
+<td>提出混合注意力模型的位置无关缓存系统，但未涉及通信-计算重叠。</td>
+<td>支撑少数现有方法（关注缓存而非通信重叠）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01701">15</a></td>
+<td>Arachne: Orchestrating Cascades for Efficient Text-to-Video Model Training</td>
+<td>提出级联分解训练框架，通过空间和时间优化减少迭代时间，但针对 T2V 训练而非推理。</td>
+<td>支撑少数现有方法（流水线优化思路）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02275">26</a></td>
+<td>Cadence: Extreme Pipelining with Multiple Concurrent Proposers</td>
+<td>提出极端流水线共识协议，解耦块间隔与网络延迟，但面向 BFT 共识而非 LLM 推理。</td>
+<td>支撑现有不足（流水线思想在推理场景的缺失）</td>
+</tr>
+</tbody>
+</table>
+<h4>创新点二：基于段累积状态代数原语的位置无关缓存方法</h4>
+<p>大多数现有方法将位置无关缓存（PIC）应用于纯全注意力模型，通过 KV 缓存重用加速预填充阶段，但无法直接迁移到混合注意力模型，因为线性注意力层的逐 token 缓存重用原语不适用于逐请求的循环状态 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01299">7</a>。少数现有方法尝试为混合注意力模型设计缓存策略，但未能识别出线性注意力层中段累积状态作为缺失的代数原语，导致缓存状态组合需要近似计算或高开销 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01299">7</a>。为此，本文提出 HYPIC，为线性注意力层识别并缓存段累积转移算子与零起始端状态，实现独立缓存段的近精确、常数时间状态组合，同时为全注意力层保留标准 PIC 机制 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01299">7</a>。</p>
+<ul>
+<li><strong>创新类型：</strong> 问题建模创新 + 方法设计创新（代数原语发现与系统设计）</li>
+<li><strong>创新性判断：</strong> 该创新点基于文献池中 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01299">7</a> 的核心贡献，将其定位为一种解决混合注意力模型与 PIC 共存障碍的代数方法。文献池中 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01817">1</a> 关注通信重叠，<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01701">15</a> 关注训练流水线，均未涉及此代数原语问题，因此该创新点在池内具有独特性。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01299">7</a></td>
+<td>HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching</td>
+<td>提出段累积转移算子作为代数原语，实现混合注意力模型的位置无关缓存。</td>
+<td>支撑大多数现有方法（PIC 不适用于混合注意力）和本文方法（HYPIC 核心思想）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01817">1</a></td>
+<td>HCMS: Head-Chunked Multi-Stream Pipeline for Communication-Computation Overlap in Long-Sequence Parallel Attention</td>
+<td>关注通信-计算重叠，未涉及缓存优化。</td>
+<td>支撑少数现有方法（不同优化方向）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01701">15</a></td>
+<td>Arachne: Orchestrating Cascades for Efficient Text-to-Video Model Training</td>
+<td>关注训练流水线，未涉及推理缓存。</td>
+<td>支撑现有不足（缓存优化在推理场景的缺失）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02275">26</a></td>
+<td>Cadence: Extreme Pipelining with Multiple Concurrent Proposers</td>
+<td>关注共识协议流水线，与 LLM 推理缓存无关。</td>
+<td>支撑现有不足（不同领域）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>该论文两个创新点之间的关系：</strong><br />
+创新点一解决长序列并行注意力中的通信-计算串行瓶颈（系统级并行优化），创新点二解决混合注意力模型中 PIC 与线性注意力状态的代数兼容性问题（缓存原语发现与系统设计）。二者属于同一论文主题（LLM 推理服务加速），但分别对应不同的技术层面（通信重叠 vs. 缓存优化），且针对不同的模型架构（全注意力 vs. 混合注意力），不存在重复。</p>
+<p><strong>建议实验设计：</strong><br />
+- <strong>对比方法：</strong> 标准序列并行（无重叠）、Ring Attention、Ulysses 基线（创新点一）；标准 PIC（仅全注意力）、无缓存基线（创新点二）。<br />
+- <strong>实验数据或场景：</strong> 视频生成序列（31K-56K tokens）、RAG 场景（混合注意力模型如 Mamba-2 + Attention）。<br />
+- <strong>评价指标：</strong> 端到端推理时延、预填充阶段加速比、GPU 利用率、缓存命中率。<br />
+- <strong>消融实验：</strong> 分块大小对重叠效果的影响、段累积状态组合的精度与效率权衡。</p>
+<hr />
+<h3>论文方向二：编码智能体强化学习与可扩展监督的基础设施开销与约束治理</h3>
+<p><strong>拟定论文题目：</strong> 编码智能体强化学习后训练的执行基础设施开销量化与基于传统工程约束的可扩展监督方法</p>
+<p><strong>论文核心问题：</strong> 如何量化编码智能体强化学习后训练中执行基础设施的冷启动与资源税问题，并验证通过访问控制、网络策略等传统工程约束实现可扩展监督的可行性。</p>
+<h4>创新点三：编码智能体 RL 后训练执行基础设施开销的量化与优化框架</h4>
+<p>大多数现有方法将编码智能体强化学习中的执行基础设施视为背景实现细节，忽略了大规模交互式软件部署中的基础设施开销，导致 RL 后训练效率低下 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01415">5</a>。少数现有方法开始关注执行环境的选择，但缺乏对不同执行基板（单容器、托管沙箱、Kubernetes 编排容器、云虚拟机）在冷启动延迟和投影工时方面的系统性比较 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01415">5</a>。为此，本文提出一种执行基础设施开销量化框架，通过对比四种执行基板，发现冷启动延迟最高相差 110 倍，投影工时相差 1.8 倍，并主张将执行基础设施优化纳入训练系统设计 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01415">5</a>。</p>
+<ul>
+<li><strong>创新类型：</strong> 问题建模创新（开销量化与系统设计主张）</li>
+<li><strong>创新性判断：</strong> 该创新点基于文献池中 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01415">5</a> 的核心发现，将其提炼为一种系统性的开销量化方法。文献池中 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01465">2</a>、<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02390">10</a>、<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01470">11</a> 虽涉及 RL 训练，但均未关注执行基础设施开销，因此该创新点在池内具有独特性。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01415">5</a></td>
+<td>The Rollout Infrastructure Tax in Coding-Agent Reinforcement Learning</td>
+<td>量化四种执行基板的冷启动延迟和投影工时差异，发现最高 110 倍冷启动延迟差异。</td>
+<td>支撑大多数现有方法（忽略基础设施开销）和本文方法（量化框架核心思想）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01465">2</a></td>
+<td>Beyond Next-Token Prediction: An RLVR Proof of Concept for Tool-Use Agents on Atlassian Workflows</td>
+<td>提出 RLVR 用于工具使用智能体，但未涉及执行基础设施开销。</td>
+<td>支撑少数现有方法（RL 训练但忽略基础设施）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02390">10</a></td>
+<td>DecompRL: Solving Harder Problems by Learning Modular Code Generation</td>
+<td>提出 RL 算法学习模块化代码生成，但未涉及执行基础设施。</td>
+<td>支撑少数现有方法（RL 训练但忽略基础设施）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01470">11</a></td>
+<td>World Feedback for Clinical Agents: Diagnosing RL in FHIR Environments</td>
+<td>诊断临床智能体 RL 中的反馈通道问题，但未涉及基础设施开销。</td>
+<td>支撑现有不足（基础设施开销在 RL 训练中的系统性缺失）</td>
+</tr>
+</tbody>
+</table>
+<h4>创新点四：基于传统工程约束的可扩展监督方法</h4>
+<p>大多数现有方法依赖智能体脚手架或 LLM 评判器来实现对编码智能体的监督，这些方法 token 开销高且难以扩展 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02389">6</a>。少数现有方法开始探索通过访问控制、网络策略和严格编码规范等传统工程管理方法来约束编码智能体，但缺乏系统性的实验验证，尤其是在 Python 等弱类型语言中的有效性 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02389">6</a>。为此，本文提出一种基于约束基板的可扩展监督系统，通过受控实验证明：一个小型审查模型（Gemma 4 e4b）在约束基板加 ~200 LoC 的 <code>docs</code> CLI 工具下，对 11 个植入后门的检测召回率从 54.5% 提升至 90.9%，且约束基板与工具贡献独立 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02389">6</a>。</p>
+<ul>
+<li><strong>创新类型：</strong> 方法设计创新（约束基板系统设计与实验验证）</li>
+<li><strong>创新性判断：</strong> 该创新点基于文献池中 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02389">6</a> 的核心实验，将其提炼为一种可扩展监督方法。文献池中 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02514">9</a>、<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01641">23</a>、<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01793">27</a> 虽涉及智能体安全或监督，但均未采用传统工程约束方法，因此该创新点在池内具有独特性。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02389">6</a></td>
+<td>Steerability via constraints: a substrate for scalable oversight of coding agents</td>
+<td>提出通过访问控制、网络策略和编码规范约束编码智能体，实验证明召回率从 54.5% 提升至 90.9%。</td>
+<td>支撑大多数现有方法（依赖智能体脚手架）和本文方法（约束基板核心思想）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02514">9</a></td>
+<td>Distributed Attacks in Persistent-State AI Control</td>
+<td>研究持久状态 AI 控制中的分布式攻击，但未涉及约束基板。</td>
+<td>支撑少数现有方法（关注攻击而非防御）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01641">23</a></td>
+<td>When Agents Do Not Stop: Uncovering Infinite Agentic Loops in LLM Agents</td>
+<td>研究智能体无限循环故障，但未涉及约束基板。</td>
+<td>支撑少数现有方法（关注故障模式而非监督）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01793">27</a></td>
+<td>Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification</td>
+<td>提出端到端安全测试框架，但依赖文献驱动探索而非传统工程约束。</td>
+<td>支撑现有不足（传统工程约束在智能体监督中的系统性缺失）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>该论文两个创新点之间的关系：</strong><br />
+创新点三解决编码智能体 RL 后训练中执行基础设施开销的量化问题（效率维度），创新点四解决编码智能体可扩展监督的约束基板设计问题（安全维度）。二者属于同一论文主题（编码智能体 RL 后训练的系统优化），但分别对应不同的技术层面（基础设施效率 vs. 监督安全性），且逻辑上形成递进：先量化开销，再设计约束，不存在重复。</p>
+<p><strong>建议实验设计：</strong><br />
+- <strong>对比方法：</strong> 单容器 vs. 托管沙箱 vs. Kubernetes 编排容器 vs. 云虚拟机（创新点三）；无约束基线 vs. 仅约束基板 vs. 仅工具 vs. 约束基板+工具（创新点四）。<br />
+- <strong>实验数据或场景：</strong> 100 万条 150 步轨迹的模拟 RL 后训练（创新点三）；Python 代码库植入 11 个后门（创新点四）。<br />
+- <strong>评价指标：</strong> 冷启动延迟、投影工时、每 rollout 成本（创新点三）；后门检测召回率、误报率、token 开销（创新点四）。<br />
+- <strong>消融实验：</strong> 约束基板各组件（访问控制、网络策略、编码规范）的独立贡献。</p>
+<hr />
+<h3>论文方向三：多轮 LLM 编程会话中的回归累积检测与智能体无限循环静态分析</h3>
+<p><strong>拟定论文题目：</strong> 多轮 LLM 编程会话中的回归累积实证分析与智能体无限循环故障的静态检测方法</p>
+<p><strong>论文核心问题：</strong> 如何通过大规模实证分析揭示多轮 LLM 编程会话中回归累积的普遍性，并设计静态分析工具检测智能体因反馈路径未有效边界化而陷入的无限循环故障。</p>
+<h4>创新点五：多轮 LLM 编程会话中回归累积的大规模实证分析</h4>
+<p>大多数现有方法在评估 LLM 编程能力时，仅关注单轮代码生成或修复的 pass@k 指标，忽略了多轮需求演化中后轮建议可能破坏前轮已满足需求的问题 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01855">28</a>。少数现有方法开始研究多轮编程会话，但缺乏对回归累积现象的量化分析，尤其是在需求演化链中不同轮次间的行为退化模式 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01855">28</a>。为此，本文基于 HumanEval+ 和 MBPP+ 构建 542 个 8 轮需求演化任务，在 26,016 个轮次实例上评估六个 LLM，发现 40% 到 73% 的任务在完整会话中丢失了先前正确的行为，并构建了多轮回归 bug 的分类体系 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01855">28</a>。</p>
+<ul>
+<li><strong>创新类型：</strong> 问题建模创新（实证分析与分类体系）</li>
+<li><strong>创新性判断：</strong> 该创新点基于文献池中 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01855">28</a> 的核心实验，将其提炼为一种系统性的回归累积分析方法。文献池中 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01597">14</a>、<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01418">16</a>、<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01916">22</a> 虽涉及代码修复或编程工具，但均未关注多轮回归累积，因此该创新点在池内具有独特性。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01855">28</a></td>
+<td>Regression Accumulation in Multi-Turn LLM Programming Conversations</td>
+<td>在 26,016 个轮次实例上发现 40%-73% 的任务丢失先前正确行为，构建多轮回归 bug 分类体系。</td>
+<td>支撑大多数现有方法（忽略回归累积）和本文方法（实证分析核心思想）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01597">14</a></td>
+<td>A Single Patch Is Not Enough: Deterministic Fusion of Repair Candidates</td>
+<td>提出候选补丁融合方法，但关注单轮修复而非多轮回归。</td>
+<td>支撑少数现有方法（代码修复但忽略多轮）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01418">16</a></td>
+<td>Adoption and Impact of Command-Line AI Coding Agents: A Study of Microsoft's Early 2026 Rollout of Claude Code and GitHub Copilot CLI</td>
+<td>研究 CLI 编码智能体的采用与影响，但未涉及回归累积。</td>
+<td>支撑少数现有方法（工具采用而非代码质量）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01916">22</a></td>
+<td>ContextSniper: AntTrail's Token-Efficient Code Memory for Repository-Level Program Repair</td>
+<td>提出 token 高效代码记忆层，但关注仓库级修复而非多轮回归。</td>
+<td>支撑现有不足（多轮回归在代码修复研究中的系统性缺失）</td>
+</tr>
+</tbody>
+</table>
+<h4>创新点六：智能体无限循环故障的静态分析检测方法</h4>
+<p>大多数现有方法将智能体执行中的无限循环视为普通编程循环，忽略了其源于智能体逻辑、框架语义、运行时观察和终止机制交互的独特故障模式 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01641">23</a>。少数现有方法开始研究智能体故障，但缺乏针对无限循环故障的静态分析工具，无法在部署前检测反馈路径未有效边界化的问题 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01641">23</a>。为此，本文提出 IAL-Scan，一种静态分析工具，通过将异构智能体代码抽象为框架无关的 Agent IR，构建智能体循环依赖图（ALDG）以恢复显式和框架引入的反馈路径，并检测无限智能体循环（IAL）故障 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01641">23</a>。</p>
+<ul>
+<li><strong>创新类型：</strong> 方法设计创新（静态分析工具与中间表示）</li>
+<li><strong>创新性判断：</strong> 该创新点基于文献池中 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01641">23</a> 的核心贡献，将其提炼为一种针对智能体无限循环的静态检测方法。文献池中 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02514">9</a>、<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01793">27</a> 虽涉及智能体安全或测试，但均未采用静态分析方法检测无限循环，因此该创新点在池内具有独特性。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01641">23</a></td>
+<td>When Agents Do Not Stop: Uncovering Infinite Agentic Loops in LLM Agents</td>
+<td>提出 IAL-Scan 静态分析工具，通过 Agent IR 和 ALDG 检测无限智能体循环。</td>
+<td>支撑大多数现有方法（忽略无限循环故障）和本文方法（IAL-Scan 核心思想）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02514">9</a></td>
+<td>Distributed Attacks in Persistent-State AI Control</td>
+<td>研究持久状态 AI 控制中的分布式攻击，但未涉及静态分析。</td>
+<td>支撑少数现有方法（关注攻击而非故障检测）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01793">27</a></td>
+<td>Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification</td>
+<td>提出端到端安全测试框架，但依赖动态执行而非静态分析。</td>
+<td>支撑少数现有方法（测试而非静态分析）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01504">24</a></td>
+<td>Kani: A Model Checker for Rust</td>
+<td>提出 Rust 模型检查器，但针对 Rust 语言而非智能体框架。</td>
+<td>支撑现有不足（静态分析在智能体无限循环检测中的缺失）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>该论文两个创新点之间的关系：</strong><br />
+创新点五解决多轮 LLM 编程会话中回归累积的实证分析与分类问题（问题发现与量化），创新点六解决智能体无限循环故障的静态检测问题（工具设计与预防）。二者属于同一论文主题（LLM 编程会话中的故障模式），但分别对应不同的技术层面（实证分析 vs. 静态检测），且逻辑上形成递进：先通过实证揭示故障普遍性，再设计工具预防特定故障类型，不存在重复。</p>
+<p><strong>建议实验设计：</strong><br />
+- <strong>对比方法：</strong> 单轮评估基线 vs. 多轮回归累积分析（创新点五）；无静态分析基线 vs. IAL-Scan（创新点六）。<br />
+- <strong>实验数据或场景：</strong> HumanEval+ 和 MBPP+ 扩展的 542 个 8 轮任务（创新点五）；真实世界 LLM 智能体项目（创新点六）。<br />
+- <strong>评价指标：</strong> 回归累积率、最终轮正确率、bug 分类分布（创新点五）；IAL 检测召回率、误报率、分析时间（创新点六）。<br />
+- <strong>消融实验：</strong> Agent IR 抽象粒度对检测精度的影响、ALDG 构建策略的消融。</p>
+<hr />
+<h2>三篇论文方向去重矩阵</h2>
+<table>
+<thead>
+<tr>
+<th>论文方向</th>
+<th>拟定论文题目</th>
+<th>核心问题</th>
+<th>两个创新点</th>
+<th>核心方法</th>
+<th>主要实验</th>
+<th>与其他论文方向的区别</th>
+<th>重复风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>论文一</td>
+<td>面向长序列并行注意力与混合注意力模型的 LLM 推理服务通信-计算重叠与位置无关缓存协同优化</td>
+<td>解决长序列并行注意力的通信-计算串行瓶颈和混合注意力模型的缓存代数障碍</td>
+<td>创新点一：多头分块多流流水线通信-计算重叠；创新点二：段累积状态代数原语位置无关缓存</td>
+<td>系统级并行优化 + 代数原语发现</td>
+<td>2-8 GPU 平台，31K-56K token 序列，视频生成模型</td>
+<td>关注 LLM 推理服务系统优化，与论文二（RL 训练基础设施）和论文三（编程会话故障）完全不同</td>
+<td>低</td>
+</tr>
+<tr>
+<td>论文二</td>
+<td>编码智能体强化学习后训练的执行基础设施开销量化与基于传统工程约束的可扩展监督方法</td>
+<td>量化编码智能体 RL 后训练的基础设施开销并验证传统工程约束监督的可行性</td>
+<td>创新点三：执行基础设施开销量化框架；创新点四：基于传统工程约束的可扩展监督系统</td>
+<td>开销量化对比 + 约束基板系统设计</td>
+<td>四种执行基板对比，后门检测实验</td>
+<td>关注编码智能体 RL 训练的系统效率与安全，与论文一（推理服务）和论文三（编程会话故障）完全不同</td>
+<td>低</td>
+</tr>
+<tr>
+<td>论文三</td>
+<td>多轮 LLM 编程会话中的回归累积实证分析与智能体无限循环故障的静态检测方法</td>
+<td>揭示多轮编程会话中回归累积的普遍性并设计无限循环静态检测工具</td>
+<td>创新点五：回归累积大规模实证分析；创新点六：无限智能体循环静态分析工具 IAL-Scan</td>
+<td>实证分析 + 静态分析中间表示</td>
+<td>26,016 个轮次实例，真实世界智能体项目</td>
+<td>关注 LLM 编程会话的故障模式，与论文一（推理系统）和论文二（RL 训练）完全不同</td>
+<td>低</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>每篇论文内部创新点去重检查</h2>
+<table>
+<thead>
+<tr>
+<th>论文方向</th>
+<th>创新点一</th>
+<th>创新点二</th>
+<th>是否属于同一论文主题</th>
+<th>是否技术层面不同</th>
+<th>是否存在重复</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>论文一</td>
+<td>通信-计算重叠（系统级并行优化）</td>
+<td>位置无关缓存（代数原语与缓存系统）</td>
+<td>是（LLM 推理服务加速）</td>
+<td>是（通信优化 vs. 缓存优化）</td>
+<td>否</td>
+<td>可保留</td>
+</tr>
+<tr>
+<td>论文二</td>
+<td>基础设施开销量化（效率维度）</td>
+<td>传统工程约束监督（安全维度）</td>
+<td>是（编码智能体 RL 后训练系统优化）</td>
+<td>是（效率 vs. 安全）</td>
+<td>否</td>
+<td>可保留</td>
+</tr>
+<tr>
+<td>论文三</td>
+<td>回归累积实证分析（问题发现）</td>
+<td>无限循环静态检测（工具设计）</td>
+<td>是（LLM 编程会话故障模式）</td>
+<td>是（实证 vs. 静态分析）</td>
+<td>否</td>
+<td>可保留</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>参考文献总表（仅池内文献）</h2>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01817">1</a> HCMS: Head-Chunked Multi-Stream Pipeline for Communication-Computation Overlap in Long-Sequence Parallel Attention. arXiv:2607.01817, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01465">2</a> Beyond Next-Token Prediction: An RLVR Proof of Concept for Tool-Use Agents on Atlassian Workflows. arXiv:2607.01465, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01788">3</a> KRCA: An Efficient Root Cause Analysis System in Hyper-Scale Microservice Systems via Agentic AI. arXiv:2607.01788, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02116">4</a> ContextNest: Verifiable Context Governance for Autonomous AI Agent. arXiv:2607.02116, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01415">5</a> The Rollout Infrastructure Tax in Coding-Agent Reinforcement Learning. arXiv:2607.01415, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02389">6</a> Steerability via constraints: a substrate for scalable oversight of coding agents. arXiv:2607.02389, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01299">7</a> HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching. arXiv:2607.01299, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01942">8</a> Atomic Task Graph: A Unified Framework for Agentic Planning and Execution. arXiv:2607.01942, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02514">9</a> Distributed Attacks in Persistent-State AI Control. arXiv:2607.02514, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02390">10</a> DecompRL: Solving Harder Problems by Learning Modular Code Generation. arXiv:2607.02390, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01470">11</a> World Feedback for Clinical Agents: Diagnosing RL in FHIR Environments. arXiv:2607.01470, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01735">12</a> Exploiting Task-Based Parallelism for the Red-Black Gauss-Seidel Method on 2D Grids. arXiv:2607.01735, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01486">13</a> SLFS: a Flexible, Low-Cost Distributed File System Using Serverless Designs. arXiv:2607.01486, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01597">14</a> A Single Patch Is Not Enough: Deterministic Fusion of Repair Candidates. arXiv:2607.01597, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01701">15</a> Arachne: Orchestrating Cascades for Efficient Text-to-Video Model Training. arXiv:2607.01701, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01418">16</a> Adoption and Impact of Command-Line AI Coding Agents: A Study of Microsoft's Early 2026 Rollout of Claude Code and GitHub Copilot CLI. arXiv:2607.01418, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01799">17</a> Expander Sparse Autoencoders: Parameter-Efficient Dictionaries for Mechanistic Interpretability. arXiv:2607.01799, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01767">18</a> Repair the Amplifier, Not the Symptom: Stable World-Model Correction for Agent Rollouts. arXiv:2607.01767, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01523">19</a> Multi-Head Recurrent Memory Agents. arXiv:2607.01523, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02210">20</a> Criticality-Based Guard Rail Validation for AI Agent Decisions in Autonomous Telecom Networks. arXiv:2607.02210, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01425">21</a> Agent4cs: A Multi-agent System for Code Summarization in Large Hierarchical Codebases. arXiv:2607.01425, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01916">22</a> ContextSniper: AntTrail's Token-Efficient Code Memory for Repository-Level Program Repair. arXiv:2607.01916, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01641">23</a> When Agents Do Not Stop: Uncovering Infinite Agentic Loops in LLM Agents. arXiv:2607.01641, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01504">24</a> Kani: A Model Checker for Rust. arXiv:2607.01504, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02194">25</a> An Optimisation Framework for the Well-Conditioned Training of Physics-Informed Neural Networks. arXiv:2607.02194, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02275">26</a> Cadence: Extreme Pipelining with Multiple Concurrent Proposers. arXiv:2607.02275, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01793">27</a> Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification. arXiv:2607.01793, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01855">28</a> Regression Accumulation in Multi-Turn LLM Programming Conversations. arXiv:2607.01855, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.01455">29</a> Token Geometry. arXiv:2607.01455, 2026.</p>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-03&amp;paperId=2607.02187">30</a> Privacy-Preserving and Verifiable Approximate Distributed Coded Computing. arXiv:2607.02187, 2026.</p>
+<hr />
+<h2>自检结果</h2>
+<p>一、是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：<strong>是</strong>。</p>
+<p>二、是否避免将一篇论文拆成六个创新点：<strong>是</strong>（三篇论文分别关注推理服务、RL 训练基础设施、编程会话故障，问题独立）。</p>
+<p>三、是否避免生成六篇论文各一个创新点：<strong>是</strong>（每篇论文两个创新点服务于同一主题）。</p>
+<p>四、每篇论文内部两个创新点是否属于同一论文主题：<strong>是</strong>（论文一：推理服务加速；论文二：RL 训练系统优化；论文三：编程会话故障模式）。</p>
+<p>五、每篇论文内部两个创新点是否互补而不重复：<strong>是</strong>（论文一：通信重叠 vs. 缓存优化；论文二：效率 vs. 安全；论文三：实证 vs. 静态分析）。</p>
+<p>六、三篇论文之间是否研究问题不同：<strong>是</strong>（推理系统优化、RL 训练基础设施、编程会话故障）。</p>
+<p>七、三篇论文之间是否核心方法不同：<strong>是</strong>（系统级并行优化 + 代数原语、开销量化 + 约束基板、实证分析 + 静态分析）。</p>
+<p>八、三篇论文之间是否实验验证重点不同：<strong>是</strong>（GPU 平台加速比、执行基板对比、多轮回归与无限循环检测）。</p>
+<p>九、每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：<strong>是</strong>。</p>
+<p>十、每个创新点是否至少引用 3 篇池内文献：<strong>是</strong>（每个创新点引用 4 篇池内文献）。</p>
+<p>十一、是否说明每篇文献的支撑作用：<strong>是</strong>（在文献支撑表中明确标注“支撑大多数现有方法”、“支撑少数现有方法”、“支撑现有不足”或“支撑本文方法”）。</p>
+<p>十二、是否避免“首次提出”“填补空白”等绝对化表述：<strong>是</strong>。</p>
+<p>十三、是否建立三篇论文方向去重矩阵：<strong>是</strong>。</p>
+<p>十四、是否建立每篇论文内部创新点去重检查表：<strong>是</strong>。</p>
+<p style="margin-top:28px;padding-top:16px;border-top:1px solid #e5e7eb;font-size:12px;color:#94a3b8;">内容由 AI 生成，请仔细甄别。</p>
+</article>
+</div>
+</body>
+</html>

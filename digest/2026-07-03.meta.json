@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-03",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "长序列与混合注意力 LLM 推理服务的通信-计算重叠与缓存优化",
+      "blurb": "针对长序列并行注意力中的通信-计算串行瓶颈与混合注意力模型的位置无关缓存缺失问题，分别从多流流水线重叠和段累积状态代数原语两个方向提出系统级加速方案。"
+    },
+    {
+      "title": "编码智能体强化学习与可扩展监督的基础设施开销与约束治理",
+      "blurb": "聚焦编码智能体 RL 后训练中执行基础设施的冷启动与资源税问题，以及通过访问控制、网络策略等传统工程约束实现可扩展监督的可行性验证。"
+    },
+    {
+      "title": "多轮 LLM 编程会话中的回归累积检测与智能体无限循环静态分析",
+      "blurb": "针对 LLM 辅助编程中多轮需求演化导致的回归累积现象，以及智能体因反馈路径未有效边界化而陷入无限循环的故障模式，分别提出大规模实证分析与静态检测工具。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2607.01817",
+      "title": "HCMS: Head-Chunked Multi-Stream Pipeline for Communication-Computation Overlap in Long-Sequence Parallel Attention"
+    },
+    {
+      "idx": 2,
+      "id": "2607.01465",
+      "title": "Beyond Next-Token Prediction: An RLVR Proof of Concept for Tool-Use Agents on Atlassian Workflows"
+    },
+    {
+      "idx": 3,
+      "id": "2607.01788",
+      "title": "KRCA: An Efficient Root Cause Analysis System in Hyper-Scale Microservice Systems via Agentic AI"
+    },
+    {
+      "idx": 4,
+      "id": "2607.02116",
+      "title": "ContextNest: Verifiable Context Governance for Autonomous AI Agent"
+    },
+    {
+      "idx": 5,
+      "id": "2607.01415",
+      "title": "The Rollout Infrastructure Tax in Coding-Agent Reinforcement Learning"
+    },
+    {
+      "idx": 6,
+      "id": "2607.02389",
+      "title": "Steerability via constraints: a substrate for scalable oversight of coding agents"
+    },
+    {
+      "idx": 7,
+      "id": "2607.01299",
+      "title": "HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching"
+    },
+    {
+      "idx": 8,
+      "id": "2607.01942",
+      "title": "Atomic Task Graph: A Unified Framework for Agentic Planning and Execution"
+    },
+    {
+      "idx": 9,
+      "id": "2607.02514",
+      "title": "Distributed Attacks in Persistent-State AI Control"
+    },
+    {
+      "idx": 10,
+      "id": "2607.02390",
+      "title": "DecompRL: Solving Harder Problems by Learning Modular Code Generation"
+    },
+    {
+      "idx": 11,
+      "id": "2607.01470",
+      "title": "World Feedback for Clinical Agents: Diagnosing RL in FHIR Environments"
+    },
+    {
+      "idx": 12,
+      "id": "2607.01735",
+      "title": "Exploiting Task-Based Parallelism for the Red-Black Gauss-Seidel Method on 2D Grids"
+    },
+    {
+      "idx": 13,
+      "id": "2607.01486",
+      "title": "SLFS: a Flexible, Low-Cost Distributed File System Using Serverless Designs"
+    },
+    {
+      "idx": 14,
+      "id": "2607.01597",
+      "title": "A Single Patch Is Not Enough: Deterministic Fusion of Repair Candidates"
+    },
+    {
+      "idx": 15,
+      "id": "2607.01701",
+      "title": "Arachne: Orchestrating Cascades for Efficient Text-to-Video Model Training"
+    },
+    {
+      "idx": 16,
+      "id": "2607.01418",
+      "title": "Adoption and Impact of Command-Line AI Coding Agents: A Study of Microsoft's Early 2026 Rollout of Claude Code and GitHub Copilot CLI"
+    },
+    {
+      "idx": 17,
+      "id": "2607.01799",
+      "title": "Expander Sparse Autoencoders: Parameter-Efficient Dictionaries for Mechanistic Interpretability"
+    },
+    {
+      "idx": 18,
+      "id": "2607.01767",
+      "title": "Repair the Amplifier, Not the Symptom: Stable World-Model Correction for Agent Rollouts"
+    },
+    {
+      "idx": 19,
+      "id": "2607.01523",
+      "title": "Multi-Head Recurrent Memory Agents"
+    },
+    {
+      "idx": 20,
+      "id": "2607.02210",
+      "title": "Criticality-Based Guard Rail Validation for AI Agent Decisions in Autonomous Telecom Networks"
+    },
+    {
+      "idx": 21,
+      "id": "2607.01425",
+      "title": "Agent4cs: A Multi-agent System for Code Summarization in Large Hierarchical Codebases"
+    },
+    {
+      "idx": 22,
+      "id": "2607.01916",
+      "title": "ContextSniper: AntTrail's Token-Efficient Code Memory for Repository-Level Program Repair"
+    },
+    {
+      "idx": 23,
+      "id": "2607.01641",
+      "title": "When Agents Do Not Stop: Uncovering Infinite Agentic Loops in LLM Agents"
+    },
+    {
+      "idx": 24,
+      "id": "2607.01504",
+      "title": "Kani: A Model Checker for Rust"
+    },
+    {
+      "idx": 25,
+      "id": "2607.02194",
+      "title": "An Optimisation Framework for the Well-Conditioned Training of Physics-Informed Neural Networks"
+    },
+    {
+      "idx": 26,
+      "id": "2607.02275",
+      "title": "Cadence: Extreme Pipelining with Multiple Concurrent Proposers"
+    },
+    {
+      "idx": 27,
+      "id": "2607.01793",
+      "title": "Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification"
+    },
+    {
+      "idx": 28,
+      "id": "2607.01855",
+      "title": "Regression Accumulation in Multi-Turn LLM Programming Conversations"
+    },
+    {
+      "idx": 29,
+      "id": "2607.01455",
+      "title": "Token Geometry"
+    },
+    {
+      "idx": 30,
+      "id": "2607.02187",
+      "title": "Privacy-Preserving and Verifiable Approximate Distributed Coded Computing"
+    }
+  ]
+}
