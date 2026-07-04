@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-04",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM 推理性能建模与资源调优",
+      "blurb": "围绕大语言模型推理阶段的性能预测、KV 缓存压缩与资源配置优化，从分阶段性能建模、滑动窗口缓存压缩到硬件感知的功耗与延迟预测，构建可泛化的推理效率优化方法。"
+    },
+    {
+      "title": "LLM 智能体系统的安全性与可靠性保障",
+      "blurb": "聚焦 LLM 智能体在代码修复、DevOps 操作和客户服务中的行为边界与故障诊断，涵盖动作边界违规检测、训练任务失败监控和难度路由的服务控制架构。"
+    },
+    {
+      "title": "分布式训练与推理系统的弹性与效率",
+      "blurb": "面向大规模分布式训练和推理场景，从文本到视频模型训练的级联编排、稀疏三角求解的陈旧同步调度到无服务器文件系统的弹性设计，提升分布式系统的资源利用率和扩展效率。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2607.02391",
+      "title": "WattGPU: Predicting Inference Power and Latency on Unseen GPUs and LLMs"
+    },
+    {
+      "idx": 2,
+      "id": "2607.01538",
+      "title": "Can Language Models Actually Retrieve In-Context? Drowning in Documents at Million Token Scale"
+    },
+    {
+      "idx": 3,
+      "id": "2607.01602",
+      "title": "ProWAFT: A ROMA-LPD Instance for Workload-Aware and Dynamic Fault Tolerance in FPGA-Based CNN Accelerators"
+    },
+    {
+      "idx": 4,
+      "id": "2607.01235",
+      "title": "TokenScope: Token-Level Explainability and Interpretability for Code-Oriented Tasks in Large Language Models"
+    },
+    {
+      "idx": 5,
+      "id": "2607.01394",
+      "title": "The Wiola Architecture for Efficient Small Language Models"
+    },
+    {
+      "idx": 6,
+      "id": "2607.01470",
+      "title": "World Feedback for Clinical Agents: Diagnosing RL in FHIR Environments"
+    },
+    {
+      "idx": 7,
+      "id": "2607.01517",
+      "title": "Parameter Golf: What Really Works?"
+    },
+    {
+      "idx": 8,
+      "id": "2607.02401",
+      "title": "FlintKV: A Fast Durable Storage Engine for Modern Databases"
+    },
+    {
+      "idx": 9,
+      "id": "2607.01903",
+      "title": "Rethinking Complexity Metrics for LLM-Integrated Applications: Beyond Source Code"
+    },
+    {
+      "idx": 10,
+      "id": "2607.01237",
+      "title": "Kara: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression"
+    },
+    {
+      "idx": 11,
+      "id": "2607.01409",
+      "title": "GPUAlert: A Zero-Instrumentation Process-Boundary Monitor for Diagnosing GPU Training-Job Failures"
+    },
+    {
+      "idx": 12,
+      "id": "2607.01846",
+      "title": "CLAP: Closed-Loop Training, Evaluation, and Release Control for Domain Agent Post-training"
+    },
+    {
+      "idx": 13,
+      "id": "2607.01426",
+      "title": "When Should Service Agents Reconsider? Difficulty-Routed Control in Customer-Service Operations"
+    },
+    {
+      "idx": 14,
+      "id": "2607.02187",
+      "title": "Privacy-Preserving and Verifiable Approximate Distributed Coded Computing"
+    },
+    {
+      "idx": 15,
+      "id": "2607.01465",
+      "title": "Beyond Next-Token Prediction: An RLVR Proof of Concept for Tool-Use Agents on Atlassian Workflows"
+    },
+    {
+      "idx": 16,
+      "id": "2607.02376",
+      "title": "Hardware-Enforced Semantic Coordination for Safety-Critical Real-Time Autonomous Systems"
+    },
+    {
+      "idx": 17,
+      "id": "2607.01590",
+      "title": "Hawk: Harnessing Hardware-Aware Knowledge for High-Performance NPU Kernel Generation"
+    },
+    {
+      "idx": 18,
+      "id": "2607.01609",
+      "title": "SINA: A Fully Automated Circuit Schematic Image to Netlist Generator Using Artificial Intelligence"
+    },
+    {
+      "idx": 19,
+      "id": "2607.01831",
+      "title": "Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference"
+    },
+    {
+      "idx": 20,
+      "id": "2607.01487",
+      "title": "How to Allocate Your Tokens? Scaling Laws with Training Steps and Batch Size"
+    },
+    {
+      "idx": 21,
+      "id": "2607.01601",
+      "title": "SemHash-LLM: A Multi-Granularity Semantic Hashing Framework for Document Deduplication"
+    },
+    {
+      "idx": 22,
+      "id": "2607.01701",
+      "title": "Arachne: Orchestrating Cascades for Efficient Text-to-Video Model Training"
+    },
+    {
+      "idx": 23,
+      "id": "2607.01520",
+      "title": "The risk of KV cache compression"
+    },
+    {
+      "idx": 24,
+      "id": "2607.01916",
+      "title": "ContextSniper: AntTrail's Token-Efficient Code Memory for Repository-Level Program Repair"
+    },
+    {
+      "idx": 25,
+      "id": "2607.01775",
+      "title": "Set Diffusion: Interpolating Token Orderings Between Autoregression and Diffusion for Fast and Flexible Decoding"
+    },
+    {
+      "idx": 26,
+      "id": "2607.02370",
+      "title": "Understanding Agent-Based Patching of Compiler Missed Optimizations"
+    },
+    {
+      "idx": 27,
+      "id": "2607.01486",
+      "title": "SLFS: a Flexible, Low-Cost Distributed File System Using Serverless Designs"
+    },
+    {
+      "idx": 28,
+      "id": "2607.02324",
+      "title": "Elasticity in Parallel Sparse Triangular Solve"
+    },
+    {
+      "idx": 29,
+      "id": "2607.02116",
+      "title": "ContextNest: Verifiable Context Governance for Autonomous AI Agent"
+    },
+    {
+      "idx": 30,
+      "id": "2607.02294",
+      "title": "Coding Agents Are Guessing: Measuring Action-Boundary Violations in Underspecified DevOps Instructions"
+    }
+  ]
+}
