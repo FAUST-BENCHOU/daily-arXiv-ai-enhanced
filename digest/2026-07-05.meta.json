@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-05",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM推理部署与资源优化",
+      "blurb": "围绕大语言模型推理服务的性能预测、KV缓存传输加速、异构集群调度与配置选择，从系统层面提升推理效率与资源利用率。"
+    },
+    {
+      "title": "智能体安全、可靠性与可观测性",
+      "blurb": "聚焦AI智能体在自主执行中的无限循环检测、权限管理、动作边界违规、故障诊断与可验证上下文治理，保障智能体行为的安全可控。"
+    },
+    {
+      "title": "模型训练效率与容错机制",
+      "blurb": "关注大语言模型训练中的优化器选择、故障热替换检查点、分布式文件系统弹性扩展与容错训练监控，降低训练成本并提升鲁棒性。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2607.02499",
+      "title": "Beyond Adam: SOAP and Muon for Faster, Label-Efficient Training of Machine Learning Interatomic Potentials"
+    },
+    {
+      "idx": 2,
+      "id": "2607.02391",
+      "title": "WattGPU: Predicting Inference Power and Latency on Unseen GPUs and LLMs"
+    },
+    {
+      "idx": 3,
+      "id": "2607.01831",
+      "title": "Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference"
+    },
+    {
+      "idx": 4,
+      "id": "2607.01517",
+      "title": "Parameter Golf: What Really Works?"
+    },
+    {
+      "idx": 5,
+      "id": "2607.02116",
+      "title": "ContextNest: Verifiable Context Governance for Autonomous AI Agent"
+    },
+    {
+      "idx": 6,
+      "id": "2607.01510",
+      "title": "Janus: a Playground for User-Involved Agentic Permission Management"
+    },
+    {
+      "idx": 7,
+      "id": "2607.01523",
+      "title": "Multi-Head Recurrent Memory Agents"
+    },
+    {
+      "idx": 8,
+      "id": "2607.02210",
+      "title": "Criticality-Based Guard Rail Validation for AI Agent Decisions in Autonomous Telecom Networks"
+    },
+    {
+      "idx": 9,
+      "id": "2607.01579",
+      "title": "OmniPilot: An Uncertainty-Aware LLM Inference Advisor for Heterogeneous GPU Clusters"
+    },
+    {
+      "idx": 10,
+      "id": "2607.01299",
+      "title": "HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching"
+    },
+    {
+      "idx": 11,
+      "id": "2607.01490",
+      "title": "Don't Let Gains FADE: Breaking Down Policy Gradient Weights in RL"
+    },
+    {
+      "idx": 12,
+      "id": "2607.01904",
+      "title": "AI Writes Faster Than Humans Can Review: A Longitudinal Study of an Enterprise 2x Mandate"
+    },
+    {
+      "idx": 13,
+      "id": "2607.01646",
+      "title": "DeadPool: Resilient LLM Training with Hot-Swapping via Zero-Overhead Checkpoint"
+    },
+    {
+      "idx": 14,
+      "id": "2607.02294",
+      "title": "Coding Agents Are Guessing: Measuring Action-Boundary Violations in Underspecified DevOps Instructions"
+    },
+    {
+      "idx": 15,
+      "id": "2607.01641",
+      "title": "When Agents Do Not Stop: Uncovering Infinite Agentic Loops in LLM Agents"
+    },
+    {
+      "idx": 16,
+      "id": "2607.01418",
+      "title": "Adoption and Impact of Command-Line AI Coding Agents: A Study of Microsoft's Early 2026 Rollout of Claude Code and GitHub Copilot CLI"
+    },
+    {
+      "idx": 17,
+      "id": "2607.01942",
+      "title": "Atomic Task Graph: A Unified Framework for Agentic Planning and Execution"
+    },
+    {
+      "idx": 18,
+      "id": "2607.01710",
+      "title": "Generic Expert Coverage for Pruning SparseMixture-of-Experts Language Models"
+    },
+    {
+      "idx": 19,
+      "id": "2607.01409",
+      "title": "GPUAlert: A Zero-Instrumentation Process-Boundary Monitor for Diagnosing GPU Training-Job Failures"
+    },
+    {
+      "idx": 20,
+      "id": "2607.01903",
+      "title": "Rethinking Complexity Metrics for LLM-Integrated Applications: Beyond Source Code"
+    },
+    {
+      "idx": 21,
+      "id": "2607.01470",
+      "title": "World Feedback for Clinical Agents: Diagnosing RL in FHIR Environments"
+    },
+    {
+      "idx": 22,
+      "id": "2607.01602",
+      "title": "ProWAFT: A ROMA-LPD Instance for Workload-Aware and Dynamic Fault Tolerance in FPGA-Based CNN Accelerators"
+    },
+    {
+      "idx": 23,
+      "id": "2607.01929",
+      "title": "Beyond Textual Repository Exploration: Dual-Modal Structural Reasoning for Agentic Issue Resolution"
+    },
+    {
+      "idx": 24,
+      "id": "2607.02376",
+      "title": "Hardware-Enforced Semantic Coordination for Safety-Critical Real-Time Autonomous Systems"
+    },
+    {
+      "idx": 25,
+      "id": "2607.02512",
+      "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions"
+    },
+    {
+      "idx": 26,
+      "id": "2607.01775",
+      "title": "Set Diffusion: Interpolating Token Orderings Between Autoregression and Diffusion for Fast and Flexible Decoding"
+    },
+    {
+      "idx": 27,
+      "id": "2607.01486",
+      "title": "SLFS: a Flexible, Low-Cost Distributed File System Using Serverless Designs"
+    },
+    {
+      "idx": 28,
+      "id": "2607.01893",
+      "title": "Spec-AUF: Accept-Until-Fail Training under Train-Inference Misalignment for Masked Block Drafters"
+    },
+    {
+      "idx": 29,
+      "id": "2607.02390",
+      "title": "DecompRL: Solving Harder Problems by Learning Modular Code Generation"
+    },
+    {
+      "idx": 30,
+      "id": "2607.02389",
+      "title": "Steerability via constraints: a substrate for scalable oversight of coding agents"
+    }
+  ]
+}
