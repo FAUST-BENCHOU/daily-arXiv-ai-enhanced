@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-06",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "面向解耦推理的负载感知预填充偏转与渐进式KV量化传输",
+      "blurb": "针对解耦式LLM推理中预填充节点过载而解码节点空闲的不对称问题，结合负载感知偏转调度与渐进式KV缓存量化传输，降低尾部TTFT并加速长上下文推理。"
+    },
+    {
+      "title": "长序列与长上下文推理中的KV缓存压缩与序列并行加速",
+      "blurb": "聚焦推理模型长思维链与RAG长上下文场景，通过滑动窗口KV缓存压缩、头分块多流流水线及位置无关缓存技术，减少显存开销并提升解码吞吐与通信-计算重叠效率。"
+    },
+    {
+      "title": "LLM编码智能体与软件工程中的可靠性验证与基础设施优化",
+      "blurb": "面向LLM编码智能体在DevOps、编译器审查与RL后训练中的安全与效率挑战，提出动作边界违规检测基准、智能体代码审查工具及执行基础设施开销量化分析。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2607.02043",
+      "title": "Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving"
+    },
+    {
+      "idx": 2,
+      "id": "2607.01792",
+      "title": "PARTREP: Learning What to Repeat for Decoder-only LLMs"
+    },
+    {
+      "idx": 3,
+      "id": "2607.02324",
+      "title": "Elasticity in Parallel Sparse Triangular Solve"
+    },
+    {
+      "idx": 4,
+      "id": "2607.01517",
+      "title": "Parameter Golf: What Really Works?"
+    },
+    {
+      "idx": 5,
+      "id": "2607.01831",
+      "title": "Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference"
+    },
+    {
+      "idx": 6,
+      "id": "2607.01735",
+      "title": "Exploiting Task-Based Parallelism for the Red-Black Gauss-Seidel Method on 2D Grids"
+    },
+    {
+      "idx": 7,
+      "id": "2607.01916",
+      "title": "ContextSniper: AntTrail's Token-Efficient Code Memory for Repository-Level Program Repair"
+    },
+    {
+      "idx": 8,
+      "id": "2607.01299",
+      "title": "HYPIC: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching"
+    },
+    {
+      "idx": 9,
+      "id": "2607.01609",
+      "title": "SINA: A Fully Automated Circuit Schematic Image to Netlist Generator Using Artificial Intelligence"
+    },
+    {
+      "idx": 10,
+      "id": "2607.01590",
+      "title": "Hawk: Harnessing Hardware-Aware Knowledge for High-Performance NPU Kernel Generation"
+    },
+    {
+      "idx": 11,
+      "id": "2607.02187",
+      "title": "Privacy-Preserving and Verifiable Approximate Distributed Coded Computing"
+    },
+    {
+      "idx": 12,
+      "id": "2607.01602",
+      "title": "ProWAFT: A ROMA-LPD Instance for Workload-Aware and Dynamic Fault Tolerance in FPGA-Based CNN Accelerators"
+    },
+    {
+      "idx": 13,
+      "id": "2607.02333",
+      "title": "Guiding Human Validation of LLM-Generated Code via Verifiable Literate Programming"
+    },
+    {
+      "idx": 14,
+      "id": "2607.02116",
+      "title": "ContextNest: Verifiable Context Governance for Autonomous AI Agent"
+    },
+    {
+      "idx": 15,
+      "id": "2607.01394",
+      "title": "The Wiola Architecture for Efficient Small Language Models"
+    },
+    {
+      "idx": 16,
+      "id": "2607.02376",
+      "title": "Hardware-Enforced Semantic Coordination for Safety-Critical Real-Time Autonomous Systems"
+    },
+    {
+      "idx": 17,
+      "id": "2607.02186",
+      "title": "UA-ChatDev: Uncertainty-Aware Multi-Agent Collaboration for Reliable Software Development"
+    },
+    {
+      "idx": 18,
+      "id": "2607.01237",
+      "title": "Kara: Efficient Reasoning LLM Serving via Sliding-Window KV Cache Compression"
+    },
+    {
+      "idx": 19,
+      "id": "2607.01846",
+      "title": "CLAP: Closed-Loop Training, Evaluation, and Release Control for Domain Agent Post-training"
+    },
+    {
+      "idx": 20,
+      "id": "2607.01904",
+      "title": "AI Writes Faster Than Humans Can Review: A Longitudinal Study of an Enterprise 2x Mandate"
+    },
+    {
+      "idx": 21,
+      "id": "2607.02294",
+      "title": "Coding Agents Are Guessing: Measuring Action-Boundary Violations in Underspecified DevOps Instructions"
+    },
+    {
+      "idx": 22,
+      "id": "2607.01455",
+      "title": "Token Geometry"
+    },
+    {
+      "idx": 23,
+      "id": "2607.01817",
+      "title": "HCMS: Head-Chunked Multi-Stream Pipeline for Communication-Computation Overlap in Long-Sequence Parallel Attention"
+    },
+    {
+      "idx": 24,
+      "id": "2607.01788",
+      "title": "KRCA: An Efficient Root Cause Analysis System in Hyper-Scale Microservice Systems via Agentic AI"
+    },
+    {
+      "idx": 25,
+      "id": "2607.01709",
+      "title": "COMFYCLAW: Self-Evolving Skill Harnesses for Image Generation Workflows"
+    },
+    {
+      "idx": 26,
+      "id": "2607.01808",
+      "title": "Archer: Towards Agentic Review for Compiler Optimizations"
+    },
+    {
+      "idx": 27,
+      "id": "2607.01595",
+      "title": "Safe and Adaptive Cloud Healing: Verifying LLM-Generated Recovery Plans with a Neural-Symbolic World Model"
+    },
+    {
+      "idx": 28,
+      "id": "2607.01409",
+      "title": "GPUAlert: A Zero-Instrumentation Process-Boundary Monitor for Diagnosing GPU Training-Job Failures"
+    },
+    {
+      "idx": 29,
+      "id": "2607.01538",
+      "title": "Can Language Models Actually Retrieve In-Context? Drowning in Documents at Million Token Scale"
+    },
+    {
+      "idx": 30,
+      "id": "2607.01415",
+      "title": "The Rollout Infrastructure Tax in Coding-Agent Reinforcement Learning"
+    }
+  ]
+}
