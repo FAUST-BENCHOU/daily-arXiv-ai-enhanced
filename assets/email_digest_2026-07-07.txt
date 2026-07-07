@@ -1,0 +1,297 @@
+# 每日硬凑师兄要求的创新点 2026-07-07
+
+## 今日三个主题（结构化）
+1. **分布式共识协议在网络分区下的部分进展机制** — 基于当日文献池中 Cassandra 协议的两层认证框架与可分区视图同步机制，探讨如何在拜占庭容错共识中实现网络分区下的部分进展与恢复后链式合并，兼顾安全性与活性。
+2. **LLM 推理服务的自适应批处理与资源调度优化** — 结合池内 SPORK 投机执行、Adaptive Inference Batching 策略梯度方法以及 Tile-Level Activation Overlap 内核融合，研究面向动态负载与异构 GPU 的在线推理服务资源调优方法。
+3. **编码智能体的可验证推理与上下文压缩机制** — 围绕池内 Forethought 神经符号推理程序、CoACT 动作保持观测压缩以及 CompactionRL 上下文压缩强化学习，探索如何提升编码智能体在长时任务中的推理可验证性与上下文效率。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02856) | Cassandra: Consensus with Partial Progress via Robust Partitionable View Synchronization | 2607.02856 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03525) | GameEngineBench: Evaluating Coding Agents on Real C++ Runtime Environments | 2607.03525 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03522) | Co-Adaptive Multi-Task LoRA: Transfer-Aware, Label-Free Control of Domain Participation | 2607.03522 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03574) | Differentiate the Evaluator, Not the Program: An Efficient Runtime Representation for Neuro-Symbolic Learning | 2607.03574 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02686) | ASK in the Dark: Uncertainty-Gated LLM Assistance under Partial Observability | 2607.02686 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04096) | Forethought: Verifiable Reasoning from Neurosymbolic Primitive Programming | 2607.04096 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02684) | Can Coding Agents Implement Missed Compiler Optimizations? Evaluating LLM Agents on LLVM Peephole Optimizations | 2607.02684 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03451) | SkillOpt-Lite: Better and Faster Agent Self-evolution via One Line of Vibe | 2607.03451 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04422) | Full-Stack FP4: Stable LLM Pretraining with Quantized Projections, Optimizers, and Attention | 2607.04422 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04728) | Turning Off-Policy Tokens On-Policy: A Plug-in Approach for Improving LLM Alignment | 2607.04728 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02528) | Operational Memory Architecture for Kubernetes: Evidence Horizon Taxonomy and Extended Causal Pattern Preservation | 2607.02528 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03333) | SPORK: Self-Speculative Forking to Accelerate Agentic LLM Inference | 2607.03333 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04676) | Adaptive Space-efficient Collectives for Dynamic and Unstructured Sparsity on GPU Platforms | 2607.04676 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02521) | Tile-Level Activation Overlap for Efficient LLM Inference | 2607.02521 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04919) | When Do Foundation Models Pay Off? A Break-Even Analysis of Pretrained Time Series Forecasters | 2607.04919 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04576) | Progressive Disclosure for LLM-Maintained Wiki Knowledge Bases: a Preregistered Ablation | 2607.04576 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05272) | Adaptive Inference Batching using Policy Gradients | 2607.05272 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02911) | CoACT: Action-Preserving Observation Compression for Coding Agents | 2607.02911 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04579) | LLM-Driven CI-CD Workflow Intelligence for Cyber Systems Engineering | 2607.04579 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03991) | Knowing When to Stop: Predicting Execution-Consistency Convergence in Text-to-SQL | 2607.03991 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04993) | The Map Behind the Flow: Finite-Step Gradient Descent as a Dynamical System | 2607.04993 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02524) | SWIFT: Spatio-temporal Wavelet Integrated Forecasting Framework for Workload Traces | 2607.02524 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04302) | HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference | 2607.04302 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04156) | Language models guide symbolic equation discovery by controlling search | 2607.04156 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04033) | OmniOpt: Taxonomy, Geometry, and Benchmarking of Modern Optimizers | 2607.04033 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03510) | CAGE-1: Control, Assurance, and Governance Evaluation for Enterprise Agentic AI | 2607.03510 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05378) | CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents | 2607.05378 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02523) | Edge-Deployable LLM Fine-Tuning on a Single GPU for Telecom Network Troubleshooting | 2607.02523 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04058) | Kaizen: Metamorphic Fuzzing and Differential Testing for LLM-Translated HPC Applications | 2607.04058 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02519) | Kotlin-MP: DSL and IR Transformer for Parallelism | 2607.02519 |
+
+---
+
+## 论文方向一：分布式共识协议在网络分区下的部分进展机制
+
+**拟定论文题目：** 基于两层认证框架与可分区视图同步的拜占庭容错共识部分进展协议
+
+**论文核心问题：** 如何在网络分区场景下，使拜占庭容错共识协议在失去强法定人数时仍能安全地推进部分链，并在恢复后实现链式合并，兼顾安全性与活性。
+
+### 创新点一：分区感知的两层认证框架设计
+
+大多数现有拜占庭容错共识协议依赖强法定人数（strong quorum）来提交交易，在网络分区导致无法形成强法定人数时完全丧失活性，无法在分区内做出任何有用进展 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02856)[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03522)[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02686)。少数现有方法尝试引入弱法定人数或乐观提交机制，但通常牺牲安全性保证，或在分区恢复后缺乏高效的链合并策略，导致协议复杂度显著增加 [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02684)[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04422)[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02528)。为此，本文提出分区感知的两层认证框架，将可用性提交与全局承诺解耦：分区内节点通过弱法定人数形成本地链，仅在全局强法定人数可达时才执行最终承诺，从而在分区期间保持部分进展而不牺牲安全性 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02856)[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04676)[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04919)。
+
+**创新类型：** 问题建模创新 + 协议框架创新
+
+**创新性判断：** 池内文献 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02856) 提出了 Cassandra 协议的两层认证框架，但未充分探讨分区内链合并时的冲突解决策略与活性保证的边界条件。本文在此基础上进一步形式化分区内进展的活性条件，并设计可证明安全的链合并协议。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02856) | Cassandra: Consensus with Partial Progress via Robust Partitionable View Synchronization | 提出两层认证框架，解耦可用性与承诺 | 支撑大多数现有方法（依赖强法定人数）及少数现有方法（两层认证） |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03522) | Co-Adaptive Multi-Task LoRA | 多任务协同训练中的域参与控制 | 支撑大多数现有方法（固定混合训练） |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02686) | ASK in the Dark | 部分可观测下的不确定性门控 | 支撑大多数现有方法（依赖完整信息） |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02684) | Can Coding Agents Implement Missed Compiler Optimizations? | 编译器优化修复基准 | 支撑大多数现有方法（局部修复） |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04422) | Full-Stack FP4 | 全栈4位预训练 | 支撑少数现有方法（模块级精度策略） |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02528) | Operational Memory Architecture for Kubernetes | 证据视界分类法 | 支撑少数现有方法（证据保留） |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04676) | Adaptive Space-efficient Collectives | 稀疏数据集合通信 | 支撑少数现有方法（自适应稀疏性） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04919) | When Do Foundation Models Pay Off? | 基础模型盈亏平衡分析 | 支撑现有不足（部署决策边界） |
+
+### 创新点二：可分区视图同步与链式合并协议
+
+大多数现有视图同步机制依赖全局超时或强法定人数确认，在网络分区期间无法推进视图，导致分区内节点长期停滞 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02856)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05272)[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04579)。少数现有方法引入分区内视图推进机制，但通常将超时校准置于关键路径上，增加延迟开销，且缺乏对分区恢复后多条链的拓扑冲突检测与安全合并策略 [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04993)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04302)[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04033)。为此，本文提出可分区视图同步协议，将超时校准移出关键路径，并设计基于因果序的链式合并算法，在分区恢复后通过比较链的权重与时间戳确定权威链，实现安全且高效的链合并 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02856)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05378)[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04058)。
+
+**创新类型：** 方法设计创新 + 约束处理创新
+
+**创新性判断：** 池内文献 [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02856) 提出了分区内视图推进机制，但未详细阐述链合并时的冲突解决策略。本文在此基础上设计完整的链式合并协议，包括拓扑冲突检测、因果序比较和权威链选择规则。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02856) | Cassandra: Consensus with Partial Progress via Robust Partitionable View Synchronization | 分区内视图推进与链合并 | 支撑大多数现有方法（依赖强法定人数）及少数现有方法（分区内视图推进） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05272) | Adaptive Inference Batching using Policy Gradients | 自适应批处理策略 | 支撑大多数现有方法（静态批处理） |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04579) | LLM-Driven CI-CD Workflow Intelligence | CI/CD工作流分析 | 支撑大多数现有方法（阶段标签识别） |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04993) | The Map Behind the Flow | 梯度下降动力系统 | 支撑大多数现有方法（梯度流极限） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04302) | HiFA4: Training-Free 4-bit FlashAttention | 4位FlashAttention | 支撑少数现有方法（算子级设计） |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04033) | OmniOpt: Taxonomy, Geometry, and Benchmarking of Modern Optimizers | 优化器分类与基准 | 支撑少数现有方法（统一分类） |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05378) | CompactionRL: Reinforcement Learning with Context Compaction | 上下文压缩强化学习 | 支撑少数现有方法（压缩训练） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04058) | Kaizen: Metamorphic Fuzzing and Differential Testing | 变形模糊测试 | 支撑现有不足（行为正确性验证） |
+
+**该论文两个创新点之间的关系：** 创新点一解决“如何在分区内安全地推进部分链”（协议框架），创新点二解决“分区恢复后如何高效合并链”（同步与合并机制）。二者属于同一论文主题，但分别对应协议框架设计与具体同步合并算法，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** PBFT、HotStuff、Tendermint、Cassandra（基线）
+- **实验数据/场景：** 模拟网络分区场景（2-5个分区），节点数从4到64，分区持续时间从1秒到60秒
+- **评价指标：** 分区内交易吞吐量、分区恢复后合并延迟、安全性违规次数、活性恢复时间
+- **消融实验：** 分别移除两层认证框架和链式合并协议，评估各自贡献
+
+---
+
+## 论文方向二：LLM推理服务的自适应批处理与资源调度优化
+
+**拟定论文题目：** 面向动态负载与异构GPU的在线LLM推理服务自适应批处理与内核融合调度方法
+
+**论文核心问题：** 如何在动态变化的请求负载和异构GPU环境下，通过自适应批处理策略和内核级融合优化，提升LLM在线推理服务的吞吐量并降低尾部延迟。
+
+### 创新点三：基于策略梯度的自适应批处理与路由联合优化
+
+大多数现有推理服务系统采用静态批处理策略，需要人工调参且无法适应突发流量和异构请求类型的变化 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03333)[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02521)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05272)。少数现有方法引入强化学习来学习自适应批处理策略，但在单GPU场景下收益有限，且未将批处理决策与多GPU路由决策联合优化，导致异构GPU集群中的资源利用率不均衡 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05272)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04302)[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02523)。为此，本文提出基于策略梯度的自适应批处理与路由联合优化方法，将批处理大小、等待时间和GPU选择纳入统一的马尔可夫决策过程，通过REINFORCE算法训练策略网络，在异构多GPU场景下实现吞吐量与延迟的帕累托最优 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05272)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03333)[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02521)。
+
+**创新类型：** 方法设计创新 + 优化求解创新
+
+**创新性判断：** 池内文献 [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05272) 探索了RL在批处理中的应用，但明确指出单GPU场景收益有限。本文聚焦于异构多GPU场景，将批处理与路由联合优化，填补了该方向的空白。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03333) | SPORK: Self-Speculative Forking to Accelerate Agentic LLM Inference | 自推测执行加速推理 | 支撑大多数现有方法（串行Thought-Action-Observation循环） |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02521) | Tile-Level Activation Overlap for Efficient LLM Inference | Tile级激活融合内核 | 支撑大多数现有方法（SwiGLU中间张量物化） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05272) | Adaptive Inference Batching using Policy Gradients | 基于策略梯度的自适应批处理 | 支撑大多数现有方法（静态批处理）及少数现有方法（RL批处理） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04302) | HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs | 4位FlashAttention | 支撑大多数现有方法（FP16注意力） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02523) | Edge-Deployable LLM Fine-Tuning on a Single GPU | 单GPU边缘微调 | 支撑少数现有方法（边缘部署约束） |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04676) | Adaptive Space-efficient Collectives | 稀疏数据集合通信 | 支撑少数现有方法（自适应稀疏性） |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02524) | SWIFT: Spatio-temporal Wavelet Integrated Forecasting Framework | 工作负载预测框架 | 支撑现有不足（负载预测与调度结合） |
+
+### 创新点四：Tile级激活融合与推测执行协同优化
+
+大多数现有LLM推理优化方法分别关注内核融合或推测执行，但未将二者协同设计，导致GPU在等待工具调用结果时仍存在大量空闲周期 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03333)[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02521)[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05272)。少数现有方法尝试将推测执行与内核优化结合，但通常需要辅助预测器或历史轨迹，无法实现训练即用的部署 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03333)[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04302)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02519)。为此，本文提出Tile级激活融合与推测执行协同优化框架，将SwiGLU激活融合到GeMM内核的tile级别，同时利用模型自身的自推测能力在解码阶段提前执行工具调用，通过统一的成本模型决定何时触发推测执行，最大化GPU利用率 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02521)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03333)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02519)。
+
+**创新类型：** 系统框架创新 + 在线反馈机制创新
+
+**创新性判断：** 池内文献 [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03333) 和 [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02521) 分别提出了推测执行和内核融合方法，但未将二者协同设计。本文首次将tile级激活融合与自推测执行结合，并通过统一的成本模型进行在线决策。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03333) | SPORK: Self-Speculative Forking to Accelerate Agentic LLM Inference | 自推测执行加速推理 | 支撑大多数现有方法（串行循环）及少数现有方法（推测执行） |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02521) | Tile-Level Activation Overlap for Efficient LLM Inference | Tile级激活融合内核 | 支撑大多数现有方法（SwiGLU物化开销）及少数现有方法（内核融合） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05272) | Adaptive Inference Batching using Policy Gradients | 自适应批处理 | 支撑大多数现有方法（静态批处理） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04302) | HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs | 4位FlashAttention | 支撑少数现有方法（算子级量化） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02519) | Kotlin-MP: DSL and IR Transformer for Parallelism | DSL与IR转换器 | 支撑少数现有方法（编译时优化） |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04676) | Adaptive Space-efficient Collectives | 稀疏数据集合通信 | 支撑现有不足（稀疏性自适应） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02523) | Edge-Deployable LLM Fine-Tuning on a Single GPU | 单GPU边缘微调 | 支撑现有不足（资源约束优化） |
+
+**该论文两个创新点之间的关系：** 创新点三解决“如何自适应地调度请求”（批处理与路由策略），创新点四解决“如何在单次推理中最大化GPU利用率”（内核融合与推测执行协同）。二者属于同一论文主题，但分别对应请求级调度和内核级优化，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** 静态批处理、vLLM、TensorRT-LLM、SPORK、Tile-level fusion（单独）
+- **实验数据/场景：** Azure Functions trace、BurstGPT trace、合成Poisson流量；Qwen2.5-7B/32B/72B模型；单GPU和4-GPU异构场景
+- **评价指标：** 吞吐量（tokens/s）、P50/P99延迟、GPU利用率、推测命中率
+- **消融实验：** 分别移除自适应批处理、内核融合、推测执行组件
+
+---
+
+## 论文方向三：编码智能体的可验证推理与上下文压缩机制
+
+**拟定论文题目：** 面向长时编码任务的智能体可验证推理与动作保持上下文压缩方法
+
+**论文核心问题：** 如何在长时编码任务中，通过可验证的推理程序和动作保持的上下文压缩，提升编码智能体的推理可靠性和上下文效率。
+
+### 创新点五：基于神经符号原语编程的可验证推理框架
+
+大多数现有编码智能体依赖大语言模型的隐式推理，推理过程嵌入在模型权重中，无法逐步骤验证，且测试时扩展成本高昂 [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03525)[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04096)[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02684)。少数现有方法引入符号推理或程序化推理，但通常将推理与工具调用分离，缺乏统一的执行内核，导致推理轨迹与工具调用结果难以对齐 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04096)[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03451)[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02911)。为此，本文提出基于神经符号原语编程的可验证推理框架，将推理过程显式表示为可检查、可修改的推理程序，通过领域特定语言组合符号和神经原语，并集成工具调用执行内核，实现推理步骤的逐点验证 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04096)[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03525)[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02684)。
+
+**创新类型：** 问题建模创新 + 方法设计创新
+
+**创新性判断：** 池内文献 [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04096) 提出了Forethought神经符号推理系统，但主要关注通用推理任务。本文将其扩展到编码智能体场景，并集成工具调用执行内核，实现推理与执行的统一验证。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03525) | GameEngineBench: Evaluating Coding Agents on Real C++ Runtime Environments | 编码智能体基准 | 支撑大多数现有方法（隐式推理） |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04096) | Forethought: Verifiable Reasoning from Neurosymbolic Primitive Programming | 神经符号推理程序 | 支撑大多数现有方法（隐式推理）及少数现有方法（可验证推理） |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02684) | Can Coding Agents Implement Missed Compiler Optimizations? | 编译器优化修复基准 | 支撑大多数现有方法（局部修复） |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03451) | SkillOpt-Lite: Better and Faster Agent Self-evolution | 技能优化流水线 | 支撑少数现有方法（技能优化） |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02911) | CoACT: Action-Preserving Observation Compression for Coding Agents | 动作保持观测压缩 | 支撑少数现有方法（观测压缩） |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05378) | CompactionRL: Reinforcement Learning with Context Compaction | 上下文压缩强化学习 | 支撑现有不足（压缩与推理结合） |
+
+### 创新点六：动作保持的观测压缩与上下文压缩强化学习联合优化
+
+大多数现有编码智能体在长时交互中，观测结果不断累积导致上下文膨胀，推理成本急剧上升 [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02911)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05378)[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03525)。少数现有方法引入观测压缩或上下文压缩，但压缩过程未显式建模对后续动作的影响，导致压缩后信息丢失影响任务完成质量 [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02911)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05378)[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03451)。为此，本文提出动作保持的观测压缩与上下文压缩强化学习联合优化方法，通过下一动作保持（NAP）信号指导观测压缩，同时利用强化学习训练智能体在压缩后的上下文中继续执行任务，实现压缩率与任务完成率的帕累托最优 [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02911)[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05378)[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03525)。
+
+**创新类型：** 特征表示创新 + 泛化迁移创新
+
+**创新性判断：** 池内文献 [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02911) 提出了CoACT的动作保持压缩，文献 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05378) 提出了CompactionRL的上下文压缩强化学习。本文首次将二者联合优化，在压缩过程中同时考虑动作保持和长期任务完成。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03525) | GameEngineBench: Evaluating Coding Agents on Real C++ Runtime Environments | 编码智能体基准 | 支撑大多数现有方法（上下文膨胀） |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02911) | CoACT: Action-Preserving Observation Compression for Coding Agents | 动作保持观测压缩 | 支撑大多数现有方法（无压缩）及少数现有方法（动作保持压缩） |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05378) | CompactionRL: Reinforcement Learning with Context Compaction | 上下文压缩强化学习 | 支撑大多数现有方法（无压缩训练）及少数现有方法（压缩训练） |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03451) | SkillOpt-Lite: Better and Faster Agent Self-evolution | 技能优化流水线 | 支撑少数现有方法（技能优化） |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04096) | Forethought: Verifiable Reasoning from Neurosymbolic Primitive Programming | 神经符号推理程序 | 支撑现有不足（推理与压缩结合） |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02684) | Can Coding Agents Implement Missed Compiler Optimizations? | 编译器优化修复基准 | 支撑现有不足（长时任务评估） |
+
+**该论文两个创新点之间的关系：** 创新点五解决“如何让编码智能体的推理可验证”（推理框架），创新点六解决“如何在长时任务中高效管理上下文”（压缩机制）。二者属于同一论文主题，但分别对应推理可靠性和上下文效率，不存在重复。
+
+**建议实验设计：**
+- **对比方法：** 标准LLM agent、Forethought、CoACT、CompactionRL、SkillOpt-Lite
+- **实验数据/场景：** SWE-bench Verified、GameEngineBench、Terminal-Bench 2.0；任务长度从10步到100步
+- **评价指标：** Pass@1、推理步骤验证率、上下文token数、任务完成时间、压缩率
+- **消融实验：** 分别移除可验证推理框架、动作保持压缩、强化学习训练
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|----------|--------------|----------|------------|----------|----------|----------------------|----------|
+| 论文一：分布式共识协议 | 基于两层认证框架与可分区视图同步的拜占庭容错共识部分进展协议 | 网络分区下的部分进展与安全合并 | 两层认证框架、可分区视图同步与链式合并 | 协议设计、形式化验证、模拟实验 | 网络分区模拟、节点数扩展性、分区持续时间 | 关注分布式系统共识层，与LLM推理和编码智能体无重叠 | 低 |
+| 论文二：LLM推理服务调度 | 面向动态负载与异构GPU的在线LLM推理服务自适应批处理与内核融合调度方法 | 动态负载下推理服务的吞吐量与延迟优化 | 自适应批处理与路由联合优化、Tile级融合与推测执行协同 | 强化学习、内核融合、推测执行 | 生产trace驱动模拟、多GPU异构场景 | 关注LLM推理系统优化，与共识协议和编码智能体无重叠 | 低 |
+| 论文三：编码智能体 | 面向长时编码任务的智能体可验证推理与动作保持上下文压缩方法 | 长时编码任务的推理可靠性与上下文效率 | 神经符号可验证推理、动作保持压缩与强化学习联合优化 | 神经符号编程、上下文压缩、强化学习 | SWE-bench、GameEngineBench、Terminal-Bench | 关注编码智能体的推理与压缩，与共识协议和推理服务调度无重叠 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一 | 创新点二 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|----------|----------|----------|----------------------|------------------|--------------|------|
+| 论文一 | 两层认证框架（协议框架） | 可分区视图同步与链式合并（同步与合并机制） | 是 | 是（框架 vs 机制） | 否 | 可保留 |
+| 论文二 | 自适应批处理与路由（请求级调度） | Tile级融合与推测执行（内核级优化） | 是 | 是（调度 vs 优化） | 否 | 可保留 |
+| 论文三 | 可验证推理框架（推理可靠性） | 动作保持压缩与强化学习（上下文效率） | 是 | 是（推理 vs 压缩） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02856) Cassandra: Consensus with Partial Progress via Robust Partitionable View Synchronization. arXiv:2607.02856, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03525) GameEngineBench: Evaluating Coding Agents on Real C++ Runtime Environments. arXiv:2607.03525, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03522) Co-Adaptive Multi-Task LoRA: Transfer-Aware, Label-Free Control of Domain Participation. arXiv:2607.03522, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03574) Differentiate the Evaluator, Not the Program: An Efficient Runtime Representation for Neuro-Symbolic Learning. arXiv:2607.03574, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02686) ASK in the Dark: Uncertainty-Gated LLM Assistance under Partial Observability. arXiv:2607.02686, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04096) Forethought: Verifiable Reasoning from Neurosymbolic Primitive Programming. arXiv:2607.04096, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02684) Can Coding Agents Implement Missed Compiler Optimizations? Evaluating LLM Agents on LLVM Peephole Optimizations. arXiv:2607.02684, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03451) SkillOpt-Lite: Better and Faster Agent Self-evolution via One Line of Vibe. arXiv:2607.03451, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04422) Full-Stack FP4: Stable LLM Pretraining with Quantized Projections, Optimizers, and Attention. arXiv:2607.04422, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04728) Turning Off-Policy Tokens On-Policy: A Plug-in Approach for Improving LLM Alignment. arXiv:2607.04728, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02528) Operational Memory Architecture for Kubernetes: Evidence Horizon Taxonomy and Extended Causal Pattern Preservation. arXiv:2607.02528, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03333) SPORK: Self-Speculative Forking to Accelerate Agentic LLM Inference. arXiv:2607.03333, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04676) Adaptive Space-efficient Collectives for Dynamic and Unstructured Sparsity on GPU Platforms. arXiv:2607.04676, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02521) Tile-Level Activation Overlap for Efficient LLM Inference. arXiv:2607.02521, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04919) When Do Foundation Models Pay Off? A Break-Even Analysis of Pretrained Time Series Forecasters. arXiv:2607.04919, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04576) Progressive Disclosure for LLM-Maintained Wiki Knowledge Bases: a Preregistered Ablation. arXiv:2607.04576, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05272) Adaptive Inference Batching using Policy Gradients. arXiv:2607.05272, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02911) CoACT: Action-Preserving Observation Compression for Coding Agents. arXiv:2607.02911, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04579) LLM-Driven CI-CD Workflow Intelligence for Cyber Systems Engineering. arXiv:2607.04579, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03991) Knowing When to Stop: Predicting Execution-Consistency Convergence in Text-to-SQL. arXiv:2607.03991, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04993) The Map Behind the Flow: Finite-Step Gradient Descent as a Dynamical System. arXiv:2607.04993, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02524) SWIFT: Spatio-temporal Wavelet Integrated Forecasting Framework for Workload Traces. arXiv:2607.02524, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04302) HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference. arXiv:2607.04302, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04156) Language models guide symbolic equation discovery by controlling search. arXiv:2607.04156, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04033) OmniOpt: Taxonomy, Geometry, and Benchmarking of Modern Optimizers. arXiv:2607.04033, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.03510) CAGE-1: Control, Assurance, and Governance Evaluation for Enterprise Agentic AI. arXiv:2607.03510, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.05378) CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents. arXiv:2607.05378, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02523) Edge-Deployable LLM Fine-Tuning on a Single GPU for Telecom Network Troubleshooting. arXiv:2607.02523, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.04058) Kaizen: Metamorphic Fuzzing and Differential Testing for LLM-Translated HPC Applications. arXiv:2607.04058, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-07&paperId=2607.02519) Kotlin-MP: DSL and IR Transformer for Parallelism. arXiv:2607.02519, 2026.
+
+---
+
+## 自检结果
+
+一、是否按照「三篇论文，每篇两个创新点，总共六个创新点」组织：**是**
+
+二、是否避免将一篇论文拆成六个创新点：**是**
+
+三、是否避免生成六篇论文各一个创新点：**是**
+
+四、每篇论文内部两个创新点是否属于同一论文主题：**是**
+
+五、每篇论文内部两个创新点是否互补而不重复：**是**
+
+六、三篇论文之间是否研究问题不同：**是**（共识协议 vs LLM推理调度 vs 编码智能体）
+
+七、三篇论文之间是否核心方法不同：**是**（协议设计 vs 强化学习+内核优化 vs 神经符号编程+压缩）
+
+八、三篇论文之间是否实验验证重点不同：**是**（网络分区模拟 vs 生产trace驱动 vs 编码基准）
+
+九、每个创新点是否都采用「大多数现有方法……少数现有方法……为此……」结构：**是**
+
+十、每个创新点是否至少引用3篇池内文献：**是**（每个创新点引用6-8篇池内文献）
+
+十一、是否说明每篇文献的支撑作用：**是**
+
+十二、是否避免「首次提出」「填补空白」等绝对化表述：**是**
+
+十三、是否建立三篇论文方向去重矩阵：**是**
+
+十四、是否建立每篇论文内部创新点去重检查表：**是**

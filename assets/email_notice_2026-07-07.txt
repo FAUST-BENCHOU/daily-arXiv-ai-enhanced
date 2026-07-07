@@ -1,0 +1,9 @@
+每日硬凑师兄要求的创新点 2026-07-07
+
+今日三个主题概要：
+1. 分布式共识协议在网络分区下的部分进展机制 — 基于当日文献池中 Cassandra 协议的两层认证框架与可分区视图同步机制，探讨如何在拜占庭容错共识中实现网络分区下的部分进展与恢复后链式合并，兼顾安全性与活性。
+2. LLM 推理服务的自适应批处理与资源调度优化 — 结合池内 SPORK 投机执行、Adaptive Inference Batching 策略梯度方法以及 Tile-Level Activation Overlap 内核融合，研究面向动态负载与异构 GPU 的在线推理服务资源调优方法。
+3. 编码智能体的可验证推理与上下文压缩机制 — 围绕池内 Forethought 神经符号推理程序、CoACT 动作保持观测压缩以及 CompactionRL 上下文压缩强化学习，探索如何提升编码智能体在长时任务中的推理可验证性与上下文效率。
+
+完整创新点、矩阵与文献引用见：
+https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/digest-viewer.html?date=2026-07-07

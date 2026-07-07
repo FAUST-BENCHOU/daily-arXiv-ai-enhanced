@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-07",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "分布式共识协议在网络分区下的部分进展机制",
+      "blurb": "基于当日文献池中 Cassandra 协议的两层认证框架与可分区视图同步机制，探讨如何在拜占庭容错共识中实现网络分区下的部分进展与恢复后链式合并，兼顾安全性与活性。"
+    },
+    {
+      "title": "LLM 推理服务的自适应批处理与资源调度优化",
+      "blurb": "结合池内 SPORK 投机执行、Adaptive Inference Batching 策略梯度方法以及 Tile-Level Activation Overlap 内核融合，研究面向动态负载与异构 GPU 的在线推理服务资源调优方法。"
+    },
+    {
+      "title": "编码智能体的可验证推理与上下文压缩机制",
+      "blurb": "围绕池内 Forethought 神经符号推理程序、CoACT 动作保持观测压缩以及 CompactionRL 上下文压缩强化学习，探索如何提升编码智能体在长时任务中的推理可验证性与上下文效率。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2607.02856",
+      "title": "Cassandra: Consensus with Partial Progress via Robust Partitionable View Synchronization"
+    },
+    {
+      "idx": 2,
+      "id": "2607.03525",
+      "title": "GameEngineBench: Evaluating Coding Agents on Real C++ Runtime Environments"
+    },
+    {
+      "idx": 3,
+      "id": "2607.03522",
+      "title": "Co-Adaptive Multi-Task LoRA: Transfer-Aware, Label-Free Control of Domain Participation"
+    },
+    {
+      "idx": 4,
+      "id": "2607.03574",
+      "title": "Differentiate the Evaluator, Not the Program: An Efficient Runtime Representation for Neuro-Symbolic Learning"
+    },
+    {
+      "idx": 5,
+      "id": "2607.02686",
+      "title": "ASK in the Dark: Uncertainty-Gated LLM Assistance under Partial Observability"
+    },
+    {
+      "idx": 6,
+      "id": "2607.04096",
+      "title": "Forethought: Verifiable Reasoning from Neurosymbolic Primitive Programming"
+    },
+    {
+      "idx": 7,
+      "id": "2607.02684",
+      "title": "Can Coding Agents Implement Missed Compiler Optimizations? Evaluating LLM Agents on LLVM Peephole Optimizations"
+    },
+    {
+      "idx": 8,
+      "id": "2607.03451",
+      "title": "SkillOpt-Lite: Better and Faster Agent Self-evolution via One Line of Vibe"
+    },
+    {
+      "idx": 9,
+      "id": "2607.04422",
+      "title": "Full-Stack FP4: Stable LLM Pretraining with Quantized Projections, Optimizers, and Attention"
+    },
+    {
+      "idx": 10,
+      "id": "2607.04728",
+      "title": "Turning Off-Policy Tokens On-Policy: A Plug-in Approach for Improving LLM Alignment"
+    },
+    {
+      "idx": 11,
+      "id": "2607.02528",
+      "title": "Operational Memory Architecture for Kubernetes: Evidence Horizon Taxonomy and Extended Causal Pattern Preservation"
+    },
+    {
+      "idx": 12,
+      "id": "2607.03333",
+      "title": "SPORK: Self-Speculative Forking to Accelerate Agentic LLM Inference"
+    },
+    {
+      "idx": 13,
+      "id": "2607.04676",
+      "title": "Adaptive Space-efficient Collectives for Dynamic and Unstructured Sparsity on GPU Platforms"
+    },
+    {
+      "idx": 14,
+      "id": "2607.02521",
+      "title": "Tile-Level Activation Overlap for Efficient LLM Inference"
+    },
+    {
+      "idx": 15,
+      "id": "2607.04919",
+      "title": "When Do Foundation Models Pay Off? A Break-Even Analysis of Pretrained Time Series Forecasters"
+    },
+    {
+      "idx": 16,
+      "id": "2607.04576",
+      "title": "Progressive Disclosure for LLM-Maintained Wiki Knowledge Bases: a Preregistered Ablation"
+    },
+    {
+      "idx": 17,
+      "id": "2607.05272",
+      "title": "Adaptive Inference Batching using Policy Gradients"
+    },
+    {
+      "idx": 18,
+      "id": "2607.02911",
+      "title": "CoACT: Action-Preserving Observation Compression for Coding Agents"
+    },
+    {
+      "idx": 19,
+      "id": "2607.04579",
+      "title": "LLM-Driven CI-CD Workflow Intelligence for Cyber Systems Engineering"
+    },
+    {
+      "idx": 20,
+      "id": "2607.03991",
+      "title": "Knowing When to Stop: Predicting Execution-Consistency Convergence in Text-to-SQL"
+    },
+    {
+      "idx": 21,
+      "id": "2607.04993",
+      "title": "The Map Behind the Flow: Finite-Step Gradient Descent as a Dynamical System"
+    },
+    {
+      "idx": 22,
+      "id": "2607.02524",
+      "title": "SWIFT: Spatio-temporal Wavelet Integrated Forecasting Framework for Workload Traces"
+    },
+    {
+      "idx": 23,
+      "id": "2607.04302",
+      "title": "HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference"
+    },
+    {
+      "idx": 24,
+      "id": "2607.04156",
+      "title": "Language models guide symbolic equation discovery by controlling search"
+    },
+    {
+      "idx": 25,
+      "id": "2607.04033",
+      "title": "OmniOpt: Taxonomy, Geometry, and Benchmarking of Modern Optimizers"
+    },
+    {
+      "idx": 26,
+      "id": "2607.03510",
+      "title": "CAGE-1: Control, Assurance, and Governance Evaluation for Enterprise Agentic AI"
+    },
+    {
+      "idx": 27,
+      "id": "2607.05378",
+      "title": "CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents"
+    },
+    {
+      "idx": 28,
+      "id": "2607.02523",
+      "title": "Edge-Deployable LLM Fine-Tuning on a Single GPU for Telecom Network Troubleshooting"
+    },
+    {
+      "idx": 29,
+      "id": "2607.04058",
+      "title": "Kaizen: Metamorphic Fuzzing and Differential Testing for LLM-Translated HPC Applications"
+    },
+    {
+      "idx": 30,
+      "id": "2607.02519",
+      "title": "Kotlin-MP: DSL and IR Transformer for Parallelism"
+    }
+  ]
+}
