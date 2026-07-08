@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-08",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM 推理与 KV 缓存压缩",
+      "blurb": "围绕大语言模型长上下文推理中的 KV 缓存瓶颈，从预测性在线剪枝、频率引导深度共享、以及跨层残差分解三个角度探索无需重训的压缩方法，兼顾内存效率与任务保真度。"
+    },
+    {
+      "title": "LLM 智能体可靠性与运行时诊断",
+      "blurb": "针对多步 LLM 智能体在复杂任务中的失败预测、轨迹诊断与闭环修复问题，提出早期中止级联、关键转换图定位和智能体代码审查框架，提升智能体系统的可观测性与鲁棒性。"
+    },
+    {
+      "title": "LLM 系统效率与记忆架构",
+      "blurb": "从系统层优化 LLM 推理与智能体运行效率，涵盖低开销记忆系统、异步规划运行时、以及基于离线强化学习的执行控制，在吞吐、延迟与任务质量之间取得更优权衡。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2607.05711",
+      "title": "FourTune: Towards Fully 4-Bit Efficient Post-Training for Diffusion Models"
+    },
+    {
+      "idx": 2,
+      "id": "2607.05764",
+      "title": "Inject or Navigate? Token-Efficient Retrieval for LLM Analysis of Transactional Legal Documents"
+    },
+    {
+      "idx": 3,
+      "id": "2607.05439",
+      "title": "Design-CP: Context Parallelism for Design of Protein Nanoparticles"
+    },
+    {
+      "idx": 4,
+      "id": "2607.05773",
+      "title": "Beyond Static Evaluation: Building Simulation Environments for Scalable Agentic Reinforcement Learning"
+    },
+    {
+      "idx": 5,
+      "id": "2607.05785",
+      "title": "Can Large Language Models Generate Observability-Aware Code?"
+    },
+    {
+      "idx": 6,
+      "id": "2607.06114",
+      "title": "x-Prediction Is All You Need:Training-Free Accelerated Generation via Endpoint Decodability"
+    },
+    {
+      "idx": 7,
+      "id": "2607.05776",
+      "title": "Layer 2 Coordinated Trusted Setup for Continuous CRS Generation"
+    },
+    {
+      "idx": 8,
+      "id": "2607.05061",
+      "title": "KVpop -- Key-Value Cache Compression with Predictive Online Pruning"
+    },
+    {
+      "idx": 9,
+      "id": "2607.05559",
+      "title": "EquiFiLM: Charge-Conditioned Equivariant Force Fields via Feature-wise Linear Modulation"
+    },
+    {
+      "idx": 10,
+      "id": "2607.06229",
+      "title": "Spider 2.0-AIFunc: Extending Real-World Text-to-SQL to AI-Native SQL Workflows"
+    },
+    {
+      "idx": 11,
+      "id": "2607.05458",
+      "title": "Learning to Control LLM Agent Harnesses with Offline Reinforcement Learning"
+    },
+    {
+      "idx": 12,
+      "id": "2607.05895",
+      "title": "MatrixFSDP: communication-free matrix optimizers under ZeRO-3 parameter sharding"
+    },
+    {
+      "idx": 13,
+      "id": "2607.06503",
+      "title": "Doomed from the Start: Early Abort of LLM Agent Episodes via a Recall-Controlled Probe Cascade"
+    },
+    {
+      "idx": 14,
+      "id": "2607.06519",
+      "title": "FreqDepthKV: Frequency-Guided Depth Sharing for Robust KV Cache Compression in Long-Context LLM Inference"
+    },
+    {
+      "idx": 15,
+      "id": "2607.05457",
+      "title": "Empirical Minimal-Realisation Compression of Deep Neural Networks via Controllability-Observability Tests"
+    },
+    {
+      "idx": 16,
+      "id": "2607.05690",
+      "title": "Memory in the Loop: In-Process Retrieval as ExtendedWorking Memory for Language Agents"
+    },
+    {
+      "idx": 17,
+      "id": "2607.06065",
+      "title": "SWE-Review: Closing the Loop on Issue Resolution with Agentic Code Review"
+    },
+    {
+      "idx": 18,
+      "id": "2607.06273",
+      "title": "AgentTether: Graph-Guided Diagnosis and Runtime Intervention for Reliable LLM Agent Operation"
+    },
+    {
+      "idx": 19,
+      "id": "2607.05904",
+      "title": "More Convincing, Not More Correct: Self-Play Reward Hacking of Reference-Free LLM Judges"
+    },
+    {
+      "idx": 20,
+      "id": "2607.06107",
+      "title": "DDB: Source-Level Interactive Debugging for Distributed Applications"
+    },
+    {
+      "idx": 21,
+      "id": "2607.05638",
+      "title": "EvalLoop: A Methodology for Evaluation-Driven Iterative Improvement of Business AI Systems"
+    },
+    {
+      "idx": 22,
+      "id": "2607.05708",
+      "title": "Akashic: A Low-Overhead LLM Inference Service with MemAttention"
+    },
+    {
+      "idx": 23,
+      "id": "2607.05482",
+      "title": "TypeGo: An OS Runtime for Embodied Agents"
+    },
+    {
+      "idx": 24,
+      "id": "2607.05483",
+      "title": "PatchOptic for Shared-State LLM Workflows with Projected Views and Verified Structured Updates"
+    },
+    {
+      "idx": 25,
+      "id": "2607.06195",
+      "title": "LogicHunter: Testing LLM Agent Frameworks with an Agentic Oracle"
+    },
+    {
+      "idx": 26,
+      "id": "2607.06523",
+      "title": "DepthWeave-KV: Token-Adaptive Cross-Layer Residual Factorization for Long-Context KV Cache Compression"
+    },
+    {
+      "idx": 27,
+      "id": "2607.05936",
+      "title": "Mitigating Errors in LLM-Generated Web API Invocations via Retrieval-Augmented Generation and Constrained Decoding"
+    },
+    {
+      "idx": 28,
+      "id": "2607.05866",
+      "title": "Differentially Private Natural Gradient Descent"
+    },
+    {
+      "idx": 29,
+      "id": "2607.06326",
+      "title": "DT-Guard: Intent-Driven Reasoning-Active Training for Reasoning-Free LLM Safety Guardrail"
+    },
+    {
+      "idx": 30,
+      "id": "2607.05844",
+      "title": "StateFuse: Deterministic Conflict-Preserving Memory for Multi-Agent Systems"
+    }
+  ]
+}

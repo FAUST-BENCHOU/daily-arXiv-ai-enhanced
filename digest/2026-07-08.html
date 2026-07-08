@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日硬凑师兄要求的创新点 · 2026-07-08</title>
+</head>
+<body style="margin:0;background:#e8eef5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;color:#334155;">
+<div style="max-width:900px;margin:0 auto;padding:28px 16px 48px;">
+<nav style="font-size:14px;margin-bottom:18px;">
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html" style="color:#2563eb;text-decoration:none;font-weight:600;">论文列表主页</a>
+<span style="color:#94a3b8;margin:0 8px;">/</span>
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/digest-index.html" style="color:#2563eb;text-decoration:none;font-weight:600;">历史创新点</a>
+</nav>
+<header style="background:linear-gradient(135deg,#1e40af 0%,#3b82f6 100%);color:#fff;border-radius:14px;padding:22px 26px;margin-bottom:22px;">
+<p style="margin:0;font-size:12px;opacity:0.88;">读文献 · 憋创新点 · GitHub Pages</p>
+<h1 style="margin:10px 0 0;font-size:22px;font-weight:700;line-height:1.35;">每日硬凑师兄要求的创新点 · 2026-07-08</h1>
+</header>
+<section style="margin-bottom:22px;">
+<h2 style="font-size:18px;color:#0f172a;margin:0 0 14px;border-bottom:2px solid #2563eb;padding-bottom:8px;">今日三个主题</h2>
+<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;margin-bottom:12px;">
+<div style="font-size:12px;color:#64748b;margin-bottom:6px;">主题 1</div>
+<div style="font-size:17px;font-weight:700;color:#0f172a;margin-bottom:8px;">LLM 推理与 KV 缓存压缩</div>
+<div style="font-size:14px;color:#475569;line-height:1.55;">围绕大语言模型长上下文推理中的 KV 缓存瓶颈，从预测性在线剪枝、频率引导深度共享、以及跨层残差分解三个角度探索无需重训的压缩方法，兼顾内存效率与任务保真度。</div>
+</div>
+<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;margin-bottom:12px;">
+<div style="font-size:12px;color:#64748b;margin-bottom:6px;">主题 2</div>
+<div style="font-size:17px;font-weight:700;color:#0f172a;margin-bottom:8px;">LLM 智能体可靠性与运行时诊断</div>
+<div style="font-size:14px;color:#475569;line-height:1.55;">针对多步 LLM 智能体在复杂任务中的失败预测、轨迹诊断与闭环修复问题，提出早期中止级联、关键转换图定位和智能体代码审查框架，提升智能体系统的可观测性与鲁棒性。</div>
+</div>
+<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;margin-bottom:12px;">
+<div style="font-size:12px;color:#64748b;margin-bottom:6px;">主题 3</div>
+<div style="font-size:17px;font-weight:700;color:#0f172a;margin-bottom:8px;">LLM 系统效率与记忆架构</div>
+<div style="font-size:14px;color:#475569;line-height:1.55;">从系统层优化 LLM 推理与智能体运行效率，涵盖低开销记忆系统、异步规划运行时、以及基于离线强化学习的执行控制，在吞吐、延迟与任务质量之间取得更优权衡。</div>
+</div>
+</section>
+<section style="margin-bottom:22px;">
+<h2 style="font-size:18px;color:#0f172a;margin:0 0 14px;border-bottom:2px solid #2563eb;padding-bottom:8px;">文献池（点击跳转当日论文详情）</h2>
+<table style='width:100%;border-collapse:collapse;font-size:13px;margin:16px 0;'><thead><tr style='background:#f3f4f6;'><th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>编号</th><th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>题目</th><th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>ID</th><th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>链接</th></tr></thead><tbody><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[1]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>FourTune: Towards Fully 4-Bit Efficient Post-Training for Diffusion Models</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05711</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05711' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[2]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Inject or Navigate? Token-Efficient Retrieval for LLM Analysis of Transactional Legal Documents</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05764</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05764' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[3]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Design-CP: Context Parallelism for Design of Protein Nanoparticles</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05439</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05439' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[4]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Beyond Static Evaluation: Building Simulation Environments for Scalable Agentic Reinforcement Learning</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05773</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05773' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[5]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Can Large Language Models Generate Observability-Aware Code?</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05785</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05785' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[6]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>x-Prediction Is All You Need:Training-Free Accelerated Generation via Endpoint Decodability</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.06114</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06114' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[7]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Layer 2 Coordinated Trusted Setup for Continuous CRS Generation</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05776</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05776' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[8]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>KVpop -- Key-Value Cache Compression with Predictive Online Pruning</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05061</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05061' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[9]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>EquiFiLM: Charge-Conditioned Equivariant Force Fields via Feature-wise Linear Modulation</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05559</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05559' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[10]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Spider 2.0-AIFunc: Extending Real-World Text-to-SQL to AI-Native SQL Workflows</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.06229</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06229' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[11]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Learning to Control LLM Agent Harnesses with Offline Reinforcement Learning</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05458</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05458' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[12]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>MatrixFSDP: communication-free matrix optimizers under ZeRO-3 parameter sharding</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05895</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05895' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[13]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Doomed from the Start: Early Abort of LLM Agent Episodes via a Recall-Controlled Probe Cascade</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.06503</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06503' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[14]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>FreqDepthKV: Frequency-Guided Depth Sharing for Robust KV Cache Compression in Long-Context LLM Inference</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.06519</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06519' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[15]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Empirical Minimal-Realisation Compression of Deep Neural Networks via Controllability-Observability Tests</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05457</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05457' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[16]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Memory in the Loop: In-Process Retrieval as ExtendedWorking Memory for Language Agents</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05690</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05690' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[17]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>SWE-Review: Closing the Loop on Issue Resolution with Agentic Code Review</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.06065</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06065' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[18]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>AgentTether: Graph-Guided Diagnosis and Runtime Intervention for Reliable LLM Agent Operation</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.06273</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06273' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[19]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>More Convincing, Not More Correct: Self-Play Reward Hacking of Reference-Free LLM Judges</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05904</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05904' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[20]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>DDB: Source-Level Interactive Debugging for Distributed Applications</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.06107</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06107' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[21]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>EvalLoop: A Methodology for Evaluation-Driven Iterative Improvement of Business AI Systems</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05638</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05638' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[22]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Akashic: A Low-Overhead LLM Inference Service with MemAttention</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05708</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05708' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[23]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>TypeGo: An OS Runtime for Embodied Agents</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05482</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05482' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[24]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>PatchOptic for Shared-State LLM Workflows with Projected Views and Verified Structured Updates</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05483</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05483' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[25]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>LogicHunter: Testing LLM Agent Frameworks with an Agentic Oracle</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.06195</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06195' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[26]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>DepthWeave-KV: Token-Adaptive Cross-Layer Residual Factorization for Long-Context KV Cache Compression</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.06523</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06523' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[27]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Mitigating Errors in LLM-Generated Web API Invocations via Retrieval-Augmented Generation and Constrained Decoding</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05936</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05936' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[28]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Differentially Private Natural Gradient Descent</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05866</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05866' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[29]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>DT-Guard: Intent-Driven Reasoning-Active Training for Reasoning-Free LLM Safety Guardrail</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.06326</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06326' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[30]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>StateFuse: Deterministic Conflict-Preserving Memory for Multi-Agent Systems</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.05844</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05844' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr></tbody></table>
+</section>
+<article class="digest-body" style="background:#fff;border-radius:12px;padding:24px 26px 32px;box-shadow:0 4px 24px rgba(15,23,42,0.06);">
+<style type="text/css">
+.digest-body h2 { font-size:18px; color:#111827; margin:26px 0 12px; padding-bottom:8px; border-bottom:2px solid #cbd5e1; font-weight:700; }
+.digest-body h3 { font-size:15px; color:#1f2937; margin:18px 0 10px; font-weight:600; }
+.digest-body h4 { font-size:14px; color:#374151; margin:14px 0 8px; font-weight:600; }
+.digest-body p { margin:10px 0; line-height:1.65; }
+.digest-body ul, .digest-body ol { margin:10px 0; padding-left:22px; }
+.digest-body li { margin:5px 0; }
+.digest-body table { border-collapse:collapse; width:100%; margin:16px 0; font-size:13px; }
+.digest-body th, .digest-body td { border:1px solid #e5e7eb; padding:10px 12px; vertical-align:top; }
+.digest-body th { background:#f3f4f6; font-weight:600; color:#111827; }
+.digest-body hr { border:none; border-top:1px solid #e5e7eb; margin:22px 0; }
+.digest-body blockquote { margin:12px 0; padding:10px 14px; border-left:4px solid #93c5fd; background:#f8fafc; color:#475569; }
+.digest-body a { color:#2563eb; }
+.digest-body code { font-size:13px; background:#f1f5f9; padding:2px 6px; border-radius:4px; }
+.digest-body pre { background:#1e293b; color:#e2e8f0; padding:14px; border-radius:8px; overflow-x:auto; font-size:13px; }
+.digest-body pre code { background:transparent; color:inherit; padding:0; }
+</style>
+<h2>当日文献池编号一览</h2>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题目</th>
+<th>arXiv ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05711">1</a></td>
+<td>FourTune: Towards Fully 4-Bit Efficient Post-Training for Diffusion Models</td>
+<td>2607.05711</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05764">2</a></td>
+<td>Inject or Navigate? Token-Efficient Retrieval for LLM Analysis of Transactional Legal Documents</td>
+<td>2607.05764</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05439">3</a></td>
+<td>Design-CP: Context Parallelism for Design of Protein Nanoparticles</td>
+<td>2607.05439</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05773">4</a></td>
+<td>Beyond Static Evaluation: Building Simulation Environments for Scalable Agentic Reinforcement Learning</td>
+<td>2607.05773</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05785">5</a></td>
+<td>Can Large Language Models Generate Observability-Aware Code?</td>
+<td>2607.05785</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06114">6</a></td>
+<td>x-Prediction Is All You Need: Training-Free Accelerated Generation via Endpoint Decodability</td>
+<td>2607.06114</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05776">7</a></td>
+<td>Layer 2 Coordinated Trusted Setup for Continuous CRS Generation</td>
+<td>2607.05776</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05061">8</a></td>
+<td>KVpop -- Key-Value Cache Compression with Predictive Online Pruning</td>
+<td>2607.05061</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05559">9</a></td>
+<td>EquiFiLM: Charge-Conditioned Equivariant Force Fields via Feature-wise Linear Modulation</td>
+<td>2607.05559</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06229">10</a></td>
+<td>Spider 2.0-AIFunc: Extending Real-World Text-to-SQL to AI-Native SQL Workflows</td>
+<td>2607.06229</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05458">11</a></td>
+<td>Learning to Control LLM Agent Harnesses with Offline Reinforcement Learning</td>
+<td>2607.05458</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05895">12</a></td>
+<td>MatrixFSDP: communication-free matrix optimizers under ZeRO-3 parameter sharding</td>
+<td>2607.05895</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06503">13</a></td>
+<td>Doomed from the Start: Early Abort of LLM Agent Episodes via a Recall-Controlled Probe Cascade</td>
+<td>2607.06503</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06519">14</a></td>
+<td>FreqDepthKV: Frequency-Guided Depth Sharing for Robust KV Cache Compression in Long-Context LLM Inference</td>
+<td>2607.06519</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05457">15</a></td>
+<td>Empirical Minimal-Realisation Compression of Deep Neural Networks via Controllability-Observability Tests</td>
+<td>2607.05457</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05690">16</a></td>
+<td>Memory in the Loop: In-Process Retrieval as Extended Working Memory for Language Agents</td>
+<td>2607.05690</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06065">17</a></td>
+<td>SWE-Review: Closing the Loop on Issue Resolution with Agentic Code Review</td>
+<td>2607.06065</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06273">18</a></td>
+<td>AgentTether: Graph-Guided Diagnosis and Runtime Intervention for Reliable LLM Agent Operation</td>
+<td>2607.06273</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05904">19</a></td>
+<td>More Convincing, Not More Correct: Self-Play Reward Hacking of Reference-Free LLM Judges</td>
+<td>2607.05904</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06107">20</a></td>
+<td>DDB: Source-Level Interactive Debugging for Distributed Applications</td>
+<td>2607.06107</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05638">21</a></td>
+<td>EvalLoop: A Methodology for Evaluation-Driven Iterative Improvement of Business AI Systems</td>
+<td>2607.05638</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05708">22</a></td>
+<td>Akashic: A Low-Overhead LLM Inference Service with MemAttention</td>
+<td>2607.05708</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05482">23</a></td>
+<td>TypeGo: An OS Runtime for Embodied Agents</td>
+<td>2607.05482</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05483">24</a></td>
+<td>PatchOptic for Shared-State LLM Workflows with Projected Views and Verified Structured Updates</td>
+<td>2607.05483</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06195">25</a></td>
+<td>LogicHunter: Testing LLM Agent Frameworks with an Agentic Oracle</td>
+<td>2607.06195</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06523">26</a></td>
+<td>DepthWeave-KV: Token-Adaptive Cross-Layer Residual Factorization for Long-Context KV Cache Compression</td>
+<td>2607.06523</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05936">27</a></td>
+<td>Mitigating Errors in LLM-Generated Web API Invocations via Retrieval-Augmented Generation and Constrained Decoding</td>
+<td>2607.05936</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05866">28</a></td>
+<td>Differentially Private Natural Gradient Descent</td>
+<td>2607.05866</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06326">29</a></td>
+<td>DT-Guard: Intent-Driven Reasoning-Active Training for Reasoning-Free LLM Safety Guardrail</td>
+<td>2607.06326</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05844">30</a></td>
+<td>StateFuse: Deterministic Conflict-Preserving Memory for Multi-Agent Systems</td>
+<td>2607.05844</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>三篇论文方向与六个创新点</h2>
+<h3>论文方向一：LLM 推理与 KV 缓存压缩</h3>
+<p><strong>拟定论文题目：</strong> 面向长上下文 LLM 推理的预测性在线剪枝与跨层残差分解协同压缩方法</p>
+<p><strong>论文核心问题：</strong> 如何在无需重训的前提下，通过预测性在线剪枝、频率引导深度共享与跨层残差分解的协同设计，在长上下文 LLM 推理中实现高压缩比与任务保真度的平衡。</p>
+<h4>创新点一：预测性在线剪枝与频率引导深度共享的协同压缩机制</h4>
+<p>大多数现有方法采用静态启发式或代理分数进行 KV 缓存逐出，难以追踪未来 token 的效用变化，导致压缩策略在相关性偏移时表现脆弱 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05061">8</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06519">14</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06523">26</a>。少数现有方法引入学习型逐出策略或频率引导的深度共享，但前者通常需要密集注意力图的计算开销，后者在跨层共享时对检索敏感 token 的保留不足 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05061">8</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06519">14</a>。为此，本文提出将预测性在线剪枝（KVpop 式未来注意力监督）与频率引导的深度共享（FreqDepthKV 式低/高频分解）进行协同集成，在剪枝阶段利用未来注意力目标训练逐出评分器，在共享阶段通过在线探针分配注意力头到共享深度或精确缓存模式，以在保持检索能力的同时实现更高压缩比。</p>
+<ul>
+<li><strong>创新类型：</strong> 方法设计创新 + 约束处理创新</li>
+<li><strong>创新性判断：</strong> 池内文献 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05061">8</a> 提出了预测性在线剪枝但未涉及跨层共享，<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06519">14</a> 提出了频率引导深度共享但未与在线剪枝结合，<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06523">26</a> 提出了 token 自适应跨层分解但未引入未来注意力监督。本文的协同机制填补了这三者之间的空白，属于方法层面的组合创新。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05061">8</a></td>
+<td>KVpop</td>
+<td>学习型 KV 逐出策略，通过未来注意力目标训练评分器</td>
+<td>支撑大多数现有方法（静态启发式）的局限</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06519">14</a></td>
+<td>FreqDepthKV</td>
+<td>频率引导的深度共享，在线探针分配注意力头模式</td>
+<td>支撑少数现有方法（学习型/共享策略）的进展</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06523">26</a></td>
+<td>DepthWeave-KV</td>
+<td>token 自适应跨层残差分解，校准自由在线误差追踪</td>
+<td>支撑少数现有方法（跨层分解）的进展</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06114">6</a></td>
+<td>x-Prediction Is All You Need</td>
+<td>基于端点可解码性的训练无关加速</td>
+<td>支撑现有不足（压缩与保真度平衡）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05457">15</a></td>
+<td>Empirical Minimal-Realisation Compression</td>
+<td>基于可控性-可观性测试的神经网络压缩</td>
+<td>支撑大多数现有方法（直接权重/神经元压缩）的局限</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05708">22</a></td>
+<td>Akashic</td>
+<td>低开销记忆系统，MemAttention 组织上下文</td>
+<td>支撑现有不足（长上下文压缩需求）</td>
+</tr>
+</tbody>
+</table>
+<h4>创新点二：token 自适应跨层残差分解与校准自由在线误差追踪</h4>
+<p>大多数现有方法对跨层 KV 状态施加统一压缩预算，忽略了不同 token 在检索和推理中的差异化重要性，导致关键证据被过度压缩 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06519">14</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06523">26</a>。少数现有方法引入 token 自适应路由或在线误差追踪，但通常需要校准数据集或重训基础模型，限制了部署灵活性 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06523">26</a>。为此，本文提出一种校准自由的在线误差追踪机制，利用注意力输出探针实时监测压缩引入的误差，并动态调整 token 特定的残差秩分配，在不依赖预校准数据的前提下实现 token 级别的自适应压缩。</p>
+<ul>
+<li><strong>创新类型：</strong> 问题建模创新 + 方法设计创新</li>
+<li><strong>创新性判断：</strong> 池内文献 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06523">26</a> 提出了 token 自适应跨层分解但依赖校准，<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06519">14</a> 的频率引导方法未实现 token 级别自适应。本文的校准自由在线追踪机制在部署灵活性上优于两者，属于方法层面的增量创新。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06519">14</a></td>
+<td>FreqDepthKV</td>
+<td>频率引导深度共享，统一压缩预算</td>
+<td>支撑大多数现有方法（统一预算）的局限</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06523">26</a></td>
+<td>DepthWeave-KV</td>
+<td>token 自适应跨层分解，校准依赖</td>
+<td>支撑少数现有方法（自适应分解）的进展</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05061">8</a></td>
+<td>KVpop</td>
+<td>预测性在线剪枝，未来注意力监督</td>
+<td>支撑少数现有方法（在线监督）的进展</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06114">6</a></td>
+<td>x-Prediction Is All You Need</td>
+<td>训练无关加速，端点可解码性</td>
+<td>支撑现有不足（校准依赖问题）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05457">15</a></td>
+<td>Empirical Minimal-Realisation Compression</td>
+<td>基于 Gramian 的神经网络压缩</td>
+<td>支撑大多数现有方法（离线压缩）的局限</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05708">22</a></td>
+<td>Akashic</td>
+<td>MemAttention 低开销记忆系统</td>
+<td>支撑现有不足（在线误差追踪需求）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>该论文两个创新点之间的关系：</strong></p>
+<p>创新点一解决“如何协同预测性剪枝与深度共享以实现高压缩比”，创新点二解决“如何在无需校准的前提下实现 token 级别的自适应压缩”。二者属于同一论文主题（KV 缓存压缩），但分别对应压缩策略的协同设计层面和在线自适应层面，不存在重复。</p>
+<p><strong>建议实验设计：</strong></p>
+<ul>
+<li><strong>对比方法：</strong> KVpop <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05061">8</a>、FreqDepthKV <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06519">14</a>、DepthWeave-KV <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06523">26</a>、H2O、StreamingLLM</li>
+<li><strong>实验数据或场景：</strong> LongBench、Needle-in-a-Haystack、代码生成（pass@1）、摘要（ROUGE-L）</li>
+<li><strong>评价指标：</strong> 压缩率、精确匹配（EM）、F1、ROUGE-L、pass@1、推理延迟</li>
+<li><strong>消融实验：</strong> 分离预测性剪枝与深度共享的贡献、不同 token 自适应策略对比、校准依赖 vs 校准自由</li>
+</ul>
+<hr />
+<h3>论文方向二：LLM 智能体可靠性与运行时诊断</h3>
+<p><strong>拟定论文题目：</strong> 面向多步 LLM 智能体的早期失败预测与关键转换图引导的运行时诊断修复方法</p>
+<p><strong>论文核心问题：</strong> 如何在多步 LLM 智能体任务中，通过早期内部表征探测预测失败、定位关键错误转换，并生成可执行的修复指导，提升智能体系统的可靠性与可观测性。</p>
+<h4>创新点三：基于内部表征的早期失败预测与召回控制级联中止</h4>
+<p>大多数现有方法依赖智能体的可观察行为（如中间输出、工具调用结果）来判断任务是否失败，但此时失败往往已不可逆转，且消耗了大量推理计算 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06503">13</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06273">18</a>。少数现有方法尝试从内部隐藏激活中预测失败，但缺乏对成功 episode 的召回率保证，导致过早中止的风险不可控 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06503">13</a>。为此，本文提出一种基于每轮内部探针的早期失败预测级联，通过分布自由校准门控和联合搜索每轮召回预算，确保成功 episode 以用户指定的全局召回率通过所有门控，从而在节省推理计算的同时避免误中止。</p>
+<ul>
+<li><strong>创新类型：</strong> 问题建模创新 + 方法设计创新</li>
+<li><strong>创新性判断：</strong> 池内文献 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06503">13</a> 提出了基于内部探针的早期中止但未提供全局召回率保证，<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06273">18</a> 提出了运行时诊断但未涉及早期预测。本文的召回控制级联机制在保证成功 episode 存活率方面具有明确优势，属于方法层面的增量创新。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06503">13</a></td>
+<td>Doomed from the Start</td>
+<td>基于内部探针的早期失败预测，无全局召回保证</td>
+<td>支撑大多数现有方法（行为级预测）的局限</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06273">18</a></td>
+<td>AgentTether</td>
+<td>运行时诊断，关键转换图定位</td>
+<td>支撑少数现有方法（运行时诊断）的进展</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06065">17</a></td>
+<td>SWE-Review</td>
+<td>智能体代码审查，闭环修复</td>
+<td>支撑少数现有方法（闭环修复）的进展</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05773">4</a></td>
+<td>AgenticAI-Supervisor</td>
+<td>RL Gym 环境，多维奖励塑形</td>
+<td>支撑大多数现有方法（静态评估）的局限</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05785">5</a></td>
+<td>Observability-Aware Code</td>
+<td>可观测性代码生成，故障信号评估</td>
+<td>支撑现有不足（可观测性缺失）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05638">21</a></td>
+<td>EvalLoop</td>
+<td>评估驱动迭代改进，维度指标分组</td>
+<td>支撑现有不足（诊断到行动桥梁）</td>
+</tr>
+</tbody>
+</table>
+<h4>创新点四：关键转换图引导的失败定位与行为范围修复指导</h4>
+<p>大多数现有方法在智能体失败后仅提供“成功/失败”二元反馈或盲重试，缺乏对失败原因的结构化定位和可执行的修复指导 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06273">18</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06065">17</a>。少数现有方法引入依赖感知的关键转换图来定位失败子轨迹，但生成的修复指导缺乏行为范围约束，容易导致过度修正或修复无效 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06273">18</a>。为此，本文提出一种结合离线正常行为模型与运行局部图检测器的失败定位方法，将定位到的失败原因转换为行为范围约束的修复指导，并通过跨迭代验证确保修复的有效性。</p>
+<ul>
+<li><strong>创新类型：</strong> 方法设计创新 + 约束处理创新</li>
+<li><strong>创新性判断：</strong> 池内文献 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06273">18</a> 提出了关键转换图定位但未约束修复行为范围，<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06065">17</a> 提出了智能体代码审查但未涉及运行时诊断。本文的行为范围约束修复指导在定位与修复之间建立了更精确的映射，属于方法层面的增量创新。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06273">18</a></td>
+<td>AgentTether</td>
+<td>关键转换图定位，无行为范围约束</td>
+<td>支撑大多数现有方法（二元反馈）的局限</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06065">17</a></td>
+<td>SWE-Review</td>
+<td>智能体代码审查，结构化反馈</td>
+<td>支撑少数现有方法（结构化修复）的进展</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06503">13</a></td>
+<td>Doomed from the Start</td>
+<td>早期失败预测，内部探针</td>
+<td>支撑少数现有方法（预测性诊断）的进展</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05773">4</a></td>
+<td>AgenticAI-Supervisor</td>
+<td>RL Gym 环境，高保真轨迹</td>
+<td>支撑大多数现有方法（静态评估）的局限</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05785">5</a></td>
+<td>Observability-Aware Code</td>
+<td>可观测性代码，故障信号</td>
+<td>支撑现有不足（诊断语义缺失）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05638">21</a></td>
+<td>EvalLoop</td>
+<td>评估驱动改进，失败模式分类</td>
+<td>支撑现有不足（诊断到行动桥梁）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>该论文两个创新点之间的关系：</strong></p>
+<p>创新点三解决“如何早期预测失败并保证成功 episode 存活”，创新点四解决“如何定位失败原因并生成可执行修复”。二者属于同一论文主题（智能体可靠性与诊断），但分别对应失败预测层面和失败诊断修复层面，不存在重复。</p>
+<p><strong>建议实验设计：</strong></p>
+<ul>
+<li><strong>对比方法：</strong> AgentTether <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06273">18</a>、SWE-Review <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06065">17</a>、Doomed from the Start <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06503">13</a>、盲重试、自我反思</li>
+<li><strong>实验数据或场景：</strong> TextCraft、SWE-Bench、WebArena</li>
+<li><strong>评价指标：</strong> 全局召回率、计算节省比例、修复成功率、定位准确率、平均修复轮次</li>
+<li><strong>消融实验：</strong> 内部探针 vs 行为探针、有/无召回控制、有/无行为范围约束</li>
+</ul>
+<hr />
+<h3>论文方向三：LLM 系统效率与记忆架构</h3>
+<p><strong>拟定论文题目：</strong> 面向 LLM 智能体的低开销进程内记忆系统与异步规划运行时协同优化方法</p>
+<p><strong>论文核心问题：</strong> 如何通过进程内记忆系统消除检索延迟瓶颈，并结合异步规划运行时与离线强化学习执行控制，在吞吐、延迟与任务质量之间取得更优权衡。</p>
+<h4>创新点五：基于进程内记忆系统的低开销扩展工作记忆架构</h4>
+<p>大多数现有方法将智能体的记忆存储在网络化数据库中，每次检索需要数十到数百毫秒，导致每步检索延迟膨胀高达 83 倍 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05690">16</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05708">22</a>。少数现有方法通过服务层调度或“记忆优先”设计来管理延迟，但本质上仍将记忆视为外部工具而非智能体认知的一部分 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05690">16</a>。为此，本文提出一种基于进程内存储的记忆系统，利用 ~100μs 的查询延迟将记忆从外部工具转变为智能体的扩展工作记忆，并通过硬件-软件协同设计将可能共同检索的块进行共置，减少检索碎片化和 I/O 开销。</p>
+<ul>
+<li><strong>创新类型：</strong> 问题建模创新 + 方法设计创新</li>
+<li><strong>创新性判断：</strong> 池内文献 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05690">16</a> 提出了进程内记忆的理论论证但未给出完整系统实现，<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05708">22</a> 提出了 MemAttention 但未完全消除网络延迟。本文的进程内记忆系统结合硬件-软件协同共置策略，在延迟消除和检索效率上具有明确优势，属于方法层面的增量创新。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05690">16</a></td>
+<td>Memory in the Loop</td>
+<td>进程内记忆理论论证，延迟分析</td>
+<td>支撑大多数现有方法（网络化存储）的局限</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05708">22</a></td>
+<td>Akashic</td>
+<td>MemAttention 低开销记忆系统</td>
+<td>支撑少数现有方法（低开销记忆）的进展</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05844">30</a></td>
+<td>StateFuse</td>
+<td>冲突感知记忆合约，CRDT 合并</td>
+<td>支撑少数现有方法（记忆一致性）的进展</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05458">11</a></td>
+<td>Learning to Control LLM Agent Harnesses</td>
+<td>离线强化学习控制执行层</td>
+<td>支撑大多数现有方法（固定执行层）的局限</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05482">23</a></td>
+<td>TypeGo</td>
+<td>OS 运行时，异步规划与执行重叠</td>
+<td>支撑现有不足（延迟隐藏需求）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05483">24</a></td>
+<td>PatchOptic</td>
+<td>共享状态工作流，投影视图与验证更新</td>
+<td>支撑现有不足（状态管理需求）</td>
+</tr>
+</tbody>
+</table>
+<h4>创新点六：异步规划运行时与离线强化学习执行控制的协同优化</h4>
+<p>大多数现有方法将 LLM 规划置于执行的关键路径上，导致推理延迟直接阻塞物理动作，难以满足实时控制需求 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05482">23</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05458">11</a>。少数现有方法引入异步规划或离线强化学习控制，但前者缺乏对执行过程的优先级管理，后者未与规划-执行重叠机制结合 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05482">23</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05458">11</a>。为此，本文提出一种将异步规划循环（多时间尺度、与执行重叠）与离线强化学习执行控制器（基于优势加权回归训练）协同集成的运行时架构，通过推测性技能流式传输隐藏 LLM 延迟，并利用 Harness MDP 形式化控制器的执行动作选择。</p>
+<ul>
+<li><strong>创新类型：</strong> 方法设计创新 + 系统框架创新</li>
+<li><strong>创新性判断：</strong> 池内文献 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05482">23</a> 提出了异步规划运行时但未引入学习型执行控制，<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05458">11</a> 提出了离线强化学习执行控制但未与异步规划结合。本文的协同集成在系统架构层面具有创新性，属于系统框架层面的组合创新。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05482">23</a></td>
+<td>TypeGo</td>
+<td>异步规划运行时，多时间尺度循环</td>
+<td>支撑大多数现有方法（同步规划）的局限</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05458">11</a></td>
+<td>Learning to Control LLM Agent Harnesses</td>
+<td>离线强化学习执行控制，Harness MDP</td>
+<td>支撑少数现有方法（学习型控制）的进展</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05690">16</a></td>
+<td>Memory in the Loop</td>
+<td>进程内记忆，延迟消除</td>
+<td>支撑少数现有方法（延迟优化）的进展</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05708">22</a></td>
+<td>Akashic</td>
+<td>MemAttention 低开销记忆系统</td>
+<td>支撑大多数现有方法（高开销记忆）的局限</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05844">30</a></td>
+<td>StateFuse</td>
+<td>冲突感知记忆，确定性合并</td>
+<td>支撑现有不足（状态一致性需求）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05483">24</a></td>
+<td>PatchOptic</td>
+<td>共享状态工作流，投影视图</td>
+<td>支撑现有不足（状态管理需求）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>该论文两个创新点之间的关系：</strong></p>
+<p>创新点五解决“如何消除记忆检索延迟瓶颈”，创新点六解决“如何通过异步规划与学习型控制协同优化整体效率”。二者属于同一论文主题（系统效率与记忆架构），但分别对应记忆系统层面和运行时控制层面，不存在重复。</p>
+<p><strong>建议实验设计：</strong></p>
+<ul>
+<li><strong>对比方法：</strong> TypeGo <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05482">23</a>、Akashic <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05708">22</a>、Memory in the Loop 基线 <a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05690">16</a>、LangChain、CrewAI</li>
+<li><strong>实验数据或场景：</strong> 客服智能体、具身智能体（Unitree Go2）、多工具工作流</li>
+<li><strong>评价指标：</strong> 端到端延迟、吞吐量、任务成功率、记忆检索延迟、CPU/GPU 利用率</li>
+<li><strong>消融实验：</strong> 进程内 vs 网络化存储、异步规划 vs 同步规划、有/无离线强化学习控制</li>
+</ul>
+<hr />
+<h2>三篇论文方向去重矩阵</h2>
+<table>
+<thead>
+<tr>
+<th>论文方向</th>
+<th>拟定论文题目</th>
+<th>核心问题</th>
+<th>两个创新点</th>
+<th>核心方法</th>
+<th>主要实验</th>
+<th>与其他论文方向的区别</th>
+<th>重复风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>论文一：LLM 推理与 KV 缓存压缩</td>
+<td>面向长上下文 LLM 推理的预测性在线剪枝与跨层残差分解协同压缩方法</td>
+<td>KV 缓存压缩中的高压缩比与保真度平衡</td>
+<td>预测性在线剪枝与频率引导深度共享协同；token 自适应跨层分解与校准自由在线误差追踪</td>
+<td>未来注意力监督训练、频率分解、在线探针、校准自由误差追踪</td>
+<td>LongBench、Needle-in-a-Haystack、代码生成</td>
+<td>聚焦推理阶段的 KV 缓存内存优化，不涉及智能体诊断或运行时架构</td>
+<td>低</td>
+</tr>
+<tr>
+<td>论文二：LLM 智能体可靠性与运行时诊断</td>
+<td>面向多步 LLM 智能体的早期失败预测与关键转换图引导的运行时诊断修复方法</td>
+<td>多步智能体任务中的失败预测、定位与修复</td>
+<td>内部表征早期失败预测与召回控制级联；关键转换图定位与行为范围约束修复</td>
+<td>内部探针、分布自由校准、依赖感知图检测、离线正常行为模型</td>
+<td>TextCraft、SWE-Bench、WebArena</td>
+<td>聚焦智能体运行时的可靠性与可观测性，不涉及 KV 缓存或系统效率</td>
+<td>低</td>
+</tr>
+<tr>
+<td>论文三：LLM 系统效率与记忆架构</td>
+<td>面向 LLM 智能体的低开销进程内记忆系统与异步规划运行时协同优化方法</td>
+<td>智能体系统中的延迟消除与效率-质量权衡</td>
+<td>进程内记忆系统与硬件-软件协同共置；异步规划运行时与离线强化学习执行控制协同</td>
+<td>进程内存储、硬件-软件共置、异步循环、优势加权回归、推测性流式传输</td>
+<td>客服智能体、具身智能体、多工具工作流</td>
+<td>聚焦系统层面的效率优化与架构设计，不涉及 KV 缓存或诊断修复</td>
+<td>低</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>每篇论文内部创新点去重检查</h2>
+<table>
+<thead>
+<tr>
+<th>论文方向</th>
+<th>创新点一</th>
+<th>创新点二</th>
+<th>是否属于同一论文主题</th>
+<th>是否技术层面不同</th>
+<th>是否存在重复</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>论文一</td>
+<td>预测性剪枝与深度共享协同</td>
+<td>token 自适应跨层分解与在线误差追踪</td>
+<td>是（KV 缓存压缩）</td>
+<td>是（策略协同 vs 在线自适应）</td>
+<td>否</td>
+<td>可保留</td>
+</tr>
+<tr>
+<td>论文二</td>
+<td>早期失败预测与召回控制</td>
+<td>关键转换图定位与行为范围修复</td>
+<td>是（智能体可靠性与诊断）</td>
+<td>是（预测 vs 诊断修复）</td>
+<td>否</td>
+<td>可保留</td>
+</tr>
+<tr>
+<td>论文三</td>
+<td>进程内记忆系统与硬件-软件共置</td>
+<td>异步规划运行时与离线强化学习控制协同</td>
+<td>是（系统效率与记忆架构）</td>
+<td>是（记忆系统 vs 运行时控制）</td>
+<td>否</td>
+<td>可保留</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>参考文献总表（仅池内文献）</h2>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05711">1</a> FourTune: Towards Fully 4-Bit Efficient Post-Training for Diffusion Models. arXiv:2607.05711, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05764">2</a> Inject or Navigate? Token-Efficient Retrieval for LLM Analysis of Transactional Legal Documents. arXiv:2607.05764, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05439">3</a> Design-CP: Context Parallelism for Design of Protein Nanoparticles. arXiv:2607.05439, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05773">4</a> Beyond Static Evaluation: Building Simulation Environments for Scalable Agentic Reinforcement Learning. arXiv:2607.05773, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05785">5</a> Can Large Language Models Generate Observability-Aware Code? arXiv:2607.05785, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06114">6</a> x-Prediction Is All You Need: Training-Free Accelerated Generation via Endpoint Decodability. arXiv:2607.06114, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05776">7</a> Layer 2 Coordinated Trusted Setup for Continuous CRS Generation. arXiv:2607.05776, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05061">8</a> KVpop -- Key-Value Cache Compression with Predictive Online Pruning. arXiv:2607.05061, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05559">9</a> EquiFiLM: Charge-Conditioned Equivariant Force Fields via Feature-wise Linear Modulation. arXiv:2607.05559, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06229">10</a> Spider 2.0-AIFunc: Extending Real-World Text-to-SQL to AI-Native SQL Workflows. arXiv:2607.06229, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05458">11</a> Learning to Control LLM Agent Harnesses with Offline Reinforcement Learning. arXiv:2607.05458, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05895">12</a> MatrixFSDP: communication-free matrix optimizers under ZeRO-3 parameter sharding. arXiv:2607.05895, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06503">13</a> Doomed from the Start: Early Abort of LLM Agent Episodes via a Recall-Controlled Probe Cascade. arXiv:2607.06503, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06519">14</a> FreqDepthKV: Frequency-Guided Depth Sharing for Robust KV Cache Compression in Long-Context LLM Inference. arXiv:2607.06519, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05457">15</a> Empirical Minimal-Realisation Compression of Deep Neural Networks via Controllability-Observability Tests. arXiv:2607.05457, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05690">16</a> Memory in the Loop: In-Process Retrieval as Extended Working Memory for Language Agents. arXiv:2607.05690, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06065">17</a> SWE-Review: Closing the Loop on Issue Resolution with Agentic Code Review. arXiv:2607.06065, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06273">18</a> AgentTether: Graph-Guided Diagnosis and Runtime Intervention for Reliable LLM Agent Operation. arXiv:2607.06273, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05904">19</a> More Convincing, Not More Correct: Self-Play Reward Hacking of Reference-Free LLM Judges. arXiv:2607.05904, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06107">20</a> DDB: Source-Level Interactive Debugging for Distributed Applications. arXiv:2607.06107, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05638">21</a> EvalLoop: A Methodology for Evaluation-Driven Iterative Improvement of Business AI Systems. arXiv:2607.05638, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05708">22</a> Akashic: A Low-Overhead LLM Inference Service with MemAttention. arXiv:2607.05708, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05482">23</a> TypeGo: An OS Runtime for Embodied Agents. arXiv:2607.05482, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05483">24</a> PatchOptic for Shared-State LLM Workflows with Projected Views and Verified Structured Updates. arXiv:2607.05483, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06195">25</a> LogicHunter: Testing LLM Agent Frameworks with an Agentic Oracle. arXiv:2607.06195, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06523">26</a> DepthWeave-KV: Token-Adaptive Cross-Layer Residual Factorization for Long-Context KV Cache Compression. arXiv:2607.06523, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05936">27</a> Mitigating Errors in LLM-Generated Web API Invocations via Retrieval-Augmented Generation and Constrained Decoding. arXiv:2607.05936, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05866">28</a> Differentially Private Natural Gradient Descent. arXiv:2607.05866, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.06326">29</a> DT-Guard: Intent-Driven Reasoning-Active Training for Reasoning-Free LLM Safety Guardrail. arXiv:2607.06326, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-08&amp;paperId=2607.05844">30</a> StateFuse: Deterministic Conflict-Preserving Memory for Multi-Agent Systems. arXiv:2607.05844, 2026.</p>
+<hr />
+<h2>自检结果</h2>
+<ol>
+<li>是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：<strong>是</strong></li>
+<li>是否避免将一篇论文拆成六个创新点：<strong>是</strong></li>
+<li>是否避免生成六篇论文各一个创新点：<strong>是</strong></li>
+<li>每篇论文内部两个创新点是否属于同一论文主题：<strong>是</strong></li>
+<li>每篇论文内部两个创新点是否互补而不重复：<strong>是</strong></li>
+<li>三篇论文之间是否研究问题不同：<strong>是</strong>（KV 缓存压缩 vs 智能体诊断 vs 系统效率）</li>
+<li>三篇论文之间是否核心方法不同：<strong>是</strong>（预测性剪枝/分解 vs 内部探针/图检测 vs 进程内存储/异步规划）</li>
+<li>三篇论文之间是否实验验证重点不同：<strong>是</strong>（压缩率/保真度 vs 召回率/修复成功率 vs 延迟/吞吐量）</li>
+<li>每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：<strong>是</strong></li>
+<li>每个创新点是否至少引用 3 篇池内文献：<strong>是</strong>（每个创新点 6 篇）</li>
+<li>是否说明每篇文献的支撑作用：<strong>是</strong></li>
+<li>是否避免“首次提出”“填补空白”等绝对化表述：<strong>是</strong></li>
+<li>是否建立三篇论文方向去重矩阵：<strong>是</strong></li>
+<li>是否建立每篇论文内部创新点去重检查表：<strong>是</strong></li>
+</ol>
+<p style="margin-top:28px;padding-top:16px;border-top:1px solid #e5e7eb;font-size:12px;color:#94a3b8;">内容由 AI 生成，请仔细甄别。</p>
+</article>
+</div>
+</body>
+</html>
