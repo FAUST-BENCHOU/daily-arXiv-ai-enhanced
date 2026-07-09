@@ -1,0 +1,289 @@
+# 每日硬凑师兄要求的创新点 2026-07-09
+
+## 今日三个主题（结构化）
+1. **LLM推理加速与投机解码优化** — 围绕投机解码、KV缓存压缩与长上下文推理效率，探索轻量级草稿模型、分阶段缓存架构与并行验证机制，以降低推理延迟与显存开销。
+2. **智能体系统效率与可靠性保障** — 聚焦LLM智能体在工具调用、轨迹优化与生产部署中的成本与安全挑战，通过确定性门控、渐进式结晶化与结构化轨迹分析提升可复现性与执行效率。
+3. **分布式训练与边缘推理的资源弹性调度** — 针对大模型预训练通信瓶颈与边缘设备资源异构性，研究几何感知梯度压缩、多设备弹性推理编排与模态异构联邦学习中的自适应资源分配。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|:---:|:---|:---:|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06623) | LLM-Guided Task-Semantic Field Factorization for Industrial Process Forecasting | 2607.06623 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06766) | Deployment Risk Assessment Using Diff-Aware Features: A Case Study at Prime Video | 2607.06766 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06651) | Entropy-Guided Tensor Compression for Multimodal Federated Learning on Edge Devices | 2607.06651 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06906) | The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI | 2607.06906 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06868) | Seekable OCI: Lazy-Loading Container Images via Range-Request Indexing | 2607.06868 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07321) | From Atomic Actions to Standard Operating Procedures: Iterative Tool Optimization for Self-Evolving LLM Agents | 2607.07321 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07508) | Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning | 2607.07508 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07026) | Constrained Decoding for Diffusion Language Models via Efficient Inference over Finite Automata | 2607.07026 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07409) | DeLS-Spec: Decoupled Long-Short Contexts for Parallel Speculative Drafting | 2607.07409 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06924) | Intrinsic-Noise Consolidation: A Doob-Barrier-Conditioned Diffusion Turns Analog Device Noise into a Continual-Learning Resource | 2607.06924 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07548) | Think Big, Search Small: Where Capacity Matters in Hierarchical Search Agents? | 2607.07548 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07702) | From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization | 2607.07702 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07386) | Sparse Delta Memory: Scaling the State of Linear RNNs through Sparsity | 2607.07386 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06763) | Trees from Marginals: Autoregressive drafting with factorized priors | 2607.06763 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06839) | LEMUR 2: Unlocking Neural Network Diversity for AI | 2607.06839 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07388) | TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models | 2607.07388 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07052) | Progressive Crystallization: Turning Agent Exploration into Deterministic, Lower-Cost Workflows in Production | 2607.07052 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07405) | Reason Less, Verify More: Deterministic Gates Recover a Silent Policy-Violation Failure Mode in Tool-Using LLM Agents | 2607.07405 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06624) | AgentLens: Production-Assessed Trajectory Reviews for Coding Agent Evaluation | 2607.06624 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07144) | Fractal KV-Cache Archives: Lossless Symbolic Storage with In-Place Retrieval for Long-Context LLM Inference | 2607.07144 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06601) | TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation | 2607.06601 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06641) | Healthier LLMs: Retrieval-Augmented Generation for Public Health Question Answering | 2607.06641 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07565) | Collaborative Synthetic Data Generation for Knowledge Transfer in Federated Learning | 2607.07565 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07706) | The Key to Going Linear: Analysis-Driven Transformer Linearization | 2607.07706 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07682) | Neural Operator-enabled Topology-informed Evolutionary Strategy for PDE-Constrained Optimization | 2607.07682 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07072) | An Hybrid Quantum-Classical Diffusion Model for Image Generation | 2607.07072 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07494) | GIFT: Geometry-Informed Low-precision Gradient Communication for LLM Pretraining | 2607.07494 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07046) | Voltron: Enabling Elastic Multi-Device Execution of LLM Inference for Empowered Edge Intelligence | 2607.07046 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06974) | MILES: Modular Instruction Memory with Learnable Selection for Self-Improving LLM Reasoning | 2607.06974 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07368) | Multi-Agent AI Control: Distributed Attacks Hamper Per-Instance Monitors | 2607.07368 |
+
+---
+
+## 三篇论文方向与六个创新点
+
+### 论文方向一：LLM推理加速与投机解码优化
+
+**拟定论文题目：** 面向长上下文推理的轻量级自回归草稿模型与分阶段KV缓存架构
+
+**论文核心问题：** 如何在不牺牲生成质量的前提下，通过投机解码与KV缓存压缩的双重协同，显著降低长上下文LLM推理的延迟与显存开销。
+
+#### 创新点一：基于因子化先验与轻量级自回归适配器的并行草稿生成
+
+大多数现有投机解码方法采用独立假设的因子化草稿模型并行预测多个未来token，虽然效率高，但随着投机预算增加，其接受率急剧下降，限制了加速效果[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07409)[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06763)[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07706)。少数现有方法如Domino和DSpark尝试在块并行草稿中引入因果依赖，但需要从头训练草稿模型，灵活性差且训练成本高[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07409)[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06763)。为此，本文提出一种解耦长短上下文的轻量级自回归适配器，它固定预训练的块并行草稿模型作为长上下文专家，仅训练一个极小的局部头作为短上下文专家，通过组合长上下文与短上下文logits来构建提案树，在不进行联合训练的情况下恢复token间的条件依赖，从而在保持高并行度的同时提升接受率。
+
+- **创新类型：** 方法设计创新
+- **创新性判断：** 该创新点针对投机解码中并行性与条件依赖的矛盾，提出了一种无需从头训练、仅需轻量级适配器即可恢复因果依赖的解决方案，与现有方法有本质区别。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07409) | DeLS-Spec: Decoupled Long-Short Contexts for Parallel Speculative Drafting | 提出解耦长短上下文的投机解码方法，固定DFlash模型为长上下文专家，引入轻量级局部头作为短上下文专家 | 支撑少数现有方法（解耦长短上下文） |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06763) | Trees from Marginals: Autoregressive drafting with factorized priors | 提出Weaver，从因子化草稿模型的Top-K边际中构建提案树，恢复条件依赖 | 支撑少数现有方法（提案树构建） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07706) | The Key to Going Linear: Analysis-Driven Transformer Linearization | 分析因果自注意力的二次成本瓶颈，提出线性化方法 | 支撑大多数现有方法（关注注意力计算成本） |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07026) | Constrained Decoding for Diffusion Language Models via Efficient Inference over Finite Automata | 提出扩散语言模型的约束解码算法 | 支撑大多数现有方法（并行生成范式） |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07386) | Sparse Delta Memory: Scaling the State of Linear RNNs through Sparsity | 通过稀疏寻址扩展线性RNN的状态容量 | 支撑大多数现有方法（状态扩展） |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07144) | Fractal KV-Cache Archives: Lossless Symbolic Storage with In-Place Retrieval for Long-Context LLM Inference | 提出分形KV缓存归档，支持无损符号存储 | 支撑现有不足（长上下文存储开销） |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07388) | TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models | 提出免训练的Engram记忆系统，使用SSD分层存储 | 支撑现有不足（外部记忆延迟） |
+
+#### 创新点二：面向长上下文推理的分阶段KV缓存压缩与归档架构
+
+大多数现有KV缓存压缩方法通过量化、驱逐或卸载来减少内存占用，但通常对缓存进行统一处理，忽略了不同注意力层和不同token位置对精度的非均匀敏感度[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07144)[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06601)[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07706)。少数现有方法如TriRoute尝试联合路由注意力模式、专家选择和缓存位宽，但控制器训练复杂且未充分利用缓存归档的存储层能力[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06601)。为此，本文提出一种分阶段KV缓存架构：保留少量精确窗口（注意力汇聚点+近期token），对历史缓存进行分形迭代映射编码，实现无损符号归档，支持O(1)随机访问和O(1)均摊追加，同时结合层感知的量化位宽分配，在保持生成质量的前提下大幅降低长上下文推理的显存开销。
+
+- **创新类型：** 系统架构创新 + 存储优化创新
+- **创新性判断：** 该创新点将KV缓存压缩从单一的量化或驱逐策略提升为分阶段、分层的归档架构，利用分形编码实现无损存储与高效访问，与现有方法有显著差异。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07144) | Fractal KV-Cache Archives: Lossless Symbolic Storage with In-Place Retrieval for Long-Context LLM Inference | 提出分形KV缓存归档，支持无损符号存储和O(1)随机访问 | 支撑少数现有方法（归档式缓存） |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06601) | TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation | 提出联合路由注意力、专家和缓存位宽的控制器 | 支撑少数现有方法（联合分配） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07706) | The Key to Going Linear: Analysis-Driven Transformer Linearization | 分析注意力线性化，引入sink tokens和固定预算缓存路由 | 支撑大多数现有方法（缓存路由） |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07386) | Sparse Delta Memory: Scaling the State of Linear RNNs through Sparsity | 通过稀疏寻址扩展线性RNN状态容量 | 支撑大多数现有方法（状态扩展） |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07388) | TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models | 使用GPU-DRAM-SSD分层存储记忆表 | 支撑大多数现有方法（分层存储） |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07409) | DeLS-Spec: Decoupled Long-Short Contexts for Parallel Speculative Drafting | 解耦长短上下文，区分不同阶段的推理需求 | 支撑现有不足（阶段差异） |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06763) | Trees from Marginals: Autoregressive drafting with factorized priors | 通过提案树恢复条件依赖 | 支撑现有不足（并行生成中的依赖问题） |
+
+**该论文两个创新点之间的关系：**
+
+创新点一解决“如何高效生成多个候选token”的问题（投机解码的草稿生成），创新点二解决“如何高效存储和访问长上下文历史信息”的问题（KV缓存压缩与归档）。二者属于同一篇论文主题——长上下文LLM推理加速，但分别对应生成阶段和存储阶段的不同技术层面，逻辑上形成递进：高效的草稿生成需要高效的缓存访问支持，而高效的缓存架构也需要与生成策略协同设计。不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 标准自回归解码、DFlash、Domino、TriRoute、Fractal KV-Cache
+- **实验数据或场景：** 长上下文基准（如LongBench、RULER）、多跳QA任务
+- **评价指标：** 加速比、接受率、显存占用、生成质量（准确率/困惑度）
+- **消融实验：** 局部头大小的影响、精确窗口大小的影响、分形编码与量化编码的对比
+
+---
+
+### 论文方向二：智能体系统效率与可靠性保障
+
+**拟定论文题目：** 面向生产环境的LLM智能体确定性门控与渐进式结晶化工作流优化
+
+**论文核心问题：** 如何在保证任务完成质量的前提下，通过确定性门控和渐进式工作流结晶化，显著降低LLM智能体在生产部署中的推理成本、提升可复现性与安全性。
+
+#### 创新点三：基于确定性预执行门控的策略违规检测与恢复机制
+
+大多数现有工具使用LLM智能体在策略宽松的环境中执行工具调用，即使状态转换被域策略禁止，工具也可能执行格式正确的调用，导致静默错误状态（如错误取消预订、修改乘客信息），且智能体的自我报告无法暴露此类失败[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07405)[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07368)。少数现有方法引入AI控制技术来监控单智能体轨迹，但在多智能体分布式攻击场景下，每个智能体的监控器捕获攻击者的概率会因碎片化效应而降低[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07368)。为此，本文提出一组轻量级的确定性、只读预执行门控，在工具调用执行前检查提议的调用和当前状态，仅当状态转换符合域策略时才允许写入操作，从而在不依赖LLM自我反思的情况下消除静默策略违规失败模式。
+
+- **创新类型：** 方法设计创新 + 安全约束创新
+- **创新性判断：** 该创新点针对LLM智能体策略违规的静默失败模式，提出了一种轻量级、确定性的预执行门控机制，与现有依赖LLM自我反思或后验监控的方法有本质区别。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07405) | Reason Less, Verify More: Deterministic Gates Recover a Silent Policy-Violation Failure Mode in Tool-Using LLM Agents | 提出确定性预执行门控，检测并阻止策略违规的工具调用 | 支撑少数现有方法（确定性门控） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07368) | Multi-Agent AI Control: Distributed Attacks Hamper Per-Instance Monitors | 研究多智能体分布式攻击下的监控碎片化效应 | 支撑大多数现有方法（单智能体监控） |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07052) | Progressive Crystallization: Turning Agent Exploration into Deterministic, Lower-Cost Workflows in Production | 提出渐进式结晶化，将智能体行为转化为确定性工作流 | 支撑大多数现有方法（确定性转化） |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07321) | From Atomic Actions to Standard Operating Procedures: Iterative Tool Optimization for Self-Evolving LLM Agents | 提出EvoSOP，将原子动作合成为可复用的标准操作程序 | 支撑大多数现有方法（工具优化） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07702) | From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization | 提出STRACE，进行结构轨迹分析和因果提取 | 支撑现有不足（轨迹分析中的噪声问题） |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06624) | AgentLens: Production-Assessed Trajectory Reviews for Coding Agent Evaluation | 提出AgentLens基准，评估智能体完整执行轨迹 | 支撑现有不足（轨迹级评估） |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06906) | The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI | 研究编排层设计对智能体token经济的影响 | 支撑大多数现有方法（编排设计） |
+
+#### 创新点四：基于执行轨迹证据的渐进式工作流结晶化与降本机制
+
+大多数现有LLM智能体在每次执行时都进行完整的推理，即使对于已解决过的相同问题也是如此，导致智能体成为永久性成本中心[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07052)[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06906)。少数现有方法如渐进式结晶化尝试将经过验证的智能体行为转化为确定性工作流，但转化过程缺乏对执行轨迹中因果结构的深入分析，可能导致低价值失败模式的过拟合[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07052)[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07702)。为此，本文提出一种结合结构轨迹分析的渐进式结晶化框架：在批次层面通过失败模式挖掘过滤冗余轨迹并保留代表性失败案例，在单轨迹层面通过因果提取识别关键步骤，并基于重复验证的证据将智能体行为从完全自主执行逐步提升为混合执行和完全确定性执行，同时支持在回归时自动降级，从而在保证安全性和可审计性的前提下大幅降低推理成本。
+
+- **创新类型：** 系统框架创新 + 在线反馈机制创新
+- **创新性判断：** 该创新点将结构轨迹分析与渐进式结晶化相结合，通过因果证据驱动的提升/降级机制实现智能体工作流的动态优化，与现有静态转化方法有显著差异。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07052) | Progressive Crystallization: Turning Agent Exploration into Deterministic, Lower-Cost Workflows in Production | 提出渐进式结晶化，将智能体探索转化为确定性工作流 | 支撑少数现有方法（结晶化） |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07702) | From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization | 提出STRACE，进行结构轨迹分析和因果提取 | 支撑少数现有方法（轨迹分析） |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06906) | The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI | 研究编排层设计对智能体token经济的影响 | 支撑大多数现有方法（成本分析） |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07321) | From Atomic Actions to Standard Operating Procedures: Iterative Tool Optimization for Self-Evolving LLM Agents | 提出EvoSOP，将原子动作合成为可复用的标准操作程序 | 支撑大多数现有方法（工具合成） |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07405) | Reason Less, Verify More: Deterministic Gates Recover a Silent Policy-Violation Failure Mode in Tool-Using LLM Agents | 提出确定性预执行门控 | 支撑大多数现有方法（确定性验证） |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06624) | AgentLens: Production-Assessed Trajectory Reviews for Coding Agent Evaluation | 提出AgentLens基准，评估智能体完整执行轨迹 | 支撑现有不足（轨迹级评估） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07368) | Multi-Agent AI Control: Distributed Attacks Hamper Per-Instance Monitors | 研究多智能体分布式攻击下的监控碎片化效应 | 支撑现有不足（多智能体安全） |
+
+**该论文两个创新点之间的关系：**
+
+创新点三解决“如何防止智能体在执行过程中产生静默策略违规”的问题（安全约束），创新点四解决“如何将已验证的智能体行为转化为低成本、高可靠性的确定性工作流”的问题（效率优化）。二者属于同一篇论文主题——生产环境LLM智能体的效率与可靠性保障，但分别对应执行前安全约束和执行后工作流优化两个不同技术层面，逻辑上形成递进：先通过门控确保执行安全，再通过结晶化降低后续执行成本。不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 标准LLM智能体、EvoSOP、STRACE、渐进式结晶化（原始版本）
+- **实验数据或场景：** τ²-bench航空领域、IT运维AIOps系统、代码智能体任务
+- **评价指标：** 任务成功率、策略违规率、每任务推理成本、可复现性（确定性执行比例）
+- **消融实验：** 门控数量与类型的影响、结晶化阈值的影响、因果提取与简单频率统计的对比
+
+---
+
+### 论文方向三：分布式训练与边缘推理的资源弹性调度
+
+**拟定论文题目：** 面向大模型预训练与边缘推理的几何感知梯度压缩与弹性设备编排
+
+**论文核心问题：** 如何通过几何感知的梯度压缩降低大模型预训练的通信瓶颈，同时通过弹性多设备编排实现边缘设备上的大模型推理。
+
+#### 创新点五：基于几何感知坐标变换的低精度梯度通信方法
+
+大多数现有大模型预训练中的梯度压缩方法在欧几里得空间中对梯度进行线性或非线性量化，由于高度各向异性的梯度在量化时会产生方向依赖的失真，导致模型性能下降[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07494)[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06651)。少数现有方法如GIFT尝试通过几何感知的坐标变换将梯度映射到近各向同性空间后再量化，但低秩近似和选择性应用策略的优化空间尚未充分探索[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07494)。为此，本文提出一种改进的几何感知梯度压缩方法，在GIFT的基础上引入熵引导的自适应秩选择机制，根据每层梯度的谱熵动态调整低秩近似的秩，并在通信前对变换后的梯度进行非均匀量化，从而在保持低精度通信优势的同时进一步减少方向依赖的失真。
+
+- **创新类型：** 特征表示创新 + 压缩方法创新
+- **创新性判断：** 该创新点将几何感知坐标变换与熵引导的自适应秩选择相结合，解决了各向异性梯度在低精度通信中的方向依赖失真问题，与现有均匀量化方法有本质区别。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07494) | GIFT: Geometry-Informed Low-precision Gradient Communication for LLM Pretraining | 提出几何感知的梯度缩放方法，在近各向同性空间中进行低精度通信 | 支撑少数现有方法（几何感知） |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06651) | MESH-FL: Entropy-Guided Tensor Compression for Multimodal Federated Learning on Edge Devices | 提出熵引导的MPS更新压缩框架，根据谱熵分配压缩秩 | 支撑少数现有方法（熵引导压缩） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07565) | Collaborative Synthetic Data Generation for Knowledge Transfer in Federated Learning | 提出FedKT-CSD，使用预训练自编码器进行知识迁移 | 支撑大多数现有方法（联邦学习压缩） |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07046) | Voltron: Enabling Elastic Multi-Device Execution of LLM Inference for Empowered Edge Intelligence | 提出弹性多设备LLM推理框架 | 支撑大多数现有方法（边缘推理） |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06868) | Seekable OCI: Lazy-Loading Container Images via Range-Request Indexing | 提出延迟加载容器镜像架构 | 支撑大多数现有方法（延迟加载） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06839) | LEMUR 2: Unlocking Neural Network Diversity for AI | 提出大规模NAS基准，支持部署感知评估 | 支撑现有不足（部署感知） |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07682) | Neural Operator-enabled Topology-informed Evolutionary Strategy for PDE-Constrained Optimization | 提出神经算子启发的拓扑感知进化策略 | 支撑现有不足（高维优化） |
+
+#### 创新点六：面向异构边缘设备的弹性多设备LLM推理编排框架
+
+大多数现有LLM推理服务在集中式数据中心执行，导致端用户面临响应延迟增加和隐私泄露风险[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07046)[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06868)。少数现有方法如Voltron尝试利用多个用户端设备进行弹性LLM推理，但面对真实边缘环境的设备异构性、动态可用性和网络波动，其设备选择和模型切分策略的鲁棒性仍有待提升[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07046)。为此，本文提出一种增强的弹性多设备推理编排框架，在Voltron的基础上引入在线设备性能预测和自适应模型切分机制：通过轻量级基准测试实时评估各设备的计算能力和网络带宽，结合动态规划算法在推理请求到达时自适应地选择参与设备和切分策略，从而在保证推理延迟约束的前提下最大化可部署模型规模。
+
+- **创新类型：** 系统框架创新 + 在线自适应机制创新
+- **创新性判断：** 该创新点针对边缘设备异构性和动态性，提出了在线性能预测与自适应模型切分相结合的弹性编排框架，与现有静态切分或固定设备选择方法有显著差异。
+
+**文献支撑：**
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|:---:|:---|:---|:---:|
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07046) | Voltron: Enabling Elastic Multi-Device Execution of LLM Inference for Empowered Edge Intelligence | 提出弹性多设备LLM推理框架，适应真实边缘环境 | 支撑少数现有方法（弹性编排） |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06868) | Seekable OCI: Lazy-Loading Container Images via Range-Request Indexing | 提出延迟加载容器镜像，减少冷启动时间 | 支撑大多数现有方法（延迟加载） |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06651) | MESH-FL: Entropy-Guided Tensor Compression for Multimodal Federated Learning on Edge Devices | 提出熵引导的MPS更新压缩，适应设备异构性 | 支撑大多数现有方法（设备异构性） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07565) | Collaborative Synthetic Data Generation for Knowledge Transfer in Federated Learning | 提出FedKT-CSD，支持单轮联邦学习 | 支撑大多数现有方法（联邦学习） |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07494) | GIFT: Geometry-Informed Low-precision Gradient Communication for LLM Pretraining | 提出几何感知梯度压缩 | 支撑大多数现有方法（通信压缩） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06839) | LEMUR 2: Unlocking Neural Network Diversity for AI | 提出大规模NAS基准，支持移动和VR平台部署 | 支撑现有不足（部署感知） |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07682) | Neural Operator-enabled Topology-informed Evolutionary Strategy for PDE-Constrained Optimization | 提出神经算子启发的拓扑感知进化策略 | 支撑现有不足（高维优化） |
+
+**该论文两个创新点之间的关系：**
+
+创新点五解决“如何降低大模型预训练中的梯度通信开销”的问题（训练阶段），创新点六解决“如何在异构边缘设备上弹性部署大模型推理”的问题（推理阶段）。二者属于同一篇论文主题——大模型训练与推理的资源弹性调度，但分别对应训练通信优化和推理编排优化两个不同技术层面，逻辑上形成互补：训练阶段的通信优化降低了分布式训练的成本，推理阶段的弹性编排扩展了模型在边缘场景的可用性。不存在重复。
+
+**建议实验设计：**
+
+- **对比方法：** 标准FP16通信、GIFT、MESH-FL、Voltron、静态模型并行
+- **实验数据或场景：** LLM预训练（如LLaMA-7B/13B）、边缘设备集群（如树莓派、手机、笔记本）
+- **评价指标：** 通信压缩比、模型收敛质量（困惑度/准确率）、推理延迟、可部署模型规模
+- **消融实验：** 熵引导秩选择与固定秩的对比、在线性能预测与离线静态配置的对比
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|:---:|:---|:---|:---:|:---|:---|:---|:---:|
+| 论文一：LLM推理加速与投机解码优化 | 面向长上下文推理的轻量级自回归草稿模型与分阶段KV缓存架构 | 如何通过投机解码与KV缓存压缩协同降低长上下文推理延迟与显存 | 创新点一：基于因子化先验与轻量级自回归适配器的并行草稿生成；创新点二：分阶段KV缓存压缩与归档架构 | 解耦长短上下文、轻量级适配器、分形编码归档 | 长上下文基准、多跳QA任务 | 聚焦推理阶段的生成与存储优化，不涉及训练通信或智能体安全 | 低 |
+| 论文二：智能体系统效率与可靠性保障 | 面向生产环境的LLM智能体确定性门控与渐进式结晶化工作流优化 | 如何通过确定性门控和渐进式结晶化降低智能体推理成本并提升安全性 | 创新点三：确定性预执行门控策略违规检测；创新点四：基于轨迹证据的渐进式结晶化 | 确定性门控、结构轨迹分析、证据驱动提升/降级 | τ²-bench航空领域、IT运维AIOps | 聚焦智能体执行安全与工作流优化，不涉及模型推理加速或训练通信 | 低 |
+| 论文三：分布式训练与边缘推理的资源弹性调度 | 面向大模型预训练与边缘推理的几何感知梯度压缩与弹性设备编排 | 如何通过几何感知压缩降低训练通信瓶颈，通过弹性编排实现边缘推理 | 创新点五：几何感知坐标变换梯度压缩；创新点六：弹性多设备推理编排 | 几何感知变换、熵引导秩选择、在线性能预测、自适应切分 | LLM预训练、边缘设备集群 | 聚焦训练通信优化与推理编排，不涉及投机解码或智能体安全 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一/三/五 | 创新点二/四/六 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|:---:|:---|:---|:---:|:---:|:---:|:---:|
+| 论文一 | 并行草稿生成（生成阶段） | KV缓存压缩与归档（存储阶段） | 是 | 是（生成 vs 存储） | 否 | 可保留 |
+| 论文二 | 确定性预执行门控（执行前安全约束） | 渐进式结晶化（执行后工作流优化） | 是 | 是（执行前 vs 执行后） | 否 | 可保留 |
+| 论文三 | 几何感知梯度压缩（训练通信） | 弹性多设备推理编排（推理编排） | 是 | 是（训练 vs 推理） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06623) LLM-Guided Task-Semantic Field Factorization for Industrial Process Forecasting. arXiv:2607.06623, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06766) Deployment Risk Assessment Using Diff-Aware Features: A Case Study at Prime Video. arXiv:2607.06766, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06651) Entropy-Guided Tensor Compression for Multimodal Federated Learning on Edge Devices. arXiv:2607.06651, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06906) The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI. arXiv:2607.06906, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06868) Seekable OCI: Lazy-Loading Container Images via Range-Request Indexing. arXiv:2607.06868, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07321) From Atomic Actions to Standard Operating Procedures: Iterative Tool Optimization for Self-Evolving LLM Agents. arXiv:2607.07321, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07508) Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning. arXiv:2607.07508, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07026) Constrained Decoding for Diffusion Language Models via Efficient Inference over Finite Automata. arXiv:2607.07026, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07409) DeLS-Spec: Decoupled Long-Short Contexts for Parallel Speculative Drafting. arXiv:2607.07409, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06924) Intrinsic-Noise Consolidation: A Doob-Barrier-Conditioned Diffusion Turns Analog Device Noise into a Continual-Learning Resource. arXiv:2607.06924, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07548) Think Big, Search Small: Where Capacity Matters in Hierarchical Search Agents? arXiv:2607.07548, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07702) From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization. arXiv:2607.07702, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07386) Sparse Delta Memory: Scaling the State of Linear RNNs through Sparsity. arXiv:2607.07386, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06763) Trees from Marginals: Autoregressive drafting with factorized priors. arXiv:2607.06763, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06839) LEMUR 2: Unlocking Neural Network Diversity for AI. arXiv:2607.06839, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07388) TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models. arXiv:2607.07388, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07052) Progressive Crystallization: Turning Agent Exploration into Deterministic, Lower-Cost Workflows in Production. arXiv:2607.07052, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07405) Reason Less, Verify More: Deterministic Gates Recover a Silent Policy-Violation Failure Mode in Tool-Using LLM Agents. arXiv:2607.07405, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06624) AgentLens: Production-Assessed Trajectory Reviews for Coding Agent Evaluation. arXiv:2607.06624, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07144) Fractal KV-Cache Archives: Lossless Symbolic Storage with In-Place Retrieval for Long-Context LLM Inference. arXiv:2607.07144, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06601) TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation. arXiv:2607.06601, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06641) Healthier LLMs: Retrieval-Augmented Generation for Public Health Question Answering. arXiv:2607.06641, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07565) Collaborative Synthetic Data Generation for Knowledge Transfer in Federated Learning. arXiv:2607.07565, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07706) The Key to Going Linear: Analysis-Driven Transformer Linearization. arXiv:2607.07706, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07682) Neural Operator-enabled Topology-informed Evolutionary Strategy for PDE-Constrained Optimization. arXiv:2607.07682, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07072) An Hybrid Quantum-Classical Diffusion Model for Image Generation. arXiv:2607.07072, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07494) GIFT: Geometry-Informed Low-precision Gradient Communication for LLM Pretraining. arXiv:2607.07494, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07046) Voltron: Enabling Elastic Multi-Device Execution of LLM Inference for Empowered Edge Intelligence. arXiv:2607.07046, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.06974) MILES: Modular Instruction Memory with Learnable Selection for Self-Improving LLM Reasoning. arXiv:2607.06974, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-09&paperId=2607.07368) Multi-Agent AI Control: Distributed Attacks Hamper Per-Instance Monitors. arXiv:2607.07368, 2026.
+
+---
+
+## 自检结果
+
+1. **是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：** 是
+2. **是否避免将一篇论文拆成六个创新点：** 是
+3. **是否避免生成六篇论文各一个创新点：** 是
+4. **每篇论文内部两个创新点是否属于同一论文主题：** 是
+5. **每篇论文内部两个创新点是否互补而不重复：** 是
+6. **三篇论文之间是否研究问题不同：** 是（推理加速 vs 智能体安全 vs 训练/推理调度）
+7. **三篇论文之间是否核心方法不同：** 是（投机解码+缓存压缩 vs 确定性门控+结晶化 vs 几何压缩+弹性编排）
+8. **三篇论文之间是否实验验证重点不同：** 是（长上下文基准 vs 智能体任务 vs 预训练/边缘部署）
+9. **每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：** 是
+10. **每个创新点是否至少引用3篇池内文献：** 是（每个创新点引用7篇池内文献）
+11. **是否说明每篇文献的支撑作用：** 是
+12. **是否避免“首次提出”“填补空白”等绝对化表述：** 是
+13. **是否建立三篇论文方向去重矩阵：** 是
+14. **是否建立每篇论文内部创新点去重检查表：** 是

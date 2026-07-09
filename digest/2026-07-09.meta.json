@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-09",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "LLM推理加速与投机解码优化",
+      "blurb": "围绕投机解码、KV缓存压缩与长上下文推理效率，探索轻量级草稿模型、分阶段缓存架构与并行验证机制，以降低推理延迟与显存开销。"
+    },
+    {
+      "title": "智能体系统效率与可靠性保障",
+      "blurb": "聚焦LLM智能体在工具调用、轨迹优化与生产部署中的成本与安全挑战，通过确定性门控、渐进式结晶化与结构化轨迹分析提升可复现性与执行效率。"
+    },
+    {
+      "title": "分布式训练与边缘推理的资源弹性调度",
+      "blurb": "针对大模型预训练通信瓶颈与边缘设备资源异构性，研究几何感知梯度压缩、多设备弹性推理编排与模态异构联邦学习中的自适应资源分配。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2607.06623",
+      "title": "LLM-Guided Task-Semantic Field Factorization for Industrial Process Forecasting"
+    },
+    {
+      "idx": 2,
+      "id": "2607.06766",
+      "title": "Deployment Risk Assessment Using Diff-Aware Features: A Case Study at Prime Video"
+    },
+    {
+      "idx": 3,
+      "id": "2607.06651",
+      "title": "Entropy-Guided Tensor Compression for Multimodal Federated Learning on Edge Devices"
+    },
+    {
+      "idx": 4,
+      "id": "2607.06906",
+      "title": "The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI"
+    },
+    {
+      "idx": 5,
+      "id": "2607.06868",
+      "title": "Seekable OCI: Lazy-Loading Container Images via Range-Request Indexing"
+    },
+    {
+      "idx": 6,
+      "id": "2607.07321",
+      "title": "From Atomic Actions to Standard Operating Procedures: Iterative Tool Optimization for Self-Evolving LLM Agents"
+    },
+    {
+      "idx": 7,
+      "id": "2607.07508",
+      "title": "Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning"
+    },
+    {
+      "idx": 8,
+      "id": "2607.07026",
+      "title": "Constrained Decoding for Diffusion Language Models via Efficient Inference over Finite Automata"
+    },
+    {
+      "idx": 9,
+      "id": "2607.07409",
+      "title": "DeLS-Spec: Decoupled Long-Short Contexts for Parallel Speculative Drafting"
+    },
+    {
+      "idx": 10,
+      "id": "2607.06924",
+      "title": "Intrinsic-Noise Consolidation: A Doob-Barrier-Conditioned Diffusion Turns Analog Device Noise into a Continual-Learning Resource"
+    },
+    {
+      "idx": 11,
+      "id": "2607.07548",
+      "title": "Think Big, Search Small: Where Capacity Matters in Hierarchical Search Agents?"
+    },
+    {
+      "idx": 12,
+      "id": "2607.07702",
+      "title": "From Noisy Traces to Root Causes: Structural Trajectory Analysis and Causal Extraction for Agent Optimization"
+    },
+    {
+      "idx": 13,
+      "id": "2607.07386",
+      "title": "Sparse Delta Memory: Scaling the State of Linear RNNs through Sparsity"
+    },
+    {
+      "idx": 14,
+      "id": "2607.06763",
+      "title": "Trees from Marginals: Autoregressive drafting with factorized priors"
+    },
+    {
+      "idx": 15,
+      "id": "2607.06839",
+      "title": "LEMUR 2: Unlocking Neural Network Diversity for AI"
+    },
+    {
+      "idx": 16,
+      "id": "2607.07388",
+      "title": "TF-Engram: A Train-Free Engram with SSD-Backed Memory for Large Language Models"
+    },
+    {
+      "idx": 17,
+      "id": "2607.07052",
+      "title": "Progressive Crystallization: Turning Agent Exploration into Deterministic, Lower-Cost Workflows in Production"
+    },
+    {
+      "idx": 18,
+      "id": "2607.07405",
+      "title": "Reason Less, Verify More: Deterministic Gates Recover a Silent Policy-Violation Failure Mode in Tool-Using LLM Agents"
+    },
+    {
+      "idx": 19,
+      "id": "2607.06624",
+      "title": "AgentLens: Production-Assessed Trajectory Reviews for Coding Agent Evaluation"
+    },
+    {
+      "idx": 20,
+      "id": "2607.07144",
+      "title": "Fractal KV-Cache Archives: Lossless Symbolic Storage with In-Place Retrieval for Long-Context LLM Inference"
+    },
+    {
+      "idx": 21,
+      "id": "2607.06601",
+      "title": "TriRoute: Unified Learned Routing for Joint Adaptive Attention, Experts, and KV-Cache Allocation"
+    },
+    {
+      "idx": 22,
+      "id": "2607.06641",
+      "title": "Healthier LLMs: Retrieval-Augmented Generation for Public Health Question Answering"
+    },
+    {
+      "idx": 23,
+      "id": "2607.07565",
+      "title": "Collaborative Synthetic Data Generation for Knowledge Transfer in Federated Learning"
+    },
+    {
+      "idx": 24,
+      "id": "2607.07706",
+      "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization"
+    },
+    {
+      "idx": 25,
+      "id": "2607.07682",
+      "title": "Neural Operator-enabled Topology-informed Evolutionary Strategy for PDE-Constrained Optimization"
+    },
+    {
+      "idx": 26,
+      "id": "2607.07072",
+      "title": "An Hybrid Quantum-Classical Diffusion Model for Image Generation"
+    },
+    {
+      "idx": 27,
+      "id": "2607.07494",
+      "title": "GIFT: Geometry-Informed Low-precision Gradient Communication for LLM Pretraining"
+    },
+    {
+      "idx": 28,
+      "id": "2607.07046",
+      "title": "Voltron: Enabling Elastic Multi-Device Execution of LLM Inference for Empowered Edge Intelligence"
+    },
+    {
+      "idx": 29,
+      "id": "2607.06974",
+      "title": "MILES: Modular Instruction Memory with Learnable Selection for Self-Improving LLM Reasoning"
+    },
+    {
+      "idx": 30,
+      "id": "2607.07368",
+      "title": "Multi-Agent AI Control: Distributed Attacks Hamper Per-Instance Monitors"
+    }
+  ]
+}
