@@ -1,0 +1,287 @@
+# 每日硬凑师兄要求的创新点 2026-07-10
+
+## 今日三个主题（结构化）
+1. **面向MoE与稀疏架构的推理压缩与剪枝** — 针对混合专家模型（MoE）和稀疏注意力架构在推理部署中的显存瓶颈与计算冗余问题，探索全局感知的专家剪枝、块稀疏注意力路由改进以及低比特权重压缩方法。
+2. **长上下文推理的效率优化与推测解码加速** — 围绕大语言模型在长上下文场景下的推理效率挑战，研究零样本上下文扩展、推测解码的松弛策略与条件树结构草稿生成，以及KV缓存压缩与调度协同优化。
+3. **LLM推理系统的资源调度与硬件感知部署** — 面向在线推理服务与异构硬件环境，研究负载感知的请求调度、GPU频率行为建模、非GPU加速器迁移适配以及多GPU系统的延迟导向空间扩展方法。
+
+---
+## 当日文献池编号一览
+
+| 编号 | 论文题目 | arXiv ID |
+|------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08601) | It Takes a MAESTRO To Prune Bad Experts | 2607.08601 |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07740) | Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE | 2607.07740 |
+| [3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07748) | Selective Left-Shift: Turning Test-Time Compute and Difficulty-based Curation into Training Data for Low-Resource Code Generation | 2607.07748 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07953) | Linear Attention Architectures: Mechanisms, Trade-offs, and Cross-Layer Routing | 2607.07953 |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07984) | Agentic Neural Architecture Search | 2607.07984 |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08006) | Toward a Unified GPU-Aware OpenSHMEM Specification | 2607.08006 |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08643) | BiSCo-LLM: Lookup-Free Binary Spherical Coding for Extreme Low-Bit Large Language Model Compression | 2607.08643 |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08029) | Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment | 2607.08029 |
+| [9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08077) | Modular Pretraining Enables Access Control | 2607.08077 |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08032) | What to Keep, What to Forget: A Rate–Distortion View of Memory Compaction in LLMs and Agents | 2607.08032 |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08057) | Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization | 2607.08057 |
+| [12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07820) | DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment | 2607.07820 |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08307) | Empirical Analysis of GPU Frequency Behavior Under ML Workloads | 2607.08307 |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08740) | Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows | 2607.08740 |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08642) | DominoTree: Conditional Tree-Structured Drafting with Domino for Speculative Decoding | 2607.08642 |
+| [16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08066) | Persuasion Attacks Can Decrease Effectiveness of CoT Monitoring | 2607.08066 |
+| [17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08124) | TTHE: Test-Time Harness Evolution | 2607.08124 |
+| [18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08161) | SQuaD-SQL: Efficient Text-to-SQL with Small Language Models via LLM-Guided Knowledge Distillation | 2607.08161 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08690) | A Practical Investigation of Training-free Relaxed Speculative Decoding | 2607.08690 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07862) | CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems | 2607.07862 |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08754) | SLORR: Simple and Efficient In-Training Low-Rank Regularization | 2607.08754 |
+| [22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07738) | REFORGE: A Method for Benchmarking LLMs' Reverse Engineering Capabilities in Decompiled Binary Function Naming | 2607.07738 |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08399) | Prompt Compression via Activation Aggregation | 2607.08399 |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08215) | On the Limitations of Non-GPU AI Accelerators for Large-Model Inference: A Field Study of MoE and Multimodal Serving on Huawei Ascend | 2607.08215 |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08565) | SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling | 2607.08565 |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08186) | Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models | 2607.08186 |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08027) | Structured Pruning of Large Language Models via Power Transformation and Sign-Preserving Score Aggregation with Adaptive Feature Retention | 2607.08027 |
+| [28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08025) | PGD-NO: A Neural Operator with Precomputed Geometry Decomposition for 3D Million-scale Physics Simulations | 2607.08025 |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07724) | Uncertainty-gated selection for block-sparse attention | 2607.07724 |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07964) | KronQ: LLM Quantization via Kronecker-Factored Hessian | 2607.07964 |
+
+---
+
+## 论文方向一：面向MoE与稀疏架构的推理压缩与剪枝
+
+**拟定论文题目**：面向混合专家模型的全局感知结构化剪枝与低比特压缩协同优化方法
+
+**论文核心问题**：如何在保持MoE模型多领域性能的前提下，通过全局感知的专家剪枝与极低比特权重压缩的协同设计，显著降低推理时的显存占用和计算开销。
+
+### 创新点一：基于马尔可夫链的全局感知专家重要性评估
+
+大多数现有方法使用局部启发式指标（如激活频率、路由权重）评估专家重要性，忽略了MoE路由机制中跨层依赖和自回归激活轨迹的全局结构[1, 4, 8, 27]。少数现有方法开始引入全局视角，但通常依赖静态图分析或简化的层间独立性假设，难以捕捉专家激活序列的长期依赖和稳态分布特性[1, 5, 7]。为此，本文提出基于遍历马尔可夫链的专家重要性评估方法，将自回归专家激活轨迹建模为具有稳态分布的随机过程，利用转移概率矩阵编码跨层依赖关系，从而生成全局感知的重要性排序，指导结构化剪枝决策。
+
+- **创新类型**：问题建模创新 + 方法设计创新
+- **创新性判断**：文献池中[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08601)提出了MAESTRO框架，使用马尔可夫链建模专家激活轨迹，为本创新点提供了直接基础。本创新点在此基础上进一步将稳态分布与剪枝阈值自适应选择相结合，并引入跨任务重要性聚合机制，区别于[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08601)的单一压缩率设定。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08601) | It Takes a MAESTRO To Prune Bad Experts | 提出MAESTRO框架，使用遍历马尔可夫链建模专家激活轨迹，生成全局感知的重要性启发式 | 支撑少数现有方法 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07953) | Linear Attention Architectures: Mechanisms, Trade-offs, and Cross-Layer Routing | 比较多种线性注意力架构，分析跨层路由机制 | 支撑大多数现有方法（局部启发式） |
+| [5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07984) | Agentic Neural Architecture Search | 提出AgentNAS，使用LLM生成架构并分解为可搜索的槽位 | 支撑大多数现有方法（局部搜索） |
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08643) | BiSCo-LLM: Lookup-Free Binary Spherical Coding | 提出无码本的二进制球面编码框架用于极端低比特压缩 | 支撑少数现有方法（全局压缩） |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08029) | Rethinking Small VLM Quantization | 系统评估小VLM的组件级量化，发现MoE与密集架构的量化敏感性差异 | 支撑大多数现有方法（局部指标） |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08027) | Structured Pruning of LLMs via Power Transformation | 提出改进的结构化剪枝方法，解决分布不匹配和符号信息丢失问题 | 支撑大多数现有方法（局部剪枝） |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08754) | SLORR: Simple and Efficient In-Training Low-Rank Regularization | 提出训练时低秩正则化框架，提升模型可压缩性 | 支撑现有不足（缺乏全局视角） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08215) | On the Limitations of Non-GPU AI Accelerators | 现场研究MoE模型在非GPU加速器上的部署挑战 | 支撑现有不足（部署瓶颈） |
+
+### 创新点二：基于Kronecker分解Hessian的混合精度量化与剪枝协同
+
+大多数现有后训练量化方法仅利用输入激活统计量构建量化目标，假设所有输出通道对重建损失贡献相同，导致低比特量化时精度损失显著[7, 8, 21, 30]。少数现有方法引入二阶信息或梯度协方差，但通常将量化与剪枝视为独立优化问题，缺乏联合决策机制，导致压缩策略在整体性能上并非最优[1, 27, 30]。为此，本文提出基于Kronecker分解Hessian近似的混合精度量化框架，将梯度协方差引入量化损失函数，并设计剪枝-量化联合灵敏度指标，实现结构化剪枝与混合精度量化的协同优化，在极端压缩率下保持模型性能。
+
+- **创新类型**：方法设计创新 + 约束处理创新
+- **创新性判断**：文献池中[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07964)提出了KronQ，利用Kronecker分解Hessian引入梯度协方差，为本创新点提供了核心方法基础。本创新点在此基础上将量化灵敏度与剪枝重要性进行联合建模，实现剪枝与量化的协同决策，区别于[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07964)仅关注量化本身。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08643) | BiSCo-LLM: Lookup-Free Binary Spherical Coding | 提出无码本二进制球面编码，实现极端低比特压缩 | 支撑大多数现有方法（仅量化） |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08029) | Rethinking Small VLM Quantization | 系统评估组件级量化，发现MoE与密集架构的差异 | 支撑大多数现有方法（仅量化） |
+| [21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08754) | SLORR: Simple and Efficient In-Training Low-Rank Regularization | 提出训练时低秩正则化，提升可压缩性 | 支撑大多数现有方法（仅压缩） |
+| [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08027) | Structured Pruning of LLMs via Power Transformation | 提出改进的结构化剪枝方法 | 支撑大多数现有方法（仅剪枝） |
+| [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08601) | It Takes a MAESTRO To Prune Bad Experts | 提出全局感知的MoE剪枝框架 | 支撑少数现有方法（剪枝+量化分离） |
+| [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07964) | KronQ: LLM Quantization via Kronecker-Factored Hessian | 提出基于Kronecker分解Hessian的量化框架 | 支撑少数现有方法（二阶量化） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08215) | On the Limitations of Non-GPU AI Accelerators | 现场研究MoE模型在非GPU加速器上的部署挑战 | 支撑现有不足（协同缺失） |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08057) | Towards Efficient LLM Serving: Survey on KV Cache Optimization | 综述系统感知型KV缓存优化 | 支撑现有不足（缺乏联合优化） |
+
+**该论文两个创新点之间的关系**：
+创新点一解决“如何评估和选择需要剪枝的专家”，创新点二解决“如何在剪枝基础上进一步压缩剩余权重”。二者属于同一论文主题（MoE推理压缩），但分别对应结构剪枝和权重量化两个不同技术层面，形成递进关系：先通过全局感知剪枝减少专家数量，再通过混合精度量化压缩剩余参数。
+
+**建议实验设计**：
+- **对比方法**：MAESTRO [1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08601)、BiSCo-LLM [7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08643)、KronQ [30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07964)、结构化剪枝 [27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08027)
+- **实验数据/场景**：文献池中[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08601)评估的五个领域（Safety, Bias, Ethics等），以及[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08029)中的多模态场景
+- **评价指标**：平均性能保留率、跨任务方差、显存占用、推理延迟、压缩率
+- **消融实验**：单独剪枝 vs. 单独量化 vs. 协同优化；不同剪枝率与量化位宽组合
+
+---
+
+## 论文方向二：长上下文推理的效率优化与推测解码加速
+
+**拟定论文题目**：面向长上下文推理的零样本上下文扩展与条件推测解码协同加速方法
+
+**论文核心问题**：如何在长上下文场景下，通过零样本上下文扩展与条件感知推测解码的协同设计，同时解决上下文窗口限制和自回归解码效率瓶颈。
+
+### 创新点三：动态双焦RoPE驱动的零样本上下文扩展
+
+大多数现有零样本上下文扩展方法使用固定的单一缩放因子，导致激进缩放牺牲短上下文保真度，保守缩放则在长上下文时失效[2, 4, 10, 11]。少数现有方法引入自适应缩放或多尺度机制，但通常需要微调或额外的训练阶段，且对序列长度变化的响应不够平滑[2, 15, 29]。为此，本文提出动态双焦RoPE方法，将局部RoPE保真窗口与长距离自适应缩放窗口配对，通过包含-排除注意力合并和即时RoPE校正旋转，实现零样本、免微调的长上下文扩展，在短输入时精确恢复基模型行为，在长输入时平滑外推。
+
+- **创新类型**：问题建模创新 + 方法设计创新
+- **创新性判断**：文献池中[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07740)提出了Jet-Long，使用动态双焦RoPE实现零样本上下文扩展，为本创新点提供了直接基础。本创新点在此基础上进一步引入不确定性门控机制，在注意力合并阶段根据查询-键匹配置信度动态调整双焦窗口权重，区别于[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07740)的固定合并策略。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07740) | Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE | 提出动态双焦RoPE，实现零样本长上下文扩展 | 支撑少数现有方法 |
+| [4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07953) | Linear Attention Architectures: Mechanisms, Trade-offs, and Cross-Layer Routing | 比较多种线性注意力架构，分析长上下文性能 | 支撑大多数现有方法（固定缩放） |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08032) | What to Keep, What to Forget: Rate–Distortion View of Memory Compaction | 从率失真角度统一分析KV缓存压缩、提示压缩等 | 支撑大多数现有方法（固定策略） |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08057) | Towards Efficient LLM Serving: Survey on KV Cache Optimization | 综述系统感知型KV缓存优化 | 支撑大多数现有方法（固定缩放） |
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08642) | DominoTree: Conditional Tree-Structured Drafting | 提出条件树结构草稿生成用于推测解码 | 支撑少数现有方法（自适应） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07724) | Uncertainty-gated selection for block-sparse attention | 提出不确定性门控的块稀疏注意力选择 | 支撑少数现有方法（自适应选择） |
+| [23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08399) | Prompt Compression via Activation Aggregation | 将提示压缩为单一激活向量，减少计算 | 支撑现有不足（压缩与扩展分离） |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08186) | Hidden Decoding at Scale: Latent Computation Scaling | 提出隐藏解码，沿序列长度维度扩展计算 | 支撑现有不足（扩展方法复杂） |
+
+### 创新点四：条件非因子化树结构草稿生成与松弛验证
+
+大多数现有推测解码方法使用因子化边际分布构建草稿树，忽略了草稿令牌之间的路径依赖关系，导致草稿质量受限[15, 19, 26, 29]。少数现有方法引入条件校正机制，但通常需要额外训练或修改模型架构，且树结构搜索空间受限[15, 19, 20]。为此，本文提出基于条件非因子化校正的树结构草稿生成方法，利用轻量级GRU校正器为每个候选路径生成路径依赖的分布，并设计基于不确定性门控的松弛验证策略，在保持无损解码质量的同时，通过选择性放宽验证阈值进一步提升加速比。
+
+- **创新类型**：方法设计创新 + 约束处理创新
+- **创新性判断**：文献池中[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08642)提出了DominoTree，使用Domino校正器的条件非因子化分布构建草稿树，为本创新点提供了核心方法基础。本创新点在此基础上引入松弛验证机制，通过不确定性门控动态调整验证严格度，区别于[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08642)的严格无损验证。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08642) | DominoTree: Conditional Tree-Structured Drafting | 提出条件树结构草稿生成，使用Domino校正器 | 支撑少数现有方法 |
+| [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08690) | A Practical Investigation of Training-free Relaxed Speculative Decoding | 系统研究无需训练的松弛推测解码技术 | 支撑少数现有方法（松弛验证） |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08186) | Hidden Decoding at Scale: Latent Computation Scaling | 提出隐藏解码，沿序列长度维度扩展计算 | 支撑大多数现有方法（因子化草稿） |
+| [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07724) | Uncertainty-gated selection for block-sparse attention | 提出不确定性门控的块稀疏注意力选择 | 支撑大多数现有方法（因子化草稿） |
+| [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07740) | Jet-Long: Efficient Long-Context Extension | 提出动态双焦RoPE用于长上下文扩展 | 支撑大多数现有方法（标准推测解码） |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07862) | CTA-Pipelining: A Latency-Oriented Spatial Scaling Method | 提出CTA流水线，利用多GPU系统加速推理 | 支撑现有不足（草稿质量受限） |
+| [10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08032) | What to Keep, What to Forget: Rate–Distortion View | 从率失真角度分析记忆压缩 | 支撑现有不足（验证效率） |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08057) | Towards Efficient LLM Serving: Survey on KV Cache | 综述系统感知型KV缓存优化 | 支撑大多数现有方法（标准推测解码） |
+
+**该论文两个创新点之间的关系**：
+创新点三解决“如何扩展上下文窗口以支持更长输入”，创新点四解决“如何在长上下文中加速自回归解码”。二者属于同一论文主题（长上下文推理效率），但分别对应上下文扩展和解码加速两个不同技术层面，形成互补关系：扩展后的长上下文为推测解码提供了更丰富的上下文信息，而推测解码则缓解了长上下文带来的解码延迟增加。
+
+**建议实验设计**：
+- **对比方法**：Jet-Long [2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07740)、DominoTree [15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08642)、松弛推测解码 [19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08690)、块稀疏注意力 [29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07724)
+- **实验数据/场景**：LongBench-v2（文献[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07724)使用）、RULER NIAH多键检索（文献[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07724)使用）、128K上下文评估
+- **评价指标**：召回率、准确率、加速比、平均接受长度、每轮令牌数
+- **消融实验**：单独上下文扩展 vs. 单独推测解码 vs. 协同；不同松弛阈值的影响
+
+---
+
+## 论文方向三：LLM推理系统的资源调度与硬件感知部署
+
+**拟定论文题目**：面向动态负载与异构硬件的LLM推理服务负载感知调度与延迟优化方法
+
+**论文核心问题**：如何在在线推理服务中，通过负载感知的请求调度、GPU频率行为建模和异构硬件适配，实现高吞吐、低延迟的推理服务。
+
+### 创新点五：负载感知的会话级请求调度与KV缓存亲和性平衡
+
+大多数现有LLM调度方法优先将请求路由到缓存其KV的实例以提高缓存复用率，但过度集中路由导致部分实例过载而其他实例空闲，限制了整体吞吐量[11, 20, 24, 25]。少数现有方法开始关注负载均衡，但通常以牺牲KV缓存复用为代价，且未能充分利用会话内请求的局部性特征[20, 25, 26]。为此，本文提出负载感知的会话级调度方法，利用全局KV存储和会话内请求局部性，通过平衡少量首请求的路由来缓解实例负载不均，在不显著牺牲缓存复用率的前提下提升系统吞吐量。
+
+- **创新类型**：问题建模创新 + 方法设计创新
+- **创新性判断**：文献池中[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08565)提出了SMetric，系统研究了面向智能体服务的请求调度，发现现有调度器过度优先缓存亲和性导致负载不均，为本创新点提供了核心问题基础。本创新点在此基础上进一步引入会话内请求的时序局部性建模，设计基于首请求路由的负载均衡策略，区别于[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08565)的全局均衡方法。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08057) | Towards Efficient LLM Serving: Survey on KV Cache | 综述系统感知型KV缓存优化 | 支撑大多数现有方法（缓存优先） |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07862) | CTA-Pipelining: A Latency-Oriented Spatial Scaling Method | 提出CTA流水线，利用多GPU系统加速推理 | 支撑大多数现有方法（硬件优化） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08215) | On the Limitations of Non-GPU AI Accelerators | 现场研究MoE模型在非GPU加速器上的部署挑战 | 支撑大多数现有方法（硬件适配） |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08565) | SMetric: Rethink LLM Scheduling for Serving Agents | 系统研究面向智能体服务的请求调度 | 支撑少数现有方法（负载感知） |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08186) | Hidden Decoding at Scale: Latent Computation Scaling | 提出隐藏解码，沿序列长度维度扩展计算 | 支撑少数现有方法（计算扩展） |
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08307) | Empirical Analysis of GPU Frequency Behavior | 分析GPU频率行为对ML工作负载的影响 | 支撑大多数现有方法（忽略频率动态） |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08006) | Toward a Unified GPU-Aware OpenSHMEM Specification | 提出GPU感知的OpenSHMEM扩展规范 | 支撑现有不足（调度与硬件脱节） |
+| [14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08740) | Workflow as Knowledge: Semantic Persistence | 提出工作流作为持久知识对象的概念模型 | 支撑现有不足（缺乏会话级建模） |
+
+### 创新点六：GPU频率感知的延迟预测与内核重排序优化
+
+大多数现有ML延迟预测技术假设GPU内核延迟相互独立，通过累加单次测量值估计总执行时间，忽略了GPU动态频率缩放引入的内核间依赖[13, 20, 24, 25]。少数现有方法开始关注频率行为，但尚未将其融入延迟预测模型或调度决策中，导致预测偏差在长序列推理中累积放大[13, 20, 26]。为此，本文提出GPU频率感知的延迟预测模型，将近期工作负载历史（80ms窗口内）作为频率状态特征，建模内核延迟的条件依赖关系，并设计基于频率状态感知的内核重排序策略，通过调整内核执行顺序优化频率轨迹，降低尾部延迟。
+
+- **创新类型**：性能预测创新 + 优化求解创新
+- **创新性判断**：文献池中[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08307)初步分析了GPU频率行为，发现工作负载历史在80ms窗口内影响频率，挑战了内核延迟独立假设，为本创新点提供了核心观察基础。本创新点在此基础上构建可计算的频率感知延迟预测模型，并设计内核重排序优化策略，区别于[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08307)仅提出问题观察。
+
+**文献支撑**：
+
+| 编号 | 论文题名 | 主要内容 | 支撑作用 |
+|------|----------|----------|----------|
+| [13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08307) | Empirical Analysis of GPU Frequency Behavior | 分析GPU频率行为，发现80ms窗口内历史负载影响频率 | 支撑少数现有方法 |
+| [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07862) | CTA-Pipelining: A Latency-Oriented Spatial Scaling Method | 提出CTA流水线，利用多GPU系统加速推理 | 支撑大多数现有方法（独立延迟假设） |
+| [24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08215) | On the Limitations of Non-GPU AI Accelerators | 现场研究非GPU加速器部署挑战 | 支撑大多数现有方法（忽略频率） |
+| [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08565) | SMetric: Rethink LLM Scheduling for Serving Agents | 系统研究面向智能体服务的请求调度 | 支撑大多数现有方法（忽略频率） |
+| [26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08186) | Hidden Decoding at Scale: Latent Computation Scaling | 提出隐藏解码，沿序列长度维度扩展计算 | 支撑大多数现有方法（忽略频率） |
+| [6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08006) | Toward a Unified GPU-Aware OpenSHMEM Specification | 提出GPU感知的OpenSHMEM扩展规范 | 支撑少数现有方法（硬件感知） |
+| [11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08057) | Towards Efficient LLM Serving: Survey on KV Cache | 综述系统感知型KV缓存优化 | 支撑现有不足（缺乏频率建模） |
+| [8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08029) | Rethinking Small VLM Quantization | 系统评估组件级量化，发现编码器-内核-硬件交互 | 支撑现有不足（硬件-软件交互复杂） |
+
+**该论文两个创新点之间的关系**：
+创新点五解决“如何调度请求以平衡负载和缓存复用”，创新点六解决“如何在给定调度下优化单次推理的延迟”。二者属于同一论文主题（推理系统资源调度），但分别对应请求级调度和内核级优化两个不同技术层面，形成递进关系：先通过负载感知调度确定请求路由，再通过频率感知优化降低每个请求的执行延迟。
+
+**建议实验设计**：
+- **对比方法**：SMetric [25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08565)、CTA-Pipelining [20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07862)、标准轮询调度、缓存优先调度
+- **实验数据/场景**：文献池中[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08565)使用的BAILIAN生产轨迹、多GPU系统（H200/B200，如[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07862)）、异构硬件（GPU vs. Ascend，如[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08215)）
+- **评价指标**：系统吞吐量（TPS）、尾部延迟（P99）、KV缓存命中率、实例负载均衡度
+- **消融实验**：单独负载感知调度 vs. 单独频率感知优化 vs. 协同；不同频率窗口大小的影响
+
+---
+
+## 三篇论文方向去重矩阵
+
+| 论文方向 | 拟定论文题目 | 核心问题 | 两个创新点 | 核心方法 | 主要实验 | 与其他论文方向的区别 | 重复风险 |
+|----------|--------------|----------|------------|----------|----------|----------------------|----------|
+| 论文一：MoE与稀疏架构推理压缩与剪枝 | 面向混合专家模型的全局感知结构化剪枝与低比特压缩协同优化方法 | MoE模型显存瓶颈与计算冗余 | 创新点一：马尔可夫链全局专家重要性评估；创新点二：Kronecker分解Hessian混合精度量化与剪枝协同 | 马尔可夫链建模、Kronecker分解Hessian、协同灵敏度指标 | 多领域性能保留率、跨任务方差、显存占用 | 关注模型结构压缩，不涉及推理调度或上下文扩展 | 低 |
+| 论文二：长上下文推理效率优化与推测解码加速 | 面向长上下文推理的零样本上下文扩展与条件推测解码协同加速方法 | 长上下文窗口限制与自回归解码效率 | 创新点三：动态双焦RoPE零样本上下文扩展；创新点四：条件非因子化树结构草稿生成与松弛验证 | 动态双焦RoPE、条件非因子化校正、不确定性门控松弛验证 | 长上下文召回率、加速比、平均接受长度 | 关注推理算法加速，不涉及模型压缩或系统调度 | 低 |
+| 论文三：推理系统资源调度与硬件感知部署 | 面向动态负载与异构硬件的LLM推理服务负载感知调度与延迟优化方法 | 在线服务负载不均与硬件动态行为 | 创新点五：负载感知会话级请求调度；创新点六：GPU频率感知延迟预测与内核重排序 | 会话级负载均衡、频率状态建模、内核重排序 | 系统吞吐量、尾部延迟、负载均衡度 | 关注系统级调度与硬件适配，不涉及模型压缩或解码加速 | 低 |
+
+---
+
+## 每篇论文内部创新点去重检查
+
+| 论文方向 | 创新点一/三/五 | 创新点二/四/六 | 是否属于同一论文主题 | 是否技术层面不同 | 是否存在重复 | 判断 |
+|----------|----------------|----------------|----------------------|------------------|--------------|------|
+| 论文一 | 全局专家重要性评估（结构剪枝） | 混合精度量化与剪枝协同（权重压缩） | 是 | 是（结构 vs. 权重） | 否 | 可保留 |
+| 论文二 | 动态双焦RoPE上下文扩展（窗口扩展） | 条件树结构草稿生成与松弛验证（解码加速） | 是 | 是（扩展 vs. 加速） | 否 | 可保留 |
+| 论文三 | 负载感知会话级请求调度（请求路由） | GPU频率感知延迟预测与内核重排序（内核优化） | 是 | 是（调度 vs. 优化） | 否 | 可保留 |
+
+---
+
+## 参考文献总表（仅池内文献）
+
+[1](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08601) It Takes a MAESTRO To Prune Bad Experts. arXiv:2607.08601, 2026.
+[2](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07740) Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE. arXiv:2607.07740, 2026.
+[3](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07748) Selective Left-Shift: Turning Test-Time Compute and Difficulty-based Curation into Training Data for Low-Resource Code Generation. arXiv:2607.07748, 2026.
+[4](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07953) Linear Attention Architectures: Mechanisms, Trade-offs, and Cross-Layer Routing. arXiv:2607.07953, 2026.
+[5](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07984) Agentic Neural Architecture Search. arXiv:2607.07984, 2026.
+[6](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08006) Toward a Unified GPU-Aware OpenSHMEM Specification. arXiv:2607.08006, 2026.
+[7](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08643) BiSCo-LLM: Lookup-Free Binary Spherical Coding for Extreme Low-Bit Large Language Model Compression. arXiv:2607.08643, 2026.
+[8](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08029) Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment. arXiv:2607.08029, 2026.
+[9](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08077) Modular Pretraining Enables Access Control. arXiv:2607.08077, 2026.
+[10](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08032) What to Keep, What to Forget: A Rate–Distortion View of Memory Compaction in LLMs and Agents. arXiv:2607.08032, 2026.
+[11](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08057) Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization. arXiv:2607.08057, 2026.
+[12](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07820) DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment. arXiv:2607.07820, 2026.
+[13](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08307) Empirical Analysis of GPU Frequency Behavior Under ML Workloads. arXiv:2607.08307, 2026.
+[14](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08740) Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows. arXiv:2607.08740, 2026.
+[15](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08642) DominoTree: Conditional Tree-Structured Drafting with Domino for Speculative Decoding. arXiv:2607.08642, 2026.
+[16](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08066) Persuasion Attacks Can Decrease Effectiveness of CoT Monitoring. arXiv:2607.08066, 2026.
+[17](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08124) TTHE: Test-Time Harness Evolution. arXiv:2607.08124, 2026.
+[18](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08161) SQuaD-SQL: Efficient Text-to-SQL with Small Language Models via LLM-Guided Knowledge Distillation. arXiv:2607.08161, 2026.
+[19](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08690) A Practical Investigation of Training-free Relaxed Speculative Decoding. arXiv:2607.08690, 2026.
+[20](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07862) CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems. arXiv:2607.07862, 2026.
+[21](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08754) SLORR: Simple and Efficient In-Training Low-Rank Regularization. arXiv:2607.08754, 2026.
+[22](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07738) REFORGE: A Method for Benchmarking LLMs' Reverse Engineering Capabilities in Decompiled Binary Function Naming. arXiv:2607.07738, 2026.
+[23](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08399) Prompt Compression via Activation Aggregation. arXiv:2607.08399, 2026.
+[24](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08215) On the Limitations of Non-GPU AI Accelerators for Large-Model Inference: A Field Study of MoE and Multimodal Serving on Huawei Ascend. arXiv:2607.08215, 2026.
+[25](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08565) SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling. arXiv:2607.08565, 2026.
+[26](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08186) Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models. arXiv:2607.08186, 2026.
+[27](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08027) Structured Pruning of Large Language Models via Power Transformation and Sign-Preserving Score Aggregation with Adaptive Feature Retention. arXiv:2607.08027, 2026.
+[28](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.08025) PGD-NO: A Neural Operator with Precomputed Geometry Decomposition for 3D Million-scale Physics Simulations. arXiv:2607.08025, 2026.
+[29](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07724) Uncertainty-gated selection for block-sparse attention. arXiv:2607.07724, 2026.
+[30](https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-10&paperId=2607.07964) KronQ: LLM Quantization via Kronecker-Factored Hessian. arXiv:2607.07964, 2026.
+
+---
+
+## 自检结果
+
+1. **是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织**：是
+2. **是否避免将一篇论文拆成六个创新点**：是（三篇论文分别关注压缩、加速、调度，是三个独立研究问题）
+3. **是否避免生成六篇论文各一个创新点**：是（每篇论文两个创新点服务于同一主题）
+4. **每篇论文内部两个创新点是否属于同一论文主题**：是
+5. **每篇论文内部两个创新点是否互补而不重复**：是（已通过去重检查表验证）
+6. **三篇论文之间是否研究问题不同**：是（压缩 vs. 加速 vs. 调度）
+7. **三篇论文之间是否核心方法不同**：是（马尔可夫链/Kronecker分解 vs. RoPE/树结构草稿 vs. 负载均衡/频率建模）
+8. **三篇论文之间是否实验验证重点不同**：是（性能保留率 vs. 加速比 vs. 系统吞吐量）
+9. **每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构**：是
+10. **每个创新点是否至少引用3篇池内文献**：是（每个创新点引用6-8篇池内文献）
+11. **是否说明每篇文献的支撑作用**：是
+12. **是否避免“首次提出”“填补空白”等绝对化表述**：是
+13. **是否建立三篇论文方向去重矩阵**：是
+14. **是否建立每篇论文内部创新点去重检查表**：是

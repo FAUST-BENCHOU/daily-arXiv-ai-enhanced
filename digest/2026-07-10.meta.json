@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-10",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "面向MoE与稀疏架构的推理压缩与剪枝",
+      "blurb": "针对混合专家模型（MoE）和稀疏注意力架构在推理部署中的显存瓶颈与计算冗余问题，探索全局感知的专家剪枝、块稀疏注意力路由改进以及低比特权重压缩方法。"
+    },
+    {
+      "title": "长上下文推理的效率优化与推测解码加速",
+      "blurb": "围绕大语言模型在长上下文场景下的推理效率挑战，研究零样本上下文扩展、推测解码的松弛策略与条件树结构草稿生成，以及KV缓存压缩与调度协同优化。"
+    },
+    {
+      "title": "LLM推理系统的资源调度与硬件感知部署",
+      "blurb": "面向在线推理服务与异构硬件环境，研究负载感知的请求调度、GPU频率行为建模、非GPU加速器迁移适配以及多GPU系统的延迟导向空间扩展方法。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2607.08601",
+      "title": "It Takes a MAESTRO To Prune Bad Experts"
+    },
+    {
+      "idx": 2,
+      "id": "2607.07740",
+      "title": "Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE"
+    },
+    {
+      "idx": 3,
+      "id": "2607.07748",
+      "title": "Selective Left-Shift: Turning Test-Time Compute and Difficulty-based Curation into Training Data for Low-Resource Code Generation"
+    },
+    {
+      "idx": 4,
+      "id": "2607.07953",
+      "title": "Linear Attention Architectures: Mechanisms, Trade-offs, and Cross-Layer Routing"
+    },
+    {
+      "idx": 5,
+      "id": "2607.07984",
+      "title": "Agentic Neural Architecture Search"
+    },
+    {
+      "idx": 6,
+      "id": "2607.08006",
+      "title": "Toward a Unified GPU-Aware OpenSHMEM Specification"
+    },
+    {
+      "idx": 7,
+      "id": "2607.08643",
+      "title": "BiSCo-LLM: Lookup-Free Binary Spherical Coding for Extreme Low-Bit Large Language Model Compression"
+    },
+    {
+      "idx": 8,
+      "id": "2607.08029",
+      "title": "Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment"
+    },
+    {
+      "idx": 9,
+      "id": "2607.08077",
+      "title": "Modular Pretraining Enables Access Control"
+    },
+    {
+      "idx": 10,
+      "id": "2607.08032",
+      "title": "What to Keep, What to Forget: A Rate--Distortion View of Memory Compaction in LLMs and Agents"
+    },
+    {
+      "idx": 11,
+      "id": "2607.08057",
+      "title": "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization"
+    },
+    {
+      "idx": 12,
+      "id": "2607.07820",
+      "title": "DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment"
+    },
+    {
+      "idx": 13,
+      "id": "2607.08307",
+      "title": "Empirical Analysis of GPU Frequency Behavior Under ML Workloads"
+    },
+    {
+      "idx": 14,
+      "id": "2607.08740",
+      "title": "Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows"
+    },
+    {
+      "idx": 15,
+      "id": "2607.08642",
+      "title": "DominoTree: Conditional Tree-Structured Drafting with Domino for Speculative Decoding"
+    },
+    {
+      "idx": 16,
+      "id": "2607.08066",
+      "title": "Persuasion Attacks Can Decrease Effectiveness of CoT Monitoring"
+    },
+    {
+      "idx": 17,
+      "id": "2607.08124",
+      "title": "TTHE: Test-Time Harness Evolution"
+    },
+    {
+      "idx": 18,
+      "id": "2607.08161",
+      "title": "SQuaD-SQL: Efficient Text-to-SQL with Small Language Models via LLM-Guided Knowledge Distillation"
+    },
+    {
+      "idx": 19,
+      "id": "2607.08690",
+      "title": "A Practical Investigation of Training-free Relaxed Speculative Decoding"
+    },
+    {
+      "idx": 20,
+      "id": "2607.07862",
+      "title": "CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems"
+    },
+    {
+      "idx": 21,
+      "id": "2607.08754",
+      "title": "SLORR: Simple and Efficient In-Training Low-Rank Regularization"
+    },
+    {
+      "idx": 22,
+      "id": "2607.07738",
+      "title": "REFORGE: A Method for Benchmarking LLMs' Reverse Engineering Capabilities in Decompiled Binary Function Naming"
+    },
+    {
+      "idx": 23,
+      "id": "2607.08399",
+      "title": "Prompt Compression via Activation Aggregation"
+    },
+    {
+      "idx": 24,
+      "id": "2607.08215",
+      "title": "On the Limitations of Non-GPU AI Accelerators for Large-Model Inference: A Field Study of MoE and Multimodal Serving on Huawei Ascend"
+    },
+    {
+      "idx": 25,
+      "id": "2607.08565",
+      "title": "SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling"
+    },
+    {
+      "idx": 26,
+      "id": "2607.08186",
+      "title": "Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models"
+    },
+    {
+      "idx": 27,
+      "id": "2607.08027",
+      "title": "Structured Pruning of Large Language Models via Power Transformation and Sign-Preserving Score Aggregation with Adaptive Feature Retention"
+    },
+    {
+      "idx": 28,
+      "id": "2607.08025",
+      "title": "PGD-NO: A Neural Operator with Precomputed Geometry Decomposition for 3D Million-scale Physics Simulations"
+    },
+    {
+      "idx": 29,
+      "id": "2607.07724",
+      "title": "Uncertainty-gated selection for block-sparse attention"
+    },
+    {
+      "idx": 30,
+      "id": "2607.07964",
+      "title": "KronQ: LLM Quantization via Kronecker-Factored Hessian"
+    }
+  ]
+}
