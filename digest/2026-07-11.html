@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日硬凑师兄要求的创新点 · 2026-07-11</title>
+</head>
+<body style="margin:0;background:#e8eef5;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;color:#334155;">
+<div style="max-width:900px;margin:0 auto;padding:28px 16px 48px;">
+<nav style="font-size:14px;margin-bottom:18px;">
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html" style="color:#2563eb;text-decoration:none;font-weight:600;">论文列表主页</a>
+<span style="color:#94a3b8;margin:0 8px;">/</span>
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/digest-index.html" style="color:#2563eb;text-decoration:none;font-weight:600;">历史创新点</a>
+</nav>
+<header style="background:linear-gradient(135deg,#1e40af 0%,#3b82f6 100%);color:#fff;border-radius:14px;padding:22px 26px;margin-bottom:22px;">
+<p style="margin:0;font-size:12px;opacity:0.88;">读文献 · 憋创新点 · GitHub Pages</p>
+<h1 style="margin:10px 0 0;font-size:22px;font-weight:700;line-height:1.35;">每日硬凑师兄要求的创新点 · 2026-07-11</h1>
+</header>
+<section style="margin-bottom:22px;">
+<h2 style="font-size:18px;color:#0f172a;margin:0 0 14px;border-bottom:2px solid #2563eb;padding-bottom:8px;">今日三个主题</h2>
+<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;margin-bottom:12px;">
+<div style="font-size:12px;color:#64748b;margin-bottom:6px;">主题 1</div>
+<div style="font-size:17px;font-weight:700;color:#0f172a;margin-bottom:8px;">投机解码与草稿生成优化</div>
+<div style="font-size:14px;color:#475569;line-height:1.55;">围绕投机解码中草稿模型的松弛验证、条件树状草稿生成与训练无关加速技术，探索无需重训即可提升 LLM 推理吞吐与接受长度的新范式。</div>
+</div>
+<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;margin-bottom:12px;">
+<div style="font-size:12px;color:#64748b;margin-bottom:6px;">主题 2</div>
+<div style="font-size:17px;font-weight:700;color:#0f172a;margin-bottom:8px;">LLM 服务系统中的调度、缓存与资源管理</div>
+<div style="font-size:14px;color:#475569;line-height:1.55;">面向 Agent 工作负载与多 GPU 系统的请求调度、KV 缓存优化与内存压缩策略，在负载均衡、延迟约束与资源效率之间寻找系统级平衡。</div>
+</div>
+<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px 18px;margin-bottom:12px;">
+<div style="font-size:12px;color:#64748b;margin-bottom:6px;">主题 3</div>
+<div style="font-size:17px;font-weight:700;color:#0f172a;margin-bottom:8px;">模型压缩、量化与持续微调</div>
+<div style="font-size:14px;color:#475569;line-height:1.55;">从低秩正则化、后训练量化到持续微调中的适配器合并，研究在保持模型能力的前提下降低部署成本与遗忘风险的结构化压缩方法。</div>
+</div>
+</section>
+<section style="margin-bottom:22px;">
+<h2 style="font-size:18px;color:#0f172a;margin:0 0 14px;border-bottom:2px solid #2563eb;padding-bottom:8px;">文献池（点击跳转当日论文详情）</h2>
+<table style='width:100%;border-collapse:collapse;font-size:13px;margin:16px 0;'><thead><tr style='background:#f3f4f6;'><th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>编号</th><th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>题目</th><th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>ID</th><th style='padding:10px;border:1px solid #e5e7eb;text-align:left;'>链接</th></tr></thead><tbody><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[1]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>A Practical Investigation of Training-free Relaxed Speculative Decoding</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08690</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08690' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[2]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.07820</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07820' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[3]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08740</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08740' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[4]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Bug Report Specification Refinement with Trajectory Guidance for Automated Program Repair</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.07882</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07882' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[5]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>LLT: Local Linear Transformer for PDE Operator Learning</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.07718</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07718' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[6]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>ReCoLoRA: Spectrum-Aware Recursive Consolidation for Continual LLM Fine-Tuning</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.07719</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07719' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[7]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08029</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08029' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[8]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Compete Then Collaborate: Frontier AI Teachers Build a Verifiable Curriculum to Improve a Coding Student Beyond Imitation</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08255</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08255' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[9]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.07862</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07862' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[10]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>SQuaD-SQL: Efficient Text-to-SQL with Small Language Models via LLM-Guided Knowledge Distillation</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08161</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08161' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[11]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Adaptive Row Selection Meets Asynchrony in Randomized Kaczmarz</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08313</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08313' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[12]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08565</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08565' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[13]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Self-Adaptive Anomaly Detection with Reinforcement Learning and Human Feedback in Connected Vehicles</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08373</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08373' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[14]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08057</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08057' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[15]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>What to Keep, What to Forget: A Rate--Distortion View of Memory Compaction in LLMs and Agents</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08032</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08032' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[16]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08681</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08681' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[17]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>SLORR: Simple and Efficient In-Training Low-Rank Regularization</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08754</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08754' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[18]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Different Teachers, Different Capabilities: Sub-1B On-Device Distillation for Structured Text Enrichment</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08268</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08268' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[19]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>DominoTree: Conditional Tree-Structured Drafting with Domino for Speculative Decoding</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08642</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08642' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[20]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>It Takes a MAESTRO To Prune Bad Experts</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08601</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08601' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[21]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>On the Limitations of Non-GPU AI Accelerators for Large-Model Inference: A Field Study of MoE and Multimodal Serving on Huawei Ascend</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08215</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08215' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[22]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Empirical Analysis of GPU Frequency Behavior Under ML Workloads</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08307</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08307' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[23]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>KronQ: LLM Quantization via Kronecker-Factored Hessian</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.07964</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07964' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[24]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Infinity-Parser2 Technical Report</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.07836</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07836' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[25]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Uncertainty-gated selection for block-sparse attention</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.07724</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07724' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[26]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>PGD-NO: A Neural Operator with Precomputed Geometry Decomposition for 3D Million-scale Physics Simulations</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08025</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08025' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[27]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Tool-Making and Self-Evolving LLM Agents in Low-Latency Systems</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08010</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08010' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[28]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Aleena: Alignment Agent for Research Software Engineering Collaborations</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08043</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08043' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[29]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08186</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08186' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr><tr><td style='padding:10px 12px;border:1px solid #e5e7eb;'>[30]</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'>Prompt Compression via Activation Aggregation</td><td style='padding:10px 12px;border:1px solid #e5e7eb;font-family:monospace;font-size:13px;'>2607.08399</td><td style='padding:10px 12px;border:1px solid #e5e7eb;'><a href='https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08399' style='color:#2563eb;font-weight:600;'>在论文主页打开</a></td></tr></tbody></table>
+</section>
+<article class="digest-body" style="background:#fff;border-radius:12px;padding:24px 26px 32px;box-shadow:0 4px 24px rgba(15,23,42,0.06);">
+<style type="text/css">
+.digest-body h2 { font-size:18px; color:#111827; margin:26px 0 12px; padding-bottom:8px; border-bottom:2px solid #cbd5e1; font-weight:700; }
+.digest-body h3 { font-size:15px; color:#1f2937; margin:18px 0 10px; font-weight:600; }
+.digest-body h4 { font-size:14px; color:#374151; margin:14px 0 8px; font-weight:600; }
+.digest-body p { margin:10px 0; line-height:1.65; }
+.digest-body ul, .digest-body ol { margin:10px 0; padding-left:22px; }
+.digest-body li { margin:5px 0; }
+.digest-body table { border-collapse:collapse; width:100%; margin:16px 0; font-size:13px; }
+.digest-body th, .digest-body td { border:1px solid #e5e7eb; padding:10px 12px; vertical-align:top; }
+.digest-body th { background:#f3f4f6; font-weight:600; color:#111827; }
+.digest-body hr { border:none; border-top:1px solid #e5e7eb; margin:22px 0; }
+.digest-body blockquote { margin:12px 0; padding:10px 14px; border-left:4px solid #93c5fd; background:#f8fafc; color:#475569; }
+.digest-body a { color:#2563eb; }
+.digest-body code { font-size:13px; background:#f1f5f9; padding:2px 6px; border-radius:4px; }
+.digest-body pre { background:#1e293b; color:#e2e8f0; padding:14px; border-radius:8px; overflow-x:auto; font-size:13px; }
+.digest-body pre code { background:transparent; color:inherit; padding:0; }
+</style>
+<h2>当日文献池编号一览</h2>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题目</th>
+<th>arXiv ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08690">1</a></td>
+<td>A Practical Investigation of Training-free Relaxed Speculative Decoding</td>
+<td>2607.08690</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07820">2</a></td>
+<td>DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment</td>
+<td>2607.07820</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08740">3</a></td>
+<td>Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows</td>
+<td>2607.08740</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07882">4</a></td>
+<td>Bug Report Specification Refinement with Trajectory Guidance for Automated Program Repair</td>
+<td>2607.07882</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07718">5</a></td>
+<td>LLT: Local Linear Transformer for PDE Operator Learning</td>
+<td>2607.07718</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07719">6</a></td>
+<td>ReCoLoRA: Spectrum-Aware Recursive Consolidation for Continual LLM Fine-Tuning</td>
+<td>2607.07719</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08029">7</a></td>
+<td>Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment</td>
+<td>2607.08029</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08255">8</a></td>
+<td>Compete Then Collaborate: Frontier AI Teachers Build a Verifiable Curriculum to Improve a Coding Student Beyond Imitation</td>
+<td>2607.08255</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07862">9</a></td>
+<td>CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems</td>
+<td>2607.07862</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08161">10</a></td>
+<td>SQuaD-SQL: Efficient Text-to-SQL with Small Language Models via LLM-Guided Knowledge Distillation</td>
+<td>2607.08161</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08313">11</a></td>
+<td>Adaptive Row Selection Meets Asynchrony in Randomized Kaczmarz</td>
+<td>2607.08313</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08565">12</a></td>
+<td>SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling</td>
+<td>2607.08565</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08373">13</a></td>
+<td>Self-Adaptive Anomaly Detection with Reinforcement Learning and Human Feedback in Connected Vehicles</td>
+<td>2607.08373</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08057">14</a></td>
+<td>Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization</td>
+<td>2607.08057</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08032">15</a></td>
+<td>What to Keep, What to Forget: A Rate–Distortion View of Memory Compaction in LLMs and Agents</td>
+<td>2607.08032</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08681">16</a></td>
+<td>SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets</td>
+<td>2607.08681</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08754">17</a></td>
+<td>SLORR: Simple and Efficient In-Training Low-Rank Regularization</td>
+<td>2607.08754</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08268">18</a></td>
+<td>Different Teachers, Different Capabilities: Sub-1B On-Device Distillation for Structured Text Enrichment</td>
+<td>2607.08268</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08642">19</a></td>
+<td>DominoTree: Conditional Tree-Structured Drafting with Domino for Speculative Decoding</td>
+<td>2607.08642</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08601">20</a></td>
+<td>It Takes a MAESTRO To Prune Bad Experts</td>
+<td>2607.08601</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08215">21</a></td>
+<td>On the Limitations of Non-GPU AI Accelerators for Large-Model Inference: A Field Study of MoE and Multimodal Serving on Huawei Ascend</td>
+<td>2607.08215</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08307">22</a></td>
+<td>Empirical Analysis of GPU Frequency Behavior Under ML Workloads</td>
+<td>2607.08307</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07964">23</a></td>
+<td>KronQ: LLM Quantization via Kronecker-Factored Hessian</td>
+<td>2607.07964</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07836">24</a></td>
+<td>Infinity-Parser2 Technical Report</td>
+<td>2607.07836</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07724">25</a></td>
+<td>Uncertainty-gated selection for block-sparse attention</td>
+<td>2607.07724</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08025">26</a></td>
+<td>PGD-NO: A Neural Operator with Precomputed Geometry Decomposition for 3D Million-scale Physics Simulations</td>
+<td>2607.08025</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08010">27</a></td>
+<td>Tool-Making and Self-Evolving LLM Agents in Low-Latency Systems</td>
+<td>2607.08010</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08043">28</a></td>
+<td>Aleena: Alignment Agent for Research Software Engineering Collaborations</td>
+<td>2607.08043</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08186">29</a></td>
+<td>Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models</td>
+<td>2607.08186</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08399">30</a></td>
+<td>Prompt Compression via Activation Aggregation</td>
+<td>2607.08399</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>一、三篇论文方向与六个创新点</h2>
+<h3>论文方向一：投机解码中草稿模型的松弛验证与条件树状草稿生成</h3>
+<p><strong>拟定论文题目：</strong> 面向训练无关加速的投机解码：松弛验证与条件树状草稿生成协同优化</p>
+<p><strong>论文核心问题：</strong> 如何在无需重训草稿模型的前提下，通过松弛验证与条件树状草稿生成协同设计，提升投机解码的接受长度与推理吞吐。</p>
+<h4>创新点一：松弛验证与草稿模型能力约束的协同建模</h4>
+<p>大多数现有方法将投机解码的验证过程设计为无损拒绝采样，严格保持目标LLM的采样分布，但这一约束限制了草稿模型的选择范围，使得只有与目标模型分布高度匹配的草稿模型才能获得有效加速<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08690">1</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08057">14</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08032">15</a>。少数现有方法提出松弛验证策略，允许在验证阶段放宽分布匹配的严格性以换取更高的接受率，但这些方法往往假设草稿模型本身是好的语言模型，不适用于轻量级专用多token预测草稿器<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08690">1</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08642">19</a>。为此，本文提出一种松弛验证与草稿模型能力约束的协同建模方法，将草稿模型的能力边界（如词汇预测质量、上下文理解深度）显式编码为验证阶段的松弛参数，使得轻量级专用草稿器也能在松弛验证框架下获得可观的加速收益。</p>
+<ul>
+<li><strong>创新类型：</strong> 问题建模创新 + 方法设计创新</li>
+<li><strong>创新性判断：</strong> 池内文献<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08690">1</a>系统研究了松弛验证但指出其对草稿模型能力的高要求，<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08642">19</a>提出了条件树状草稿生成但未与松弛验证协同建模，<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08057">14</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08032">15</a>从系统视角综述了KV缓存优化但未涉及验证松弛。本文创新点在于将草稿模型能力约束作为松弛验证的设计变量，填补了现有研究空白。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08690">1</a></td>
+<td>A Practical Investigation of Training-free Relaxed Speculative Decoding</td>
+<td>系统研究松弛验证技术，指出其要求草稿模型是好的语言模型</td>
+<td>支撑大多数现有方法（松弛验证的局限性）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08057">14</a></td>
+<td>Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization</td>
+<td>综述KV缓存优化，提及投机解码作为加速手段</td>
+<td>支撑大多数现有方法（无损验证为主流）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08032">15</a></td>
+<td>What to Keep, What to Forget: A Rate–Distortion View of Memory Compaction in LLMs and Agents</td>
+<td>从率失真视角分析记忆压缩，涉及投机解码中的验证取舍</td>
+<td>支撑大多数现有方法（验证策略的权衡）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08642">19</a></td>
+<td>DominoTree: Conditional Tree-Structured Drafting with Domino for Speculative Decoding</td>
+<td>提出条件树状草稿生成，但未与松弛验证协同</td>
+<td>支撑少数现有方法（树状草稿的进展）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08186">29</a></td>
+<td>Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models</td>
+<td>提出隐式解码扩展计算量，可视为草稿模型能力增强的替代路径</td>
+<td>支撑现有不足（草稿模型能力约束未被充分建模）</td>
+</tr>
+</tbody>
+</table>
+<h4>创新点二：条件树状草稿生成中的非因子化路径评分与GPU原生构建</h4>
+<p>大多数现有树状草稿生成方法基于因子化假设构建候选树，即假设每个位置的token分布独立于路径历史，这限制了草稿树对条件依赖关系的表达能力<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08690">1</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08642">19</a>。少数现有方法如Domino引入GRU因果校正使草稿token分布路径依赖，但DDTree等最佳优先树扩展方法仍基于因子化评分，无法利用非因子化校正信息<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08642">19</a>。为此，本文提出一种训练无关的最佳优先树构建方法，利用Domino的非因子化条件校正沿根到节点路径进行评分，并通过限制每节点候选top-M实现GPU原生CUDA图构建，在保持位精确性的同时实现高效树扩展。</p>
+<ul>
+<li><strong>创新类型：</strong> 方法设计创新 + 系统实现创新</li>
+<li><strong>创新性判断：</strong> 池内文献<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08642">19</a>提出了DominoTree但仅将其作为独立方法评估，未与松弛验证协同；<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08690">1</a>指出树状草稿的因子化局限但未提出解决方案。本文创新点在于将非因子化路径评分与GPU原生构建结合，且与创新点一的松弛验证形成协同。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08690">1</a></td>
+<td>A Practical Investigation of Training-free Relaxed Speculative Decoding</td>
+<td>指出树状草稿的因子化假设局限</td>
+<td>支撑大多数现有方法（因子化假设为主流）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08057">14</a></td>
+<td>Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization</td>
+<td>综述KV缓存优化，提及树状草稿的验证开销</td>
+<td>支撑大多数现有方法（树状草稿的系统开销）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08642">19</a></td>
+<td>DominoTree: Conditional Tree-Structured Drafting with Domino for Speculative Decoding</td>
+<td>提出DominoTree，使用非因子化校正但未与松弛验证协同</td>
+<td>支撑少数现有方法（非因子化校正的进展）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08186">29</a></td>
+<td>Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models</td>
+<td>提出隐式解码，可视为树状草稿的替代扩展策略</td>
+<td>支撑现有不足（树状草稿的GPU原生构建未被充分研究）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07862">9</a></td>
+<td>CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems</td>
+<td>提出CTA流水线，展示GPU原生执行范式对延迟的改善</td>
+<td>支撑本文差异（GPU原生构建的可行性）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>该论文两个创新点之间的关系：</strong><br />
+创新点一解决“如何设计松弛验证以适配轻量级草稿模型”，创新点二解决“如何构建非因子化树状草稿以提升接受长度”。二者属于同一篇论文主题（投机解码加速），但分别对应验证策略与草稿生成两个技术层面，逻辑上形成递进：松弛验证放宽了草稿模型约束，非因子化树状草稿则在该约束下最大化接受长度。</p>
+<p><strong>建议实验设计：</strong><br />
+- <strong>对比方法：</strong> 标准投机解码、DDTree、DominoTree、松弛投机解码<br />
+- <strong>实验数据或场景：</strong> Qwen3-4B作为目标模型，轻量级专用多token预测器作为草稿模型，在8个基准数据集上评估<br />
+- <strong>评价指标：</strong> 接受长度、端到端加速比、草稿模型能力评估开销<br />
+- <strong>消融实验：</strong> 松弛参数敏感性分析、树深度与候选top-M的影响、GPU原生构建与PyTorch参考实现的性能对比</p>
+<hr />
+<h3>论文方向二：LLM服务系统中的调度、缓存与资源管理</h3>
+<p><strong>拟定论文题目：</strong> 面向Agent工作负载的LLM服务系统：会话感知调度与KV缓存协同优化</p>
+<p><strong>论文核心问题：</strong> 如何在Agent工作负载的高KV复用率与负载均衡之间取得平衡，同时通过KV缓存压缩降低内存开销。</p>
+<h4>创新点三：会话感知的负载均衡调度策略</h4>
+<p>大多数现有LLM调度方法优先将请求路由到缓存了其KV的实例以最大化复用率，但这会导致少数实例过载而其余实例空闲，限制了集群的整体吞吐<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08565">12</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08057">14</a>。少数现有方法意识到负载均衡的重要性，但往往以牺牲KV复用为代价，未能利用Agent工作负载中请求间的高会话局部性<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08565">12</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08032">15</a>。为此，本文提出一种会话感知的负载均衡调度策略，利用Agent工作负载中同一会话内请求的局部性，仅对会话中的首个请求进行负载均衡路由，后续请求则优先路由到缓存了会话KV的实例，从而在不显著牺牲KV复用率的前提下实现负载均衡。</p>
+<ul>
+<li><strong>创新类型：</strong> 问题建模创新 + 方法设计创新</li>
+<li><strong>创新性判断：</strong> 池内文献<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08565">12</a>系统研究了Agent工作负载的调度问题，指出现有调度器过度追求KV复用导致负载不均；<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08057">14</a>综述了KV缓存优化但未涉及调度与负载均衡的协同；<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08032">15</a>从率失真视角分析记忆压缩但未涉及调度策略。本文创新点在于利用会话局部性实现负载均衡与KV复用的协同。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08565">12</a></td>
+<td>SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling</td>
+<td>系统研究Agent工作负载调度，指出负载均衡与KV复用的矛盾</td>
+<td>支撑大多数现有方法（过度追求KV复用）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08057">14</a></td>
+<td>Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization</td>
+<td>综述KV缓存优化，提及调度策略</td>
+<td>支撑大多数现有方法（调度与缓存分离）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08032">15</a></td>
+<td>What to Keep, What to Forget: A Rate–Distortion View of Memory Compaction in LLMs and Agents</td>
+<td>从率失真视角分析记忆压缩，涉及KV缓存管理</td>
+<td>支撑大多数现有方法（缓存管理的权衡）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07862">9</a></td>
+<td>CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems</td>
+<td>提出CTA流水线，展示多GPU系统的延迟优化</td>
+<td>支撑少数现有方法（多GPU调度）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08010">27</a></td>
+<td>Tool-Making and Self-Evolving LLM Agents in Low-Latency Systems</td>
+<td>提出工具制作流水线，展示Agent工作负载的延迟优化</td>
+<td>支撑现有不足（Agent工作负载的调度特殊性未被充分研究）</td>
+</tr>
+</tbody>
+</table>
+<h4>创新点四：基于率失真理论的KV缓存压缩与保留策略协同优化</h4>
+<p>大多数现有KV缓存压缩方法独立设计驱逐策略或量化策略，未将两者置于统一的资源预算约束下进行联合优化<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08057">14</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08032">15</a>。少数现有方法从率失真视角统一分析记忆压缩问题，但主要停留在理论框架层面，缺乏可部署的联合优化算法<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08032">15</a>。为此，本文提出一种基于率失真理论的KV缓存压缩与保留策略协同优化方法，将驱逐与量化视为同一资源预算下的两种压缩操作，通过联合优化每层每头的压缩率与量化精度，在给定内存预算下最大化下游任务效用。</p>
+<ul>
+<li><strong>创新类型：</strong> 性能预测创新 + 优化求解创新</li>
+<li><strong>创新性判断：</strong> 池内文献<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08057">14</a>综述了KV缓存优化但未涉及率失真框架；<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08032">15</a>提出了率失真视角但未给出具体算法；<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07724">25</a>提出了不确定性门控选择但仅针对注意力稀疏化。本文创新点在于将率失真理论转化为可部署的联合优化算法。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08057">14</a></td>
+<td>Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization</td>
+<td>综述KV缓存优化，分类讨论驱逐与量化</td>
+<td>支撑大多数现有方法（驱逐与量化独立设计）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08032">15</a></td>
+<td>What to Keep, What to Forget: A Rate–Distortion View of Memory Compaction in LLMs and Agents</td>
+<td>提出率失真视角统一分析记忆压缩</td>
+<td>支撑少数现有方法（理论框架的进展）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07724">25</a></td>
+<td>Uncertainty-gated selection for block-sparse attention</td>
+<td>提出不确定性门控选择，优化注意力稀疏化</td>
+<td>支撑少数现有方法（注意力稀疏化的进展）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08399">30</a></td>
+<td>Prompt Compression via Activation Aggregation</td>
+<td>提出激活聚合压缩提示，展示压缩与效用的权衡</td>
+<td>支撑现有不足（率失真联合优化算法缺失）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07964">23</a></td>
+<td>KronQ: LLM Quantization via Kronecker-Factored Hessian</td>
+<td>提出基于Hessian的量化，展示量化精度与效用的关系</td>
+<td>支撑本文差异（量化与驱逐的联合优化可行性）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>该论文两个创新点之间的关系：</strong><br />
+创新点三解决“如何调度请求以平衡负载与KV复用”，创新点四解决“如何在给定内存预算下联合优化KV缓存压缩”。二者属于同一篇论文主题（LLM服务系统的资源管理），但分别对应调度层与缓存层，逻辑上形成递进：调度策略决定了KV缓存的访问模式，缓存压缩策略则在该模式下最大化资源效率。</p>
+<p><strong>建议实验设计：</strong><br />
+- <strong>对比方法：</strong> 标准KV复用优先调度、负载均衡调度、会话感知调度；独立驱逐/量化、联合优化<br />
+- <strong>实验数据或场景：</strong> BAILIAN生产轨迹中的Agent工作负载，多GPU集群<br />
+- <strong>评价指标：</strong> 集群吞吐、KV复用率、负载均衡度、内存占用、下游任务效用<br />
+- <strong>消融实验：</strong> 会话窗口大小的影响、率失真预算分配策略、联合优化与独立优化的性能对比</p>
+<hr />
+<h3>论文方向三：模型压缩、量化与持续微调</h3>
+<p><strong>拟定论文题目：</strong> 面向持续微调的结构化压缩：低秩正则化与适配器递归合并</p>
+<p><strong>论文核心问题：</strong> 如何在持续微调过程中通过低秩正则化提升模型可压缩性，同时通过适配器递归合并避免灾难性遗忘。</p>
+<h4>创新点五：训练时低秩正则化与可压缩性诱导</h4>
+<p>大多数现有低秩压缩方法在训练后对预训练模型进行分解，但现代模型往往不天然适合激进分解，导致压缩后精度显著下降<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08754">17</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07964">23</a>。少数现有方法在训练过程中引入低秩正则化以提升可压缩性，但往往需要对模型架构进行修改（如引入额外可训练参数）或依赖有状态的缓存量（如SVD分解），增加了训练复杂度<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08754">17</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07719">6</a>。为此，本文提出一种无状态、架构保持的训练时低秩正则化框架，基于Hoyer稀疏度量和核范数的GPU友好近似，直接对原始权重矩阵进行正则化，在不修改架构的前提下诱导权重矩阵的低秩结构。</p>
+<ul>
+<li><strong>创新类型：</strong> 方法设计创新 + 特征表示创新</li>
+<li><strong>创新性判断：</strong> 池内文献<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08754">17</a>提出了SLORR框架但仅评估了ImageNet分类任务；<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07964">23</a>提出了基于Hessian的量化但未涉及训练时正则化；<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07719">6</a>提出了ReCoLoRA但专注于持续微调而非可压缩性诱导。本文创新点在于将SLORR的低秩正则化思想扩展到LLM持续微调场景，并验证其对后续压缩的促进作用。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08754">17</a></td>
+<td>SLORR: Simple and Efficient In-Training Low-Rank Regularization</td>
+<td>提出SLORR框架，使用Hoyer稀疏度量和核范数正则化</td>
+<td>支撑大多数现有方法（训练后压缩为主流）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07964">23</a></td>
+<td>KronQ: LLM Quantization via Kronecker-Factored Hessian</td>
+<td>提出基于Hessian的量化，展示量化与压缩的关系</td>
+<td>支撑大多数现有方法（量化压缩）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07719">6</a></td>
+<td>ReCoLoRA: Spectrum-Aware Recursive Consolidation for Continual LLM Fine-Tuning</td>
+<td>提出ReCoLoRA，专注于持续微调中的适配器管理</td>
+<td>支撑少数现有方法（持续微调中的压缩）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08029">7</a></td>
+<td>Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment</td>
+<td>系统分析VLM量化，展示组件级量化敏感性</td>
+<td>支撑少数现有方法（量化敏感性分析）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08601">20</a></td>
+<td>It Takes a MAESTRO To Prune Bad Experts</td>
+<td>提出MAESTRO，展示MoE专家剪枝的全局重要性评估</td>
+<td>支撑现有不足（训练时正则化与压缩的协同未被充分研究）</td>
+</tr>
+</tbody>
+</table>
+<h4>创新点六：谱感知的适配器递归合并与遗忘缓解</h4>
+<p>大多数现有持续微调方法在任务序列上堆叠LoRA适配器，导致新任务逐渐覆盖旧任务的知识，引发灾难性遗忘<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07719">6</a><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08255">8</a>。少数现有方法如ReCoLoRA通过递归分解当前有效权重来保留旧任务知识，但主要依赖SVD分解和肘部准则选择有效秩，缺乏对适配器谱结构的细粒度分析<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07719">6</a>。为此，本文提出一种谱感知的适配器递归合并方法，在每次新任务开始前对当前有效权重进行谱分解，将主成分空间（对应已学习知识）冻结为残差，仅在新适配器中学习残差空间中的新知识，并通过谱分析动态调整每层的有效秩分配。</p>
+<ul>
+<li><strong>创新类型：</strong> 方法设计创新 + 泛化迁移创新</li>
+<li><strong>创新性判断：</strong> 池内文献<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07719">6</a>提出了ReCoLoRA但主要依赖SVD和肘部准则；<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08255">8</a>提出了多教师知识蒸馏但未涉及持续微调；<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08161">10</a>提出了知识蒸馏但针对Text-to-SQL任务。本文创新点在于引入更细粒度的谱分析（如奇异值分布熵、谱间隙）来指导适配器合并，提升遗忘缓解效果。</li>
+</ul>
+<p><strong>文献支撑：</strong></p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>论文题名</th>
+<th>主要内容</th>
+<th>支撑作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07719">6</a></td>
+<td>ReCoLoRA: Spectrum-Aware Recursive Consolidation for Continual LLM Fine-Tuning</td>
+<td>提出ReCoLoRA，使用SVD和肘部准则进行递归合并</td>
+<td>支撑大多数现有方法（堆叠适配器导致遗忘）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08255">8</a></td>
+<td>Compete Then Collaborate: Frontier AI Teachers Build a Verifiable Curriculum to Improve a Coding Student Beyond Imitation</td>
+<td>提出多教师竞争-协作框架，展示知识蒸馏的局限性</td>
+<td>支撑大多数现有方法（知识蒸馏的遗忘问题）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08161">10</a></td>
+<td>SQuaD-SQL: Efficient Text-to-SQL with Small Language Models via LLM-Guided Knowledge Distillation</td>
+<td>提出知识蒸馏方法，展示参数高效微调</td>
+<td>支撑少数现有方法（参数高效微调）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08754">17</a></td>
+<td>SLORR: Simple and Efficient In-Training Low-Rank Regularization</td>
+<td>提出低秩正则化，展示谱分析与压缩的关系</td>
+<td>支撑少数现有方法（谱分析的进展）</td>
+</tr>
+<tr>
+<td><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08601">20</a></td>
+<td>It Takes a MAESTRO To Prune Bad Experts</td>
+<td>提出MAESTRO，展示全局重要性评估</td>
+<td>支撑现有不足（谱感知的适配器合并未被充分研究）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>该论文两个创新点之间的关系：</strong><br />
+创新点五解决“如何在训练时诱导模型的可压缩性”，创新点六解决“如何在持续微调中通过谱感知合并避免遗忘”。二者属于同一篇论文主题（模型压缩与持续微调），但分别对应训练时正则化与微调时适配器管理，逻辑上形成递进：低秩正则化使模型更易于压缩，谱感知合并则在该基础上实现知识保留。</p>
+<p><strong>建议实验设计：</strong><br />
+- <strong>对比方法：</strong> LoRA、PiSSA、AdaLoRA、ReCoLoRA<br />
+- <strong>实验数据或场景：</strong> 6任务持续GLUE序列，4个7-8B骨干模型<br />
+- <strong>评价指标：</strong> 最终平均得分、遗忘率、压缩率、训练开销<br />
+- <strong>消融实验：</strong> 谱分析粒度的影响（奇异值分布熵 vs. 肘部准则）、正则化强度的影响、适配器秩分配策略</p>
+<hr />
+<h2>二、三篇论文方向去重矩阵</h2>
+<table>
+<thead>
+<tr>
+<th>论文方向</th>
+<th>拟定论文题目</th>
+<th>核心问题</th>
+<th>两个创新点</th>
+<th>核心方法</th>
+<th>主要实验</th>
+<th>与其他论文方向的区别</th>
+<th>重复风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>论文一：投机解码与草稿生成优化</td>
+<td>面向训练无关加速的投机解码：松弛验证与条件树状草稿生成协同优化</td>
+<td>如何在无需重训草稿模型的前提下提升接受长度与推理吞吐</td>
+<td>松弛验证与草稿模型能力约束协同建模；非因子化树状草稿路径评分与GPU原生构建</td>
+<td>松弛验证参数化、非因子化树状草稿、GPU原生CUDA图构建</td>
+<td>Qwen3-4B目标模型，轻量级专用草稿器，8基准数据集</td>
+<td>关注推理加速中的草稿-验证协同，不涉及调度或压缩</td>
+<td>低</td>
+</tr>
+<tr>
+<td>论文二：LLM服务系统中的调度、缓存与资源管理</td>
+<td>面向Agent工作负载的LLM服务系统：会话感知调度与KV缓存协同优化</td>
+<td>如何在Agent工作负载的高KV复用率与负载均衡之间取得平衡</td>
+<td>会话感知负载均衡调度；率失真驱动的KV缓存压缩与保留协同优化</td>
+<td>会话局部性利用、率失真联合优化</td>
+<td>BAILIAN生产轨迹，多GPU集群</td>
+<td>关注服务系统的调度与缓存管理，不涉及草稿生成或持续微调</td>
+<td>低</td>
+</tr>
+<tr>
+<td>论文三：模型压缩、量化与持续微调</td>
+<td>面向持续微调的结构化压缩：低秩正则化与适配器递归合并</td>
+<td>如何在持续微调过程中提升可压缩性并避免遗忘</td>
+<td>训练时低秩正则化诱导可压缩性；谱感知适配器递归合并</td>
+<td>Hoyer稀疏度量和核范数正则化、谱分解与主成分冻结</td>
+<td>6任务持续GLUE序列，4个7-8B骨干模型</td>
+<td>关注模型压缩与持续微调的协同，不涉及推理加速或服务调度</td>
+<td>低</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>三、每篇论文内部创新点去重检查</h2>
+<table>
+<thead>
+<tr>
+<th>论文方向</th>
+<th>创新点一</th>
+<th>创新点二</th>
+<th>是否属于同一论文主题</th>
+<th>是否技术层面不同</th>
+<th>是否存在重复</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>论文一</td>
+<td>松弛验证与草稿模型能力约束协同建模</td>
+<td>非因子化树状草稿路径评分与GPU原生构建</td>
+<td>是</td>
+<td>是（验证策略 vs. 草稿生成）</td>
+<td>否</td>
+<td>可保留</td>
+</tr>
+<tr>
+<td>论文二</td>
+<td>会话感知负载均衡调度</td>
+<td>率失真驱动的KV缓存压缩与保留协同优化</td>
+<td>是</td>
+<td>是（调度层 vs. 缓存层）</td>
+<td>否</td>
+<td>可保留</td>
+</tr>
+<tr>
+<td>论文三</td>
+<td>训练时低秩正则化诱导可压缩性</td>
+<td>谱感知适配器递归合并</td>
+<td>是</td>
+<td>是（训练时正则化 vs. 微调时适配器管理）</td>
+<td>否</td>
+<td>可保留</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>四、参考文献总表（仅池内文献）</h2>
+<p><a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08690">1</a> A Practical Investigation of Training-free Relaxed Speculative Decoding. arXiv:2607.08690, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07820">2</a> DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment. arXiv:2607.07820, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08740">3</a> Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows. arXiv:2607.08740, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07882">4</a> Bug Report Specification Refinement with Trajectory Guidance for Automated Program Repair. arXiv:2607.07882, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07718">5</a> LLT: Local Linear Transformer for PDE Operator Learning. arXiv:2607.07718, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07719">6</a> ReCoLoRA: Spectrum-Aware Recursive Consolidation for Continual LLM Fine-Tuning. arXiv:2607.07719, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08029">7</a> Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment. arXiv:2607.08029, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08255">8</a> Compete Then Collaborate: Frontier AI Teachers Build a Verifiable Curriculum to Improve a Coding Student Beyond Imitation. arXiv:2607.08255, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07862">9</a> CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems. arXiv:2607.07862, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08161">10</a> SQuaD-SQL: Efficient Text-to-SQL with Small Language Models via LLM-Guided Knowledge Distillation. arXiv:2607.08161, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08313">11</a> Adaptive Row Selection Meets Asynchrony in Randomized Kaczmarz. arXiv:2607.08313, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08565">12</a> SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling. arXiv:2607.08565, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08373">13</a> Self-Adaptive Anomaly Detection with Reinforcement Learning and Human Feedback in Connected Vehicles. arXiv:2607.08373, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08057">14</a> Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization. arXiv:2607.08057, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08032">15</a> What to Keep, What to Forget: A Rate–Distortion View of Memory Compaction in LLMs and Agents. arXiv:2607.08032, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08681">16</a> SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets. arXiv:2607.08681, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08754">17</a> SLORR: Simple and Efficient In-Training Low-Rank Regularization. arXiv:2607.08754, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08268">18</a> Different Teachers, Different Capabilities: Sub-1B On-Device Distillation for Structured Text Enrichment. arXiv:2607.08268, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08642">19</a> DominoTree: Conditional Tree-Structured Drafting with Domino for Speculative Decoding. arXiv:2607.08642, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08601">20</a> It Takes a MAESTRO To Prune Bad Experts. arXiv:2607.08601, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08215">21</a> On the Limitations of Non-GPU AI Accelerators for Large-Model Inference: A Field Study of MoE and Multimodal Serving on Huawei Ascend. arXiv:2607.08215, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08307">22</a> Empirical Analysis of GPU Frequency Behavior Under ML Workloads. arXiv:2607.08307, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07964">23</a> KronQ: LLM Quantization via Kronecker-Factored Hessian. arXiv:2607.07964, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07836">24</a> Infinity-Parser2 Technical Report. arXiv:2607.07836, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.07724">25</a> Uncertainty-gated selection for block-sparse attention. arXiv:2607.07724, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08025">26</a> PGD-NO: A Neural Operator with Precomputed Geometry Decomposition for 3D Million-scale Physics Simulations. arXiv:2607.08025, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08010">27</a> Tool-Making and Self-Evolving LLM Agents in Low-Latency Systems. arXiv:2607.08010, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08043">28</a> Aleena: Alignment Agent for Research Software Engineering Collaborations. arXiv:2607.08043, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08186">29</a> Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models. arXiv:2607.08186, 2026.<br />
+<a href="https://FAUST-BENCHOU.github.io/daily-arXiv-ai-enhanced/index.html?date=2026-07-11&amp;paperId=2607.08399">30</a> Prompt Compression via Activation Aggregation. arXiv:2607.08399, 2026.</p>
+<hr />
+<h2>五、自检结果</h2>
+<ol>
+<li><strong>是否按照“三篇论文，每篇两个创新点，总共六个创新点”组织：</strong> 是</li>
+<li><strong>是否避免将一篇论文拆成六个创新点：</strong> 是</li>
+<li><strong>是否避免生成六篇论文各一个创新点：</strong> 是</li>
+<li><strong>每篇论文内部两个创新点是否属于同一论文主题：</strong> 是</li>
+<li><strong>每篇论文内部两个创新点是否互补而不重复：</strong> 是</li>
+<li><strong>三篇论文之间是否研究问题不同：</strong> 是</li>
+<li><strong>三篇论文之间是否核心方法不同：</strong> 是</li>
+<li><strong>三篇论文之间是否实验验证重点不同：</strong> 是</li>
+<li><strong>每个创新点是否都采用“大多数现有方法……少数现有方法……为此……”结构：</strong> 是</li>
+<li><strong>每个创新点是否至少引用3篇池内文献：</strong> 是（每个创新点引用5篇池内文献）</li>
+<li><strong>是否说明每篇文献的支撑作用：</strong> 是</li>
+<li><strong>是否避免“首次提出”“填补空白”等绝对化表述：</strong> 是</li>
+<li><strong>是否建立三篇论文方向去重矩阵：</strong> 是</li>
+<li><strong>是否建立每篇论文内部创新点去重检查表：</strong> 是</li>
+</ol>
+<p style="margin-top:28px;padding-top:16px;border-top:1px solid #e5e7eb;font-size:12px;color:#94a3b8;">内容由 AI 生成，请仔细甄别。</p>
+</article>
+</div>
+</body>
+</html>

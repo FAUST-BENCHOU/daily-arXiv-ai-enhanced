@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-11",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "投机解码与草稿生成优化",
+      "blurb": "围绕投机解码中草稿模型的松弛验证、条件树状草稿生成与训练无关加速技术，探索无需重训即可提升 LLM 推理吞吐与接受长度的新范式。"
+    },
+    {
+      "title": "LLM 服务系统中的调度、缓存与资源管理",
+      "blurb": "面向 Agent 工作负载与多 GPU 系统的请求调度、KV 缓存优化与内存压缩策略，在负载均衡、延迟约束与资源效率之间寻找系统级平衡。"
+    },
+    {
+      "title": "模型压缩、量化与持续微调",
+      "blurb": "从低秩正则化、后训练量化到持续微调中的适配器合并，研究在保持模型能力的前提下降低部署成本与遗忘风险的结构化压缩方法。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2607.08690",
+      "title": "A Practical Investigation of Training-free Relaxed Speculative Decoding"
+    },
+    {
+      "idx": 2,
+      "id": "2607.07820",
+      "title": "DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment"
+    },
+    {
+      "idx": 3,
+      "id": "2607.08740",
+      "title": "Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows"
+    },
+    {
+      "idx": 4,
+      "id": "2607.07882",
+      "title": "Bug Report Specification Refinement with Trajectory Guidance for Automated Program Repair"
+    },
+    {
+      "idx": 5,
+      "id": "2607.07718",
+      "title": "LLT: Local Linear Transformer for PDE Operator Learning"
+    },
+    {
+      "idx": 6,
+      "id": "2607.07719",
+      "title": "ReCoLoRA: Spectrum-Aware Recursive Consolidation for Continual LLM Fine-Tuning"
+    },
+    {
+      "idx": 7,
+      "id": "2607.08029",
+      "title": "Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment"
+    },
+    {
+      "idx": 8,
+      "id": "2607.08255",
+      "title": "Compete Then Collaborate: Frontier AI Teachers Build a Verifiable Curriculum to Improve a Coding Student Beyond Imitation"
+    },
+    {
+      "idx": 9,
+      "id": "2607.07862",
+      "title": "CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems"
+    },
+    {
+      "idx": 10,
+      "id": "2607.08161",
+      "title": "SQuaD-SQL: Efficient Text-to-SQL with Small Language Models via LLM-Guided Knowledge Distillation"
+    },
+    {
+      "idx": 11,
+      "id": "2607.08313",
+      "title": "Adaptive Row Selection Meets Asynchrony in Randomized Kaczmarz"
+    },
+    {
+      "idx": 12,
+      "id": "2607.08565",
+      "title": "SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling"
+    },
+    {
+      "idx": 13,
+      "id": "2607.08373",
+      "title": "Self-Adaptive Anomaly Detection with Reinforcement Learning and Human Feedback in Connected Vehicles"
+    },
+    {
+      "idx": 14,
+      "id": "2607.08057",
+      "title": "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization"
+    },
+    {
+      "idx": 15,
+      "id": "2607.08032",
+      "title": "What to Keep, What to Forget: A Rate--Distortion View of Memory Compaction in LLMs and Agents"
+    },
+    {
+      "idx": 16,
+      "id": "2607.08681",
+      "title": "SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets"
+    },
+    {
+      "idx": 17,
+      "id": "2607.08754",
+      "title": "SLORR: Simple and Efficient In-Training Low-Rank Regularization"
+    },
+    {
+      "idx": 18,
+      "id": "2607.08268",
+      "title": "Different Teachers, Different Capabilities: Sub-1B On-Device Distillation for Structured Text Enrichment"
+    },
+    {
+      "idx": 19,
+      "id": "2607.08642",
+      "title": "DominoTree: Conditional Tree-Structured Drafting with Domino for Speculative Decoding"
+    },
+    {
+      "idx": 20,
+      "id": "2607.08601",
+      "title": "It Takes a MAESTRO To Prune Bad Experts"
+    },
+    {
+      "idx": 21,
+      "id": "2607.08215",
+      "title": "On the Limitations of Non-GPU AI Accelerators for Large-Model Inference: A Field Study of MoE and Multimodal Serving on Huawei Ascend"
+    },
+    {
+      "idx": 22,
+      "id": "2607.08307",
+      "title": "Empirical Analysis of GPU Frequency Behavior Under ML Workloads"
+    },
+    {
+      "idx": 23,
+      "id": "2607.07964",
+      "title": "KronQ: LLM Quantization via Kronecker-Factored Hessian"
+    },
+    {
+      "idx": 24,
+      "id": "2607.07836",
+      "title": "Infinity-Parser2 Technical Report"
+    },
+    {
+      "idx": 25,
+      "id": "2607.07724",
+      "title": "Uncertainty-gated selection for block-sparse attention"
+    },
+    {
+      "idx": 26,
+      "id": "2607.08025",
+      "title": "PGD-NO: A Neural Operator with Precomputed Geometry Decomposition for 3D Million-scale Physics Simulations"
+    },
+    {
+      "idx": 27,
+      "id": "2607.08010",
+      "title": "Tool-Making and Self-Evolving LLM Agents in Low-Latency Systems"
+    },
+    {
+      "idx": 28,
+      "id": "2607.08043",
+      "title": "Aleena: Alignment Agent for Research Software Engineering Collaborations"
+    },
+    {
+      "idx": 29,
+      "id": "2607.08186",
+      "title": "Hidden Decoding at Scale: Latent Computation Scaling for Large Language Models"
+    },
+    {
+      "idx": 30,
+      "id": "2607.08399",
+      "title": "Prompt Compression via Activation Aggregation"
+    }
+  ]
+}
