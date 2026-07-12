@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-12",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理服务中的KV缓存与调度优化",
+      "blurb": "围绕LLM推理服务的KV缓存基础设施、请求调度策略与资源分配，从系统行为视角提出三篇独立论文方向：缓存感知调度、预算感知模型路由、以及面向Agent工作负载的会话级调度。"
+    },
+    {
+      "title": "大语言模型高效压缩与量化部署",
+      "blurb": "聚焦LLM的低比特量化、结构化剪枝与参数高效微调，从梯度协方差驱动的量化、MoE专家剪枝的全局重要性建模、以及持续微调中的谱感知递归合并三个方向展开。"
+    },
+    {
+      "title": "代码生成与软件工程中的智能Agent系统",
+      "blurb": "围绕代码生成、性能优化与安全加固中的Agent能力，提出过程相似性检索增强生成、性能优化全流程基准与评估、以及功能与安全联合优化的任务向量方法三个论文方向。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2607.07953",
+      "title": "Linear Attention Architectures: Mechanisms, Trade-offs, and Cross-Layer Routing"
+    },
+    {
+      "idx": 2,
+      "id": "2607.08124",
+      "title": "TTHE: Test-Time Harness Evolution"
+    },
+    {
+      "idx": 3,
+      "id": "2607.07883",
+      "title": "Nigeria Machinery: A Low-Resource Industrial Dataset with a Domain-Grounded Reasoning Layer"
+    },
+    {
+      "idx": 4,
+      "id": "2607.07724",
+      "title": "Uncertainty-gated selection for block-sparse attention"
+    },
+    {
+      "idx": 5,
+      "id": "2607.08029",
+      "title": "Rethinking Small VLM Quantization: From Component-Wise Analysis to Hardware-Aware Edge Deployment"
+    },
+    {
+      "idx": 6,
+      "id": "2607.08691",
+      "title": "ProjAgent: Procedural Similarity Retrieval for Repository-Level Code Generation"
+    },
+    {
+      "idx": 7,
+      "id": "2607.08665",
+      "title": "Resample or Reroute? Budget-Aware Test-Time Model Selection for Large Language Models"
+    },
+    {
+      "idx": 8,
+      "id": "2607.07964",
+      "title": "KronQ: LLM Quantization via Kronecker-Factored Hessian"
+    },
+    {
+      "idx": 9,
+      "id": "2607.07719",
+      "title": "ReCoLoRA: Spectrum-Aware Recursive Consolidation for Continual LLM Fine-Tuning"
+    },
+    {
+      "idx": 10,
+      "id": "2607.08057",
+      "title": "Towards Efficient Large Language Model Serving: A Survey on System-Aware KV Cache Optimization"
+    },
+    {
+      "idx": 11,
+      "id": "2607.08255",
+      "title": "Compete Then Collaborate: Frontier AI Teachers Build a Verifiable Curriculum to Improve a Coding Student Beyond Imitation"
+    },
+    {
+      "idx": 12,
+      "id": "2607.08643",
+      "title": "BiSCo-LLM: Lookup-Free Binary Spherical Coding for Extreme Low-Bit Large Language Model Compression"
+    },
+    {
+      "idx": 13,
+      "id": "2607.08043",
+      "title": "Aleena: Alignment Agent for Research Software Engineering Collaborations"
+    },
+    {
+      "idx": 14,
+      "id": "2607.08313",
+      "title": "Adaptive Row Selection Meets Asynchrony in Randomized Kaczmarz"
+    },
+    {
+      "idx": 15,
+      "id": "2607.07836",
+      "title": "Infinity-Parser2 Technical Report"
+    },
+    {
+      "idx": 16,
+      "id": "2607.08268",
+      "title": "Different Teachers, Different Capabilities: Sub-1B On-Device Distillation for Structured Text Enrichment"
+    },
+    {
+      "idx": 17,
+      "id": "2607.08077",
+      "title": "Modular Pretraining Enables Access Control"
+    },
+    {
+      "idx": 18,
+      "id": "2607.08032",
+      "title": "What to Keep, What to Forget: A Rate--Distortion View of Memory Compaction in LLMs and Agents"
+    },
+    {
+      "idx": 19,
+      "id": "2607.08662",
+      "title": "WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search"
+    },
+    {
+      "idx": 20,
+      "id": "2607.08006",
+      "title": "Toward a Unified GPU-Aware OpenSHMEM Specification"
+    },
+    {
+      "idx": 21,
+      "id": "2607.08025",
+      "title": "PGD-NO: A Neural Operator with Precomputed Geometry Decomposition for 3D Million-scale Physics Simulations"
+    },
+    {
+      "idx": 22,
+      "id": "2607.08601",
+      "title": "It Takes a MAESTRO To Prune Bad Experts"
+    },
+    {
+      "idx": 23,
+      "id": "2607.08368",
+      "title": "FedOPAL: One-Shot Federated Learning via Analytic Visual Prompt Tuning"
+    },
+    {
+      "idx": 24,
+      "id": "2607.07862",
+      "title": "CTA-Pipelining: A Latency-Oriented Spatial Scaling Method for Multi-GPU Systems"
+    },
+    {
+      "idx": 25,
+      "id": "2607.07744",
+      "title": "PERFOPT-Bench: Evaluating Coding Agents on Software Performance Optimization"
+    },
+    {
+      "idx": 26,
+      "id": "2607.08565",
+      "title": "SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling"
+    },
+    {
+      "idx": 27,
+      "id": "2607.07984",
+      "title": "Agentic Neural Architecture Search"
+    },
+    {
+      "idx": 28,
+      "id": "2607.07820",
+      "title": "DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment"
+    },
+    {
+      "idx": 29,
+      "id": "2607.07881",
+      "title": "Functional and Secure Code Generation with Task Vectors"
+    },
+    {
+      "idx": 30,
+      "id": "2607.08307",
+      "title": "Empirical Analysis of GPU Frequency Behavior Under ML Workloads"
+    }
+  ]
+}
