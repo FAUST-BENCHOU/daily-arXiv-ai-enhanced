@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-13",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "面向异构硬件与稀疏计算的 LLM 推理加速",
+      "blurb": "围绕 NPU 上的稀疏注意力、GPU 上的中等非结构化稀疏矩阵乘法、以及去同步化的张量并行推理，探索从算子级到系统级的推理效率提升路径。"
+    },
+    {
+      "title": "面向长程推理与多智能体协作的规划与资源分配",
+      "blurb": "针对 LLM agent 在长时域任务中的规划开销与多智能体协作中的通信瓶颈，提出图增强树搜索、拍卖式任务分配与轻量级数字孪生协调机制。"
+    },
+    {
+      "title": "面向 MoE 模型的高效训练与部署优化",
+      "blurb": "聚焦 MoE 架构在训练阶段的专家路由一致性损失设计、后训练阶段的稀疏微调与蒸馏策略，以及推理阶段的内存友好路由机制，降低模型部署成本。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2607.09375",
+      "title": "Mach-Mind-4-Flash Technical Report"
+    },
+    {
+      "idx": 2,
+      "id": "2607.09385",
+      "title": "STEEL: Sparsity-Aware Fused Attention for Energy-Efficient Long-Sequence Inference on AMD's XDNA NPU"
+    },
+    {
+      "idx": 3,
+      "id": "2607.09084",
+      "title": "A Survey on the Green Development of Large Models: From Resource-Efficient Architectures to Hardware-Software Co-Design"
+    },
+    {
+      "idx": 4,
+      "id": "2607.09076",
+      "title": "Neuro-Agentic Control: A Deep Learning-based LLM-Powered Agentic AI Framework for Controlling Security Controls"
+    },
+    {
+      "idx": 5,
+      "id": "2607.08981",
+      "title": "The Patchwork Problem in LLM-Generated Code"
+    },
+    {
+      "idx": 6,
+      "id": "2607.08938",
+      "title": "Better Harnesses, Smaller Models: Building 90% Cheaper Agents via Automated Harness Adaptation"
+    },
+    {
+      "idx": 7,
+      "id": "2607.09153",
+      "title": "KV-PRM: Efficient Process Reward Modeling via KV-Cache Transfer for Multi-Agent Test-Time Scaling"
+    },
+    {
+      "idx": 8,
+      "id": "2607.08960",
+      "title": "Eluna: An Agentic LLM System for Automating Warehouse Operations with Reasoning and Task Execution"
+    },
+    {
+      "idx": 9,
+      "id": "2607.09287",
+      "title": "Super-Tuning: From Activation-Aware Pruning to Sparse Fine-Tuning"
+    },
+    {
+      "idx": 10,
+      "id": "2607.08978",
+      "title": "Federated Low-Rank Koopman Learning for Multivariate Time-Series Anomaly Detection in IoT Systems"
+    },
+    {
+      "idx": 11,
+      "id": "2607.08894",
+      "title": "GATS: Graph-Augmented Tree Search with Layered World Models for Efficient Agent Planning"
+    },
+    {
+      "idx": 12,
+      "id": "2607.09330",
+      "title": "Communication-Efficient Digital-Twin Coordination for Heterogeneous LLM Embodied Agents over Computing Power Networks"
+    },
+    {
+      "idx": 13,
+      "id": "2607.09015",
+      "title": "Correlation-Aware Contextual Bandits with Surrogate Rewards for LLM Routing"
+    },
+    {
+      "idx": 14,
+      "id": "2607.09424",
+      "title": "A Sovereign, Open-Source Foundation Model for German and English"
+    },
+    {
+      "idx": 15,
+      "id": "2607.08964",
+      "title": "Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading"
+    },
+    {
+      "idx": 16,
+      "id": "2607.08991",
+      "title": "Sensitivity-Aware Thresholding and Token Routing for Activation Sparsification in Large Language Models"
+    },
+    {
+      "idx": 17,
+      "id": "2607.08930",
+      "title": "BlockServe: Block-Grained Continuous Batching for High-Throughput Diffusion LLM Serving"
+    },
+    {
+      "idx": 18,
+      "id": "2607.09224",
+      "title": "Git-Assistant: Planning-Based Support for Updating Git Repositories"
+    },
+    {
+      "idx": 19,
+      "id": "2607.08786",
+      "title": "Accelerating GPU Inference of Large Language Models with Moderately Unstructured Sparse Weight Matrices"
+    },
+    {
+      "idx": 20,
+      "id": "2607.08779",
+      "title": "Signed Symmetric Quantization for Few-Bit Integers"
+    },
+    {
+      "idx": 21,
+      "id": "2607.09322",
+      "title": "LongMedBench: Benchmarking Medical Agents for Long-Horizon Clinical Decision-Making"
+    },
+    {
+      "idx": 22,
+      "id": "2607.07738",
+      "title": "REFORGE: A Method for Benchmarking LLMs' Reverse Engineering Capabilities in Decompiled Binary Function Naming"
+    },
+    {
+      "idx": 23,
+      "id": "2607.08780",
+      "title": "Sticky Routing: Training MoE Models for Memory-Efficient Inference"
+    },
+    {
+      "idx": 24,
+      "id": "2607.09318",
+      "title": "EcoKube: Simulating Carbon-Aware Scheduling Policies in Heterogeneous Edge-Cloud Environments"
+    },
+    {
+      "idx": 25,
+      "id": "2607.09611",
+      "title": "Toward Real-Time Sentence-Level Sign Language Translation"
+    },
+    {
+      "idx": 26,
+      "id": "2607.08973",
+      "title": "SiFAR: Synchronization-Free All-Reduce for Low-Latency LLM Inference"
+    },
+    {
+      "idx": 27,
+      "id": "2607.09600",
+      "title": "Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation"
+    },
+    {
+      "idx": 28,
+      "id": "2607.09349",
+      "title": "Deceptive Grounding: Entity Attribution Failure in Clinical Retrieval-Augmented Generation"
+    },
+    {
+      "idx": 29,
+      "id": "2607.09175",
+      "title": "Scoped Verification for Reliable Long-Horizon Agentic Context Evolution under Distribution Shift"
+    },
+    {
+      "idx": 30,
+      "id": "2607.09452",
+      "title": "Practical Source Code Recovery from Binary Functions Using Anchor-Based Retrieval and LLM Reasoning"
+    }
+  ]
+}
