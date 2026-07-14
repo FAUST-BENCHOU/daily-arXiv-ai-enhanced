@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-14",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "面向多智能体与长上下文推理的 KV 缓存管理与状态复制",
+      "blurb": "围绕分布式 KV 缓存编排、信念级状态复制与上下文压缩，探索多智能体工作流中长上下文的高效复用与推理加速。"
+    },
+    {
+      "title": "面向 LLM 推理与部署的资源感知优化与配置调优",
+      "blurb": "从 MoE 专家映射、token 阶段加速到 Spark 阶段级资源分配，研究推理与数据处理系统中资源感知的性能建模与优化方法。"
+    },
+    {
+      "title": "面向 Agent 系统的技能学习、安全探索与在线调优",
+      "blurb": "聚焦多智能体安全探索、技能优化与在线强化学习，利用小模型、约束记忆与闭环校正提升 Agent 系统的鲁棒性与自适应能力。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2607.10987",
+      "title": "[AAFLOW+] Stateful Operator Abstraction with Zero-Copy Distributed KV Cache Orchestration for Multi-Agent Workflows"
+    },
+    {
+      "idx": 2,
+      "id": "2607.11226",
+      "title": "Heterogeneous Agent Cohorts for Safe Open-Ended Exploration with Runtime Constraint Memory"
+    },
+    {
+      "idx": 3,
+      "id": "2607.11579",
+      "title": "MemExchange: Cloud-Scale Memory Trading"
+    },
+    {
+      "idx": 4,
+      "id": "2607.10044",
+      "title": "FlashTrie: A GPU-Accelerated Constrained Beam Search for Generative Retrieval"
+    },
+    {
+      "idx": 5,
+      "id": "2607.10386",
+      "title": "Structured Thoughts For Improved Reasoning And Context Pruning"
+    },
+    {
+      "idx": 6,
+      "id": "2607.11429",
+      "title": "Physics-Aware Conditional SetGAN for Spatially Consistent Multi-User TR 38.901 Channel Generation"
+    },
+    {
+      "idx": 7,
+      "id": "2607.10621",
+      "title": "WebDesignIter: Co-Evolving Design Knowledge for Repository-Level Front-End Code Generation"
+    },
+    {
+      "idx": 8,
+      "id": "2607.10077",
+      "title": "TabLoRA: Parameter-Efficient Low-Rank Ensemble Learning for Large-Scale Tabular Data"
+    },
+    {
+      "idx": 9,
+      "id": "2607.09773",
+      "title": "EvoCUA-1.5: Online Reinforcement Learning for Multi-turn Computer-Use Agents"
+    },
+    {
+      "idx": 10,
+      "id": "2607.11586",
+      "title": "HCRMap: Pressure-Aware Hot-Expert Residency Mapping for 3.5D MoE Chiplet Inference"
+    },
+    {
+      "idx": 11,
+      "id": "2607.11046",
+      "title": "Retrieval-Oriented Code Representations in Agentic Bug Localization"
+    },
+    {
+      "idx": 12,
+      "id": "2607.11423",
+      "title": "ToFu: A White-Box, Token-Efficient Agent Harness for Researchers"
+    },
+    {
+      "idx": 13,
+      "id": "2607.11012",
+      "title": "EasyOPD: An Easy-to-use On-Policy Distillation Framework for Large Language Models"
+    },
+    {
+      "idx": 14,
+      "id": "2607.09748",
+      "title": "Replicating Belief, Not Bits: Epistemic State Replication for Agentic Systems"
+    },
+    {
+      "idx": 15,
+      "id": "2607.09683",
+      "title": "Ablation, Statistical Inference, and Validation for KV-Cache Compression"
+    },
+    {
+      "idx": 16,
+      "id": "2607.10126",
+      "title": "ML in a Box: Analyzing Containerization Practices in Open Source ML Projects"
+    },
+    {
+      "idx": 17,
+      "id": "2607.10848",
+      "title": "Predictive Divergence Masks for LLM RL"
+    },
+    {
+      "idx": 18,
+      "id": "2607.09713",
+      "title": "Closed-Loop Control with Rule-Aligned Small Language Models and Multi-Agent Self-Correction"
+    },
+    {
+      "idx": 19,
+      "id": "2607.11193",
+      "title": "RepTran: Search-Based Repair of Transformer Models"
+    },
+    {
+      "idx": 20,
+      "id": "2607.11683",
+      "title": "RAGU: A Multi-Step GraphRAG Engine with a Compact Domain-Adapted LLM"
+    },
+    {
+      "idx": 21,
+      "id": "2607.10123",
+      "title": "A Large-Scale Dataset of MCP Implementations on GitHub"
+    },
+    {
+      "idx": 22,
+      "id": "2607.10661",
+      "title": "Unlocking Parallelism in Autoregressive Language Models via Speculative Decoding with Progressive Tree Drafting"
+    },
+    {
+      "idx": 23,
+      "id": "2607.09957",
+      "title": "Workload-Driven Optimization for On-Device Real-Time Subtitle Translation"
+    },
+    {
+      "idx": 24,
+      "id": "2607.11415",
+      "title": "Stage-Level Executor Allocation in Apache Spark with Cost-Performance Trade-offs"
+    },
+    {
+      "idx": 25,
+      "id": "2607.11614",
+      "title": "Extending LLM Context via Associative Recurrent Memory"
+    },
+    {
+      "idx": 26,
+      "id": "2607.11493",
+      "title": "Agentic Skill Optimization over Lie Algebroids"
+    },
+    {
+      "idx": 27,
+      "id": "2607.10441",
+      "title": "Context by Distinct Information: An Auditable Dirichlet-Process Working Memory for Long, Redundant Context Streams"
+    },
+    {
+      "idx": 28,
+      "id": "2607.09765",
+      "title": "How Much Does Correctness Cost? Budgeted Placement of Strong Correctors in a Weak Multi-Agent Swarm"
+    },
+    {
+      "idx": 29,
+      "id": "2607.11211",
+      "title": "FastTPS: An Optimized Method for LLM Token Phase for AI accelerators"
+    },
+    {
+      "idx": 30,
+      "id": "2607.11444",
+      "title": "UMoE:Unlocking Every Expert in Domain-Specific Training"
+    }
+  ]
+}
