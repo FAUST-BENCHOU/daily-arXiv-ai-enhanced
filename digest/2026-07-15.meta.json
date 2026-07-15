@@ -1,0 +1,170 @@
+{
+  "date": "2026-07-15",
+  "title": "每日硬凑师兄要求的创新点",
+  "themes": [
+    {
+      "title": "大语言模型推理加速与缓存压缩",
+      "blurb": "围绕 KV 缓存压缩、稀疏注意力与推测解码，探索查询感知/不可知压缩协议、自适应向量量化注意力及记忆增强推测执行，以降低长上下文推理的显存与计算开销。"
+    },
+    {
+      "title": "检索增强生成（RAG）的选证、排序与成本治理",
+      "blurb": "针对 RAG 管线中证据选择的组合优化、跨编码器重排序的效率瓶颈以及多租户场景下检索层成本归属不清的问题，提出 QUBO 选证、LLM 蒸馏重排序与统一成本归因架构。"
+    },
+    {
+      "title": "自主智能体的执行效率与可信验证",
+      "blurb": "聚焦 LLM 智能体在任务复杂度感知、最小充分执行、记忆增强推测以及长周期科研探索中的可审计协议，以降低冗余开销并提升可复现性与可信度。"
+    }
+  ],
+  "pool": [
+    {
+      "idx": 1,
+      "id": "2607.12230",
+      "title": "Profiling and Scheduling Complex O-RAN Applications Across the 5G Edge and Cloud"
+    },
+    {
+      "idx": 2,
+      "id": "2607.11976",
+      "title": "LiteTopK: Exploiting the Curse of Dimensionality for a Fused Indexer-TopK Kernel in Long-Context Sparse Attention"
+    },
+    {
+      "idx": 3,
+      "id": "2607.11889",
+      "title": "Scaling Point-in-Time Language Models"
+    },
+    {
+      "idx": 4,
+      "id": "2607.11980",
+      "title": "LP Mining with LP2Graph: A Use Case for Railway Rescheduling"
+    },
+    {
+      "idx": 5,
+      "id": "2607.12395",
+      "title": "Ring-Zero: Scaling Zero RL to a Trillion Parameters for Emergent Reasoning"
+    },
+    {
+      "idx": 6,
+      "id": "2607.12422",
+      "title": "Accepted Prefixes Are Not All You Need: A Negative Result on PEFT-Based Block-Diffusion Drafting"
+    },
+    {
+      "idx": 7,
+      "id": "2607.11897",
+      "title": "Semidirect Fourier Delta Attention: Phase-Controlled Delta Memory with Constructive Chunk-WY Kernels"
+    },
+    {
+      "idx": 8,
+      "id": "2607.12085",
+      "title": "Operationalising Multi-Dimensional Evaluation for Conversational Agents: A Scalable, Governed Pipeline with Selective Re-evaluation and Model Benchmarking"
+    },
+    {
+      "idx": 9,
+      "id": "2607.11942",
+      "title": "How Query Visibility Changes KV-Cache Compression Rankings: A Matched-Budget Audit"
+    },
+    {
+      "idx": 10,
+      "id": "2607.12829",
+      "title": "Accelerating Masked Diffusion Large Language Models: A Survey of Efficient Inference Techniques"
+    },
+    {
+      "idx": 11,
+      "id": "2607.12583",
+      "title": "Scaling Synthetic-Image Pre-Training for Federated Fine-Tuning of Large Vision Models"
+    },
+    {
+      "idx": 12,
+      "id": "2607.12236",
+      "title": "Speculate with Memory: Lossless Acceleration for LLM Agents"
+    },
+    {
+      "idx": 13,
+      "id": "2607.12068",
+      "title": "Beyond Test Presence: Assessing the Quality and Robustness of Agent-Generated Tests in Open-Source Projects"
+    },
+    {
+      "idx": 14,
+      "id": "2607.13027",
+      "title": "PalmClaw: A Native On-Device Agent Framework for Mobile Phones"
+    },
+    {
+      "idx": 15,
+      "id": "2607.13031",
+      "title": "The Seriality Gap in Video Diffusion Models"
+    },
+    {
+      "idx": 16,
+      "id": "2607.12713",
+      "title": "Line-Anchored Feedback Cuts Token Costs and Improves Correctness in AI Code Editing"
+    },
+    {
+      "idx": 17,
+      "id": "2607.12211",
+      "title": "Overcoming Orchestration Bottlenecks at Exascale: A Decentralized, Policy-Driven Approach for Sim-AI Ensembles"
+    },
+    {
+      "idx": 18,
+      "id": "2607.12257",
+      "title": "On-Device Deep Research at 4B: Exposure Bounds Faithfulness, Retrieval Bounds Coverage"
+    },
+    {
+      "idx": 19,
+      "id": "2607.12113",
+      "title": "Toward Trustworthy Autonomous Science: A Two-Year Community Roadmap"
+    },
+    {
+      "idx": 20,
+      "id": "2607.12334",
+      "title": "QUBO-Optimized Evidence Selection for Retrieval-Augmented Question Answering with Unconventional Solvers"
+    },
+    {
+      "idx": 21,
+      "id": "2607.12310",
+      "title": "LakeQuest: A Three-Domain Benchmark for Grounded Question Answering across Data Lakes"
+    },
+    {
+      "idx": 22,
+      "id": "2607.12188",
+      "title": "Cost-Governed RAG: Unified Per-Tenant Cost Attribution Across Retrieval and Generation in Multi-Tenant LLM Systems"
+    },
+    {
+      "idx": 23,
+      "id": "2607.12789",
+      "title": "AVQ-Attention: Adaptive Vector-Quantized Attention"
+    },
+    {
+      "idx": 24,
+      "id": "2607.12273",
+      "title": "Code-MUE: Measuring Code LLMs' Uncertainty through Execution-based Semantic Interaction Graphs"
+    },
+    {
+      "idx": 25,
+      "id": "2607.11940",
+      "title": "CARE-LoRA: Compressed Activation REconstruction for Memory-Efficient LoRA"
+    },
+    {
+      "idx": 26,
+      "id": "2607.13034",
+      "title": "Do AI Agents Know When a Task Is Simple? Toward Complexity-Aware Reasoning and Execution"
+    },
+    {
+      "idx": 27,
+      "id": "2607.12301",
+      "title": "XScientist: A Git-Like Research Protocol for Long-Running Autonomous Scientific Discovery"
+    },
+    {
+      "idx": 28,
+      "id": "2607.11933",
+      "title": "Transforming LLMs into Efficient Cross-Encoders via Knowledge Distillation for RAG Reranking"
+    },
+    {
+      "idx": 29,
+      "id": "2607.12550",
+      "title": "A JoLT for the KV Cache: Near-Lossless KV Cache Compression via Joint Tucker and JL-Residual Allocation for LLMs"
+    },
+    {
+      "idx": 30,
+      "id": "2607.12619",
+      "title": "Agentic Service-Oriented Computing: A Manifesto for the Next Frontier of Service-Oriented Computing"
+    }
+  ]
+}
